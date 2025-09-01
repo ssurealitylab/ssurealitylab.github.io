@@ -42,8 +42,8 @@ def load_model():
             device = torch.device("cpu")
             logger.info("Using CPU")
         
-        # Use Qwen2.5-3B-Instruct model
-        model_name = "Qwen/Qwen2.5-3B-Instruct"
+        # Use Phi-3.5-mini-instruct model
+        model_name = "microsoft/Phi-3.5-mini-instruct"
         logger.info(f"Loading model: {model_name}")
         
         # Load tokenizer
@@ -304,6 +304,6 @@ if __name__ == '__main__':
         # Enable HTTPS with self-signed certificate for public access
         # Users need to accept certificate warning once
         # WARNING: This makes the server accessible from the internet
-        app.run(host='0.0.0.0', port=4003, debug=False)
+        app.run(host='0.0.0.0', port=4006, debug=False, ssl_context=('cert.pem', 'key.pem'))
     else:
         logger.error("Failed to load model. Server not started.")

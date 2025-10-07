@@ -27,7 +27,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicon-16x16.png">
-  <link rel="manifest" href="{{ site.baseurl }}/assets/site.webmanifest">
+  <!-- <link rel="manifest" href="{{ site.baseurl }}/assets/site.webmanifest"> -->
+  
+  <!-- Prevent browser from auto-requesting android-chrome icons -->
+  <meta name="msapplication-config" content="none">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <!-- Bootstrap core CSS -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />

@@ -1,54 +1,68 @@
-// Force scroll to top on page load - Enhanced version
+// Scroll position preservation - Enhanced version
 (function() {
     'use strict';
     
-    function forceScrollToTop() {
-        // Disable smooth scrolling temporarily
-        var originalBehavior = document.documentElement.style.scrollBehavior;
-        document.documentElement.style.scrollBehavior = 'auto';
-        
-        // Force scroll to 10px to avoid fade-out state while keeping content visible
-        window.scrollTo(0, 10);
-        document.documentElement.scrollTop = 10;
-        document.body.scrollTop = 10;
-        
-        // Also reset any CSS scroll-margin or scroll-padding
-        document.body.style.scrollMarginTop = '0';
-        document.documentElement.style.scrollMarginTop = '0';
-        
-        // Restore smooth behavior after a delay
-        setTimeout(function() {
-            document.documentElement.style.scrollBehavior = originalBehavior || 'smooth';
-        }, 200);
+    // Store scroll position
+    var savedScrollPosition = 0;
+    var isManualScroll = false;
+    
+    // Save scroll position during user interaction
+    function saveScrollPosition() {
+        savedScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+        isManualScroll = true;
     }
     
-    // Execute immediately but less aggressively
-    forceScrollToTop();
-    setTimeout(forceScrollToTop, 50);
+    // Restore scroll position
+    function restoreScrollPosition() {
+        if (isManualScroll && savedScrollPosition > 0) {
+            // Disable smooth scrolling temporarily for restoration
+            var originalBehavior = document.documentElement.style.scrollBehavior;
+            document.documentElement.style.scrollBehavior = 'auto';
+            
+            window.scrollTo(0, savedScrollPosition);
+            document.documentElement.scrollTop = savedScrollPosition;
+            document.body.scrollTop = savedScrollPosition;
+            
+            // Restore smooth behavior
+            setTimeout(function() {
+                document.documentElement.style.scrollBehavior = originalBehavior || 'smooth';
+            }, 100);
+        }
+    }
     
-    // Execute when DOM is ready
+    // Listen for user scroll events
+    var scrollTimer;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(saveScrollPosition, 50);
+    }, { passive: true });
+    
+    // Save position on user interactions
+    ['mousewheel', 'wheel', 'touchstart', 'keydown'].forEach(function(event) {
+        window.addEventListener(event, saveScrollPosition, { passive: true });
+    });
+    
+    // Restore position on page events
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
-            forceScrollToTop();
-            setTimeout(forceScrollToTop, 10);
+            setTimeout(restoreScrollPosition, 100);
         });
     }
     
-    // Execute when page is fully loaded
     window.addEventListener('load', function() {
-        forceScrollToTop();
-        setTimeout(forceScrollToTop, 10);
-        setTimeout(forceScrollToTop, 50);
+        setTimeout(restoreScrollPosition, 100);
+        setTimeout(restoreScrollPosition, 200);
     });
     
-    // Execute on page show (for back button)
-    window.addEventListener('pageshow', function() {
-        forceScrollToTop();
-        setTimeout(forceScrollToTop, 10);
+    // Handle back/forward button
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            setTimeout(restoreScrollPosition, 50);
+        }
     });
     
-    // Override any automatic scrolling behavior
+    // Save position before leaving
     window.addEventListener('beforeunload', function() {
-        window.scrollTo(0, 0);
+        saveScrollPosition();
     });
 })();

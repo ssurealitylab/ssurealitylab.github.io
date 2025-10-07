@@ -826,8 +826,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentEndpoint = null;
   let isConnecting = false;
   
-  // GPU Manager endpoint
-  const GPU_MANAGER_URL = 'https://serum-solid-woods-saying.trycloudflare.com';
+  // GPU Manager endpoint (temporarily disabled)
+  const GPU_MANAGER_URL = null; // 'https://serum-solid-woods-saying.trycloudflare.com';
   
   // Page visitor management
   let visitorSessionTimer = null;
@@ -851,6 +851,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize visitor session - allocate GPU when user visits page
   async function initializeVisitorSession() {
+    if (!GPU_MANAGER_URL) {
+      console.log('🚫 GPU Manager disabled - skipping allocation');
+      return;
+    }
+    
     console.log('🏠 Visitor detected - initializing GPU session...');
     
     // Allocate GPU immediately when user visits page

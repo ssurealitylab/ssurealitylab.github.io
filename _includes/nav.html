@@ -102,3 +102,140 @@
   </div>
 </nav>
 <!-- End Navigation -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownItems = document.querySelectorAll('.navbar-nav .dropdown');
+  let activeDropdown = null;
+  let timeoutId = null;
+  let lastMousePos = { x: 0, y: 0 };
+  
+  dropdownItems.forEach(dropdown => {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    
+    dropdown.addEventListener('mouseenter', function() {
+      clearTimeout(timeoutId);
+      
+      // Hide other dropdowns
+      dropdownItems.forEach(item => {
+        if (item !== dropdown) {
+          item.querySelector('.dropdown-menu').style.display = 'none';
+          item.querySelector('.dropdown-menu').style.opacity = '0';
+          
+          // Reset other chevrons (both Font Awesome and HTML entity)
+          const otherChevron = item.querySelector('i.fa-chevron-down');
+          const otherDropdownArrow = item.querySelector('.dropdown-arrow');
+          if (otherChevron) {
+            otherChevron.style.transform = 'rotate(0deg)';
+          }
+          if (otherDropdownArrow) {
+            otherDropdownArrow.style.transform = 'rotate(0deg)';
+          }
+        }
+      });
+      
+      // Show current dropdown
+      menu.style.display = 'block';
+      menu.style.opacity = '1';
+      menu.style.transform = 'translateY(0)';
+      
+      // Rotate chevron (both Font Awesome and HTML entity)
+      const chevron = dropdown.querySelector('i.fa-chevron-down');
+      const dropdownArrow = dropdown.querySelector('.dropdown-arrow');
+      if (chevron) {
+        chevron.style.transform = 'rotate(180deg)';
+      }
+      if (dropdownArrow) {
+        dropdownArrow.style.transform = 'rotate(180deg)';
+      }
+      
+      activeDropdown = dropdown;
+    });
+    
+    dropdown.addEventListener('mouseleave', function(e) {
+      const rect = menu.getBoundingClientRect();
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      
+      // Check if mouse is moving towards the dropdown menu
+      const menuLeft = rect.left;
+      const menuRight = rect.right;
+      const menuTop = rect.top;
+      
+      const isMovingTowards = mouseX >= menuLeft - 20 && mouseX <= menuRight + 20 && 
+                             mouseY >= menuTop - 20;
+      
+      if (isMovingTowards) {
+        // Give more time if moving towards dropdown
+        timeoutId = setTimeout(() => {
+          if (activeDropdown === dropdown) {
+            menu.style.display = 'none';
+            menu.style.opacity = '0';
+            menu.style.transform = 'translateY(-10px)';
+            
+            // Reset chevron (both Font Awesome and HTML entity)
+            const chevron = dropdown.querySelector('i.fa-chevron-down');
+            const dropdownArrow = dropdown.querySelector('.dropdown-arrow');
+            if (chevron) {
+              chevron.style.transform = 'rotate(0deg)';
+            }
+            if (dropdownArrow) {
+              dropdownArrow.style.transform = 'rotate(0deg)';
+            }
+            
+            activeDropdown = null;
+          }
+        }, 300); // 300ms delay
+      } else {
+        // Hide immediately if not moving towards dropdown
+        timeoutId = setTimeout(() => {
+          if (activeDropdown === dropdown) {
+            menu.style.display = 'none';
+            menu.style.opacity = '0';
+            menu.style.transform = 'translateY(-10px)';
+            
+            // Reset chevron (both Font Awesome and HTML entity)
+            const chevron = dropdown.querySelector('i.fa-chevron-down');
+            const dropdownArrow = dropdown.querySelector('.dropdown-arrow');
+            if (chevron) {
+              chevron.style.transform = 'rotate(0deg)';
+            }
+            if (dropdownArrow) {
+              dropdownArrow.style.transform = 'rotate(0deg)';
+            }
+            
+            activeDropdown = null;
+          }
+        }, 150);
+      }
+    });
+    
+    // Keep dropdown open when hovering over the menu itself
+    menu.addEventListener('mouseenter', function() {
+      clearTimeout(timeoutId);
+    });
+    
+    menu.addEventListener('mouseleave', function() {
+      timeoutId = setTimeout(() => {
+        menu.style.display = 'none';
+        menu.style.opacity = '0';
+        menu.style.transform = 'translateY(-10px)';
+        
+        // Reset chevron
+        const chevron = dropdown.querySelector('i.fa-chevron-down');
+        if (chevron) {
+          chevron.style.transform = 'rotate(0deg)';
+        }
+        
+        activeDropdown = null;
+      }, 150);
+    });
+  });
+  
+  // Track mouse movement
+  document.addEventListener('mousemove', function(e) {
+    lastMousePos.x = e.clientX;
+    lastMousePos.y = e.clientY;
+  });
+});
+</script>

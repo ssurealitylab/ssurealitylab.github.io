@@ -185,12 +185,15 @@ setTimeout(function() {
         if (container) {
             container.style.position = 'relative';
             container.style.display = 'inline-block';
+            container.style.zIndex = '1'; // Ensure original R is visible
         }
         
         // Make the R letter clickable with visual feedback
         easterEggTrigger.style.cursor = 'pointer';
         easterEggTrigger.style.userSelect = 'none';
         easterEggTrigger.style.transition = 'color 0.2s ease';
+        easterEggTrigger.style.position = 'relative';
+        easterEggTrigger.style.zIndex = '2'; // Ensure original R is always on top
         
         easterEggTrigger.addEventListener('click', function(e) {
             e.preventDefault(); // Always prevent default for the R letter
@@ -277,7 +280,7 @@ setTimeout(function() {
             
             console.log('🔤 Starting RRR animation');
             
-            // Create the additional R letters
+            // Create the additional R letters (positioned below the original)
             const r2 = document.createElement('span');
             r2.textContent = 'R';
             r2.style.position = 'absolute';
@@ -290,6 +293,8 @@ setTimeout(function() {
             r2.style.fontWeight = 'inherit';
             r2.style.fontSize = 'inherit';
             r2.style.fontFamily = 'inherit';
+            r2.style.zIndex = '0'; // Behind original R
+            r2.style.pointerEvents = 'none'; // Don't interfere with original R clicks
             
             const r3 = document.createElement('span');
             r3.textContent = 'R';
@@ -303,6 +308,8 @@ setTimeout(function() {
             r3.style.fontWeight = 'inherit';
             r3.style.fontSize = 'inherit';
             r3.style.fontFamily = 'inherit';
+            r3.style.zIndex = '0'; // Behind original R
+            r3.style.pointerEvents = 'none'; // Don't interfere with original R clicks
             
             // Add them to the container
             container.appendChild(r2);

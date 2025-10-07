@@ -1,0 +1,181 @@
+faculty:
+  - name: "Prof. Heewon Kim"
+    name_ko: "김희원 교수"
+    position: "Principal Investigator"
+    affiliation: "Global School of Media, College of IT, Soongsil University"
+    email: "heewon@ssu.ac.kr"
+    photo: "assets/img/members/heewon_kim.jpg"
+    github: ""
+    linkedin: ""
+
+students:
+  ms_students:
+    - name: "Sungyong Park"
+      name_ko: "박성용"
+      research: "Image Restoration, AI for Astronomy"
+      photo: "assets/img/members/sungyong_park.jpg"
+      github: ""
+      linkedin: ""
+      achievements: []
+
+    - name: "Byungkwan Chae"
+      name_ko: "채병관"
+      research: "Mobile AI, Augmented Reality"
+      photo: "assets/img/members/byungkwan_chae.jpg"
+      github: ""
+      linkedin: ""
+      achievements: []
+
+    - name: "Youngjae Choi"
+      name_ko: "최영재"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/youngjae_choi.jpg"
+      github: ""
+      linkedin: ""
+      achievements: []
+
+    - name: "Sangmin Lee"
+      name_ko: "이상민"
+      research: "Computer Vision, Embodied AI"
+      photo: "assets/img/members/sangmin_lee.jpg"
+      github: ""
+      linkedin: ""
+      achievements: ["Qualcomm Internship", "CVPR 2025 paper acceptance"]
+
+    - name: "Minjoo Koh"
+      name_ko: "고민주"
+      research: "3D Vision, AI for Sports"
+      photo: "assets/img/members/minjoo_koh.jpg"
+      github: ""
+      linkedin: ""
+      achievements: []
+
+    - name: "Hyunjun Kho"
+      name_ko: "고현준"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/hyunjun_kho.jpg"
+      github: ""
+      linkedin: ""
+      achievements: []
+
+    - name: "Hyunsuh Kho"
+      name_ko: "고현서"
+      research: "Multimodal Learning, Representation Learning"
+      photo: "assets/img/members/hyunsuh_kho.jpg"
+      github: ""
+      linkedin: ""
+      achievements: []
+
+    - name: "Juhyoung Lee"
+      name_ko: "이주형"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/juhyoung_lee.jpg"
+      github: ""
+      linkedin: ""
+      achievements: []
+
+    - name: "Jiwoo Seo"
+      name_ko: "서지우"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/jiwoo_seo.jpg"
+      github: ""
+      linkedin: ""
+      achievements: []
+
+    - name: "Hojae Jeong"
+      name_ko: "정호재"
+      research: "Computer Vision, Generative AI"
+      photo: "assets/img/members/hojae_jeong.jpg"
+      github: ""
+      linkedin: ""
+      achievements: []
+
+  interns:
+    - name: "Seoyoung Kim"
+      name_ko: "김서영"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/seoyoung_kim.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Yeri Kim"
+      name_ko: "김예리"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/yeri_kim.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Suyoung Choi"
+      name_ko: "최수영"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/suyoung_choi.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Jiwon Hwang"
+      name_ko: "황지원"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/jiwon_hwang.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Eunwoo Song"
+      name_ko: "송은우"
+      research: "Computer Vision, Medical AI"
+      photo: "assets/img/members/eunwoo_song.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Sebin Lee"
+      name_ko: "이세빈"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/sebin_lee.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Dowon Kim"
+      name_ko: "김도원"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/dowon_kim.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Yeonji Kim"
+      name_ko: "김연지"
+      research: "Computer Vision, Generative Models"
+      photo: "assets/img/members/yeonji_kim.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Jaehyun Lee"
+      name_ko: "이재현"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/jaehyun_lee.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Yebin Lee"
+      name_ko: "이예빈"
+      research: "Computer Vision, AI for Sports"
+      photo: "assets/img/members/yebin_lee.jpg"
+      github: ""
+      linkedin: ""
+
+    - name: "Jungha Lim"
+      name_ko: "임정하"
+      research: "Computer Vision, Deep Learning"
+      photo: "assets/img/members/jungha_lim.jpg"
+      github: ""
+      linkedin: ""
+
+alumni:
+  achievements:
+    - title: "ARNOLD Challenge 1st Place"
+      venue: "CVPR 2025 Embodied AI Workshop"
+      members: []
+    - title: "BMVC 2025 Paper Acceptance"
+      venue: "British Machine Vision Conference"
+      members: ["Youngjae Choi", "Hyunsuh Koh", "Hojae Jeong", "ByungKwan Chae"]
+    - title: "CVPR 2025 Paper Acceptance"
+      venue: "IEEE Conference on Computer Vision and Pattern Recognition"
+      members: ["Sangmin Lee", "Sungyong Park"]

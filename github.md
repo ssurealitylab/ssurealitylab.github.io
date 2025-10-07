@@ -71,54 +71,77 @@ title: GitHub Repositories
   border-radius: 5px;
 }
 
-/* Modal Styling - Proper 70% screen coverage */
-.portfolio-modal .modal-dialog {
-  max-width: 90vw !important;
-  width: 90vw !important;
-  margin: 2rem auto !important;
+/* Custom Modal System - 70% screen coverage */
+.custom-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-modal.active {
+  display: flex;
+}
+
+.custom-modal-content {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  margin: 2rem;
+  width: 90vw;
+  max-width: 90vw;
 }
 
 @media (min-width: 768px) {
-  .portfolio-modal .modal-dialog {
-    max-width: 75vw !important;
-    width: 75vw !important;
+  .custom-modal-content {
+    width: 75vw;
+    max-width: 75vw;
   }
 }
 
 @media (min-width: 1200px) {
-  .portfolio-modal .modal-dialog {
-    max-width: 70vw !important;
-    width: 70vw !important;
+  .custom-modal-content {
+    width: 70vw;
+    max-width: 70vw;
   }
 }
 
-.portfolio-modal .modal-content {
-  border-radius: 15px !important;
-  border: none !important;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
-  min-height: 60vh !important;
-  padding: 2rem !important;
+.custom-modal-header {
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid #eee;
 }
 
-/* Fix the narrow content issue - make content use full width */
-.portfolio-modal .row {
-  margin: 0 !important;
+.custom-modal-body {
+  padding: 2rem;
 }
 
-.portfolio-modal .col-lg-8 {
-  max-width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  flex: 0 0 100% !important;
+.custom-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.portfolio-modal .mx-auto {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-.portfolio-modal .modal-body {
-  padding: 2rem !important;
+.custom-modal-close:hover {
+  color: #333;
 }
 </style>
 
@@ -136,7 +159,7 @@ title: GitHub Repositories
       
       <!-- SIDL Benchmark Dataset -->
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#repo1">
+        <a class="portfolio-link" onclick="openCustomModal('repo1')" href="javascript:void(0)">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="fas fa-eye fa-3x"></i>
@@ -155,7 +178,7 @@ title: GitHub Repositories
 
       <!-- Main Website Repository -->
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#repo2">
+        <a class="portfolio-link" onclick="openCustomModal('repo2')" href="javascript:void(0)">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="fas fa-globe fa-3x"></i>
@@ -171,7 +194,7 @@ title: GitHub Repositories
 
       <!-- Computer Vision Projects -->
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#repo3">
+        <a class="portfolio-link" onclick="openCustomModal('repo3')" href="javascript:void(0)">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="fas fa-brain fa-3x"></i>
@@ -187,7 +210,7 @@ title: GitHub Repositories
 
       <!-- Robotics & AI -->
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#repo4">
+        <a class="portfolio-link" onclick="openCustomModal('repo4')" href="javascript:void(0)">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="fas fa-robot fa-3x"></i>
@@ -203,7 +226,7 @@ title: GitHub Repositories
 
       <!-- Machine Learning -->
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#repo5">
+        <a class="portfolio-link" onclick="openCustomModal('repo5')" href="javascript:void(0)">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="fas fa-network-wired fa-3x"></i>
@@ -219,7 +242,7 @@ title: GitHub Repositories
 
       <!-- Research Papers Code -->
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#repo6">
+        <a class="portfolio-link" onclick="openCustomModal('repo6')" href="javascript:void(0)">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="fas fa-file-alt fa-3x"></i>
@@ -235,7 +258,7 @@ title: GitHub Repositories
 
       <!-- Development Tools -->
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#repo7">
+        <a class="portfolio-link" onclick="openCustomModal('repo7')" href="javascript:void(0)">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="fas fa-tools fa-3x"></i>
@@ -255,94 +278,83 @@ title: GitHub Repositories
 
 <!-- Repository Modals -->
 
-<!-- Modal 1: SIDL Benchmark -->
-<div class="portfolio-modal modal fade" id="repo1" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl"></div>
+<!-- Custom Modal 1: SIDL Benchmark -->
+<div class="custom-modal" id="repo1">
+  <div class="custom-modal-content">
+    <button class="custom-modal-close" onclick="closeCustomModal('repo1')">&times;</button>
+    <div class="custom-modal-header">
+      <h2 class="text-uppercase">SIDL Benchmark</h2>
+      <p class="item-intro text-muted">Smartphone Images with Dirty Lenses Dataset</p>
+    </div>
+    <div class="custom-modal-body">
+      <!-- Contamination Type Toggles -->
+      <div class="text-center mb-4">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" id="contaminantTypes">
+          <label class="btn btn-outline-primary active">
+            <input type="radio" name="contaminant" id="dust" value="dust" checked> Dust
+          </label>
+          <label class="btn btn-outline-primary">
+            <input type="radio" name="contaminant" id="finger" value="finger"> Fingerprint
+          </label>
+          <label class="btn btn-outline-primary">
+            <input type="radio" name="contaminant" id="scratch" value="scratch"> Scratch
+          </label>
+          <label class="btn btn-outline-primary">
+            <input type="radio" name="contaminant" id="water" value="water"> Water
+          </label>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="modal-body">
-              <h2 class="text-uppercase">SIDL Benchmark</h2>
-              <p class="item-intro text-muted">Smartphone Images with Dirty Lenses Dataset</p>
-              
-              <!-- Contamination Type Toggles -->
-              <div class="text-center mb-4">
-                <div class="btn-group btn-group-toggle" data-toggle="buttons" id="contaminantTypes">
-                  <label class="btn btn-outline-primary active">
-                    <input type="radio" name="contaminant" id="dust" value="dust" checked> Dust
-                  </label>
-                  <label class="btn btn-outline-primary">
-                    <input type="radio" name="contaminant" id="finger" value="finger"> Fingerprint
-                  </label>
-                  <label class="btn btn-outline-primary">
-                    <input type="radio" name="contaminant" id="scratch" value="scratch"> Scratch
-                  </label>
-                  <label class="btn btn-outline-primary">
-                    <input type="radio" name="contaminant" id="water" value="water"> Water
-                  </label>
-                </div>
-              </div>
 
-              <!-- Image Comparison Container -->
-              <div class="sidl-comparison-container mb-4" style="position: relative; max-width: 500px; margin: 0 auto;">
-                <div class="sidl-image-wrapper" style="position: relative; width: 100%; height: 400px; overflow: hidden; border-radius: 8px; cursor: col-resize;">
-                  <!-- Target Image (Base) -->
-                  <img id="sidlTargetImage" class="sidl-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" src="{{ site.baseurl }}/assets/img/sidl/dust/target/Case073_D.png" alt="Target Image">
-                  
-                  <!-- Input Image (Overlay with clip-path) -->
-                  <div id="sidlInputContainer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: inset(0 50% 0 0);">
-                    <img id="sidlInputImage" class="sidl-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" src="{{ site.baseurl }}/assets/img/sidl/dust/input/Case073_D.png" alt="Input Image">
-                  </div>
-                  
-                  <!-- Vertical Divider Line -->
-                  <div id="sidlDivider" style="position: absolute; top: 0; left: 50%; width: 2px; height: 100%; background: white; z-index: 10; box-shadow: 0 0 4px rgba(0,0,0,0.3);"></div>
-                  
-                  <!-- Slider Handle -->
-                  <div id="sidlHandle" style="position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; background: white; border-radius: 50%; transform: translate(-50%, -50%); z-index: 11; box-shadow: 0 0 4px rgba(0,0,0,0.3); cursor: col-resize;">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 10px; color: #666;">⟷</div>
-                  </div>
-                </div>
-                
-                <!-- Labels -->
-                <div class="sidl-labels mt-2">
-                  <div class="row">
-                    <div class="col-6 text-center">
-                      <small class="text-muted"><strong>Input (Contaminated)</strong></small>
-                    </div>
-                    <div class="col-6 text-center">
-                      <small class="text-muted"><strong>Target (Restored)</strong></small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <p><strong>Description:</strong> A novel dataset designed to restore images captured through contaminated smartphone lenses with diverse real-world contaminants.</p>
-              <p><strong>Technologies:</strong> Computer Vision, Image Restoration, Machine Learning, Dataset</p>
-              <p><strong>Key Features:</strong></p>
-              <ul>
-                <li>300 static scenes with 1,588 degraded-clean image pairs</li>
-                <li>Full ProRAW resolution (4032 × 3024, 12-bit DNG)</li>
-                <li>4 contaminant types: fingerprints, dust, scratches, water drops</li>
-                <li>Difficulty levels: Easy, Medium, Hard</li>
-                <li>Comprehensive evaluation framework</li>
-              </ul>
-              <div class="text-center">
-                <a href="https://sidl-benchmark.github.io/" target="_blank" class="btn btn-primary">
-                  <i class="fas fa-globe"></i> Visit Website
-                </a>
-              </div>
-              <button class="btn btn-secondary" data-dismiss="modal" type="button">
-                <i class="fas fa-times"></i> Close
-              </button>
+      <!-- Image Comparison Container -->
+      <div class="sidl-comparison-container mb-4" style="position: relative; max-width: 500px; margin: 0 auto;">
+        <div class="sidl-image-wrapper" style="position: relative; width: 100%; height: 400px; overflow: hidden; border-radius: 8px; cursor: col-resize;">
+          <!-- Target Image (Base) -->
+          <img id="sidlTargetImage" class="sidl-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" src="{{ site.baseurl }}/assets/img/sidl/dust/target/Case073_D.png" alt="Target Image">
+          
+          <!-- Input Image (Overlay with clip-path) -->
+          <div id="sidlInputContainer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: inset(0 50% 0 0);">
+            <img id="sidlInputImage" class="sidl-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" src="{{ site.baseurl }}/assets/img/sidl/dust/input/Case073_D.png" alt="Input Image">
+          </div>
+          
+          <!-- Vertical Divider Line -->
+          <div id="sidlDivider" style="position: absolute; top: 0; left: 50%; width: 2px; height: 100%; background: white; z-index: 10; box-shadow: 0 0 4px rgba(0,0,0,0.3);"></div>
+          
+          <!-- Slider Handle -->
+          <div id="sidlHandle" style="position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; background: white; border-radius: 50%; transform: translate(-50%, -50%); z-index: 11; box-shadow: 0 0 4px rgba(0,0,0,0.3); cursor: col-resize;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 10px; color: #666;">⟷</div>
+          </div>
+        </div>
+        
+        <!-- Labels -->
+        <div class="sidl-labels mt-2">
+          <div class="row">
+            <div class="col-6 text-center">
+              <small class="text-muted"><strong>Input (Contaminated)</strong></small>
+            </div>
+            <div class="col-6 text-center">
+              <small class="text-muted"><strong>Target (Restored)</strong></small>
             </div>
           </div>
         </div>
+      </div>
+
+      <p><strong>Description:</strong> A novel dataset designed to restore images captured through contaminated smartphone lenses with diverse real-world contaminants.</p>
+      <p><strong>Technologies:</strong> Computer Vision, Image Restoration, Machine Learning, Dataset</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>300 static scenes with 1,588 degraded-clean image pairs</li>
+        <li>Full ProRAW resolution (4032 × 3024, 12-bit DNG)</li>
+        <li>4 contaminant types: fingerprints, dust, scratches, water drops</li>
+        <li>Difficulty levels: Easy, Medium, Hard</li>
+        <li>Comprehensive evaluation framework</li>
+      </ul>
+      <div class="text-center">
+        <a href="https://sidl-benchmark.github.io/" target="_blank" class="btn btn-primary">
+          <i class="fas fa-globe"></i> Visit Website
+        </a>
+        <button class="btn btn-secondary ml-2" onclick="closeCustomModal('repo1')" type="button">
+          <i class="fas fa-times"></i> Close
+        </button>
       </div>
     </div>
   </div>
@@ -549,3 +561,39 @@ title: GitHub Repositories
     </div>
   </div>
 </div>
+
+<script>
+function openCustomModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+  }
+}
+
+function closeCustomModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove("active");
+    document.body.style.overflow = ""; // Restore scrolling
+  }
+}
+
+// Close modal when clicking outside content
+document.addEventListener("click", function(event) {
+  if (event.target.classList.contains("custom-modal")) {
+    const modalId = event.target.id;
+    closeCustomModal(modalId);
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    const activeModal = document.querySelector(".custom-modal.active");
+    if (activeModal) {
+      closeCustomModal(activeModal.id);
+    }
+  }
+});
+</script>

@@ -277,11 +277,20 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
-      if (typeof window.toggleChatbot === 'function') {
-        window.toggleChatbot();
-      } else {
-        console.error('toggleChatbot function not found');
-      }
+      
+      // Wait a bit for chatbot to load if not available
+      let attempts = 0;
+      const tryToggle = () => {
+        if (typeof window.toggleChatbot === 'function') {
+          window.toggleChatbot();
+        } else if (attempts < 10) {
+          attempts++;
+          setTimeout(tryToggle, 100);
+        } else {
+          console.error('toggleChatbot function not found after waiting');
+        }
+      };
+      tryToggle();
     });
   });
 });

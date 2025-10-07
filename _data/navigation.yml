@@ -13,9 +13,6 @@ nav:
     url: https://ssurealitylab.github.io/Realitylab-site/
   - title: "News"
     url: https://ssurealitylab.github.io/Realitylab-site/news.html
-  - title: "GIT"
-    url: https://ssurealitylab.github.io/Realitylab-site/github.html
-    external_page: true
   - title: "Members"
     url: https://ssurealitylab.github.io/Realitylab-site/members.html
     dropdown:
@@ -25,7 +22,7 @@ nav:
         url: https://ssurealitylab.github.io/Realitylab-site/students.html
       - title: "Alumni"
         url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
-  - title: "Publication"
+  - title: "Publications"
     url: https://ssurealitylab.github.io/Realitylab-site/publication.html
     dropdown:
       - title: "International"
@@ -51,9 +48,6 @@ en: &DEFAULT_EN
       url: https://ssurealitylab.github.io/Realitylab-site/
     - title: "News"
       url: https://ssurealitylab.github.io/Realitylab-site/news.html
-    - title: "GIT"
-      url: https://ssurealitylab.github.io/Realitylab-site/github.html
-      external_page: true
     - title: "Members"
       url: https://ssurealitylab.github.io/Realitylab-site/members.html
       dropdown:
@@ -63,7 +57,7 @@ en: &DEFAULT_EN
           url: https://ssurealitylab.github.io/Realitylab-site/students.html
         - title: "Alumni"
           url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
-    - title: "Publication"
+    - title: "Publications"
       url: https://ssurealitylab.github.io/Realitylab-site/publication.html
       dropdown:
         - title: "International"

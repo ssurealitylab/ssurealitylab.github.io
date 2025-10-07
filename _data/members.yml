@@ -14,8 +14,8 @@ students:
       name_ko: "박성용"
       research: "Image Restoration, AI for Astronomy"
       photo: "assets/img/members/sungyong_park.jpg"
-      github: ""
-      linkedin: ""
+      github: "https://github.com/sungyong-park"
+      linkedin: "https://linkedin.com/in/sungyong-park"
       achievements: []
 
     - name: "Byungkwan Chae"
@@ -38,8 +38,8 @@ students:
       name_ko: "이상민"
       research: "Computer Vision, Embodied AI"
       photo: "assets/img/members/sangmin_lee.jpg"
-      github: ""
-      linkedin: ""
+      github: "https://github.com/sangmin-lee"
+      linkedin: "https://linkedin.com/in/sangmin-lee"
       achievements: ["Qualcomm Internship", "CVPR 2025 paper acceptance"]
 
     - name: "Minjoo Koh"
@@ -95,8 +95,8 @@ students:
       name_ko: "김서영"
       research: "Computer Vision, Deep Learning"
       photo: "assets/img/members/seoyoung_kim.jpg"
-      github: ""
-      linkedin: ""
+      github: "https://github.com/seoyoung-kim"
+      linkedin: "https://linkedin.com/in/seoyoung-kim"
 
     - name: "Yeri Kim"
       name_ko: "김예리"
@@ -137,8 +137,8 @@ students:
       name_ko: "김도원"
       research: "Computer Vision, Deep Learning"
       photo: "assets/img/members/dowon_kim.jpg"
-      github: ""
-      linkedin: ""
+      github: "https://github.com/dowon-kim"
+      linkedin: "https://linkedin.com/in/dowon-kim"
 
     - name: "Yeonji Kim"
       name_ko: "김연지"

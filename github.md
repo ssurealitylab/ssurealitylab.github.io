@@ -70,31 +70,47 @@ title: GitHub Repositories
   border-radius: 5px;
 }
 
-/* Modal Styling */
+/* Modal Styling - Force centering and width */
 .portfolio-modal .modal-dialog {
-  max-width: 80%;
-  width: 80%;
-  margin: 1.75rem auto;
+  max-width: 85% !important;
+  width: 85% !important;
+  margin: 1.75rem auto !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  transform: none !important;
 }
 
 @media (min-width: 768px) {
   .portfolio-modal .modal-dialog {
-    max-width: 900px;
-    width: 900px;
+    max-width: 950px !important;
+    width: 950px !important;
   }
 }
 
 @media (min-width: 1200px) {
   .portfolio-modal .modal-dialog {
-    max-width: 1100px;
-    width: 1100px;
+    max-width: 1200px !important;
+    width: 1200px !important;
   }
+}
+
+/* Override Bootstrap modal positioning */
+.portfolio-modal.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out !important;
+  transform: translate(0, -50px) !important;
+}
+
+.portfolio-modal.modal.show .modal-dialog {
+  transform: none !important;
 }
 
 .portfolio-modal .modal-content {
   border-radius: 15px;
   border: none;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  position: relative;
 }
 </style>
 

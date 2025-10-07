@@ -180,20 +180,21 @@ setTimeout(function() {
         
         console.log('✅ Easter egg trigger found! Setting up easter egg...');
         
-        // Setup the container for vertical R alignment
+        // Setup the container for vertical R alignment - minimal styling
         const container = document.getElementById('easter-egg-trigger-container');
         if (container) {
             container.style.position = 'relative';
             container.style.display = 'inline-block';
-            container.style.zIndex = '1'; // Ensure original R is visible
+            // Don't set z-index on container as it might hide the original R
         }
         
         // Make the R letter clickable with visual feedback
         easterEggTrigger.style.cursor = 'pointer';
         easterEggTrigger.style.userSelect = 'none';
         easterEggTrigger.style.transition = 'color 0.2s ease';
-        easterEggTrigger.style.position = 'relative';
-        easterEggTrigger.style.zIndex = '2'; // Ensure original R is always on top
+        // Don't change position to avoid layout issues
+        // easterEggTrigger.style.position = 'relative';
+        // easterEggTrigger.style.zIndex = '2';
         
         easterEggTrigger.addEventListener('click', function(e) {
             e.preventDefault(); // Always prevent default for the R letter
@@ -293,7 +294,7 @@ setTimeout(function() {
             r2.style.fontWeight = 'inherit';
             r2.style.fontSize = 'inherit';
             r2.style.fontFamily = 'inherit';
-            r2.style.zIndex = '0'; // Behind original R
+            r2.style.zIndex = '-1'; // Far behind original R
             r2.style.pointerEvents = 'none'; // Don't interfere with original R clicks
             
             const r3 = document.createElement('span');
@@ -308,7 +309,7 @@ setTimeout(function() {
             r3.style.fontWeight = 'inherit';
             r3.style.fontSize = 'inherit';
             r3.style.fontFamily = 'inherit';
-            r3.style.zIndex = '0'; // Behind original R
+            r3.style.zIndex = '-1'; // Far behind original R
             r3.style.pointerEvents = 'none'; // Don't interfere with original R clicks
             
             // Add them to the container

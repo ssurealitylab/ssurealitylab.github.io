@@ -69,6 +69,33 @@ title: GitHub Repositories
   object-fit: cover;
   border-radius: 5px;
 }
+
+/* Modal Styling */
+.portfolio-modal .modal-dialog {
+  max-width: 80%;
+  width: 80%;
+  margin: 1.75rem auto;
+}
+
+@media (min-width: 768px) {
+  .portfolio-modal .modal-dialog {
+    max-width: 900px;
+    width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-modal .modal-dialog {
+    max-width: 1100px;
+    width: 1100px;
+  }
+}
+
+.portfolio-modal .modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
 </style>
 
 <!-- GitHub Repositories Section -->

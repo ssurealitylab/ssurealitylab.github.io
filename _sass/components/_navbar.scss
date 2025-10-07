@@ -180,16 +180,16 @@
           }
         }
         
-        // Hover functionality for desktop
-        &:hover .dropdown-menu {
-          display: block;
-          opacity: 1;
-          transform: translateY(0);
-        }
+        // Hover functionality for desktop - handled by JavaScript
+        // &:hover .dropdown-menu {
+        //   display: block;
+        //   opacity: 1;
+        //   transform: translateY(0);
+        // }
         
-        &:hover .dropdown-toggle i.fa-chevron-down {
-          transform: rotate(180deg);
-        }
+        // &:hover .dropdown-toggle i.fa-chevron-down {
+        //   transform: rotate(180deg);
+        // }
       }
     }
   }

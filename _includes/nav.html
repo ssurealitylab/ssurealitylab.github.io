@@ -258,11 +258,25 @@ document.addEventListener('DOMContentLoaded', function() {
     lastMousePos.y = e.clientY;
   });
   
-  // Handle AI chat trigger clicks
+  // Handle AI chat trigger clicks (both dropdown items and main AI button)
   const aiChatTriggers = document.querySelectorAll('.ai-chat-trigger');
   aiChatTriggers.forEach(trigger => {
     trigger.addEventListener('click', function(e) {
       e.preventDefault();
+      if (typeof window.toggleChatbot === 'function') {
+        window.toggleChatbot();
+      } else {
+        console.error('toggleChatbot function not found');
+      }
+    });
+  });
+  
+  // Handle AI menu circular button clicks (direct AI button)
+  const aiMenuButtons = document.querySelectorAll('.ai-menu-circular');
+  aiMenuButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
       if (typeof window.toggleChatbot === 'function') {
         window.toggleChatbot();
       } else {

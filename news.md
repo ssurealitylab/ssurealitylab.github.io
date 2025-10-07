@@ -11,135 +11,180 @@ title: News
   </div>
 </section>
 
-<!-- Timeline -->
-<section class="news-timeline">
+<!-- News Content -->
+<section class="news-content py-5">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <ul class="timeline">
-          
-          <!-- 2025 - BMVC Paper -->
-          <li>
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="참고 이미지/homepage_slider_images/slider_01.jpg" alt="BMVC 2025">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2025</h4>
-                <h4 class="subheading">BMVC 2025 Paper Acceptance</h4>
+    
+    <!-- 2025 Year Section -->
+    <div class="year-section mb-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="year-header d-flex align-items-center mb-4">
+            <div class="year-badge">2025</div>
+            <div class="year-line flex-grow-1"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- ARNOLD Challenge - Featured -->
+        <div class="col-lg-8 mb-4">
+          <div class="news-card featured-card">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="참고 이미지/homepage_slider_images/slider_02.jpg" class="card-img" alt="ARNOLD Challenge">
+                <div class="achievement-badge">🥇 1st Place</div>
               </div>
-              <div class="timeline-body">
-                <p><strong>Authors:</strong> Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
-                <p class="text-muted">연구실의 컴퓨터 비전 분야 연구 성과가 인정받아 BMVC 2025에 논문이 채택되었습니다.</p>
-              </div>
-            </div>
-          </li>
-          
-          <!-- 2025 - ARNOLD Challenge -->
-          <li class="timeline-inverted">
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="참고 이미지/homepage_slider_images/slider_02.jpg" alt="ARNOLD Challenge">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2025</h4>
-                <h4 class="subheading">ARNOLD Challenge 1st Place 🥇</h4>
-              </div>
-              <div class="timeline-body">
-                <p><strong>Event:</strong> CVPR 2025 Embodied AI Workshop</p>
-                <p class="text-muted">Reality Lab 팀이 ARNOLD Challenge에서 1위를 차지하는 쾌거를 이루었습니다. Embodied AI 분야에서의 우수한 연구 성과를 국제적으로 인정받았습니다.</p>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h4 class="card-title">ARNOLD Challenge 1st Place</h4>
+                  <p class="card-subtitle text-muted">CVPR 2025 Embodied AI Workshop</p>
+                  <p class="card-text">Reality Lab 팀이 ARNOLD Challenge에서 1위를 차지하는 쾌거를 이루었습니다. Embodied AI 분야에서의 우수한 연구 성과를 국제적으로 인정받았습니다.</p>
+                </div>
               </div>
             </div>
-          </li>
-          
-          <!-- 2025 - CVPR Paper -->
-          <li>
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="참고 이미지/homepage_slider_images/slider_14.jpg" alt="CVPR 2025">
+          </div>
+        </div>
+        
+        <!-- Other 2025 Events -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card compact-card">
+            <img src="참고 이미지/homepage_slider_images/slider_01.jpg" class="card-img-top" alt="BMVC 2025">
+            <div class="card-body">
+              <h5 class="card-title">BMVC 2025 Paper Acceptance</h5>
+              <p class="card-subtitle">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
+              <p class="card-text">컴퓨터 비전 분야 연구 성과가 인정받아 BMVC 2025에 논문이 채택되었습니다.</p>
             </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2025</h4>
-                <h4 class="subheading">CVPR 2025 Paper Acceptance</h4>
-              </div>
-              <div class="timeline-body">
-                <p><strong>Authors:</strong> Sangmin Lee, Sungyong Park</p>
-                <p class="text-muted">컴퓨터 비전 최고 학술대회인 CVPR 2025에 논문이 채택되었습니다.</p>
-              </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="news-card compact-card">
+            <img src="참고 이미지/homepage_slider_images/slider_14.jpg" class="card-img-top" alt="CVPR 2025">
+            <div class="card-body">
+              <h5 class="card-title">CVPR 2025 Paper Acceptance</h5>
+              <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
+              <p class="card-text">컴퓨터 비전 최고 학술대회인 CVPR 2025에 논문이 채택되었습니다.</p>
             </div>
-          </li>
-          
-          <!-- 2024 - Qualcomm -->
-          <li class="timeline-inverted">
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="참고 이미지/homepage_slider_images/slider_10.jpg" alt="Qualcomm Internship">
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="news-card compact-card">
+            <img src="참고 이미지/homepage_slider_images/slider_03.jpg" class="card-img-top" alt="Future Achievement">
+            <div class="card-body">
+              <h5 class="card-title">More Achievements Coming</h5>
+              <p class="card-subtitle">Stay Tuned</p>
+              <p class="card-text">더 많은 연구 성과와 업적들이 계속 업데이트될 예정입니다.</p>
             </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2024</h4>
-                <h4 class="subheading">Qualcomm Internship Achievement</h4>
-              </div>
-              <div class="timeline-body">
-                <p><strong>Student:</strong> Sangmin Lee (이상민)</p>
-                <p class="text-muted">세계적인 반도체 기업 Qualcomm에서 인턴십을 성공적으로 수행하였습니다. 산업계와의 연계를 통한 실무 경험을 쌓았습니다.</p>
-              </div>
-            </div>
-          </li>
-          
-          <!-- 2023 - Lab Foundation -->
-          <li>
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="assets/img/timeline/1.jpg" alt="Reality Lab Foundation">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2023</h4>
-                <h4 class="subheading">Reality Lab 설립</h4>
-              </div>
-              <div class="timeline-body">
-                <p><strong>Location:</strong> 숭실대학교 IT대학 글로벌미디어학부</p>
-                <p><strong>Director:</strong> 김희원 교수</p>
-                <p class="text-muted">"Advancing AI to Understand Reality" 비전으로 연구실이 공식 설립되었습니다.</p>
-              </div>
-            </div>
-          </li>
-          
-          <!-- 2023 - Research Areas -->
-          <li class="timeline-inverted">
-            <div class="timeline-image">
-              <img class="rounded-circle img-fluid" src="assets/img/timeline/2.jpg" alt="Research Areas">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2023</h4>
-                <h4 class="subheading">연구 분야 확립</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">핵심 연구 분야를 정립하여 체계적인 연구 기반을 마련했습니다.</p>
-                <ul class="list-unstyled">
-                  <li><i class="fas fa-robot"></i> Robotics</li>
-                  <li><i class="fas fa-eye"></i> Computer Vision</li>
-                  <li><i class="fas fa-brain"></i> Machine Learning</li>
-                  <li><i class="fas fa-comments"></i> Multimodal Language Understanding</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          
-          <!-- End -->
-          <li class="timeline-inverted">
-            <div class="timeline-image">
-              <h4>
-                Continue<br/>
-                Our<br/>
-                Journey!
-              </h4>
-            </div>
-          </li>
-          
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
+    
+    <!-- 2024 Year Section -->
+    <div class="year-section mb-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="year-header d-flex align-items-center mb-4">
+            <div class="year-badge">2024</div>
+            <div class="year-line flex-grow-1"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="news-card standard-card">
+            <div class="row no-gutters">
+              <div class="col-md-5">
+                <img src="참고 이미지/homepage_slider_images/slider_10.jpg" class="card-img" alt="Qualcomm">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title">Qualcomm Internship Achievement</h5>
+                  <p class="card-subtitle">Sangmin Lee (이상민)</p>
+                  <p class="card-text">세계적인 반도체 기업 Qualcomm에서 인턴십을 성공적으로 수행하였습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="news-card standard-card placeholder-card">
+            <div class="row no-gutters">
+              <div class="col-md-5">
+                <div class="placeholder-img d-flex align-items-center justify-content-center">
+                  <i class="fas fa-plus fa-2x text-muted"></i>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title">More 2024 Updates</h5>
+                  <p class="card-subtitle">Coming Soon</p>
+                  <p class="card-text">2024년의 추가 성과들이 업데이트될 예정입니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 2023 Year Section -->
+    <div class="year-section mb-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="year-header d-flex align-items-center mb-4">
+            <div class="year-badge">2023</div>
+            <div class="year-line flex-grow-1"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="news-card standard-card">
+            <div class="row no-gutters">
+              <div class="col-md-5">
+                <img src="assets/img/timeline/1.jpg" class="card-img" alt="Lab Foundation">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title">Reality Lab 설립</h5>
+                  <p class="card-subtitle">김희원 교수, 숭실대학교</p>
+                  <p class="card-text">"Advancing AI to Understand Reality" 비전으로 연구실이 공식 설립되었습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="news-card standard-card">
+            <div class="row no-gutters">
+              <div class="col-md-5">
+                <img src="assets/img/timeline/2.jpg" class="card-img" alt="Research Areas">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title">연구 분야 확립</h5>
+                  <p class="card-subtitle">4개 핵심 분야</p>
+                  <div class="research-areas">
+                    <span class="badge badge-primary"><i class="fas fa-robot"></i> Robotics</span>
+                    <span class="badge badge-info"><i class="fas fa-eye"></i> Vision</span>
+                    <span class="badge badge-success"><i class="fas fa-brain"></i> ML</span>
+                    <span class="badge badge-warning"><i class="fas fa-comments"></i> Multimodal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </section>
 
@@ -160,168 +205,222 @@ title: News
 </section>
 
 <style>
-/* News Timeline Specific Styles */
+/* News Content Styles */
 .news-timeline-header {
   background: linear-gradient(90deg, rgba(52, 152, 219, 0.1) 0%, rgba(155, 89, 182, 0.1) 100%);
 }
 
-.news-timeline .timeline {
-  list-style: none;
-  padding: 0;
-  position: relative;
+/* Year Section */
+.year-section {
+  margin-bottom: 4rem;
 }
 
-.news-timeline .timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: "";
-  width: 2px;
-  background-color: #e9ecef;
-  left: 40px;
-  margin-left: -1.5px;
+.year-header {
+  margin-bottom: 2rem;
 }
 
-.news-timeline .timeline > li {
-  margin-bottom: 50px;
-  position: relative;
-  min-height: 50px;
-}
-
-.news-timeline .timeline > li:before,
-.news-timeline .timeline > li:after {
-  content: "";
-  display: table;
-}
-
-.news-timeline .timeline > li:after {
-  clear: both;
-}
-
-.news-timeline .timeline > li .timeline-panel {
-  width: calc(100% - 120px);
-  float: right;
-  border: 1px solid #d4edda;
-  border-radius: 8px;
-  padding: 20px;
-  position: relative;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  margin-left: 20px;
-  transition: all 0.3s ease;
-}
-
-.news-timeline .timeline > li .timeline-panel:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-
-.news-timeline .timeline > li .timeline-panel:before {
-  position: absolute;
-  top: 26px;
-  right: -15px;
-  display: inline-block;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #d4edda;
-  border-right: 0 solid #d4edda;
-  border-bottom: 15px solid transparent;
-  content: "";
-}
-
-.news-timeline .timeline > li .timeline-panel:after {
-  position: absolute;
-  top: 27px;
-  right: -14px;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 14px solid transparent;
-  content: "";
-}
-
-.news-timeline .timeline > li .timeline-image {
-  left: 0;
-  margin-left: 0;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  z-index: 100;
-  background-color: #3498db;
+.year-badge {
+  background: linear-gradient(135deg, #3498db, #2980b9);
   color: white;
-  border-radius: 100%;
-  border: 7px solid #e9ecef;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  margin-right: 20px;
+  min-width: 100px;
   text-align: center;
 }
 
-.news-timeline .timeline > li .timeline-image h4 {
-  font-size: 10px;
-  margin-top: 12px;
-  line-height: 14px;
+.year-line {
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, rgba(52, 152, 219, 0.1));
+  border-radius: 2px;
 }
 
-.news-timeline .timeline > li.timeline-inverted > .timeline-panel {
-  float: left;
-  margin-left: 0;
-  margin-right: 20px;
+/* News Cards */
+.news-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  background: white;
 }
 
-.news-timeline .timeline > li.timeline-inverted > .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.news-timeline .timeline > li.timeline-inverted > .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -14px;
-  right: auto;
+/* Featured Card - Largest */
+.featured-card {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: 2px solid #ffd700;
+  position: relative;
 }
 
-.news-timeline .timeline-heading h4 {
-  margin-top: 0;
-  color: #3498db;
-  font-weight: bold;
+.featured-card .card-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  position: relative;
 }
 
-.news-timeline .timeline-heading h4.subheading {
+.achievement-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ffd700;
   color: #2c3e50;
-  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);
+}
+
+.featured-card .card-title {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.news-timeline .timeline-body > p,
-.news-timeline .timeline-body > ul {
+/* Compact Cards - Medium */
+.compact-card .card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+
+.compact-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.compact-card .card-subtitle {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.compact-card .card-text {
+  font-size: 0.9rem;
+  color: #5a6c7d;
+  line-height: 1.4;
+}
+
+/* Standard Cards - Regular */
+.standard-card .card-img {
+  height: 120px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.standard-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.standard-card .card-subtitle {
+  font-size: 0.85rem;
+  color: #7f8c8d;
   margin-bottom: 10px;
 }
 
-.news-timeline .timeline-body ul li {
-  margin-bottom: 5px;
+.standard-card .card-text {
+  font-size: 0.9rem;
+  color: #5a6c7d;
+  line-height: 1.4;
+}
+
+/* Placeholder Card */
+.placeholder-card {
+  border: 2px dashed #bdc3c7;
+  background: #f8f9fa;
+}
+
+.placeholder-img {
+  height: 120px;
+  background: #ecf0f1;
+  border-radius: 8px;
+}
+
+/* Research Areas Badges */
+.research-areas {
+  margin-top: 10px;
+}
+
+.research-areas .badge {
+  margin: 2px 4px 2px 0;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+}
+
+.research-areas .badge i {
+  margin-right: 5px;
+}
+
+/* Card Body Styling */
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-subtitle {
+  font-weight: 500;
   color: #6c757d;
+  margin-bottom: 0.5rem;
 }
 
-.news-timeline .timeline-body ul li i {
-  color: #3498db;
-  margin-right: 8px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .year-badge {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    min-width: 80px;
+  }
+  
+  .featured-card .card-img {
+    height: 150px;
+  }
+  
+  .compact-card .card-img-top {
+    height: 120px;
+  }
+  
+  .standard-card .card-img {
+    height: 100px;
+  }
+  
+  .featured-card .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
 }
 
-/* Mobile Responsive */
-@media (max-width: 767px) {
-  .news-timeline .timeline:before {
-    left: 40px;
+@media (max-width: 576px) {
+  .year-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
   
-  .news-timeline .timeline > li .timeline-panel {
-    width: calc(100% - 120px);
-    margin-left: 20px;
-  }
-  
-  .news-timeline .timeline > li.timeline-inverted > .timeline-panel {
-    width: calc(100% - 120px);
-    margin-left: 20px;
+  .year-badge {
+    margin-bottom: 15px;
     margin-right: 0;
+  }
+  
+  .year-line {
+    height: 2px;
   }
 }
 </style>

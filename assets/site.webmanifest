@@ -1,1 +1,1 @@
-{"name":"SSU RealityLab","short_name":"RealityLab","description":"숭실대학교 Reality Lab 연구실","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#3498db","background_color":"#ffffff","display":"standalone","start_url":"/"}
+{"name":"SSU RealityLab","short_name":"RealityLab","description":"숭실대학교 Reality Lab 연구실","icons":[],"theme_color":"#3498db","background_color":"#ffffff","display":"standalone","start_url":"/"}

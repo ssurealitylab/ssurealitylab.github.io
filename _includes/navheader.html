@@ -206,29 +206,6 @@
 #mainNav .navbar-brand {
   color: #1a1a1a !important;
 }
-
-/* Prevent layout shift during image loading */
-.slider-image img {
-  min-height: 400px;
-  object-fit: cover;
-  background-color: #f3f4f6;
-}
-
-.member-photo img,
-img[src*="members/"] {
-  min-height: 200px;
-  object-fit: cover;
-  background-color: #f3f4f6;
-}
-
-/* Stabilize layout during loading */
-.image-slider-container {
-  min-height: 400px;
-}
-
-.slider-content-wrapper {
-  min-height: 400px;
-}
 </style>
 
 <script>
@@ -357,77 +334,35 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Prevent automatic scroll to top on page load
   let isPageLoaded = false;
-  let userHasScrolled = false;
-  let currentScrollPosition = 0;
-  let scrollCheckInterval;
+  let savedScrollPosition = 0;
   
-  // Track user scroll attempts immediately
-  let scrollEventCount = 0;
-  window.addEventListener('scroll', function() {
-    scrollEventCount++;
-    currentScrollPosition = window.pageYOffset;
-    
-    if (!isPageLoaded && scrollEventCount > 1) {
-      userHasScrolled = true;
-    }
-  }, { passive: true });
-  
-  // Prevent images from causing scroll jumps
-  function stabilizeScroll() {
-    if (userHasScrolled && !isPageLoaded) {
-      const targetPosition = currentScrollPosition;
-      
-      // Continuously maintain scroll position during image loading
-      scrollCheckInterval = setInterval(function() {
-        if (Math.abs(window.pageYOffset - targetPosition) > 10) {
-          window.scrollTo(0, targetPosition);
-        }
-      }, 16); // 60fps monitoring
-    }
-  }
-  
-  // Monitor for layout changes caused by image loading
-  const images = document.querySelectorAll('img');
-  let loadedImages = 0;
-  const totalImages = images.length;
-  
-  images.forEach(function(img) {
-    if (img.complete) {
-      loadedImages++;
-    } else {
-      img.addEventListener('load', function() {
-        loadedImages++;
-        stabilizeScroll();
-        
-        // When all images are loaded, stop scroll monitoring
-        if (loadedImages >= totalImages) {
-          clearInterval(scrollCheckInterval);
-          isPageLoaded = true;
-        }
-      });
-      
-      img.addEventListener('error', function() {
-        loadedImages++;
-        if (loadedImages >= totalImages) {
-          clearInterval(scrollCheckInterval);
-          isPageLoaded = true;
-        }
-      });
-    }
+  // Save scroll position before any potential scroll interruption
+  window.addEventListener('beforeunload', function() {
+    localStorage.setItem('scrollPosition', window.pageYOffset.toString());
   });
   
-  // Fallback: mark as loaded after a reasonable time
+  // Restore scroll position after page loads
   window.addEventListener('load', function() {
     setTimeout(function() {
-      clearInterval(scrollCheckInterval);
+      const savedPosition = localStorage.getItem('scrollPosition');
+      if (savedPosition) {
+        window.scrollTo(0, parseInt(savedPosition));
+        localStorage.removeItem('scrollPosition');
+      }
       isPageLoaded = true;
-    }, 2000);
+    }, 100);
   });
   
-  // Also check when DOM content is loaded
-  if (loadedImages >= totalImages) {
-    isPageLoaded = true;
-  }
+  // Prevent scroll hijacking during page load
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    if (!isPageLoaded) {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(function() {
+        savedScrollPosition = window.pageYOffset;
+      }, 50);
+    }
+  });
   
   // Fix ESC key scroll issue - ensure body overflow is properly restored
   document.addEventListener('keydown', function(event) {

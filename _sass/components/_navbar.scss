@@ -95,10 +95,6 @@
       &.dropdown {
         position: relative;
         
-        // Extended hover area by adding invisible padding
-        padding: 15px 10px; // 30% more hover area up/down, some side extension
-        margin: -15px -10px; // Negative margins to maintain visual spacing
-        
         .dropdown-toggle {
           &::after {
             display: none;

@@ -201,6 +201,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (item !== dropdown) {
           item.querySelector('.dropdown-menu').style.display = 'none';
           item.querySelector('.dropdown-menu').style.opacity = '0';
+          
+          // Reset other chevrons
+          const otherChevron = item.querySelector('i.fa-chevron-down');
+          if (otherChevron) {
+            otherChevron.style.transform = 'rotate(0deg)';
+          }
         }
       });
       
@@ -228,8 +234,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const menuRight = rect.right;
       const menuTop = rect.top;
       
-      const isMovingTowards = mouseX >= menuLeft - 50 && mouseX <= menuRight + 50 && 
-                             mouseY >= menuTop - 50;
+      const isMovingTowards = mouseX >= menuLeft - 20 && mouseX <= menuRight + 20 && 
+                             mouseY >= menuTop - 20;
       
       if (isMovingTowards) {
         // Give more time if moving towards dropdown

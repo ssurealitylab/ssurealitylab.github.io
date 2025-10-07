@@ -188,12 +188,23 @@ setTimeout(function() {
         logo.addEventListener('click', function(e) {
             console.log('Logo clicked! Count:', clickCount + 1);
             
+            // Check if we're on the homepage to prevent navigation during easter egg attempts
+            const isHomepage = window.location.pathname === '/' || 
+                              window.location.pathname === '/Realitylab-site/' ||
+                              window.location.pathname.endsWith('/index.html');
+            
             // Reset timer if more than 3 seconds passed
             if (clickTimer) {
                 clearTimeout(clickTimer);
             }
             
             clickCount++;
+            
+            // If on homepage and clicking multiple times, prevent default navigation
+            if (isHomepage && clickCount >= 2) {
+                e.preventDefault();
+                console.log('Preventing navigation for easter egg detection');
+            }
             
             // Add shake animation if clicked 3 or more times
             if (clickCount >= 3) {
@@ -215,7 +226,7 @@ setTimeout(function() {
             
             // Trigger easter egg if 7 clicks within 3 seconds
             if (clickCount >= 7 && !isAnimating) {
-                e.preventDefault(); // Only prevent default when easter egg triggers
+                e.preventDefault(); // Prevent default when easter egg triggers
                 console.log('🤖 Easter egg triggered!');
                 triggerRobotEasterEgg();
                 clickCount = 0;

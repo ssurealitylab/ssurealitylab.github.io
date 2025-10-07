@@ -124,7 +124,8 @@
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize navigation functionality after everything loads
+function initNavigation() {
   const dropdownItems = document.querySelectorAll('.navbar-nav .dropdown');
   let activeDropdown = null;
   let timeoutId = null;
@@ -293,5 +294,20 @@ document.addEventListener('DOMContentLoaded', function() {
       tryToggle();
     });
   });
+}
+
+// Try to initialize immediately
+document.addEventListener('DOMContentLoaded', initNavigation);
+
+// Also try after full page load
+window.addEventListener('load', function() {
+  setTimeout(initNavigation, 500);
 });
+
+// Emergency fallback - initialize after a delay
+setTimeout(function() {
+  if (typeof initNavigation === 'function') {
+    initNavigation();
+  }
+}, 2000);
 </script>

@@ -10,27 +10,30 @@
 # Default navigation (used when no locale is specified)
 nav:
   - title: "Home"
-    url: https://ssurealitylab.github.io/Realitylab-site/
+    url: https://ssurealitylab-spec.github.io/Realitylab-site/
   - title: "News"
-    url: https://ssurealitylab.github.io/Realitylab-site/news.html
+    url: https://ssurealitylab-spec.github.io/Realitylab-site/news.html
   - title: "GIT"
-    url: https://ssurealitylab.github.io/Realitylab-site/github.html
+    url: https://ssurealitylab-spec.github.io/Realitylab-site/github.html
     external_page: true
-  - title: "Faculty"
-    url: https://ssurealitylab.github.io/Realitylab-site/faculty.html
-  - title: "Students"
-    url: https://ssurealitylab.github.io/Realitylab-site/students.html
-  - title: "Alumni"
-    url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
+  - title: "Members"
+    url: https://ssurealitylab-spec.github.io/Realitylab-site/members.html
+    dropdown:
+      - title: "Faculty"
+        url: https://ssurealitylab-spec.github.io/Realitylab-site/members.html#faculty
+      - title: "Students"
+        url: https://ssurealitylab-spec.github.io/Realitylab-site/members.html#students
+      - title: "Alumni"
+        url: https://ssurealitylab-spec.github.io/Realitylab-site/members.html#alumni
   - title: "Publication"
-    url: https://ssurealitylab.github.io/Realitylab-site/publication.html
+    url: https://ssurealitylab-spec.github.io/Realitylab-site/publication.html
     dropdown:
       - title: "International"
-        url: https://ssurealitylab.github.io/Realitylab-site/publication.html#international
+        url: https://ssurealitylab-spec.github.io/Realitylab-site/publication.html#international
       - title: "Domestic"
-        url: https://ssurealitylab.github.io/Realitylab-site/publication.html#domestic
+        url: https://ssurealitylab-spec.github.io/Realitylab-site/publication.html#domestic
   - title: "Courses"
-    url: https://ssurealitylab.github.io/Realitylab-site/courses.html
+    url: https://ssurealitylab-spec.github.io/Realitylab-site/courses.html
   - title: "AI"
     url: "#ai"
     dropdown:
@@ -45,27 +48,30 @@ nav:
 en: &DEFAULT_EN
   nav:
     - title: "Home"
-      url: https://ssurealitylab.github.io/Realitylab-site/
+      url: https://ssurealitylab-spec.github.io/Realitylab-site/
     - title: "News"
-      url: https://ssurealitylab.github.io/Realitylab-site/news.html
+      url: https://ssurealitylab-spec.github.io/Realitylab-site/news.html
     - title: "GIT"
-      url: https://ssurealitylab.github.io/Realitylab-site/github.html
+      url: https://ssurealitylab-spec.github.io/Realitylab-site/github.html
       external_page: true
-    - title: "Faculty"
-      url: https://ssurealitylab.github.io/Realitylab-site/faculty.html
-    - title: "Students"
-      url: https://ssurealitylab.github.io/Realitylab-site/students.html
-    - title: "Alumni"
-      url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
+    - title: "Members"
+      url: https://ssurealitylab-spec.github.io/Realitylab-site/members.html
+      dropdown:
+        - title: "Faculty"
+          url: https://ssurealitylab-spec.github.io/Realitylab-site/members.html#faculty
+        - title: "Students"
+          url: https://ssurealitylab-spec.github.io/Realitylab-site/members.html#students
+        - title: "Alumni"
+          url: https://ssurealitylab-spec.github.io/Realitylab-site/members.html#alumni
     - title: "Publication"
-      url: https://ssurealitylab.github.io/Realitylab-site/publication.html
+      url: https://ssurealitylab-spec.github.io/Realitylab-site/publication.html
       dropdown:
         - title: "International"
-          url: https://ssurealitylab.github.io/Realitylab-site/publication.html#international
+          url: https://ssurealitylab-spec.github.io/Realitylab-site/publication.html#international
         - title: "Domestic"
-          url: https://ssurealitylab.github.io/Realitylab-site/publication.html#domestic
+          url: https://ssurealitylab-spec.github.io/Realitylab-site/publication.html#domestic
     - title: "Courses"
-      url: https://ssurealitylab.github.io/Realitylab-site/courses.html
+      url: https://ssurealitylab-spec.github.io/Realitylab-site/courses.html
     - title: "AI"
       url: "#ai"
       dropdown:

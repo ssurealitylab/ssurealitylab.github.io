@@ -107,6 +107,13 @@ title: GitHub Repositories
 .portfolio-modal .col-lg-8 {
   max-width: 100% !important;
   padding: 0 !important;
+  margin: 0 !important;
+  flex: 0 0 100% !important;
+}
+
+.portfolio-modal .mx-auto {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .portfolio-modal .modal-body {

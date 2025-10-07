@@ -277,22 +277,32 @@ setTimeout(function() {
             
             // Get the position of the original R
             const rect = originalR.getBoundingClientRect();
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            const computedStyle = getComputedStyle(originalR);
+            
+            // Calculate letter spacing for consistent spacing
+            const fontSize = parseInt(computedStyle.fontSize);
+            const lineHeight = parseFloat(computedStyle.lineHeight) || fontSize * 1.2;
+            const letterSpacing = computedStyle.letterSpacing !== 'normal' ? 
+                                parseFloat(computedStyle.letterSpacing) : 0;
+            
+            // Use line height for vertical spacing to match text flow
+            const verticalSpacing = lineHeight;
             
             // Create the additional R letters positioned absolutely relative to the original
             const r2 = document.createElement('span');
             r2.textContent = 'R';
             r2.style.position = 'fixed';
             r2.style.left = rect.left + 'px';
-            r2.style.top = (rect.bottom + 5) + 'px'; // 5px below original
+            r2.style.top = (rect.top + verticalSpacing) + 'px'; // Use calculated spacing
             r2.style.color = '#ff6b6b';
             r2.style.opacity = '0';
             r2.style.transform = 'translateY(-20px)';
             r2.style.transition = 'all 0.5s ease';
-            r2.style.fontWeight = getComputedStyle(originalR).fontWeight;
-            r2.style.fontSize = getComputedStyle(originalR).fontSize;
-            r2.style.fontFamily = getComputedStyle(originalR).fontFamily;
+            r2.style.fontWeight = computedStyle.fontWeight;
+            r2.style.fontSize = computedStyle.fontSize;
+            r2.style.fontFamily = computedStyle.fontFamily;
+            r2.style.letterSpacing = computedStyle.letterSpacing;
+            r2.style.lineHeight = computedStyle.lineHeight;
             r2.style.zIndex = '9998';
             r2.style.pointerEvents = 'none';
             
@@ -300,14 +310,16 @@ setTimeout(function() {
             r3.textContent = 'R';
             r3.style.position = 'fixed';
             r3.style.left = rect.left + 'px';
-            r3.style.top = (rect.bottom + parseInt(getComputedStyle(originalR).fontSize) + 10) + 'px'; // Below r2
+            r3.style.top = (rect.top + verticalSpacing * 2) + 'px'; // Two line heights below original
             r3.style.color = '#4ecdc4';
             r3.style.opacity = '0';
             r3.style.transform = 'translateY(-40px)';
             r3.style.transition = 'all 0.7s ease';
-            r3.style.fontWeight = getComputedStyle(originalR).fontWeight;
-            r3.style.fontSize = getComputedStyle(originalR).fontSize;
-            r3.style.fontFamily = getComputedStyle(originalR).fontFamily;
+            r3.style.fontWeight = computedStyle.fontWeight;
+            r3.style.fontSize = computedStyle.fontSize;
+            r3.style.fontFamily = computedStyle.fontFamily;
+            r3.style.letterSpacing = computedStyle.letterSpacing;
+            r3.style.lineHeight = computedStyle.lineHeight;
             r3.style.zIndex = '9998';
             r3.style.pointerEvents = 'none';
             

@@ -186,8 +186,6 @@ setTimeout(function() {
         console.log('✅ Logo found! Setting up easter egg...');
         
         logo.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             console.log('Logo clicked! Count:', clickCount + 1);
             
             // Reset timer if more than 3 seconds passed
@@ -217,6 +215,7 @@ setTimeout(function() {
             
             // Trigger easter egg if 7 clicks within 3 seconds
             if (clickCount >= 7 && !isAnimating) {
+                e.preventDefault(); // Only prevent default when easter egg triggers
                 console.log('🤖 Easter egg triggered!');
                 triggerRobotEasterEgg();
                 clickCount = 0;

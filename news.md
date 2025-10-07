@@ -27,29 +27,26 @@ title: News
       </div>
       
       <div class="row">
-        <!-- ARNOLD Challenge - Featured -->
-        <div class="col-lg-8 mb-4">
-          <div class="news-card featured-card">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="참고 이미지/homepage_slider_images/slider_02.jpg" class="card-img" alt="ARNOLD Challenge">
-                <div class="achievement-badge">🥇 1st Place</div>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h4 class="card-title">ARNOLD Challenge 1st Place</h4>
-                  <p class="card-subtitle text-muted">CVPR 2025 Embodied AI Workshop</p>
-                  <p class="card-text">Reality Lab 팀이 ARNOLD Challenge에서 1위를 차지하는 쾌거를 이루었습니다. Embodied AI 분야에서의 우수한 연구 성과를 국제적으로 인정받았습니다.</p>
-                </div>
-              </div>
+        <!-- ARNOLD Challenge -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card challenge-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-trophy fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">ARNOLD Challenge 1st Place</h5>
+              <p class="card-subtitle">CVPR 2025 Embodied AI Workshop</p>
+              <p class="card-text">Reality Lab 팀이 ARNOLD Challenge에서 1위를 차지하는 쾌거를 이루었습니다.</p>
             </div>
           </div>
         </div>
         
-        <!-- Other 2025 Events -->
+        <!-- BMVC 2025 Paper -->
         <div class="col-lg-4 mb-4">
-          <div class="news-card compact-card">
-            <img src="참고 이미지/homepage_slider_images/slider_01.jpg" class="card-img-top" alt="BMVC 2025">
+          <div class="news-card paper-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-file-alt fa-2x text-muted"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">BMVC 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
@@ -58,24 +55,16 @@ title: News
           </div>
         </div>
         
+        <!-- CVPR 2025 Paper -->
         <div class="col-lg-4 mb-4">
-          <div class="news-card compact-card">
-            <img src="참고 이미지/homepage_slider_images/slider_14.jpg" class="card-img-top" alt="CVPR 2025">
+          <div class="news-card paper-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-file-alt fa-2x text-muted"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">CVPR 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
               <p class="card-text">컴퓨터 비전 최고 학술대회인 CVPR 2025에 논문이 채택되었습니다.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 mb-4">
-          <div class="news-card compact-card">
-            <img src="참고 이미지/homepage_slider_images/slider_03.jpg" class="card-img-top" alt="Future Achievement">
-            <div class="card-body">
-              <h5 class="card-title">More Achievements Coming</h5>
-              <p class="card-subtitle">Stay Tuned</p>
-              <p class="card-text">더 많은 연구 성과와 업적들이 계속 업데이트될 예정입니다.</p>
             </div>
           </div>
         </div>
@@ -94,38 +83,44 @@ title: News
       </div>
       
       <div class="row">
-        <div class="col-lg-6 mb-4">
-          <div class="news-card standard-card">
-            <div class="row no-gutters">
-              <div class="col-md-5">
-                <img src="참고 이미지/homepage_slider_images/slider_10.jpg" class="card-img" alt="Qualcomm">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title">Qualcomm Internship Achievement</h5>
-                  <p class="card-subtitle">Sangmin Lee (이상민)</p>
-                  <p class="card-text">세계적인 반도체 기업 Qualcomm에서 인턴십을 성공적으로 수행하였습니다.</p>
-                </div>
-              </div>
+        <!-- Qualcomm Internship -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card research-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-building fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Qualcomm Internship Achievement</h5>
+              <p class="card-subtitle">Sangmin Lee (이상민)</p>
+              <p class="card-text">세계적인 반도체 기업 Qualcomm에서 인턴십을 성공적으로 수행하였습니다.</p>
             </div>
           </div>
         </div>
         
-        <div class="col-lg-6 mb-4">
-          <div class="news-card standard-card placeholder-card">
-            <div class="row no-gutters">
-              <div class="col-md-5">
-                <div class="placeholder-img d-flex align-items-center justify-content-center">
-                  <i class="fas fa-plus fa-2x text-muted"></i>
-                </div>
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title">More 2024 Updates</h5>
-                  <p class="card-subtitle">Coming Soon</p>
-                  <p class="card-text">2024년의 추가 성과들이 업데이트될 예정입니다.</p>
-                </div>
-              </div>
+        <!-- Placeholder 1 -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card placeholder-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-plus fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">More 2024 Updates</h5>
+              <p class="card-subtitle">Coming Soon</p>
+              <p class="card-text">2024년의 추가 성과들이 업데이트될 예정입니다.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Placeholder 2 -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card placeholder-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-plus fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">More 2024 Updates</h5>
+              <p class="card-subtitle">Coming Soon</p>
+              <p class="card-text">2024년의 추가 성과들이 업데이트될 예정입니다.</p>
             </div>
           </div>
         </div>
@@ -144,41 +139,49 @@ title: News
       </div>
       
       <div class="row">
-        <div class="col-lg-6 mb-4">
-          <div class="news-card standard-card">
-            <div class="row no-gutters">
-              <div class="col-md-5">
-                <img src="assets/img/timeline/1.jpg" class="card-img" alt="Lab Foundation">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title">Reality Lab 설립</h5>
-                  <p class="card-subtitle">김희원 교수, 숭실대학교</p>
-                  <p class="card-text">"Advancing AI to Understand Reality" 비전으로 연구실이 공식 설립되었습니다.</p>
-                </div>
+        <!-- Lab Foundation -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card research-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-university fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Reality Lab 설립</h5>
+              <p class="card-subtitle">김희원 교수, 숭실대학교</p>
+              <p class="card-text">"Advancing AI to Understand Reality" 비전으로 연구실이 공식 설립되었습니다.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Research Areas -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card research-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-cogs fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">연구 분야 확립</h5>
+              <p class="card-subtitle">4개 핵심 분야</p>
+              <div class="research-areas">
+                <span class="badge badge-primary"><i class="fas fa-robot"></i> Robotics</span>
+                <span class="badge badge-info"><i class="fas fa-eye"></i> Vision</span>
+                <span class="badge badge-success"><i class="fas fa-brain"></i> ML</span>
+                <span class="badge badge-warning"><i class="fas fa-comments"></i> Multimodal</span>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="col-lg-6 mb-4">
-          <div class="news-card standard-card">
-            <div class="row no-gutters">
-              <div class="col-md-5">
-                <img src="assets/img/timeline/2.jpg" class="card-img" alt="Research Areas">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title">연구 분야 확립</h5>
-                  <p class="card-subtitle">4개 핵심 분야</p>
-                  <div class="research-areas">
-                    <span class="badge badge-primary"><i class="fas fa-robot"></i> Robotics</span>
-                    <span class="badge badge-info"><i class="fas fa-eye"></i> Vision</span>
-                    <span class="badge badge-success"><i class="fas fa-brain"></i> ML</span>
-                    <span class="badge badge-warning"><i class="fas fa-comments"></i> Multimodal</span>
-                  </div>
-                </div>
-              </div>
+        <!-- Placeholder for 2023 -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card placeholder-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-plus fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">More 2023 Updates</h5>
+              <p class="card-subtitle">Coming Soon</p>
+              <p class="card-text">2023년의 추가 성과들이 업데이트될 예정입니다.</p>
             </div>
           </div>
         </div>
@@ -247,6 +250,7 @@ title: News
   transition: all 0.3s ease;
   height: 100%;
   background: white;
+  border: 3px solid transparent;
 }
 
 .news-card:hover {
@@ -254,87 +258,50 @@ title: News
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Featured Card - Largest */
-.featured-card {
-  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-  border: 2px solid #ffd700;
-  position: relative;
+/* Category-based Border Colors */
+.challenge-card {
+  border-color: #ffd700 !important; /* Yellow for challenges */
 }
 
-.featured-card .card-img {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
-  position: relative;
+.challenge-card:hover {
+  border-color: #ffed4a !important;
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
 }
 
-.achievement-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #ffd700;
-  color: #2c3e50;
-  padding: 8px 15px;
-  border-radius: 25px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);
+.paper-card {
+  border-color: #3498db !important; /* Blue for papers */
 }
 
-.featured-card .card-title {
-  color: #2c3e50;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+.paper-card:hover {
+  border-color: #5dade2 !important;
+  box-shadow: 0 8px 30px rgba(52, 152, 219, 0.3);
 }
 
-/* Compact Cards - Medium */
-.compact-card .card-img-top {
-  height: 150px;
-  object-fit: cover;
+.research-card {
+  border-color: #9b59b6 !important; /* Purple for research projects */
 }
 
-.compact-card .card-title {
+.research-card:hover {
+  border-color: #bb8fce !important;
+  box-shadow: 0 8px 30px rgba(155, 89, 182, 0.3);
+}
+
+/* Card Layout - All Uniform */
+.news-card .card-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 8px;
 }
 
-.compact-card .card-subtitle {
+.news-card .card-subtitle {
   font-size: 0.85rem;
   color: #7f8c8d;
   margin-bottom: 10px;
   font-weight: 500;
 }
 
-.compact-card .card-text {
-  font-size: 0.9rem;
-  color: #5a6c7d;
-  line-height: 1.4;
-}
-
-/* Standard Cards - Regular */
-.standard-card .card-img {
-  height: 120px;
-  object-fit: cover;
-  width: 100%;
-}
-
-.standard-card .card-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 8px;
-}
-
-.standard-card .card-subtitle {
-  font-size: 0.85rem;
-  color: #7f8c8d;
-  margin-bottom: 10px;
-}
-
-.standard-card .card-text {
+.news-card .card-text {
   font-size: 0.9rem;
   color: #5a6c7d;
   line-height: 1.4;
@@ -342,14 +309,15 @@ title: News
 
 /* Placeholder Card */
 .placeholder-card {
-  border: 2px dashed #bdc3c7;
+  border: 2px dashed #bdc3c7 !important;
   background: #f8f9fa;
 }
 
 .placeholder-img {
-  height: 120px;
+  height: 150px;
   background: #ecf0f1;
   border-radius: 8px;
+  margin: 15px;
 }
 
 /* Research Areas Badges */
@@ -387,20 +355,9 @@ title: News
     min-width: 80px;
   }
   
-  .featured-card .card-img {
-    height: 150px;
-  }
-  
-  .compact-card .card-img-top {
+  .placeholder-img {
     height: 120px;
-  }
-  
-  .standard-card .card-img {
-    height: 100px;
-  }
-  
-  .featured-card .card-title {
-    font-size: 1.3rem;
+    margin: 10px;
   }
   
   .card-body {

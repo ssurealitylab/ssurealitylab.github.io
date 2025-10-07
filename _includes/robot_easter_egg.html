@@ -160,38 +160,34 @@ setTimeout(function() {
     
     console.log('Robot Easter Egg script starting...');
     
-    function findLogo() {
-        // Try multiple selectors for the logo
-        return document.getElementById('reality-lab-logo') || 
-               document.querySelector('.navbar-brand') || 
-               document.querySelector('a.navbar-brand') ||
-               document.querySelector('nav .container a:first-child') ||
-               document.querySelector('#mainNav .navbar-brand');
+    function findEasterEggTrigger() {
+        // Find the "R" letter in "Reality Lab" text
+        return document.getElementById('easter-egg-trigger');
     }
     
     function initEasterEgg() {
-        const logo = findLogo();
+        const easterEggTrigger = findEasterEggTrigger();
         const robotEgg = document.getElementById('robot-easter-egg');
         
-        console.log('Trying to find logo...');
-        console.log('Logo element:', logo);
-        console.log('Logo text content:', logo ? logo.textContent : 'N/A');
+        console.log('Trying to find easter egg trigger...');
+        console.log('Easter egg trigger element:', easterEggTrigger);
         console.log('Robot egg element:', robotEgg);
         
-        if (!logo || !robotEgg) {
+        if (!easterEggTrigger || !robotEgg) {
             console.log('Elements not found, will keep trying...');
             return false;
         }
         
-        console.log('✅ Logo found! Setting up easter egg...');
+        console.log('✅ Easter egg trigger found! Setting up easter egg...');
         
-        logo.addEventListener('click', function(e) {
-            console.log('Logo clicked! Count:', clickCount + 1);
-            
-            // Check if we're on the homepage to prevent navigation during easter egg attempts
-            const isHomepage = window.location.pathname === '/' || 
-                              window.location.pathname === '/Realitylab-site/' ||
-                              window.location.pathname.endsWith('/index.html');
+        // Make the R letter clickable with visual feedback
+        easterEggTrigger.style.cursor = 'pointer';
+        easterEggTrigger.style.userSelect = 'none';
+        easterEggTrigger.style.transition = 'color 0.2s ease';
+        
+        easterEggTrigger.addEventListener('click', function(e) {
+            e.preventDefault(); // Always prevent default for the R letter
+            console.log('R letter clicked! Count:', clickCount + 1);
             
             // Reset timer if more than 3 seconds passed
             if (clickTimer) {
@@ -200,21 +196,21 @@ setTimeout(function() {
             
             clickCount++;
             
-            // If on homepage and clicking multiple times, prevent default navigation
-            if (isHomepage && clickCount >= 2) {
-                e.preventDefault();
-                console.log('Preventing navigation for easter egg detection');
-            }
+            // Add visual feedback on click
+            easterEggTrigger.style.color = '#ff6b6b';
+            setTimeout(function() {
+                easterEggTrigger.style.color = '';
+            }, 200);
             
-            // Add shake animation if clicked 3 or more times
-            if (clickCount >= 3) {
-                logo.classList.remove('title-shake');
-                void logo.offsetWidth; // Force reflow
-                logo.classList.add('title-shake');
+            // Add shake animation if clicked 2 or more times
+            if (clickCount >= 2) {
+                easterEggTrigger.classList.remove('title-shake');
+                void easterEggTrigger.offsetWidth; // Force reflow
+                easterEggTrigger.classList.add('title-shake');
                 
                 // Remove shake class after animation
                 setTimeout(function() {
-                    logo.classList.remove('title-shake');
+                    easterEggTrigger.classList.remove('title-shake');
                 }, 800);
             }
             
@@ -224,9 +220,8 @@ setTimeout(function() {
                 clickCount = 0;
             }, 3000);
             
-            // Trigger easter egg if 7 clicks within 3 seconds
-            if (clickCount >= 7 && !isAnimating) {
-                e.preventDefault(); // Prevent default when easter egg triggers
+            // Trigger easter egg if 3 clicks within 3 seconds
+            if (clickCount >= 3 && !isAnimating) {
                 console.log('🤖 Easter egg triggered!');
                 triggerRobotEasterEgg();
                 clickCount = 0;

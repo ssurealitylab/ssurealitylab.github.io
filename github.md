@@ -72,30 +72,31 @@ title: GitHub Repositories
 
 /* Modal Styling - Proper 70% screen coverage */
 .portfolio-modal .modal-dialog {
-  max-width: 90vw;
-  width: 90vw;
-  margin: 2rem auto;
+  max-width: 90vw !important;
+  width: 90vw !important;
+  margin: 2rem auto !important;
 }
 
 @media (min-width: 768px) {
   .portfolio-modal .modal-dialog {
-    max-width: 75vw;
-    width: 75vw;
+    max-width: 75vw !important;
+    width: 75vw !important;
   }
 }
 
 @media (min-width: 1200px) {
   .portfolio-modal .modal-dialog {
-    max-width: 70vw;
-    width: 70vw;
+    max-width: 70vw !important;
+    width: 70vw !important;
   }
 }
 
 .portfolio-modal .modal-content {
-  border-radius: 15px;
-  border: none;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  min-height: 60vh;
+  border-radius: 15px !important;
+  border: none !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+  min-height: 60vh !important;
+  padding: 2rem !important;
 }
 
 /* Fix the narrow content issue - make content use full width */

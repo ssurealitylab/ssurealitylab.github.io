@@ -16,12 +16,15 @@ nav:
   - title: "GIT"
     url: https://ssurealitylab.github.io/Realitylab-site/github.html
     external_page: true
-  - title: "Faculty"
-    url: https://ssurealitylab.github.io/Realitylab-site/faculty.html
-  - title: "Students"
-    url: https://ssurealitylab.github.io/Realitylab-site/students.html
-  - title: "Alumni"
-    url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
+  - title: "Members"
+    url: https://ssurealitylab.github.io/Realitylab-site/members.html
+    dropdown:
+      - title: "Faculty"
+        url: https://ssurealitylab.github.io/Realitylab-site/faculty.html
+      - title: "Students"
+        url: https://ssurealitylab.github.io/Realitylab-site/students.html
+      - title: "Alumni"
+        url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
   - title: "Publication"
     url: https://ssurealitylab.github.io/Realitylab-site/publication.html
     dropdown:
@@ -51,12 +54,15 @@ en: &DEFAULT_EN
     - title: "GIT"
       url: https://ssurealitylab.github.io/Realitylab-site/github.html
       external_page: true
-    - title: "Faculty"
-      url: https://ssurealitylab.github.io/Realitylab-site/faculty.html
-    - title: "Students"
-      url: https://ssurealitylab.github.io/Realitylab-site/students.html
-    - title: "Alumni"
-      url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
+    - title: "Members"
+      url: https://ssurealitylab.github.io/Realitylab-site/members.html
+      dropdown:
+        - title: "Faculty"
+          url: https://ssurealitylab.github.io/Realitylab-site/faculty.html
+        - title: "Students"
+          url: https://ssurealitylab.github.io/Realitylab-site/students.html
+        - title: "Alumni"
+          url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
     - title: "Publication"
       url: https://ssurealitylab.github.io/Realitylab-site/publication.html
       dropdown:

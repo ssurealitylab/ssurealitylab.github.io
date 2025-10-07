@@ -36,7 +36,10 @@ title: News
             <div class="card-body">
               <h5 class="card-title">ARNOLD Challenge 1st Place</h5>
               <p class="card-subtitle">CVPR 2025 Embodied AI Workshop</p>
-              <p class="card-text">Reality Lab 팀이 ARNOLD Challenge에서 1위를 차지하는 쾌거를 이루었습니다.</p>
+              <p class="card-text">Reality Lab team achieved 1st place in the ARNOLD Challenge at CVPR 2025 Embodied AI Workshop. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Jun 15, 2025 | Awards</small>
+              </div>
             </div>
           </div>
         </div>
@@ -50,7 +53,10 @@ title: News
             <div class="card-body">
               <h5 class="card-title">BMVC 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
-              <p class="card-text">컴퓨터 비전 분야 연구 성과가 인정받아 BMVC 2025에 논문이 채택되었습니다.</p>
+              <p class="card-text">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, and ByungKwan Chae's paper has been accepted to BMVC 2025. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">May 12, 2025 | Publication</small>
+              </div>
             </div>
           </div>
         </div>
@@ -64,7 +70,10 @@ title: News
             <div class="card-body">
               <h5 class="card-title">CVPR 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
-              <p class="card-text">컴퓨터 비전 최고 학술대회인 CVPR 2025에 논문이 채택되었습니다.</p>
+              <p class="card-text">Sangmin Lee and Sungyong Park's paper has been accepted to CVPR 2025. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Apr 28, 2025 | Publication</small>
+              </div>
             </div>
           </div>
         </div>
@@ -91,8 +100,11 @@ title: News
             </div>
             <div class="card-body">
               <h5 class="card-title">Qualcomm Internship Achievement</h5>
-              <p class="card-subtitle">Sangmin Lee (이상민)</p>
-              <p class="card-text">세계적인 반도체 기업 Qualcomm에서 인턴십을 성공적으로 수행하였습니다.</p>
+              <p class="card-subtitle">Sangmin Lee</p>
+              <p class="card-text">Sangmin Lee successfully completed his internship at Qualcomm, gaining valuable industry experience. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Aug 15, 2024 | Experience</small>
+              </div>
             </div>
           </div>
         </div>
@@ -106,7 +118,10 @@ title: News
             <div class="card-body">
               <h5 class="card-title">More 2024 Updates</h5>
               <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">2024년의 추가 성과들이 업데이트될 예정입니다.</p>
+              <p class="card-text">Additional 2024 achievements will be updated soon.</p>
+              <div class="card-date-category">
+                <small class="text-muted">Coming Soon</small>
+              </div>
             </div>
           </div>
         </div>
@@ -120,7 +135,10 @@ title: News
             <div class="card-body">
               <h5 class="card-title">More 2024 Updates</h5>
               <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">2024년의 추가 성과들이 업데이트될 예정입니다.</p>
+              <p class="card-text">Additional 2024 achievements will be updated soon.</p>
+              <div class="card-date-category">
+                <small class="text-muted">Coming Soon</small>
+              </div>
             </div>
           </div>
         </div>
@@ -146,9 +164,12 @@ title: News
               <i class="fas fa-university fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Reality Lab 설립</h5>
-              <p class="card-subtitle">김희원 교수, 숭실대학교</p>
-              <p class="card-text">"Advancing AI to Understand Reality" 비전으로 연구실이 공식 설립되었습니다.</p>
+              <h5 class="card-title">Reality Lab Foundation</h5>
+              <p class="card-subtitle">Prof. Heewon Kim, Soongsil University</p>
+              <p class="card-text">Reality Lab was officially established with the vision "Advancing AI to Understand Reality". Welcome to our journey!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Mar 1, 2023 | Milestone</small>
+              </div>
             </div>
           </div>
         </div>
@@ -160,13 +181,17 @@ title: News
               <i class="fas fa-cogs fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">연구 분야 확립</h5>
-              <p class="card-subtitle">4개 핵심 분야</p>
+              <h5 class="card-title">Research Areas Established</h5>
+              <p class="card-subtitle">Four Core Research Areas</p>
+              <p class="card-text">Four key research areas have been established: Robotics, Computer Vision, Machine Learning, and Multimodal AI.</p>
               <div class="research-areas">
                 <span class="badge badge-primary"><i class="fas fa-robot"></i> Robotics</span>
                 <span class="badge badge-info"><i class="fas fa-eye"></i> Vision</span>
                 <span class="badge badge-success"><i class="fas fa-brain"></i> ML</span>
                 <span class="badge badge-warning"><i class="fas fa-comments"></i> Multimodal</span>
+              </div>
+              <div class="card-date-category">
+                <small class="text-muted">Apr 15, 2023 | Milestone</small>
               </div>
             </div>
           </div>
@@ -181,7 +206,10 @@ title: News
             <div class="card-body">
               <h5 class="card-title">More 2023 Updates</h5>
               <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">2023년의 추가 성과들이 업데이트될 예정입니다.</p>
+              <p class="card-text">Additional 2023 achievements will be updated soon.</p>
+              <div class="card-date-category">
+                <small class="text-muted">Coming Soon</small>
+              </div>
             </div>
           </div>
         </div>
@@ -345,6 +373,19 @@ title: News
   font-weight: 500;
   color: #6c757d;
   margin-bottom: 0.5rem;
+}
+
+/* Date and Category Styling */
+.card-date-category {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.card-date-category small {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.8rem;
 }
 
 /* Responsive Design */

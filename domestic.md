@@ -1,0 +1,324 @@
+---
+layout: page
+title: Domestic Publications
+---
+
+<!-- Publications Header -->
+<section class="publications-header text-center py-5">
+  <div class="container">
+    <h1 class="section-heading text-uppercase">Domestic Publications</h1>
+    <h3 class="section-subheading text-muted">Korean research contributions and achievements</h3>
+  </div>
+</section>
+
+<!-- Publications Content -->
+<section class="publications-content py-5">
+  <div class="container">
+    
+    <!-- Domestic Section -->
+    <div class="category-section mb-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="category-header d-flex align-items-center mb-4">
+            <div class="category-badge domestic-badge">2024-2025</div>
+            <div class="category-line flex-grow-1"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- Placeholder 1 -->
+        <div class="col-lg-4 mb-4">
+          <div class="publication-card placeholder-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-plus fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Korean Conference Papers</h5>
+              <p class="card-subtitle">Coming Soon</p>
+              <p class="card-text">Korean conference and journal publications will be updated.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Placeholder 2 -->
+        <div class="col-lg-4 mb-4">
+          <div class="publication-card placeholder-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-plus fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Korean Journal Papers</h5>
+              <p class="card-subtitle">Coming Soon</p>
+              <p class="card-text">Korean journal publications will be updated.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Placeholder 3 -->
+        <div class="col-lg-4 mb-4">
+          <div class="publication-card placeholder-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-plus fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Korean Workshop Papers</h5>
+              <p class="card-subtitle">Coming Soon</p>
+              <p class="card-text">Korean workshop publications will be updated.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Placeholder 4 -->
+        <div class="col-lg-4 mb-4">
+          <div class="publication-card placeholder-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-plus fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">More Domestic Publications</h5>
+              <p class="card-subtitle">Coming Soon</p>
+              <p class="card-text">Additional domestic publications will be updated.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Placeholder 5 -->
+        <div class="col-lg-4 mb-4">
+          <div class="publication-card placeholder-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-plus fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">More Domestic Publications</h5>
+              <p class="card-subtitle">Coming Soon</p>
+              <p class="card-text">Additional domestic publications will be updated.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Placeholder 6 -->
+        <div class="col-lg-4 mb-4">
+          <div class="publication-card placeholder-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-plus fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">More Domestic Publications</h5>
+              <p class="card-subtitle">Coming Soon</p>
+              <p class="card-text">Additional domestic publications will be updated.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Research Focus -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h3 class="text-uppercase mb-4">Domestic Research Focus</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Korean Conferences</h5>
+            <ul class="list-unstyled text-left">
+              <li><i class="fas fa-users text-primary"></i> KCCV (Korean Conference on Computer Vision)</li>
+              <li><i class="fas fa-brain text-success"></i> KIISE (Korea Information Science Society)</li>
+              <li><i class="fas fa-robot text-warning"></i> KRoC (Korea Robotics Conference)</li>
+              <li><i class="fas fa-graduation-cap text-info"></i> KIPS (Korea Information Processing Society)</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Korean Journals</h5>
+            <ul class="list-unstyled text-left">
+              <li><i class="fas fa-file-alt text-primary"></i> JKIISE (Journal of KIISE)</li>
+              <li><i class="fas fa-file-alt text-success"></i> JKIPS (Journal of KIPS)</li>
+              <li><i class="fas fa-file-alt text-warning"></i> JKCGS (Journal of Korea Computer Graphics Society)</li>
+              <li><i class="fas fa-file-alt text-info"></i> JKROS (Journal of Korea Robotics Society)</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <p class="text-muted">
+          <strong>Reality Lab</strong> | Global School of Media, College of IT, Soongsil University<br>
+          <strong>Principal Investigator:</strong> Prof. Heewon Kim
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Publications Content Styles */
+.publications-header {
+  background: linear-gradient(90deg, rgba(39, 174, 96, 0.1) 0%, rgba(34, 153, 84, 0.1) 100%);
+}
+
+/* Category Section */
+.category-section {
+  margin-bottom: 4rem;
+}
+
+.category-header {
+  margin-bottom: 2rem;
+}
+
+.category-badge {
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: 20px;
+  min-width: 140px;
+  text-align: center;
+}
+
+.domestic-badge {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.category-line {
+  height: 3px;
+  background: linear-gradient(90deg, #27ae60, rgba(39, 174, 96, 0.1));
+  border-radius: 2px;
+}
+
+/* Publication Cards */
+.publication-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  background: white;
+  border: 3px solid transparent;
+  position: relative;
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Category-based Border Colors */
+.challenge-card {
+  border-color: #ffd700 !important;
+}
+
+.challenge-card:hover {
+  border-color: #ffed4a !important;
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
+}
+
+.paper-card {
+  border-color: #3498db !important;
+}
+
+.paper-card:hover {
+  border-color: #5dade2 !important;
+  box-shadow: 0 8px 30px rgba(52, 152, 219, 0.3);
+}
+
+.research-card {
+  border-color: #9b59b6 !important;
+}
+
+.research-card:hover {
+  border-color: #bb8fce !important;
+  box-shadow: 0 8px 30px rgba(155, 89, 182, 0.3);
+}
+
+/* Card Layout - All Uniform */
+.publication-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.publication-card .card-subtitle {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.publication-card .card-text {
+  font-size: 0.9rem;
+  color: #5a6c7d;
+  line-height: 1.4;
+}
+
+/* Publication Badge */
+.publication-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+}
+
+/* Placeholder Card */
+.placeholder-card {
+  border: 2px dashed #bdc3c7 !important;
+  background: #f8f9fa;
+}
+
+.placeholder-img {
+  height: 150px;
+  background: #ecf0f1;
+  border-radius: 8px;
+  margin: 15px;
+}
+
+/* Card Body Styling */
+.card-body {
+  padding: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-badge {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    min-width: 120px;
+  }
+  
+  .placeholder-img {
+    height: 120px;
+    margin: 10px;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .category-badge {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+  
+  .category-line {
+    height: 2px;
+  }
+}
+</style>

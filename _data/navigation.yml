@@ -23,12 +23,12 @@ nav:
       - title: "Alumni"
         url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
   - title: "Publications"
-    url: https://ssurealitylab.github.io/Realitylab-site/publication.html
+    url: https://ssurealitylab.github.io/Realitylab-site/international.html
     dropdown:
       - title: "International"
-        url: https://ssurealitylab.github.io/Realitylab-site/publication.html#international
+        url: https://ssurealitylab.github.io/Realitylab-site/international.html
       - title: "Domestic"
-        url: https://ssurealitylab.github.io/Realitylab-site/publication.html#domestic
+        url: https://ssurealitylab.github.io/Realitylab-site/domestic.html
   - title: "Courses"
     url: https://ssurealitylab.github.io/Realitylab-site/courses.html
   - title: "AI"
@@ -58,12 +58,12 @@ en: &DEFAULT_EN
         - title: "Alumni"
           url: https://ssurealitylab.github.io/Realitylab-site/alumni.html
     - title: "Publications"
-      url: https://ssurealitylab.github.io/Realitylab-site/publication.html
+      url: https://ssurealitylab.github.io/Realitylab-site/international.html
       dropdown:
         - title: "International"
-          url: https://ssurealitylab.github.io/Realitylab-site/publication.html#international
+          url: https://ssurealitylab.github.io/Realitylab-site/international.html
         - title: "Domestic"
-          url: https://ssurealitylab.github.io/Realitylab-site/publication.html#domestic
+          url: https://ssurealitylab.github.io/Realitylab-site/domestic.html
     - title: "Courses"
       url: https://ssurealitylab.github.io/Realitylab-site/courses.html
     - title: "AI"

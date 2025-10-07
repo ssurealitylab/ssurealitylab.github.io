@@ -5,182 +5,111 @@ title: Alumni
 
 # Alumni
 
-## Research Achievements
+## Former Research Interns
 
-Our alumni have made significant contributions to the field of artificial intelligence and computer vision. Here are some of the notable achievements from Reality Lab alumni:
-
-<div class="achievements-container">
-  {% for achievement in site.data.members.alumni.achievements %}
-  <div class="achievement-card">
-    <h3 class="achievement-title">{{ achievement.title }}</h3>
-    <p class="achievement-venue">{{ achievement.venue }}</p>
-    {% if achievement.members and achievement.members.size > 0 %}
-    <div class="achievement-members">
-      <strong>Contributors:</strong>
-      <ul>
-      {% for member in achievement.members %}
-        <li>{{ member }}</li>
-      {% endfor %}
-      </ul>
+<div class="members-grid">
+  {% for alumnus in site.data.members.alumni.former_interns %}
+  <div class="member-card">
+    <div class="member-photo">
+      <img src="{{ alumnus.photo }}" alt="{{ alumnus.name }}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZjNmNGY2Ii8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSIzMCIgZmlsbD0iIzllYTNhOCIvPgo8cGF0aCBkPSJNNjAgMTYwYzAtMjIuMDkgMTcuOTEtNDAgNDAtNDBzNDAgMTcuOTEgNDAgNDB2MjBINjB2LTIweiIgZmlsbD0iIzllYTNhOCIvPgo8L3N2Zz4K'">
     </div>
-    {% endif %}
+    <div class="member-info">
+      <h3 class="member-name">{{ alumnus.name }}</h3>
+      {% if alumnus.name_ko %}
+      <p class="member-name-ko">{{ alumnus.name_ko }}</p>
+      {% endif %}
+      {% if alumnus.university %}
+      <p class="member-university">{{ alumnus.university }}</p>
+      {% endif %}
+      {% if alumnus.research %}
+      <p class="member-research">{{ alumnus.research }}</p>
+      {% endif %}
+      {% if alumnus.period %}
+      <p class="member-period">{{ alumnus.period }}</p>
+      {% endif %}
+    </div>
   </div>
   {% endfor %}
 </div>
 
-## Career Paths
-
-Reality Lab alumni have successfully transitioned to various prestigious positions in academia and industry:
-
-<div class="career-info">
-  <div class="career-section">
-    <h3><i class="fas fa-graduation-cap"></i> Academic Careers</h3>
-    <p>Our alumni continue their research journey in top-tier universities and research institutions worldwide, pursuing PhD programs and research positions.</p>
-  </div>
-  
-  <div class="career-section">
-    <h3><i class="fas fa-building"></i> Industry Positions</h3>
-    <p>Alumni have secured positions at leading technology companies including Qualcomm, Samsung, LG, and various AI startups, applying their research expertise to real-world applications.</p>
-  </div>
-  
-  <div class="career-section">
-    <h3><i class="fas fa-rocket"></i> Entrepreneurship</h3>
-    <p>Some alumni have founded their own AI and technology companies, commercializing research innovations and creating new opportunities in the field.</p>
-  </div>
-</div>
-
-## Connect with Alumni
-
-<div class="connect-section">
-  <p>If you are a Reality Lab alumnus and would like to update your information or connect with current lab members, please contact us at <a href="mailto:heewon@ssu.ac.kr">heewon@ssu.ac.kr</a>.</p>
-  
-  <p>We encourage our alumni to stay connected with the lab and contribute to mentoring current students and sharing industry insights.</p>
-</div>
-
 <style>
-.achievements-container {
+.members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
-  margin: 30px 0;
+  margin-bottom: 50px;
+  padding: 20px 0;
 }
 
-.achievement-card {
+.member-card {
   background: white;
   border-radius: 12px;
   padding: 25px;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #3498db;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.achievement-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.achievement-title {
-  color: #2c3e50;
+.member-photo {
+  margin-bottom: 20px;
+}
+
+.member-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f8f9fa;
+}
+
+.member-name {
   font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  color: #2c3e50;
+  margin-bottom: 5px;
 }
 
-.achievement-venue {
-  color: #7f8c8d;
+.member-name-ko {
   font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
   font-style: italic;
-  margin-bottom: 15px;
 }
 
-.achievement-members {
-  margin-top: 15px;
-}
-
-.achievement-members strong {
-  color: #2c3e50;
-  font-size: 0.9rem;
-}
-
-.achievement-members ul {
-  margin: 8px 0 0 0;
-  padding-left: 20px;
-}
-
-.achievement-members li {
+.member-university {
+  font-size: 0.85rem;
   color: #495057;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.member-research {
   font-size: 0.9rem;
-  margin-bottom: 3px;
+  color: #6c757d;
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
-.career-info {
-  margin: 40px 0;
-}
-
-.career-section {
-  background: #f8f9fa;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-left: 4px solid #28a745;
-}
-
-.career-section h3 {
-  color: #2c3e50;
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.career-section h3 i {
+.member-period {
+  font-size: 0.85rem;
   color: #28a745;
-  font-size: 1.2rem;
-}
-
-.career-section p {
-  color: #495057;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.connect-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-radius: 12px;
-  padding: 30px;
-  margin: 40px 0;
-  text-align: center;
-}
-
-.connect-section a {
-  color: #ffd700;
-  text-decoration: none;
   font-weight: 600;
-}
-
-.connect-section a:hover {
-  text-decoration: underline;
-}
-
-.connect-section p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.connect-section p:last-child {
-  margin-bottom: 0;
-}
-
-h1 {
-  color: #2c3e50;
-  margin-bottom: 20px;
+  background: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-top: 5px;
 }
 
 h2 {
   color: #2c3e50;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   margin-top: 40px;
   border-bottom: 2px solid #3498db;
@@ -192,22 +121,21 @@ h2:first-of-type {
 }
 
 @media (max-width: 768px) {
-  .achievements-container {
-    grid-template-columns: 1fr;
+  .members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
   }
   
-  .achievement-card,
-  .career-section,
-  .connect-section {
+  .member-card {
     padding: 20px;
   }
   
-  .career-section h3 {
-    font-size: 1.2rem;
+  .member-photo img {
+    width: 100px;
+    height: 100px;
   }
   
-  .achievement-title {
+  .member-name {
     font-size: 1.2rem;
   }
 }

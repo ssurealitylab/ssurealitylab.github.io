@@ -1,6 +1,7 @@
 ---
 layout: page
 title: GitHub Repositories
+# Force rebuild timestamp: 2025-10-07 23:55
 ---
 
 {% include sidl-script.html %}

@@ -285,8 +285,8 @@ setTimeout(function() {
             const letterSpacing = computedStyle.letterSpacing !== 'normal' ? 
                                 parseFloat(computedStyle.letterSpacing) : 0;
             
-            // Use spacing - 30% of line height (300% of previous 10%)
-            const verticalSpacing = lineHeight * 0.3;
+            // Use spacing - 45% of line height (30% + 50% more)
+            const verticalSpacing = lineHeight * 0.45;
             
             // Create the additional R letters positioned absolutely relative to the original
             const r2 = document.createElement('span');

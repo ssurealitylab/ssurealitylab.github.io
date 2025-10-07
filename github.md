@@ -143,6 +143,25 @@ title: GitHub Repositories
 .custom-modal-close:hover {
   color: #333;
 }
+
+/* Force transparent navigation on GitHub page */
+#mainNav {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  background-color: transparent !important;
+}
+
+#mainNav .navbar-nav .nav-link {
+  color: #4b5563 !important;
+}
+
+#mainNav .navbar-nav .nav-link:hover {
+  color: #3B82F6 !important;
+}
+
+#mainNav .navbar-brand {
+  color: #1a1a1a !important;
+}
 </style>
 
 <!-- GitHub Repositories Section -->

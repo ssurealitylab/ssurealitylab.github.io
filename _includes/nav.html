@@ -257,5 +257,18 @@ document.addEventListener('DOMContentLoaded', function() {
     lastMousePos.x = e.clientX;
     lastMousePos.y = e.clientY;
   });
+  
+  // Handle AI chat trigger clicks
+  const aiChatTriggers = document.querySelectorAll('.ai-chat-trigger');
+  aiChatTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (typeof window.toggleChatbot === 'function') {
+        window.toggleChatbot();
+      } else {
+        console.error('toggleChatbot function not found');
+      }
+    });
+  });
 });
 </script>

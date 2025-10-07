@@ -9,12 +9,10 @@ title: Members
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 30px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: white;
   height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 20px;
 }
 
 .member-card:hover {
@@ -23,22 +21,17 @@ title: Members
 }
 
 .member-photo {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  margin: 0 auto 15px;
   border: 4px solid #f8f9fa;
   transition: border-color 0.3s ease;
-  flex-shrink: 0;
 }
 
 .member-card:hover .member-photo {
   border-color: #007bff;
-}
-
-.member-info {
-  flex: 1;
-  text-align: left;
 }
 
 .member-name {
@@ -83,9 +76,8 @@ title: Members
 
 .social-links {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .social-link {
@@ -186,40 +178,38 @@ title: Members
 
 <div class="row">
   {% for member in site.data.members.faculty %}
-  <div class="col-lg-6 col-md-12">
+  <div class="col-lg-4 col-md-6 col-sm-12">
     <div class="member-card">
       <img src="{{ site.baseurl }}/{{ member.photo }}" 
            alt="{{ member.name }}" 
            class="member-photo"
            onerror="this.src='{{ site.baseurl }}/assets/img/members/placeholder.svg'">
       
-      <div class="member-info">
-        <div class="member-name">{{ member.name }}</div>
-        <div class="member-name-ko">{{ member.name_ko }}</div>
-        <div class="member-position">{{ member.position }}</div>
-        <div class="member-research">{{ member.affiliation }}</div>
+      <div class="member-name">{{ member.name }}</div>
+      <div class="member-name-ko">{{ member.name_ko }}</div>
+      <div class="member-position">{{ member.position }}</div>
+      <div class="member-research">{{ member.affiliation }}</div>
+      
+      <div class="social-links">
+        {% if member.github and member.github != "" %}
+          <a href="{{ member.github }}" target="_blank" class="social-link github">
+            <i class="fab fa-github"></i>
+          </a>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fab fa-github"></i>
+          </span>
+        {% endif %}
         
-        <div class="social-links">
-          {% if member.github and member.github != "" %}
-            <a href="{{ member.github }}" target="_blank" class="social-link github">
-              <i class="fab fa-github"></i>
-            </a>
-          {% else %}
-            <span class="social-link disabled">
-              <i class="fab fa-github"></i>
-            </span>
-          {% endif %}
-          
-          {% if member.linkedin and member.linkedin != "" %}
-            <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          {% else %}
-            <span class="social-link disabled">
-              <i class="fab fa-linkedin-in"></i>
-            </span>
-          {% endif %}
-        </div>
+        {% if member.linkedin and member.linkedin != "" %}
+          <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fab fa-linkedin-in"></i>
+          </span>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -235,47 +225,45 @@ title: Members
 
 <div class="row">
   {% for member in site.data.members.students.ms_students %}
-  <div class="col-lg-6 col-md-12">
+  <div class="col-lg-4 col-md-6 col-sm-12">
     <div class="member-card">
       <img src="{{ site.baseurl }}/{{ member.photo }}" 
            alt="{{ member.name }}" 
            class="member-photo"
            onerror="this.src='{{ site.baseurl }}/assets/img/members/placeholder.svg'">
       
-      <div class="member-info">
-        <div class="member-name">{{ member.name }}</div>
-        <div class="member-name-ko">{{ member.name_ko }}</div>
-        <div class="member-research">{{ member.research }}</div>
-        
-        {% if member.achievements and member.achievements.size > 0 %}
-        <div class="member-achievements">
-          {% for achievement in member.achievements %}
-            <span class="achievement-badge">{{ achievement }}</span>
-          {% endfor %}
-        </div>
+      <div class="member-name">{{ member.name }}</div>
+      <div class="member-name-ko">{{ member.name_ko }}</div>
+      <div class="member-research">{{ member.research }}</div>
+      
+      {% if member.achievements and member.achievements.size > 0 %}
+      <div class="member-achievements">
+        {% for achievement in member.achievements %}
+          <span class="achievement-badge">{{ achievement }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      
+      <div class="social-links">
+        {% if member.github and member.github != "" %}
+          <a href="{{ member.github }}" target="_blank" class="social-link github">
+            <i class="fab fa-github"></i>
+          </a>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fab fa-github"></i>
+          </span>
         {% endif %}
         
-        <div class="social-links">
-          {% if member.github and member.github != "" %}
-            <a href="{{ member.github }}" target="_blank" class="social-link github">
-              <i class="fab fa-github"></i>
-            </a>
-          {% else %}
-            <span class="social-link disabled">
-              <i class="fab fa-github"></i>
-            </span>
-          {% endif %}
-          
-          {% if member.linkedin and member.linkedin != "" %}
-            <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          {% else %}
-            <span class="social-link disabled">
-              <i class="fab fa-linkedin-in"></i>
-            </span>
-          {% endif %}
-        </div>
+        {% if member.linkedin and member.linkedin != "" %}
+          <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fab fa-linkedin-in"></i>
+          </span>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -289,39 +277,37 @@ title: Members
 
 <div class="row">
   {% for member in site.data.members.students.interns %}
-  <div class="col-lg-6 col-md-12">
+  <div class="col-lg-4 col-md-6 col-sm-12">
     <div class="member-card">
       <img src="{{ site.baseurl }}/{{ member.photo }}" 
            alt="{{ member.name }}" 
            class="member-photo"
            onerror="this.src='{{ site.baseurl }}/assets/img/members/placeholder.svg'">
       
-      <div class="member-info">
-        <div class="member-name">{{ member.name }}</div>
-        <div class="member-name-ko">{{ member.name_ko }}</div>
-        <div class="member-research">{{ member.research }}</div>
+      <div class="member-name">{{ member.name }}</div>
+      <div class="member-name-ko">{{ member.name_ko }}</div>
+      <div class="member-research">{{ member.research }}</div>
+      
+      <div class="social-links">
+        {% if member.github and member.github != "" %}
+          <a href="{{ member.github }}" target="_blank" class="social-link github">
+            <i class="fab fa-github"></i>
+          </a>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fab fa-github"></i>
+          </span>
+        {% endif %}
         
-        <div class="social-links">
-          {% if member.github and member.github != "" %}
-            <a href="{{ member.github }}" target="_blank" class="social-link github">
-              <i class="fab fa-github"></i>
-            </a>
-          {% else %}
-            <span class="social-link disabled">
-              <i class="fab fa-github"></i>
-            </span>
-          {% endif %}
-          
-          {% if member.linkedin and member.linkedin != "" %}
-            <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          {% else %}
-            <span class="social-link disabled">
-              <i class="fab fa-linkedin-in"></i>
-            </span>
-          {% endif %}
-        </div>
+        {% if member.linkedin and member.linkedin != "" %}
+          <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fab fa-linkedin-in"></i>
+          </span>
+        {% endif %}
       </div>
     </div>
   </div>

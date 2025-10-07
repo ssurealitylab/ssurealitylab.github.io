@@ -70,24 +70,24 @@ title: GitHub Repositories
   border-radius: 5px;
 }
 
-/* Modal Styling - Simple centered modal */
+/* Modal Styling - Proper 70% screen coverage */
 .portfolio-modal .modal-dialog {
-  max-width: 80%;
-  width: 80%;
-  margin: 30px auto;
+  max-width: 90vw;
+  width: 90vw;
+  margin: 2rem auto;
 }
 
 @media (min-width: 768px) {
   .portfolio-modal .modal-dialog {
-    max-width: 900px;
-    width: 900px;
+    max-width: 75vw;
+    width: 75vw;
   }
 }
 
 @media (min-width: 1200px) {
   .portfolio-modal .modal-dialog {
-    max-width: 1000px;
-    width: 1000px;
+    max-width: 70vw;
+    width: 70vw;
   }
 }
 
@@ -95,6 +95,21 @@ title: GitHub Repositories
   border-radius: 15px;
   border: none;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  min-height: 60vh;
+}
+
+/* Fix the narrow content issue - make content use full width */
+.portfolio-modal .row {
+  margin: 0 !important;
+}
+
+.portfolio-modal .col-lg-8 {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.portfolio-modal .modal-body {
+  padding: 2rem !important;
 }
 </style>
 

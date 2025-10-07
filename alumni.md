@@ -24,6 +24,14 @@ title: Alumni
       {% if alumnus.period %}
       <p class="member-period">{{ alumnus.period }}</p>
       {% endif %}
+      <div class="member-social">
+        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -45,6 +53,14 @@ title: Alumni
         {% if alumnus.period %}
         <p class="modal-period"><strong>Period:</strong> {{ alumnus.period }}</p>
         {% endif %}
+        <div class="modal-social">
+          <a href="#" onclick="event.preventDefault()" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" onclick="event.preventDefault()" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -124,6 +140,32 @@ title: Alumni
   border-radius: 15px;
   display: inline-block;
   margin-top: 5px;
+}
+
+.member-social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.member-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  color: #6c757d;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.member-social a:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-2px);
 }
 
 h2 {

@@ -29,16 +29,12 @@ title: Students
       </div>
       {% endif %}
       <div class="member-social">
-        {% if student.github and student.github != "" %}
-        <a href="{{ student.github }}" target="_blank" title="GitHub" onclick="event.stopPropagation()">
+        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        {% endif %}
-        {% if student.linkedin and student.linkedin != "" %}
-        <a href="{{ student.linkedin }}" target="_blank" title="LinkedIn" onclick="event.stopPropagation()">
+        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        {% endif %}
       </div>
     </div>
   </div>
@@ -66,16 +62,12 @@ title: Students
         </div>
         {% endif %}
         <div class="modal-social">
-          {% if student.github and student.github != "" %}
-          <a href="{{ student.github }}" target="_blank" title="GitHub">
+          <a href="#" onclick="event.preventDefault()" title="GitHub">
             <i class="fab fa-github"></i>
           </a>
-          {% endif %}
-          {% if student.linkedin and student.linkedin != "" %}
-          <a href="{{ student.linkedin }}" target="_blank" title="LinkedIn">
+          <a href="#" onclick="event.preventDefault()" title="LinkedIn">
             <i class="fab fa-linkedin"></i>
           </a>
-          {% endif %}
         </div>
       </div>
     </div>
@@ -97,16 +89,12 @@ title: Students
       <p class="member-research">{{ intern.research }}</p>
       {% endif %}
       <div class="member-social">
-        {% if intern.github and intern.github != "" %}
-        <a href="{{ intern.github }}" target="_blank" title="GitHub" onclick="event.stopPropagation()">
+        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        {% endif %}
-        {% if intern.linkedin and intern.linkedin != "" %}
-        <a href="{{ intern.linkedin }}" target="_blank" title="LinkedIn" onclick="event.stopPropagation()">
+        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        {% endif %}
       </div>
     </div>
   </div>
@@ -124,16 +112,12 @@ title: Students
         <p class="modal-research"><strong>Research:</strong> {{ intern.research }}</p>
         {% endif %}
         <div class="modal-social">
-          {% if intern.github and intern.github != "" %}
-          <a href="{{ intern.github }}" target="_blank" title="GitHub">
+          <a href="#" onclick="event.preventDefault()" title="GitHub">
             <i class="fab fa-github"></i>
           </a>
-          {% endif %}
-          {% if intern.linkedin and intern.linkedin != "" %}
-          <a href="{{ intern.linkedin }}" target="_blank" title="LinkedIn">
+          <a href="#" onclick="event.preventDefault()" title="LinkedIn">
             <i class="fab fa-linkedin"></i>
           </a>
-          {% endif %}
         </div>
       </div>
     </div>

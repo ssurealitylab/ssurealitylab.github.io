@@ -106,8 +106,9 @@
 <style>
 /* Override navigation styles for light theme */
 #mainNav {
-  background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(10px) !important;
+  background: transparent;
+  backdrop-filter: none;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 #mainNav .navbar-nav .nav-link {
@@ -317,4 +318,28 @@ window.addEventListener('load', function() {
 
 // Emergency fallback - initialize after a delay
 setTimeout(safeInitNavigation, 2000);
+
+// Dynamic navbar transparency based on scroll position
+function updateNavbarTransparency() {
+  const navbar = document.getElementById('mainNav');
+  const scrollPosition = window.pageYOffset;
+  
+  if (scrollPosition === 0) {
+    // At top - completely transparent
+    navbar.style.background = 'transparent';
+    navbar.style.backdropFilter = 'none';
+  } else {
+    // Scrolled - semi-transparent white
+    navbar.style.background = 'rgba(255, 255, 255, 0.7)';
+    navbar.style.backdropFilter = 'blur(10px)';
+  }
+}
+
+// Update navbar on scroll
+window.addEventListener('scroll', updateNavbarTransparency);
+
+// Set initial state when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  updateNavbarTransparency();
+});
 </script>

@@ -12,7 +12,7 @@
 en: &DEFAULT_EN
   header:
     title: 
-    text: Welcome to the SSU <span class="reality-lab-text"><span id="easter-egg-trigger">R</span>eality Lab</span>! 
+    text: Welcome to the SSU <span class="reality-lab-text"><span id="easter-egg-trigger-container"><span id="easter-egg-trigger">R</span></span>eality Lab</span>! 
     button: Learn About Our Research
     buttonlink: "#services"
     slider:

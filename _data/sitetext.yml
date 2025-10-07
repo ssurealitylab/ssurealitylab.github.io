@@ -111,7 +111,7 @@ en: &DEFAULT_EN
   about:
     title: "About Reality Lab"
     text: "our mission"
-    body: "**Reality Lab** was founded in 2023 at Soongsil University under the supervision of Prof. Heewon Kim. We explore the intersection of AI and the physical world, developing intelligent systems that can perceive, understand, and interact with reality just like humans do. Our research focuses on bridging the gap between artificial intelligence capabilities and real-world understanding through cutting-edge technologies in robotics, computer vision, and machine learning."
+    body: "Reality Lab was founded in 2023 at Soongsil University under the supervision of Prof. Heewon Kim. The Reality Lab explores the intersection of artificial intelligence and the physical world. We develop intelligent systems that learn from real-world perception and interaction—just like humans. Our research spans robotics, computer vision, machine learning, and multimodal language understanding, with applications across AI+X domains such as healthcare."
     section: about
 
   clients:

@@ -336,9 +336,11 @@ document.addEventListener('keydown', function(event) {
     modals.forEach(modal => {
       if (modal.style.display === 'flex') {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
       }
     });
+    // Force restore scrolling
+    document.body.style.overflow = 'auto';
+    document.documentElement.style.overflow = 'auto';
   }
 });
 </script>

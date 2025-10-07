@@ -209,6 +209,11 @@
 </style>
 
 <script>
+// Disable automatic scroll restoration
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const dropdownItems = document.querySelectorAll('.navbar-nav .dropdown');
   let activeDropdown = null;
@@ -325,6 +330,54 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('mousemove', function(e) {
     lastMousePos.x = e.clientX;
     lastMousePos.y = e.clientY;
+  });
+  
+  // Prevent automatic scroll to top on page load
+  let isPageLoaded = false;
+  let savedScrollPosition = 0;
+  
+  // Save scroll position before any potential scroll interruption
+  window.addEventListener('beforeunload', function() {
+    localStorage.setItem('scrollPosition', window.pageYOffset.toString());
+  });
+  
+  // Restore scroll position after page loads
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const savedPosition = localStorage.getItem('scrollPosition');
+      if (savedPosition) {
+        window.scrollTo(0, parseInt(savedPosition));
+        localStorage.removeItem('scrollPosition');
+      }
+      isPageLoaded = true;
+    }, 100);
+  });
+  
+  // Prevent scroll hijacking during page load
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    if (!isPageLoaded) {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(function() {
+        savedScrollPosition = window.pageYOffset;
+      }, 50);
+    }
+  });
+  
+  // Fix ESC key scroll issue - ensure body overflow is properly restored
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      // Force restore scrolling
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+      
+      // Close any open dropdowns
+      const dropdowns = document.querySelectorAll('.dropdown-menu');
+      dropdowns.forEach(dropdown => {
+        dropdown.style.display = 'none';
+        dropdown.style.opacity = '0';
+      });
+    }
   });
 });
 </script>

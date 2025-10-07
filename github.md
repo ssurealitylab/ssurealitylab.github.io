@@ -70,47 +70,74 @@ title: GitHub Repositories
   border-radius: 5px;
 }
 
-/* Modal Styling - Force centering and width */
+/* Modal Styling - Force complete centering and 70% screen coverage */
+.portfolio-modal {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 .portfolio-modal .modal-dialog {
-  max-width: 85% !important;
-  width: 85% !important;
-  margin: 1.75rem auto !important;
-  position: relative !important;
-  left: 0 !important;
-  right: 0 !important;
-  transform: none !important;
-}
-
-@media (min-width: 768px) {
-  .portfolio-modal .modal-dialog {
-    max-width: 950px !important;
-    width: 950px !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .portfolio-modal .modal-dialog {
-    max-width: 1200px !important;
-    width: 1200px !important;
-  }
-}
-
-/* Override Bootstrap modal positioning */
-.portfolio-modal.modal.fade .modal-dialog {
-  transition: transform 0.3s ease-out !important;
-  transform: translate(0, -50px) !important;
-}
-
-.portfolio-modal.modal.show .modal-dialog {
-  transform: none !important;
+  width: 70vw !important;
+  height: 70vh !important;
+  max-width: 70vw !important;
+  max-height: 70vh !important;
+  margin: 0 !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: flex !important;
+  align-items: stretch !important;
 }
 
 .portfolio-modal .modal-content {
   border-radius: 15px;
   border: none;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  margin: 0 auto;
-  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.portfolio-modal .modal-body {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  padding: 30px !important;
+}
+
+/* Override Bootstrap modal positioning completely */
+.portfolio-modal.modal.fade .modal-dialog {
+  transition: all 0.3s ease-out !important;
+  transform: translate(-50%, -60%) !important;
+  opacity: 0 !important;
+}
+
+.portfolio-modal.modal.show .modal-dialog {
+  transform: translate(-50%, -50%) !important;
+  opacity: 1 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-modal .modal-dialog {
+    width: 90vw !important;
+    height: 80vh !important;
+    max-width: 90vw !important;
+    max-height: 80vh !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .portfolio-modal .modal-dialog {
+    width: 65vw !important;
+    height: 65vh !important;
+    max-width: 65vw !important;
+    max-height: 65vh !important;
+  }
 }
 </style>
 

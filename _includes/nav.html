@@ -272,42 +272,49 @@ function initNavigation() {
     });
   });
   
-  // Handle AI menu circular button clicks (direct AI button)
-  const aiMenuButtons = document.querySelectorAll('.ai-menu-circular');
-  aiMenuButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
+  // Handle AI menu circular button clicks (direct AI button) with safer approach
+  document.addEventListener('click', function(e) {
+    // Use event delegation for AI buttons
+    if (e.target.closest('.ai-menu-circular')) {
       e.preventDefault();
-      e.stopPropagation();
       
-      // Wait a bit for chatbot to load if not available
-      let attempts = 0;
-      const tryToggle = () => {
-        if (typeof window.toggleChatbot === 'function') {
-          window.toggleChatbot();
-        } else if (attempts < 10) {
-          attempts++;
-          setTimeout(tryToggle, 100);
-        } else {
-          console.error('toggleChatbot function not found after waiting');
-        }
-      };
-      tryToggle();
-    });
+      // Use setTimeout to avoid blocking other events
+      setTimeout(function() {
+        // Wait a bit for chatbot to load if not available
+        let attempts = 0;
+        const tryToggle = () => {
+          if (typeof window.toggleChatbot === 'function') {
+            window.toggleChatbot();
+          } else if (attempts < 5) {
+            attempts++;
+            setTimeout(tryToggle, 200);
+          } else {
+            console.error('toggleChatbot function not found after waiting');
+          }
+        };
+        tryToggle();
+      }, 10);
+    }
   });
 }
 
+// Prevent multiple initialization
+let navigationInitialized = false;
+
+function safeInitNavigation() {
+  if (navigationInitialized) return;
+  navigationInitialized = true;
+  initNavigation();
+}
+
 // Try to initialize immediately
-document.addEventListener('DOMContentLoaded', initNavigation);
+document.addEventListener('DOMContentLoaded', safeInitNavigation);
 
 // Also try after full page load
 window.addEventListener('load', function() {
-  setTimeout(initNavigation, 500);
+  setTimeout(safeInitNavigation, 500);
 });
 
 // Emergency fallback - initialize after a delay
-setTimeout(function() {
-  if (typeof initNavigation === 'function') {
-    initNavigation();
-  }
-}, 2000);
+setTimeout(safeInitNavigation, 2000);
 </script>

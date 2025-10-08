@@ -1236,7 +1236,7 @@ title: International Publications
       <div>
         <p class="item-intro text-muted">Predicting tDCS Treatment Effects</p>
         <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+          <a href="https://www.brainstimjrnl.com/article/S1935-861X%2824%2900905-7/fulltext" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
             <i class="fas fa-file-pdf"></i>
           </a>
           <a href="#" class="modal-icon-link" onclick="return false;" title="Website">

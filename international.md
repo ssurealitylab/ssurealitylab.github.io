@@ -256,7 +256,7 @@ title: International Publications
     </div>
 
     <!-- 2022 Year Section -->
-    <div class="category-section mb-5">
+    <div class="category-section mb-5 year-2022">
       <div class="row">
         <div class="col-12">
           <div class="category-header d-flex align-items-center mb-4">
@@ -315,7 +315,7 @@ title: International Publications
     </div>
 
     <!-- 2021 and Earlier Section -->
-    <div class="category-section mb-5">
+    <div class="category-section mb-5 year-2021">
       <div class="row">
         <div class="col-12">
           <div class="category-header d-flex align-items-center mb-4">
@@ -487,14 +487,60 @@ title: International Publications
 }
 
 .international-badge {
-  background: linear-gradient(135deg, #e74c3c, #c0392b);
-  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .category-line {
   height: 3px;
-  background: linear-gradient(90deg, #e74c3c, rgba(231, 76, 60, 0.1));
+  background: linear-gradient(90deg, #667eea, rgba(102, 126, 234, 0.1));
   border-radius: 2px;
+}
+
+/* Year-specific badge and line colors */
+.year-2025 .category-badge {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.year-2025 .category-line {
+  background: linear-gradient(90deg, #667eea, rgba(102, 126, 234, 0.1));
+}
+
+.year-2024 .category-badge {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
+}
+
+.year-2024 .category-line {
+  background: linear-gradient(90deg, #f093fb, rgba(240, 147, 251, 0.1));
+}
+
+.year-2023 .category-badge {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
+.year-2023 .category-line {
+  background: linear-gradient(90deg, #4facfe, rgba(79, 172, 254, 0.1));
+}
+
+.year-2022 .category-badge {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  box-shadow: 0 4px 15px rgba(67, 233, 123, 0.3);
+}
+
+.year-2022 .category-line {
+  background: linear-gradient(90deg, #43e97b, rgba(67, 233, 123, 0.1));
+}
+
+.year-2021 .category-badge {
+  background: linear-gradient(135deg, #fa709a, #fee140);
+  box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3);
+}
+
+.year-2021 .category-line {
+  background: linear-gradient(90deg, #fa709a, rgba(250, 112, 154, 0.1));
 }
 
 /* Publication Cards */
@@ -565,11 +611,11 @@ title: International Publications
   font-size: 0.7rem;
 }
 
-/* Challenge Badge - Orange */
+/* Challenge Badge - Orange-Yellow */
 .publication-badge.challenge-badge {
   background: transparent;
-  color: #ff6b35;
-  border: 2px solid #ff6b35;
+  color: #ffa726;
+  border: 2px solid #ffa726;
 }
 
 /* Placeholder Card */

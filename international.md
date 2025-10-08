@@ -1204,36 +1204,48 @@ title: International Publications
   </div>
 </div>
 
-<!-- [C14] WACV 2023 Modal -->
+<!-- [C14] WACV 2022 Modal -->
 <div class="publication-modal" id="c14">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c14')">&times;</button>
-      <h2 class="text-uppercase">[C14] WACV 2023</h2>
-      <p class="item-intro text-muted">Realistic Bokeh Effect Rendering</p>
+      <h2 class="text-uppercase">[C14] WACV 2022</h2>
+      <div>
+        <p class="item-intro text-muted">DAQ: Channel-Wise Distribution-Aware Quantization</p>
+        <div class="modal-header-links">
+          <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Hong_DAQ_Channel-Wise_Distribution-Aware_Quantization_for_Deep_Image_Super-Resolution_Networks_WACV_2022_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C14]</strong> Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, and Heewon Kim, "Realistic Bokeh Effect Rendering on Mobile Devices," <em>Proc. IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2023</p>
+        <p><strong>[C14]</strong> Cheeun Hong, Heewon Kim, Sungyong Baik, Junghun Oh, and Kyoung Mu Lee, "DAQ: Channel-Wise Distribution-Aware Quantization for Deep Image Super-Resolution Networks," <em>Proc. IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2022</p>
       </div>
-      <p class="mt-3"><small>* Equal contribution</small></p>
     </div>
   </div>
 </div>
 
-<!-- [C13] ICRA 2023 Modal -->
+<!-- [C13] WACV 2022 Modal -->
 <div class="publication-modal" id="c13">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c13')">&times;</button>
-      <h2 class="text-uppercase">[C13] ICRA 2023</h2>
-      <p class="item-intro text-muted">Robotic Manipulation with Vision-Language Models</p>
+      <h2 class="text-uppercase">[C13] WACV 2022</h2>
+      <div>
+        <p class="item-intro text-muted">Batch Normalization Tells You Which Filter is Important</p>
+        <div class="modal-header-links">
+          <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Oh_Batch_Normalization_Tells_You_Which_Filter_Is_Important_WACV_2022_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C13]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "Vision-Language Models for Robotic Manipulation Tasks," <em>Proc. IEEE International Conference on Robotics and Automation (ICRA)</em>, 2023</p>
+        <p><strong>[C13]</strong> Junghun Oh, Saehoon Kim, Namhoon Lee, and Heewon Kim, "Batch Normalization Tells You Which Filter is Important," <em>Proc. IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2022</p>
       </div>
-      <p class="mt-3"><small>* Equal contribution</small></p>
     </div>
   </div>
 </div>
@@ -1312,13 +1324,19 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c11')">&times;</button>
       <h2 class="text-uppercase">[C11] CVPR 2022</h2>
-      <p class="item-intro text-muted">Computational Photography on Mobile Devices</p>
+      <div>
+        <p class="item-intro text-muted">Attentive Fine-Grained Structured Sparsity for Image Restoration</p>
+        <div class="modal-header-links">
+          <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Oh_Attentive_Fine-Grained_Structured_Sparsity_for_Image_Restoration_CVPR_2022_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C11]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "Computational Photography Techniques for Mobile Devices," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2022</p>
+        <p><strong>[C11]</strong> Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, Jonghyun Choi, and Kyoung Mu Lee, "Attentive Fine-Grained Structured Sparsity for Image Restoration," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2022</p>
       </div>
-      <p class="mt-3"><small>* Equal contribution</small></p>
     </div>
   </div>
 </div>
@@ -1331,11 +1349,21 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c10')">&times;</button>
       <h2 class="text-uppercase">[C10] ICCV 2021</h2>
-      <p class="item-intro text-muted">Vision and Learning Research</p>
+      <div>
+        <p class="item-intro text-muted">MeTAL: Meta-Learning with Task-Adaptive Loss Function</p>
+        <div class="modal-header-links">
+          <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Baik_Meta-Learning_With_Task-Adaptive_Loss_Function_for_Few-Shot_Learning_ICCV_2021_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="https://github.com/baiksung/MeTAL" target="_blank" class="modal-icon-link active github-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C10]</strong> Heewon Kim, et al., "Advanced Vision and Learning Methods for Scene Understanding," <em>Proc. IEEE International Conference on Computer Vision (ICCV)</em>, 2021</p>
+        <p><strong>[C10]</strong> Sungyong Baik, Janghoon Choi, Heewon Kim, Dohee Cho, Jaesik Min, and Kyoung Mu Lee, "Meta-Learning with Task-Adaptive Loss Function for Few-Shot Learning," <em>Proc. IEEE International Conference on Computer Vision (ICCV)</em>, 2021 (Oral)</p>
       </div>
     </div>
   </div>
@@ -1357,17 +1385,27 @@ title: International Publications
   </div>
 </div>
 
-<!-- [C9] NeurIPS 2019 Modal -->
+<!-- [C9] NeurIPS 2020 Modal -->
 <div class="publication-modal" id="c9">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c9')">&times;</button>
-      <h2 class="text-uppercase">[C9] NeurIPS 2019</h2>
-      <p class="item-intro text-muted">Neural Network Research</p>
+      <h2 class="text-uppercase">[C9] NeurIPS 2020</h2>
+      <div>
+        <p class="item-intro text-muted">ALFA: Meta-Learning with Adaptive Hyperparameters</p>
+        <div class="modal-header-links">
+          <a href="https://papers.nips.cc/paper/2020/file/ee89223a2b625b5152132ed77abbcc79-Paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="https://github.com/baiksung/ALFA" target="_blank" class="modal-icon-link active github-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C9]</strong> Heewon Kim, et al., "Advanced Neural Network Architectures for Complex Tasks," <em>Proc. Conference on Neural Information Processing Systems (NeurIPS)</em>, 2019</p>
+        <p><strong>[C9]</strong> Sungyong Baik, Myungsub Choi, Janghoon Choi, Heewon Kim, and Kyoung Mu Lee, "Meta-Learning with Adaptive Hyperparameters," <em>Proc. Conference on Neural Information Processing Systems (NeurIPS)</em>, 2020</p>
       </div>
     </div>
   </div>

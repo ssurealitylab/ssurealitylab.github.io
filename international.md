@@ -18,7 +18,7 @@ title: International Publications
   <div class="container">
     
     <!-- International Section -->
-    <div class="category-section mb-5">
+    <div class="category-section mb-5 year-2025">
       <div class="row">
         <div class="col-12">
           <div class="category-header d-flex align-items-center mb-4">
@@ -27,7 +27,7 @@ title: International Publications
           </div>
         </div>
       </div>
-      
+
       <div class="row">
         <!-- APP3DV 2025 -->
         <div class="col-12 mb-3">
@@ -131,7 +131,7 @@ title: International Publications
     </div>
 
     <!-- 2024 Year Section -->
-    <div class="category-section mb-5">
+    <div class="category-section mb-5 year-2024">
       <div class="row">
         <div class="col-12">
           <div class="category-header d-flex align-items-center mb-4">
@@ -186,7 +186,7 @@ title: International Publications
     </div>
 
     <!-- 2023 Year Section -->
-    <div class="category-section mb-5">
+    <div class="category-section mb-5 year-2023">
       <div class="row">
         <div class="col-12">
           <div class="category-header d-flex align-items-center mb-4">
@@ -557,8 +557,8 @@ title: International Publications
   top: 8px;
   right: 8px;
   background: transparent;
-  color: #ff6b6b;
-  border: 2px solid #ff6b6b;
+  color: #667eea;
+  border: 2px solid #667eea;
   padding: 4px 10px;
   border-radius: 15px;
   font-weight: bold;
@@ -577,6 +577,22 @@ title: International Publications
   background: transparent;
   color: #ffd700;
   border: 2px solid #ffd700;
+}
+
+/* Year-specific badge colors */
+.year-2025 .publication-badge:not(.workshop-badge):not(.challenge-badge) {
+  color: #667eea;
+  border-color: #667eea;
+}
+
+.year-2024 .publication-badge {
+  color: #f093fb;
+  border-color: #f093fb;
+}
+
+.year-2023 .publication-badge {
+  color: #4facfe;
+  border-color: #4facfe;
 }
 
 /* Placeholder Card */

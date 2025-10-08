@@ -74,4 +74,31 @@
     }
   </style>
   {% endif %}
+
+  <!-- Custom container width expansion - 15% wider -->
+  <style>
+    .container {
+      max-width: 1380px !important;
+    }
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1380px !important;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .container {
+        max-width: 1150px !important;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .container {
+        max-width: 880px !important;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .container {
+        max-width: 660px !important;
+      }
+    }
+  </style>
 </head>

@@ -178,7 +178,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Predicting tDCS Treatment Effects</h5>
               <p class="card-subtitle">Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al.</p>
-              <div class="publication-badge">📄 Published</div>
+              <div class="publication-badge">@</div>
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Estimating the Missing PMU</h5>
               <p class="card-subtitle">Jeongmoon Kim†, Sooyoung Choi†, Heewon Kim</p>
-              <div class="publication-badge">📄 JEET Published</div>
+              <div class="publication-badge">JEET</div>
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Language-Guided Robotic Manipulation</h5>
               <p class="card-subtitle">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-              <div class="publication-badge">📄 AAAI24 Published</div>
+              <div class="publication-badge">AAAI24</div>
             </div>
           </div>
         </div>
@@ -220,7 +220,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Baseball Player Pose Estimation</h5>
               <p class="card-subtitle">Seunghyun Oh†, Heewon Kim</p>
-              <div class="publication-badge">📄 ICT Express Published</div>
+              <div class="publication-badge">ICT Express</div>
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Cough Sound Classification</h5>
               <p class="card-subtitle">Yunseok Yang†, Heewon Kim</p>
-              <div class="publication-badge">📄 ICASSP23 Published</div>
+              <div class="publication-badge">@</div>
             </div>
           </div>
         </div>
@@ -262,7 +262,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Realistic Bokeh Effect Rendering</h5>
               <p class="card-subtitle">Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim</p>
-              <div class="publication-badge">📄 WACV23 Published</div>
+              <div class="publication-badge">@</div>
             </div>
           </div>
         </div>
@@ -276,7 +276,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Robotic Manipulation with VLM</h5>
               <p class="card-subtitle">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-              <div class="publication-badge">📄 ICRA23 Published</div>
+              <div class="publication-badge">@</div>
             </div>
           </div>
         </div>
@@ -290,7 +290,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Seizure Detection Using CNN-LSTM</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <div class="publication-badge">📄 Applied Sciences Published</div>
+              <div class="publication-badge">Applied Sciences</div>
             </div>
           </div>
         </div>
@@ -318,7 +318,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Image Restoration Network</h5>
               <p class="card-subtitle">Sungyong Park*, Sangmin Lee*, Heewon Kim</p>
-              <div class="publication-badge">📄 ECCV22 Published</div>
+              <div class="publication-badge">ECCV22</div>
             </div>
           </div>
         </div>
@@ -332,7 +332,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">IoT Sensor Data Processing</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <div class="publication-badge">📄 Sensors Published</div>
+              <div class="publication-badge">Sensors</div>
             </div>
           </div>
         </div>
@@ -346,7 +346,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Computational Photography</h5>
               <p class="card-subtitle">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-              <div class="publication-badge">📄 CVPR22 Published</div>
+              <div class="publication-badge">CVPR22</div>
             </div>
           </div>
         </div>
@@ -374,7 +374,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Vision and Learning Research</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <div class="publication-badge">📄 ICCV21 Published</div>
+              <div class="publication-badge">ICCV21</div>
             </div>
           </div>
         </div>
@@ -388,7 +388,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Deep Learning Applications</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <div class="publication-badge">📄 IEEE Access Published</div>
+              <div class="publication-badge">IEEE Access</div>
             </div>
           </div>
         </div>
@@ -402,7 +402,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Neural Network Research</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <div class="publication-badge">📄 NeurIPS19 Published</div>
+              <div class="publication-badge">@</div>
             </div>
           </div>
         </div>
@@ -416,7 +416,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Pattern Recognition Methods</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <div class="publication-badge">📄 Pattern Recognition Published</div>
+              <div class="publication-badge">Pattern Recognition</div>
             </div>
           </div>
         </div>
@@ -444,7 +444,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Computer Vision Methods</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <div class="publication-badge">📄 CVIU Published</div>
+              <div class="publication-badge">CVIU</div>
             </div>
           </div>
         </div>

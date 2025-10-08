@@ -38,7 +38,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Intrinsic-Guided Photorealistic Style Transfer</h5>
               <p class="card-subtitle">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
-              <div class="publication-badge">APP3DV25</div>
+              <div class="publication-badge workshop-badge">APP3DV25</div>
             </div>
           </div>
         </div>
@@ -421,16 +421,16 @@ title: International Publications
           </div>
         </div>
 
-        <!-- AAAI 2017 -->
+        <!-- CVPR 2017 Workshop -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c8')" style="cursor: pointer;">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-lightbulb fa-2x text-muted"></i>
+              <i class="fas fa-image fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">AI Research Foundations</h5>
-              <p class="card-subtitle">Heewon Kim, et al.</p>
-              <div class="publication-badge">📄 AAAI17 Published</div>
+              <h5 class="card-title">EDSR: Enhanced Deep Residual Networks</h5>
+              <p class="card-subtitle">Bee Lim*, Sanghyun Son*, Heewon Kim, et al.</p>
+              <div class="publication-badge workshop-badge">CVPRW17</div>
             </div>
           </div>
         </div>
@@ -556,14 +556,6 @@ title: International Publications
   box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
 }
 
-.paper-card {
-  border-color: #3498db !important;
-}
-
-.paper-card:hover {
-  border-color: #5dade2 !important;
-  box-shadow: 0 8px 30px rgba(52, 152, 219, 0.3);
-}
 
 .research-card {
   border-color: #9b59b6 !important;
@@ -574,14 +566,6 @@ title: International Publications
   box-shadow: 0 8px 30px rgba(155, 89, 182, 0.3);
 }
 
-.journal-card {
-  border-color: #27ae60 !important; /* Green for journal papers */
-}
-
-.journal-card:hover {
-  border-color: #2ecc71 !important;
-  box-shadow: 0 8px 30px rgba(39, 174, 96, 0.3);
-}
 
 /* Card Layout - All Uniform */
 .publication-card .card-title {
@@ -618,6 +602,12 @@ title: International Publications
   font-weight: bold;
   font-size: 0.7rem;
   box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+/* Workshop Badge - Yellow */
+.publication-badge.workshop-badge {
+  background: linear-gradient(135deg, #ffd700, #ffb700);
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
 }
 
 /* Placeholder Card */

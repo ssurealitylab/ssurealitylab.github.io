@@ -60,7 +60,7 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j11')" style="cursor: pointer;">
             <div class="publication-badge">JEET</div>
-            <h5 class="list-title">Dog Cough Sound Classification</h5>
+            <h5 class="list-title">Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases</h5>
             <p class="list-authors">Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j10')" style="cursor: pointer;">
             <div class="publication-badge">ICT Express</div>
-            <h5 class="list-title">Baseball Player Pose Refinement</h5>
+            <h5 class="list-title">Accurate Baseball Player Pose Refinement Using Motion Prior Guidance</h5>
             <p class="list-authors">Seunghyun Oh†, Heewon Kim</p>
           </div>
         </div>
@@ -83,7 +83,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Motion-Aware Dynamic Architecture for Efficient Frame Interpolation</h5>
+            <h5 class="list-title">DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI</h5>
             <p class="list-authors">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
           </div>
         </div>
@@ -100,7 +100,7 @@ title: International Publications
                 <i class="fas fa-globe"></i>
               </a>
             </div>
-            <h5 class="list-title">Smartphone Images with Dirty Lenses Dataset</h5>
+            <h5 class="list-title">SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses</h5>
             <p class="list-authors">Sooyoung Choi*†, Sungyong Park*, Heewon Kim</p>
           </div>
         </div>
@@ -114,7 +114,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Predicting tDCS Treatment Effects Using Machine Learning</h5>
+            <h5 class="list-title">Predictors of the treatment effects of transcranial direct current stimulation on knee osteoarthritis pain</h5>
             <p class="list-authors">Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al.</p>
           </div>
         </div>
@@ -160,7 +160,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Machine Learning-Based Etiologic Subtyping of Ischemic Stroke</h5>
+            <h5 class="list-title">Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs</h5>
             <p class="list-authors">Jeongmoon Kim†, Sooyoung Choi†, Heewon Kim</p>
           </div>
         </div>

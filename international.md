@@ -32,13 +32,9 @@ title: International Publications
         <!-- APP3DV 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c24')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-cube fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Intrinsic-Guided Photorealistic Style Transfer</h5>
               <p class="card-subtitle">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
-              <p class="card-text">International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop), 2025</p>
               <div class="publication-badge">🎉 APP3DV25 Accept!</div>
             </div>
           </div>
@@ -47,13 +43,9 @@ title: International Publications
         <!-- BMVC 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c23')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-project-diagram fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">UDT: Unsupervised Discovery of Transformations</h5>
               <p class="card-subtitle">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
-              <p class="card-text">British Machine Vision Conference (BMVC), 2025</p>
               <div class="publication-badge">🎉 BMVC25 Accept!</div>
             </div>
           </div>
@@ -62,13 +54,9 @@ title: International Publications
         <!-- PLOS ONE 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j12')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-brain fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">DeepGAM for Depression Diagnosis</h5>
               <p class="card-subtitle">Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim</p>
-              <p class="card-text">PLOS ONE, 2025</p>
               <div class="publication-badge">🎉 PLOS ONE Accept!</div>
             </div>
           </div>
@@ -77,13 +65,9 @@ title: International Publications
         <!-- JEET 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j11')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-dog fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Dog Cough Sound Classification</h5>
               <p class="card-subtitle">Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim</p>
-              <p class="card-text">Journal of Electrical Engineering & Technology (JEET), 2025</p>
               <div class="publication-badge">🎉 JEET Accept!</div>
             </div>
           </div>
@@ -92,13 +76,9 @@ title: International Publications
         <!-- ICT Express 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j10')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-baseball-ball fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Baseball Player Pose Refinement</h5>
               <p class="card-subtitle">Seunghyun Oh†, Heewon Kim</p>
-              <p class="card-text">ICT Express, 2025</p>
               <div class="publication-badge">🎉 ICT Express Accept!</div>
             </div>
           </div>
@@ -107,13 +87,9 @@ title: International Publications
         <!-- CVPR 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c22')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-robot fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">DynScene: Dynamic Robotic Manipulation</h5>
               <p class="card-subtitle">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-              <p class="card-text">Computer Vision and Pattern Recognition (CVPR), 2025</p>
               <div class="publication-badge">🎉 CVPR25 Accept!</div>
             </div>
           </div>
@@ -122,13 +98,9 @@ title: International Publications
         <!-- SIDL - AAAI 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('sidl')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-database fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">SIDL Benchmark Dataset</h5>
               <p class="card-subtitle">Sooyoung Choi*†, Sungyong Park*, Heewon Kim</p>
-              <p class="card-text">AAAI Conference on Artificial Intelligence (AAAI), 2025</p>
               <div class="publication-badge">🎉 AAAI25 Accept!</div>
             </div>
           </div>
@@ -137,13 +109,9 @@ title: International Publications
         <!-- Brain Stimulation 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('c20j9')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-brain fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">tDCS Treatment Effects Prediction</h5>
               <p class="card-subtitle">Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al.</p>
-              <p class="card-text">International Brain Stimulation Conference & Brain Stimulation, 2025</p>
               <div class="publication-badge">🎉 Brain Stimulation Accept!</div>
             </div>
           </div>
@@ -152,13 +120,9 @@ title: International Publications
         <!-- ARNOLD Challenge -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card challenge-card" onclick="openPublicationModal('arnold')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-trophy fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">ARNOLD Challenge</h5>
-              <p class="card-subtitle">CVPR 2025 Embodied AI Workshop</p>
-              <p class="card-text">Reality Lab Team achieved 1st place in the ARNOLD Challenge</p>
+              <p class="card-subtitle">Reality Lab Team</p>
               <div class="publication-badge">🥇 1st Place</div>
             </div>
           </div>
@@ -181,13 +145,9 @@ title: International Publications
         <!-- Brain Stimulation 2024 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('c17j8')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-brain fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Predicting tDCS Treatment Effects</h5>
               <p class="card-subtitle">Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al.</p>
-              <p class="card-text">International Brain Stimulation Conference & Brain Stimulation Journal, 2024</p>
               <div class="publication-badge">📄 Published</div>
             </div>
           </div>
@@ -196,13 +156,9 @@ title: International Publications
         <!-- JEET 2024 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j7')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-chart-line fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Estimating the Missing PMU</h5>
               <p class="card-subtitle">Jeongmoon Kim†, Sooyoung Choi†, Heewon Kim</p>
-              <p class="card-text">Journal of Electrical Engineering & Technology (JEET), vol. 19, no. 2, 2024</p>
               <div class="publication-badge">📄 JEET Published</div>
             </div>
           </div>
@@ -211,13 +167,9 @@ title: International Publications
         <!-- AAAI 2024 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c16')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-robot fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Language-Guided Robotic Manipulation</h5>
               <p class="card-subtitle">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-              <p class="card-text">AAAI Conference on Artificial Intelligence (AAAI), 2024</p>
               <div class="publication-badge">📄 AAAI24 Published</div>
             </div>
           </div>
@@ -226,13 +178,9 @@ title: International Publications
         <!-- ICT Express 2024 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j6')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-baseball-ball fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Baseball Player Pose Estimation</h5>
               <p class="card-subtitle">Seunghyun Oh†, Heewon Kim</p>
-              <p class="card-text">ICT Express, vol. 10, no. 1, 2024</p>
               <div class="publication-badge">📄 ICT Express Published</div>
             </div>
           </div>
@@ -255,13 +203,9 @@ title: International Publications
         <!-- ICASSP 2023 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c15')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-microphone fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Cough Sound Classification</h5>
               <p class="card-subtitle">Yunseok Yang†, Heewon Kim</p>
-              <p class="card-text">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2023</p>
               <div class="publication-badge">📄 ICASSP23 Published</div>
             </div>
           </div>
@@ -270,13 +214,9 @@ title: International Publications
         <!-- WACV 2023 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c14')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-eye fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Realistic Bokeh Effect Rendering</h5>
               <p class="card-subtitle">Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim</p>
-              <p class="card-text">IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2023</p>
               <div class="publication-badge">📄 WACV23 Published</div>
             </div>
           </div>
@@ -285,13 +225,9 @@ title: International Publications
         <!-- ICRA 2023 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c13')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-robot fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Robotic Manipulation with VLM</h5>
               <p class="card-subtitle">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-              <p class="card-text">IEEE International Conference on Robotics and Automation (ICRA), 2023</p>
               <div class="publication-badge">📄 ICRA23 Published</div>
             </div>
           </div>
@@ -300,13 +236,9 @@ title: International Publications
         <!-- Applied Sciences 2023 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j5')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-brain fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Seizure Detection Using CNN-LSTM</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <p class="card-text">Applied Sciences, vol. 13, no. 4, 2023</p>
               <div class="publication-badge">📄 Applied Sciences Published</div>
             </div>
           </div>
@@ -329,13 +261,9 @@ title: International Publications
         <!-- ECCV 2022 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c12')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-image fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Image Restoration Network</h5>
               <p class="card-subtitle">Sungyong Park*, Sangmin Lee*, Heewon Kim</p>
-              <p class="card-text">European Conference on Computer Vision (ECCV), 2022</p>
               <div class="publication-badge">📄 ECCV22 Published</div>
             </div>
           </div>
@@ -344,13 +272,9 @@ title: International Publications
         <!-- Sensors 2022 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j4')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-network-wired fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">IoT Sensor Data Processing</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <p class="card-text">Sensors, vol. 22, no. 8, 2022</p>
               <div class="publication-badge">📄 Sensors Published</div>
             </div>
           </div>
@@ -359,13 +283,9 @@ title: International Publications
         <!-- CVPR 2022 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c11')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-camera fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Computational Photography</h5>
               <p class="card-subtitle">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-              <p class="card-text">Computer Vision and Pattern Recognition (CVPR), 2022</p>
               <div class="publication-badge">📄 CVPR22 Published</div>
             </div>
           </div>
@@ -388,13 +308,9 @@ title: International Publications
         <!-- ICCV 2021 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c10')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-eye fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Vision and Learning Research</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <p class="card-text">International Conference on Computer Vision (ICCV), 2021</p>
               <div class="publication-badge">📄 ICCV21 Published</div>
             </div>
           </div>
@@ -403,13 +319,9 @@ title: International Publications
         <!-- IEEE Access 2020 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j3')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-book fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Deep Learning Applications</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <p class="card-text">IEEE Access, vol. 8, 2020</p>
               <div class="publication-badge">📄 IEEE Access Published</div>
             </div>
           </div>
@@ -418,13 +330,9 @@ title: International Publications
         <!-- NeurIPS 2019 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c9')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-brain fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Neural Network Research</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <p class="card-text">Conference on Neural Information Processing Systems (NeurIPS), 2019</p>
               <div class="publication-badge">📄 NeurIPS19 Published</div>
             </div>
           </div>
@@ -433,13 +341,9 @@ title: International Publications
         <!-- Pattern Recognition 2018 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j2')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-project-diagram fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Pattern Recognition Methods</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <p class="card-text">Pattern Recognition, 2018</p>
               <div class="publication-badge">📄 Pattern Recognition Published</div>
             </div>
           </div>
@@ -448,13 +352,9 @@ title: International Publications
         <!-- AAAI 2017 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c8')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-lightbulb fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">AI Research Foundations</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <p class="card-text">AAAI Conference on Artificial Intelligence (AAAI), 2017</p>
               <div class="publication-badge">📄 AAAI17 Published</div>
             </div>
           </div>
@@ -463,13 +363,9 @@ title: International Publications
         <!-- Computer Vision and Image Understanding 2017 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j1')" style="cursor: pointer;">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-image fa-2x text-muted"></i>
-            </div>
             <div class="card-body">
               <h5 class="card-title">Computer Vision Methods</h5>
               <p class="card-subtitle">Heewon Kim, et al.</p>
-              <p class="card-text">Computer Vision and Image Understanding, 2017</p>
               <div class="publication-badge">📄 CVIU Published</div>
             </div>
           </div>
@@ -556,19 +452,20 @@ title: International Publications
 /* Publication Cards */
 .publication-card {
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   height: 100%;
   background: white;
   border: 3px solid transparent;
   position: relative;
+  min-height: 120px;
 }
 
 .publication-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Category-based Border Colors */
@@ -610,37 +507,33 @@ title: International Publications
 
 /* Card Layout - All Uniform */
 .publication-card .card-title {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #2c3e50;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 1.3;
 }
 
 .publication-card .card-subtitle {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #7f8c8d;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-weight: 500;
-}
-
-.publication-card .card-text {
-  font-size: 0.9rem;
-  color: #5a6c7d;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 /* Publication Badge */
 .publication-badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   background: linear-gradient(135deg, #ff6b6b, #ee5a52);
   color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
+  padding: 4px 10px;
+  border-radius: 15px;
   font-weight: bold;
-  font-size: 0.8rem;
-  box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+  font-size: 0.7rem;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
 }
 
 /* Placeholder Card */
@@ -658,7 +551,7 @@ title: International Publications
 
 /* Card Body Styling */
 .card-body {
-  padding: 1.25rem;
+  padding: 0.75rem 1rem;
 }
 
 /* Responsive Design */

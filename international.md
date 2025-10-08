@@ -716,10 +716,43 @@ title: International Publications
 .publication-modal-header {
   padding: 2rem 2rem 1rem;
   border-bottom: 1px solid #eee;
+  position: relative;
 }
 
 .publication-modal-body {
   padding: 2rem;
+}
+
+.modal-header-links {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.modal-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #667eea;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.modal-icon-link:hover {
+  color: #764ba2;
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.modal-icon-link i {
+  font-size: 1.3rem;
 }
 
 .publication-modal-close {
@@ -736,6 +769,7 @@ title: International Publications
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 11;
 }
 
 .publication-modal-close:hover {
@@ -757,48 +791,6 @@ title: International Publications
   color: #2c3e50;
 }
 
-/* Publication Links */
-.publication-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.pub-link-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.pub-link-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-  color: white;
-  text-decoration: none;
-}
-
-.pub-link-btn i {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-
-.pub-link-btn span {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
 </style>
 
 <!-- Publication Modals -->
@@ -806,8 +798,19 @@ title: International Publications
 <!-- SIDL Benchmark Modal -->
 <div class="publication-modal" id="sidl">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('sidl')">&times;</button>
     <div class="publication-modal-header">
+      <div class="modal-header-links">
+        <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+          <i class="fas fa-globe"></i>
+        </a>
+        <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <button class="publication-modal-close" onclick="closePublicationModal('sidl')">&times;</button>
       <h2 class="text-uppercase">SIDL Benchmark</h2>
       <p class="item-intro text-muted">Smartphone Images with Dirty Lenses Dataset</p>
     </div>
@@ -828,21 +831,6 @@ title: International Publications
             <input type="radio" name="contaminant" id="water" value="water"> Water
           </label>
         </div>
-      </div>
-
-      <div class="publication-links mb-4">
-        <a href="#" class="pub-link-btn" onclick="return false;">
-          <i class="fas fa-file-pdf"></i>
-          <span>PDF</span>
-        </a>
-        <a href="#" class="pub-link-btn" onclick="return false;">
-          <i class="fas fa-globe"></i>
-          <span>Website</span>
-        </a>
-        <a href="#" class="pub-link-btn" onclick="return false;">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
-        </a>
       </div>
 
       <!-- Image Comparison Container -->
@@ -906,26 +894,23 @@ title: International Publications
 <!-- [C23] BMVC 2025 Modal -->
 <div class="publication-modal" id="c23">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
     <div class="publication-modal-header">
+      <div class="modal-header-links">
+        <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+          <i class="fas fa-globe"></i>
+        </a>
+        <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
       <h2 class="text-uppercase">[C23] BMVC 2025</h2>
       <p class="item-intro text-muted">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</p>
     </div>
     <div class="publication-modal-body">
-      <div class="publication-links mb-4">
-        <a href="#" class="pub-link-btn" onclick="return false;">
-          <i class="fas fa-file-pdf"></i>
-          <span>PDF</span>
-        </a>
-        <a href="#" class="pub-link-btn" onclick="return false;">
-          <i class="fas fa-globe"></i>
-          <span>Website</span>
-        </a>
-        <a href="#" class="pub-link-btn" onclick="return false;">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
-        </a>
-      </div>
       <div class="citation-box">
         <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
       </div>

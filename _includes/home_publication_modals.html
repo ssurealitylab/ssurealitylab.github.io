@@ -1,0 +1,259 @@
+<!-- Publication Modals for Home Page (Latest 5) -->
+
+<!-- [C24] APP3DV 2025 Modal -->
+<div class="publication-modal" id="c24">
+  <div class="publication-modal-content">
+    <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
+      <h2 class="text-uppercase">[C24] APP3DV 2025</h2>
+      <p class="item-intro text-muted">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</p>
+    </div>
+    <div class="publication-modal-body">
+      <div class="citation-box">
+        <p><strong>[C24]</strong> Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields," <em>Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)</em>, 2025 (accepted)</p>
+      </div>
+      <p class="mt-3"><small>* Equal contribution</small></p>
+    </div>
+  </div>
+</div>
+
+<!-- [C23] BMVC 2025 Modal -->
+<div class="publication-modal" id="c23">
+  <div class="publication-modal-content">
+    <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
+      <h2 class="text-uppercase">[C23] BMVC 2025</h2>
+      <p class="item-intro text-muted">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</p>
+    </div>
+    <div class="publication-modal-body">
+      <div class="citation-box">
+        <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
+      </div>
+      <p class="mt-3"><small>* Equal contribution</small></p>
+    </div>
+  </div>
+</div>
+
+<!-- [J12] PLOS ONE 2025 Modal -->
+<div class="publication-modal" id="j12">
+  <div class="publication-modal-content">
+    <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j12')">&times;</button>
+      <h2 class="text-uppercase">[J12] PLOS ONE 2025</h2>
+      <p class="item-intro text-muted">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</p>
+    </div>
+    <div class="publication-modal-body">
+      <div class="citation-box">
+        <p><strong>[J12]</strong> Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis," <em>PLOS ONE</em>, 2025 (accepted)</p>
+      </div>
+      <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
+    </div>
+  </div>
+</div>
+
+<!-- [J11] JEET 2025 Modal -->
+<div class="publication-modal" id="j11">
+  <div class="publication-modal-content">
+    <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j11')">&times;</button>
+      <h2 class="text-uppercase">[J11] JEET 2025</h2>
+      <p class="item-intro text-muted">Dog Cough Sound Classification</p>
+    </div>
+    <div class="publication-modal-body">
+      <div class="citation-box">
+        <p><strong>[J11]</strong> Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, "Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases," <em>Journal of Electrical Engineering & Technology (JEET)</em>, 2025 (accepted)</p>
+      </div>
+      <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
+    </div>
+  </div>
+</div>
+
+<!-- [J10] ICT Express 2025 Modal -->
+<div class="publication-modal" id="j10">
+  <div class="publication-modal-content">
+    <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j10')">&times;</button>
+      <h2 class="text-uppercase">[J10] ICT Express 2025</h2>
+      <p class="item-intro text-muted">Accurate Baseball Player Pose Refinement Using Motion Prior Guidance</p>
+    </div>
+    <div class="publication-modal-body">
+      <div class="citation-box">
+        <p><strong>[J10]</strong> Seunghyun Oh† and Heewon Kim, "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance," <em>ICT Express</em>, 2025 (accepted)</p>
+      </div>
+      <p class="mt-3"><small>† Undergraduate student</small></p>
+    </div>
+  </div>
+</div>
+
+<script>
+function openPublicationModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function closePublicationModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+}
+
+// Close modal when clicking outside content
+document.addEventListener("click", function(event) {
+  if (event.target.classList.contains("publication-modal")) {
+    const modalId = event.target.id;
+    closePublicationModal(modalId);
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    const activeModal = document.querySelector(".publication-modal.active");
+    if (activeModal) {
+      closePublicationModal(activeModal.id);
+    }
+  }
+});
+</script>
+
+<style>
+/* Publication Modal Styles */
+.publication-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.publication-modal.active {
+  display: block;
+  opacity: 1;
+}
+
+.publication-modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.publication-modal-header {
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.publication-modal-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.publication-modal-header .item-intro {
+  margin: 0;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.publication-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.publication-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.publication-modal-body {
+  padding: 30px;
+}
+
+.citation-box {
+  background: #f8f9fa;
+  border-left: 4px solid #667eea;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.citation-box p {
+  margin: 0;
+}
+
+.citation-box strong {
+  color: #667eea;
+}
+
+@media (max-width: 768px) {
+  .publication-modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+
+  .publication-modal-header {
+    padding: 20px;
+  }
+
+  .publication-modal-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .publication-modal-header .item-intro {
+    font-size: 0.95rem;
+  }
+
+  .publication-modal-body {
+    padding: 20px;
+  }
+
+  .citation-box {
+    font-size: 0.85rem;
+    padding: 15px;
+  }
+}
+</style>

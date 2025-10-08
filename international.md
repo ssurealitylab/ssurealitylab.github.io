@@ -29,45 +29,47 @@ title: International Publications
       </div>
       
       <div class="row">
-        <!-- SIDL Benchmark - AAAI 2025 -->
+        <!-- [C24] APP3DV 2025 -->
         <div class="col-lg-4 mb-4">
-          <div class="publication-card paper-card" onclick="openPublicationModal('sidl')" style="cursor: pointer;">
+          <div class="publication-card paper-card" onclick="openPublicationModal('c24')" style="cursor: pointer;">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-database fa-2x text-muted"></i>
+              <i class="fas fa-cube fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">SIDL Benchmark Dataset</h5>
-              <p class="card-subtitle">AAAI 2025 (Accepted)</p>
-              <p class="card-text">Smartphone Images with Dirty Lenses - A novel dataset for image restoration through contaminated lenses.</p>
-              <div class="publication-badge">🎉 AAAI25 Accept!</div>
+              <h5 class="card-title">[C24] Intrinsic-Guided Photorealistic Style Transfer</h5>
+              <p class="card-subtitle">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
+              <p class="card-text">International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop), 2025</p>
+              <div class="publication-badge">✅ Accepted</div>
             </div>
           </div>
         </div>
-        
-        <!-- BMVC 2025 -->
+
+        <!-- [C23] BMVC 2025 -->
         <div class="col-lg-4 mb-4">
-          <div class="publication-card paper-card" onclick="openPublicationModal('bmvc')" style="cursor: pointer;">
+          <div class="publication-card paper-card" onclick="openPublicationModal('c23')" style="cursor: pointer;">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-eye fa-2x text-muted"></i>
+              <i class="fas fa-project-diagram fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Computer Vision Research</h5>
-              <p class="card-subtitle">BMVC 2025 (Accepted)</p>
-              <p class="card-text">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
+              <h5 class="card-title">[C23] UDT: Unsupervised Discovery of Transformations</h5>
+              <p class="card-subtitle">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
+              <p class="card-text">British Machine Vision Conference (BMVC), 2025</p>
+              <div class="publication-badge">✅ Accepted</div>
             </div>
           </div>
         </div>
-        
-        <!-- CVPR 2025 -->
+
+        <!-- [J12] PLOS ONE 2025 -->
         <div class="col-lg-4 mb-4">
-          <div class="publication-card paper-card" onclick="openPublicationModal('cvpr')" style="cursor: pointer;">
+          <div class="publication-card journal-card" onclick="openPublicationModal('j12')" style="cursor: pointer;">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
               <i class="fas fa-brain fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Advanced AI Research</h5>
-              <p class="card-subtitle">CVPR 2025 (Accepted)</p>
-              <p class="card-text">Sangmin Lee, Sungyong Park</p>
+              <h5 class="card-title">[J12] DeepGAM for Depression Diagnosis</h5>
+              <p class="card-subtitle">Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim</p>
+              <p class="card-text">PLOS ONE, 2025</p>
+              <div class="publication-badge">✅ Accepted</div>
             </div>
           </div>
         </div>
@@ -239,6 +241,15 @@ title: International Publications
   box-shadow: 0 8px 30px rgba(155, 89, 182, 0.3);
 }
 
+.journal-card {
+  border-color: #27ae60 !important; /* Green for journal papers */
+}
+
+.journal-card:hover {
+  border-color: #2ecc71 !important;
+  box-shadow: 0 8px 30px rgba(39, 174, 96, 0.3);
+}
+
 /* Card Layout - All Uniform */
 .publication-card .card-title {
   font-size: 1.1rem;
@@ -398,6 +409,21 @@ title: International Publications
 .publication-modal-close:hover {
   color: #333;
 }
+
+/* Citation Box Styling */
+.citation-box {
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.citation-box p {
+  margin: 0;
+  line-height: 1.6;
+  color: #2c3e50;
+}
 </style>
 
 <!-- Publication Modals -->
@@ -484,28 +510,65 @@ title: International Publications
   </div>
 </div>
 
-<!-- BMVC 2025 Modal -->
-<div class="publication-modal" id="bmvc">
+<!-- [C23] BMVC 2025 Modal -->
+<div class="publication-modal" id="c23">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('bmvc')">&times;</button>
+    <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
     <div class="publication-modal-header">
-      <h2 class="text-uppercase">BMVC 2025 Paper</h2>
-      <p class="item-intro text-muted">Computer Vision Research Achievement</p>
+      <h2 class="text-uppercase">[C23] BMVC 2025</h2>
+      <p class="item-intro text-muted">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</p>
     </div>
     <div class="publication-modal-body">
-      <p><strong>Authors:</strong> Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
-      <p><strong>Conference:</strong> British Machine Vision Conference (BMVC) 2025</p>
-      <p><strong>Status:</strong> Accepted</p>
-      <p><strong>Description:</strong> Our research contribution in computer vision has been accepted to BMVC 2025, one of the leading conferences in computer vision and machine learning.</p>
-      <p><strong>Research Areas:</strong></p>
-      <ul>
-        <li>Computer Vision</li>
-        <li>Deep Learning</li>
-        <li>Image Processing</li>
-        <li>Machine Learning</li>
-      </ul>
-      <div class="text-center">
-        <button class="btn btn-secondary" onclick="closePublicationModal('bmvc')" type="button">
+      <div class="citation-box">
+        <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
+      </div>
+      <p class="mt-3"><small>* Equal contribution</small></p>
+      <div class="text-center mt-4">
+        <button class="btn btn-secondary" onclick="closePublicationModal('c23')" type="button">
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- [C24] APP3DV 2025 Modal -->
+<div class="publication-modal" id="c24">
+  <div class="publication-modal-content">
+    <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
+    <div class="publication-modal-header">
+      <h2 class="text-uppercase">[C24] APP3DV 2025</h2>
+      <p class="item-intro text-muted">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</p>
+    </div>
+    <div class="publication-modal-body">
+      <div class="citation-box">
+        <p><strong>[C24]</strong> Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields," <em>Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)</em>, 2025 (accepted)</p>
+      </div>
+      <p class="mt-3"><small>* Equal contribution</small></p>
+      <div class="text-center mt-4">
+        <button class="btn btn-secondary" onclick="closePublicationModal('c24')" type="button">
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- [J12] PLOS ONE 2025 Modal -->
+<div class="publication-modal" id="j12">
+  <div class="publication-modal-content">
+    <button class="publication-modal-close" onclick="closePublicationModal('j12')">&times;</button>
+    <div class="publication-modal-header">
+      <h2 class="text-uppercase">[J12] PLOS ONE 2025</h2>
+      <p class="item-intro text-muted">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</p>
+    </div>
+    <div class="publication-modal-body">
+      <div class="citation-box">
+        <p><strong>[J12]</strong> Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis," <em>PLOS ONE</em>, 2025 (accepted)</p>
+      </div>
+      <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
+      <div class="text-center mt-4">
+        <button class="btn btn-secondary" onclick="closePublicationModal('j12')" type="button">
           <i class="fas fa-times"></i> Close
         </button>
       </div>

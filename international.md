@@ -792,6 +792,14 @@ title: International Publications
   color: #218838;
 }
 
+.modal-icon-link.github-link {
+  color: #333;
+}
+
+.modal-icon-link.github-link:hover {
+  color: #000;
+}
+
 .publication-modal-close {
   position: absolute;
   top: 20px;
@@ -1173,19 +1181,25 @@ title: International Publications
 
 <!-- 2023 Modals -->
 
-<!-- [C15] ICASSP 2023 Modal -->
+<!-- [C15] ICLR 2023 Modal -->
 <div class="publication-modal" id="c15">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c15')">&times;</button>
-      <h2 class="text-uppercase">[C15] ICASSP 2023</h2>
-      <p class="item-intro text-muted">Cough Sound Classification</p>
+      <h2 class="text-uppercase">[C15] ICLR 2023</h2>
+      <div>
+        <p class="item-intro text-muted">NERDS: A General Framework to Train Camera Denoisers</p>
+        <div class="modal-header-links">
+          <a href="https://openreview.net/forum?id=NO0ThzteQdI" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C15]</strong> Yunseok Yang† and Heewon Kim, "Cough Sound Classification Using Deep Convolutional Neural Networks," <em>Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 2023</p>
+        <p><strong>[C15]</strong> Heewon Kim and Kyoung Mu Lee, "NERDS: A General Framework to Train Camera Denoisers from Raw-RGB Noisy Image Pairs," <em>The Eleventh International Conference on Learning Representations (ICLR)</em>, 2023</p>
       </div>
-      <p class="mt-3"><small>† Undergraduate student</small></p>
     </div>
   </div>
 </div>
@@ -1248,28 +1262,45 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c12')">&times;</button>
       <h2 class="text-uppercase">[C12] ECCV 2022</h2>
-      <p class="item-intro text-muted">Image Restoration Network</p>
+      <div>
+        <p class="item-intro text-muted">CADyQ: Content-Aware Dynamic Quantization</p>
+        <div class="modal-header-links">
+          <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136670360.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="https://github.com/Cheeun/CADyQ" target="_blank" class="modal-icon-link active github-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C12]</strong> Sungyong Park*, Sangmin Lee*, and Heewon Kim, "Deep Learning-Based Image Restoration for Smartphone Photography," <em>Proc. European Conference on Computer Vision (ECCV)</em>, 2022</p>
+        <p><strong>[C12]</strong> Cheeun Hong*, Heewon Kim*, Sungyong Baik, Junghun Oh, and Kyoung Mu Lee, "CADyQ: Content-Aware Dynamic Quantization for Image Super-Resolution," <em>Proc. European Conference on Computer Vision (ECCV)</em>, 2022</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
     </div>
   </div>
 </div>
 
-<!-- [J4] Sensors 2022 Modal -->
+<!-- [J4] IEEE TIP 2024 Modal -->
 <div class="publication-modal" id="j4">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j4')">&times;</button>
-      <h2 class="text-uppercase">[J4] Sensors 2022</h2>
-      <p class="item-intro text-muted">IoT Sensor Data Processing</p>
+      <h2 class="text-uppercase">[J4] IEEE TIP 2024</h2>
+      <div>
+        <p class="item-intro text-muted">Learning Controllable ISP for Image Enhancement</p>
+        <div class="modal-header-links">
+          <a href="https://ieeexplore.ieee.org/document/10225702" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[J4]</strong> Heewon Kim, et al., "Real-Time IoT Sensor Data Processing Using Deep Learning," <em>Sensors</em>, vol. 22, no. 8, 2022</p>
+        <p><strong>[J4]</strong> Heewon Kim and Kyoung Mu Lee, "Learning Controllable ISP for Image Enhancement," <em>IEEE Transactions on Image Processing</em>, vol. 33, 2024</p>
       </div>
     </div>
   </div>

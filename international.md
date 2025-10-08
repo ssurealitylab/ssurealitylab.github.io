@@ -33,7 +33,7 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c24')" style="cursor: pointer;">
             <div class="publication-badge workshop-badge">APP3DV25</div>
-            <h5 class="list-title">Intrinsic-Guided Photorealistic Style Transfer</h5>
+            <h5 class="list-title">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h5>
             <p class="list-authors">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
           </div>
         </div>
@@ -42,7 +42,7 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c23')" style="cursor: pointer;">
             <div class="publication-badge">BMVC25</div>
-            <h5 class="list-title">UDT: Unsupervised Discovery of Transformations</h5>
+            <h5 class="list-title">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</h5>
             <p class="list-authors">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
           </div>
         </div>
@@ -51,7 +51,7 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j12')" style="cursor: pointer;">
             <div class="publication-badge">PLOS ONE</div>
-            <h5 class="list-title">DeepGAM for Depression Diagnosis</h5>
+            <h5 class="list-title">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</h5>
             <p class="list-authors">Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim</p>
           </div>
         </div>
@@ -83,7 +83,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">DynScene: Dynamic Robotic Manipulation</h5>
+            <h5 class="list-title">Motion-Aware Dynamic Architecture for Efficient Frame Interpolation</h5>
             <p class="list-authors">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
           </div>
         </div>
@@ -100,7 +100,7 @@ title: International Publications
                 <i class="fas fa-globe"></i>
               </a>
             </div>
-            <h5 class="list-title">SIDL Benchmark Dataset</h5>
+            <h5 class="list-title">Smartphone Images with Dirty Lenses Dataset</h5>
             <p class="list-authors">Sooyoung Choi*†, Sungyong Park*, Heewon Kim</p>
           </div>
         </div>
@@ -123,7 +123,7 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('arnold')" style="cursor: pointer;">
             <div class="publication-badge challenge-badge">ARNOLD Challenge</div>
-            <h5 class="list-title">ARNOLD Challenge</h5>
+            <h5 class="list-title">1st Place Winner at CVPR 2025 Embodied AI Workshop</h5>
             <p class="list-authors">Reality Lab Team</p>
           </div>
         </div>
@@ -160,7 +160,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Estimating the Missing PMU</h5>
+            <h5 class="list-title">Machine Learning-Based Etiologic Subtyping of Ischemic Stroke</h5>
             <p class="list-authors">Jeongmoon Kim†, Sooyoung Choi†, Heewon Kim</p>
           </div>
         </div>
@@ -206,7 +206,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Cough Sound Classification</h5>
+            <h5 class="list-title">NERDS: A General Framework to Train Camera Denoisers</h5>
             <p class="list-authors">Yunseok Yang†, Heewon Kim</p>
           </div>
         </div>
@@ -220,7 +220,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Realistic Bokeh Effect Rendering</h5>
+            <h5 class="list-title">DAQ: Channel-Wise Distribution-Aware Quantization</h5>
             <p class="list-authors">Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim</p>
           </div>
         </div>
@@ -234,7 +234,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Robotic Manipulation with VLM</h5>
+            <h5 class="list-title">Batch Normalization Tells You Which Filter is Important</h5>
             <p class="list-authors">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
           </div>
         </div>
@@ -248,7 +248,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Seizure Detection Using CNN-LSTM</h5>
+            <h5 class="list-title">Machine learning-based predictive modeling of depression in hypertensive populations</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
         </div>
@@ -279,7 +279,7 @@ title: International Publications
                 <i class="fab fa-github"></i>
               </a>
             </div>
-            <h5 class="list-title">Image Restoration Network</h5>
+            <h5 class="list-title">CADyQ: Content-Aware Dynamic Quantization</h5>
             <p class="list-authors">Sungyong Park*, Sangmin Lee*, Heewon Kim</p>
           </div>
         </div>
@@ -293,7 +293,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">IoT Sensor Data Processing</h5>
+            <h5 class="list-title">Learning Controllable ISP for Image Enhancement</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
         </div>
@@ -307,7 +307,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Computational Photography</h5>
+            <h5 class="list-title">Attentive Fine-Grained Structured Sparsity for Image Restoration</h5>
             <p class="list-authors">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
           </div>
         </div>
@@ -338,7 +338,7 @@ title: International Publications
                 <i class="fab fa-github"></i>
               </a>
             </div>
-            <h5 class="list-title">Vision and Learning Research</h5>
+            <h5 class="list-title">MeTAL: Meta-Learning with Task-Adaptive Loss Function</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
         </div>
@@ -352,7 +352,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Deep Learning Applications</h5>
+            <h5 class="list-title">Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
         </div>
@@ -369,7 +369,7 @@ title: International Publications
                 <i class="fab fa-github"></i>
               </a>
             </div>
-            <h5 class="list-title">Neural Network Research</h5>
+            <h5 class="list-title">ALFA: Meta-Learning with Adaptive Hyperparameters</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
         </div>
@@ -383,7 +383,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Pattern Recognition Methods</h5>
+            <h5 class="list-title">Fine-grained neural architecture search for image super-resolution</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
         </div>
@@ -400,7 +400,7 @@ title: International Publications
                 <i class="fab fa-github"></i>
               </a>
             </div>
-            <h5 class="list-title">EDSR: Enhanced Deep Residual Networks</h5>
+            <h5 class="list-title">EDSR: Enhanced Deep Residual Networks for Single Image Super-Resolution</h5>
             <p class="list-authors">Bee Lim*, Sanghyun Son*, Heewon Kim, et al.</p>
           </div>
         </div>
@@ -414,7 +414,7 @@ title: International Publications
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Computer Vision Methods</h5>
+            <h5 class="list-title">Channel Attention Is All You Need for Video Frame Interpolation</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
         </div>

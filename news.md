@@ -27,23 +27,6 @@ title: News
       </div>
       
       <div class="row">
-        <!-- ARNOLD Challenge -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card challenge-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-trophy fa-2x text-muted"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">ARNOLD Challenge 1st Place</h5>
-              <p class="card-subtitle">Reality Lab Team Members</p>
-              <p class="card-text">Reality Lab team achieved 1st place in the ARNOLD Challenge at CVPR 2025 Embodied AI Workshop. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Jun 15, 2025 | Awards</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        
         <!-- BMVC 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
@@ -55,12 +38,80 @@ title: News
               <p class="card-subtitle">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
               <p class="card-text">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, and ByungKwan Chae's paper has been accepted to BMVC 2025. Congratulations!</p>
               <div class="card-date-category">
-                <small class="text-muted">May 12, 2025 | Publication</small>
+                <small class="text-muted">Jul 26, 2025 | Publication</small>
               </div>
             </div>
           </div>
         </div>
-        
+
+        <!-- ARNOLD Challenge 1st Place -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card challenge-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-trophy fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">ARNOLD Challenge 1st Place</h5>
+              <p class="card-subtitle">Dowon Kim, Chaewoo Lim, Sungyong Park, Sangmin Lee</p>
+              <p class="card-text">Team achieved 1st place in ARNOLD Challenge at CVPR 2025 Embodied AI Workshop. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Jun 4, 2025 | Awards</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLOS One Paper -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card paper-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-file-alt fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">PLOS One Paper Acceptance</h5>
+              <p class="card-subtitle">Yeri Kim, Seoyoung Kim</p>
+              <p class="card-text">Yeri Kim and Seoyoung Kim's paper has been accepted to PLOS One. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">May 1, 2025 | Publication</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Qualcomm Internship -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card research-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-building fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Qualcomm Internship</h5>
+              <p class="card-subtitle">Sangmin Lee</p>
+              <p class="card-text">Sangmin Lee started software internship for Automated Driving at Qualcomm. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Mar 24, 2025 | Internship</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ICT Express Paper -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card paper-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-file-alt fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">ICT Express Paper Acceptance</h5>
+              <p class="card-subtitle">Seunghyun Oh</p>
+              <p class="card-text">Seunghyun Oh's paper has been accepted to ICT Express. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Mar 18, 2025 | Publication</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- CVPR 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
@@ -72,7 +123,24 @@ title: News
               <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
               <p class="card-text">Sangmin Lee and Sungyong Park's paper has been accepted to CVPR 2025. Congratulations!</p>
               <div class="card-date-category">
-                <small class="text-muted">Apr 28, 2025 | Publication</small>
+                <small class="text-muted">Feb 26, 2025 | Publication</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AAAI 2025 Paper -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card paper-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-file-alt fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">AAAI 2025 Paper Acceptance</h5>
+              <p class="card-subtitle">Sooyoung Choi, Sungyong Park</p>
+              <p class="card-text">Sooyoung Choi and Sungyong Park's paper has been accepted to AAAI 2025. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Dec 10, 2024 | Publication</small>
               </div>
             </div>
           </div>
@@ -92,52 +160,137 @@ title: News
       </div>
       
       <div class="row">
-        <!-- Qualcomm Internship -->
+        <!-- Outstanding Reviewer BMVC -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card challenge-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-award fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Outstanding Reviewer Award</h5>
+              <p class="card-subtitle">Prof. Heewon Kim</p>
+              <p class="card-text">Prof. Heewon Kim was nominated as outstanding reviewer for BMVC 2024. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Nov 4, 2024 | Awards</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Master Students -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-building fa-2x text-muted"></i>
+              <i class="fas fa-users fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Qualcomm Internship Achievement</h5>
-              <p class="card-subtitle">Sangmin Lee</p>
-              <p class="card-text">Sangmin Lee successfully completed his internship at Qualcomm, gaining valuable industry experience. Congratulations!</p>
+              <h5 class="card-title">New Master Students</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">Three master students joined the lab. Welcome to Reality Lab!</p>
               <div class="card-date-category">
-                <small class="text-muted">Aug 15, 2024 | Experience</small>
+                <small class="text-muted">Sep 1, 2024 | Members</small>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- Placeholder 1 -->
+
+        <!-- NRF Grant -->
         <div class="col-lg-4 mb-4">
-          <div class="news-card placeholder-card">
+          <div class="news-card research-card">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
+              <i class="fas fa-hand-holding-usd fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">More 2024 Updates</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Additional 2024 achievements will be updated soon.</p>
+              <h5 class="card-title">NRF Grant Award</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">Team won an NRF grant. Congratulations!</p>
               <div class="card-date-category">
-                <small class="text-muted">Coming Soon</small>
+                <small class="text-muted">Aug 28, 2024 | Grants</small>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- Placeholder 2 -->
+
+        <!-- ARNOLD Challenge 3rd Place -->
         <div class="col-lg-4 mb-4">
-          <div class="news-card placeholder-card">
+          <div class="news-card challenge-card">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
+              <i class="fas fa-medal fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">More 2024 Updates</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Additional 2024 achievements will be updated soon.</p>
+              <h5 class="card-title">ARNOLD Challenge 3rd Place</h5>
+              <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
+              <p class="card-text">Sangmin Lee and Sungyong Park achieved 3rd place in ARNOLD Challenge at CVPR 2024. Congratulations!</p>
               <div class="card-date-category">
-                <small class="text-muted">Coming Soon</small>
+                <small class="text-muted">Jun 18, 2024 | Awards</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metaverse Program Support -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card research-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-hand-holding-usd fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Metaverse Program Support</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">Lab supported by the Graduate School of Metaverse program. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Jun 4, 2024 | Grants</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Program Support -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card research-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-shield-alt fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Security Program Support</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">Lab supported by the Graduate School of Security program. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Jun 3, 2024 | Grants</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SW Excellence Program -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card research-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-laptop-code fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">SW Excellence Program</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">Lab supported by the National Program of Excellence in Software. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">May 28, 2024 | Grants</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Master Students March -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card research-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-users fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">New Master Students</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">Six master students joined the lab. Welcome to Reality Lab!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Mar 1, 2024 | Members</small>
               </div>
             </div>
           </div>
@@ -157,58 +310,69 @@ title: News
       </div>
       
       <div class="row">
-        <!-- Lab Foundation -->
+        <!-- TIP Paper -->
         <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
+          <div class="news-card paper-card">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-university fa-2x text-muted"></i>
+              <i class="fas fa-file-alt fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Reality Lab Foundation</h5>
-              <p class="card-subtitle">Prof. Heewon Kim, Soongsil University</p>
-              <p class="card-text">Reality Lab was officially established with the vision "Advancing AI to Understand Reality". Welcome to our journey!</p>
+              <h5 class="card-title">TIP Paper Acceptance</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">One paper accepted to TIP (Impact Factor: 11.041). Congratulations!</p>
               <div class="card-date-category">
-                <small class="text-muted">Mar 1, 2023 | Milestone</small>
+                <small class="text-muted">Aug 6, 2023 | Publication</small>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- Research Areas -->
+
+        <!-- Summer Interns -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-cogs fa-2x text-muted"></i>
+              <i class="fas fa-users fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Research Areas Established</h5>
-              <p class="card-subtitle">Four Core Research Areas</p>
-              <p class="card-text">Four key research areas have been established: Robotics, Computer Vision, Machine Learning, and Multimodal AI.</p>
-              <div class="research-areas">
-                <span class="badge badge-primary"><i class="fas fa-robot"></i> Robotics</span>
-                <span class="badge badge-info"><i class="fas fa-eye"></i> Vision</span>
-                <span class="badge badge-success"><i class="fas fa-brain"></i> ML</span>
-                <span class="badge badge-warning"><i class="fas fa-comments"></i> Multimodal</span>
-              </div>
+              <h5 class="card-title">Summer Internship Program</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">17 students started summer internships at the lab. Welcome!</p>
               <div class="card-date-category">
-                <small class="text-muted">Apr 15, 2023 | Milestone</small>
+                <small class="text-muted">Jun 26, 2023 | Members</small>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- Placeholder for 2023 -->
+
+        <!-- TPAMI Paper -->
         <div class="col-lg-4 mb-4">
-          <div class="news-card placeholder-card">
+          <div class="news-card paper-card">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
+              <i class="fas fa-file-alt fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">More 2023 Updates</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Additional 2023 achievements will be updated soon.</p>
+              <h5 class="card-title">TPAMI Paper Acceptance</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">One paper accepted to TPAMI (Impact Factor: 24.314). Congratulations!</p>
               <div class="card-date-category">
-                <small class="text-muted">Coming Soon</small>
+                <small class="text-muted">Mar 15, 2023 | Publication</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ICLR Paper -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card paper-card">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-file-alt fa-2x text-muted"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">ICLR 2023 Paper Acceptance</h5>
+              <p class="card-subtitle">Reality Lab</p>
+              <p class="card-text">One paper accepted to ICLR 2023. Congratulations!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Jan 21, 2023 | Publication</small>
               </div>
             </div>
           </div>

@@ -621,7 +621,7 @@ title: International Publications
 }
 
 .placeholder-img {
-  height: 100px;
+  height: 130px;
   background: #ecf0f1;
   border-radius: 8px;
   margin: 10px 10px 0 10px;

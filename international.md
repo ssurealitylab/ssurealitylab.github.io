@@ -499,48 +499,48 @@ title: International Publications
 
 /* Year-specific badge and line colors */
 .year-2025 .category-badge {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  background: linear-gradient(135deg, #8b9dc3, #9b88b3);
+  box-shadow: 0 4px 15px rgba(139, 157, 195, 0.25);
 }
 
 .year-2025 .category-line {
-  background: linear-gradient(90deg, #667eea, rgba(102, 126, 234, 0.1));
+  background: linear-gradient(90deg, #8b9dc3, rgba(139, 157, 195, 0.1));
 }
 
 .year-2024 .category-badge {
-  background: linear-gradient(135deg, #f093fb, #f5576c);
-  box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
+  background: linear-gradient(135deg, #dda3cc, #d1879a);
+  box-shadow: 0 4px 15px rgba(221, 163, 204, 0.25);
 }
 
 .year-2024 .category-line {
-  background: linear-gradient(90deg, #f093fb, rgba(240, 147, 251, 0.1));
+  background: linear-gradient(90deg, #dda3cc, rgba(221, 163, 204, 0.1));
 }
 
 .year-2023 .category-badge {
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+  background: linear-gradient(135deg, #7eb8d4, #6db8c4);
+  box-shadow: 0 4px 15px rgba(126, 184, 212, 0.25);
 }
 
 .year-2023 .category-line {
-  background: linear-gradient(90deg, #4facfe, rgba(79, 172, 254, 0.1));
+  background: linear-gradient(90deg, #7eb8d4, rgba(126, 184, 212, 0.1));
 }
 
 .year-2022 .category-badge {
-  background: linear-gradient(135deg, #43e97b, #38f9d7);
-  box-shadow: 0 4px 15px rgba(67, 233, 123, 0.3);
+  background: linear-gradient(135deg, #7fc49a, #7dc9b8);
+  box-shadow: 0 4px 15px rgba(127, 196, 154, 0.25);
 }
 
 .year-2022 .category-line {
-  background: linear-gradient(90deg, #43e97b, rgba(67, 233, 123, 0.1));
+  background: linear-gradient(90deg, #7fc49a, rgba(127, 196, 154, 0.1));
 }
 
 .year-2021 .category-badge {
-  background: linear-gradient(135deg, #fa709a, #fee140);
-  box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3);
+  background: linear-gradient(135deg, #d9a1a8, #e8c899);
+  box-shadow: 0 4px 15px rgba(217, 161, 168, 0.25);
 }
 
 .year-2021 .category-line {
-  background: linear-gradient(90deg, #fa709a, rgba(250, 112, 154, 0.1));
+  background: linear-gradient(90deg, #d9a1a8, rgba(217, 161, 168, 0.1));
 }
 
 /* Publication Cards */

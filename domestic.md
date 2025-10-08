@@ -305,9 +305,8 @@ title: Domestic Publications
 /* External Links */
 .external-links {
   position: absolute;
-  right: 150px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 16px;
+  top: 45px;
   display: flex;
   gap: 10px;
   z-index: 5;

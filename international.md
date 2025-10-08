@@ -726,18 +726,20 @@ title: International Publications
 .modal-header-links {
   position: absolute;
   top: 20px;
-  right: 70px;
+  right: 90px;
   display: flex;
-  gap: 12px;
+  gap: 15px;
+  align-items: center;
   z-index: 10;
+  height: 40px;
 }
 
 .modal-icon-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   color: #667eea;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -752,7 +754,7 @@ title: International Publications
 }
 
 .modal-icon-link i {
-  font-size: 1.3rem;
+  font-size: 1.56rem;
 }
 
 .publication-modal-close {

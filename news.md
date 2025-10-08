@@ -489,9 +489,12 @@ title: News
 /* News Image */
 .news-img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 180px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 15px;
   border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 /* Research Areas Badges */

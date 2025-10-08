@@ -489,8 +489,9 @@ title: News
 /* News Image */
 .news-img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 120px;
+  object-fit: contain;
+  object-position: top;
   border-radius: 8px 8px 0 0;
   display: block;
 }

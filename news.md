@@ -14,19 +14,7 @@ title: News
 <!-- News Content -->
 <section class="news-content py-5">
   <div class="container">
-    
-    <!-- 2025 Year Section -->
-    <div class="year-section mb-5">
-      <div class="row">
-        <div class="col-12">
-          <div class="year-header d-flex align-items-center mb-4">
-            <div class="year-badge">2025</div>
-            <div class="year-line flex-grow-1"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row">
+    <div class="row">
         <!-- BMVC 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
@@ -131,21 +119,6 @@ title: News
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- 2024 Year Section -->
-    <div class="year-section mb-5">
-      <div class="row">
-        <div class="col-12">
-          <div class="year-header d-flex align-items-center mb-4">
-            <div class="year-badge">2024</div>
-            <div class="year-line flex-grow-1"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row">
         <!-- Outstanding Reviewer BMVC -->
         <div class="col-lg-4 mb-4">
           <div class="news-card challenge-card">
@@ -267,21 +240,6 @@ title: News
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- 2023 Year Section -->
-    <div class="year-section mb-5">
-      <div class="row">
-        <div class="col-12">
-          <div class="year-header d-flex align-items-center mb-4">
-            <div class="year-badge">2023</div>
-            <div class="year-line flex-grow-1"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row">
         <!-- TIP Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
@@ -349,9 +307,7 @@ title: News
             </div>
           </div>
         </div>
-      </div>
     </div>
-    
   </div>
 </section>
 
@@ -417,11 +373,14 @@ title: News
   border: 3px solid transparent;
   display: flex;
   flex-direction: column;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .news-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  /* Hover effect removed */
 }
 
 /* Category-based Border Colors */

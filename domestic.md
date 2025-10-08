@@ -231,13 +231,13 @@ title: Domestic Publications
   position: absolute;
   top: 10px;
   right: 10px;
-  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
-  color: white;
+  background: transparent;
+  color: #27ae60;
+  border: 2px solid #27ae60;
   padding: 6px 12px;
   border-radius: 20px;
   font-weight: bold;
   font-size: 0.8rem;
-  box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
 }
 
 /* Placeholder Card */

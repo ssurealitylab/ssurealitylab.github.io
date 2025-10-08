@@ -556,25 +556,27 @@ title: International Publications
   position: absolute;
   top: 8px;
   right: 8px;
-  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
-  color: white;
+  background: transparent;
+  color: #ff6b6b;
+  border: 2px solid #ff6b6b;
   padding: 4px 10px;
   border-radius: 15px;
   font-weight: bold;
   font-size: 0.7rem;
-  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
 }
 
 /* Workshop Badge - Yellow */
 .publication-badge.workshop-badge {
-  background: linear-gradient(135deg, #ffd700, #ffb700);
-  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  background: transparent;
+  color: #ffd700;
+  border: 2px solid #ffd700;
 }
 
 /* Challenge Badge - Yellow */
 .publication-badge.challenge-badge {
-  background: linear-gradient(135deg, #ffd700, #ffb700);
-  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  background: transparent;
+  color: #ffd700;
+  border: 2px solid #ffd700;
 }
 
 /* Placeholder Card */

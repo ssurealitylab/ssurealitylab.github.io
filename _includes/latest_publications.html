@@ -1,0 +1,163 @@
+<!-- Latest Publications Section -->
+<section class="latest-publications-section bg-light page-section" id="latest-publications">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-12">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h2 class="section-heading text-uppercase">최신 Publications</h2>
+            <h3 class="section-subheading text-muted">Recent international research publications</h3>
+          </div>
+          <div>
+            <a href="{{ site.baseurl }}/international.html" class="see-all-publications-link">
+              See All Publications <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <!-- Publication 1: APP3DV 2025 -->
+        <div class="publication-list-item-home mb-3">
+          <div class="publication-badge-home">APP3DV25</div>
+          <h5 class="list-title-home">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h5>
+          <p class="list-authors-home">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
+        </div>
+
+        <!-- Publication 2: BMVC 2025 -->
+        <div class="publication-list-item-home mb-3">
+          <div class="publication-badge-home">BMVC25</div>
+          <h5 class="list-title-home">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</h5>
+          <p class="list-authors-home">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
+        </div>
+
+        <!-- Publication 3: PLOS ONE 2025 -->
+        <div class="publication-list-item-home mb-3">
+          <div class="publication-badge-home">PLOS ONE</div>
+          <h5 class="list-title-home">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</h5>
+          <p class="list-authors-home">Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim</p>
+        </div>
+
+        <!-- Publication 4: JEET 2025 -->
+        <div class="publication-list-item-home mb-3">
+          <div class="publication-badge-home">JEET</div>
+          <h5 class="list-title-home">Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases</h5>
+          <p class="list-authors-home">Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim</p>
+        </div>
+
+        <!-- Publication 5: ICT Express 2025 -->
+        <div class="publication-list-item-home mb-3">
+          <div class="publication-badge-home">ICT Express</div>
+          <h5 class="list-title-home">Accurate Baseball Player Pose Refinement Using Motion Prior Guidance</h5>
+          <p class="list-authors-home">Seunghyun Oh†, Heewon Kim</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Latest Publications Section Styles */
+.latest-publications-section {
+  padding: 80px 0;
+}
+
+.see-all-publications-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.see-all-publications-link:hover {
+  color: #2563eb;
+  transform: translateX(5px);
+}
+
+.see-all-publications-link i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.see-all-publications-link:hover i {
+  transform: translateX(3px);
+}
+
+/* Publication List Item for Home */
+.publication-list-item-home {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.publication-list-item-home:hover {
+  border-color: #4facfe;
+  box-shadow: 0 4px 12px rgba(79, 172, 254, 0.15);
+  transform: translateY(-2px);
+}
+
+.publication-badge-home {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  color: #4facfe;
+  border: 2px solid #4facfe;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.list-title-home {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  padding-right: 120px;
+  line-height: 1.4;
+}
+
+.list-authors-home {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .latest-publications-section .d-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .see-all-publications-link {
+    margin-top: 15px;
+  }
+
+  .list-title-home {
+    font-size: 1rem;
+    padding-right: 100px;
+  }
+
+  .list-authors-home {
+    font-size: 0.85rem;
+  }
+}
+</style>

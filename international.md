@@ -134,7 +134,7 @@ title: International Publications
               <i class="fas fa-brain fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">tDCS Treatment Effects Prediction</h5>
+              <h5 class="card-title">Predicting tDCS Treatment Effects Using Machine Learning</h5>
               <p class="card-subtitle">Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al.</p>
               <div class="publication-badge">Brain Stimulation</div>
             </div>
@@ -176,7 +176,7 @@ title: International Publications
               <i class="fas fa-brain fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Predicting tDCS Treatment Effects</h5>
+              <h5 class="card-title">Predicting tDCS Treatment Effects in Depression Using Deep Learning</h5>
               <p class="card-subtitle">Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al.</p>
               <div class="publication-badge">@</div>
             </div>
@@ -1079,7 +1079,7 @@ title: International Publications
       <button class="publication-modal-close" onclick="closePublicationModal('c20j9')">&times;</button>
       <h2 class="text-uppercase">[C20&J9] Brain Stimulation 2025</h2>
       <div>
-        <p class="item-intro text-muted">Predicting tDCS Treatment Effects</p>
+        <p class="item-intro text-muted">Predicting tDCS Treatment Effects Using Machine Learning</p>
         <div class="modal-header-links">
           <a href="https://www.brainstimjrnl.com/article/S1935-861X%2824%2900905-7/fulltext" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
             <i class="fas fa-file-pdf"></i>
@@ -1110,7 +1110,7 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c17j8')">&times;</button>
       <h2 class="text-uppercase">[C17&J8] Brain Stimulation 2024</h2>
-      <p class="item-intro text-muted">Predicting tDCS Treatment Effects in Depression</p>
+      <p class="item-intro text-muted">Predicting tDCS Treatment Effects in Depression Using Deep Learning</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">

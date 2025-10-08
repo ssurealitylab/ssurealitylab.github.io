@@ -601,6 +601,9 @@ title: International Publications
   margin-bottom: 0;
   font-weight: 500;
   line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 /* Publication Badge */

@@ -593,11 +593,11 @@ title: International Publications
 }
 
 .publication-card .card-subtitle {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: #7f8c8d;
   margin-bottom: 0;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 /* Publication Badge */
@@ -621,15 +621,15 @@ title: International Publications
 }
 
 .placeholder-img {
-  height: 150px;
+  height: 100px;
   background: #ecf0f1;
   border-radius: 8px;
-  margin: 15px;
+  margin: 10px 10px 0 10px;
 }
 
 /* Card Body Styling */
 .card-body {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem 0.75rem 1rem;
 }
 
 /* Responsive Design */

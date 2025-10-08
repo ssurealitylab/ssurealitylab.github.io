@@ -1128,19 +1128,25 @@ title: International Publications
   </div>
 </div>
 
-<!-- [J7] JEET 2024 Modal -->
+<!-- [J7] MDPI IJMS 2024 Modal -->
 <div class="publication-modal" id="j7">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j7')">&times;</button>
-      <h2 class="text-uppercase">[J7] JEET 2024</h2>
-      <p class="item-intro text-muted">Estimating the Missing PMU</p>
+      <h2 class="text-uppercase">[J7] MDPI IJMS 2024</h2>
+      <div>
+        <p class="item-intro text-muted">Machine Learning-Based Etiologic Subtyping of Ischemic Stroke</p>
+        <div class="modal-header-links">
+          <a href="https://www.mdpi.com/1422-0067/25/12/6761" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[J7]</strong> Jeongmoon Kim†, Sooyoung Choi†, and Heewon Kim, "Estimating the Missing PMU Using Deep Learning Methods," <em>Journal of Electrical Engineering & Technology (JEET)</em>, vol. 19, no. 2, 2024</p>
+        <p><strong>[J7]</strong> Seoyoung Kim, Chiyoung Lee, Jiyeon Park, Hyo Suk Nam, and Heewon Kim, "Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs," <em>International Journal of Molecular Sciences (IJMS)</em>, vol. 25, no. 12, 2024</p>
       </div>
-      <p class="mt-3"><small>† Undergraduate student</small></p>
     </div>
   </div>
 </div>
@@ -1250,17 +1256,24 @@ title: International Publications
   </div>
 </div>
 
-<!-- [J5] Applied Sciences 2023 Modal -->
+<!-- [J5] PLOS ONE 2022 Modal -->
 <div class="publication-modal" id="j5">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j5')">&times;</button>
-      <h2 class="text-uppercase">[J5] Applied Sciences 2023</h2>
-      <p class="item-intro text-muted">Seizure Detection Using CNN-LSTM</p>
+      <h2 class="text-uppercase">[J5] PLOS ONE 2022</h2>
+      <div>
+        <p class="item-intro text-muted">Machine learning-based predictive modeling of depression in hypertensive populations</p>
+        <div class="modal-header-links">
+          <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0272330" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[J5]</strong> Heewon Kim, et al., "Automated Seizure Detection Using CNN-LSTM Hybrid Networks," <em>Applied Sciences</em>, vol. 13, no. 4, 2023</p>
+        <p><strong>[J5]</strong> Seoyoung Kim, Yeri Kim, Chiyoung Lee, Juyoung Park, Hyochol Ahn, and Heewon Kim, "Machine learning-based predictive modeling of depression in hypertensive populations," <em>PLOS ONE</em>, vol. 17, no. 7, 2022</p>
       </div>
     </div>
   </div>
@@ -1369,17 +1382,24 @@ title: International Publications
   </div>
 </div>
 
-<!-- [J3] IEEE Access 2020 Modal -->
+<!-- [J3] IEEE TETCI 2020 Modal -->
 <div class="publication-modal" id="j3">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j3')">&times;</button>
-      <h2 class="text-uppercase">[J3] IEEE Access 2020</h2>
-      <p class="item-intro text-muted">Deep Learning Applications</p>
+      <h2 class="text-uppercase">[J3] IEEE TETCI 2020</h2>
+      <div>
+        <p class="item-intro text-muted">Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning</p>
+        <div class="modal-header-links">
+          <a href="https://ieeexplore.ieee.org/document/10080995" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[J3]</strong> Heewon Kim, et al., "Deep Learning Applications for Real-World Problems," <em>IEEE Access</em>, vol. 8, 2020</p>
+        <p><strong>[J3]</strong> Sungyong Baik, Janghoon Choi, Heewon Kim, Dohee Cho, Jaesik Min, and Kyoung Mu Lee, "Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning," <em>IEEE Transactions on Emerging Topics in Computational Intelligence</em>, 2020</p>
       </div>
     </div>
   </div>
@@ -1411,17 +1431,24 @@ title: International Publications
   </div>
 </div>
 
-<!-- [J2] Pattern Recognition 2018 Modal -->
+<!-- [J2] JVCIR 2022 Modal -->
 <div class="publication-modal" id="j2">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j2')">&times;</button>
-      <h2 class="text-uppercase">[J2] Pattern Recognition 2018</h2>
-      <p class="item-intro text-muted">Pattern Recognition Methods</p>
+      <h2 class="text-uppercase">[J2] JVCIR 2022</h2>
+      <div>
+        <p class="item-intro text-muted">Fine-grained neural architecture search for image super-resolution</p>
+        <div class="modal-header-links">
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S1047320322001742" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[J2]</strong> Heewon Kim, et al., "Novel Pattern Recognition Methods for Computer Vision," <em>Pattern Recognition</em>, 2018</p>
+        <p><strong>[J2]</strong> Heewon Kim and Kyoung Mu Lee, "Fine-grained neural architecture search for image super-resolution," <em>Journal of Visual Communication and Image Representation (JVCIR)</em>, vol. 88, 2022</p>
       </div>
     </div>
   </div>
@@ -1454,17 +1481,24 @@ title: International Publications
   </div>
 </div>
 
-<!-- [J1] Computer Vision and Image Understanding 2017 Modal -->
+<!-- [J1] AAAI 2020 Modal -->
 <div class="publication-modal" id="j1">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j1')">&times;</button>
-      <h2 class="text-uppercase">[J1] CVIU 2017</h2>
-      <p class="item-intro text-muted">Computer Vision Methods</p>
+      <h2 class="text-uppercase">[J1] AAAI 2020</h2>
+      <div>
+        <p class="item-intro text-muted">Channel Attention Is All You Need for Video Frame Interpolation</p>
+        <div class="modal-header-links">
+          <a href="https://www.dropbox.com/scl/fi/8km8l254msd8rm8cjfkct/AAAI-ChoiM.4773.pdf?rlkey=rws6k9ctw5prhis162zk30xts&dl=0" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[J1]</strong> Heewon Kim, et al., "Advanced Computer Vision Methods for Image Understanding," <em>Computer Vision and Image Understanding</em>, 2017</p>
+        <p><strong>[J1]</strong> Myungsub Choi, Heewon Kim, Bohyung Han, Ning Xu, and Kyoung Mu Lee, "Channel Attention Is All You Need for Video Frame Interpolation," <em>Proc. AAAI Conference on Artificial Intelligence (AAAI)</em>, 2020</p>
       </div>
     </div>
   </div>

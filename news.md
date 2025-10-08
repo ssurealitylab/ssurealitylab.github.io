@@ -35,7 +35,7 @@ title: News
             </div>
             <div class="card-body">
               <h5 class="card-title">ARNOLD Challenge 1st Place</h5>
-              <p class="card-subtitle">CVPR 2025 Embodied AI Workshop</p>
+              <p class="card-subtitle">Reality Lab Team Members</p>
               <p class="card-text">Reality Lab team achieved 1st place in the ARNOLD Challenge at CVPR 2025 Embodied AI Workshop. Congratulations!</p>
               <div class="card-date-category">
                 <small class="text-muted">Jun 15, 2025 | Awards</small>

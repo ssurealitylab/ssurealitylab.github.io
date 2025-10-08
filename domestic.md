@@ -28,86 +28,56 @@ title: Domestic Publications
       
       <div class="row">
         <!-- Placeholder 1 -->
-        <div class="col-lg-4 mb-4">
-          <div class="publication-card placeholder-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Korean Conference Papers</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Korean conference and journal publications will be updated.</p>
-            </div>
+        <div class="col-12 mb-3">
+          <div class="publication-list-item">
+            <div class="publication-badge domestic-badge">Coming Soon</div>
+            <h5 class="list-title">Korean Conference Papers</h5>
+            <p class="list-authors">Korean conference and journal publications will be updated.</p>
           </div>
         </div>
-        
+
         <!-- Placeholder 2 -->
-        <div class="col-lg-4 mb-4">
-          <div class="publication-card placeholder-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Korean Journal Papers</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Korean journal publications will be updated.</p>
-            </div>
+        <div class="col-12 mb-3">
+          <div class="publication-list-item">
+            <div class="publication-badge domestic-badge">Coming Soon</div>
+            <h5 class="list-title">Korean Journal Papers</h5>
+            <p class="list-authors">Korean journal publications will be updated.</p>
           </div>
         </div>
-        
+
         <!-- Placeholder 3 -->
-        <div class="col-lg-4 mb-4">
-          <div class="publication-card placeholder-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Korean Workshop Papers</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Korean workshop publications will be updated.</p>
-            </div>
+        <div class="col-12 mb-3">
+          <div class="publication-list-item">
+            <div class="publication-badge domestic-badge">Coming Soon</div>
+            <h5 class="list-title">Korean Workshop Papers</h5>
+            <p class="list-authors">Korean workshop publications will be updated.</p>
           </div>
         </div>
-        
+
         <!-- Placeholder 4 -->
-        <div class="col-lg-4 mb-4">
-          <div class="publication-card placeholder-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">More Domestic Publications</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Additional domestic publications will be updated.</p>
-            </div>
+        <div class="col-12 mb-3">
+          <div class="publication-list-item">
+            <div class="publication-badge domestic-badge">Coming Soon</div>
+            <h5 class="list-title">More Domestic Publications</h5>
+            <p class="list-authors">Additional domestic publications will be updated.</p>
           </div>
         </div>
-        
+
         <!-- Placeholder 5 -->
-        <div class="col-lg-4 mb-4">
-          <div class="publication-card placeholder-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">More Domestic Publications</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Additional domestic publications will be updated.</p>
-            </div>
+        <div class="col-12 mb-3">
+          <div class="publication-list-item">
+            <div class="publication-badge domestic-badge">Coming Soon</div>
+            <h5 class="list-title">More Domestic Publications</h5>
+            <p class="list-authors">Additional domestic publications will be updated.</p>
           </div>
         </div>
-        
+
         <!-- Placeholder 6 -->
-        <div class="col-lg-4 mb-4">
-          <div class="publication-card placeholder-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">More Domestic Publications</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Additional domestic publications will be updated.</p>
-            </div>
+        <div class="col-12 mb-3">
+          <div class="publication-list-item">
+            <div class="publication-badge domestic-badge">Coming Soon</div>
+            <h5 class="list-title">More Domestic Publications</h5>
+            <p class="list-authors">Additional domestic publications will be updated.</p>
           </div>
         </div>
       </div>
@@ -286,6 +256,50 @@ title: Domestic Publications
 /* Card Body Styling */
 .card-body {
   padding: 1.25rem;
+}
+
+/* Publication List Item */
+.publication-list-item {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.publication-list-item:hover {
+  border-color: #27ae60;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15);
+  transform: translateY(-2px);
+}
+
+.publication-list-item .publication-badge {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+}
+
+.publication-list-item .list-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  padding-right: 120px;
+  line-height: 1.4;
+}
+
+.publication-list-item .list-authors {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 /* Responsive Design */

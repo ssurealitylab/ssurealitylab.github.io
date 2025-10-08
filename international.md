@@ -38,7 +38,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Intrinsic-Guided Photorealistic Style Transfer</h5>
               <p class="card-subtitle">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
-              <div class="publication-badge">🎉 APP3DV25 Accept!</div>
+              <div class="publication-badge">APP3DV25</div>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">UDT: Unsupervised Discovery of Transformations</h5>
               <p class="card-subtitle">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
-              <div class="publication-badge">🎉 BMVC25 Accept!</div>
+              <div class="publication-badge">BMVC25</div>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">DeepGAM for Depression Diagnosis</h5>
               <p class="card-subtitle">Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim</p>
-              <div class="publication-badge">🎉 PLOS ONE Accept!</div>
+              <div class="publication-badge">PLOS ONE</div>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Dog Cough Sound Classification</h5>
               <p class="card-subtitle">Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim</p>
-              <div class="publication-badge">🎉 JEET Accept!</div>
+              <div class="publication-badge">JEET</div>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">Baseball Player Pose Refinement</h5>
               <p class="card-subtitle">Seunghyun Oh†, Heewon Kim</p>
-              <div class="publication-badge">🎉 ICT Express Accept!</div>
+              <div class="publication-badge">ICT Express</div>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">DynScene: Dynamic Robotic Manipulation</h5>
               <p class="card-subtitle">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-              <div class="publication-badge">🎉 CVPR25 Accept!</div>
+              <div class="publication-badge">CVPR25</div>
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">SIDL Benchmark Dataset</h5>
               <p class="card-subtitle">Sooyoung Choi*†, Sungyong Park*, Heewon Kim</p>
-              <div class="publication-badge">🎉 AAAI25 Accept!</div>
+              <div class="publication-badge">AAAI25</div>
             </div>
           </div>
         </div>
@@ -136,7 +136,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">tDCS Treatment Effects Prediction</h5>
               <p class="card-subtitle">Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al.</p>
-              <div class="publication-badge">🎉 Brain Stimulation Accept!</div>
+              <div class="publication-badge">Brain Stimulation</div>
             </div>
           </div>
         </div>

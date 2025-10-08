@@ -32,7 +32,7 @@ title: International Publications
         <!-- APP3DV 2025 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c24')" style="cursor: pointer;">
-            <div class="publication-badge">APP3DV25</div>
+            <div class="publication-badge challenge-badge">APP3DV25</div>
             <h5 class="list-title">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h5>
             <p class="list-authors">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
           </div>
@@ -987,13 +987,13 @@ title: International Publications
 <!-- Publication Modals -->
 
 <!-- SIDL Benchmark Modal -->
-<div class="publication-modal" id="sidl">
+<div class="publication-modal modal-2025" id="sidl">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('sidl')">&times;</button>
-      <h2 class="text-uppercase">SIDL Benchmark</h2>
+      <h2 class="text-uppercase">SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses</h2>
       <div>
-        <p class="item-intro text-muted">Smartphone Images with Dirty Lenses Dataset</p>
+        <p class="item-intro">AAAI Conference on Artificial Intelligence</p>
         <div class="modal-header-links">
           <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32257" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
             <i class="fas fa-file-pdf"></i>
@@ -1072,12 +1072,12 @@ title: International Publications
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
-      <h2 class="text-uppercase">[C23] BMVC 2025</h2>
-      <p class="item-intro text-muted">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</p>
+      <h2 class="text-uppercase">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</h2>
+      <p class="item-intro">British Machine Vision Conference (BMVC)</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
+        <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
     </div>
@@ -1089,8 +1089,8 @@ title: International Publications
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
-      <h2 class="text-uppercase">[C24] APP3DV 2025</h2>
-      <p class="item-intro text-muted">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</p>
+      <h2 class="text-uppercase">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h2>
+      <p class="item-intro">International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV)</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1102,12 +1102,12 @@ title: International Publications
 </div>
 
 <!-- [J12] PLOS ONE 2025 Modal -->
-<div class="publication-modal" id="j12">
+<div class="publication-modal modal-2025" id="j12">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j12')">&times;</button>
-      <h2 class="text-uppercase">[J12] PLOS ONE 2025</h2>
-      <p class="item-intro text-muted">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</p>
+      <h2 class="text-uppercase">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</h2>
+      <p class="item-intro">PLOS ONE</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1118,37 +1118,13 @@ title: International Publications
   </div>
 </div>
 
-<!-- CVPR 2025 Modal -->
-<div class="publication-modal" id="cvpr">
-  <div class="publication-modal-content">
-    <div class="publication-modal-header">
-      <button class="publication-modal-close" onclick="closePublicationModal('cvpr')">&times;</button>
-      <h2 class="text-uppercase">CVPR 2025 Paper</h2>
-      <p class="item-intro text-muted">Advanced AI Research Achievement</p>
-    </div>
-    <div class="publication-modal-body">
-      <p><strong>Authors:</strong> Sangmin Lee, Sungyong Park</p>
-      <p><strong>Conference:</strong> IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2025</p>
-      <p><strong>Status:</strong> Accepted</p>
-      <p><strong>Description:</strong> Our advanced AI research has been accepted to CVPR 2025, the premier conference in computer vision and pattern recognition.</p>
-      <p><strong>Research Areas:</strong></p>
-      <ul>
-        <li>Computer Vision</li>
-        <li>Pattern Recognition</li>
-        <li>Artificial Intelligence</li>
-        <li>Machine Learning</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
 <!-- ARNOLD Challenge Modal -->
-<div class="publication-modal" id="arnold">
+<div class="publication-modal modal-2025" id="arnold">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('arnold')">&times;</button>
-      <h2 class="text-uppercase">ARNOLD Challenge</h2>
-      <p class="item-intro text-muted">1st Place Winner at CVPR 2025 Embodied AI Workshop</p>
+      <h2 class="text-uppercase">1st Place Winner at CVPR 2025 Embodied AI Workshop</h2>
+      <p class="item-intro">ARNOLD Challenge</p>
     </div>
     <div class="publication-modal-body">
       <p><strong>Team:</strong> Reality Lab Team</p>
@@ -1175,16 +1151,16 @@ title: International Publications
 </div>
 
 <!-- [J11] JEET 2025 Modal -->
-<div class="publication-modal" id="j11">
+<div class="publication-modal modal-2025" id="j11">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j11')">&times;</button>
-      <h2 class="text-uppercase">[J11] JEET 2025</h2>
-      <p class="item-intro text-muted">Dog Cough Sound Classification</p>
+      <h2 class="text-uppercase">Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases</h2>
+      <p class="item-intro">Journal of Electrical Engineering & Technology (JEET)</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[J11]</strong> Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, "Dog Cough Sound Classification Using Deep Learning," <em>Journal of Electrical Engineering & Technology (JEET)</em>, 2025 (accepted)</p>
+        <p><strong>[J11]</strong> Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, "Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases," <em>Journal of Electrical Engineering & Technology (JEET)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
     </div>
@@ -1192,30 +1168,30 @@ title: International Publications
 </div>
 
 <!-- [J10] ICT Express 2025 Modal -->
-<div class="publication-modal" id="j10">
+<div class="publication-modal modal-2025" id="j10">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j10')">&times;</button>
-      <h2 class="text-uppercase">[J10] ICT Express 2025</h2>
-      <p class="item-intro text-muted">Baseball Player Pose Refinement</p>
+      <h2 class="text-uppercase">Accurate Baseball Player Pose Refinement Using Motion Prior Guidance</h2>
+      <p class="item-intro">ICT Express</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[J10]</strong> Seunghyun Oh† and Heewon Kim, "Baseball Player Pose Refinement Using Deep Learning," <em>ICT Express</em>, 2025 (accepted)</p>
+        <p><strong>[J10]</strong> Seunghyun Oh† and Heewon Kim, "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance," <em>ICT Express</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
     </div>
   </div>
 </div>
 
-<!-- [C22] ICCV 2021 Modal -->
-<div class="publication-modal" id="c22">
+<!-- [C22] CVPR 2025 Modal - DynScene -->
+<div class="publication-modal modal-2025" id="c22">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c22')">&times;</button>
-      <h2 class="text-uppercase">[C22] ICCV 2021</h2>
+      <h2 class="text-uppercase">DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI</h2>
       <div>
-        <p class="item-intro text-muted">Motion-Aware Dynamic Architecture for Efficient Frame Interpolation</p>
+        <p class="item-intro">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
         <div class="modal-header-links">
           <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Motion-Aware_Dynamic_Architecture_for_Efficient_Frame_Interpolation_ICCV_2021_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
             <i class="fas fa-file-pdf"></i>
@@ -1225,20 +1201,21 @@ title: International Publications
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C22]</strong> Myungsub Choi, Janghoon Choi, Sungyong Baik, Tae Hyun Kim, and Kyoung Mu Lee, "Motion-Aware Dynamic Architecture for Efficient Frame Interpolation," <em>Proc. IEEE International Conference on Computer Vision (ICCV)</em>, 2021</p>
+        <p><strong>[C22]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2025 (accepted)</p>
       </div>
+      <p class="mt-3"><small>* Equal contribution</small></p>
     </div>
   </div>
 </div>
 
 <!-- [C20&J9] Brain Stimulation 2025 Modal -->
-<div class="publication-modal" id="c20j9">
+<div class="publication-modal modal-2025" id="c20j9">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c20j9')">&times;</button>
-      <h2 class="text-uppercase">[C20&J9] Brain Stimulation 2025</h2>
+      <h2 class="text-uppercase">Predictors of the treatment effects of transcranial direct current stimulation on knee osteoarthritis pain</h2>
       <div>
-        <p class="item-intro text-muted">Predicting tDCS Treatment Effects Using Machine Learning</p>
+        <p class="item-intro">Brain Stimulation</p>
         <div class="modal-header-links">
           <a href="https://www.brainstimjrnl.com/article/S1935-861X%2824%2900905-7/fulltext" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
             <i class="fas fa-file-pdf"></i>

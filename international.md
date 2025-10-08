@@ -756,6 +756,49 @@ title: International Publications
   line-height: 1.6;
   color: #2c3e50;
 }
+
+/* Publication Links */
+.publication-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pub-link-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pub-link-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  color: white;
+  text-decoration: none;
+}
+
+.pub-link-btn i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.pub-link-btn span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 </style>
 
 <!-- Publication Modals -->
@@ -785,6 +828,21 @@ title: International Publications
             <input type="radio" name="contaminant" id="water" value="water"> Water
           </label>
         </div>
+      </div>
+
+      <div class="publication-links mb-4">
+        <a href="#" class="pub-link-btn" onclick="return false;">
+          <i class="fas fa-file-pdf"></i>
+          <span>PDF</span>
+        </a>
+        <a href="#" class="pub-link-btn" onclick="return false;">
+          <i class="fas fa-globe"></i>
+          <span>Website</span>
+        </a>
+        <a href="#" class="pub-link-btn" onclick="return false;">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
       </div>
 
       <!-- Image Comparison Container -->
@@ -854,6 +912,20 @@ title: International Publications
       <p class="item-intro text-muted">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</p>
     </div>
     <div class="publication-modal-body">
+      <div class="publication-links mb-4">
+        <a href="#" class="pub-link-btn" onclick="return false;">
+          <i class="fas fa-file-pdf"></i>
+          <span>PDF</span>
+        </a>
+        <a href="#" class="pub-link-btn" onclick="return false;">
+          <i class="fas fa-globe"></i>
+          <span>Website</span>
+        </a>
+        <a href="#" class="pub-link-btn" onclick="return false;">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
       <div class="citation-box">
         <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
       </div>

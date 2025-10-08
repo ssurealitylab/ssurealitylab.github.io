@@ -488,12 +488,13 @@ title: News
 
 /* News Image */
 .news-img {
-  width: 100%;
-  height: 120px;
+  width: 85%;
+  height: 102px;
   object-fit: contain;
   object-position: top;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   display: block;
+  margin: 10px auto 0 auto;
 }
 
 /* Research Areas Badges */

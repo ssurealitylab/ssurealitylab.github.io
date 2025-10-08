@@ -508,12 +508,12 @@ title: International Publications
 }
 
 .year-2024 .category-badge {
-  background: linear-gradient(135deg, #e89be3, #e37283);
-  box-shadow: 0 4px 15px rgba(232, 155, 227, 0.28);
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.28);
 }
 
 .year-2024 .category-line {
-  background: linear-gradient(90deg, #e89be3, rgba(232, 155, 227, 0.1));
+  background: linear-gradient(90deg, #f39c12, rgba(243, 156, 18, 0.1));
 }
 
 .year-2023 .category-badge {
@@ -609,6 +609,7 @@ title: International Publications
   border-radius: 15px;
   font-weight: bold;
   font-size: 0.7rem;
+  box-shadow: 0 2px 8px rgba(79, 172, 254, 0.2);
 }
 
 /* Challenge Badge - Orange-Yellow */
@@ -652,9 +653,35 @@ title: International Publications
 }
 
 .publication-list-item:hover {
-  border-color: #667eea;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+  border-color: #4facfe;
+  box-shadow: 0 4px 12px rgba(79, 172, 254, 0.15);
   transform: translateY(-2px);
+}
+
+/* Year-specific hover colors */
+.year-2025 .publication-list-item:hover {
+  border-color: #7a8dd6;
+  box-shadow: 0 4px 12px rgba(122, 141, 214, 0.25);
+}
+
+.year-2024 .publication-list-item:hover {
+  border-color: #f39c12;
+  box-shadow: 0 4px 12px rgba(243, 156, 18, 0.25);
+}
+
+.year-2023 .publication-list-item:hover {
+  border-color: #66b2e4;
+  box-shadow: 0 4px 12px rgba(102, 178, 228, 0.25);
+}
+
+.year-2022 .publication-list-item:hover {
+  border-color: #5fd68f;
+  box-shadow: 0 4px 12px rgba(95, 214, 143, 0.25);
+}
+
+.year-2021 .publication-list-item:hover {
+  border-color: #e788a1;
+  box-shadow: 0 4px 12px rgba(231, 136, 161, 0.25);
 }
 
 .publication-list-item .publication-badge {
@@ -815,6 +842,30 @@ title: International Publications
   padding: 2rem 2rem 1rem;
   border-bottom: 1px solid #eee;
   position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Year-specific modal header colors */
+.modal-2025 .publication-modal-header {
+  background: linear-gradient(135deg, #7a8dd6, #8769a8);
+}
+
+.modal-2024 .publication-modal-header {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.modal-2023 .publication-modal-header {
+  background: linear-gradient(135deg, #66b2e4, #4dd5e1);
+}
+
+.modal-2022 .publication-modal-header {
+  background: linear-gradient(135deg, #5fd68f, #5be1c7);
+}
+
+.modal-2021 .publication-modal-header {
+  background: linear-gradient(135deg, #e788a1, #eccd6d);
 }
 
 .publication-modal-header h2 {
@@ -1034,7 +1085,7 @@ title: International Publications
 </div>
 
 <!-- [C24] APP3DV 2025 Modal -->
-<div class="publication-modal" id="c24">
+<div class="publication-modal modal-2025" id="c24">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
@@ -1649,5 +1700,25 @@ document.addEventListener("DOMContentLoaded", function() {
     // Clean up URL
     history.replaceState(null, null, window.location.pathname);
   }
+
+  // Add year classes to modals based on their title
+  const modals = document.querySelectorAll(".publication-modal");
+  modals.forEach(modal => {
+    const title = modal.querySelector("h2");
+    if (title) {
+      const titleText = title.textContent;
+      if (titleText.includes("2025")) {
+        modal.classList.add("modal-2025");
+      } else if (titleText.includes("2024")) {
+        modal.classList.add("modal-2024");
+      } else if (titleText.includes("2023")) {
+        modal.classList.add("modal-2023");
+      } else if (titleText.includes("2022")) {
+        modal.classList.add("modal-2022");
+      } else if (titleText.includes("2021") || titleText.includes("2020") || titleText.includes("2017")) {
+        modal.classList.add("modal-2021");
+      }
+    }
+  });
 });
 </script>

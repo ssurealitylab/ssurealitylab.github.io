@@ -1,7 +1,7 @@
 <!-- Publication Modals for Home Page (Latest 5) -->
 
 <!-- [C24] APP3DV 2025 Modal -->
-<div class="publication-modal" id="c24">
+<div class="publication-modal modal-2025" id="c24">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
@@ -18,7 +18,7 @@
 </div>
 
 <!-- [C23] BMVC 2025 Modal -->
-<div class="publication-modal" id="c23">
+<div class="publication-modal modal-2025" id="c23">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
@@ -35,7 +35,7 @@
 </div>
 
 <!-- [J12] PLOS ONE 2025 Modal -->
-<div class="publication-modal" id="j12">
+<div class="publication-modal modal-2025" id="j12">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j12')">&times;</button>
@@ -52,7 +52,7 @@
 </div>
 
 <!-- [J11] JEET 2025 Modal -->
-<div class="publication-modal" id="j11">
+<div class="publication-modal modal-2025" id="j11">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j11')">&times;</button>
@@ -69,7 +69,7 @@
 </div>
 
 <!-- [J10] ICT Express 2025 Modal -->
-<div class="publication-modal" id="j10">
+<div class="publication-modal modal-2025" id="j10">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j10')">&times;</button>
@@ -170,6 +170,27 @@ document.addEventListener("keydown", function(event) {
   color: white;
   border-radius: 12px 12px 0 0;
   position: relative;
+}
+
+/* Year-specific modal header colors */
+.modal-2025 .publication-modal-header {
+  background: linear-gradient(135deg, #7a8dd6, #8769a8);
+}
+
+.modal-2024 .publication-modal-header {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.modal-2023 .publication-modal-header {
+  background: linear-gradient(135deg, #66b2e4, #4dd5e1);
+}
+
+.modal-2022 .publication-modal-header {
+  background: linear-gradient(135deg, #5fd68f, #5be1c7);
+}
+
+.modal-2021 .publication-modal-header {
+  background: linear-gradient(135deg, #e788a1, #eccd6d);
 }
 
 .publication-modal-header h2 {

@@ -719,19 +719,24 @@ title: International Publications
   position: relative;
 }
 
+.publication-modal-header h2 {
+  margin-bottom: 0.5rem;
+}
+
+.publication-modal-header .item-intro {
+  display: inline-block;
+  margin-right: 20px;
+}
+
 .publication-modal-body {
   padding: 2rem;
 }
 
 .modal-header-links {
-  position: absolute;
-  top: 20px;
-  right: 90px;
-  display: flex;
+  display: inline-flex;
   gap: 15px;
   align-items: center;
-  z-index: 10;
-  height: 40px;
+  vertical-align: middle;
 }
 
 .modal-icon-link {
@@ -801,20 +806,22 @@ title: International Publications
 <div class="publication-modal" id="sidl">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
-      <div class="modal-header-links">
-        <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-          <i class="fas fa-file-pdf"></i>
-        </a>
-        <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-          <i class="fas fa-globe"></i>
-        </a>
-        <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
       <button class="publication-modal-close" onclick="closePublicationModal('sidl')">&times;</button>
       <h2 class="text-uppercase">SIDL Benchmark</h2>
-      <p class="item-intro text-muted">Smartphone Images with Dirty Lenses Dataset</p>
+      <div>
+        <p class="item-intro text-muted">Smartphone Images with Dirty Lenses Dataset</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <!-- Contamination Type Toggles -->
@@ -897,20 +904,22 @@ title: International Publications
 <div class="publication-modal" id="c23">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
-      <div class="modal-header-links">
-        <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-          <i class="fas fa-file-pdf"></i>
-        </a>
-        <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-          <i class="fas fa-globe"></i>
-        </a>
-        <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
       <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
       <h2 class="text-uppercase">[C23] BMVC 2025</h2>
-      <p class="item-intro text-muted">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</p>
+      <div>
+        <p class="item-intro text-muted">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">

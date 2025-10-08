@@ -91,7 +91,7 @@
   {% if site.locale and site.locale != "" and site.locale != nil %}
   <header class="masthead">
     <div class="container">
-      <div class="intro-text text-center" id="intro-text-sticky">
+      <div class="intro-text text-center">
         {%- if site.data.sitetext[site.locale].header.title -%}
         <div class="intro-lead-in">{{ site.data.sitetext[site.locale].header.title | markdownify }}</div>
         {%- endif -%}
@@ -137,7 +137,7 @@
   {% else %}
   <header class="masthead">
     <div class="container">
-      <div class="intro-text text-center" id="intro-text-sticky">
+      <div class="intro-text text-center">
         {%- if site.data.sitetext.header.title -%}
         <div class="intro-lead-in">{{ site.data.sitetext.header.title | markdownify }}</div>
         {%- endif -%}
@@ -373,75 +373,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set initial state
   updateNavbarTransparency();
-
-  // Sticky intro text with smooth box effect
-  const introText = document.getElementById('intro-text-sticky');
-  const masthead = document.querySelector('header.masthead');
-
-  function updateIntroTextSticky() {
-    if (!introText || !masthead) return;
-
-    const scrollPosition = window.pageYOffset;
-    const mastheadHeight = masthead.offsetHeight;
-    const transitionStart = 100; // Start effect after scrolling 100px
-    const transitionEnd = mastheadHeight - 200; // End before leaving masthead section
-
-    if (scrollPosition >= transitionStart && scrollPosition <= transitionEnd) {
-      // Calculate progress (0 to 1)
-      const progress = Math.min((scrollPosition - transitionStart) / 300, 1);
-
-      // Add box styling with smooth transition
-      introText.style.position = 'fixed';
-      introText.style.top = '120px';
-      introText.style.left = '50%';
-      introText.style.transform = 'translateX(-50%)';
-      introText.style.zIndex = '100';
-      introText.style.width = 'auto';
-      introText.style.maxWidth = '90%';
-      introText.style.padding = `${10 + progress * 20}px ${20 + progress * 40}px`;
-      introText.style.background = `rgba(255, 255, 255, ${progress * 0.95})`;
-      introText.style.backdropFilter = `blur(${progress * 20}px)`;
-      introText.style.webkitBackdropFilter = `blur(${progress * 20}px)`;
-      introText.style.borderRadius = `${progress * 24}px`;
-      introText.style.boxShadow = `0 ${progress * 8}px ${progress * 32}px rgba(0, 0, 0, ${progress * 0.15})`;
-      introText.style.border = `${progress * 1}px solid rgba(59, 130, 246, ${progress * 0.2})`;
-      introText.style.transition = 'all 0.3s ease-out';
-
-      // Calculate opacity for fade out near the end
-      if (scrollPosition > transitionEnd - 300) {
-        const fadeProgress = (scrollPosition - (transitionEnd - 300)) / 300;
-        introText.style.opacity = `${1 - fadeProgress}`;
-      } else {
-        introText.style.opacity = '1';
-      }
-    } else if (scrollPosition < transitionStart) {
-      // Reset to default
-      introText.style.position = 'relative';
-      introText.style.top = 'auto';
-      introText.style.left = 'auto';
-      introText.style.transform = 'none';
-      introText.style.width = 'auto';
-      introText.style.maxWidth = '800px';
-      introText.style.padding = '';
-      introText.style.background = 'transparent';
-      introText.style.backdropFilter = 'none';
-      introText.style.webkitBackdropFilter = 'none';
-      introText.style.borderRadius = '0';
-      introText.style.boxShadow = 'none';
-      introText.style.border = 'none';
-      introText.style.opacity = '1';
-      introText.style.zIndex = 'auto';
-    } else {
-      // Hide when scrolled past
-      introText.style.opacity = '0';
-      introText.style.pointerEvents = 'none';
-    }
-  }
-
-  // Update on scroll
-  window.addEventListener('scroll', updateIntroTextSticky);
-
-  // Set initial state
-  updateIntroTextSticky();
 });
 </script>

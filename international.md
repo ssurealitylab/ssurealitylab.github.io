@@ -938,10 +938,23 @@ title: International Publications
 <!-- [C24] APP3DV 2025 Modal -->
 <div class="publication-modal" id="c24">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
       <h2 class="text-uppercase">[C24] APP3DV 2025</h2>
-      <p class="item-intro text-muted">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</p>
+      <div>
+        <p class="item-intro text-muted">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -960,10 +973,23 @@ title: International Publications
 <!-- [J12] PLOS ONE 2025 Modal -->
 <div class="publication-modal" id="j12">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j12')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j12')">&times;</button>
       <h2 class="text-uppercase">[J12] PLOS ONE 2025</h2>
-      <p class="item-intro text-muted">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</p>
+      <div>
+        <p class="item-intro text-muted">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -982,10 +1008,23 @@ title: International Publications
 <!-- CVPR 2025 Modal -->
 <div class="publication-modal" id="cvpr">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('cvpr')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('cvpr')">&times;</button>
       <h2 class="text-uppercase">CVPR 2025 Paper</h2>
-      <p class="item-intro text-muted">Advanced AI Research Achievement</p>
+      <div>
+        <p class="item-intro text-muted">Advanced AI Research Achievement</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <p><strong>Authors:</strong> Sangmin Lee, Sungyong Park</p>
@@ -1011,10 +1050,23 @@ title: International Publications
 <!-- ARNOLD Challenge Modal -->
 <div class="publication-modal" id="arnold">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('arnold')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('arnold')">&times;</button>
       <h2 class="text-uppercase">ARNOLD Challenge</h2>
-      <p class="item-intro text-muted">1st Place Winner at CVPR 2025 Embodied AI Workshop</p>
+      <div>
+        <p class="item-intro text-muted">1st Place Winner at CVPR 2025 Embodied AI Workshop</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <p><strong>Team:</strong> Reality Lab Team</p>
@@ -1048,10 +1100,23 @@ title: International Publications
 <!-- [J11] JEET 2025 Modal -->
 <div class="publication-modal" id="j11">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j11')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j11')">&times;</button>
       <h2 class="text-uppercase">[J11] JEET 2025</h2>
-      <p class="item-intro text-muted">Dog Cough Sound Classification</p>
+      <div>
+        <p class="item-intro text-muted">Dog Cough Sound Classification</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1070,10 +1135,23 @@ title: International Publications
 <!-- [J10] ICT Express 2025 Modal -->
 <div class="publication-modal" id="j10">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j10')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j10')">&times;</button>
       <h2 class="text-uppercase">[J10] ICT Express 2025</h2>
-      <p class="item-intro text-muted">Baseball Player Pose Refinement</p>
+      <div>
+        <p class="item-intro text-muted">Baseball Player Pose Refinement</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1092,10 +1170,23 @@ title: International Publications
 <!-- [C22] CVPR 2025 Modal -->
 <div class="publication-modal" id="c22">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c22')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c22')">&times;</button>
       <h2 class="text-uppercase">[C22] CVPR 2025</h2>
-      <p class="item-intro text-muted">DynScene: Dynamic Scene Understanding for Robotic Manipulation</p>
+      <div>
+        <p class="item-intro text-muted">DynScene: Dynamic Scene Understanding for Robotic Manipulation</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1114,10 +1205,23 @@ title: International Publications
 <!-- [C20&J9] Brain Stimulation 2025 Modal -->
 <div class="publication-modal" id="c20j9">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c20j9')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c20j9')">&times;</button>
       <h2 class="text-uppercase">[C20&J9] Brain Stimulation 2025</h2>
-      <p class="item-intro text-muted">Predicting tDCS Treatment Effects</p>
+      <div>
+        <p class="item-intro text-muted">Predicting tDCS Treatment Effects</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1138,10 +1242,23 @@ title: International Publications
 <!-- [C17&J8] Brain Stimulation 2024 Modal -->
 <div class="publication-modal" id="c17j8">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c17j8')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c17j8')">&times;</button>
       <h2 class="text-uppercase">[C17&J8] Brain Stimulation 2024</h2>
-      <p class="item-intro text-muted">Predicting tDCS Treatment Effects in Depression</p>
+      <div>
+        <p class="item-intro text-muted">Predicting tDCS Treatment Effects in Depression</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1160,10 +1277,23 @@ title: International Publications
 <!-- [J7] JEET 2024 Modal -->
 <div class="publication-modal" id="j7">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j7')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j7')">&times;</button>
       <h2 class="text-uppercase">[J7] JEET 2024</h2>
-      <p class="item-intro text-muted">Estimating the Missing PMU</p>
+      <div>
+        <p class="item-intro text-muted">Estimating the Missing PMU</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1182,10 +1312,23 @@ title: International Publications
 <!-- [C16] AAAI 2024 Modal -->
 <div class="publication-modal" id="c16">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c16')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c16')">&times;</button>
       <h2 class="text-uppercase">[C16] AAAI 2024</h2>
-      <p class="item-intro text-muted">Language-Guided Robotic Manipulation</p>
+      <div>
+        <p class="item-intro text-muted">Language-Guided Robotic Manipulation</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1204,10 +1347,23 @@ title: International Publications
 <!-- [J6] ICT Express 2024 Modal -->
 <div class="publication-modal" id="j6">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j6')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j6')">&times;</button>
       <h2 class="text-uppercase">[J6] ICT Express 2024</h2>
-      <p class="item-intro text-muted">Baseball Player Pose Estimation</p>
+      <div>
+        <p class="item-intro text-muted">Baseball Player Pose Estimation</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1228,10 +1384,23 @@ title: International Publications
 <!-- [C15] ICASSP 2023 Modal -->
 <div class="publication-modal" id="c15">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c15')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c15')">&times;</button>
       <h2 class="text-uppercase">[C15] ICASSP 2023</h2>
-      <p class="item-intro text-muted">Cough Sound Classification</p>
+      <div>
+        <p class="item-intro text-muted">Cough Sound Classification</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1250,10 +1419,23 @@ title: International Publications
 <!-- [C14] WACV 2023 Modal -->
 <div class="publication-modal" id="c14">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c14')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c14')">&times;</button>
       <h2 class="text-uppercase">[C14] WACV 2023</h2>
-      <p class="item-intro text-muted">Realistic Bokeh Effect Rendering</p>
+      <div>
+        <p class="item-intro text-muted">Realistic Bokeh Effect Rendering</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1272,10 +1454,23 @@ title: International Publications
 <!-- [C13] ICRA 2023 Modal -->
 <div class="publication-modal" id="c13">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c13')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c13')">&times;</button>
       <h2 class="text-uppercase">[C13] ICRA 2023</h2>
-      <p class="item-intro text-muted">Robotic Manipulation with Vision-Language Models</p>
+      <div>
+        <p class="item-intro text-muted">Robotic Manipulation with Vision-Language Models</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1294,10 +1489,23 @@ title: International Publications
 <!-- [J5] Applied Sciences 2023 Modal -->
 <div class="publication-modal" id="j5">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j5')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j5')">&times;</button>
       <h2 class="text-uppercase">[J5] Applied Sciences 2023</h2>
-      <p class="item-intro text-muted">Seizure Detection Using CNN-LSTM</p>
+      <div>
+        <p class="item-intro text-muted">Seizure Detection Using CNN-LSTM</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1317,10 +1525,23 @@ title: International Publications
 <!-- [C12] ECCV 2022 Modal -->
 <div class="publication-modal" id="c12">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c12')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c12')">&times;</button>
       <h2 class="text-uppercase">[C12] ECCV 2022</h2>
-      <p class="item-intro text-muted">Image Restoration Network</p>
+      <div>
+        <p class="item-intro text-muted">Image Restoration Network</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1339,10 +1560,23 @@ title: International Publications
 <!-- [J4] Sensors 2022 Modal -->
 <div class="publication-modal" id="j4">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j4')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j4')">&times;</button>
       <h2 class="text-uppercase">[J4] Sensors 2022</h2>
-      <p class="item-intro text-muted">IoT Sensor Data Processing</p>
+      <div>
+        <p class="item-intro text-muted">IoT Sensor Data Processing</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1360,10 +1594,23 @@ title: International Publications
 <!-- [C11] CVPR 2022 Modal -->
 <div class="publication-modal" id="c11">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c11')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c11')">&times;</button>
       <h2 class="text-uppercase">[C11] CVPR 2022</h2>
-      <p class="item-intro text-muted">Computational Photography on Mobile Devices</p>
+      <div>
+        <p class="item-intro text-muted">Computational Photography on Mobile Devices</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1384,10 +1631,23 @@ title: International Publications
 <!-- [C10] ICCV 2021 Modal -->
 <div class="publication-modal" id="c10">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c10')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c10')">&times;</button>
       <h2 class="text-uppercase">[C10] ICCV 2021</h2>
-      <p class="item-intro text-muted">Vision and Learning Research</p>
+      <div>
+        <p class="item-intro text-muted">Vision and Learning Research</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1405,10 +1665,23 @@ title: International Publications
 <!-- [J3] IEEE Access 2020 Modal -->
 <div class="publication-modal" id="j3">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j3')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j3')">&times;</button>
       <h2 class="text-uppercase">[J3] IEEE Access 2020</h2>
-      <p class="item-intro text-muted">Deep Learning Applications</p>
+      <div>
+        <p class="item-intro text-muted">Deep Learning Applications</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1426,10 +1699,23 @@ title: International Publications
 <!-- [C9] NeurIPS 2019 Modal -->
 <div class="publication-modal" id="c9">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c9')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c9')">&times;</button>
       <h2 class="text-uppercase">[C9] NeurIPS 2019</h2>
-      <p class="item-intro text-muted">Neural Network Research</p>
+      <div>
+        <p class="item-intro text-muted">Neural Network Research</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1447,10 +1733,23 @@ title: International Publications
 <!-- [J2] Pattern Recognition 2018 Modal -->
 <div class="publication-modal" id="j2">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j2')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j2')">&times;</button>
       <h2 class="text-uppercase">[J2] Pattern Recognition 2018</h2>
-      <p class="item-intro text-muted">Pattern Recognition Methods</p>
+      <div>
+        <p class="item-intro text-muted">Pattern Recognition Methods</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1468,10 +1767,23 @@ title: International Publications
 <!-- [C8] AAAI 2017 Modal -->
 <div class="publication-modal" id="c8">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('c8')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('c8')">&times;</button>
       <h2 class="text-uppercase">[C8] AAAI 2017</h2>
-      <p class="item-intro text-muted">AI Research Foundations</p>
+      <div>
+        <p class="item-intro text-muted">AI Research Foundations</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
@@ -1489,10 +1801,23 @@ title: International Publications
 <!-- [J1] Computer Vision and Image Understanding 2017 Modal -->
 <div class="publication-modal" id="j1">
   <div class="publication-modal-content">
-    <button class="publication-modal-close" onclick="closePublicationModal('j1')">&times;</button>
     <div class="publication-modal-header">
+      <button class="publication-modal-close" onclick="closePublicationModal('j1')">&times;</button>
       <h2 class="text-uppercase">[J1] CVIU 2017</h2>
-      <p class="item-intro text-muted">Computer Vision Methods</p>
+      <div>
+        <p class="item-intro text-muted">Computer Vision Methods</p>
+        <div class="modal-header-links">
+          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">

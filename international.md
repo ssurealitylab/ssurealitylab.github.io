@@ -923,27 +923,27 @@ title: International Publications
 }
 
 .modal-icon-link.pdf-link {
-  color: #dc3545;
+  color: #ffffff;
 }
 
 .modal-icon-link.pdf-link:hover {
-  color: #c82333;
+  color: #f0f0f0;
 }
 
 .modal-icon-link.website-link {
-  color: #28a745;
+  color: #ffffff;
 }
 
 .modal-icon-link.website-link:hover {
-  color: #218838;
+  color: #f0f0f0;
 }
 
 .modal-icon-link.github-link {
-  color: #333;
+  color: #ffffff;
 }
 
 .modal-icon-link.github-link:hover {
-  color: #000;
+  color: #f0f0f0;
 }
 
 .publication-modal-close {

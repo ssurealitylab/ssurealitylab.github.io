@@ -307,14 +307,14 @@ header.masthead {
   .image-slider-container {
     display: flex;
     justify-content: center;
-    padding: 50px 20px 20px; // Added 50px top padding
+    padding: 0px 20px 20px; // Removed top padding to move slider up
   }
-  
+
   // Research Tabs Container (now below slider)
   .research-tabs-container {
     display: flex;
     justify-content: center;
-    padding: 70px 20px 90px; // Added 50px to both top (20+50=70) and bottom (40+50=90) padding
+    padding: 20px 20px 90px; // Reduced top padding from 70px to 20px to bring tabs closer to slider
   }
   
   // Image Slider Styles with Liquid Glass effect - Perfect border wrapping
@@ -444,11 +444,11 @@ header.masthead {
     }
     
     .image-slider-container {
-      padding: 50px 10px 20px; // Added 50px top padding for mobile
+      padding: 0px 10px 20px; // Removed top padding to move slider up on mobile
     }
-    
+
     .research-tabs-container {
-      padding: 70px 10px 90px; // Added 50px to both top (20+50=70) and bottom (40+50=90) for mobile
+      padding: 20px 10px 90px; // Reduced top padding from 70px to 20px to bring tabs closer to slider on mobile
     }
     
     .image-slider {

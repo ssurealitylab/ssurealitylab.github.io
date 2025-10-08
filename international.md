@@ -46,7 +46,9 @@ title: International Publications
         <!-- BMVC 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c23')" style="cursor: pointer;">
-            <img src="/img/publications/bmvc2025-udt.jpg" alt="UDT: Unsupervised Discovery of Transformations" class="publication-img">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-project-diagram fa-2x text-muted"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">UDT: Unsupervised Discovery of Transformations</h5>
               <p class="card-subtitle">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
@@ -58,7 +60,9 @@ title: International Publications
         <!-- PLOS ONE 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j12')" style="cursor: pointer;">
-            <img src="/img/publications/plos-one-2025.jpg" alt="DeepGAM for Depression Diagnosis" class="publication-img">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-brain fa-2x text-muted"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">DeepGAM for Depression Diagnosis</h5>
               <p class="card-subtitle">Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim</p>
@@ -84,7 +88,9 @@ title: International Publications
         <!-- ICT Express 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card journal-card" onclick="openPublicationModal('j10')" style="cursor: pointer;">
-            <img src="/img/publications/ict-express-2025-baseball.jpg" alt="Baseball Player Pose Refinement" class="publication-img">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-baseball-ball fa-2x text-muted"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">Baseball Player Pose Refinement</h5>
               <p class="card-subtitle">Seunghyun Oh†, Heewon Kim</p>
@@ -96,7 +102,9 @@ title: International Publications
         <!-- CVPR 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('c22')" style="cursor: pointer;">
-            <img src="/img/publications/cvpr2025-dynscene.jpg" alt="DynScene: Dynamic Robotic Manipulation" class="publication-img">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-robot fa-2x text-muted"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">DynScene: Dynamic Robotic Manipulation</h5>
               <p class="card-subtitle">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
@@ -108,7 +116,9 @@ title: International Publications
         <!-- SIDL - AAAI 2025 -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card paper-card" onclick="openPublicationModal('sidl')" style="cursor: pointer;">
-            <img src="/img/publications/aaai2025-sidl.jpg" alt="SIDL Benchmark Dataset" class="publication-img">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-database fa-2x text-muted"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">SIDL Benchmark Dataset</h5>
               <p class="card-subtitle">Sooyoung Choi*†, Sungyong Park*, Heewon Kim</p>
@@ -134,7 +144,9 @@ title: International Publications
         <!-- ARNOLD Challenge -->
         <div class="col-lg-4 mb-4">
           <div class="publication-card challenge-card" onclick="openPublicationModal('arnold')" style="cursor: pointer;">
-            <img src="/img/publications/arnold-challenge.jpg" alt="ARNOLD Challenge" class="publication-img">
+            <div class="placeholder-img d-flex align-items-center justify-content-center">
+              <i class="fas fa-trophy fa-2x text-muted"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">ARNOLD Challenge</h5>
               <p class="card-subtitle">Reality Lab Team</p>
@@ -606,14 +618,6 @@ title: International Publications
   background: #ecf0f1;
   border-radius: 8px;
   margin: 10px 10px 0 10px;
-}
-
-/* Publication Image */
-.publication-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
 }
 
 /* Card Body Styling */

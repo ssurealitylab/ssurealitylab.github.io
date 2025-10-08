@@ -883,14 +883,9 @@ title: International Publications
       </div>
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
 
-      <p><strong>Key Features:</strong></p>
-      <ul>
-        <li>300 static scenes with 1,588 degraded-clean image pairs</li>
-        <li>Full ProRAW resolution (4032 × 3024, 12-bit DNG)</li>
-        <li>4 contaminant types: fingerprints, dust, scratches, water drops</li>
-        <li>Difficulty levels: Easy, Medium, Hard</li>
-        <li>Comprehensive evaluation framework</li>
-      </ul>
+      <p><strong>Abstract:</strong></p>
+      <p class="text-muted">Abstract content will be added soon.</p>
+
       <div class="text-center mt-4">
         <a href="https://sidl-benchmark.github.io/" target="_blank" class="btn btn-primary">
           <i class="fas fa-globe"></i> Project Page

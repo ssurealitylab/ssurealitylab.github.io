@@ -492,8 +492,8 @@ title: News
   height: 160px;
   object-fit: contain;
   background: #ffffff;
-  padding: 8px;
-  border-radius: 8px 8px 0 0;
+  padding: 5px;
+  border-radius: 8px;
   border-bottom: 1px solid #e0e0e0;
 }
 

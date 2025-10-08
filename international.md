@@ -150,7 +150,7 @@ title: International Publications
             <div class="card-body">
               <h5 class="card-title">ARNOLD Challenge</h5>
               <p class="card-subtitle">Reality Lab Team</p>
-              <div class="publication-badge">🥇 1st Place</div>
+              <div class="publication-badge challenge-badge">ARNOLD Challenge</div>
             </div>
           </div>
         </div>
@@ -546,15 +546,6 @@ title: International Publications
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Category-based Border Colors */
-.challenge-card {
-  border-color: #ffd700 !important;
-}
-
-.challenge-card:hover {
-  border-color: #ffed4a !important;
-  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
-}
 
 
 .research-card {
@@ -606,6 +597,12 @@ title: International Publications
 
 /* Workshop Badge - Yellow */
 .publication-badge.workshop-badge {
+  background: linear-gradient(135deg, #ffd700, #ffb700);
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Challenge Badge - Yellow */
+.publication-badge.challenge-badge {
   background: linear-gradient(135deg, #ffd700, #ffb700);
   box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
 }

@@ -490,9 +490,7 @@ title: News
 .news-img {
   width: 100%;
   height: 150px;
-  object-fit: contain;
-  background: #f8f9fa;
-  padding: 10px;
+  object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
 

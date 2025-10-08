@@ -30,9 +30,7 @@ title: News
         <!-- BMVC 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-alt fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/bmvc2025.png" alt="BMVC 2025" class="news-img">
             <div class="card-body">
               <h5 class="card-title">BMVC 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
@@ -47,9 +45,7 @@ title: News
         <!-- ARNOLD Challenge 1st Place -->
         <div class="col-lg-4 mb-4">
           <div class="news-card challenge-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-trophy fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/embodied-ai-workshop.png" alt="ARNOLD Challenge" class="news-img">
             <div class="card-body">
               <h5 class="card-title">ARNOLD Challenge 1st Place</h5>
               <p class="card-subtitle">Dowon Kim, Chaewoo Lim, Sungyong Park, Sangmin Lee</p>
@@ -64,9 +60,7 @@ title: News
         <!-- PLOS One Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-alt fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/plos-one.png" alt="PLOS One" class="news-img">
             <div class="card-body">
               <h5 class="card-title">PLOS One Paper Acceptance</h5>
               <p class="card-subtitle">Yeri Kim, Seoyoung Kim</p>
@@ -81,9 +75,7 @@ title: News
         <!-- Qualcomm Internship -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-building fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/qualcomm.png" alt="Qualcomm" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Qualcomm Internship</h5>
               <p class="card-subtitle">Sangmin Lee</p>
@@ -98,9 +90,7 @@ title: News
         <!-- ICT Express Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-alt fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/ict-express.png" alt="ICT Express" class="news-img">
             <div class="card-body">
               <h5 class="card-title">ICT Express Paper Acceptance</h5>
               <p class="card-subtitle">Seunghyun Oh</p>
@@ -115,9 +105,7 @@ title: News
         <!-- CVPR 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-alt fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/cvpr2025.png" alt="CVPR 2025" class="news-img">
             <div class="card-body">
               <h5 class="card-title">CVPR 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
@@ -132,9 +120,7 @@ title: News
         <!-- AAAI 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-alt fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/aaai2025.png" alt="AAAI 2025" class="news-img">
             <div class="card-body">
               <h5 class="card-title">AAAI 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Sooyoung Choi, Sungyong Park</p>
@@ -163,9 +149,7 @@ title: News
         <!-- Outstanding Reviewer BMVC -->
         <div class="col-lg-4 mb-4">
           <div class="news-card challenge-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-award fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/bmvc2024.png" alt="BMVC 2024" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Outstanding Reviewer Award</h5>
               <p class="card-subtitle">Prof. Heewon Kim</p>
@@ -180,9 +164,7 @@ title: News
         <!-- New Master Students -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-users fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/ai-students.png" alt="New Students" class="news-img">
             <div class="card-body">
               <h5 class="card-title">New Master Students</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -197,9 +179,7 @@ title: News
         <!-- NRF Grant -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-hand-holding-usd fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/nrf.png" alt="NRF Grant" class="news-img">
             <div class="card-body">
               <h5 class="card-title">NRF Grant Award</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -214,9 +194,7 @@ title: News
         <!-- ARNOLD Challenge 3rd Place -->
         <div class="col-lg-4 mb-4">
           <div class="news-card challenge-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-medal fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/embodied-ai-2024.png" alt="ARNOLD Challenge 2024" class="news-img">
             <div class="card-body">
               <h5 class="card-title">ARNOLD Challenge 3rd Place</h5>
               <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
@@ -231,9 +209,7 @@ title: News
         <!-- Metaverse Program Support -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-hand-holding-usd fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/itp-metaverse.png" alt="Metaverse Program" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Metaverse Program Support</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -248,9 +224,7 @@ title: News
         <!-- Security Program Support -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-shield-alt fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/itp-security.png" alt="Security Program" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Security Program Support</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -265,9 +239,7 @@ title: News
         <!-- SW Excellence Program -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-laptop-code fa-2x text-muted"></i>
-            </div>
+            <img src="/img/news/itp-software.png" alt="SW Excellence Program" class="news-img">
             <div class="card-body">
               <h5 class="card-title">SW Excellence Program</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -512,6 +484,16 @@ title: News
   background: #ecf0f1;
   border-radius: 8px;
   margin: 15px;
+}
+
+/* News Image */
+.news-img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
 }
 
 /* Research Areas Badges */

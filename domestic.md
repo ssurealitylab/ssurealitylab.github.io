@@ -302,6 +302,60 @@ title: Domestic Publications
   line-height: 1.4;
 }
 
+/* External Links */
+.external-links {
+  position: absolute;
+  right: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.external-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.external-icon-link:hover {
+  transform: scale(1.15);
+}
+
+.external-icon-link i {
+  font-size: 1.3rem;
+}
+
+.external-icon-link.pdf-link {
+  color: #dc3545;
+}
+
+.external-icon-link.pdf-link:hover {
+  color: #c82333;
+}
+
+.external-icon-link.website-link {
+  color: #28a745;
+}
+
+.external-icon-link.website-link:hover {
+  color: #218838;
+}
+
+.external-icon-link.github-link {
+  color: #333;
+}
+
+.external-icon-link.github-link:hover {
+  color: #000;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .category-badge {

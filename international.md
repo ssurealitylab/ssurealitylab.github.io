@@ -847,9 +847,6 @@ title: International Publications
           <a href="https://sidl-benchmark.github.io/" target="_blank" class="modal-icon-link active website-link" title="Website">
             <i class="fas fa-globe"></i>
           </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -912,15 +909,6 @@ title: International Publications
 
       <p><strong>Abstract:</strong></p>
       <p>The SIDL (Smartphone Images with Dirty Lenses) dataset addresses a critical gap in image restoration research by providing a comprehensive collection of real-world smartphone images with lens contamination. The dataset contains 300 static scenes with 1,588 image pairs captured in full resolution (4032 × 3024 pixels) 12-bit RAW format. It includes five real-world contaminant types: fingerprints, dust, scratches, water drops, and mixed debris. Scenes span diverse environments and lighting conditions, with images categorized into Easy, Medium, and Hard difficulty levels based on image quality degradation. This dataset's unique contribution is providing diverse real-world images taken under various lighting conditions and environments with paired clean and contaminated images, enabling supervised learning for image restoration techniques.</p>
-
-      <div class="text-center mt-4">
-        <a href="https://sidl-benchmark.github.io/" target="_blank" class="btn btn-primary">
-          <i class="fas fa-globe"></i> Project Page
-        </a>
-        <button class="btn btn-secondary ml-2" onclick="closePublicationModal('sidl')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -931,31 +919,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
       <h2 class="text-uppercase">[C23] BMVC 2025</h2>
-      <div>
-        <p class="item-intro text-muted">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c23')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -966,31 +936,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
       <h2 class="text-uppercase">[C24] APP3DV 2025</h2>
-      <div>
-        <p class="item-intro text-muted">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C24]</strong> Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields," <em>Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c24')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1001,31 +953,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j12')">&times;</button>
       <h2 class="text-uppercase">[J12] PLOS ONE 2025</h2>
-      <div>
-        <p class="item-intro text-muted">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J12]</strong> Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis," <em>PLOS ONE</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j12')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1036,20 +970,7 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('cvpr')">&times;</button>
       <h2 class="text-uppercase">CVPR 2025 Paper</h2>
-      <div>
-        <p class="item-intro text-muted">Advanced AI Research Achievement</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Advanced AI Research Achievement</p>
     </div>
     <div class="publication-modal-body">
       <p><strong>Authors:</strong> Sangmin Lee, Sungyong Park</p>
@@ -1063,11 +984,6 @@ title: International Publications
         <li>Artificial Intelligence</li>
         <li>Machine Learning</li>
       </ul>
-      <div class="text-center">
-        <button class="btn btn-secondary" onclick="closePublicationModal('cvpr')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1078,20 +994,7 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('arnold')">&times;</button>
       <h2 class="text-uppercase">ARNOLD Challenge</h2>
-      <div>
-        <p class="item-intro text-muted">1st Place Winner at CVPR 2025 Embodied AI Workshop</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">1st Place Winner at CVPR 2025 Embodied AI Workshop</p>
     </div>
     <div class="publication-modal-body">
       <p><strong>Team:</strong> Reality Lab Team</p>
@@ -1113,11 +1016,6 @@ title: International Publications
         <li>Advanced AI-human interaction capabilities</li>
         <li>Real-world robotic system deployment</li>
       </ul>
-      <div class="text-center">
-        <button class="btn btn-secondary" onclick="closePublicationModal('arnold')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1128,31 +1026,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j11')">&times;</button>
       <h2 class="text-uppercase">[J11] JEET 2025</h2>
-      <div>
-        <p class="item-intro text-muted">Dog Cough Sound Classification</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Dog Cough Sound Classification</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J11]</strong> Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, "Dog Cough Sound Classification Using Deep Learning," <em>Journal of Electrical Engineering & Technology (JEET)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j11')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1163,31 +1043,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j10')">&times;</button>
       <h2 class="text-uppercase">[J10] ICT Express 2025</h2>
-      <div>
-        <p class="item-intro text-muted">Baseball Player Pose Refinement</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Baseball Player Pose Refinement</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J10]</strong> Seunghyun Oh† and Heewon Kim, "Baseball Player Pose Refinement Using Deep Learning," <em>ICT Express</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j10')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1198,31 +1060,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c22')">&times;</button>
       <h2 class="text-uppercase">[C22] CVPR 2025</h2>
-      <div>
-        <p class="item-intro text-muted">DynScene: Dynamic Scene Understanding for Robotic Manipulation</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">DynScene: Dynamic Scene Understanding for Robotic Manipulation</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C22]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "DynScene: Dynamic Scene Understanding for Robotic Manipulation in Unstructured Environments," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c22')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1253,11 +1097,6 @@ title: International Publications
         <p><strong>[C20&J9]</strong> Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al., "Predicting tDCS Treatment Effects Using Machine Learning," <em>Proc. International Brain Stimulation Conference & Brain Stimulation Journal</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c20j9')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1270,31 +1109,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c17j8')">&times;</button>
       <h2 class="text-uppercase">[C17&J8] Brain Stimulation 2024</h2>
-      <div>
-        <p class="item-intro text-muted">Predicting tDCS Treatment Effects in Depression</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Predicting tDCS Treatment Effects in Depression</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C17&J8]</strong> Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al., "Predicting tDCS Treatment Effects in Depression Using Deep Learning," <em>Proc. International Brain Stimulation Conference & Brain Stimulation Journal</em>, 2024</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c17j8')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1305,31 +1126,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j7')">&times;</button>
       <h2 class="text-uppercase">[J7] JEET 2024</h2>
-      <div>
-        <p class="item-intro text-muted">Estimating the Missing PMU</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Estimating the Missing PMU</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J7]</strong> Jeongmoon Kim†, Sooyoung Choi†, and Heewon Kim, "Estimating the Missing PMU Using Deep Learning Methods," <em>Journal of Electrical Engineering & Technology (JEET)</em>, vol. 19, no. 2, 2024</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j7')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1340,31 +1143,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c16')">&times;</button>
       <h2 class="text-uppercase">[C16] AAAI 2024</h2>
-      <div>
-        <p class="item-intro text-muted">Language-Guided Robotic Manipulation</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Language-Guided Robotic Manipulation</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C16]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "Language-Guided Robotic Manipulation with Vision-Language Models," <em>Proc. AAAI Conference on Artificial Intelligence (AAAI)</em>, 2024</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c16')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1375,31 +1160,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j6')">&times;</button>
       <h2 class="text-uppercase">[J6] ICT Express 2024</h2>
-      <div>
-        <p class="item-intro text-muted">Baseball Player Pose Estimation</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Baseball Player Pose Estimation</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J6]</strong> Seunghyun Oh† and Heewon Kim, "Baseball Player Pose Estimation Using Deep Learning," <em>ICT Express</em>, vol. 10, no. 1, 2024</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j6')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1412,31 +1179,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c15')">&times;</button>
       <h2 class="text-uppercase">[C15] ICASSP 2023</h2>
-      <div>
-        <p class="item-intro text-muted">Cough Sound Classification</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Cough Sound Classification</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C15]</strong> Yunseok Yang† and Heewon Kim, "Cough Sound Classification Using Deep Convolutional Neural Networks," <em>Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 2023</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c15')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1447,31 +1196,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c14')">&times;</button>
       <h2 class="text-uppercase">[C14] WACV 2023</h2>
-      <div>
-        <p class="item-intro text-muted">Realistic Bokeh Effect Rendering</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Realistic Bokeh Effect Rendering</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C14]</strong> Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, and Heewon Kim, "Realistic Bokeh Effect Rendering on Mobile Devices," <em>Proc. IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2023</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c14')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1482,31 +1213,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c13')">&times;</button>
       <h2 class="text-uppercase">[C13] ICRA 2023</h2>
-      <div>
-        <p class="item-intro text-muted">Robotic Manipulation with Vision-Language Models</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Robotic Manipulation with Vision-Language Models</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C13]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "Vision-Language Models for Robotic Manipulation Tasks," <em>Proc. IEEE International Conference on Robotics and Automation (ICRA)</em>, 2023</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c13')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1517,29 +1230,11 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j5')">&times;</button>
       <h2 class="text-uppercase">[J5] Applied Sciences 2023</h2>
-      <div>
-        <p class="item-intro text-muted">Seizure Detection Using CNN-LSTM</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Seizure Detection Using CNN-LSTM</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J5]</strong> Heewon Kim, et al., "Automated Seizure Detection Using CNN-LSTM Hybrid Networks," <em>Applied Sciences</em>, vol. 13, no. 4, 2023</p>
-      </div>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j5')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
       </div>
     </div>
   </div>
@@ -1553,31 +1248,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c12')">&times;</button>
       <h2 class="text-uppercase">[C12] ECCV 2022</h2>
-      <div>
-        <p class="item-intro text-muted">Image Restoration Network</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Image Restoration Network</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C12]</strong> Sungyong Park*, Sangmin Lee*, and Heewon Kim, "Deep Learning-Based Image Restoration for Smartphone Photography," <em>Proc. European Conference on Computer Vision (ECCV)</em>, 2022</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c12')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1588,29 +1265,11 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j4')">&times;</button>
       <h2 class="text-uppercase">[J4] Sensors 2022</h2>
-      <div>
-        <p class="item-intro text-muted">IoT Sensor Data Processing</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">IoT Sensor Data Processing</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J4]</strong> Heewon Kim, et al., "Real-Time IoT Sensor Data Processing Using Deep Learning," <em>Sensors</em>, vol. 22, no. 8, 2022</p>
-      </div>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j4')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
       </div>
     </div>
   </div>
@@ -1622,31 +1281,13 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c11')">&times;</button>
       <h2 class="text-uppercase">[C11] CVPR 2022</h2>
-      <div>
-        <p class="item-intro text-muted">Computational Photography on Mobile Devices</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Computational Photography on Mobile Devices</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C11]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "Computational Photography Techniques for Mobile Devices," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2022</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c11')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1659,29 +1300,11 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c10')">&times;</button>
       <h2 class="text-uppercase">[C10] ICCV 2021</h2>
-      <div>
-        <p class="item-intro text-muted">Vision and Learning Research</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Vision and Learning Research</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C10]</strong> Heewon Kim, et al., "Advanced Vision and Learning Methods for Scene Understanding," <em>Proc. IEEE International Conference on Computer Vision (ICCV)</em>, 2021</p>
-      </div>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c10')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
       </div>
     </div>
   </div>
@@ -1693,29 +1316,11 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j3')">&times;</button>
       <h2 class="text-uppercase">[J3] IEEE Access 2020</h2>
-      <div>
-        <p class="item-intro text-muted">Deep Learning Applications</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Deep Learning Applications</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J3]</strong> Heewon Kim, et al., "Deep Learning Applications for Real-World Problems," <em>IEEE Access</em>, vol. 8, 2020</p>
-      </div>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j3')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
       </div>
     </div>
   </div>
@@ -1727,29 +1332,11 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c9')">&times;</button>
       <h2 class="text-uppercase">[C9] NeurIPS 2019</h2>
-      <div>
-        <p class="item-intro text-muted">Neural Network Research</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Neural Network Research</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C9]</strong> Heewon Kim, et al., "Advanced Neural Network Architectures for Complex Tasks," <em>Proc. Conference on Neural Information Processing Systems (NeurIPS)</em>, 2019</p>
-      </div>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c9')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
       </div>
     </div>
   </div>
@@ -1761,29 +1348,11 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j2')">&times;</button>
       <h2 class="text-uppercase">[J2] Pattern Recognition 2018</h2>
-      <div>
-        <p class="item-intro text-muted">Pattern Recognition Methods</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Pattern Recognition Methods</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J2]</strong> Heewon Kim, et al., "Novel Pattern Recognition Methods for Computer Vision," <em>Pattern Recognition</em>, 2018</p>
-      </div>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j2')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
       </div>
     </div>
   </div>
@@ -1795,29 +1364,11 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c8')">&times;</button>
       <h2 class="text-uppercase">[C8] AAAI 2017</h2>
-      <div>
-        <p class="item-intro text-muted">AI Research Foundations</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">AI Research Foundations</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[C8]</strong> Heewon Kim, et al., "Foundational Methods in Artificial Intelligence Research," <em>Proc. AAAI Conference on Artificial Intelligence (AAAI)</em>, 2017</p>
-      </div>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('c8')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
       </div>
     </div>
   </div>
@@ -1829,29 +1380,11 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('j1')">&times;</button>
       <h2 class="text-uppercase">[J1] CVIU 2017</h2>
-      <div>
-        <p class="item-intro text-muted">Computer Vision Methods</p>
-        <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <p class="item-intro text-muted">Computer Vision Methods</p>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
         <p><strong>[J1]</strong> Heewon Kim, et al., "Advanced Computer Vision Methods for Image Understanding," <em>Computer Vision and Image Understanding</em>, 2017</p>
-      </div>
-      <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="closePublicationModal('j1')" type="button">
-          <i class="fas fa-times"></i> Close
-        </button>
       </div>
     </div>
   </div>

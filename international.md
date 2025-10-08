@@ -463,7 +463,7 @@ title: International Publications
 <style>
 /* Publications Content Styles */
 .publications-header {
-  background: linear-gradient(90deg, rgba(231, 76, 60, 0.1) 0%, rgba(192, 57, 43, 0.1) 100%);
+  background: transparent;
 }
 
 /* Category Section */

@@ -30,7 +30,7 @@ title: News
         <!-- BMVC 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/bmvc2025.png?v=4" alt="BMVC 2025" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/bmvc2025.png?v=5" alt="BMVC 2025" class="news-img">
             <div class="card-body">
               <h5 class="card-title">BMVC 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
@@ -45,7 +45,7 @@ title: News
         <!-- ARNOLD Challenge 1st Place -->
         <div class="col-lg-4 mb-4">
           <div class="news-card challenge-card">
-            <img src="{{ site.baseurl }}/img/news/embodied-ai-workshop.png?v=4" alt="ARNOLD Challenge" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/embodied-ai-workshop.png?v=5" alt="ARNOLD Challenge" class="news-img">
             <div class="card-body">
               <h5 class="card-title">ARNOLD Challenge 1st Place</h5>
               <p class="card-subtitle">Dowon Kim, Chaewoo Lim, Sungyong Park, Sangmin Lee</p>
@@ -60,7 +60,7 @@ title: News
         <!-- PLOS One Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/plos-one.png?v=4" alt="PLOS One" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/plos-one.png?v=5" alt="PLOS One" class="news-img">
             <div class="card-body">
               <h5 class="card-title">PLOS One Paper Acceptance</h5>
               <p class="card-subtitle">Yeri Kim, Seoyoung Kim</p>
@@ -75,7 +75,7 @@ title: News
         <!-- Qualcomm Internship -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/qualcomm.png?v=4" alt="Qualcomm" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/qualcomm.png?v=5" alt="Qualcomm" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Qualcomm Internship</h5>
               <p class="card-subtitle">Sangmin Lee</p>
@@ -90,7 +90,7 @@ title: News
         <!-- ICT Express Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/ict-express.png?v=4" alt="ICT Express" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/ict-express.png?v=5" alt="ICT Express" class="news-img">
             <div class="card-body">
               <h5 class="card-title">ICT Express Paper Acceptance</h5>
               <p class="card-subtitle">Seunghyun Oh</p>
@@ -105,7 +105,7 @@ title: News
         <!-- CVPR 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/cvpr2025.png?v=4" alt="CVPR 2025" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/cvpr2025.png?v=5" alt="CVPR 2025" class="news-img">
             <div class="card-body">
               <h5 class="card-title">CVPR 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
@@ -120,7 +120,7 @@ title: News
         <!-- AAAI 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/aaai2025.png?v=4" alt="AAAI 2025" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/aaai2025.png?v=5" alt="AAAI 2025" class="news-img">
             <div class="card-body">
               <h5 class="card-title">AAAI 2025 Paper Acceptance</h5>
               <p class="card-subtitle">Sooyoung Choi, Sungyong Park</p>
@@ -149,7 +149,7 @@ title: News
         <!-- Outstanding Reviewer BMVC -->
         <div class="col-lg-4 mb-4">
           <div class="news-card challenge-card">
-            <img src="{{ site.baseurl }}/img/news/bmvc2024.png?v=4" alt="BMVC 2024" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/bmvc2024.png?v=5" alt="BMVC 2024" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Outstanding Reviewer Award</h5>
               <p class="card-subtitle">Prof. Heewon Kim</p>
@@ -164,7 +164,7 @@ title: News
         <!-- New Master Students -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/ai-students.png?v=4" alt="New Students" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/ai-students.png?v=5" alt="New Students" class="news-img">
             <div class="card-body">
               <h5 class="card-title">New Master Students</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -179,7 +179,7 @@ title: News
         <!-- NRF Grant -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/nrf.png?v=4" alt="NRF Grant" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/nrf.png?v=5" alt="NRF Grant" class="news-img">
             <div class="card-body">
               <h5 class="card-title">NRF Grant Award</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -194,7 +194,7 @@ title: News
         <!-- ARNOLD Challenge 3rd Place -->
         <div class="col-lg-4 mb-4">
           <div class="news-card challenge-card">
-            <img src="{{ site.baseurl }}/img/news/embodied-ai-2024.png?v=4" alt="ARNOLD Challenge 2024" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/embodied-ai-2024.png?v=5" alt="ARNOLD Challenge 2024" class="news-img">
             <div class="card-body">
               <h5 class="card-title">ARNOLD Challenge 3rd Place</h5>
               <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
@@ -209,7 +209,7 @@ title: News
         <!-- Metaverse Program Support -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/itp-metaverse.png?v=4" alt="Metaverse Program" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/itp-metaverse.png?v=5" alt="Metaverse Program" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Metaverse Program Support</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -224,7 +224,7 @@ title: News
         <!-- Security Program Support -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/itp-security.png?v=4" alt="Security Program" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/itp-security.png?v=5" alt="Security Program" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Security Program Support</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -239,7 +239,7 @@ title: News
         <!-- SW Excellence Program -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/itp-software.png?v=4" alt="SW Excellence Program" class="news-img">
+            <img src="{{ site.baseurl }}/img/news/itp-software.png?v=5" alt="SW Excellence Program" class="news-img">
             <div class="card-body">
               <h5 class="card-title">SW Excellence Program</h5>
               <p class="card-subtitle">Reality Lab</p>

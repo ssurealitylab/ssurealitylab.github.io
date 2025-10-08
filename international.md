@@ -1062,19 +1062,25 @@ title: International Publications
   </div>
 </div>
 
-<!-- [C22] CVPR 2025 Modal -->
+<!-- [C22] ICCV 2021 Modal -->
 <div class="publication-modal" id="c22">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c22')">&times;</button>
-      <h2 class="text-uppercase">[C22] CVPR 2025</h2>
-      <p class="item-intro text-muted">DynScene: Dynamic Scene Understanding for Robotic Manipulation</p>
+      <h2 class="text-uppercase">[C22] ICCV 2021</h2>
+      <div>
+        <p class="item-intro text-muted">Motion-Aware Dynamic Architecture for Efficient Frame Interpolation</p>
+        <div class="modal-header-links">
+          <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Motion-Aware_Dynamic_Architecture_for_Efficient_Frame_Interpolation_ICCV_2021_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C22]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "DynScene: Dynamic Scene Understanding for Robotic Manipulation in Unstructured Environments," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2025 (accepted)</p>
+        <p><strong>[C22]</strong> Myungsub Choi, Janghoon Choi, Sungyong Baik, Tae Hyun Kim, and Kyoung Mu Lee, "Motion-Aware Dynamic Architecture for Efficient Frame Interpolation," <em>Proc. IEEE International Conference on Computer Vision (ICCV)</em>, 2021</p>
       </div>
-      <p class="mt-3"><small>* Equal contribution</small></p>
     </div>
   </div>
 </div>

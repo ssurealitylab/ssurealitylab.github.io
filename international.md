@@ -765,6 +765,33 @@ title: International Publications
   font-size: 1.56rem;
 }
 
+/* Active link styles */
+.modal-icon-link.active {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.modal-icon-link.active:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.modal-icon-link.pdf-link {
+  color: #dc3545;
+}
+
+.modal-icon-link.pdf-link:hover {
+  color: #c82333;
+}
+
+.modal-icon-link.website-link {
+  color: #28a745;
+}
+
+.modal-icon-link.website-link:hover {
+  color: #218838;
+}
+
 .publication-modal-close {
   position: absolute;
   top: 20px;
@@ -814,10 +841,10 @@ title: International Publications
       <div>
         <p class="item-intro text-muted">Smartphone Images with Dirty Lenses Dataset</p>
         <div class="modal-header-links">
-          <a href="#" class="modal-icon-link" onclick="return false;" title="PDF">
+          <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32257" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
             <i class="fas fa-file-pdf"></i>
           </a>
-          <a href="#" class="modal-icon-link" onclick="return false;" title="Website">
+          <a href="https://sidl-benchmark.github.io/" target="_blank" class="modal-icon-link active website-link" title="Website">
             <i class="fas fa-globe"></i>
           </a>
           <a href="#" class="modal-icon-link" onclick="return false;" title="GitHub">
@@ -884,7 +911,7 @@ title: International Publications
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
 
       <p><strong>Abstract:</strong></p>
-      <p class="text-muted">Abstract content will be added soon.</p>
+      <p>The SIDL (Smartphone Images with Dirty Lenses) dataset addresses a critical gap in image restoration research by providing a comprehensive collection of real-world smartphone images with lens contamination. The dataset contains 300 static scenes with 1,588 image pairs captured in full resolution (4032 × 3024 pixels) 12-bit RAW format. It includes five real-world contaminant types: fingerprints, dust, scratches, water drops, and mixed debris. Scenes span diverse environments and lighting conditions, with images categorized into Easy, Medium, and Hard difficulty levels based on image quality degradation. This dataset's unique contribution is providing diverse real-world images taken under various lighting conditions and environments with paired clean and contaminated images, enabling supervised learning for image restoration techniques.</p>
 
       <div class="text-center mt-4">
         <a href="https://sidl-benchmark.github.io/" target="_blank" class="btn btn-primary">

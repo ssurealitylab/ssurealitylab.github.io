@@ -279,6 +279,8 @@ title: News
   height: 100%;
   background: white;
   border: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
 }
 
 .news-card:hover {
@@ -367,6 +369,9 @@ title: News
 /* Card Body Styling */
 .card-body {
   padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card-subtitle {
@@ -377,7 +382,7 @@ title: News
 
 /* Date and Category Styling */
 .card-date-category {
-  margin-top: 15px;
+  margin-top: auto;
   padding-top: 10px;
   border-top: 1px solid #eee;
 }

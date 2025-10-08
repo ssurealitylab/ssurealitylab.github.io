@@ -307,22 +307,24 @@ header.masthead {
   .image-slider-container {
     display: flex;
     justify-content: center;
-    padding: 0px 20px 20px; // Removed top padding to move slider up
+    padding: 0px 20px 0px; // Removed bottom padding to move slider up more
+    margin-top: -50px; // Move slider up by 50px
   }
 
   // Research Tabs Container (now below slider)
   .research-tabs-container {
     display: flex;
     justify-content: center;
-    padding: 20px 20px 90px; // Reduced top padding from 70px to 20px to bring tabs closer to slider
+    padding: 0px 20px 90px; // Removed top padding to bring tabs closer
+    margin-top: -30px; // Move tabs up by 30px (same relative distance)
   }
-  
+
   // Image Slider Styles with Liquid Glass effect - Perfect border wrapping
   .image-slider {
     position: relative;
-    width: 1020px; // 1200px * 0.85 = 1020px (15% reduction)
+    width: 1122px; // 1020px * 1.1 = 1122px (10% increase)
     max-width: 90vw;
-    height: calc(1020px * 9 / 15); // 15:9 aspect ratio (5:3 ratio)
+    height: calc(1122px * 9 / 15); // 15:9 aspect ratio (5:3 ratio)
     overflow: visible; // Allow border to extend outside
     
     // Main container - matches image shape exactly
@@ -444,16 +446,18 @@ header.masthead {
     }
     
     .image-slider-container {
-      padding: 0px 10px 20px; // Removed top padding to move slider up on mobile
+      padding: 0px 10px 0px; // Removed all vertical padding for mobile
+      margin-top: -30px; // Move slider up on mobile
     }
 
     .research-tabs-container {
-      padding: 20px 10px 90px; // Reduced top padding from 70px to 20px to bring tabs closer to slider on mobile
+      padding: 0px 10px 90px; // Removed top padding for mobile
+      margin-top: -20px; // Move tabs up on mobile
     }
-    
+
     .image-slider {
       width: 100%;
-      height: 280px;
+      height: 308px; // 280px * 1.1 = 308px (10% increase)
       overflow: visible; // Allow border to extend outside
       
       // Mobile liquid glass - perfect wrapping
@@ -534,8 +538,8 @@ header.masthead {
     }
     
     .image-slider {
-      width: 893px; // 1050px * 0.85 = 893px (15% reduction)
-      height: calc(893px * 9 / 15); // 15:9 aspect ratio (5:3 ratio)
+      width: 982px; // 893px * 1.1 = 982px (10% increase from previous)
+      height: calc(982px * 9 / 15); // 15:9 aspect ratio (5:3 ratio)
     }
   }
 }

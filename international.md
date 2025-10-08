@@ -590,6 +590,9 @@ title: International Publications
   color: #2c3e50;
   margin-bottom: 6px;
   line-height: 1.3;
+  min-height: 2.6rem;
+  display: flex;
+  align-items: flex-start;
 }
 
 .publication-card .card-subtitle {

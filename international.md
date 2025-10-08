@@ -1389,18 +1389,29 @@ title: International Publications
   </div>
 </div>
 
-<!-- [C8] AAAI 2017 Modal -->
+<!-- [C8] CVPR 2017 Modal -->
 <div class="publication-modal" id="c8">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c8')">&times;</button>
-      <h2 class="text-uppercase">[C8] AAAI 2017</h2>
-      <p class="item-intro text-muted">AI Research Foundations</p>
+      <h2 class="text-uppercase">[C8] CVPR 2017</h2>
+      <div>
+        <p class="item-intro text-muted">EDSR: Enhanced Deep Residual Networks for Single Image Super-Resolution</p>
+        <div class="modal-header-links">
+          <a href="https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="https://github.com/sanghyun-son/EDSR-PyTorch" target="_blank" class="modal-icon-link active github-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
       <div class="citation-box">
-        <p><strong>[C8]</strong> Heewon Kim, et al., "Foundational Methods in Artificial Intelligence Research," <em>Proc. AAAI Conference on Artificial Intelligence (AAAI)</em>, 2017</p>
+        <p><strong>[C8]</strong> Bee Lim*, Sanghyun Son*, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee, "Enhanced Deep Residual Networks for Single Image Super-Resolution," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</em>, 2017</p>
       </div>
+      <p class="mt-3"><small>* Equal contribution</small></p>
     </div>
   </div>
 </div>

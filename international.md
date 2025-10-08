@@ -1639,4 +1639,15 @@ document.addEventListener("keydown", function(event) {
     }
   }
 });
+
+// Open modal from URL hash (for home page redirects)
+document.addEventListener("DOMContentLoaded", function() {
+  const hash = window.location.hash;
+  if (hash && hash.endsWith("-open")) {
+    const modalId = hash.substring(1).replace("-open", "");
+    openPublicationModal(modalId);
+    // Clean up URL
+    history.replaceState(null, null, window.location.pathname);
+  }
+});
 </script>

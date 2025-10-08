@@ -1,0 +1,179 @@
+<!-- Latest News Section -->
+<section class="latest-news-section bg-white page-section" id="latest-news">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-12">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h2 class="section-heading text-uppercase">Latest News</h2>
+            <h3 class="section-subheading text-muted">Recent achievements and updates from Reality Lab</h3>
+          </div>
+          <div>
+            <a href="{{ site.baseurl }}/news.html" class="see-all-news-link">
+              See All News <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- BMVC 2025 Paper -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="news-card-home">
+          <img src="{{ site.baseurl }}/img/news/bmvc2025.png?v=5" alt="BMVC 2025" class="news-img-home">
+          <div class="card-body-home">
+            <h5 class="card-title-home">BMVC 2025 Paper Acceptance</h5>
+            <p class="card-subtitle-home">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
+            <div class="card-date-home">
+              <small class="text-muted">Jul 26, 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARNOLD Challenge 1st Place -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="news-card-home">
+          <img src="{{ site.baseurl }}/img/news/embodied-ai-workshop.png?v=5" alt="ARNOLD Challenge" class="news-img-home">
+          <div class="card-body-home">
+            <h5 class="card-title-home">ARNOLD Challenge 1st Place</h5>
+            <p class="card-subtitle-home">Dowon Kim, Chaewoo Lim, Sungyong Park, Sangmin Lee</p>
+            <div class="card-date-home">
+              <small class="text-muted">Jun 4, 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLOS One Paper -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="news-card-home">
+          <img src="{{ site.baseurl }}/img/news/plos-one.png?v=5" alt="PLOS One" class="news-img-home">
+          <div class="card-body-home">
+            <h5 class="card-title-home">PLOS One Paper Acceptance</h5>
+            <p class="card-subtitle-home">Yeri Kim, Seoyoung Kim</p>
+            <div class="card-date-home">
+              <small class="text-muted">May 1, 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Qualcomm Internship -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="news-card-home">
+          <img src="{{ site.baseurl }}/img/news/qualcomm.png?v=5" alt="Qualcomm" class="news-img-home">
+          <div class="card-body-home">
+            <h5 class="card-title-home">Qualcomm Internship</h5>
+            <p class="card-subtitle-home">Sangmin Lee</p>
+            <div class="card-date-home">
+              <small class="text-muted">Mar 24, 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Latest News Section Styles */
+.latest-news-section {
+  padding: 80px 0;
+}
+
+.see-all-news-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.see-all-news-link:hover {
+  color: #2563eb;
+  transform: translateX(5px);
+}
+
+.see-all-news-link i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.see-all-news-link:hover i {
+  transform: translateX(3px);
+}
+
+/* News Card Styles for Home */
+.news-card-home {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card-home:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.news-img-home {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-body-home {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title-home {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card-subtitle-home {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.card-date-home {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .latest-news-section .d-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .see-all-news-link {
+    margin-top: 15px;
+  }
+
+  .news-img-home {
+    height: 150px;
+  }
+}
+</style>

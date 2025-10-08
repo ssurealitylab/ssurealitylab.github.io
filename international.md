@@ -32,7 +32,7 @@ title: International Publications
         <!-- APP3DV 2025 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c24')" style="cursor: pointer;">
-            <div class="publication-badge workshop-badge">APP3DV25</div>
+            <div class="publication-badge">APP3DV25</div>
             <h5 class="list-title">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h5>
             <p class="list-authors">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
           </div>
@@ -557,42 +557,19 @@ title: International Publications
   top: 8px;
   right: 8px;
   background: transparent;
-  color: #667eea;
-  border: 2px solid #667eea;
+  color: #4facfe;
+  border: 2px solid #4facfe;
   padding: 4px 10px;
   border-radius: 15px;
   font-weight: bold;
   font-size: 0.7rem;
 }
 
-/* Workshop Badge - Yellow */
-.publication-badge.workshop-badge {
-  background: transparent;
-  color: #ffd700;
-  border: 2px solid #ffd700;
-}
-
-/* Challenge Badge - Yellow */
+/* Challenge Badge - Orange */
 .publication-badge.challenge-badge {
   background: transparent;
-  color: #ffd700;
-  border: 2px solid #ffd700;
-}
-
-/* Year-specific badge colors */
-.year-2025 .publication-badge:not(.workshop-badge):not(.challenge-badge) {
-  color: #667eea;
-  border-color: #667eea;
-}
-
-.year-2024 .publication-badge {
-  color: #f093fb;
-  border-color: #f093fb;
-}
-
-.year-2023 .publication-badge {
-  color: #4facfe;
-  border-color: #4facfe;
+  color: #ff6b35;
+  border: 2px solid #ff6b35;
 }
 
 /* Placeholder Card */

@@ -1,0 +1,242 @@
+<!-- Demo Notice Popup -->
+<div class="demo-notice-overlay" id="demoNoticeOverlay">
+  <div class="demo-notice-popup">
+    <button class="demo-notice-close" onclick="closeDemoNotice()">&times;</button>
+    <div class="demo-notice-icon">
+      <i class="fas fa-info-circle"></i>
+    </div>
+    <h3 class="demo-notice-title">Demo Version Notice</h3>
+    <p class="demo-notice-text">
+      This is a demo version of the SSU Reality Lab website currently under renovation.
+    </p>
+    <p class="demo-notice-text">
+      For accurate and up-to-date information, please visit our official website:
+    </p>
+    <a href="https://reality.ssu.ac.kr/" class="demo-notice-link" target="_blank">
+      <i class="fas fa-external-link-alt"></i> reality.ssu.ac.kr
+    </a>
+    <div class="demo-notice-date">
+      <small>Renovation Period: October 14 - End of October</small>
+    </div>
+    <p class="demo-notice-apology">
+      We apologize for any inconvenience and appreciate your understanding.
+    </p>
+  </div>
+</div>
+
+<style>
+.demo-notice-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.demo-notice-popup {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3),
+              0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  position: relative;
+  text-align: center;
+  animation: slideUp 0.5s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.demo-notice-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: all 0.3s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.demo-notice-close:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #333;
+  transform: rotate(90deg);
+}
+
+.demo-notice-icon {
+  font-size: 48px;
+  color: #3b82f6;
+  margin-bottom: 20px;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.demo-notice-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.demo-notice-text {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.demo-notice-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.demo-notice-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.demo-notice-link i {
+  font-size: 0.9rem;
+}
+
+.demo-notice-date {
+  margin: 20px 0 15px;
+  padding: 12px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid #3b82f6;
+}
+
+.demo-notice-date small {
+  color: #1e40af;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.demo-notice-apology {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.demo-notice-overlay.hidden {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .demo-notice-popup {
+    padding: 30px 25px;
+    max-width: 95%;
+  }
+
+  .demo-notice-title {
+    font-size: 1.4rem;
+  }
+
+  .demo-notice-text {
+    font-size: 0.95rem;
+  }
+
+  .demo-notice-icon {
+    font-size: 40px;
+  }
+}
+</style>
+
+<script>
+function closeDemoNotice() {
+  const overlay = document.getElementById('demoNoticeOverlay');
+  overlay.style.animation = 'fadeOut 0.3s ease-out forwards';
+  setTimeout(() => {
+    overlay.classList.add('hidden');
+  }, 300);
+}
+
+// Close on outside click
+document.getElementById('demoNoticeOverlay')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeDemoNotice();
+  }
+});
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeDemoNotice();
+  }
+});
+
+// Add fadeOut animation
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+`;
+document.head.appendChild(style);
+</script>

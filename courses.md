@@ -104,7 +104,7 @@ title: Courses
 </table>
 
 <div class="course-info">
-  <p><strong>Location:</strong> Global School of Media, College of IT, Soongsil University, Seoul, Republic of Korea</p>
+  <p><strong>Location:</strong> Global School of Media, Soongsil University, Seoul, Republic of Korea</p>
   <p><strong>Instructor:</strong> Prof. Heewon Kim</p>
 </div>
 

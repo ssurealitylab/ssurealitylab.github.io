@@ -7,6 +7,11 @@
         <span class="copyright"
           >Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span
         >
+        <br>
+        <small class="version-info">
+          <i class="fas fa-code-branch"></i>
+          Version {{ site.data.version.version }} (Build #{{ site.data.version.build_number }})
+        </small>
       </div>
       <!-- Social Media -->
       <div class="col-md-4">
@@ -40,6 +45,11 @@
         <span class="copyright"
           >Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span
         >
+        <br>
+        <small class="version-info">
+          <i class="fas fa-code-branch"></i>
+          Version {{ site.data.version.version }} (Build #{{ site.data.version.build_number }})
+        </small>
       </div>
       <!-- Social Media -->
       <div class="col-md-4">
@@ -85,3 +95,22 @@
 </script>
 {% endif %}
 <!-- End Footer -->
+
+<style>
+.version-info {
+  color: #6c757d;
+  font-size: 0.75rem;
+  margin-top: 5px;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.version-info i {
+  margin-right: 4px;
+  font-size: 0.7rem;
+}
+
+.version-info:hover {
+  opacity: 1;
+}
+</style>

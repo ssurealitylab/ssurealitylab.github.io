@@ -448,12 +448,13 @@ title: News
 /* News Image */
 .news-img {
   width: 100%;
-  height: 120px;
+  height: 180px;
   object-fit: contain;
   object-position: center;
   display: block;
   margin: 0;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 /* Research Areas Badges */

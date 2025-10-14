@@ -135,10 +135,13 @@ document.addEventListener("keydown", function(event) {
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   transition: opacity 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .publication-modal.active {
-  display: block;
+  display: flex;
   opacity: 1;
 }
 
@@ -146,10 +149,10 @@ document.addEventListener("keydown", function(event) {
   background: white;
   border-radius: 15px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  margin: 2rem;
+  margin: auto;
   width: 90vw;
   max-width: 90vw;
   animation: slideIn 0.3s ease-out;

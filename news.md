@@ -447,13 +447,13 @@ title: News
 
 /* News Image */
 .news-img {
-  width: 95%;
+  width: 100%;
   height: 120px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  border-radius: 8px;
   display: block;
-  margin: 2.5% auto 5px auto;
+  margin: 0;
+  padding: 10px;
 }
 
 /* Research Areas Badges */

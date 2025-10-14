@@ -982,6 +982,34 @@ title: International Publications
   color: #2c3e50;
 }
 
+/* Method Image Section Styling */
+.method-image-section {
+  margin-bottom: 1.5rem;
+}
+
+.method-image-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.method-image-container {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #f8f9fa;
+}
+
+.method-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 </style>
 
 <!-- Publication Modals -->
@@ -1068,7 +1096,7 @@ title: International Publications
 </div>
 
 <!-- [C23] BMVC 2025 Modal -->
-<div class="publication-modal" id="c23">
+<div class="publication-modal modal-2025" id="c23">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
@@ -1076,6 +1104,14 @@ title: International Publications
       <p class="item-intro">British Machine Vision Conference (BMVC)</p>
     </div>
     <div class="publication-modal-body">
+      <!-- Method Image Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Method Overview</h5>
+        <div class="method-image-container">
+          <img src="{{ site.baseurl }}/img/publications/bmvc2025.jpg" alt="BMVC 2025 Method" class="method-image">
+        </div>
+      </div>
+
       <div class="citation-box">
         <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
       </div>
@@ -1093,6 +1129,14 @@ title: International Publications
       <p class="item-intro">International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV)</p>
     </div>
     <div class="publication-modal-body">
+      <!-- Method Image Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Method Overview</h5>
+        <div class="method-image-container">
+          <img src="{{ site.baseurl }}/img/publications/app3dv2025.jpg" alt="APP3DV 2025 Method" class="method-image">
+        </div>
+      </div>
+
       <div class="citation-box">
         <p><strong>[C24]</strong> Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields," <em>Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)</em>, 2025 (accepted)</p>
       </div>
@@ -1110,6 +1154,14 @@ title: International Publications
       <p class="item-intro">PLOS ONE</p>
     </div>
     <div class="publication-modal-body">
+      <!-- Method Image Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Method Overview</h5>
+        <div class="method-image-container">
+          <img src="{{ site.baseurl }}/img/publications/plosone2025.jpg" alt="PLOS ONE 2025 Method" class="method-image">
+        </div>
+      </div>
+
       <div class="citation-box">
         <p><strong>[J12]</strong> Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis," <em>PLOS ONE</em>, 2025 (accepted)</p>
       </div>
@@ -1159,6 +1211,14 @@ title: International Publications
       <p class="item-intro">Journal of Electrical Engineering & Technology (JEET)</p>
     </div>
     <div class="publication-modal-body">
+      <!-- Method Image Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Method Overview</h5>
+        <div class="method-image-container">
+          <img src="{{ site.baseurl }}/img/publications/jeet2025.jpg" alt="JEET 2025 Method" class="method-image">
+        </div>
+      </div>
+
       <div class="citation-box">
         <p><strong>[J11]</strong> Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, "Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases," <em>Journal of Electrical Engineering & Technology (JEET)</em>, 2025 (accepted)</p>
       </div>
@@ -1176,6 +1236,14 @@ title: International Publications
       <p class="item-intro">ICT Express</p>
     </div>
     <div class="publication-modal-body">
+      <!-- Method Image Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Method Overview</h5>
+        <div class="method-image-container">
+          <img src="{{ site.baseurl }}/img/publications/ictexpress2025.jpg" alt="ICT Express 2025 Method" class="method-image">
+        </div>
+      </div>
+
       <div class="citation-box">
         <p><strong>[J10]</strong> Seunghyun Oh† and Heewon Kim, "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance," <em>ICT Express</em>, 2025 (accepted)</p>
       </div>
@@ -1200,6 +1268,14 @@ title: International Publications
       </div>
     </div>
     <div class="publication-modal-body">
+      <!-- Method Image Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Method Overview</h5>
+        <div class="method-image-container">
+          <img src="{{ site.baseurl }}/img/publications/cvpr2025.jpg" alt="CVPR 2025 Method" class="method-image">
+        </div>
+      </div>
+
       <div class="citation-box">
         <p><strong>[C22]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2025 (accepted)</p>
       </div>

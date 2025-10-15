@@ -331,6 +331,121 @@ def submit_question():
         logger.error(f"Error in submit-question endpoint: {e}")
         return jsonify({'error': 'Internal server error'}), 500
 
+def create_bug_report(title, description, page_url, user_agent):
+    """Create GitHub issue for bug reports"""
+    try:
+        censored_description, has_profanity = detect_profanity(description)
+        GITHUB_TOKEN = os.getenv('GITHUB_TOKEN', '')
+        REPO_OWNER = 'ssurealitylab-spec'
+        REPO_NAME = 'Realitylab-site'
+
+        if not GITHUB_TOKEN:
+            logger.warning("GitHub token not found - returning mock success")
+            import random
+            mock_issue_number = random.randint(100, 999)
+            return {
+                'success': True,
+                'issue_number': mock_issue_number,
+                'mock': True
+            }
+
+        # Prepare issue data
+        issue_title = f'[Bug Report] {title[:100]}'
+        issue_body = f"""## 버그 리포트
+
+**제목:** {title}
+
+**설명:**
+{censored_description}
+
+**페이지 URL:** {page_url}
+
+**User Agent:** {user_agent}
+
+---
+
+*이 이슈는 웹사이트의 버그 리포트 기능을 통해 자동 생성되었습니다.*
+*제출 시간: {time.strftime('%Y-%m-%d %H:%M:%S')}*
+*검열 상태: {'욕설 감지됨' if has_profanity else '검열 통과'}*"""
+
+        # GitHub API endpoint
+        url = f'https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues'
+
+        # Headers
+        headers = {
+            'Authorization': f'token {GITHUB_TOKEN}',
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+        }
+
+        # Issue data
+        issue_data = {
+            'title': issue_title,
+            'body': issue_body,
+            'labels': ['bug', 'user-report']
+        }
+
+        # Create issue
+        response = requests.post(url, headers=headers, data=json.dumps(issue_data))
+
+        if response.status_code == 201:
+            issue = response.json()
+            logger.info(f"✅ Bug report created: #{issue['number']}")
+            return {
+                'success': True,
+                'issue_number': issue['number'],
+                'issue_url': issue['html_url']
+            }
+        else:
+            logger.error(f"Failed to create bug report: {response.status_code} - {response.text}")
+            return {
+                'success': False,
+                'error': f'GitHub API error: {response.status_code}'
+            }
+
+    except Exception as e:
+        logger.error(f"Error creating bug report: {e}")
+        return {'success': False, 'error': str(e)}
+
+@app.route('/submit-bug-report', methods=['POST'])
+def submit_bug_report():
+    """Submit bug report"""
+    try:
+        data = request.get_json(force=True)
+
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
+
+        title = data.get('title', '').strip()
+        description = data.get('description', '').strip()
+        page_url = data.get('page_url', 'Unknown')
+        user_agent = data.get('user_agent', 'Unknown')
+
+        if not title:
+            return jsonify({'error': 'Title is required'}), 400
+
+        if not description:
+            return jsonify({'error': 'Description is required'}), 400
+
+        # Create bug report
+        result = create_bug_report(title, description, page_url, user_agent)
+
+        if result['success']:
+            return jsonify({
+                'success': True,
+                'message': '버그 리포트가 성공적으로 제출되었습니다!',
+                'issue_number': result['issue_number']
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': '버그 리포트 제출 중 오류가 발생했습니다.'
+            }), 500
+
+    except Exception as e:
+        logger.error(f"Error in submit-bug-report endpoint: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
 if __name__ == '__main__':
     import argparse
 

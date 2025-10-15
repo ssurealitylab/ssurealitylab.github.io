@@ -1,14 +1,4 @@
-<!-- Bug Report Button (Fixed to bottom-left) -->
-<div id="bug-report-button" class="bug-report-button">
-  <button class="bug-btn" onclick="openBugReportModal()" title="버그 리포트">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
-    </svg>
-    <span class="bug-btn-text">Bug Report</span>
-  </button>
-</div>
-
-<!-- Bug Report Modal -->
+<!-- Bug Report Modal (Triggered from Footer) -->
 <div id="bug-report-modal" class="bug-modal" style="display: none;">
   <div class="bug-modal-backdrop"></div>
   <div class="bug-modal-content">
@@ -40,47 +30,6 @@
 </div>
 
 <style>
-/* Bug Report Button - Fixed to bottom-left */
-.bug-report-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 999;
-}
-
-.bug-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  background: rgba(239, 68, 68, 0.9);
-  color: white;
-  border: none;
-  border-radius: 24px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.bug-btn:hover {
-  background: rgba(220, 38, 38, 0.95);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
-}
-
-.bug-btn svg {
-  width: 20px;
-  height: 20px;
-}
-
-.bug-btn-text {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
 /* Bug Report Modal */
 .bug-modal {
   position: fixed;
@@ -274,20 +223,6 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-  .bug-report-button {
-    bottom: 15px;
-    left: 15px;
-  }
-
-  .bug-btn {
-    padding: 10px 16px;
-    font-size: 13px;
-  }
-
-  .bug-btn-text {
-    display: none;
-  }
-
   .bug-modal-content {
     width: 95%;
     max-height: 90vh;
@@ -414,7 +349,7 @@ async function submitBugReport() {
     }
   } catch (error) {
     console.error('Bug report submission error:', error);
-    alert('❌ 버그 리포트 제출 중 오류가 발생했습니다.\n\n다시 시도하거나 heewon@ssu.ac.kr로 직접 연락해주세요.');
+    alert('❌ 버그 리포트 제출 중 오류가 발생했습니다.\n\n잠시 후 다시 시도해주세요.');
   } finally {
     // Re-enable submit button
     submitBtn.disabled = false;

@@ -826,8 +826,11 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentEndpoint = null;
   let isConnecting = false;
   
-  // GPU Manager endpoint (temporarily disabled)
-  const GPU_MANAGER_URL = null; // 'https://serum-solid-woods-saying.trycloudflare.com';
+  // GPU Manager endpoint (set to actual cloudflare URL when available)
+  const GPU_MANAGER_URL = null; // Example: 'https://your-tunnel.trycloudflare.com'
+
+  // Direct AI server endpoint (fallback when GPU_MANAGER_URL is null)
+  const DIRECT_AI_SERVER_URL = 'http://localhost:5000';
   
   // Page visitor management
   let visitorSessionTimer = null;
@@ -835,7 +838,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const VISITOR_SESSION_TIMEOUT = 5 * 60 * 1000; // 5 minutes
   
   // Automatically allocate GPU when page loads
-  initializeVisitorSession();
+  if (GPU_MANAGER_URL) {
+    initializeVisitorSession();
+  } else {
+    // Direct connection mode - set default endpoint
+    currentEndpoint = DIRECT_AI_SERVER_URL;
+    console.log('🔗 Direct AI server connection mode: ' + DIRECT_AI_SERVER_URL);
+  }
   
   // Get current session endpoints
   function getCurrentEndpoints() {

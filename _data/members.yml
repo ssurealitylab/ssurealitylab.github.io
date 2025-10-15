@@ -98,13 +98,6 @@ students:
       github: "https://github.com/seoyoung-kim"
       linkedin: "https://linkedin.com/in/seoyoung-kim"
 
-    - name: "Yeri Kim"
-      name_ko: "김예리"
-      research: "Computer Vision, Deep Learning"
-      photo: "assets/img/members/yeri_kim.jpg"
-      github: ""
-      linkedin: ""
-
     - name: "Suyoung Choi"
       name_ko: "최수영"
       research: "Computer Vision, Deep Learning"

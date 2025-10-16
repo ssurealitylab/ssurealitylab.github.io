@@ -470,19 +470,7 @@ if __name__ == '__main__':
 
     if load_model():
         logger.info(f"🚀 Qwen3-4B server ready on port {port}!")
-
-        # SSL context for HTTPS
-        import ssl
-        ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-        cert_path = os.path.join(os.path.dirname(__file__), 'cert.pem')
-        key_path = os.path.join(os.path.dirname(__file__), 'key.pem')
-
-        if os.path.exists(cert_path) and os.path.exists(key_path):
-            ssl_context.load_cert_chain(cert_path, key_path)
-            logger.info("✅ SSL certificates loaded - running with HTTPS")
-            app.run(host='0.0.0.0', port=port, debug=False, threaded=True, ssl_context=ssl_context)
-        else:
-            logger.warning("⚠️ SSL certificates not found - running with HTTP")
-            app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
+        logger.info("✅ Running with HTTP (no SSL)")
+        app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
     else:
         logger.error("❌ Failed to load model. Server not started.")

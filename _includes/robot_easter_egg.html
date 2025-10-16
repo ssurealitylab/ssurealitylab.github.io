@@ -157,9 +157,7 @@ setTimeout(function() {
     let clickCount = 0;
     let clickTimer = null;
     let isAnimating = false;
-    
-    console.log('Robot Easter Egg script starting...');
-    
+
     function findEasterEggTrigger() {
         // Find the "R" letter in "Reality Lab" text
         return document.getElementById('easter-egg-trigger');
@@ -168,16 +166,11 @@ setTimeout(function() {
     function initEasterEgg() {
         const easterEggTrigger = findEasterEggTrigger();
         const robotEgg = document.getElementById('robot-easter-egg');
-        
-        console.log('Trying to find easter egg trigger...');
-        console.log('Easter egg trigger element:', easterEggTrigger);
-        console.log('Robot egg element:', robotEgg);
-        
+
         if (!easterEggTrigger || !robotEgg) {
-            console.log('Elements not found, will keep trying...');
             return false;
         }
-        
+
         console.log('✅ Easter egg trigger found! Setting up easter egg...');
         
         // No need to modify container - keep original R untouched
@@ -381,24 +374,10 @@ setTimeout(function() {
         return true;
     }
     
-    // Try multiple times with increasing delays
-    let attempts = 0;
-    function tryInit() {
-        attempts++;
-        console.log(`🔍 Easter egg init attempt ${attempts}`);
-        
-        if (initEasterEgg()) {
-            console.log('🎉 Easter egg successfully initialized!');
-            return;
-        }
-        
-        if (attempts < 10) {
-            setTimeout(tryInit, attempts * 1000); // 1s, 2s, 3s, etc.
-        } else {
-            console.log('❌ Failed to initialize easter egg after 10 attempts');
-        }
+    // Try once - if element doesn't exist, silently skip
+    if (initEasterEgg()) {
+        console.log('🎉 Easter egg successfully initialized!');
     }
-    
-    tryInit();
+    // Silently fail if not on index page (no console spam)
 }, 2000); // Start after 2 seconds
 </script>

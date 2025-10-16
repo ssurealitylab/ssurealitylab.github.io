@@ -823,6 +823,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentSession = null;
   let currentEndpoint = null;
   let isConnecting = false;
+
+  // Rate limiting - 20 requests per 5 minutes
+  let requestCount = 0;
+  let requestResetTime = Date.now() + (5 * 60 * 1000); // 5 minutes from now
+  const MAX_REQUESTS = 20;
+  const RATE_LIMIT_WINDOW = 5 * 60 * 1000; // 5 minutes
   
   // GPU Manager endpoint (set to actual cloudflare URL when available)
   const GPU_MANAGER_URL = null; // Example: 'https://your-tunnel.trycloudflare.com'
@@ -1055,6 +1061,27 @@ document.addEventListener('DOMContentLoaded', function() {
   // Generate AI response using dynamic GPU allocation
   async function generateAIResponse(question) {
     try {
+      // Check rate limiting
+      const currentTime = Date.now();
+      if (currentTime > requestResetTime) {
+        // Reset counter after time window
+        requestCount = 0;
+        requestResetTime = currentTime + RATE_LIMIT_WINDOW;
+      }
+
+      if (requestCount >= MAX_REQUESTS) {
+        const timeLeft = Math.ceil((requestResetTime - currentTime) / 60000); // minutes
+        return {
+          response: isEnglish ?
+            `⏱️ You've reached the limit of ${MAX_REQUESTS} requests. Please try again in ${timeLeft} minute(s).` :
+            `⏱️ ${MAX_REQUESTS}회 요청 제한에 도달했습니다. ${timeLeft}분 후에 다시 시도해주세요.`,
+          response_time: null
+        };
+      }
+
+      // Increment request counter
+      requestCount++;
+
       // Cancel previous request if exists
       if (currentAIRequest) {
         currentAIRequest.abort();
@@ -1089,12 +1116,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // Update user activity since they're using AI chat
       updateLastActivity();
       
-      // Call chat endpoint with auto-save functionality
+      // Call chat endpoint with auto-save functionality (no timeout)
       const controller = new AbortController();
       currentAIRequest = controller; // Store for cancellation
 
-      const timeoutId = setTimeout(() => controller.abort(), 60000); // 60 second timeout (increased from 30s)
-      
       const response = await fetch(endpoints.chat, {
         method: 'POST',
         headers: {
@@ -1108,8 +1133,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }),
         signal: controller.signal
       });
-      
-      clearTimeout(timeoutId);
+
       currentAIRequest = null; // Clear after completion
 
       if (!response.ok) {

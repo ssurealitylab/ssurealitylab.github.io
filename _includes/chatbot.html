@@ -1035,14 +1035,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Previous AI request cancelled');
       }
       
-      // Check if GPU session is available (should already be allocated on page load)
-      if (!currentSession) {
+      // Check if GPU session is available (only for GPU Manager mode)
+      if (GPU_MANAGER_URL && !currentSession) {
         // Try to allocate if somehow not available
         console.log('⚠️ No GPU session found, attempting to allocate...');
         const session = await allocateGPU();
         if (!session) {
           return {
-            response: isEnglish ? 
+            response: isEnglish ?
               "🚫 GPU connection not available. Please reload the page." :
               "🚫 GPU 연결이 없습니다. 페이지를 새로고침 해주세요.",
             response_time: null

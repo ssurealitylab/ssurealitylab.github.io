@@ -824,11 +824,11 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentEndpoint = null;
   let isConnecting = false;
 
-  // Rate limiting - 20 requests per 5 minutes
+  // Rate limiting - 20 requests per 1 minute
   let requestCount = 0;
-  let requestResetTime = Date.now() + (5 * 60 * 1000); // 5 minutes from now
+  let requestResetTime = Date.now() + (1 * 60 * 1000); // 1 minute from now
   const MAX_REQUESTS = 20;
-  const RATE_LIMIT_WINDOW = 5 * 60 * 1000; // 5 minutes
+  const RATE_LIMIT_WINDOW = 1 * 60 * 1000; // 1 minute
   
   // GPU Manager endpoint (set to actual cloudflare URL when available)
   const GPU_MANAGER_URL = null; // Example: 'https://your-tunnel.trycloudflare.com'

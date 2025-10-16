@@ -824,11 +824,13 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentEndpoint = null;
   let isConnecting = false;
 
-  // Rate limiting - 20 requests per 1 minute
-  let requestCount = 0;
-  let requestResetTime = Date.now() + (1 * 60 * 1000); // 1 minute from now
+  // Rate limiting - 20 requests, then 2 minute cooldown
   const MAX_REQUESTS = 20;
-  const RATE_LIMIT_WINDOW = 1 * 60 * 1000; // 1 minute
+  const COOLDOWN_TIME = 2 * 60 * 1000; // 2 minutes cooldown after hitting limit
+
+  // Load rate limit data from localStorage (persists across page reloads)
+  let requestCount = parseInt(localStorage.getItem('aiChatRequestCount') || '0');
+  let cooldownEndTime = parseInt(localStorage.getItem('aiChatCooldownEnd') || '0');
   
   // GPU Manager endpoint (set to actual cloudflare URL when available)
   const GPU_MANAGER_URL = null; // Example: 'https://your-tunnel.trycloudflare.com'
@@ -1061,26 +1063,47 @@ document.addEventListener('DOMContentLoaded', function() {
   // Generate AI response using dynamic GPU allocation
   async function generateAIResponse(question) {
     try {
-      // Check rate limiting
+      // Check rate limiting with localStorage persistence
       const currentTime = Date.now();
-      if (currentTime > requestResetTime) {
-        // Reset counter after time window
-        requestCount = 0;
-        requestResetTime = currentTime + RATE_LIMIT_WINDOW;
-      }
 
-      if (requestCount >= MAX_REQUESTS) {
-        const timeLeft = Math.ceil((requestResetTime - currentTime) / 60000); // minutes
+      // Check if we're in cooldown period
+      if (cooldownEndTime > 0 && currentTime < cooldownEndTime) {
+        const timeLeft = Math.ceil((cooldownEndTime - currentTime) / 60000); // minutes
+        const secondsLeft = Math.ceil((cooldownEndTime - currentTime) / 1000) % 60;
         return {
           response: isEnglish ?
-            `⏱️ You've reached the limit of ${MAX_REQUESTS} requests. Please try again in ${timeLeft} minute(s).` :
+            `⏱️ You've reached the limit of ${MAX_REQUESTS} requests. Please try again in ${timeLeft}:${secondsLeft.toString().padStart(2, '0')}.` :
+            `⏱️ ${MAX_REQUESTS}회 요청 제한에 도달했습니다. ${timeLeft}분 ${secondsLeft}초 후에 다시 시도해주세요.`,
+          response_time: null
+        };
+      }
+
+      // If cooldown has ended, reset everything
+      if (cooldownEndTime > 0 && currentTime >= cooldownEndTime) {
+        requestCount = 0;
+        cooldownEndTime = 0;
+        localStorage.setItem('aiChatRequestCount', '0');
+        localStorage.setItem('aiChatCooldownEnd', '0');
+      }
+
+      // Check if we've hit the limit
+      if (requestCount >= MAX_REQUESTS) {
+        // Start cooldown
+        cooldownEndTime = currentTime + COOLDOWN_TIME;
+        localStorage.setItem('aiChatCooldownEnd', cooldownEndTime.toString());
+
+        const timeLeft = Math.ceil(COOLDOWN_TIME / 60000);
+        return {
+          response: isEnglish ?
+            `⏱️ You've reached the limit of ${MAX_REQUESTS} requests. Please try again in ${timeLeft} minutes.` :
             `⏱️ ${MAX_REQUESTS}회 요청 제한에 도달했습니다. ${timeLeft}분 후에 다시 시도해주세요.`,
           response_time: null
         };
       }
 
-      // Increment request counter
+      // Increment request counter and save to localStorage
       requestCount++;
+      localStorage.setItem('aiChatRequestCount', requestCount.toString());
 
       // Cancel previous request if exists
       if (currentAIRequest) {

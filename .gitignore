@@ -40,3 +40,9 @@ simple_lora_finetune.py
 
 # Korean filename images
 "참고 이미지/"
+
+# SSL certificates and private keys (SECURITY CRITICAL)
+*.pem
+*.key
+*.crt
+*.cert

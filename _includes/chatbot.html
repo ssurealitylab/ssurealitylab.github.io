@@ -837,13 +837,41 @@ document.addEventListener('DOMContentLoaded', function() {
   let lastActivityTime = Date.now();
   const VISITOR_SESSION_TIMEOUT = 5 * 60 * 1000; // 5 minutes
   
+  // AI server connection status
+  let isAIServerReady = false;
+
+  // Preconnect to AI server on page load
+  async function preconnectAIServer() {
+    try {
+      console.log('🔄 Preconnecting to AI server...');
+      const response = await fetch(`${DIRECT_AI_SERVER_URL}/health`, {
+        method: 'GET',
+        signal: AbortSignal.timeout(5000) // 5 second timeout
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.status === 'healthy' && data.model_loaded) {
+          isAIServerReady = true;
+          console.log('✅ AI server ready:', data.model_name);
+        } else {
+          console.warn('⚠️ AI server responded but model not loaded');
+        }
+      }
+    } catch (error) {
+      console.warn('⚠️ AI server preconnection failed:', error.message);
+      // Server will still work, just might be slower on first request
+    }
+  }
+
   // Automatically allocate GPU when page loads
   if (GPU_MANAGER_URL) {
     initializeVisitorSession();
   } else {
-    // Direct connection mode - set default endpoint
+    // Direct connection mode - set default endpoint and preconnect
     currentEndpoint = DIRECT_AI_SERVER_URL;
     console.log('🔗 Direct AI server connection mode: ' + DIRECT_AI_SERVER_URL);
+    preconnectAIServer(); // Preconnect immediately
   }
   
   // Get current session endpoints
@@ -1296,11 +1324,21 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isAIMode) {
       // AI mode - use dynamic GPU allocation
       try {
-        // Show connection message if no GPU is allocated
-        if (!currentSession && !isConnecting) {
-          addMessage(isEnglish ? 'Connecting to AI server...' : 'AI서버에 연결중입니다...', 'bot');
+        // Show thinking message directly if server is preconnected, otherwise show connection message
+        if (GPU_MANAGER_URL) {
+          // GPU Manager mode - check session status
+          if (!currentSession && !isConnecting) {
+            addMessage(isEnglish ? 'Connecting to AI server...' : 'AI서버에 연결중입니다...', 'bot');
+          } else {
+            addMessage(isEnglish ? 'Thinking...' : '생각 중...', 'bot');
+          }
         } else {
-          addMessage(isEnglish ? 'Thinking...' : '생각 중...', 'bot');
+          // Direct connection mode - always show thinking if preconnected
+          if (isAIServerReady) {
+            addMessage(isEnglish ? 'Thinking...' : '생각 중...', 'bot');
+          } else {
+            addMessage(isEnglish ? 'Connecting to AI server...' : 'AI서버에 연결중입니다...', 'bot');
+          }
         }
         
         const aiResult = await generateAIResponse(question);

@@ -33,6 +33,20 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c24')" style="cursor: pointer;">
             <div class="publication-badge challenge-badge">APP3DV25</div>
+            <div class="external-links">
+              <a href="https://drive.google.com/file/d/10vp2SWByAJGr-Ccrw68c2hTepsMr5di9/view" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+              <a href="https://oshmos.github.io/IPRF/" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
+                <i class="fas fa-globe"></i>
+              </a>
+              <a href="https://github.com/OSHMOS/IPRF" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div class="publication-thumbnail">
+              <img src="{{ site.baseurl }}/assets/img/publications/iprf/method_pipeline.png" alt="IPRF">
+            </div>
             <h5 class="list-title">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h5>
             <p class="list-authors">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
           </div>

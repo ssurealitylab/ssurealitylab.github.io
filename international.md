@@ -1185,32 +1185,7 @@ title: International Publications
       <div class="method-image-section mb-4">
         <h5 class="method-image-title">Method</h5>
         <div class="method-image-container">
-          <img src="{{ site.baseurl }}/assets/img/publications/iprf/method_pipeline.png" alt="IPRF Method" class="method-image">
-        </div>
-      </div>
-
-      <!-- Comparison Results -->
-      <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Style Transfer Comparisons</h5>
-        <div class="row mb-3">
-          <div class="col-12">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/llff_comparison.png" alt="LLFF Dataset Comparison" class="method-image" style="width: 100%;">
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-12">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Flower Comparison" class="method-image" style="width: 100%;">
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-12">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Horns Comparison" class="method-image" style="width: 100%;">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Room Comparison" class="method-image" style="width: 100%;">
-          </div>
+          <img src="{{ site.baseurl }}/assets/img/publications/iprf/pipeline.png" alt="IPRF Method" class="method-image">
         </div>
       </div>
 

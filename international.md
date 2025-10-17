@@ -78,11 +78,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c22')" style="cursor: pointer;">
             <div class="publication-badge">CVPR25</div>
-            <div class="external-links">
-              <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Motion-Aware_Dynamic_Architecture_for_Efficient_Frame_Interpolation_ICCV_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI</h5>
             <p class="list-authors">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
           </div>
@@ -92,14 +87,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('sidl')" style="cursor: pointer;">
             <div class="publication-badge">AAAI25</div>
-            <div class="external-links">
-              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32257" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-              <a href="https://sidl-benchmark.github.io/" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
-                <i class="fas fa-globe"></i>
-              </a>
-            </div>
             <h5 class="list-title">SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses</h5>
             <p class="list-authors">Sooyoung Choi*†, Sungyong Park*, Heewon Kim</p>
           </div>
@@ -109,11 +96,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c20j9')" style="cursor: pointer;">
             <div class="publication-badge">Brain Stimulation</div>
-            <div class="external-links">
-              <a href="https://www.brainstimjrnl.com/article/S1935-861X%2824%2900905-7/fulltext" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">Predictors of the treatment effects of transcranial direct current stimulation on knee osteoarthritis pain</h5>
             <p class="list-authors">Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al.</p>
           </div>
@@ -155,11 +137,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j7')" style="cursor: pointer;">
             <div class="publication-badge">JEET</div>
-            <div class="external-links">
-              <a href="https://www.mdpi.com/1422-0067/25/12/6761" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs</h5>
             <p class="list-authors">Jeongmoon Kim†, Sooyoung Choi†, Heewon Kim</p>
           </div>
@@ -201,11 +178,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c15')" style="cursor: pointer;">
             <div class="publication-badge">@</div>
-            <div class="external-links">
-              <a href="https://openreview.net/forum?id=NO0ThzteQdI" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">NERDS: A General Framework to Train Camera Denoisers</h5>
             <p class="list-authors">Yunseok Yang†, Heewon Kim</p>
           </div>
@@ -215,11 +187,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c14')" style="cursor: pointer;">
             <div class="publication-badge">@</div>
-            <div class="external-links">
-              <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Hong_DAQ_Channel-Wise_Distribution-Aware_Quantization_for_Deep_Image_Super-Resolution_Networks_WACV_2022_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">DAQ: Channel-Wise Distribution-Aware Quantization</h5>
             <p class="list-authors">Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim</p>
           </div>
@@ -229,11 +196,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c13')" style="cursor: pointer;">
             <div class="publication-badge">@</div>
-            <div class="external-links">
-              <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Oh_Batch_Normalization_Tells_You_Which_Filter_Is_Important_WACV_2022_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">Batch Normalization Tells You Which Filter is Important</h5>
             <p class="list-authors">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
           </div>
@@ -243,11 +205,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j5')" style="cursor: pointer;">
             <div class="publication-badge">Applied Sciences</div>
-            <div class="external-links">
-              <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0272330" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">Machine learning-based predictive modeling of depression in hypertensive populations</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
@@ -271,14 +228,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c12')" style="cursor: pointer;">
             <div class="publication-badge">ECCV22</div>
-            <div class="external-links">
-              <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136670360.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-              <a href="https://github.com/Cheeun/CADyQ" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
             <h5 class="list-title">CADyQ: Content-Aware Dynamic Quantization</h5>
             <p class="list-authors">Sungyong Park*, Sangmin Lee*, Heewon Kim</p>
           </div>
@@ -288,11 +237,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j4')" style="cursor: pointer;">
             <div class="publication-badge">Sensors</div>
-            <div class="external-links">
-              <a href="https://ieeexplore.ieee.org/document/10225702" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">Learning Controllable ISP for Image Enhancement</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
@@ -302,11 +246,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c11')" style="cursor: pointer;">
             <div class="publication-badge">CVPR22</div>
-            <div class="external-links">
-              <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Oh_Attentive_Fine-Grained_Structured_Sparsity_for_Image_Restoration_CVPR_2022_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">Attentive Fine-Grained Structured Sparsity for Image Restoration</h5>
             <p class="list-authors">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
           </div>
@@ -330,14 +269,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c10')" style="cursor: pointer;">
             <div class="publication-badge">ICCV21</div>
-            <div class="external-links">
-              <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Baik_Meta-Learning_With_Task-Adaptive_Loss_Function_for_Few-Shot_Learning_ICCV_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-              <a href="https://github.com/baiksung/MeTAL" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
             <h5 class="list-title">MeTAL: Meta-Learning with Task-Adaptive Loss Function</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
@@ -347,11 +278,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j3')" style="cursor: pointer;">
             <div class="publication-badge">IEEE Access</div>
-            <div class="external-links">
-              <a href="https://ieeexplore.ieee.org/document/10080995" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
@@ -361,14 +287,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c9')" style="cursor: pointer;">
             <div class="publication-badge">@</div>
-            <div class="external-links">
-              <a href="https://papers.nips.cc/paper/2020/file/ee89223a2b625b5152132ed77abbcc79-Paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-              <a href="https://github.com/baiksung/ALFA" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
             <h5 class="list-title">ALFA: Meta-Learning with Adaptive Hyperparameters</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
@@ -378,11 +296,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j2')" style="cursor: pointer;">
             <div class="publication-badge">Pattern Recognition</div>
-            <div class="external-links">
-              <a href="https://www.sciencedirect.com/science/article/abs/pii/S1047320322001742" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">Fine-grained neural architecture search for image super-resolution</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>
@@ -392,14 +305,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c8')" style="cursor: pointer;">
             <div class="publication-badge workshop-badge">CVPRW17</div>
-            <div class="external-links">
-              <a href="https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-              <a href="https://github.com/sanghyun-son/EDSR-PyTorch" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
             <h5 class="list-title">EDSR: Enhanced Deep Residual Networks for Single Image Super-Resolution</h5>
             <p class="list-authors">Bee Lim*, Sanghyun Son*, Heewon Kim, et al.</p>
           </div>
@@ -409,11 +314,6 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j1')" style="cursor: pointer;">
             <div class="publication-badge">CVIU</div>
-            <div class="external-links">
-              <a href="https://www.dropbox.com/scl/fi/8km8l254msd8rm8cjfkct/AAAI-ChoiM.4773.pdf?rlkey=rws6k9ctw5prhis162zk30xts&dl=0" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </div>
             <h5 class="list-title">Channel Attention Is All You Need for Video Frame Interpolation</h5>
             <p class="list-authors">Heewon Kim, et al.</p>
           </div>

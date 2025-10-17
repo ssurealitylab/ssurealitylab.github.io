@@ -1148,19 +1148,19 @@ title: International Publications
         <div class="row">
           <div class="col-md-4 mb-3">
             <video controls style="width: 100%; border-radius: 8px;">
-              <source src="{{ site.baseurl }}/참고 이미지/논문 이미지/flower_14.mp4" type="video/mp4">
+              <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
             </video>
             <p class="text-center mt-2"><small>Flower Scene</small></p>
           </div>
           <div class="col-md-4 mb-3">
             <video controls style="width: 100%; border-radius: 8px;">
-              <source src="{{ site.baseurl }}/참고 이미지/논문 이미지/horns_139.mp4" type="video/mp4">
+              <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
             </video>
             <p class="text-center mt-2"><small>Horns Scene</small></p>
           </div>
           <div class="col-md-4 mb-3">
             <video controls style="width: 100%; border-radius: 8px;">
-              <source src="{{ site.baseurl }}/참고 이미지/논문 이미지/room_122.mp4" type="video/mp4">
+              <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
             </video>
             <p class="text-center mt-2"><small>Room Scene</small></p>
           </div>
@@ -1171,7 +1171,7 @@ title: International Publications
       <div class="method-image-section mb-4">
         <h5 class="method-image-title">Method</h5>
         <div class="method-image-container">
-          <img src="{{ site.baseurl }}/참고 이미지/논문 이미지/Style Transfer Pipeline.png" alt="IPRF Method" class="method-image">
+          <img src="{{ site.baseurl }}/assets/img/publications/iprf/method_pipeline.png" alt="IPRF Method" class="method-image">
         </div>
       </div>
 
@@ -1180,17 +1180,22 @@ title: International Publications
         <h5 class="method-image-title">Style Transfer Comparisons</h5>
         <div class="row mb-3">
           <div class="col-12">
-            <img src="{{ site.baseurl }}/참고 이미지/논문 이미지/14.jpg" alt="Flower Comparison" class="method-image" style="width: 100%;">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/llff_comparison.png" alt="LLFF Dataset Comparison" class="method-image" style="width: 100%;">
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-12">
-            <img src="{{ site.baseurl }}/참고 이미지/논문 이미지/139.jpg" alt="Horns Comparison" class="method-image" style="width: 100%;">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Flower Comparison" class="method-image" style="width: 100%;">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Horns Comparison" class="method-image" style="width: 100%;">
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <img src="{{ site.baseurl }}/참고 이미지/논문 이미지/122.jpg" alt="Room Comparison" class="method-image" style="width: 100%;">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Room Comparison" class="method-image" style="width: 100%;">
           </div>
         </div>
       </div>

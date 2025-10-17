@@ -1158,19 +1158,19 @@ title: International Publications
         <h5 class="method-image-title">Results</h5>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <video controls style="width: 100%; border-radius: 8px;">
+            <video controls autoplay loop muted style="width: 100%; border-radius: 8px;">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
             </video>
             <p class="text-center mt-2"><small>Flower Scene</small></p>
           </div>
           <div class="col-md-4 mb-3">
-            <video controls style="width: 100%; border-radius: 8px;">
+            <video controls autoplay loop muted style="width: 100%; border-radius: 8px;">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
             </video>
             <p class="text-center mt-2"><small>Horns Scene</small></p>
           </div>
           <div class="col-md-4 mb-3">
-            <video controls style="width: 100%; border-radius: 8px;">
+            <video controls autoplay loop muted style="width: 100%; border-radius: 8px;">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
             </video>
             <p class="text-center mt-2"><small>Room Scene</small></p>

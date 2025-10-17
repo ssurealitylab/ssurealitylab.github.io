@@ -85,6 +85,11 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j10')" style="cursor: pointer;">
             <div class="publication-badge">ICT Express</div>
+            <div class="external-links">
+              <a href="https://pdf.sciencedirectassets.com/313521/1-s2.0-S2405959525X00047/1-s2.0-S2405959525000360/main.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </div>
             <h5 class="list-title">Accurate Baseball Player Pose Refinement Using Motion Prior Guidance</h5>
             <p class="list-authors">Seunghyun Oh†, Heewon Kim</p>
           </div>
@@ -97,6 +102,9 @@ title: International Publications
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Motion-Aware_Dynamic_Architecture_for_Efficient_Frame_Interpolation_ICCV_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
+              </a>
+              <a href="https://cvpr.thecvf.com/virtual/2025/poster/33953" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
+                <i class="fas fa-globe"></i>
               </a>
             </div>
             <h5 class="list-title">DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI</h5>
@@ -1321,6 +1329,11 @@ title: International Publications
         <p><strong>[J11]</strong> Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, "Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases," <em>Journal of Electrical Engineering & Technology (JEET)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
+
+      <p style="font-size: 120%;"><strong>Abstract:</strong></p>
+      <p>We propose a diagnostic system for identifying bronchial diseases by analyzing dog cough sounds. We collected a dataset consisting of 124 healthy dog cough sounds obtained from open sources and 94 dog cough sounds with bronchial diseases obtained from YouTube, and performed a total of 218 recordings. These cough sounds were segmented into 423 separate cough datasets to improve the details and accuracy of their analysis. Additionally, data augmentation techniques such as noise addition, pitch shifting, time stretching, and volume scaling were applied, increasing the dataset size by 7 times. This resulted in 1,526 training and testing samples for multiple coughs and 2,961 samples for single coughs.</p>
+
+      <p>The disease prediction system leverages three different neural network models, multilayer perceptron (MLP), convolutional neural network (CNN), and recurrent neural network (RNN), to evaluate their effectiveness in detecting bronchial diseases. In our experiments, we found that the single cough dataset outperformed the multiple cough dataset, with the CNN achieving the highest accuracy, precision, AUC, and F1 scores compared to the RNN and MLP. The study highlights the potential of machine learning in improving diagnostic accuracy for veterinary medicine, suggesting that integrating different models could enhance diagnostic tools, thereby contributing to better health outcomes for dogs.</p>
     </div>
   </div>
 </div>
@@ -1346,6 +1359,11 @@ title: International Publications
         <p><strong>[J10]</strong> Seunghyun Oh† and Heewon Kim, "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance," <em>ICT Express</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
+
+      <p style="font-size: 120%;"><strong>Abstract:</strong></p>
+      <p>Human pose estimation (HPE) is challenging due to the need to accurately capture rapid and occluded body movements, often resulting in uncertain predictions. In the context of fast sports actions like baseball swings, existing HPE methods insufficiently leverage domain-specific prior knowledge about these movements. To address this gap, we propose the Baseball Player Pose Corrector (BPPC), an optimization framework that utilizes high-quality 3D standard motion data to refine 2D keypoints in baseball swing videos. BPPC operates in two stages: first, it aligns the 3D standard motion to test swing videos through action recognition, offset learning, and 3D-to-2D projection. Next, it applies movement-aware optimization to refine the keypoints, ensuring robustness to variations in swing patterns.</p>
+
+      <p>Notably, BPPC does not rely on additional datasets; it only requires manually annotated 3D standard motion data for baseball swings. Experimental results demonstrate that BPPC improves keypoint estimation accuracy by up to 2.4% on a baseball swing dataset, particularly enhancing keypoints with confidence scores below 0.5. Qualitative analysis further highlights BPPC's ability to correct rapidly moving joints, such as elbows and wrists.</p>
     </div>
   </div>
 </div>
@@ -1361,6 +1379,9 @@ title: International Publications
         <div class="modal-header-links">
           <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Motion-Aware_Dynamic_Architecture_for_Efficient_Frame_Interpolation_ICCV_2021_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
             <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="https://cvpr.thecvf.com/virtual/2025/poster/33953" target="_blank" class="modal-icon-link website-link" title="Website">
+            <i class="fas fa-globe"></i>
           </a>
         </div>
       </div>
@@ -1378,6 +1399,11 @@ title: International Publications
         <p><strong>[C22]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
+
+      <p style="font-size: 120%;"><strong>Abstract:</strong></p>
+      <p>Creating robotic manipulation datasets is traditionally labor-intensive and expansive, requiring extensive manual effort. To alleviate this problem, we introduce PhaseScene, which generates realistic and diverse dynamic scenes (or robotic manipulation data) from text instructions for Embodied AI. PhaseScene employs a phase-specific data representation by dividing dynamic scenes into static environments and robot movements. Each phase utilizes a diffusion-based method to generate phase-specific data, incorporating data refinement and augmentation techniques.</p>
+
+      <p>Our experiments demonstrate that PhaseScene outperforms human creation by about 20 times faster speed, 1.84 times accuracy, and 28% higher action diversity based on standard metrics. Additionally, the generated scenes enable accurate agent training with an average success rate improvement of 7.96% for PerAct and 11.23% for PerAct-PSA.</p>
     </div>
   </div>
 </div>

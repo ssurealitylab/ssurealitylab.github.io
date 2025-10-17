@@ -1162,23 +1162,21 @@ title: International Publications
           <div class="col-md-3 text-center">
             <strong>Style Image</strong>
           </div>
-          <div class="col-md-9 d-flex justify-content-start" style="padding-left: 40px;">
-            <div style="text-align: left;">
+          <div class="col-md-9">
+            <div style="width: 80%; margin: 0 auto; display: flex; justify-content: space-around; text-align: center;">
               <strong>Plenoxels</strong>
-              <span style="margin: 0 80px;"></span>
               <strong>FPRF</strong>
-              <span style="margin: 0 80px;"></span>
               <strong>IPRF</strong>
             </div>
           </div>
         </div>
 
         <!-- Flower Scene -->
-        <div class="row mb-4 align-items-center">
-          <div class="col-md-3 d-flex align-items-center justify-content-center">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Style Image" style="width: 80%; height: auto; border-radius: 8px;">
+        <div class="row mb-4 align-items-stretch">
+          <div class="col-md-3 d-flex align-items-stretch justify-content-center">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Style Image" style="width: 80%; object-fit: cover; border-radius: 8px;">
           </div>
-          <div class="col-md-9">
+          <div class="col-md-9 d-flex align-items-center">
             <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
             </video>
@@ -1186,11 +1184,11 @@ title: International Publications
         </div>
 
         <!-- Horns Scene -->
-        <div class="row mb-4 align-items-center">
-          <div class="col-md-3 d-flex align-items-center justify-content-center">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Style Image" style="width: 80%; height: auto; border-radius: 8px;">
+        <div class="row mb-4 align-items-stretch">
+          <div class="col-md-3 d-flex align-items-stretch justify-content-center">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Style Image" style="width: 80%; object-fit: cover; border-radius: 8px;">
           </div>
-          <div class="col-md-9">
+          <div class="col-md-9 d-flex align-items-center">
             <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
             </video>
@@ -1198,11 +1196,11 @@ title: International Publications
         </div>
 
         <!-- Room Scene -->
-        <div class="row mb-4 align-items-center">
-          <div class="col-md-3 d-flex align-items-center justify-content-center">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Style Image" style="width: 80%; height: auto; border-radius: 8px;">
+        <div class="row mb-4 align-items-stretch">
+          <div class="col-md-3 d-flex align-items-stretch justify-content-center">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Style Image" style="width: 80%; object-fit: cover; border-radius: 8px;">
           </div>
-          <div class="col-md-9">
+          <div class="col-md-9 d-flex align-items-center">
             <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
             </video>

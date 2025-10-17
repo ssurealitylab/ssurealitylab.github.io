@@ -44,9 +44,6 @@ title: International Publications
                 <i class="fab fa-github"></i>
               </a>
             </div>
-            <div class="publication-thumbnail">
-              <img src="{{ site.baseurl }}/assets/img/publications/iprf/method_pipeline.png" alt="IPRF">
-            </div>
             <h5 class="list-title">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h5>
             <p class="list-authors">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
           </div>

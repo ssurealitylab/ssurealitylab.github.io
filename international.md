@@ -1166,7 +1166,7 @@ title: International Publications
             <div style="width: 80%; margin: 0 auto; display: flex; justify-content: space-around; text-align: center;">
               <strong>Plenoxels</strong>
               <strong>FPRF</strong>
-              <strong>IPRF</strong>
+              <strong>IPRF (Ours)</strong>
             </div>
           </div>
         </div>

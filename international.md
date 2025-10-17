@@ -1156,33 +1156,49 @@ title: International Publications
       <!-- Video Results Section -->
       <div class="method-image-section mb-4">
         <h5 class="method-image-title">Results</h5>
-        <div class="row">
-          <div class="col-md-4 mb-3">
+
+        <!-- Flower Scene -->
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-3">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Style Image" style="width: 100%; border-radius: 8px;">
+          </div>
+          <div class="col-md-9">
             <video controls autoplay loop muted style="width: 100%; border-radius: 8px;">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
             </video>
-            <p class="text-center mt-2"><small>Flower Scene</small></p>
           </div>
-          <div class="col-md-4 mb-3">
+        </div>
+
+        <!-- Horns Scene -->
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-3">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Style Image" style="width: 100%; border-radius: 8px;">
+          </div>
+          <div class="col-md-9">
             <video controls autoplay loop muted style="width: 100%; border-radius: 8px;">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
             </video>
-            <p class="text-center mt-2"><small>Horns Scene</small></p>
           </div>
-          <div class="col-md-4 mb-3">
+        </div>
+
+        <!-- Room Scene -->
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-3">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Style Image" style="width: 100%; border-radius: 8px;">
+          </div>
+          <div class="col-md-9">
             <video controls autoplay loop muted style="width: 100%; border-radius: 8px;">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
             </video>
-            <p class="text-center mt-2"><small>Room Scene</small></p>
           </div>
         </div>
       </div>
 
-      <!-- Method Image Section -->
+      <!-- Pipeline Image Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Method</h5>
+        <h5 class="method-image-title">Pipeline</h5>
         <div class="method-image-container">
-          <img src="{{ site.baseurl }}/assets/img/publications/iprf/pipeline.png" alt="IPRF Method" class="method-image">
+          <img src="{{ site.baseurl }}/assets/img/publications/iprf/pipeline.png" alt="IPRF Pipeline" class="method-image">
         </div>
       </div>
 

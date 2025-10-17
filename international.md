@@ -1155,7 +1155,7 @@ title: International Publications
     <div class="publication-modal-body">
       <!-- Video Results Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Results</h5>
+        <h5 class="method-image-title" style="font-size: 120%;">Results</h5>
 
         <!-- Column Headers -->
         <div class="row mb-3">
@@ -1164,9 +1164,15 @@ title: International Publications
           </div>
           <div class="col-md-10">
             <div class="row">
-              <div class="col-4 text-center"><strong>Plenoxels</strong></div>
-              <div class="col-4 text-center"><strong>FPRF</strong></div>
-              <div class="col-4 text-center"><strong>IPRF</strong></div>
+              <div class="col-4 d-flex justify-content-center">
+                <div style="width: 80%; text-align: center;"><strong>Plenoxels</strong></div>
+              </div>
+              <div class="col-4 d-flex justify-content-center">
+                <div style="width: 80%; text-align: center;"><strong>FPRF</strong></div>
+              </div>
+              <div class="col-4 d-flex justify-content-center">
+                <div style="width: 80%; text-align: center;"><strong>IPRF</strong></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1178,18 +1184,18 @@ title: International Publications
           </div>
           <div class="col-md-10">
             <div class="row">
-              <div class="col-4">
-                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+              <div class="col-4 d-flex justify-content-center">
+                <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
                   <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="col-4">
-                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+              <div class="col-4 d-flex justify-content-center">
+                <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
                   <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="col-4">
-                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+              <div class="col-4 d-flex justify-content-center">
+                <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
                   <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1204,18 +1210,18 @@ title: International Publications
           </div>
           <div class="col-md-10">
             <div class="row">
-              <div class="col-4">
-                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+              <div class="col-4 d-flex justify-content-center">
+                <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
                   <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="col-4">
-                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+              <div class="col-4 d-flex justify-content-center">
+                <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
                   <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="col-4">
-                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+              <div class="col-4 d-flex justify-content-center">
+                <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
                   <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1230,18 +1236,18 @@ title: International Publications
           </div>
           <div class="col-md-10">
             <div class="row">
-              <div class="col-4">
-                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+              <div class="col-4 d-flex justify-content-center">
+                <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
                   <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="col-4">
-                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+              <div class="col-4 d-flex justify-content-center">
+                <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
                   <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="col-4">
-                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+              <div class="col-4 d-flex justify-content-center">
+                <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
                   <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1252,7 +1258,7 @@ title: International Publications
 
       <!-- Pipeline Image Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Pipeline</h5>
+        <h5 class="method-image-title" style="font-size: 120%;">Pipeline</h5>
         <div class="method-image-container">
           <img src="{{ site.baseurl }}/assets/img/publications/iprf/pipeline.png" alt="IPRF Pipeline" class="method-image">
         </div>
@@ -1263,7 +1269,7 @@ title: International Publications
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
 
-      <p><strong>Abstract:</strong></p>
+      <p style="font-size: 120%;"><strong>Abstract:</strong></p>
       <p>Photorealistic style transfer in neural radiance fields (NeRF) aims to modify the color characteristics of a 3D scene without altering its underlying geometry. Although recent approaches have achieved promising results, they often suffer from limited style diversity, focusing primarily on global color shifts. In contrast, artistic style transfer methods offer richer stylization but usually distort scene geometry, thereby reducing realism.</p>
 
       <p>In this work, we present Intrinsic-guided Photorealistic Style Transfer (IPRF), a novel framework that leverages intrinsic image decomposition to decouple a scene into albedo and shading components. By introducing tailored loss functions in both domains, IPRF aligns the texture and color of the content scene to those of a style image while faithfully preserving geometric structure and lighting.</p>

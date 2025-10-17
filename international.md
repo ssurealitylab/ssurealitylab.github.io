@@ -62,6 +62,11 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j12')" style="cursor: pointer;">
             <div class="publication-badge">PLOS ONE</div>
+            <div class="external-links">
+              <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0324169" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </div>
             <h5 class="list-title">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</h5>
             <p class="list-authors">Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim</p>
           </div>
@@ -1240,11 +1245,11 @@ title: International Publications
       <p class="item-intro">PLOS ONE</p>
     </div>
     <div class="publication-modal-body">
-      <!-- Method Image Section -->
+      <!-- Network Architecture Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Method Overview</h5>
+        <h5 class="method-image-title" style="font-size: 120%;">Network Architecture</h5>
         <div class="method-image-container">
-          <img src="{{ site.baseurl }}/img/publications/plosone2025.jpg" alt="PLOS ONE 2025 Method" class="method-image">
+          <img src="{{ site.baseurl }}/assets/img/publications/deepgam/architecture.png" alt="DeepGAM Architecture" class="method-image">
         </div>
       </div>
 
@@ -1252,6 +1257,13 @@ title: International Publications
         <p><strong>[J12]</strong> Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis," <em>PLOS ONE</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
+
+      <p style="font-size: 120%;"><strong>Abstract:</strong></p>
+      <p>Deep neural networks have achieved significant performance breakthroughs across a range of tasks. For diagnosing depression, there has been increasing attention on estimating depression status from personal medical data. However, the neural networks often act as black boxes, making it difficult to discern the individual effects of each input component. To alleviate this problem, we proposed a deep-learning-based generalized additive model called DeepGAM to improve the interpretability of depression diagnosis.</p>
+
+      <p>We utilized the baseline cross-sectional data from the Heart and Soul Study to achieve our study's aim. DeepGAM incorporates additive functions based on a neural network that learns to discern the positive and negative impacts of the values of individual components. The network architecture and the objective function are designed to constrain and regularize the output values for interpretability. Moreover, we used a direct-through estimator (STE) to select important features using gradient descent. The STE enables machine learning models to maintain their performance using a few features and interpretable function visualizations.</p>
+
+      <p>DeepGAM achieved the highest AUC (0.600) and F1-score (0.387), outperforming neural networks and IGANN. The five features selected via STE performed comparably to 99 features and surpassed traditional methods such as Lasso and Boruta. Additionally, analyses highlighted DeepGAM's interpretability and performance on public datasets. In conclusion, DeepGAM with STE demonstrated accurate and interpretable performance in predicting depression compared to existing machine learning methods.</p>
     </div>
   </div>
 </div>

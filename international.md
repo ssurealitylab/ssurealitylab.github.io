@@ -1035,6 +1035,28 @@ title: International Publications
   height: auto;
   display: block;
   object-fit: contain;
+  background: white;
+}
+
+/* IPRF Video and Image Styles */
+.iprf-video {
+  width: 10%;
+  height: auto;
+  border-radius: 8px;
+  background: white;
+}
+
+.iprf-style-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+  background: white;
+}
+
+/* Fix transparent background issue */
+img, video, .method-image, .publication-thumbnail img {
+  background: white !important;
 }
 
 </style>
@@ -1190,10 +1212,10 @@ title: International Publications
         <!-- Flower Scene -->
         <div class="row mb-4 align-items-start">
           <div class="col-md-3 d-flex align-items-start justify-content-center">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Style Image" style="width: 80%; border-radius: 8px;">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Style Image" class="iprf-style-image">
           </div>
           <div class="col-md-9 d-flex align-items-start">
-            <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
+            <video controls autoplay loop muted class="iprf-video">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
             </video>
           </div>
@@ -1202,10 +1224,10 @@ title: International Publications
         <!-- Horns Scene -->
         <div class="row mb-4 align-items-start">
           <div class="col-md-3 d-flex align-items-start justify-content-center">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Style Image" style="width: 80%; border-radius: 8px;">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Style Image" class="iprf-style-image">
           </div>
           <div class="col-md-9 d-flex align-items-start">
-            <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
+            <video controls autoplay loop muted class="iprf-video">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
             </video>
           </div>
@@ -1214,10 +1236,10 @@ title: International Publications
         <!-- Room Scene -->
         <div class="row mb-4 align-items-start">
           <div class="col-md-3 d-flex align-items-start justify-content-center">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Style Image" style="width: 80%; border-radius: 8px;">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Style Image" class="iprf-style-image">
           </div>
           <div class="col-md-9 d-flex align-items-start">
-            <video controls autoplay loop muted style="width: 80%; height: auto; border-radius: 8px;">
+            <video controls autoplay loop muted class="iprf-video">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
             </video>
           </div>

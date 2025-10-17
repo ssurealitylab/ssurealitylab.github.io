@@ -1040,20 +1040,18 @@ title: International Publications
 
 /* IPRF Video and Image Styles */
 .iprf-video {
-  width: 72%;
-  height: auto;
+  width: auto;
+  height: 100%;
   border-radius: 8px;
   background: white;
 }
 
 .iprf-style-image {
-  width: auto;
-  height: 100%;
+  width: 50%;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 8px;
   background: white;
-  max-width: 100%;
 }
 
 /* Fix transparent background issue */

@@ -1051,15 +1051,15 @@ title: International Publications
 }
 
 .iprf-video {
-  max-width: 100%;
-  height: 100%;
+  max-width: 80%;
+  height: auto;
   border-radius: 8px;
   background: white;
   object-fit: contain;
 }
 
 .iprf-style-image {
-  width: 50%;
+  width: 60%;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 8px;

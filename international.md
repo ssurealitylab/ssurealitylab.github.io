@@ -738,7 +738,8 @@ title: International Publications
   top: 45px;
   display: flex;
   gap: 10px;
-  z-index: 5;
+  z-index: 100;
+  pointer-events: auto;
 }
 
 .external-icon-link {
@@ -750,6 +751,8 @@ title: International Publications
   text-decoration: none;
   transition: all 0.3s ease;
   opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .external-icon-link:hover {
@@ -1434,6 +1437,11 @@ title: International Publications
         <p><strong>[C20&J9]</strong> Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al., "Predicting tDCS Treatment Effects Using Machine Learning," <em>Proc. International Brain Stimulation Conference & Brain Stimulation Journal</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
+
+      <p style="font-size: 120%;"><strong>Abstract:</strong></p>
+      <p>The study's objective was to develop a clinical prediction rule that predicts a clinically significant analgesic effect on chronic knee osteoarthritis pain after transcranial direct current stimulation treatment. This is a secondary analysis from a double-blind randomized controlled trial. Data from 51 individuals with chronic knee osteoarthritis pain and an impaired descending pain inhibitory system were used. The intervention comprised a 15-session protocol of anodal primary motor cortex transcranial direct current stimulation. Treatment success was defined by the Western Ontario and McMaster Universities' Osteoarthritis Index pain subscale. Accuracy statistics were calculated for each potential predictor and for the final model.</p>
+
+      <p>The final logistic regression model was statistically significant (p < 0.01) and comprised five physical and psychosocial predictor variables that together yielded a positive likelihood ratio of 14.40 (95% CI: 3.66–56.69) and an 85% (95%CI: 60–96%) post-test probability of success. This is the first clinical prediction rule proposed for transcranial direct current stimulation in patients with chronic pain. The model underscores the importance of both physical and psychosocial factors as predictors of the analgesic response to transcranial direct current stimulation treatment. Validation of the proposed clinical prediction rule should be performed in other datasets.</p>
     </div>
   </div>
 </div>

@@ -1039,11 +1039,23 @@ title: International Publications
 }
 
 /* IPRF Video and Image Styles */
+.iprf-scene-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.iprf-image-col, .iprf-video-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .iprf-video {
-  width: auto;
+  max-width: 100%;
   height: 100%;
   border-radius: 8px;
   background: white;
+  object-fit: contain;
 }
 
 .iprf-style-image {
@@ -1210,11 +1222,11 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
 
         <!-- Flower Scene -->
-        <div class="row mb-4 align-items-start">
-          <div class="col-md-3 d-flex align-items-start justify-content-center">
+        <div class="row mb-4 iprf-scene-row">
+          <div class="col-md-3 iprf-image-col">
             <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Style Image" class="iprf-style-image">
           </div>
-          <div class="col-md-9 d-flex align-items-start">
+          <div class="col-md-9 iprf-video-col">
             <video controls autoplay loop muted class="iprf-video">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
             </video>
@@ -1222,11 +1234,11 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
 
         <!-- Horns Scene -->
-        <div class="row mb-4 align-items-start">
-          <div class="col-md-3 d-flex align-items-start justify-content-center">
+        <div class="row mb-4 iprf-scene-row">
+          <div class="col-md-3 iprf-image-col">
             <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Style Image" class="iprf-style-image">
           </div>
-          <div class="col-md-9 d-flex align-items-start">
+          <div class="col-md-9 iprf-video-col">
             <video controls autoplay loop muted class="iprf-video">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
             </video>
@@ -1234,11 +1246,11 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
 
         <!-- Room Scene -->
-        <div class="row mb-4 align-items-start">
-          <div class="col-md-3 d-flex align-items-start justify-content-center">
+        <div class="row mb-4 iprf-scene-row">
+          <div class="col-md-3 iprf-image-col">
             <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Style Image" class="iprf-style-image">
           </div>
-          <div class="col-md-9 d-flex align-items-start">
+          <div class="col-md-9 iprf-video-col">
             <video controls autoplay loop muted class="iprf-video">
               <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
             </video>

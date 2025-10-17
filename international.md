@@ -1126,14 +1126,72 @@ title: International Publications
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
       <h2 class="text-uppercase">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h2>
-      <p class="item-intro">International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV)</p>
+      <div>
+        <p class="item-intro">International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV)</p>
+        <div class="modal-header-links">
+          <a href="https://drive.google.com/file/d/10vp2SWByAJGr-Ccrw68c2hTepsMr5di9/view" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a href="https://oshmos.github.io/IPRF/" target="_blank" class="modal-icon-link active website-link" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://github.com/OSHMOS/IPRF" target="_blank" class="modal-icon-link active github-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="publication-modal-body">
+      <!-- Video Results Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Results</h5>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <video controls style="width: 100%; border-radius: 8px;">
+              <source src="{{ site.baseurl }}/참고 이미지/논문 이미지/flower_14.mp4" type="video/mp4">
+            </video>
+            <p class="text-center mt-2"><small>Flower Scene</small></p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <video controls style="width: 100%; border-radius: 8px;">
+              <source src="{{ site.baseurl }}/참고 이미지/논문 이미지/horns_139.mp4" type="video/mp4">
+            </video>
+            <p class="text-center mt-2"><small>Horns Scene</small></p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <video controls style="width: 100%; border-radius: 8px;">
+              <source src="{{ site.baseurl }}/참고 이미지/논문 이미지/room_122.mp4" type="video/mp4">
+            </video>
+            <p class="text-center mt-2"><small>Room Scene</small></p>
+          </div>
+        </div>
+      </div>
+
       <!-- Method Image Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Method Overview</h5>
+        <h5 class="method-image-title">Method</h5>
         <div class="method-image-container">
-          <img src="{{ site.baseurl }}/img/publications/app3dv2025.jpg" alt="APP3DV 2025 Method" class="method-image">
+          <img src="{{ site.baseurl }}/참고 이미지/논문 이미지/Style Transfer Pipeline.png" alt="IPRF Method" class="method-image">
+        </div>
+      </div>
+
+      <!-- Comparison Results -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Style Transfer Comparisons</h5>
+        <div class="row mb-3">
+          <div class="col-12">
+            <img src="{{ site.baseurl }}/참고 이미지/논문 이미지/14.jpg" alt="Flower Comparison" class="method-image" style="width: 100%;">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <img src="{{ site.baseurl }}/참고 이미지/논문 이미지/139.jpg" alt="Horns Comparison" class="method-image" style="width: 100%;">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <img src="{{ site.baseurl }}/참고 이미지/논문 이미지/122.jpg" alt="Room Comparison" class="method-image" style="width: 100%;">
+          </div>
         </div>
       </div>
 
@@ -1141,6 +1199,13 @@ title: International Publications
         <p><strong>[C24]</strong> Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields," <em>Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
+
+      <p><strong>Abstract:</strong></p>
+      <p>Photorealistic style transfer in neural radiance fields (NeRF) aims to modify the color characteristics of a 3D scene without altering its underlying geometry. Although recent approaches have achieved promising results, they often suffer from limited style diversity, focusing primarily on global color shifts. In contrast, artistic style transfer methods offer richer stylization but usually distort scene geometry, thereby reducing realism.</p>
+
+      <p>In this work, we present Intrinsic-guided Photorealistic Style Transfer (IPRF), a novel framework that leverages intrinsic image decomposition to decouple a scene into albedo and shading components. By introducing tailored loss functions in both domains, IPRF aligns the texture and color of the content scene to those of a style image while faithfully preserving geometric structure and lighting.</p>
+
+      <p>Furthermore, we propose Tuning-assisted Style Interpolation (TSI), a real-time technique for exploring the trade-off between photorealism and artistic expression through a weighted combination of albedo-oriented and shading-oriented radiance fields. Experimental results demonstrate that IPRF achieves a superior balance between naturalism and artistic expression compared to state-of-the-art methods, offering a versatile solution for 3D content creation in various fields, including digital art, virtual reality, and game design.</p>
     </div>
   </div>
 </div>

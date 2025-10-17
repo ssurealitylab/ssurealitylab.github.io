@@ -1154,7 +1154,7 @@ title: International Publications
     </div>
     <div class="publication-modal-body">
       <!-- Video Results Section -->
-      <div class="method-image-section mb-4">
+      <div class="method-image-section mb-4" style="transform: scale(0.7); transform-origin: top left; width: 142.857%; margin-bottom: -30%;">
         <h5 class="method-image-title" style="font-size: 120%;">Results</h5>
 
         <!-- Column Headers -->

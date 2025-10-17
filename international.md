@@ -1157,39 +1157,95 @@ title: International Publications
       <div class="method-image-section mb-4">
         <h5 class="method-image-title">Results</h5>
 
-        <!-- Flower Scene -->
-        <div class="row mb-4 align-items-center">
-          <div class="col-md-3">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Style Image" style="width: 100%; border-radius: 8px;">
+        <!-- Column Headers -->
+        <div class="row mb-3">
+          <div class="col-md-2 text-center">
+            <strong>Style Image</strong>
           </div>
-          <div class="col-md-9">
-            <video controls autoplay loop muted style="width: 100%; border-radius: 8px;">
-              <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
-            </video>
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-4 text-center"><strong>Plenoxels</strong></div>
+              <div class="col-4 text-center"><strong>FPRF</strong></div>
+              <div class="col-4 text-center"><strong>IPRF</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flower Scene -->
+        <div class="row mb-4 align-items-stretch">
+          <div class="col-md-2 d-flex align-items-center justify-content-center" style="padding: 10px;">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/14.jpg" alt="Style Image" style="width: 80%; height: auto; max-height: 200px; object-fit: contain; border-radius: 8px;">
+          </div>
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-4">
+                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+                  <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-4">
+                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+                  <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-4">
+                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+                  <source src="{{ site.baseurl }}/assets/img/publications/iprf/flower_14.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Horns Scene -->
-        <div class="row mb-4 align-items-center">
-          <div class="col-md-3">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Style Image" style="width: 100%; border-radius: 8px;">
+        <div class="row mb-4 align-items-stretch">
+          <div class="col-md-2 d-flex align-items-center justify-content-center" style="padding: 10px;">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/139.jpg" alt="Style Image" style="width: 80%; height: auto; max-height: 200px; object-fit: contain; border-radius: 8px;">
           </div>
-          <div class="col-md-9">
-            <video controls autoplay loop muted style="width: 100%; border-radius: 8px;">
-              <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
-            </video>
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-4">
+                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+                  <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-4">
+                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+                  <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-4">
+                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+                  <source src="{{ site.baseurl }}/assets/img/publications/iprf/horns_139.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Room Scene -->
-        <div class="row mb-4 align-items-center">
-          <div class="col-md-3">
-            <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Style Image" style="width: 100%; border-radius: 8px;">
+        <div class="row mb-4 align-items-stretch">
+          <div class="col-md-2 d-flex align-items-center justify-content-center" style="padding: 10px;">
+            <img src="{{ site.baseurl }}/assets/img/publications/iprf/122.jpg" alt="Style Image" style="width: 80%; height: auto; max-height: 200px; object-fit: contain; border-radius: 8px;">
           </div>
-          <div class="col-md-9">
-            <video controls autoplay loop muted style="width: 100%; border-radius: 8px;">
-              <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
-            </video>
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-4">
+                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+                  <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-4">
+                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+                  <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-4">
+                <video controls autoplay loop muted style="width: 80%; height: 200px; object-fit: cover; border-radius: 8px;">
+                  <source src="{{ site.baseurl }}/assets/img/publications/iprf/room_122.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </div>

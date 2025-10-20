@@ -847,21 +847,21 @@ title: International Publications
   overflow-y: auto;
   position: relative;
   margin: 2rem;
-  width: 80vw;
-  max-width: 80vw;
+  width: 90vw;
+  max-width: 90vw;
 }
 
 @media (min-width: 768px) {
   .publication-modal-content {
-    width: 65vw;
-    max-width: 65vw;
+    width: 75vw;
+    max-width: 75vw;
   }
 }
 
 @media (min-width: 1200px) {
   .publication-modal-content {
-    width: 60vw;
-    max-width: 60vw;
+    width: 70vw;
+    max-width: 70vw;
   }
 }
 
@@ -1270,6 +1270,9 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
+
       <!-- Architecture Image Section -->
       <div class="method-image-section mb-4">
         <h5 class="method-image-title" style="font-size: 120%;">Architecture</h5>
@@ -1278,10 +1281,16 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
+
       <div class="citation-box">
         <p><strong>[C24]</strong> Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields," <em>Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
+
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
 
       <p style="font-size: 120%;"><strong>Abstract:</strong></p>
       <p>Photorealistic style transfer in neural radiance fields (NeRF) aims to modify the color characteristics of a 3D scene without altering its underlying geometry. Although recent approaches have achieved promising results, they often suffer from limited style diversity, focusing primarily on global color shifts. In contrast, artistic style transfer methods offer richer stylization but usually distort scene geometry, thereby reducing realism.</p>

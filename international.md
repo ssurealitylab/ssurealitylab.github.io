@@ -843,25 +843,25 @@ title: International Publications
   background: white;
   border-radius: 15px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: auto;
   position: relative;
   margin: 2rem;
-  width: 90vw;
-  max-width: 90vw;
+  width: 80vw;
+  max-width: 80vw;
 }
 
 @media (min-width: 768px) {
   .publication-modal-content {
-    width: 75vw;
-    max-width: 75vw;
+    width: 65vw;
+    max-width: 65vw;
   }
 }
 
 @media (min-width: 1200px) {
   .publication-modal-content {
-    width: 70vw;
-    max-width: 70vw;
+    width: 60vw;
+    max-width: 60vw;
   }
 }
 

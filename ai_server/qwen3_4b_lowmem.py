@@ -102,8 +102,8 @@ def ensure_sentence_completion(text, language='ko'):
 
     return text
 
-def generate_response(prompt, language='ko', max_length=500):
-    """Generate AI response (optimized for speed)"""
+def generate_response(prompt, language='ko', max_length=700):
+    """Generate AI response"""
     global model, tokenizer
 
     if model is None or tokenizer is None:

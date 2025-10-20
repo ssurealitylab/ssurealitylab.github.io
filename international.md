@@ -1436,7 +1436,7 @@ img, video, .method-image, .publication-thumbnail img {
       <div class="method-image-section mb-4">
         <h5 class="method-image-title">Method Overview</h5>
         <div class="method-image-container">
-          <img src="{{ site.baseurl }}/img/publications/cvpr2025.jpg" alt="CVPR 2025 Method" class="method-image">
+          <img src="{{ site.baseurl }}/assets/img/publications/cvpr2025.png" alt="CVPR 2025 Method" class="method-image">
         </div>
       </div>
 

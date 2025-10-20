@@ -1145,6 +1145,14 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
+      <!-- Overview Image Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Overview</h5>
+        <div class="method-image-container">
+          <img src="{{ site.baseurl }}/assets/img/publications/sidl/overview.png" alt="SIDL Overview" class="method-image">
+        </div>
+      </div>
+
       <div class="citation-box">
         <p><strong>[C21]</strong> Sooyoung Choi*†, Sungyong Park*, and Heewon Kim, "SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses," <em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2025</p>
       </div>

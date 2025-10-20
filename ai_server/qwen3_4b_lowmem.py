@@ -361,10 +361,20 @@ Reality Lab 정보:
                 # Stream the response
                 full_response = ""
                 token_count = 0
+                in_think_block = False
+
                 for text in streamer:
-                    # Remove thinking tags
-                    text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
-                    if text:
+                    # Track <think> blocks for streaming (tags can be split across tokens)
+                    if '<think>' in text:
+                        in_think_block = True
+                        text = text.replace('<think>', '')
+
+                    if '</think>' in text:
+                        in_think_block = False
+                        text = text.replace('</think>', '')
+
+                    # Skip content inside <think> blocks
+                    if not in_think_block and text.strip():
                         full_response += text
                         token_count += 1
                         yield f"data: {json.dumps({'text': text, 'done': False})}\n\n"

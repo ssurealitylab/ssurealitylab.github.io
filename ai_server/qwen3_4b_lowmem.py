@@ -102,8 +102,8 @@ def ensure_sentence_completion(text, language='ko'):
 
     return text
 
-def generate_response(prompt, language='ko', max_length=1200):
-    """Generate AI response"""
+def generate_response(prompt, language='ko', max_length=500):
+    """Generate AI response (optimized for speed)"""
     global model, tokenizer
 
     if model is None or tokenizer is None:
@@ -164,17 +164,20 @@ Reality Lab 정보:
             max_length=512
         ).to(model.device)
 
-        # Generate response with greedy decoding
+        # Generate response with optimized parameters for speed
         with torch.no_grad():
             outputs = model.generate(
                 inputs.input_ids,
                 max_new_tokens=max_length,
-                do_sample=False,  # Greedy decoding only
+                min_new_tokens=20,  # Ensure at least some response
+                do_sample=False,  # Greedy decoding (fastest)
+                num_beams=1,  # No beam search (fastest)
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,
                 attention_mask=inputs.attention_mask,
-                use_cache=True,
-                early_stopping=True
+                use_cache=True,  # Use KV cache for speed
+                early_stopping=True,
+                repetition_penalty=1.1  # Prevent repetition, faster termination
             )
 
         # Decode response
@@ -229,7 +232,7 @@ def chat():
 
         user_question = data['question']
         language = data.get('language', 'ko')
-        max_length = data.get('max_length', 1200)
+        max_length = data.get('max_length', 500)  # Optimized default
 
         # Generate AI response
         ai_response = generate_response(user_question, language=language, max_length=max_length)

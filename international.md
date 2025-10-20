@@ -1022,8 +1022,9 @@ title: International Publications
 }
 
 .method-image-container {
-  width: 100%;
-  max-width: 100%;
+  width: 85%;
+  max-width: 85%;
+  margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -1216,7 +1217,7 @@ img, video, .method-image, .publication-thumbnail img {
     <div class="publication-modal-body">
       <!-- Video Demo Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title" style="font-size: 120%;">Demos</h5>
+        <h5 class="method-image-title" style="font-size: 120%;">Demo</h5>
 
         <!-- Column Headers -->
         <div class="row mb-3">

@@ -844,11 +844,13 @@ title: International Publications
   border-radius: 15px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
   max-height: 90vh;
-  overflow-y: auto;
+  overflow: hidden;
   position: relative;
   margin: 2rem;
   width: 85vw;
   max-width: 85vw;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -906,6 +908,8 @@ title: International Publications
 
 .publication-modal-body {
   padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
 }
 
 .modal-header-links {
@@ -1149,6 +1153,9 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
+
       <!-- Architecture Image Section -->
       <div class="method-image-section mb-4">
         <h5 class="method-image-title">Architecture</h5>
@@ -1157,10 +1164,16 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
+
       <div class="citation-box">
         <p><strong>[C21]</strong> Sooyoung Choi*†, Sungyong Park*, and Heewon Kim, "SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses," <em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2025</p>
       </div>
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
+
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
 
       <p><strong>Abstract:</strong></p>
       <p>The SIDL (Smartphone Images with Dirty Lenses) dataset addresses a critical gap in image restoration research by providing a comprehensive collection of real-world smartphone images with lens contamination. The dataset contains 300 static scenes with 1,588 image pairs captured in full resolution (4032 × 3024 pixels) 12-bit RAW format. It includes five real-world contaminant types: fingerprints, dust, scratches, water drops, and mixed debris. Scenes span diverse environments and lighting conditions, with images categorized into Easy, Medium, and Hard difficulty levels based on image quality degradation. This dataset's unique contribution is providing diverse real-world images taken under various lighting conditions and environments with paired clean and contaminated images, enabling supervised learning for image restoration techniques.</p>
@@ -1184,6 +1197,9 @@ img, video, .method-image, .publication-thumbnail img {
           <img src="{{ site.baseurl }}/img/publications/bmvc2025.jpg" alt="BMVC 2025 Method" class="method-image">
         </div>
       </div>
+
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
 
       <div class="citation-box">
         <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
@@ -1319,10 +1335,16 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
+
       <div class="citation-box">
         <p><strong>[J12]</strong> Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis," <em>PLOS ONE</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
+
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
 
       <p style="font-size: 120%;"><strong>Abstract:</strong></p>
       <p>Deep neural networks have achieved significant performance breakthroughs across a range of tasks. For diagnosing depression, there has been increasing attention on estimating depression status from personal medical data. However, the neural networks often act as black boxes, making it difficult to discern the individual effects of each input component. To alleviate this problem, we proposed a deep-learning-based generalized additive model called DeepGAM to improve the interpretability of depression diagnosis.</p>
@@ -1383,10 +1405,16 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
+
       <div class="citation-box">
         <p><strong>[J11]</strong> Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, "Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases," <em>Journal of Electrical Engineering & Technology (JEET)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
+
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
 
       <p style="font-size: 120%;"><strong>Abstract:</strong></p>
       <p>We propose a diagnostic system for identifying bronchial diseases by analyzing dog cough sounds. We collected a dataset consisting of 124 healthy dog cough sounds obtained from open sources and 94 dog cough sounds with bronchial diseases obtained from YouTube, and performed a total of 218 recordings. These cough sounds were segmented into 423 separate cough datasets to improve the details and accuracy of their analysis. Additionally, data augmentation techniques such as noise addition, pitch shifting, time stretching, and volume scaling were applied, increasing the dataset size by 7 times. This resulted in 1,526 training and testing samples for multiple coughs and 2,961 samples for single coughs.</p>
@@ -1413,10 +1441,16 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
+
       <div class="citation-box">
         <p><strong>[J10]</strong> Seunghyun Oh† and Heewon Kim, "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance," <em>ICT Express</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>† Undergraduate student</small></p>
+
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
 
       <p style="font-size: 120%;"><strong>Abstract:</strong></p>
       <p>Human pose estimation (HPE) is challenging due to the need to accurately capture rapid and occluded body movements, often resulting in uncertain predictions. In the context of fast sports actions like baseball swings, existing HPE methods insufficiently leverage domain-specific prior knowledge about these movements. To address this gap, we propose the Baseball Player Pose Corrector (BPPC), an optimization framework that utilizes high-quality 3D standard motion data to refine 2D keypoints in baseball swing videos. BPPC operates in two stages: first, it aligns the 3D standard motion to test swing videos through action recognition, offset learning, and 3D-to-2D projection. Next, it applies movement-aware optimization to refine the keypoints, ensuring robustness to variations in swing patterns.</p>
@@ -1453,10 +1487,16 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
+
       <div class="citation-box">
         <p><strong>[C22]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2025 (accepted)</p>
       </div>
       <p class="mt-3"><small>* Equal contribution</small></p>
+
+      <!-- Section Divider -->
+      <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 2.5rem 0;">
 
       <p style="font-size: 120%;"><strong>Abstract:</strong></p>
       <p>Creating robotic manipulation datasets is traditionally labor-intensive and expansive, requiring extensive manual effort. To alleviate this problem, we introduce PhaseScene, which generates realistic and diverse dynamic scenes (or robotic manipulation data) from text instructions for Embodied AI. PhaseScene employs a phase-specific data representation by dividing dynamic scenes into static environments and robot movements. Each phase utilizes a diffusion-based method to generate phase-specific data, incorporating data refinement and augmentation techniques.</p>

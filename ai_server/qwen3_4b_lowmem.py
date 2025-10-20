@@ -5,14 +5,15 @@ Reality Lab Qwen3-4B Server (Low Memory Version with 8-bit quantization)
 
 import os
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
-from flask import Flask, request, jsonify
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, TextIteratorStreamer
+from flask import Flask, request, jsonify, Response, stream_with_context
 from flask_cors import CORS
 import logging
 import time
 import requests
 import json
 import re
+from threading import Thread
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -110,9 +111,9 @@ def generate_response(prompt, language='ko', max_length=700):
         return "AI model not loaded"
 
     try:
-        # Create language-specific system prompt (polite and informative)
+        # Create language-specific system prompt (concise yet friendly with key info)
         if language == 'en':
-            system_content = """You are a helpful assistant for Reality Lab at Soongsil University. Please answer politely and provide helpful context when needed.
+            system_content = """You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
 
 Reality Lab (Soongsil University):
 - Established 2023, Led by Prof. Heewon Kim
@@ -122,12 +123,12 @@ Reality Lab (Soongsil University):
 - Recent Publications: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
 
 Guidelines:
-- Be polite and respectful
-- Provide helpful context and explanations
-- Use complete sentences
+- Be concise yet polite and friendly
+- Include all key information needed
+- Use natural, complete sentences
 - No <think> tags or internal reasoning"""
         else:
-            system_content = """당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 정중하고 도움이 되는 답변을 제공해주세요.
+            system_content = """당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 간결하면서도 친절하게, 핵심 정보는 모두 포함하여 답변하세요.
 
 Reality Lab 정보:
 - 설립: 2023년, 김희원 교수님
@@ -137,9 +138,9 @@ Reality Lab 정보:
 - 최근 논문: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
 
 답변 가이드라인:
-- 존댓말을 사용하여 정중하게 답변하세요
-- 필요한 설명과 맥락을 충분히 제공하세요
-- 완전한 문장으로 답변하세요
+- 간결하면서도 친절하게 답변하세요
+- 필요한 핵심 정보는 빠짐없이 포함하세요
+- 자연스럽고 완전한 문장을 사용하세요
 - <think> 태그나 내부 추론 과정은 표시하지 마세요"""
 
         # Create chat template
@@ -259,6 +260,130 @@ def chat():
         import traceback
         logger.error(f"Error in chat endpoint: {e}")
         logger.error(f"Traceback: {traceback.format_exc()}")
+        return jsonify({'error': f'Internal server error: {str(e)}'}), 500
+
+@app.route('/chat/stream', methods=['POST'])
+def chat_stream():
+    """Streaming chat endpoint using Server-Sent Events"""
+    try:
+        data = request.get_json(force=True)
+
+        if not data or 'question' not in data:
+            return jsonify({'error': 'No question provided'}), 400
+
+        user_question = data['question']
+        language = data.get('language', 'ko')
+        max_length = data.get('max_length', 700)
+
+        def generate_stream():
+            global model, tokenizer
+
+            if model is None or tokenizer is None:
+                yield f"data: {json.dumps({'error': 'AI model not loaded'})}\n\n"
+                return
+
+            try:
+                start_time = time.time()
+
+                # Create system prompt
+                if language == 'en':
+                    system_content = """You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
+
+Reality Lab (Soongsil University):
+- Established 2023, Led by Prof. Heewon Kim
+- Research: Robotics, Computer Vision, Machine Learning, Multimodal AI, Healthcare AI
+- Location: 105 Sadan-ro, Dongjak-gu, Seoul
+- Contact: +82-2-820-0679
+- Recent Publications: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
+
+Guidelines:
+- Be concise yet polite and friendly
+- Include all key information needed
+- Use natural, complete sentences
+- No <think> tags or internal reasoning"""
+                else:
+                    system_content = """당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 간결하면서도 친절하게, 핵심 정보는 모두 포함하여 답변하세요.
+
+Reality Lab 정보:
+- 설립: 2023년, 김희원 교수님
+- 연구 분야: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI
+- 위치: 서울특별시 동작구 사당로 105, 숭실대학교
+- 연락처: +82-2-820-0679
+- 최근 논문: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
+
+답변 가이드라인:
+- 간결하면서도 친절하게 답변하세요
+- 필요한 핵심 정보는 빠짐없이 포함하세요
+- 자연스럽고 완전한 문장을 사용하세요
+- <think> 태그나 내부 추론 과정은 표시하지 마세요"""
+
+                messages = [
+                    {"role": "system", "content": system_content},
+                    {"role": "user", "content": user_question}
+                ]
+
+                formatted_prompt = tokenizer.apply_chat_template(
+                    messages,
+                    tokenize=False,
+                    add_generation_prompt=True
+                )
+
+                inputs = tokenizer(
+                    formatted_prompt,
+                    return_tensors="pt",
+                    truncation=True,
+                    max_length=512
+                ).to(model.device)
+
+                # Initialize streamer
+                streamer = TextIteratorStreamer(tokenizer, skip_special_tokens=True, skip_prompt=True)
+
+                # Generation parameters
+                generation_kwargs = {
+                    "input_ids": inputs.input_ids,
+                    "max_new_tokens": max_length,
+                    "min_new_tokens": 50,
+                    "do_sample": False,
+                    "num_beams": 1,
+                    "pad_token_id": tokenizer.eos_token_id,
+                    "eos_token_id": tokenizer.eos_token_id,
+                    "attention_mask": inputs.attention_mask,
+                    "use_cache": True,
+                    "early_stopping": True,
+                    "repetition_penalty": 1.1,
+                    "streamer": streamer
+                }
+
+                # Start generation in a separate thread
+                thread = Thread(target=model.generate, kwargs=generation_kwargs)
+                thread.start()
+
+                # Stream the response
+                full_response = ""
+                token_count = 0
+                for text in streamer:
+                    # Remove thinking tags
+                    text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+                    if text:
+                        full_response += text
+                        token_count += 1
+                        yield f"data: {json.dumps({'text': text, 'done': False})}\n\n"
+
+                thread.join()
+
+                # Send final message with stats
+                end_time = time.time()
+                response_time = round(end_time - start_time, 2)
+                yield f"data: {json.dumps({'done': True, 'response_time': response_time, 'tokens': token_count})}\n\n"
+
+            except Exception as e:
+                logger.error(f"Error in streaming: {e}")
+                yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+        return Response(stream_with_context(generate_stream()), mimetype='text/event-stream')
+
+    except Exception as e:
+        logger.error(f"Error in chat/stream endpoint: {e}")
         return jsonify({'error': f'Internal server error: {str(e)}'}), 500
 
 def detect_profanity(text):

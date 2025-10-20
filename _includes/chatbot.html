@@ -1191,6 +1191,102 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Call AI Server with Streaming (EventSource)
+  async function callAIServerStream(question, isEnglish = false) {
+    if (!currentEndpoint) {
+      return {
+        response: isEnglish ? "Server not configured" : "서버가 설정되지 않았습니다",
+        response_time: null,
+        tokens: null
+      };
+    }
+
+    return new Promise((resolve, reject) => {
+      const url = `${currentEndpoint}/chat/stream`;
+      let fullResponse = "";
+      let responseTime = null;
+      let tokens = null;
+
+      // Create EventSource manually using fetch for POST
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          question: question,
+          language: isEnglish ? 'en' : 'ko',
+          max_length: 700
+        }),
+      }).then(response => {
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+
+        function readChunk() {
+          return reader.read().then(({ value, done }) => {
+            if (done) {
+              resolve({
+                response: fullResponse,
+                response_time: responseTime,
+                tokens: tokens
+              });
+              return;
+            }
+
+            const chunk = decoder.decode(value);
+            const lines = chunk.split('\n');
+
+            for (const line of lines) {
+              if (line.startsWith('data: ')) {
+                const jsonData = line.substring(6);
+                try {
+                  const data = JSON.parse(jsonData);
+
+                  if (data.error) {
+                    reject(new Error(data.error));
+                    return;
+                  }
+
+                  if (data.text && !data.done) {
+                    fullResponse += data.text;
+                    // Update the bot message in real-time
+                    updateStreamingMessage(fullResponse);
+                  }
+
+                  if (data.done) {
+                    responseTime = data.response_time;
+                    tokens = data.tokens;
+                  }
+                } catch (e) {
+                  // Skip invalid JSON
+                }
+              }
+            }
+
+            return readChunk();
+          });
+        }
+
+        return readChunk();
+      }).catch(error => {
+        reject(error);
+      });
+    });
+  }
+
+  // Update streaming message in real-time
+  function updateStreamingMessage(text) {
+    const messages = chatbotMessages.querySelectorAll('.message');
+    const lastMessage = messages[messages.length - 1];
+
+    if (lastMessage && lastMessage.classList.contains('bot-message')) {
+      const contentDiv = lastMessage.querySelector('div:first-child');
+      if (contentDiv) {
+        contentDiv.innerHTML = text.replace(/\n/g, '<br>') + '<span class="cursor">█</span>';
+      }
+    }
+  }
+
   // Toggle chatbot (global function)
   window.toggleChatbot = function() {
     const container = document.getElementById('chatbot-container');
@@ -1388,43 +1484,68 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
         
-        const aiResult = await generateAIResponse(question);
-        
+        // Use streaming for real-time response
+        const aiResult = await callAIServerStream(question, isEnglish);
+
         // Clear thinking timer
         clearThinkingTimer();
-        
-        // Remove the loading message and add the real response
+
+        // Get the last message (which was updated during streaming)
         const messages = chatbotMessages.querySelectorAll('.message');
         const lastMessage = messages[messages.length - 1];
+
         if (lastMessage && lastMessage.classList.contains('bot-message')) {
           // Remove thinking timer if it exists
           const thinkingTimer = lastMessage.querySelector('.thinking-timer');
           if (thinkingTimer) {
             thinkingTimer.remove();
           }
-          lastMessage.remove();
+
+          // Remove cursor from streaming
+          const contentDiv = lastMessage.querySelector('div:first-child');
+          if (contentDiv) {
+            const cursorSpan = contentDiv.querySelector('.cursor');
+            if (cursorSpan) {
+              cursorSpan.remove();
+            }
+          }
         }
-        
+
         const response = aiResult?.response || aiResult || 'No response';
         const responseTime = (aiResult?.response_time && typeof aiResult.response_time === 'number') ? aiResult.response_time : null;
         const tokens = (aiResult?.tokens && typeof aiResult.tokens === 'number') ? aiResult.tokens : null;
-        
+
         // Check if response seems uncertain or generic for AI fallback
         let finalResponse = response;
         if (isResponseUncertain(response)) {
           const uncertaintyMessage = isEnglish ?
             "I'm not completely certain about this answer. If you need more specific information, please click " :
             "이 답변이 확실하지 않습니다. 더 구체적인 정보가 필요하시다면, ";
-          
+
           const envelopeEmoji = '📩';
           const fallbackSuffix = isEnglish ?
             " to submit your question for review by our lab members." :
             "를 클릭해 익명으로 답변 추가 요청이 가능합니다.";
-          
+
           finalResponse += "\n\n" + uncertaintyMessage + `<span class="envelope-emoji" onclick="showQuestionModal()">${envelopeEmoji}</span>` + fallbackSuffix;
         }
-        
-        addMessage(finalResponse, 'bot', responseTime, tokens);
+
+        // Update the message content with final response
+        if (lastMessage && lastMessage.classList.contains('bot-message')) {
+          const contentDiv = lastMessage.querySelector('div:first-child');
+          if (contentDiv) {
+            contentDiv.innerHTML = finalResponse.replace(/\n/g, '<br>');
+          }
+
+          // Add response time and token count
+          if (responseTime !== null && typeof responseTime === 'number' && responseTime > 0) {
+            const timeDiv = document.createElement('div');
+            timeDiv.className = 'response-time';
+            const tokenInfo = tokens && tokens > 0 ? ` · ${tokens}토큰` : '';
+            timeDiv.innerHTML = `<small style="color: #888; font-size: 11px;">응답 시간: ${responseTime}초${tokenInfo}</small>`;
+            lastMessage.appendChild(timeDiv);
+          }
+        }
       } catch (error) {
         console.error('Error in AI response:', error);
         // Clear thinking timer on error

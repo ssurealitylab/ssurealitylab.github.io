@@ -1414,7 +1414,7 @@ img, video, .method-image, .publication-thumbnail img {
       <div>
         <p class="item-intro">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
         <div class="modal-header-links">
-          <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Motion-Aware_Dynamic_Architecture_for_Efficient_Frame_Interpolation_ICCV_2021_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
+          <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DynScene_Scalable_Generation_of_Dynamic_Robotic_Manipulation_Scenes_for_Embodied_CVPR_2025_paper.pdf" target="_blank" class="modal-icon-link active pdf-link" title="PDF">
             <i class="fas fa-file-pdf"></i>
           </a>
           <a href="https://cvpr.thecvf.com/virtual/2025/poster/33953" target="_blank" class="modal-icon-link website-link" title="Website">

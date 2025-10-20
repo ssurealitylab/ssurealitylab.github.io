@@ -110,29 +110,37 @@ def generate_response(prompt, language='ko', max_length=700):
         return "AI model not loaded"
 
     try:
-        # Create language-specific system prompt (optimized - no thinking process)
+        # Create language-specific system prompt (polite and informative)
         if language == 'en':
-            system_content = """You are Reality Lab assistant at Soongsil University. Answer DIRECTLY in English only. No thinking process, no explanations.
+            system_content = """You are a helpful assistant for Reality Lab at Soongsil University. Please answer politely and provide helpful context when needed.
 
 Reality Lab (Soongsil University):
 - Established 2023, Led by Prof. Heewon Kim
 - Research: Robotics, Computer Vision, Machine Learning, Multimodal AI, Healthcare AI
 - Location: 105 Sadan-ro, Dongjak-gu, Seoul
 - Contact: +82-2-820-0679
-- Recent: CVPR 2025, BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
+- Recent Publications: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
 
-Answer briefly and directly. No <think> tags."""
+Guidelines:
+- Be polite and respectful
+- Provide helpful context and explanations
+- Use complete sentences
+- No <think> tags or internal reasoning"""
         else:
-            system_content = """당신은 숭실대학교 Reality Lab 어시스턴트입니다. 항상 간결하게 한국어로 직접 답변하세요. 생각 과정이나 설명 없이 바로 답변만 하세요.
+            system_content = """당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 정중하고 도움이 되는 답변을 제공해주세요.
 
 Reality Lab 정보:
 - 설립: 2023년, 김희원 교수님
-- 연구: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI
+- 연구 분야: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI
 - 위치: 서울특별시 동작구 사당로 105, 숭실대학교
 - 연락처: +82-2-820-0679
-- 최근 성과: CVPR 2025, BMVC 2025, AAAI 2025
+- 최근 논문: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
 
-<think> 태그 사용 금지. 간결하고 직접적으로 답변하세요."""
+답변 가이드라인:
+- 존댓말을 사용하여 정중하게 답변하세요
+- 필요한 설명과 맥락을 충분히 제공하세요
+- 완전한 문장으로 답변하세요
+- <think> 태그나 내부 추론 과정은 표시하지 마세요"""
 
         # Create chat template
         messages = [
@@ -163,7 +171,7 @@ Reality Lab 정보:
             outputs = model.generate(
                 inputs.input_ids,
                 max_new_tokens=max_length,
-                min_new_tokens=20,  # Ensure at least some response
+                min_new_tokens=50,  # Ensure substantial response
                 do_sample=False,  # Greedy decoding (fastest)
                 num_beams=1,  # No beam search (fastest)
                 pad_token_id=tokenizer.eos_token_id,
@@ -176,6 +184,11 @@ Reality Lab 정보:
 
         # Decode response
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+        # Calculate generated token count
+        input_length = inputs.input_ids.shape[1]
+        output_length = outputs.shape[1]
+        generated_tokens = output_length - input_length
 
         # Extract generated text
         if "assistant\n" in response:
@@ -193,13 +206,13 @@ Reality Lab 정보:
         # Ensure natural sentence completion
         if generated_text:
             generated_text = ensure_sentence_completion(generated_text, language)
-            return generated_text
+            return generated_text, generated_tokens
         else:
-            return "죄송합니다. 응답을 생성할 수 없습니다."
+            return "죄송합니다. 응답을 생성할 수 없습니다.", generated_tokens
 
     except Exception as e:
         logger.error(f"Error generating response: {e}")
-        return "응답 생성 중 오류가 발생했습니다."
+        return "응답 생성 중 오류가 발생했습니다.", 0
 
 @app.route('/health', methods=['GET'])
 def health_check():
@@ -229,7 +242,7 @@ def chat():
         max_length = data.get('max_length', 700)  # Balanced default
 
         # Generate AI response
-        ai_response = generate_response(user_question, language=language, max_length=max_length)
+        ai_response, token_count = generate_response(user_question, language=language, max_length=max_length)
 
         end_time = time.time()
         response_time = round(end_time - start_time, 2)
@@ -238,7 +251,8 @@ def chat():
             'response': ai_response,
             'language': language,
             'model': 'Qwen3-4B-4bit',
-            'response_time': response_time
+            'response_time': response_time,
+            'tokens': token_count
         })
 
     except Exception as e:

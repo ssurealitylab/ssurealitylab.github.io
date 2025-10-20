@@ -1170,21 +1170,23 @@ document.addEventListener('DOMContentLoaded', function() {
       if (data.auto_saved) {
         console.log('✅ AI 대화가 GitHub에 자동 저장되었습니다!');
       }
-      
+
       return {
         response: data.response || (isEnglish ? "Sorry, no response generated." : "응답을 생성할 수 없습니다."),
-        response_time: data.response_time
+        response_time: data.response_time,
+        tokens: data.tokens || null
       };
-      
+
     } catch (error) {
       console.error('Error calling AI server:', error);
       currentAIRequest = null;
-      
+
       return {
-        response: isEnglish ? 
+        response: isEnglish ?
           "❌ AI server error. Please try again." :
           "❌ AI 서버 오류입니다. 다시 시도해주세요.",
-        response_time: null
+        response_time: null,
+        tokens: null
       };
     }
   }
@@ -1405,6 +1407,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const response = aiResult?.response || aiResult || 'No response';
         const responseTime = (aiResult?.response_time && typeof aiResult.response_time === 'number') ? aiResult.response_time : null;
+        const tokens = (aiResult?.tokens && typeof aiResult.tokens === 'number') ? aiResult.tokens : null;
         
         // Check if response seems uncertain or generic for AI fallback
         let finalResponse = response;
@@ -1421,7 +1424,7 @@ document.addEventListener('DOMContentLoaded', function() {
           finalResponse += "\n\n" + uncertaintyMessage + `<span class="envelope-emoji" onclick="showQuestionModal()">${envelopeEmoji}</span>` + fallbackSuffix;
         }
         
-        addMessage(finalResponse, 'bot', responseTime);
+        addMessage(finalResponse, 'bot', responseTime, tokens);
       } catch (error) {
         console.error('Error in AI response:', error);
         // Clear thinking timer on error
@@ -1471,7 +1474,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let thinkingStartTime = null;
 
   // Add message to chat
-  function addMessage(content, type, responseTime = null) {
+  function addMessage(content, type, responseTime = null, tokens = null) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${type}-message`;
     
@@ -1485,7 +1488,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (type === 'bot' && responseTime !== null && typeof responseTime === 'number' && responseTime > 0) {
       const timeDiv = document.createElement('div');
       timeDiv.className = 'response-time';
-      timeDiv.innerHTML = `<small style="color: #888; font-size: 11px;">응답 시간: ${responseTime}초</small>`;
+      const tokenInfo = tokens && tokens > 0 ? ` · ${tokens}토큰` : '';
+      timeDiv.innerHTML = `<small style="color: #888; font-size: 11px;">응답 시간: ${responseTime}초${tokenInfo}</small>`;
       messageDiv.appendChild(timeDiv);
     }
     

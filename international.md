@@ -955,26 +955,32 @@ title: International Publications
 
 .modal-icon-link.pdf-link {
   color: #ffffff;
+  opacity: 1;
 }
 
 .modal-icon-link.pdf-link:hover {
   color: #f0f0f0;
+  opacity: 1;
 }
 
 .modal-icon-link.website-link {
   color: #ffffff;
+  opacity: 1;
 }
 
 .modal-icon-link.website-link:hover {
   color: #f0f0f0;
+  opacity: 1;
 }
 
 .modal-icon-link.github-link {
   color: #ffffff;
+  opacity: 1;
 }
 
 .modal-icon-link.github-link:hover {
   color: #f0f0f0;
+  opacity: 1;
 }
 
 .publication-modal-close {

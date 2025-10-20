@@ -226,7 +226,7 @@ def chat():
 
         user_question = data['question']
         language = data.get('language', 'ko')
-        max_length = data.get('max_length', 500)  # Optimized default
+        max_length = data.get('max_length', 700)  # Balanced default
 
         # Generate AI response
         ai_response = generate_response(user_question, language=language, max_length=max_length)

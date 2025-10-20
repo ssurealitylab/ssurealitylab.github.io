@@ -1148,9 +1148,9 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
-      <!-- Overview Image Section -->
+      <!-- Architecture Image Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Overview</h5>
+        <h5 class="method-image-title">Architecture</h5>
         <div class="method-image-container">
           <img src="{{ site.baseurl }}/assets/img/publications/sidl/overview.png" alt="SIDL Overview" class="method-image">
         </div>
@@ -1176,9 +1176,9 @@ img, video, .method-image, .publication-thumbnail img {
       <p class="item-intro">British Machine Vision Conference (BMVC)</p>
     </div>
     <div class="publication-modal-body">
-      <!-- Method Image Section -->
+      <!-- Architecture Image Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Method Overview</h5>
+        <h5 class="method-image-title">Architecture</h5>
         <div class="method-image-container">
           <img src="{{ site.baseurl }}/img/publications/bmvc2025.jpg" alt="BMVC 2025 Method" class="method-image">
         </div>
@@ -1269,9 +1269,9 @@ img, video, .method-image, .publication-thumbnail img {
         </div>
       </div>
 
-      <!-- Pipeline Image Section -->
+      <!-- Architecture Image Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title" style="font-size: 120%;">Pipeline</h5>
+        <h5 class="method-image-title" style="font-size: 120%;">Architecture</h5>
         <div class="method-image-container">
           <img src="{{ site.baseurl }}/assets/img/publications/iprf/pipeline.png" alt="IPRF Pipeline" class="method-image">
         </div>
@@ -1301,9 +1301,9 @@ img, video, .method-image, .publication-thumbnail img {
       <p class="item-intro">PLOS ONE</p>
     </div>
     <div class="publication-modal-body">
-      <!-- Network Architecture Section -->
+      <!-- Architecture Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title" style="font-size: 120%;">Network Architecture</h5>
+        <h5 class="method-image-title" style="font-size: 120%;">Architecture</h5>
         <div class="method-image-container">
           <img src="{{ site.baseurl }}/assets/img/publications/deepgam/architecture.png" alt="DeepGAM Architecture" class="method-image">
         </div>
@@ -1365,9 +1365,9 @@ img, video, .method-image, .publication-thumbnail img {
       <p class="item-intro">Journal of Electrical Engineering & Technology (JEET)</p>
     </div>
     <div class="publication-modal-body">
-      <!-- Method Image Section -->
+      <!-- Architecture Image Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Method Overview</h5>
+        <h5 class="method-image-title">Architecture</h5>
         <div class="method-image-container">
           <img src="{{ site.baseurl }}/img/publications/jeet2025.jpg" alt="JEET 2025 Method" class="method-image">
         </div>
@@ -1395,9 +1395,9 @@ img, video, .method-image, .publication-thumbnail img {
       <p class="item-intro">ICT Express</p>
     </div>
     <div class="publication-modal-body">
-      <!-- Method Image Section -->
+      <!-- Architecture Image Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Method Overview</h5>
+        <h5 class="method-image-title">Architecture</h5>
         <div class="method-image-container">
           <img src="{{ site.baseurl }}/img/publications/ictexpress2025.jpg" alt="ICT Express 2025 Method" class="method-image">
         </div>
@@ -1435,9 +1435,9 @@ img, video, .method-image, .publication-thumbnail img {
       </div>
     </div>
     <div class="publication-modal-body">
-      <!-- Method Image Section -->
+      <!-- Architecture Image Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Method Overview</h5>
+        <h5 class="method-image-title">Architecture</h5>
         <div class="method-image-container">
           <img src="{{ site.baseurl }}/assets/img/publications/cvpr2025.png" alt="CVPR 2025 Method" class="method-image">
         </div>

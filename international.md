@@ -847,21 +847,21 @@ title: International Publications
   overflow-y: auto;
   position: relative;
   margin: 2rem;
-  width: 90vw;
-  max-width: 90vw;
+  width: 85vw;
+  max-width: 85vw;
 }
 
 @media (min-width: 768px) {
   .publication-modal-content {
-    width: 75vw;
-    max-width: 75vw;
+    width: 70vw;
+    max-width: 70vw;
   }
 }
 
 @media (min-width: 1200px) {
   .publication-modal-content {
-    width: 70vw;
-    max-width: 70vw;
+    width: 65vw;
+    max-width: 65vw;
   }
 }
 

@@ -1094,6 +1094,9 @@ img, video, .method-image, .publication-thumbnail img {
       </div>
     </div>
     <div class="publication-modal-body">
+      <!-- Demo Section -->
+      <h5 class="method-image-title" style="font-size: 120%;">Demo</h5>
+
       <!-- Contamination Type Toggles -->
       <div class="text-center mb-4">
         <div class="btn-group btn-group-toggle" data-toggle="buttons" id="contaminantTypes">
@@ -1211,9 +1214,9 @@ img, video, .method-image, .publication-thumbnail img {
       </div>
     </div>
     <div class="publication-modal-body">
-      <!-- Video Results Section -->
+      <!-- Video Demo Section -->
       <div class="method-image-section mb-4">
-        <h5 class="method-image-title" style="font-size: 120%;">Results</h5>
+        <h5 class="method-image-title" style="font-size: 120%;">Demos</h5>
 
         <!-- Column Headers -->
         <div class="row mb-3">

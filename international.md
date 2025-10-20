@@ -975,8 +975,8 @@ title: International Publications
 
 .publication-modal-close {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 0px;
+  right: 5px;
   width: 40px;
   height: 40px;
   cursor: pointer;

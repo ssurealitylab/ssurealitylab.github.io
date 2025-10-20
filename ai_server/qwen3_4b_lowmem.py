@@ -14,6 +14,7 @@ import requests
 import json
 import re
 from threading import Thread
+from rag_retriever import RAGRetriever
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -25,6 +26,7 @@ CORS(app)
 # Global variables
 model = None
 tokenizer = None
+rag_retriever = None
 
 def load_model():
     """Load Qwen3-4B model with 8-bit quantization"""
@@ -105,22 +107,34 @@ def ensure_sentence_completion(text, language='ko'):
 
 def generate_response(prompt, language='ko', max_length=700):
     """Generate AI response"""
-    global model, tokenizer
+    global model, tokenizer, rag_retriever
 
     if model is None or tokenizer is None:
         return "AI model not loaded"
 
     try:
+        # Search for relevant context using RAG
+        rag_context = ""
+        if rag_retriever is not None:
+            try:
+                search_results = rag_retriever.search(prompt, k=2, min_score=0.35)
+                if search_results:
+                    rag_context = rag_retriever.format_context(search_results, language=language)
+                    rag_context += "\n\n"
+            except Exception as e:
+                logger.warning(f"RAG search failed: {e}")
+
         # Create language-specific system prompt (concise yet friendly with key info)
         if language == 'en':
-            system_content = """You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
+            system_content = f"""{rag_context}You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
+
+Use the reference materials above to answer the question. If the references don't contain the answer, use your general knowledge about Reality Lab.
 
 Reality Lab (Soongsil University):
 - Established 2023, Led by Prof. Heewon Kim
 - Research: Robotics, Computer Vision, Machine Learning, Multimodal AI, Healthcare AI
 - Location: 105 Sadan-ro, Dongjak-gu, Seoul
 - Contact: +82-2-820-0679
-- Recent Publications: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
 
 Guidelines:
 - Be concise yet polite and friendly
@@ -128,14 +142,15 @@ Guidelines:
 - Use natural, complete sentences
 - No <think> tags or internal reasoning"""
         else:
-            system_content = """당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 간결하면서도 친절하게, 핵심 정보는 모두 포함하여 답변하세요.
+            system_content = f"""{rag_context}당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 간결하면서도 친절하게, 핵심 정보는 모두 포함하여 답변하세요.
 
-Reality Lab 정보:
+위의 참고자료를 바탕으로 질문에 답변하세요. 참고자료에 답변이 없으면, Reality Lab에 대한 일반적인 지식을 활용하세요.
+
+Reality Lab 기본 정보:
 - 설립: 2023년, 김희원 교수님
 - 연구 분야: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI
 - 위치: 서울특별시 동작구 사당로 105, 숭실대학교
 - 연락처: +82-2-820-0679
-- 최근 논문: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
 
 답변 가이드라인:
 - 간결하면서도 친절하게 답변하세요
@@ -615,6 +630,17 @@ if __name__ == '__main__':
     logger.info(f"Starting Reality Lab Qwen3-4B Server (4-bit) on port {port}...")
 
     if load_model():
+        # Load RAG system
+        try:
+            logger.info("Loading RAG system...")
+            rag_retriever = RAGRetriever("/home/i0179/Realitylab-site/ai_server/vector_db")
+            rag_retriever.load()
+            logger.info("✅ RAG system loaded successfully!")
+        except Exception as e:
+            logger.warning(f"⚠️ Failed to load RAG system: {e}")
+            logger.warning("⚠️ Continuing without RAG (will use basic knowledge only)")
+            rag_retriever = None
+
         logger.info(f"🚀 Qwen3-4B server ready on port {port}!")
         logger.info("✅ Running with HTTP (no SSL)")
         app.run(host='0.0.0.0', port=port, debug=False, threaded=True)

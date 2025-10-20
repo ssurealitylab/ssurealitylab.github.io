@@ -1,0 +1,697 @@
+[
+  {
+    "content": "연구실 정보:\n이름: 숭실대학교 Reality Lab\n설립: 2023년\n위치: 서울특별시 동작구 사당로 105, 숭실대학교\n책임교수: 김희원 교수님\n이메일: heewon@ssu.ac.kr\n전화: +82-2-820-0679\n미션: 우리는 AI와 물리적 세계의 교차점을 탐구하며, 인간처럼 현실을 인지하고 이해하며 상호작용할 수 있는 지능형 시스템을 개발합니다.\n비전: 현실 세계를 이해하고 상호작용하는 AI 기술 발전",
+    "metadata": {
+      "type": "lab_info",
+      "language": "ko",
+      "category": "basic_info"
+    }
+  },
+  {
+    "content": "Lab Information:\nName: Soongsil University Reality Lab\nEstablished: 2023\nLocation: 105 Sadan-ro, Dongjak-gu, Seoul, Soongsil University\nDirector: Prof. Heewon Kim\nEmail: heewon@ssu.ac.kr\nPhone: +82-2-820-0679\nMission: We explore the intersection of AI and the physical world, developing intelligent systems that can perceive, understand, and interact with reality just like humans do.\nVision: Advancing AI technologies that understand and interact with the real world",
+    "metadata": {
+      "type": "lab_info",
+      "language": "en",
+      "category": "basic_info"
+    }
+  },
+  {
+    "content": "연구 분야: 로보틱스\n설명: 물리적 세계를 자율적으로 인지하고 학습하며 상호작용할 수 있는 지능형 로봇 시스템을 개발합니다.\n키워드: 로보틱스, 로봇, 자율시스템, 로봇시스템, robotics, robot, autonomous systems, robotic systems",
+    "metadata": {
+      "type": "research_area",
+      "language": "ko",
+      "category": "research",
+      "area_name": "로보틱스"
+    }
+  },
+  {
+    "content": "Research Area: Robotics\nDescription: Developing intelligent robotic systems that can perceive, learn, and interact with the physical world autonomously.\nKeywords: robotics, robot, autonomous systems, robotic systems, 로보틱스, 로봇",
+    "metadata": {
+      "type": "research_area",
+      "language": "en",
+      "category": "research",
+      "area_name": "Robotics"
+    }
+  },
+  {
+    "content": "연구 분야: 컴퓨터 비전\n설명: 실세계 응용과 인간-AI 상호작용을 위한 고급 시각 인식 및 이해 시스템을 연구합니다.\n키워드: 컴퓨터비전, 영상인식, 이미지처리, 비전, computer vision, visual recognition, image processing, vision",
+    "metadata": {
+      "type": "research_area",
+      "language": "ko",
+      "category": "research",
+      "area_name": "컴퓨터 비전"
+    }
+  },
+  {
+    "content": "Research Area: Computer Vision\nDescription: Advanced visual recognition and understanding systems for real-world applications and human-AI interaction.\nKeywords: computer vision, visual recognition, image processing, vision, 컴퓨터비전, 영상인식",
+    "metadata": {
+      "type": "research_area",
+      "language": "en",
+      "category": "research",
+      "area_name": "Computer Vision"
+    }
+  },
+  {
+    "content": "연구 분야: 기계학습\n설명: AI 역량과 실세계 이해 사이의 격차를 메우는 최첨단 ML 알고리즘과 모델을 연구합니다.\n키워드: 기계학습, 머신러닝, 알고리즘, AI모델, machine learning, ML, algorithms, AI models",
+    "metadata": {
+      "type": "research_area",
+      "language": "ko",
+      "category": "research",
+      "area_name": "기계학습"
+    }
+  },
+  {
+    "content": "Research Area: Machine Learning\nDescription: Cutting-edge ML algorithms and models that bridge the gap between AI capabilities and real-world understanding.\nKeywords: machine learning, ML, algorithms, AI models, 기계학습, 머신러닝",
+    "metadata": {
+      "type": "research_area",
+      "language": "en",
+      "category": "research",
+      "area_name": "Machine Learning"
+    }
+  },
+  {
+    "content": "연구 분야: 다중모달 언어 이해\n설명: 포괄적인 AI 이해를 위해 언어 처리를 시각적, 감각적 입력과 통합하는 연구를 수행합니다.\n키워드: 자연어처리, 언어처리, 다중모달, 언어이해, NLP, language processing, multimodal, language understanding",
+    "metadata": {
+      "type": "research_area",
+      "language": "ko",
+      "category": "research",
+      "area_name": "다중모달 언어 이해"
+    }
+  },
+  {
+    "content": "Research Area: Multimodal Language Understanding\nDescription: Integrating language processing with visual and sensory inputs for comprehensive AI understanding.\nKeywords: NLP, language processing, multimodal, language understanding, 자연어처리, 언어처리",
+    "metadata": {
+      "type": "research_area",
+      "language": "en",
+      "category": "research",
+      "area_name": "Multimodal Language Understanding"
+    }
+  },
+  {
+    "content": "연구 분야: AI+X 응용\n설명: 헬스케어, 교육, 인간-컴퓨터 상호작용 등 다양한 도메인에 AI 기술을 적용합니다.\n키워드: AI응용, 헬스케어AI, 교육AI, HCI, AI applications, healthcare AI, education AI",
+    "metadata": {
+      "type": "research_area",
+      "language": "ko",
+      "category": "research",
+      "area_name": "AI+X 응용"
+    }
+  },
+  {
+    "content": "Research Area: AI+X Applications\nDescription: Applying AI technologies to various domains including healthcare, education, and human-computer interaction.\nKeywords: AI applications, healthcare AI, education AI, HCI, AI응용, 헬스케어AI",
+    "metadata": {
+      "type": "research_area",
+      "language": "en",
+      "category": "research",
+      "area_name": "AI+X Applications"
+    }
+  },
+  {
+    "content": "교수진: 김희원 교수 (Prof. Heewon Kim)\n직책: Principal Investigator\n소속: Global School of Media, College of IT, Soongsil University\n이메일: heewon@ssu.ac.kr",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "faculty",
+      "name": "Prof. Heewon Kim",
+      "name_ko": "김희원 교수",
+      "email": "heewon@ssu.ac.kr"
+    }
+  },
+  {
+    "content": "석사과정 학생: 박성용 (Sungyong Park)\n연구 분야: Image Restoration, AI for Astronomy\nGitHub: https://github.com/sungyong-park\nLinkedIn: https://linkedin.com/in/sungyong-park",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Sungyong Park",
+      "name_ko": "박성용",
+      "research": "Image Restoration, AI for Astronomy"
+    }
+  },
+  {
+    "content": "석사과정 학생: 채병관 (Byungkwan Chae)\n연구 분야: Mobile AI, Augmented Reality",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Byungkwan Chae",
+      "name_ko": "채병관",
+      "research": "Mobile AI, Augmented Reality"
+    }
+  },
+  {
+    "content": "석사과정 학생: 최영재 (Youngjae Choi)\n연구 분야: Computer Vision, Deep Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Youngjae Choi",
+      "name_ko": "최영재",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "석사과정 학생: 이상민 (Sangmin Lee)\n연구 분야: Computer Vision, Embodied AI\n주요 성과: Qualcomm Internship, CVPR 2025 paper acceptance\nGitHub: https://github.com/sangmin-lee\nLinkedIn: https://linkedin.com/in/sangmin-lee",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Sangmin Lee",
+      "name_ko": "이상민",
+      "research": "Computer Vision, Embodied AI"
+    }
+  },
+  {
+    "content": "석사과정 학생: 고민주 (Minjoo Koh)\n연구 분야: 3D Vision, AI for Sports",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Minjoo Koh",
+      "name_ko": "고민주",
+      "research": "3D Vision, AI for Sports"
+    }
+  },
+  {
+    "content": "석사과정 학생: 고현준 (Hyunjun Kho)\n연구 분야: Computer Vision, Deep Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Hyunjun Kho",
+      "name_ko": "고현준",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "석사과정 학생: 고현서 (Hyunsuh Kho)\n연구 분야: Multimodal Learning, Representation Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Hyunsuh Kho",
+      "name_ko": "고현서",
+      "research": "Multimodal Learning, Representation Learning"
+    }
+  },
+  {
+    "content": "석사과정 학생: 이주형 (Juhyoung Lee)\n연구 분야: Computer Vision, Deep Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Juhyoung Lee",
+      "name_ko": "이주형",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "석사과정 학생: 서지우 (Jiwoo Seo)\n연구 분야: Computer Vision, Deep Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Jiwoo Seo",
+      "name_ko": "서지우",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "석사과정 학생: 정호재 (Hojae Jeong)\n연구 분야: Computer Vision, Generative AI",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "ms_student",
+      "name": "Hojae Jeong",
+      "name_ko": "정호재",
+      "research": "Computer Vision, Generative AI"
+    }
+  },
+  {
+    "content": "인턴: 김서영 (Seoyoung Kim)\n연구 분야: Computer Vision, Deep Learning\nGitHub: https://github.com/seoyoung-kim\nLinkedIn: https://linkedin.com/in/seoyoung-kim",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Seoyoung Kim",
+      "name_ko": "김서영",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "인턴: 최수영 (Suyoung Choi)\n연구 분야: Computer Vision, Deep Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Suyoung Choi",
+      "name_ko": "최수영",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "인턴: 황지원 (Jiwon Hwang)\n연구 분야: Computer Vision, Deep Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Jiwon Hwang",
+      "name_ko": "황지원",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "인턴: 송은우 (Eunwoo Song)\n연구 분야: Computer Vision, Medical AI",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Eunwoo Song",
+      "name_ko": "송은우",
+      "research": "Computer Vision, Medical AI"
+    }
+  },
+  {
+    "content": "인턴: 이세빈 (Sebin Lee)\n연구 분야: Computer Vision, Deep Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Sebin Lee",
+      "name_ko": "이세빈",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "인턴: 김도원 (Dowon Kim)\n연구 분야: Computer Vision, Deep Learning\nGitHub: https://github.com/dowon-kim\nLinkedIn: https://linkedin.com/in/dowon-kim",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Dowon Kim",
+      "name_ko": "김도원",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "인턴: 김연지 (Yeonji Kim)\n연구 분야: Computer Vision, Generative Models",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Yeonji Kim",
+      "name_ko": "김연지",
+      "research": "Computer Vision, Generative Models"
+    }
+  },
+  {
+    "content": "인턴: 이재현 (Jaehyun Lee)\n연구 분야: Computer Vision, Deep Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Jaehyun Lee",
+      "name_ko": "이재현",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "인턴: 이예빈 (Yebin Lee)\n연구 분야: Computer Vision, AI for Sports",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Yebin Lee",
+      "name_ko": "이예빈",
+      "research": "Computer Vision, AI for Sports"
+    }
+  },
+  {
+    "content": "인턴: 임정하 (Jungha Lim)\n연구 분야: Computer Vision, Deep Learning",
+    "metadata": {
+      "type": "member",
+      "language": "ko",
+      "category": "intern",
+      "name": "Jungha Lim",
+      "name_ko": "임정하",
+      "research": "Computer Vision, Deep Learning"
+    }
+  },
+  {
+    "content": "논문: Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields\n저자: Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim\n연도: 2025\n\nPublication: Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields\nAuthors: Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields",
+      "authors": "Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models\n저자: Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim\n연도: 2025\n\nPublication: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models\nAuthors: Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models",
+      "authors": "Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis\n저자: Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim\n연도: 2025\n\nPublication: DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis\nAuthors: Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis",
+      "authors": "Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases\n저자: Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim\n연도: 2025\n\nPublication: Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases\nAuthors: Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases",
+      "authors": "Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Accurate Baseball Player Pose Refinement Using Motion Prior Guidance\n저자: Seunghyun Oh†, Heewon Kim\n연도: 2025\n\nPublication: Accurate Baseball Player Pose Refinement Using Motion Prior Guidance\nAuthors: Seunghyun Oh†, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance",
+      "authors": "Seunghyun Oh†, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI\n저자: Sangmin Lee*, Sungyong Park*, Heewon Kim\n연도: 2025\n\nPublication: DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI\nAuthors: Sangmin Lee*, Sungyong Park*, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI",
+      "authors": "Sangmin Lee*, Sungyong Park*, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses\n저자: Sooyoung Choi*†, Sungyong Park*, Heewon Kim\n연도: 2025\n\nPublication: SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses\nAuthors: Sooyoung Choi*†, Sungyong Park*, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses",
+      "authors": "Sooyoung Choi*†, Sungyong Park*, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Predictors of the treatment effects of transcranial direct current stimulation on knee osteoarthritis pain\n저자: Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al.\n연도: 2025\n\nPublication: Predictors of the treatment effects of transcranial direct current stimulation on knee osteoarthritis pain\nAuthors: Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Predictors of the treatment effects of transcranial direct current stimulation on knee osteoarthritis pain",
+      "authors": "Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: 1st Place Winner at CVPR 2025 Embodied AI Workshop\n저자: Reality Lab Team\n연도: 2025\n\nPublication: 1st Place Winner at CVPR 2025 Embodied AI Workshop\nAuthors: Reality Lab Team\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "1st Place Winner at CVPR 2025 Embodied AI Workshop",
+      "authors": "Reality Lab Team",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Predicting tDCS Treatment Effects in Depression Using Deep Learning\n저자: Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al.\n연도: 2025\n\nPublication: Predicting tDCS Treatment Effects in Depression Using Deep Learning\nAuthors: Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Predicting tDCS Treatment Effects in Depression Using Deep Learning",
+      "authors": "Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs\n저자: Jeongmoon Kim†, Sooyoung Choi†, Heewon Kim\n연도: 2025\n\nPublication: Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs\nAuthors: Jeongmoon Kim†, Sooyoung Choi†, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs",
+      "authors": "Jeongmoon Kim†, Sooyoung Choi†, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Language-Guided Robotic Manipulation\n저자: Sangmin Lee*, Sungyong Park*, Heewon Kim\n연도: 2025\n\nPublication: Language-Guided Robotic Manipulation\nAuthors: Sangmin Lee*, Sungyong Park*, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Language-Guided Robotic Manipulation",
+      "authors": "Sangmin Lee*, Sungyong Park*, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Baseball Player Pose Estimation\n저자: Seunghyun Oh†, Heewon Kim\n연도: 2025\n\nPublication: Baseball Player Pose Estimation\nAuthors: Seunghyun Oh†, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Baseball Player Pose Estimation",
+      "authors": "Seunghyun Oh†, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: NERDS: A General Framework to Train Camera Denoisers\n저자: Yunseok Yang†, Heewon Kim\n연도: 2025\n\nPublication: NERDS: A General Framework to Train Camera Denoisers\nAuthors: Yunseok Yang†, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "NERDS: A General Framework to Train Camera Denoisers",
+      "authors": "Yunseok Yang†, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: DAQ: Channel-Wise Distribution-Aware Quantization\n저자: Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim\n연도: 2025\n\nPublication: DAQ: Channel-Wise Distribution-Aware Quantization\nAuthors: Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "DAQ: Channel-Wise Distribution-Aware Quantization",
+      "authors": "Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Batch Normalization Tells You Which Filter is Important\n저자: Sangmin Lee*, Sungyong Park*, Heewon Kim\n연도: 2025\n\nPublication: Batch Normalization Tells You Which Filter is Important\nAuthors: Sangmin Lee*, Sungyong Park*, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Batch Normalization Tells You Which Filter is Important",
+      "authors": "Sangmin Lee*, Sungyong Park*, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Machine learning-based predictive modeling of depression in hypertensive populations\n저자: Heewon Kim, et al.\n연도: 2025\n\nPublication: Machine learning-based predictive modeling of depression in hypertensive populations\nAuthors: Heewon Kim, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Machine learning-based predictive modeling of depression in hypertensive populations",
+      "authors": "Heewon Kim, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: CADyQ: Content-Aware Dynamic Quantization\n저자: Sungyong Park*, Sangmin Lee*, Heewon Kim\n연도: 2025\n\nPublication: CADyQ: Content-Aware Dynamic Quantization\nAuthors: Sungyong Park*, Sangmin Lee*, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "CADyQ: Content-Aware Dynamic Quantization",
+      "authors": "Sungyong Park*, Sangmin Lee*, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Learning Controllable ISP for Image Enhancement\n저자: Heewon Kim, et al.\n연도: 2025\n\nPublication: Learning Controllable ISP for Image Enhancement\nAuthors: Heewon Kim, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Learning Controllable ISP for Image Enhancement",
+      "authors": "Heewon Kim, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Attentive Fine-Grained Structured Sparsity for Image Restoration\n저자: Sangmin Lee*, Sungyong Park*, Heewon Kim\n연도: 2025\n\nPublication: Attentive Fine-Grained Structured Sparsity for Image Restoration\nAuthors: Sangmin Lee*, Sungyong Park*, Heewon Kim\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Attentive Fine-Grained Structured Sparsity for Image Restoration",
+      "authors": "Sangmin Lee*, Sungyong Park*, Heewon Kim",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: MeTAL: Meta-Learning with Task-Adaptive Loss Function\n저자: Heewon Kim, et al.\n연도: 2025\n\nPublication: MeTAL: Meta-Learning with Task-Adaptive Loss Function\nAuthors: Heewon Kim, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "MeTAL: Meta-Learning with Task-Adaptive Loss Function",
+      "authors": "Heewon Kim, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning\n저자: Heewon Kim, et al.\n연도: 2025\n\nPublication: Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning\nAuthors: Heewon Kim, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning",
+      "authors": "Heewon Kim, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: ALFA: Meta-Learning with Adaptive Hyperparameters\n저자: Heewon Kim, et al.\n연도: 2025\n\nPublication: ALFA: Meta-Learning with Adaptive Hyperparameters\nAuthors: Heewon Kim, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "ALFA: Meta-Learning with Adaptive Hyperparameters",
+      "authors": "Heewon Kim, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Fine-grained neural architecture search for image super-resolution\n저자: Heewon Kim, et al.\n연도: 2025\n\nPublication: Fine-grained neural architecture search for image super-resolution\nAuthors: Heewon Kim, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Fine-grained neural architecture search for image super-resolution",
+      "authors": "Heewon Kim, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: EDSR: Enhanced Deep Residual Networks for Single Image Super-Resolution\n저자: Bee Lim*, Sanghyun Son*, Heewon Kim, et al.\n연도: 2025\n\nPublication: EDSR: Enhanced Deep Residual Networks for Single Image Super-Resolution\nAuthors: Bee Lim*, Sanghyun Son*, Heewon Kim, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "EDSR: Enhanced Deep Residual Networks for Single Image Super-Resolution",
+      "authors": "Bee Lim*, Sanghyun Son*, Heewon Kim, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "논문: Channel Attention Is All You Need for Video Frame Interpolation\n저자: Heewon Kim, et al.\n연도: 2025\n\nPublication: Channel Attention Is All You Need for Video Frame Interpolation\nAuthors: Heewon Kim, et al.\nYear: 2025",
+    "metadata": {
+      "type": "publication",
+      "language": "both",
+      "category": "paper",
+      "title": "Channel Attention Is All You Need for Video Frame Interpolation",
+      "authors": "Heewon Kim, et al.",
+      "year": "2025"
+    }
+  },
+  {
+    "content": "질문: 연구실에 어떻게 지원할 수 있나요?\n답변: Reality Lab에 관심을 가져주셔서 감사합니다! 학부생이나 대학원생 모두 환영합니다. 자세한 지원 방법은 김희원 교수님께 이메일(heewon@ssu.ac.kr)로 문의해주시거나 전화(+82-2-820-0679)로 연락해주세요.\n키워드: 지원, 지원방법, 참여, 입학",
+    "metadata": {
+      "type": "qa",
+      "language": "ko",
+      "category": "faq",
+      "question": "연구실에 어떻게 지원할 수 있나요?"
+    }
+  },
+  {
+    "content": "질문: 어떤 프로젝트를 진행하고 있나요?\n답변: 현재 로보틱스, 컴퓨터 비전, 머신러닝, 다중모달 언어 이해, AI+X 응용 분야에서 다양한 연구 프로젝트를 진행하고 있습니다. 구체적인 프로젝트 내용은 김희원 교수님께 문의해주세요.\n키워드: 프로젝트, 연구, 진행",
+    "metadata": {
+      "type": "qa",
+      "language": "ko",
+      "category": "faq",
+      "question": "어떤 프로젝트를 진행하고 있나요?"
+    }
+  },
+  {
+    "content": "질문: 연구실 위치가 어디인가요?\n답변: Reality Lab은 숭실대학교에 위치하고 있습니다. 정확한 건물과 호실 정보는 이메일(heewon@ssu.ac.kr) 또는 전화(+82-2-820-0679)로 문의해주세요.\n키워드: 위치, 어디, 장소",
+    "metadata": {
+      "type": "qa",
+      "language": "ko",
+      "category": "faq",
+      "question": "연구실 위치가 어디인가요?"
+    }
+  },
+  {
+    "content": "질문: 어떤 기술 스택을 사용하나요?\n답변: AI/ML 연구에 필요한 다양한 기술을 사용합니다. Python, PyTorch, TensorFlow 등의 머신러닝 프레임워크부터 로보틱스용 ROS, 컴퓨터 비전용 OpenCV 등을 활용합니다.\n키워드: 기술, 스택, 도구, 프레임워크",
+    "metadata": {
+      "type": "qa",
+      "language": "ko",
+      "category": "faq",
+      "question": "어떤 기술 스택을 사용하나요?"
+    }
+  },
+  {
+    "content": "Question: How can I apply to the lab?\nAnswer: Thank you for your interest in Reality Lab! Both undergraduate and graduate students are welcome. For detailed application procedures, please contact Professor Heewon Kim via email (heewon@ssu.ac.kr) or phone (+82-2-820-0679).\nKeywords: apply, application, join, admission",
+    "metadata": {
+      "type": "qa",
+      "language": "en",
+      "category": "faq",
+      "question": "How can I apply to the lab?"
+    }
+  },
+  {
+    "content": "Question: What projects are you working on?\nAnswer: We are currently conducting various research projects in robotics, computer vision, machine learning, multimodal language understanding, and AI+X applications. Please contact Professor Heewon Kim for specific project details.\nKeywords: projects, research, work",
+    "metadata": {
+      "type": "qa",
+      "language": "en",
+      "category": "faq",
+      "question": "What projects are you working on?"
+    }
+  },
+  {
+    "content": "Question: Where is the lab located?\nAnswer: Reality Lab is located at Soongsil University. For specific building and room information, please contact us via email (heewon@ssu.ac.kr) or phone (+82-2-820-0679).\nKeywords: location, where, address",
+    "metadata": {
+      "type": "qa",
+      "language": "en",
+      "category": "faq",
+      "question": "Where is the lab located?"
+    }
+  },
+  {
+    "content": "Question: What technology stack do you use?\nAnswer: We use various technologies needed for AI/ML research, from machine learning frameworks like Python, PyTorch, TensorFlow to ROS for robotics and OpenCV for computer vision.\nKeywords: technology, stack, tools, framework",
+    "metadata": {
+      "type": "qa",
+      "language": "en",
+      "category": "faq",
+      "question": "What technology stack do you use?"
+    }
+  }
+]

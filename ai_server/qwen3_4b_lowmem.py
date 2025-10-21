@@ -798,11 +798,11 @@ if __name__ == '__main__':
                        help='Model to use: qwen3-4b (default) or qwen25-3b')
     args = parser.parse_args()
 
-    port = args.port
-    model_choice = args.model
-
     # Store model choice globally for auto-reload
     global model_choice_global
+
+    port = args.port
+    model_choice = args.model
     model_choice_global = model_choice
 
     model_display_names = {

@@ -26,10 +26,9 @@ fi
 pkill -f "cloudflared tunnel"
 sleep 2
 
-# Clear old log
-> "$LOG_FILE"
-
 # Start new cloudflared tunnel
+echo "" >> "$LOG_FILE"
+echo "========================================" >> "$LOG_FILE"
 echo "[$(date)] Starting new cloudflared tunnel..." >> "$LOG_FILE"
 nohup ./ai_server/cloudflared tunnel --url http://localhost:4005 >> "$LOG_FILE" 2>&1 &
 NEW_PID=$!
@@ -39,8 +38,8 @@ echo $NEW_PID > "$PID_FILE"
 echo "[$(date)] Waiting for tunnel to initialize..." >> "$LOG_FILE"
 sleep 5
 
-# Extract new URL from log
-NEW_URL=$(grep -oP 'https://[a-z-]+\.trycloudflare\.com' "$LOG_FILE" | head -1)
+# Extract new URL from log (get the LAST/newest one)
+NEW_URL=$(grep -oP 'https://[a-z-]+\.trycloudflare\.com' "$LOG_FILE" | tail -1)
 
 if [ -z "$NEW_URL" ]; then
     echo "[$(date)] ERROR: Failed to get new tunnel URL!" >> "$LOG_FILE"

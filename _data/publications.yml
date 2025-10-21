@@ -29,7 +29,7 @@ publications:
     type: conference
     status: accepted
     citation: "[C23] Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, \"Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models,\" Proc. British Machine Vision Conference (BMVC), 2025 (accepted)"
-    image: "assets/img/publications/cvpr2025.png"
+    image: "assets/img/publications/sidl/overview.png"
     notes: "* Equal contribution"
 
   - id: j12
@@ -55,7 +55,7 @@ publications:
     type: journal
     status: accepted
     citation: "[J11] Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, \"Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases,\" Journal of Electrical Engineering & Technology (JEET), 2025 (accepted)"
-    image: "assets/img/publications/cvpr2025.png"
+    image: "assets/img/publications/deepgam/architecture.png"
     notes: "* Equal contribution<br>† Undergraduate student"
 
   - id: j10
@@ -67,7 +67,7 @@ publications:
     type: journal
     status: accepted
     citation: "[J10] Seunghyun Oh† and Heewon Kim, \"Accurate Baseball Player Pose Refinement Using Motion Prior Guidance,\" ICT Express, 2025 (accepted)"
-    image: "assets/img/publications/cvpr2025.png"
+    image: "assets/img/publications/iprf/pipeline.png"
     notes: "† Undergraduate student"
     links:
       pdf: "https://pdf.sciencedirectassets.com/313521/1-s2.0-S2405959525X00047/1-s2.0-S2405959525000360/main.pdf"

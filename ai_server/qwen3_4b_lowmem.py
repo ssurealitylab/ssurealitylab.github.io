@@ -28,22 +28,40 @@ model = None
 tokenizer = None
 rag_retriever = None
 
-def load_model():
-    """Load Qwen3-4B model with 8-bit quantization"""
+def load_model(model_choice='qwen3-4b'):
+    """Load Qwen model with 4-bit quantization
+
+    Args:
+        model_choice: 'qwen3-4b' or 'qwen25-3b'
+    """
     global model, tokenizer
 
     try:
-        # Use the downloaded model path
-        model_path = "/home/i0179/.cache/huggingface/hub/qwen3-4b-git"
+        # Select model path based on choice
+        model_paths = {
+            'qwen3-4b': "/home/i0179/.cache/huggingface/hub/qwen3-4b-git",
+            'qwen25-3b': "/home/i0179/.cache/huggingface/hub/qwen25-3b-git"
+        }
 
-        logger.info("Loading tokenizer from local path")
+        model_names = {
+            'qwen3-4b': "Qwen3-4B",
+            'qwen25-3b': "Qwen2.5-3B"
+        }
+
+        if model_choice not in model_paths:
+            raise ValueError(f"Invalid model choice: {model_choice}. Choose from {list(model_paths.keys())}")
+
+        model_path = model_paths[model_choice]
+        model_name = model_names[model_choice]
+
+        logger.info(f"Loading {model_name} tokenizer from local path")
         tokenizer = AutoTokenizer.from_pretrained(model_path)
 
         # Set padding token
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
 
-        logger.info("Loading Qwen3-4B model with 4-bit quantization")
+        logger.info(f"Loading {model_name} model with 4-bit quantization")
 
         # Configure 4-bit quantization for maximum memory reduction
         quantization_config = BitsAndBytesConfig(
@@ -60,12 +78,20 @@ def load_model():
             low_cpu_mem_usage=True
         )
 
-        logger.info("✅ Qwen3-4B model loaded successfully with 4-bit quantization")
+        logger.info(f"✅ {model_name} model loaded successfully with 4-bit quantization")
         return True
 
     except Exception as e:
         logger.error(f"Failed to load model: {e}")
         return False
+
+def contains_chinese(text):
+    """Check if text contains Chinese characters"""
+    # Chinese Unicode ranges: \u4e00-\u9fff (CJK Unified Ideographs)
+    chinese_pattern = re.compile(r'[\u4e00-\u9fff]')
+    matches = chinese_pattern.findall(text)
+    # Consider it Chinese if there are more than 5 Chinese characters
+    return len(matches) > 5
 
 def ensure_sentence_completion(text, language='ko'):
     """Ensure the response ends with complete sentences"""
@@ -153,6 +179,7 @@ Reality Lab 기본 정보:
 - 연락처: +82-2-820-0679
 
 답변 가이드라인:
+- **반드시 한국어로만 답변하세요** (중국어, 영어 등 다른 언어 사용 금지)
 - 간결하면서도 친절하게 답변하세요
 - 필요한 핵심 정보는 빠짐없이 포함하세요
 - 자연스럽고 완전한 문장을 사용하세요
@@ -188,14 +215,16 @@ Reality Lab 기본 정보:
                 inputs.input_ids,
                 max_new_tokens=max_length,
                 min_new_tokens=50,  # Ensure substantial response
-                do_sample=False,  # Greedy decoding (fastest)
+                do_sample=True,  # Enable sampling for better language control
+                temperature=0.3,  # Low temperature for more focused responses
+                top_p=0.85,  # Nucleus sampling
                 num_beams=1,  # No beam search (fastest)
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,
                 attention_mask=inputs.attention_mask,
                 use_cache=True,  # Use KV cache for speed
                 early_stopping=True,
-                repetition_penalty=1.1  # Prevent repetition, faster termination
+                repetition_penalty=1.15  # Higher penalty to prevent language mixing
             )
 
         # Decode response
@@ -218,6 +247,19 @@ Reality Lab 기본 정보:
 
         # Remove thinking tags and content
         generated_text = re.sub(r'<think>.*?</think>', '', generated_text, flags=re.DOTALL).strip()
+
+        # Check for Chinese characters (for Korean language mode)
+        if language == 'ko' and contains_chinese(generated_text):
+            logger.warning("Chinese detected in Korean response, using fallback")
+            # Provide Korean fallback message
+            if '연구' in prompt or '분야' in prompt:
+                generated_text = "Reality Lab의 주요 연구 분야는 로보틱스, 컴퓨터 비전, 기계학습, 멀티모달 AI, 헬스케어 AI입니다. 자세한 내용은 김희원 교수님(heewon@ssu.ac.kr)께 문의하시면 됩니다."
+            elif '구성원' in prompt or '팀' in prompt or '멤버' in prompt:
+                generated_text = "Reality Lab의 주요 구성원은 김희원 교수님(설립자), 이예빈 인턴(컴퓨터 비전, AI for Sports 연구) 등입니다. 자세한 구성원 정보는 연구실에 문의해주세요."
+            elif '연락' in prompt or '이메일' in prompt or '전화' in prompt:
+                generated_text = "Reality Lab 연락처: 전화 +82-2-820-0679, 이메일 heewon@ssu.ac.kr, 위치: 서울특별시 동작구 사당로 105 숭실대학교"
+            else:
+                generated_text = "죄송합니다. 질문에 대한 정확한 답변을 준비하지 못했습니다. 자세한 내용은 김희원 교수님(heewon@ssu.ac.kr, +82-2-820-0679)께 문의하시면 됩니다."
 
         # Ensure natural sentence completion
         if generated_text:
@@ -327,6 +369,7 @@ Reality Lab 정보:
 - 최근 논문: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
 
 답변 가이드라인:
+- **반드시 한국어로만 답변하세요** (중국어, 영어 등 다른 언어 사용 금지)
 - 간결하면서도 친절하게 답변하세요
 - 필요한 핵심 정보는 빠짐없이 포함하세요
 - 자연스럽고 완전한 문장을 사용하세요
@@ -358,14 +401,16 @@ Reality Lab 정보:
                     "input_ids": inputs.input_ids,
                     "max_new_tokens": max_length,
                     "min_new_tokens": 50,
-                    "do_sample": False,
+                    "do_sample": True,
+                    "temperature": 0.3,
+                    "top_p": 0.85,
                     "num_beams": 1,
                     "pad_token_id": tokenizer.eos_token_id,
                     "eos_token_id": tokenizer.eos_token_id,
                     "attention_mask": inputs.attention_mask,
                     "use_cache": True,
                     "early_stopping": True,
-                    "repetition_penalty": 1.1,
+                    "repetition_penalty": 1.15,
                     "streamer": streamer
                 }
 
@@ -622,14 +667,24 @@ def submit_bug_report():
 if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(description='Reality Lab Qwen3-4B Low Memory Server')
+    parser = argparse.ArgumentParser(description='Reality Lab Qwen Low Memory Server')
     parser.add_argument('--port', type=int, default=4005, help='Port to run the server on')
+    parser.add_argument('--model', type=str, default='qwen3-4b',
+                       choices=['qwen3-4b', 'qwen25-3b'],
+                       help='Model to use: qwen3-4b (default) or qwen25-3b')
     args = parser.parse_args()
 
     port = args.port
-    logger.info(f"Starting Reality Lab Qwen3-4B Server (4-bit) on port {port}...")
+    model_choice = args.model
 
-    if load_model():
+    model_display_names = {
+        'qwen3-4b': 'Qwen3-4B',
+        'qwen25-3b': 'Qwen2.5-3B'
+    }
+
+    logger.info(f"Starting Reality Lab {model_display_names[model_choice]} Server (4-bit) on port {port}...")
+
+    if load_model(model_choice):
         # Load RAG system
         try:
             logger.info("Loading RAG system...")
@@ -641,7 +696,7 @@ if __name__ == '__main__':
             logger.warning("⚠️ Continuing without RAG (will use basic knowledge only)")
             rag_retriever = None
 
-        logger.info(f"🚀 Qwen3-4B server ready on port {port}!")
+        logger.info(f"🚀 {model_display_names[model_choice]} server ready on port {port}!")
         logger.info("✅ Running with HTTP (no SSL)")
         app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
     else:

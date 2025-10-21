@@ -357,11 +357,30 @@ def health_check():
 
 @app.route('/heartbeat', methods=['POST'])
 def heartbeat():
-    """Heartbeat endpoint to keep server alive"""
+    """Heartbeat endpoint to keep server alive and ensure model is loaded"""
     update_activity()
+
+    # Check if model is loaded, if not, trigger auto-reload
+    global model, is_loading_model
+
+    model_status = 'loaded' if model is not None else 'unloaded'
+
+    # If model is not loaded and not currently loading, trigger reload in background
+    if model is None and not is_loading_model:
+        logger.info("📥 Heartbeat received with unloaded model - triggering auto-reload")
+        # Start loading in background (non-blocking)
+        from threading import Thread
+        def load_in_background():
+            ensure_model_loaded()
+        Thread(target=load_in_background, daemon=True).start()
+        model_status = 'loading'
+    elif is_loading_model:
+        model_status = 'loading'
+
     return jsonify({
         'status': 'alive',
-        'message': 'Server is active'
+        'message': 'Server is active',
+        'model_status': model_status
     })
 
 @app.route('/status', methods=['GET'])

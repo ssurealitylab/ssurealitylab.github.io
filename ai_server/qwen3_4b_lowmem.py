@@ -155,9 +155,14 @@ def check_idle_timeout():
         idle_time = time.time() - last_activity_time
 
         if idle_time >= shutdown_timeout and (model is not None or tokenizer is not None):
-            logger.info(f"⏱️  Server idle for {idle_time:.1f}s (threshold: {shutdown_timeout}s)")
-            unload_model()
-            last_activity_time = None  # Reset to prevent repeated unload attempts
+            # Double-check activity time before unloading (prevent race condition with heartbeat)
+            final_idle_time = time.time() - last_activity_time
+            if final_idle_time >= shutdown_timeout:
+                logger.info(f"⏱️  Server idle for {final_idle_time:.1f}s (threshold: {shutdown_timeout}s)")
+                unload_model()
+                last_activity_time = None  # Reset to prevent repeated unload attempts
+            else:
+                logger.info(f"⏱️  Unload cancelled - recent activity detected ({final_idle_time:.1f}s < {shutdown_timeout}s)")
 
 def contains_chinese(text):
     """Check if text contains Chinese characters"""

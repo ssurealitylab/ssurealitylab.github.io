@@ -19,47 +19,14 @@
 
     <div class="row">
       <div class="col-12">
-        <!-- Publication 1: APP3DV 2025 -->
-        <div class="publication-list-item-home mb-3" onclick="openPublicationModal('c24')" style="cursor: pointer;">
-          <div class="publication-badge-home">APP3DV25</div>
-          <h5 class="list-title-home">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h5>
-          <p class="list-authors-home">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
+        {% for pub in site.data.publications.publications limit:6 %}
+        <!-- {{ pub.venue_short }} {{ pub.year }} -->
+        <div class="publication-list-item-home mb-3" onclick="openPublicationModal('{{ pub.id }}')" style="cursor: pointer;">
+          <div class="publication-badge-home">{{ pub.venue_short }}</div>
+          <h5 class="list-title-home">{{ pub.title }}</h5>
+          <p class="list-authors-home">{{ pub.authors }}</p>
         </div>
-
-        <!-- Publication 2: BMVC 2025 -->
-        <div class="publication-list-item-home mb-3" onclick="openPublicationModal('c23')" style="cursor: pointer;">
-          <div class="publication-badge-home">BMVC25</div>
-          <h5 class="list-title-home">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</h5>
-          <p class="list-authors-home">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
-        </div>
-
-        <!-- Publication 3: PLOS ONE 2025 -->
-        <div class="publication-list-item-home mb-3" onclick="openPublicationModal('j12')" style="cursor: pointer;">
-          <div class="publication-badge-home">PLOS ONE</div>
-          <h5 class="list-title-home">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</h5>
-          <p class="list-authors-home">Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim</p>
-        </div>
-
-        <!-- Publication 4: JEET 2025 -->
-        <div class="publication-list-item-home mb-3" onclick="openPublicationModal('j11')" style="cursor: pointer;">
-          <div class="publication-badge-home">JEET</div>
-          <h5 class="list-title-home">Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases</h5>
-          <p class="list-authors-home">Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim</p>
-        </div>
-
-        <!-- Publication 5: ICT Express 2025 -->
-        <div class="publication-list-item-home mb-3" onclick="openPublicationModal('j10')" style="cursor: pointer;">
-          <div class="publication-badge-home">ICT Express</div>
-          <h5 class="list-title-home">Accurate Baseball Player Pose Refinement Using Motion Prior Guidance</h5>
-          <p class="list-authors-home">Seunghyun Oh†, Heewon Kim</p>
-        </div>
-
-        <!-- Publication 6: CVPR 2025 -->
-        <div class="publication-list-item-home mb-3" onclick="openPublicationModal('c22')" style="cursor: pointer;">
-          <div class="publication-badge-home">CVPR25</div>
-          <h5 class="list-title-home">DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI</h5>
-          <p class="list-authors-home">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -85,89 +52,21 @@
     </div>
 
     <div class="row">
-      <!-- Publication 1: APP3DV 2025 -->
+      {% for pub in site.data.publications.publications limit:6 %}
+      <!-- {{ pub.venue_short }} {{ pub.year }} -->
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="publication-card-home" onclick="openPublicationModal('c24')" style="cursor: pointer;">
+        <div class="publication-card-home" onclick="openPublicationModal('{{ pub.id }}')" style="cursor: pointer;">
           <div class="publication-image-container">
-            <img src="{{ site.baseurl }}/img/publications/app3dv2025.jpg" alt="APP3DV 2025" class="publication-img-home">
-            <div class="publication-badge-overlay">APP3DV25</div>
+            <img src="{{ site.baseurl }}/{{ pub.image }}" alt="{{ pub.venue_short }} {{ pub.year }}" class="publication-img-home">
+            <div class="publication-badge-overlay">{{ pub.venue_short }}</div>
           </div>
           <div class="publication-card-body">
-            <h5 class="publication-card-title">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h5>
-            <p class="publication-card-authors">Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim</p>
+            <h5 class="publication-card-title">{{ pub.title }}</h5>
+            <p class="publication-card-authors">{{ pub.authors }}</p>
           </div>
         </div>
       </div>
-
-      <!-- Publication 2: BMVC 2025 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="publication-card-home" onclick="openPublicationModal('c23')" style="cursor: pointer;">
-          <div class="publication-image-container">
-            <img src="{{ site.baseurl }}/img/publications/bmvc2025.jpg" alt="BMVC 2025" class="publication-img-home">
-            <div class="publication-badge-overlay">BMVC25</div>
-          </div>
-          <div class="publication-card-body">
-            <h5 class="publication-card-title">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</h5>
-            <p class="publication-card-authors">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Publication 3: PLOS ONE 2025 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="publication-card-home" onclick="openPublicationModal('j12')" style="cursor: pointer;">
-          <div class="publication-image-container">
-            <img src="{{ site.baseurl }}/img/publications/plosone2025.jpg" alt="PLOS ONE 2025" class="publication-img-home">
-            <div class="publication-badge-overlay">PLOS ONE</div>
-          </div>
-          <div class="publication-card-body">
-            <h5 class="publication-card-title">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</h5>
-            <p class="publication-card-authors">Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Publication 4: JEET 2025 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="publication-card-home" onclick="openPublicationModal('j11')" style="cursor: pointer;">
-          <div class="publication-image-container">
-            <img src="{{ site.baseurl }}/img/publications/jeet2025.jpg" alt="JEET 2025" class="publication-img-home">
-            <div class="publication-badge-overlay">JEET</div>
-          </div>
-          <div class="publication-card-body">
-            <h5 class="publication-card-title">Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases</h5>
-            <p class="publication-card-authors">Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Publication 5: ICT Express 2025 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="publication-card-home" onclick="openPublicationModal('j10')" style="cursor: pointer;">
-          <div class="publication-image-container">
-            <img src="{{ site.baseurl }}/img/publications/ictexpress2025.jpg" alt="ICT Express 2025" class="publication-img-home">
-            <div class="publication-badge-overlay">ICT Express</div>
-          </div>
-          <div class="publication-card-body">
-            <h5 class="publication-card-title">Accurate Baseball Player Pose Refinement Using Motion Prior Guidance</h5>
-            <p class="publication-card-authors">Seunghyun Oh†, Heewon Kim</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Publication 6: CVPR 2025 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="publication-card-home" onclick="openPublicationModal('c22')" style="cursor: pointer;">
-          <div class="publication-image-container">
-            <img src="{{ site.baseurl }}/assets/img/publications/cvpr2025.png" alt="CVPR 2025" class="publication-img-home">
-            <div class="publication-badge-overlay">CVPR25</div>
-          </div>
-          <div class="publication-card-body">
-            <h5 class="publication-card-title">DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI</h5>
-            <p class="publication-card-authors">Sangmin Lee*, Sungyong Park*, Heewon Kim</p>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

@@ -1,154 +1,33 @@
-<!-- Publication Modals for Home Page (Latest 5) -->
+<!-- Publication Modals for Home Page (Auto-generated from _data/publications.yml) -->
 
-<!-- [C24] APP3DV 2025 Modal -->
-<div class="publication-modal modal-2025" id="c24">
+{% for pub in site.data.publications.publications limit:6 %}
+<!-- [{{ pub.id | upcase }}] {{ pub.venue_short }} {{ pub.year }} Modal -->
+<div class="publication-modal modal-{{ pub.year }}" id="{{ pub.id }}">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
-      <button class="publication-modal-close" onclick="closePublicationModal('c24')">&times;</button>
-      <h2 class="text-uppercase">Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields</h2>
-      <p class="item-intro">International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV)</p>
+      <button class="publication-modal-close" onclick="closePublicationModal('{{ pub.id }}')">&times;</button>
+      <h2 class="text-uppercase">{{ pub.title }}</h2>
+      <p class="item-intro">{{ pub.venue }}</p>
     </div>
     <div class="publication-modal-body">
       <!-- Method Image Section -->
       <div class="method-image-section mb-4">
         <h5 class="method-image-title">Architecture</h5>
         <div class="method-image-container">
-          <img src="{{ site.baseurl }}/img/publications/app3dv2025.jpg" alt="APP3DV 2025 Method" class="method-image">
+          <img src="{{ site.baseurl }}/{{ pub.image }}" alt="{{ pub.venue_short }} {{ pub.year }} Method" class="method-image">
         </div>
       </div>
 
       <div class="citation-box">
-        <p><strong>[C24]</strong> Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields," <em>Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)</em>, 2025 (accepted)</p>
+        <p>{{ pub.citation }}</p>
       </div>
-      <p class="mt-3"><small>* Equal contribution</small></p>
+      {% if pub.notes %}
+      <p class="mt-3"><small>{{ pub.notes }}</small></p>
+      {% endif %}
     </div>
   </div>
 </div>
-
-<!-- [C23] BMVC 2025 Modal -->
-<div class="publication-modal modal-2025" id="c23">
-  <div class="publication-modal-content">
-    <div class="publication-modal-header">
-      <button class="publication-modal-close" onclick="closePublicationModal('c23')">&times;</button>
-      <h2 class="text-uppercase">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</h2>
-      <p class="item-intro">British Machine Vision Conference (BMVC)</p>
-    </div>
-    <div class="publication-modal-body">
-      <!-- Method Image Section -->
-      <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Architecture</h5>
-        <div class="method-image-container">
-          <img src="{{ site.baseurl }}/img/publications/bmvc2025.jpg" alt="BMVC 2025 Method" class="method-image">
-        </div>
-      </div>
-
-      <div class="citation-box">
-        <p><strong>[C23]</strong> Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models," <em>Proc. British Machine Vision Conference (BMVC)</em>, 2025 (accepted)</p>
-      </div>
-      <p class="mt-3"><small>* Equal contribution</small></p>
-    </div>
-  </div>
-</div>
-
-<!-- [J12] PLOS ONE 2025 Modal -->
-<div class="publication-modal modal-2025" id="j12">
-  <div class="publication-modal-content">
-    <div class="publication-modal-header">
-      <button class="publication-modal-close" onclick="closePublicationModal('j12')">&times;</button>
-      <h2 class="text-uppercase">DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis</h2>
-      <p class="item-intro">PLOS ONE</p>
-    </div>
-    <div class="publication-modal-body">
-      <!-- Method Image Section -->
-      <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Architecture</h5>
-        <div class="method-image-container">
-          <img src="{{ site.baseurl }}/img/publications/plosone2025.jpg" alt="PLOS ONE 2025 Method" class="method-image">
-        </div>
-      </div>
-
-      <div class="citation-box">
-        <p><strong>[J12]</strong> Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis," <em>PLOS ONE</em>, 2025 (accepted)</p>
-      </div>
-      <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
-    </div>
-  </div>
-</div>
-
-<!-- [J11] JEET 2025 Modal -->
-<div class="publication-modal modal-2025" id="j11">
-  <div class="publication-modal-content">
-    <div class="publication-modal-header">
-      <button class="publication-modal-close" onclick="closePublicationModal('j11')">&times;</button>
-      <h2 class="text-uppercase">Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases</h2>
-      <p class="item-intro">Journal of Electrical Engineering & Technology (JEET)</p>
-    </div>
-    <div class="publication-modal-body">
-      <!-- Method Image Section -->
-      <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Architecture</h5>
-        <div class="method-image-container">
-          <img src="{{ site.baseurl }}/img/publications/jeet2025.jpg" alt="JEET 2025 Method" class="method-image">
-        </div>
-      </div>
-
-      <div class="citation-box">
-        <p><strong>[J11]</strong> Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, "Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases," <em>Journal of Electrical Engineering & Technology (JEET)</em>, 2025 (accepted)</p>
-      </div>
-      <p class="mt-3"><small>* Equal contribution<br>† Undergraduate student</small></p>
-    </div>
-  </div>
-</div>
-
-<!-- [J10] ICT Express 2025 Modal -->
-<div class="publication-modal modal-2025" id="j10">
-  <div class="publication-modal-content">
-    <div class="publication-modal-header">
-      <button class="publication-modal-close" onclick="closePublicationModal('j10')">&times;</button>
-      <h2 class="text-uppercase">Accurate Baseball Player Pose Refinement Using Motion Prior Guidance</h2>
-      <p class="item-intro">ICT Express</p>
-    </div>
-    <div class="publication-modal-body">
-      <!-- Method Image Section -->
-      <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Architecture</h5>
-        <div class="method-image-container">
-          <img src="{{ site.baseurl }}/img/publications/ictexpress2025.jpg" alt="ICT Express 2025 Method" class="method-image">
-        </div>
-      </div>
-
-      <div class="citation-box">
-        <p><strong>[J10]</strong> Seunghyun Oh† and Heewon Kim, "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance," <em>ICT Express</em>, 2025 (accepted)</p>
-      </div>
-      <p class="mt-3"><small>† Undergraduate student</small></p>
-    </div>
-  </div>
-</div>
-
-<!-- [C22] CVPR 2025 Modal -->
-<div class="publication-modal modal-2025" id="c22">
-  <div class="publication-modal-content">
-    <div class="publication-modal-header">
-      <button class="publication-modal-close" onclick="closePublicationModal('c22')">&times;</button>
-      <h2 class="text-uppercase">DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI</h2>
-      <p class="item-intro">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
-    </div>
-    <div class="publication-modal-body">
-      <!-- Method Image Section -->
-      <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Architecture</h5>
-        <div class="method-image-container">
-          <img src="{{ site.baseurl }}/assets/img/publications/cvpr2025.png" alt="CVPR 2025 Method" class="method-image">
-        </div>
-      </div>
-
-      <div class="citation-box">
-        <p><strong>[C22]</strong> Sangmin Lee*, Sungyong Park*, and Heewon Kim, "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI," <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2025 (accepted)</p>
-      </div>
-      <p class="mt-3"><small>* Equal contribution</small></p>
-    </div>
-  </div>
-</div>
+{% endfor %}
 
 <script>
 function openPublicationModal(modalId) {

@@ -1,0 +1,85 @@
+# Publications Data
+# Add new publications here and they will automatically appear on homepage and international publications page
+
+publications:
+  # 2025 Publications
+  - id: c24
+    title: "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields"
+    authors: "Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim"
+    venue: "International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)"
+    venue_short: "APP3DV25"
+    year: 2025
+    type: conference
+    status: accepted
+    citation: "[C24] Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, \"Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields,\" Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop), 2025 (accepted)"
+    image: "img/publications/app3dv2025.jpg"
+    notes: "* Equal contribution"
+    links:
+      pdf: "https://drive.google.com/file/d/10vp2SWByAJGr-Ccrw68c2hTepsMr5di9/view"
+      website: "https://oshmos.github.io/IPRF/"
+      github: "https://github.com/OSHMOS/IPRF"
+    badge_style: challenge-badge
+
+  - id: c23
+    title: "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models"
+    authors: "Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim"
+    venue: "British Machine Vision Conference (BMVC)"
+    venue_short: "BMVC25"
+    year: 2025
+    type: conference
+    status: accepted
+    citation: "[C23] Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, \"Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models,\" Proc. British Machine Vision Conference (BMVC), 2025 (accepted)"
+    image: "img/publications/bmvc2025.jpg"
+    notes: "* Equal contribution"
+
+  - id: j12
+    title: "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis"
+    authors: "Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim"
+    venue: "PLOS ONE"
+    venue_short: "PLOS ONE"
+    year: 2025
+    type: journal
+    status: accepted
+    citation: "[J12] Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, \"DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis,\" PLOS ONE, 2025 (accepted)"
+    image: "img/publications/plosone2025.jpg"
+    notes: "* Equal contribution<br>† Undergraduate student"
+    links:
+      pdf: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0324169"
+
+  - id: j11
+    title: "Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases"
+    authors: "Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim"
+    venue: "Journal of Electrical Engineering & Technology (JEET)"
+    venue_short: "JEET"
+    year: 2025
+    type: journal
+    status: accepted
+    citation: "[J11] Do-Ye Kwon*†, Yeon-Ju Oh*†, and Heewon Kim, \"Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases,\" Journal of Electrical Engineering & Technology (JEET), 2025 (accepted)"
+    image: "img/publications/jeet2025.jpg"
+    notes: "* Equal contribution<br>† Undergraduate student"
+
+  - id: j10
+    title: "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance"
+    authors: "Seunghyun Oh†, Heewon Kim"
+    venue: "ICT Express"
+    venue_short: "ICT Express"
+    year: 2025
+    type: journal
+    status: accepted
+    citation: "[J10] Seunghyun Oh† and Heewon Kim, \"Accurate Baseball Player Pose Refinement Using Motion Prior Guidance,\" ICT Express, 2025 (accepted)"
+    image: "img/publications/ictexpress2025.jpg"
+    notes: "† Undergraduate student"
+    links:
+      pdf: "https://pdf.sciencedirectassets.com/313521/1-s2.0-S2405959525X00047/1-s2.0-S2405959525000360/main.pdf"
+
+  - id: c22
+    title: "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI"
+    authors: "Sangmin Lee*, Sungyong Park*, Heewon Kim"
+    venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR)"
+    venue_short: "CVPR25"
+    year: 2025
+    type: conference
+    status: accepted
+    citation: "[C22] Sangmin Lee*, Sungyong Park*, and Heewon Kim, \"DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI,\" Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2025 (accepted)"
+    image: "assets/img/publications/cvpr2025.png"
+    notes: "* Equal contribution"

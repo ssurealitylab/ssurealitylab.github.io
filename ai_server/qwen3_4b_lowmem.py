@@ -632,82 +632,45 @@ def detect_profanity(text):
     return text, False
 
 def create_github_issue(question):
-    """Create GitHub issue for user questions"""
+    """Save user question to local file"""
     try:
         censored_question, has_profanity = detect_profanity(question)
-        GITHUB_TOKEN = os.getenv('GITHUB_TOKEN', '')
-        REPO_OWNER = 'ssurealitylab-spec'
-        REPO_NAME = 'Realitylab-site'
 
-        if not GITHUB_TOKEN:
-            logger.warning("GitHub token not found - returning mock success")
-            import random
-            mock_issue_number = random.randint(100, 999)
-            return {
-                'success': True,
-                'issue_number': mock_issue_number,
-                'mock': True
-            }
+        # Generate unique question ID
+        import random
+        timestamp = time.strftime('%Y%m%d_%H%M%S')
+        question_id = random.randint(1000, 9999)
 
-        # Prepare issue data
-        issue_title = f'[Question] {censored_question[:80]}'
-        issue_body = f"""## 사용자 질문
-
-**질문:**
-{censored_question}
-
----
-
-*이 이슈는 웹사이트 챗봇의 답변 추가 요청 기능을 통해 자동 생성되었습니다.*
-*제출 시간: {time.strftime('%Y-%m-%d %H:%M:%S')}*
-*검열 상태: {'욕설 감지됨' if has_profanity else '검열 통과'}*
-
-**처리 방법:**
-1. `_data/vector_db/documents.json`에 답변 추가
-2. 답변 추가 후 이 이슈를 닫아주세요"""
-
-        # GitHub API endpoint
-        url = f'https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/issues'
-
-        # Headers
-        headers = {
-            'Authorization': f'token {GITHUB_TOKEN}',
-            'Accept': 'application/vnd.github.v3+json',
-            'Content-Type': 'application/json'
+        # Prepare question data
+        question_data = {
+            'id': question_id,
+            'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
+            'question': question,
+            'censored_question': censored_question,
+            'has_profanity': has_profanity,
+            'status': 'pending'
         }
 
-        # Issue data
-        issue_data = {
-            'title': issue_title,
-            'body': issue_body,
-            'labels': ['question', 'user-request']
+        # Save to local file
+        questions_dir = '/home/i0179/Realitylab-site/user_questions'
+        os.makedirs(questions_dir, exist_ok=True)
+
+        filename = f'question_{timestamp}_{question_id}.json'
+        filepath = os.path.join(questions_dir, filename)
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(question_data, f, ensure_ascii=False, indent=2)
+
+        logger.info(f"✅ User question saved: {filename}")
+
+        return {
+            'success': True,
+            'issue_number': question_id,
+            'filepath': filepath
         }
-
-        # Create issue
-        response = requests.post(url, headers=headers, data=json.dumps(issue_data))
-
-        if response.status_code == 201:
-            issue = response.json()
-            logger.info(f"✅ User question created: #{issue['number']}")
-            return {
-                'success': True,
-                'issue_number': issue['number'],
-                'issue_url': issue['html_url']
-            }
-        else:
-            logger.error(f"Failed to create question issue: {response.status_code} - {response.text}")
-            # Return mock success if GitHub API fails
-            import random
-            mock_issue_number = random.randint(100, 999)
-            logger.warning(f"Returning mock success with issue #{mock_issue_number}")
-            return {
-                'success': True,
-                'issue_number': mock_issue_number,
-                'mock': True
-            }
 
     except Exception as e:
-        logger.error(f"Error creating GitHub issue: {e}")
+        logger.error(f"Error saving question: {e}")
         return {'success': False, 'error': str(e)}
 
 @app.route('/submit-question', methods=['POST'])

@@ -46,3 +46,4 @@ simple_lora_finetune.py
 *.key
 *.crt
 *.cert
+/user_questions/

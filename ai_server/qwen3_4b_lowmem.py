@@ -180,10 +180,10 @@ Reality Lab 기본 정보:
 
 답변 가이드라인:
 - **반드시 한국어로만 답변하세요** (중국어, 영어 등 다른 언어 사용 금지)
-- 간결하면서도 친절하게 답변하세요
+- **즉시 답변을 시작하세요** - 내부 추론, 생각 과정, <think> 태그 등은 절대 사용하지 마세요
+- 간결하면서도 친절하게 답변하세요 (2-3문장 정도로 충분)
 - 필요한 핵심 정보는 빠짐없이 포함하세요
-- 자연스럽고 완전한 문장을 사용하세요
-- <think> 태그나 내부 추론 과정은 표시하지 마세요"""
+- 자연스럽고 완전한 문장을 사용하세요"""
 
         # Create chat template
         messages = [
@@ -215,16 +215,14 @@ Reality Lab 기본 정보:
                 inputs.input_ids,
                 max_new_tokens=max_length,
                 min_new_tokens=50,  # Ensure substantial response
-                do_sample=True,  # Enable sampling for better language control
-                temperature=0.3,  # Low temperature for more focused responses
-                top_p=0.85,  # Nucleus sampling
+                do_sample=False,  # Greedy decoding (fastest)
                 num_beams=1,  # No beam search (fastest)
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,
                 attention_mask=inputs.attention_mask,
                 use_cache=True,  # Use KV cache for speed
                 early_stopping=True,
-                repetition_penalty=1.15  # Higher penalty to prevent language mixing
+                repetition_penalty=1.1  # Prevent repetition, faster termination
             )
 
         # Decode response
@@ -247,6 +245,8 @@ Reality Lab 기본 정보:
 
         # Remove thinking tags and content
         generated_text = re.sub(r'<think>.*?</think>', '', generated_text, flags=re.DOTALL).strip()
+        # Also remove any remaining <think> or </think> tags
+        generated_text = generated_text.replace('<think>', '').replace('</think>', '').strip()
 
         # Check for Chinese characters (for Korean language mode)
         if language == 'ko' and contains_chinese(generated_text):
@@ -370,10 +370,10 @@ Reality Lab 정보:
 
 답변 가이드라인:
 - **반드시 한국어로만 답변하세요** (중국어, 영어 등 다른 언어 사용 금지)
-- 간결하면서도 친절하게 답변하세요
+- **즉시 답변을 시작하세요** - 내부 추론, 생각 과정, <think> 태그 등은 절대 사용하지 마세요
+- 간결하면서도 친절하게 답변하세요 (2-3문장 정도로 충분)
 - 필요한 핵심 정보는 빠짐없이 포함하세요
-- 자연스럽고 완전한 문장을 사용하세요
-- <think> 태그나 내부 추론 과정은 표시하지 마세요"""
+- 자연스럽고 완전한 문장을 사용하세요"""
 
                 messages = [
                     {"role": "system", "content": system_content},
@@ -401,16 +401,14 @@ Reality Lab 정보:
                     "input_ids": inputs.input_ids,
                     "max_new_tokens": max_length,
                     "min_new_tokens": 50,
-                    "do_sample": True,
-                    "temperature": 0.3,
-                    "top_p": 0.85,
+                    "do_sample": False,
                     "num_beams": 1,
                     "pad_token_id": tokenizer.eos_token_id,
                     "eos_token_id": tokenizer.eos_token_id,
                     "attention_mask": inputs.attention_mask,
                     "use_cache": True,
                     "early_stopping": True,
-                    "repetition_penalty": 1.15,
+                    "repetition_penalty": 1.1,
                     "streamer": streamer
                 }
 

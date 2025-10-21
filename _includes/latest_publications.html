@@ -1,5 +1,5 @@
 <!-- Latest Publications Section -->
-<section class="latest-publications-section bg-light page-section" id="latest-publications">
+<section class="latest-publications-with-images-section bg-light page-section" id="latest-publications">
   <div class="container">
     <div class="row mb-4">
       <div class="col-lg-12">
@@ -7,40 +7,6 @@
           <div>
             <h2 class="section-heading text-uppercase">Latest Publications</h2>
             <h3 class="section-subheading text-muted">Recent international research publications</h3>
-          </div>
-          <div>
-            <a href="{{ site.baseurl }}/international.html" class="see-all-publications-link">
-              See All Publications <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12">
-        {% for pub in site.data.publications.publications limit:6 %}
-        <!-- {{ pub.venue_short }} {{ pub.year }} -->
-        <div class="publication-list-item-home mb-3" onclick="openPublicationModal('{{ pub.id }}')" style="cursor: pointer;">
-          <div class="publication-badge-home">{{ pub.venue_short }}</div>
-          <h5 class="list-title-home">{{ pub.title }}</h5>
-          <p class="list-authors-home">{{ pub.authors }}</p>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Latest Publications with Images (New Version for Comparison) -->
-<section class="latest-publications-with-images-section bg-white page-section">
-  <div class="container">
-    <div class="row mb-4">
-      <div class="col-lg-12">
-        <div class="d-flex justify-content-between align-items-center">
-          <div>
-            <h2 class="section-heading text-uppercase">Latest Publications (With Images)</h2>
-            <h3 class="section-subheading text-muted">Visual representation of recent research</h3>
           </div>
           <div>
             <a href="{{ site.baseurl }}/international.html" class="see-all-publications-link">
@@ -73,10 +39,6 @@
 
 <style>
 /* Latest Publications Section Styles */
-.latest-publications-section {
-  padding: 80px 0;
-}
-
 .see-all-publications-link {
   font-size: 1.1rem;
   font-weight: 600;
@@ -102,82 +64,9 @@
   transform: translateX(3px);
 }
 
-/* Publication List Item for Home */
-.publication-list-item-home {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px 24px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
-  min-height: 90px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.publication-list-item-home:hover {
-  border-color: #4facfe;
-  box-shadow: 0 4px 12px rgba(79, 172, 254, 0.15);
-  transform: translateY(-2px);
-}
-
-.publication-badge-home {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  background: transparent;
-  color: #4facfe;
-  border: 2px solid #4facfe;
-  padding: 4px 10px;
-  border-radius: 15px;
-  font-weight: bold;
-  font-size: 0.7rem;
-}
-
-.list-title-home {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 8px;
-  padding-right: 120px;
-  line-height: 1.4;
-}
-
-.list-authors-home {
-  font-size: 0.95rem;
-  color: #7f8c8d;
-  margin-bottom: 0;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .latest-publications-section .d-flex {
-    flex-direction: column;
-    align-items: flex-start !important;
-  }
-
-  .see-all-publications-link {
-    margin-top: 15px;
-  }
-
-  .list-title-home {
-    font-size: 1rem;
-    padding-right: 100px;
-  }
-
-  .list-authors-home {
-    font-size: 0.85rem;
-  }
-}
-
 /* Latest Publications with Images Styles */
 .latest-publications-with-images-section {
   padding: 80px 0;
-  border-top: 1px solid #e5e7eb;
 }
 
 .publication-card-home {

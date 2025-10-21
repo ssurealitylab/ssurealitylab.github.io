@@ -1,13 +1,40 @@
-<!-- Publication Modals for Home Page (Auto-generated from _data/publications.yml) -->
+<!-- Publication Modals (Auto-generated from _data/publications.yml) -->
+<!-- Used by both home page and publications page -->
 
-{% for pub in site.data.publications.publications limit:6 %}
+{% for pub in site.data.publications.publications %}
 <!-- [{{ pub.id | upcase }}] {{ pub.venue_short }} {{ pub.year }} Modal -->
 <div class="publication-modal modal-{{ pub.year }}" id="{{ pub.id }}">
   <div class="publication-modal-content">
     <div class="publication-modal-header">
       <button class="publication-modal-close" onclick="closePublicationModal('{{ pub.id }}')">&times;</button>
       <h2 class="text-uppercase">{{ pub.title }}</h2>
-      <p class="item-intro">{{ pub.venue }}</p>
+      <div>
+        <p class="item-intro text-muted">{{ pub.venue }}</p>
+        {% if pub.links %}
+        <div class="modal-header-links">
+          {% if pub.links.pdf %}
+          <a href="{{ pub.links.pdf }}" target="_blank" class="modal-icon-link active pdf-link" title="PDF" onclick="event.stopPropagation()">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          {% endif %}
+          {% if pub.links.website %}
+          <a href="{{ pub.links.website }}" target="_blank" class="modal-icon-link active website-link" title="Website" onclick="event.stopPropagation()">
+            <i class="fas fa-globe"></i>
+          </a>
+          {% endif %}
+          {% if pub.links.github %}
+          <a href="{{ pub.links.github }}" target="_blank" class="modal-icon-link active github-link" title="GitHub" onclick="event.stopPropagation()">
+            <i class="fab fa-github"></i>
+          </a>
+          {% endif %}
+          {% if pub.links.video %}
+          <a href="{{ pub.links.video }}" target="_blank" class="modal-icon-link active video-link" title="Video" onclick="event.stopPropagation()">
+            <i class="fas fa-video"></i>
+          </a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
     </div>
     <div class="publication-modal-body">
       <!-- Method Image Section -->
@@ -198,6 +225,40 @@ document.addEventListener("keydown", function(event) {
   padding: 30px;
   overflow-y: auto;
   flex: 1;
+}
+
+.modal-header-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.modal-icon-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.modal-icon-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.modal-icon-link i {
+  pointer-events: none;
+}
+
+.modal-icon-link.active {
+  color: white;
 }
 
 .citation-box {

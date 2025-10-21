@@ -823,7 +823,6 @@ if __name__ == '__main__':
             rag_retriever = None
 
         # Start idle timeout checker thread
-        global shutdown_timer_thread, last_activity_time
         last_activity_time = time.time()  # Initialize activity time
         shutdown_timer_thread = Thread(target=check_idle_timeout, daemon=True)
         shutdown_timer_thread.start()

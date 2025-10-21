@@ -27,6 +27,11 @@ CORS(app)
 model = None
 tokenizer = None
 rag_retriever = None
+last_activity_time = None
+shutdown_timeout = 120  # 2 minutes in seconds
+shutdown_timer_thread = None
+model_choice_global = 'qwen3-4b'  # Store model choice for reloading
+is_loading_model = False  # Track if model is currently being loaded
 
 def load_model(model_choice='qwen3-4b'):
     """Load Qwen model with 4-bit quantization
@@ -84,6 +89,75 @@ def load_model(model_choice='qwen3-4b'):
     except Exception as e:
         logger.error(f"Failed to load model: {e}")
         return False
+
+def update_activity():
+    """Update last activity time"""
+    global last_activity_time
+    last_activity_time = time.time()
+
+def unload_model():
+    """Unload model from GPU to free memory"""
+    global model, tokenizer
+
+    if model is None and tokenizer is None:
+        return  # Already unloaded
+
+    logger.info("🔌 Unloading model from GPU...")
+
+    # Clear model and tokenizer
+    if model is not None:
+        del model
+        model = None
+    if tokenizer is not None:
+        del tokenizer
+        tokenizer = None
+
+    # Force garbage collection and clear CUDA cache
+    import gc
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
+    logger.info("✅ GPU memory freed. Server remains active for auto-reload.")
+
+def ensure_model_loaded():
+    """Ensure model is loaded, reload if necessary"""
+    global model, tokenizer, is_loading_model, model_choice_global
+
+    if model is not None and tokenizer is not None:
+        return True  # Already loaded
+
+    if is_loading_model:
+        return False  # Currently loading, caller should wait
+
+    # Reload model
+    is_loading_model = True
+    try:
+        logger.info("🔄 Model not loaded. Reloading...")
+        success = load_model(model_choice_global)
+        is_loading_model = False
+        return success
+    except Exception as e:
+        logger.error(f"Failed to reload model: {e}")
+        is_loading_model = False
+        return False
+
+def check_idle_timeout():
+    """Check if server has been idle and unload model if necessary"""
+    global last_activity_time
+
+    while True:
+        time.sleep(10)  # Check every 10 seconds
+
+        if last_activity_time is None:
+            continue
+
+        idle_time = time.time() - last_activity_time
+
+        if idle_time >= shutdown_timeout and (model is not None or tokenizer is not None):
+            logger.info(f"⏱️  Server idle for {idle_time:.1f}s (threshold: {shutdown_timeout}s)")
+            unload_model()
+            last_activity_time = None  # Reset to prevent repeated unload attempts
 
 def contains_chinese(text):
     """Check if text contains Chinese characters"""
@@ -281,11 +355,38 @@ def health_check():
         'model_name': 'Qwen3-4B-4bit'
     })
 
+@app.route('/heartbeat', methods=['POST'])
+def heartbeat():
+    """Heartbeat endpoint to keep server alive"""
+    update_activity()
+    return jsonify({
+        'status': 'alive',
+        'message': 'Server is active'
+    })
+
+@app.route('/status', methods=['GET'])
+def server_status():
+    """Get server status including idle time"""
+    global last_activity_time
+
+    if last_activity_time is None:
+        idle_time = 0
+    else:
+        idle_time = time.time() - last_activity_time
+
+    return jsonify({
+        'status': 'running',
+        'model_loaded': model is not None,
+        'idle_time': idle_time,
+        'shutdown_timeout': shutdown_timeout,
+        'will_shutdown_in': max(0, shutdown_timeout - idle_time) if last_activity_time else None
+    })
+
 @app.route('/chat', methods=['POST'])
 def chat():
     """Chat endpoint"""
     try:
-        start_time = time.time()
+        update_activity()  # Update activity on each chat request
 
         data = request.get_json(force=True)
 
@@ -298,6 +399,20 @@ def chat():
         user_question = data['question']
         language = data.get('language', 'ko')
         max_length = data.get('max_length', 700)  # Balanced default
+
+        # Check if model is loaded, reload if necessary
+        if is_loading_model:
+            return jsonify({
+                'response': 'AI 모델을 로딩 중입니다. 잠시만 기다려주세요...' if language == 'ko' else 'Loading AI model. Please wait...',
+                'tokens': 0,
+                'response_time': 0,
+                'status': 'loading'
+            })
+
+        if not ensure_model_loaded():
+            return jsonify({'error': 'Failed to load AI model'}), 500
+
+        start_time = time.time()
 
         # Generate AI response
         ai_response, token_count = generate_response(user_question, language=language, max_length=max_length)
@@ -323,6 +438,7 @@ def chat():
 def chat_stream():
     """Streaming chat endpoint using Server-Sent Events"""
     try:
+        update_activity()  # Update activity on each stream request
         data = request.get_json(force=True)
 
         if not data or 'question' not in data:
@@ -333,11 +449,21 @@ def chat_stream():
         max_length = data.get('max_length', 700)
 
         def generate_stream():
-            global model, tokenizer
+            global model, tokenizer, is_loading_model
 
-            if model is None or tokenizer is None:
-                yield f"data: {json.dumps({'error': 'AI model not loaded'})}\n\n"
+            # Check if model is being loaded
+            if is_loading_model:
+                loading_msg = 'AI 모델을 로딩 중입니다. 잠시만 기다려주세요...' if language == 'ko' else 'Loading AI model. Please wait...'
+                yield f"data: {json.dumps({'text': loading_msg, 'status': 'loading'})}\n\n"
+                yield "data: [DONE]\n\n"
                 return
+
+            # Ensure model is loaded
+            if model is None or tokenizer is None:
+                if not ensure_model_loaded():
+                    yield f"data: {json.dumps({'error': 'Failed to load AI model'})}\n\n"
+                    yield "data: [DONE]\n\n"
+                    return
 
             try:
                 start_time = time.time()
@@ -675,6 +801,10 @@ if __name__ == '__main__':
     port = args.port
     model_choice = args.model
 
+    # Store model choice globally for auto-reload
+    global model_choice_global
+    model_choice_global = model_choice
+
     model_display_names = {
         'qwen3-4b': 'Qwen3-4B',
         'qwen25-3b': 'Qwen2.5-3B'
@@ -693,6 +823,13 @@ if __name__ == '__main__':
             logger.warning(f"⚠️ Failed to load RAG system: {e}")
             logger.warning("⚠️ Continuing without RAG (will use basic knowledge only)")
             rag_retriever = None
+
+        # Start idle timeout checker thread
+        global shutdown_timer_thread, last_activity_time
+        last_activity_time = time.time()  # Initialize activity time
+        shutdown_timer_thread = Thread(target=check_idle_timeout, daemon=True)
+        shutdown_timer_thread.start()
+        logger.info(f"⏱️  Idle timeout enabled: server will shutdown after {shutdown_timeout}s of inactivity")
 
         logger.info(f"🚀 {model_display_names[model_choice]} server ready on port {port}!")
         logger.info("✅ Running with HTTP (no SSL)")

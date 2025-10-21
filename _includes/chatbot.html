@@ -845,6 +845,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // AI server connection status
   let isAIServerReady = false;
+  let heartbeatInterval = null;
+  const HEARTBEAT_INTERVAL_MS = 30000; // 30 seconds
 
   // Preconnect to AI server on page load
   async function preconnectAIServer() {
@@ -870,6 +872,59 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Send heartbeat to keep server alive
+  async function sendHeartbeat() {
+    try {
+      const response = await fetch(`${DIRECT_AI_SERVER_URL}/heartbeat`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        signal: AbortSignal.timeout(5000)
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log('💓 Heartbeat sent:', data.message);
+      }
+    } catch (error) {
+      console.warn('⚠️ Heartbeat failed:', error.message);
+    }
+  }
+
+  // Start heartbeat system
+  function startHeartbeat() {
+    if (heartbeatInterval) return; // Already running
+
+    // Send initial heartbeat immediately
+    sendHeartbeat();
+
+    // Send heartbeat every 30 seconds
+    heartbeatInterval = setInterval(sendHeartbeat, HEARTBEAT_INTERVAL_MS);
+    console.log('💓 Heartbeat system started');
+  }
+
+  // Stop heartbeat system
+  function stopHeartbeat() {
+    if (heartbeatInterval) {
+      clearInterval(heartbeatInterval);
+      heartbeatInterval = null;
+      console.log('💓 Heartbeat system stopped');
+    }
+  }
+
+  // Stop heartbeat when user leaves page
+  window.addEventListener('beforeunload', () => {
+    stopHeartbeat();
+  });
+
+  // Stop heartbeat when page is hidden (tab switch, minimize)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopHeartbeat();
+    } else {
+      startHeartbeat();
+    }
+  });
+
   // Automatically allocate GPU when page loads
   if (GPU_MANAGER_URL) {
     initializeVisitorSession();
@@ -878,6 +933,7 @@ document.addEventListener('DOMContentLoaded', function() {
     currentEndpoint = DIRECT_AI_SERVER_URL;
     console.log('🔗 Direct AI server connection mode: ' + DIRECT_AI_SERVER_URL);
     preconnectAIServer(); // Preconnect immediately
+    startHeartbeat(); // Start keeping server alive
   }
   
   // Get current session endpoints
@@ -1247,7 +1303,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                   }
 
-                  if (data.text && !data.done) {
+                  // Handle loading status
+                  if (data.status === 'loading') {
+                    fullResponse = data.text;
+                    updateStreamingMessage(fullResponse);
+                    // Continue reading to get [DONE] signal
+                  }
+
+                  if (data.text && !data.done && data.status !== 'loading') {
                     fullResponse += data.text;
                     // Update the bot message in real-time
                     updateStreamingMessage(fullResponse);

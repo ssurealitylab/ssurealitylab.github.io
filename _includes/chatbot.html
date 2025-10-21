@@ -863,11 +863,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (response.ok) {
         const data = await response.json();
-        if (data.status === 'healthy' && data.model_loaded) {
+        if (data.status === 'healthy') {
           isAIServerReady = true;
-          console.log('✅ AI server ready:', data.model_name);
+          if (data.model_loaded) {
+            console.log('✅ AI server ready:', data.model_name);
+          } else {
+            console.log('✅ AI server healthy (model will auto-load on first request)');
+          }
         } else {
-          console.warn('⚠️ AI server responded but model not loaded');
+          console.warn('⚠️ AI server responded but not healthy');
         }
       }
     } catch (error) {

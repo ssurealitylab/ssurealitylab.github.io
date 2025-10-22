@@ -3,6 +3,37 @@
 
 publications:
   # 2025 Publications
+  - id: c25
+    title: "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI"
+    authors: "Sangmin Lee*, Sungyong Park*, Heewon Kim"
+    venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    venue_short: "CVPR25"
+    year: 2025
+    type: conference
+    status: accepted
+    citation: "[C25] Sangmin Lee*, Sungyong Park*, and Heewon Kim, \"DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI,\" Proc. IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025 (accepted)"
+    image: "assets/img/publications/cvpr2025.png"
+    notes: "* Equal contribution"
+    links:
+      pdf: "https://openaccess.thecvf.com/content/CVPR2025/html/Lee_DynScene_Scalable_Generation_of_Dynamic_Robotic_Manipulation_Scenes_for_Embodied_CVPR_2025_paper.html"
+      website: "https://dynscene.github.io/"
+      github: "https://github.com/dynscene/dynscene"
+
+  - id: sidl
+    title: "SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses"
+    authors: "Sooyoung Choi*†, Sungyong Park*, Heewon Kim"
+    venue: "AAAI Conference on Artificial Intelligence"
+    venue_short: "AAAI25"
+    year: 2025
+    type: conference
+    status: accepted
+    citation: "[C24-2] Sooyoung Choi*†, Sungyong Park*, and Heewon Kim, \"SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses,\" Proc. AAAI Conference on Artificial Intelligence (AAAI), 2025 (accepted)"
+    image: "assets/img/publications/sidl/overview.png"
+    notes: "* Equal contribution<br>† Undergraduate student"
+    links:
+      pdf: "https://ojs.aaai.org/index.php/AAAI/article/view/32257"
+      website: "https://sidl-benchmark.github.io/"
+
   - id: c24
     title: "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields"
     authors: "Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim"

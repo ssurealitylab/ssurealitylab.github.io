@@ -121,7 +121,7 @@ title: News
         </div>
         <!-- Outstanding Reviewer BMVC -->
         <div class="col-lg-4 mb-4">
-          <div class="news-card challenge-card">
+          <div class="news-card research-card">
             <img src="{{ site.baseurl }}/img/news/bmvc2024.png?v=5" alt="BMVC 2024" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Outstanding Reviewer Award</h5>

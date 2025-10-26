@@ -65,7 +65,8 @@ title: Students
         {% for news_item in site.data.news.news %}
           {% if news_item.participants contains student.name %}
             {% unless news_item.title contains "Paper Acceptance" %}
-              {% assign news_text = news_item.title | append: " (" | append: news_item.date | slice: 0, 4 | append: ")" %}
+              {% assign year = news_item.date | slice: 0, 4 %}
+              {% assign news_text = news_item.title | append: " (" | append: year | append: ")" %}
               {% assign news_achievements = news_achievements | push: news_text %}
             {% endunless %}
           {% endif %}
@@ -182,7 +183,8 @@ title: Students
         {% for news_item in site.data.news.news %}
           {% if news_item.participants contains intern.name %}
             {% unless news_item.title contains "Paper Acceptance" %}
-              {% assign news_text = news_item.title | append: " (" | append: news_item.date | slice: 0, 4 | append: ")" %}
+              {% assign year = news_item.date | slice: 0, 4 %}
+              {% assign news_text = news_item.title | append: " (" | append: year | append: ")" %}
               {% assign intern_news_achievements = intern_news_achievements | push: news_text %}
             {% endunless %}
           {% endif %}

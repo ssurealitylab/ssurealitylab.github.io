@@ -1,0 +1,54 @@
+news:
+  - title: "BMVC 2025 Paper Acceptance"
+    date: "2025-07-26"
+    category: "Publication"
+    participants: ["Youngjae Choi", "Hyunsuh Koh", "Hojae Jeong", "ByungKwan Chae"]
+    description: "Paper accepted to BMVC 2025"
+
+  - title: "ARNOLD Challenge 1st Place"
+    date: "2025-06-04"
+    category: "Awards"
+    participants: ["Dowon Kim", "Chaewoo Lim", "Sungyong Park", "Sangmin Lee"]
+    description: "1st place in ARNOLD Challenge at CVPR 2025 Embodied AI Workshop"
+
+  - title: "PLOS One Paper Acceptance"
+    date: "2025-05-01"
+    category: "Publication"
+    participants: ["Yeri Kim", "Seoyoung Kim"]
+    description: "Paper accepted to PLOS One"
+
+  - title: "Qualcomm Internship"
+    date: "2025-03-24"
+    category: "Internship"
+    participants: ["Sangmin Lee"]
+    description: "Started software internship for Automated Driving at Qualcomm"
+
+  - title: "ICT Express Paper Acceptance"
+    date: "2025-03-18"
+    category: "Publication"
+    participants: ["Seunghyun Oh"]
+    description: "Paper accepted to ICT Express"
+
+  - title: "CVPR 2025 Paper Acceptance"
+    date: "2025-02-26"
+    category: "Publication"
+    participants: ["Sangmin Lee", "Sungyong Park"]
+    description: "Paper accepted to CVPR 2025"
+
+  - title: "AAAI 2025 Paper Acceptance"
+    date: "2024-12-10"
+    category: "Publication"
+    participants: ["Sooyoung Choi", "Sungyong Park"]
+    description: "Paper accepted to AAAI 2025"
+
+  - title: "Outstanding Reviewer Award"
+    date: "2024-11-04"
+    category: "Awards"
+    participants: ["Prof. Heewon Kim"]
+    description: "Nominated as outstanding reviewer for BMVC 2024"
+
+  - title: "ARNOLD Challenge 3rd Place"
+    date: "2024-06-18"
+    category: "Awards"
+    participants: ["Sangmin Lee", "Sungyong Park"]
+    description: "3rd place in ARNOLD Challenge at CVPR 2024"

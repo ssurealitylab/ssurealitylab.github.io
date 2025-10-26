@@ -24,16 +24,6 @@ title: Students
       {% if student.research %}
       <p class="member-research">{{ student.research }}</p>
       {% endif %}
-      {% if student.achievements and student.achievements.size > 0 %}
-      <div class="member-achievements">
-        <h4>Achievements:</h4>
-        <ul>
-        {% for achievement in student.achievements %}
-          <li>{{ achievement }}</li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
       <div class="member-social">
         {% if student.email and student.email != "" %}
           <a href="#" onclick="event.preventDefault(); event.stopPropagation(); copyEmail('{{ student.email }}', event)" title="Email">
@@ -66,16 +56,38 @@ title: Students
         {% if student.research %}
         <p class="modal-research"><strong>Research:</strong> {{ student.research }}</p>
         {% endif %}
-        {% if student.achievements and student.achievements.size > 0 %}
+
+        {% comment %} Auto-generate achievements from news and publications {% endcomment %}
+        {% assign student_achievements = "" | split: "" %}
+
+        {% comment %} Collect news achievements {% endcomment %}
+        {% for news_item in site.data.news.news %}
+          {% if news_item.participants contains student.name %}
+            {% assign achievement_text = news_item.title | append: " (" | append: news_item.category | append: ", " | append: news_item.date | slice: 0, 4 | append: ")" %}
+            {% assign student_achievements = student_achievements | push: achievement_text %}
+          {% endif %}
+        {% endfor %}
+
+        {% comment %} Collect publication achievements {% endcomment %}
+        {% for pub_item in site.data.publications %}
+          {% assign pub = pub_item[1] %}
+          {% if pub.authors contains student.name %}
+            {% assign pub_text = pub.title | append: " - " | append: pub.venue_short | append: " " | append: pub.year %}
+            {% assign student_achievements = student_achievements | push: pub_text %}
+          {% endif %}
+        {% endfor %}
+
+        {% if student_achievements.size > 0 %}
         <div class="modal-achievements">
           <strong>Achievements:</strong>
           <ul>
-          {% for achievement in student.achievements %}
+          {% for achievement in student_achievements %}
             <li>{{ achievement }}</li>
           {% endfor %}
           </ul>
         </div>
         {% endif %}
+
         <div class="modal-social">
           <a href="#" onclick="event.preventDefault()" title="GitHub">
             <i class="fab fa-github"></i>
@@ -141,6 +153,38 @@ title: Students
         {% if intern.research %}
         <p class="modal-research"><strong>Research:</strong> {{ intern.research }}</p>
         {% endif %}
+
+        {% comment %} Auto-generate achievements from news and publications {% endcomment %}
+        {% assign intern_achievements = "" | split: "" %}
+
+        {% comment %} Collect news achievements {% endcomment %}
+        {% for news_item in site.data.news.news %}
+          {% if news_item.participants contains intern.name %}
+            {% assign achievement_text = news_item.title | append: " (" | append: news_item.category | append: ", " | append: news_item.date | slice: 0, 4 | append: ")" %}
+            {% assign intern_achievements = intern_achievements | push: achievement_text %}
+          {% endif %}
+        {% endfor %}
+
+        {% comment %} Collect publication achievements {% endcomment %}
+        {% for pub_item in site.data.publications %}
+          {% assign pub = pub_item[1] %}
+          {% if pub.authors contains intern.name %}
+            {% assign pub_text = pub.title | append: " - " | append: pub.venue_short | append: " " | append: pub.year %}
+            {% assign intern_achievements = intern_achievements | push: pub_text %}
+          {% endif %}
+        {% endfor %}
+
+        {% if intern_achievements.size > 0 %}
+        <div class="modal-achievements">
+          <strong>Achievements:</strong>
+          <ul>
+          {% for achievement in intern_achievements %}
+            <li>{{ achievement }}</li>
+          {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
         <div class="modal-social">
           <a href="#" onclick="event.preventDefault()" title="GitHub">
             <i class="fab fa-github"></i>
@@ -333,18 +377,18 @@ title: Students
 
 .modal-content {
   background: white;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  max-height: 80vh;
   border-radius: 20px;
   padding: 40px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: modalSlideIn 0.3s ease-out;
+  overflow-y: auto;
 }
 
 @keyframes modalSlideIn {
@@ -402,14 +446,21 @@ title: Students
 .modal-achievements {
   text-align: left;
   margin-bottom: 25px;
+  margin-top: 20px;
   width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
 }
 
 .modal-achievements strong {
   color: #2c3e50;
-  font-size: 1rem;
+  font-size: 1.1rem;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .modal-achievements ul {
@@ -419,9 +470,10 @@ title: Students
 
 .modal-achievements li {
   color: #495057;
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-  line-height: 1.4;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  word-break: break-word;
 }
 
 .modal-social {

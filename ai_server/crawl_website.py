@@ -7,6 +7,7 @@ Crawls the entire website and extracts structured information
 import requests
 from bs4 import BeautifulSoup
 import json
+import yaml
 import re
 from typing import List, Dict, Any
 from datetime import datetime
@@ -20,6 +21,42 @@ class RealityLabCrawler:
         self.session.headers.update({
             'User-Agent': 'RealityLabRAGBot/1.0'
         })
+        # Load members.yml for Korean names
+        self.members_data = None
+        self.name_to_korean = {}  # English name -> Korean name mapping
+        self.load_members_yml()
+
+    def load_members_yml(self):
+        """Load members.yml to get Korean names"""
+        try:
+            yml_path = "/home/i0179/Realitylab-site/_data/members.yml"
+            with open(yml_path, 'r', encoding='utf-8') as f:
+                self.members_data = yaml.safe_load(f)
+
+            # Build name lookup dictionary
+            # Faculty
+            if 'faculty' in self.members_data:
+                for faculty in self.members_data['faculty']:
+                    if 'name' in faculty and 'name_ko' in faculty:
+                        self.name_to_korean[faculty['name']] = faculty['name_ko']
+
+            # Students
+            if 'students' in self.members_data:
+                if 'ms_students' in self.members_data['students']:
+                    for student in self.members_data['students']['ms_students']:
+                        if 'name' in student and 'name_ko' in student:
+                            self.name_to_korean[student['name']] = student['name_ko']
+
+                if 'interns' in self.members_data['students']:
+                    for intern in self.members_data['students']['interns']:
+                        if 'name' in intern and 'name_ko' in intern:
+                            self.name_to_korean[intern['name']] = intern['name_ko']
+
+            print(f"✅ Loaded {len(self.name_to_korean)} Korean name mappings from members.yml")
+        except Exception as e:
+            print(f"⚠️  Warning: Could not load members.yml: {e}")
+            self.members_data = None
+            self.name_to_korean = {}
 
     def fetch_page(self, path: str) -> BeautifulSoup:
         """Fetch and parse a page"""
@@ -279,16 +316,31 @@ Research Interns: {', '.join(interns)}"""
                 email = self.clean_text(email_elem.get_text()) if email_elem else ""
                 research = self.clean_text(research_elem.get_text()) if research_elem else ""
 
-                content = f"학생: {name}\n"
-                if email:
-                    content += f"이메일: {email}\n"
-                if research:
-                    content += f"연구분야: {research}"
+                # Get Korean name from YAML if available
+                name_ko = self.name_to_korean.get(name, "")
+
+                # Build content with both English and Korean names
+                # Put Korean name first for better Korean query matching
+                if name_ko:
+                    content = f"{name_ko} ({name}) 학생\n"
+                    if email:
+                        content += f"{name_ko}의 이메일: {email}\n"
+                    else:
+                        content += f"이메일: 정보 없음\n"
+                    if research:
+                        content += f"연구분야: {research}"
+                else:
+                    content = f"학생: {name}\n"
+                    if email:
+                        content += f"이메일: {email}\n"
+                    if research:
+                        content += f"연구분야: {research}"
 
                 self.add_document(content, {
                     "type": "student",
                     "source": "students",
                     "name": name,
+                    "name_ko": name_ko,
                     "language": "ko"
                 })
 

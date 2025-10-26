@@ -24,10 +24,10 @@ class HierarchicalRetriever:
         # Category keywords for classification
         self.category_keywords = {
             "faculty": ["교수", "professor", "prof", "김희원", "heewon", "지도교수", "책임자"],
-            "students": ["학생", "student", "연구원", "researcher", "석사", "master", "인턴", "intern", "멤버", "member"],
+            "students": ["학생", "student", "연구원", "researcher", "석사", "master", "인턴", "intern", "멤버", "member", "연구생", "수", "몇 명", "명단", "구성원"],
             "alumni": ["졸업생", "alumni", "졸업", "graduate", "former"],
             "news": ["뉴스", "news", "소식", "발표", "announcement", "accept", "award", "수상"],
-            "publications": ["논문", "paper", "publication", "학회", "conference", "journal", "cvpr", "iccv", "연구"],
+            "publications": ["논문", "paper", "publication", "학회", "conference", "journal", "cvpr", "iccv"],
             "lab_info": ["연구실", "lab", "위치", "location", "주소", "address", "contact", "연락처"]
         }
 

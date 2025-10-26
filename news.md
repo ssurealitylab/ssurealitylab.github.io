@@ -455,6 +455,7 @@ title: News
   margin: 0;
   padding: 15px;
   border-radius: 15px;
+  background-color: white;
 }
 
 /* Research Areas Badges */

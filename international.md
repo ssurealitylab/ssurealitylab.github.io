@@ -32,7 +32,7 @@ title: International Publications
         <!-- APP3DV 2025 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c24')" style="cursor: pointer;">
-            <div class="publication-badge challenge-badge">APP3DV25</div>
+            <div class="publication-badge challenge-badge">APP3DV</div>
             <div class="external-links">
               <a href="https://drive.google.com/file/d/10vp2SWByAJGr-Ccrw68c2hTepsMr5di9/view" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -52,7 +52,7 @@ title: International Publications
         <!-- BMVC 2025 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c23')" style="cursor: pointer;">
-            <div class="publication-badge">BMVC25</div>
+            <div class="publication-badge">BMVC</div>
             <h5 class="list-title">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</h5>
             <p class="list-authors">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
           </div>
@@ -103,7 +103,7 @@ title: International Publications
         <!-- CVPR 2025 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c22')" style="cursor: pointer;">
-            <div class="publication-badge">CVPR25</div>
+            <div class="publication-badge">CVPR</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DynScene_Scalable_Generation_of_Dynamic_Robotic_Manipulation_Scenes_for_Embodied_CVPR_2025_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -120,7 +120,7 @@ title: International Publications
         <!-- SIDL - AAAI 2025 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('sidl')" style="cursor: pointer;">
-            <div class="publication-badge">AAAI25</div>
+            <div class="publication-badge">AAAI</div>
             <div class="external-links">
               <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32257" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -219,7 +219,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('j4')" style="cursor: pointer;">
             <div class="publication-badge">TIP</div>
             <div class="external-links">
-              <a href="https://ieeexplore.ieee.org/document/10246427" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://arxiv.org/pdf/2206.08488" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
@@ -245,7 +245,7 @@ title: International Publications
         <!-- ICLR 2023 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c15')" style="cursor: pointer;">
-            <div class="publication-badge">ICLR23</div>
+            <div class="publication-badge">ICLR</div>
             <div class="external-links">
               <a href="https://openreview.net/forum?id=NO0ThzteQdI" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -288,7 +288,7 @@ title: International Publications
         <!-- ECCV 2022 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c14')" style="cursor: pointer;">
-            <div class="publication-badge">ECCV22</div>
+            <div class="publication-badge">ECCV</div>
             <div class="external-links">
               <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780328.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -319,7 +319,7 @@ title: International Publications
         <!-- CVPR 2022 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c13')" style="cursor: pointer;">
-            <div class="publication-badge">CVPR22</div>
+            <div class="publication-badge">CVPR</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Oh_Attentive_Fine-Grained_Structured_Sparsity_for_Image_Restoration_CVPR_2022_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -333,7 +333,7 @@ title: International Publications
         <!-- WACV 2022 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c12')" style="cursor: pointer;">
-            <div class="publication-badge">WACV22</div>
+            <div class="publication-badge">WACV</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Hong_DAQ_Channel-Wise_Distribution-Aware_Quantization_for_Deep_Image_Super-Resolution_Networks_WACV_2022_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -347,7 +347,7 @@ title: International Publications
         <!-- WACV 2022 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c11')" style="cursor: pointer;">
-            <div class="publication-badge">WACV22</div>
+            <div class="publication-badge">WACV</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Oh_Batch_Normalization_Tells_You_Which_Filter_Is_Important_WACV_2022_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -375,7 +375,7 @@ title: International Publications
         <!-- ICCV 2021 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c10')" style="cursor: pointer;">
-            <div class="publication-badge">ICCV21</div>
+            <div class="publication-badge">ICCV</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Baik_Meta-Learning_With_Task-Adaptive_Loss_Function_for_Few-Shot_Learning_ICCV_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -392,7 +392,7 @@ title: International Publications
         <!-- ICCV 2021 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c9')" style="cursor: pointer;">
-            <div class="publication-badge">ICCV21</div>
+            <div class="publication-badge">ICCV</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Motion-Aware_Dynamic_Architecture_for_Efficient_Frame_Interpolation_ICCV_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -406,7 +406,7 @@ title: International Publications
         <!-- ICCV 2021 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c8')" style="cursor: pointer;">
-            <div class="publication-badge">ICCV21</div>
+            <div class="publication-badge">ICCV</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Kim_Searching_for_Controllable_Image_Restoration_Networks_ICCV_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -420,7 +420,7 @@ title: International Publications
         <!-- CVPRW 2021 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c7')" style="cursor: pointer;">
-            <div class="publication-badge workshop-badge">CVPRW21</div>
+            <div class="publication-badge workshop-badge">CVPRW</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/CVPR2021W/MAI/papers/Ignatov_Real-Time_Video_Super-Resolution_on_Smartphones_With_Deep_Learning_Mobile_AI_CVPRW_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -434,7 +434,7 @@ title: International Publications
         <!-- NeurIPS 2020 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c6')" style="cursor: pointer;">
-            <div class="publication-badge">NeurIPS20</div>
+            <div class="publication-badge">NeurIPS</div>
             <div class="external-links">
               <a href="https://proceedings.neurips.cc/paper/2020/file/9d8420bbf6d0d1a6f97d3c2e5f3b6b0a-Paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -451,7 +451,7 @@ title: International Publications
         <!-- AAAI 2020 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c5')" style="cursor: pointer;">
-            <div class="publication-badge">AAAI20</div>
+            <div class="publication-badge">AAAI</div>
             <div class="external-links">
               <a href="https://ojs.aaai.org/index.php/AAAI/article/view/6693/6547" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -465,7 +465,7 @@ title: International Publications
         <!-- ICCVW 2019 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c4')" style="cursor: pointer;">
-            <div class="publication-badge">ICCVW19</div>
+            <div class="publication-badge">ICCVW</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content_ICCVW_2019/papers/AIM/Nah_AIM_2019_Challenge_on_Video_Temporal_Super-Resolution_Methods_and_Results_ICCVW_2019_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -479,7 +479,7 @@ title: International Publications
         <!-- ECCV 2018 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c3')" style="cursor: pointer;">
-            <div class="publication-badge">ECCV18</div>
+            <div class="publication-badge">ECCV</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Heewon_Kim_Task-Aware_Image_Downscaling_ECCV_2018_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -496,7 +496,7 @@ title: International Publications
         <!-- CVPRW 2017 NTIRE Challenge -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c2')" style="cursor: pointer;">
-            <div class="publication-badge workshop-badge">CVPRW17</div>
+            <div class="publication-badge workshop-badge">CVPRW</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Timofte_NTIRE_2017_Challenge_CVPR_2017_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -510,7 +510,7 @@ title: International Publications
         <!-- CVPRW 2017 EDSR -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c1')" style="cursor: pointer;">
-            <div class="publication-badge workshop-badge">CVPRW17</div>
+            <div class="publication-badge workshop-badge">CVPRW</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>

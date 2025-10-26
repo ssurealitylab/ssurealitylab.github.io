@@ -163,7 +163,7 @@ publications:
     status: published
     citation: "[J4] Heewon Kim and Kyoung Mu Lee, \"Learning Controllable ISP for Image Enhancement,\" IEEE Trans. Image Processing (TIP), vol. 33, no. 1, pp. 867-880, Aug. 2023."
     links:
-      pdf: "https://ieeexplore.ieee.org/document/10246427"
+      pdf: "https://arxiv.org/pdf/2206.08488"
 
   - id: j3
     title: "Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning"

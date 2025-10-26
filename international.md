@@ -233,7 +233,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('j3')" style="cursor: pointer;">
             <div class="publication-badge">TPAMI</div>
             <div class="external-links">
-              <a href="https://ieeexplore.ieee.org/document/10004963" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://ieeexplore.ieee.org/document/10080995" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
@@ -276,7 +276,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('j2')" style="cursor: pointer;">
             <div class="publication-badge">JVCI</div>
             <div class="external-links">
-              <a href="https://www.sciencedirect.com/science/article/pii/S1047320322001973" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://arxiv.org/pdf/1911.07478" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
@@ -290,7 +290,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('c14')" style="cursor: pointer;">
             <div class="publication-badge">ECCV</div>
             <div class="external-links">
-              <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780328.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://arxiv.org/pdf/2207.10345" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
               <a href="https://github.com/Cheeun/CADyQ" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">

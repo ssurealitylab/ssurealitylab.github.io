@@ -8,6 +8,7 @@ title: Domestic Publications
   <div class="container">
     <h1 class="section-heading text-uppercase">Domestic Publications</h1>
     <h3 class="section-subheading text-muted">Korean research contributions and achievements</h3>
+    <p style="color: #6c757d; font-size: 0.85rem; margin-top: 10px;">Click on a publication to view detailed information</p>
   </div>
 </section>
 

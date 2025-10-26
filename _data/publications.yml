@@ -205,17 +205,6 @@ publications:
     links:
       pdf: "https://ieeexplore.ieee.org/document/10004963"
 
-  - id: c14
-    title: "DAQ: Channel-Wise Distribution-Aware Quantization"
-    authors: "Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim"
-    venue: "British Machine Vision Conference (BMVC)"
-    venue_short: "BMVC"
-    year: 2023
-    type: conference
-    status: published
-    citation: "Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim, \"DAQ: Channel-Wise Distribution-Aware Quantization,\" Proc. British Machine Vision Conference (BMVC), 2023"
-    notes: "* Equal contribution"
-
   - id: c11
     title: "Batch Normalization Tells You Which Filter is Important"
     authors: "Junghun Oh, Heewon Kim, Sungyong Baik, Cheeun Hong, Kyoung Mu Lee"
@@ -233,7 +222,7 @@ publications:
     authors: "Heewon Kim, et al."
     venue: "PLOS ONE"
     venue_short: "PLOS ONE"
-    year: 2023
+    year: 2022
     type: journal
     status: published
     citation: "[J1] Chiyoung Lee and Heewon Kim, \"Machine learning-based predictive modeling of depression in hypertensive populations,\" PLOS ONE, vol. 17, no. 7, pp. 1-12, Jul. 2022."
@@ -351,14 +340,14 @@ publications:
   - id: c9
     title: "Motion-Aware Dynamic Architecture for Efficient Frame Interpolation"
     authors: "Myungsub Choi, Suyoung Lee, Heewon Kim, and Kyoung Mu Lee"
-    venue: "Proc. International Conference on Multimedia and Expo (ICME)"
-    venue_short: "AAAI"
-    year: 2020
+    venue: "Proc. International Conference on Computer Vision (ICCV)"
+    venue_short: "ICCV"
+    year: 2021
     type: conference
     status: published
-    citation: "[C9] Myungsub Choi, Suyoung Lee, Heewon Kim, and Kyoung Mu Lee, \"Motion-Aware Dynamic Architecture for Efficient Frame Interpolation,\" Proc. AAAI Conference on Artificial Intelligence, 2020."
+    citation: "[C9] Myungsub Choi, Suyoung Lee, Heewon Kim, and Kyoung Mu Lee, \"Motion-Aware Dynamic Architecture for Efficient Frame Interpolation,\" Proc. International Conference on Computer Vision (ICCV), 2021."
     links:
-      pdf: "https://ojs.aaai.org/index.php/AAAI/article/view/6692/6546"
+      pdf: "https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Motion-Aware_Dynamic_Architecture_for_Efficient_Frame_Interpolation_ICCV_2021_paper.pdf"
 
   - id: c5
     title: "Channel Attention Is All You Need for Video Frame Interpolation"
@@ -396,6 +385,18 @@ publications:
     links:
       pdf: "https://openaccess.thecvf.com/content_ECCV_2018/papers/Heewon_Kim_Task-Aware_Image_Downscaling_ECCV_2018_paper.pdf"
       project: "https://cv.snu.ac.kr/research/ECCV2018_TAID/"
+
+  - id: c2
+    title: "NTIRE 2017 Challenge on Single Image Super-Resolution: Methods and Results"
+    authors: "Radu Timofte, Eirikur Agustsson, Luc Van Gool, Ming-Hsuan Yang, Lei Zhang, Bee Lim, Sanghyun Son, Heewon Kim, Seungjun Nah, Kyoung Mu Lee, et al."
+    venue: "Proc. Computer Vision and Pattern Recognition Workshops (CVPRW)"
+    venue_short: "CVPRW"
+    year: 2017
+    type: conference
+    status: published
+    citation: "[C2] Radu Timofte, Eirikur Agustsson, Luc Van Gool, Ming-Hsuan Yang, Lei Zhang, Bee Lim, Sanghyun Son, Heewon Kim, Seungjun Nah, Kyoung Mu Lee, Xingtao Wang, Yapeng Tian, Ke Yu, Yulun Zhang, Shixiang Wu, Chao Dong, Liang Lin, Yu Qiao, Chen Change Loy, Wen Heng, Giang Bui, Truc Le, Ye Duan, Dacheng Tao, Ruxin Wang, Xu Lin, Jianwei Pang, Jian Xu, Yue Zhao, Xiangyu Xu, Jun Pan, Deqing Sun, Yujin Zhang, Jian Song, Yong Qin, Yukang Li, Jianwei Li, Yujin Chen, Kai Zhang, Wangmeng Zuo, Zhimin Tang, Linkai Luo, Shaohui Li, Min Fu, Lei Cao, Wen Heng, Giang Bui, Truc Le, Ye Duan, and Qi Guo, \"NTIRE 2017 Challenge on Single Image Super-Resolution: Methods and Results,\" NTIRE 2017, New Trends in Image Restoration and Enhancement workshop and challenge on super-resolution in conjunction with CVPR 2017."
+    links:
+      pdf: "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Timofte_NTIRE_2017_Challenge_CVPR_2017_paper.pdf"
 
   - id: c1
     title: "Enhanced Deep Residual Networks for Single Image Super-Resolution"

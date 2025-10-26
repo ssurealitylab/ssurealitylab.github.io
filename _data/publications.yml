@@ -149,6 +149,7 @@ publications:
     type: conference
     status: published
     citation: "[C15] Heewon Kim and Kyoung Mu Lee, \"NERDS: A General Framework to Train Camera Denoisers from Raw-RGB Noisy Image Pairs,\" International Conference on Learning Representations (ICLR), 2023."
+    image: "assets/img/publications/nerds/architecture.png"
     links:
       pdf: "https://openreview.net/pdf?id=SHvF5xaueVv"
 
@@ -175,7 +176,7 @@ publications:
     status: published
     citation: "[J3] Sungyong Baik, Myungsub Choi, Janghoon Choi, Heewon Kim, and Kyoung Mu Lee, \"Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning,\" IEEE Trans. Pattern Analysis and Machine Intelligence (TPAMI), vol. 46, no. 3, pp. 1441-1454, Mar. 2023."
     links:
-      pdf: "https://ieeexplore.ieee.org/document/10004963"
+      pdf: "https://ieeexplore.ieee.org/document/10080995"
 
   - id: c11
     title: "Batch Normalization Tells You Which Filter is Important"
@@ -211,8 +212,9 @@ publications:
     type: journal
     status: published
     citation: "[J2] Heewon Kim, Seokil Hong, Bohyung Han, Heesoo Myeong, and Kyoung Mu Lee, \"Fine-Grained Neural Architecture Search for Image Super-Resolution,\" Journal of Visual Communication and Image Representation (JVCI), vol. 89, no. 1, pp. 1-9, Nov. 2022."
+    image: "assets/img/publications/fgnas/architecture.png"
     links:
-      pdf: "https://www.sciencedirect.com/science/article/pii/S1047320322001973"
+      pdf: "https://arxiv.org/pdf/1911.07478"
 
   - id: c6
     title: "Meta-Learning with Adaptive Hyperparameters"

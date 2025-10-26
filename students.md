@@ -6,6 +6,7 @@ title: Students
 # Students
 
 ## Master's Students
+<p style="color: #6c757d; font-size: 0.9rem; margin-top: -10px; margin-bottom: 20px;">Click on a card to view detailed information</p>
 
 <div class="members-grid">
   {% for student in site.data.members.students.ms_students %}
@@ -124,6 +125,7 @@ title: Students
 </div>
 
 ## Research Interns
+<p style="color: #6c757d; font-size: 0.9rem; margin-top: -10px; margin-bottom: 20px;">Click on a card to view detailed information</p>
 
 <div class="members-grid">
   {% for intern in site.data.members.students.interns %}

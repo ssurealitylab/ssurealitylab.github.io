@@ -6,6 +6,7 @@ title: Alumni
 # Alumni
 
 ## Former Research Interns
+<p style="color: #6c757d; font-size: 0.9rem; margin-top: -10px; margin-bottom: 20px;">Click on a card to view detailed information</p>
 
 <div class="members-grid">
   {% for alumnus in site.data.members.alumni.former_interns %}

@@ -10,6 +10,7 @@ title: International Publications
   <div class="container">
     <h1 class="section-heading text-uppercase">International Publications</h1>
     <h3 class="section-subheading text-muted">Global research achievements and scholarly contributions</h3>
+    <p style="color: #6c757d; font-size: 0.85rem; margin-top: 10px;">Click on a publication to view detailed information</p>
   </div>
 </section>
 

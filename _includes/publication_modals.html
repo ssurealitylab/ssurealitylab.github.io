@@ -48,18 +48,6 @@
       {% endif %}
 
       {% if pub.id == 'c24' %}
-      <!-- IPRF Abstract Section -->
-      <div class="method-image-section mb-4">
-        <h5 class="method-image-title">Abstract</h5>
-        <div class="abstract-content">
-          <p>Photorealistic style transfer in neural radiance fields (NeRF) aims to modify the color characteristics of a 3D scene without altering its underlying geometry. Although recent approaches have achieved promising results, they often suffer from limited style diversity, focusing primarily on global color shifts. In contrast, artistic style transfer methods offer richer stylization but usually distort scene geometry, thereby reducing realism.</p>
-
-          <p>In this work, we present Intrinsic-guided Photorealistic Style Transfer (IPRF), a novel framework that leverages intrinsic image decomposition to decouple a scene into albedo and shading components. By introducing tailored loss functions in both domains, IPRF aligns the texture and color of the content scene to those of a style image while faithfully preserving geometric structure and lighting.</p>
-
-          <p>Furthermore, we propose Tuning-assisted Style Interpolation (TSI), a real-time technique for exploring the trade-off between photorealism and artistic expression through a weighted combination of albedo-oriented and shading-oriented radiance fields. Experimental results demonstrate that IPRF achieves a superior balance between naturalism and artistic expression compared to state-of-the-art methods, offering a versatile solution for 3D content creation in various fields, including digital art, virtual reality, and game design.</p>
-        </div>
-      </div>
-
       <!-- IPRF Video Section -->
       <div class="method-image-section mb-4">
         <h5 class="method-image-title">Results</h5>
@@ -105,6 +93,18 @@
               </video>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- IPRF Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Photorealistic style transfer in neural radiance fields (NeRF) aims to modify the color characteristics of a 3D scene without altering its underlying geometry. Although recent approaches have achieved promising results, they often suffer from limited style diversity, focusing primarily on global color shifts. In contrast, artistic style transfer methods offer richer stylization but usually distort scene geometry, thereby reducing realism.</p>
+
+          <p>In this work, we present Intrinsic-guided Photorealistic Style Transfer (IPRF), a novel framework that leverages intrinsic image decomposition to decouple a scene into albedo and shading components. By introducing tailored loss functions in both domains, IPRF aligns the texture and color of the content scene to those of a style image while faithfully preserving geometric structure and lighting.</p>
+
+          <p>Furthermore, we propose Tuning-assisted Style Interpolation (TSI), a real-time technique for exploring the trade-off between photorealism and artistic expression through a weighted combination of albedo-oriented and shading-oriented radiance fields. Experimental results demonstrate that IPRF achieves a superior balance between naturalism and artistic expression compared to state-of-the-art methods, offering a versatile solution for 3D content creation in various fields, including digital art, virtual reality, and game design.</p>
         </div>
       </div>
       {% endif %}

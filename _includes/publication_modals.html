@@ -250,6 +250,172 @@
       </div>
       {% endif %}
 
+      {% if pub.id == 'j3' %}
+      <!-- Learning to Learn Task-Adaptive Hyperparameters Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>In few-shot learning scenarios, the challenge is to generalize and perform well on new unseen examples when only very few labeled examples are available for each task. Model-agnostic meta-learning (MAML) has gained the popularity as one of the representative few-shot learning methods for its flexibility and applicability to diverse problems. However, MAML and its variants often resort to a simple loss function without any auxiliary loss function or regularization terms that can help achieve better generalization. The problem lies in that each application and task may require different auxiliary loss function, especially when tasks are diverse and distinct.</p>
+
+          <p>Instead of attempting to hand-design an auxiliary loss function for each application and task, we introduce a new meta-learning framework with a loss function that adapts to each task. Our proposed framework, named Meta-Learning with Task-Adaptive Loss Function (MeTAL), demonstrates the effectiveness and the flexibility across various domains, such as few-shot classification and few-shot regression.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'j2' %}
+      <!-- Fine-Grained NAS Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>The goal of filter pruning is to search for unimportant filters to remove in order to make convolutional neural networks (CNNs) efficient without sacrificing the performance in the process. The challenge lies in finding information that can help determine how important or relevant each filter is with respect to the final output of neural networks. In this work, we share our observation that the batch normalization (BN) parameters of pre-trained CNNs can be used to estimate the feature distribution of activation outputs, without processing of training data.</p>
+
+          <p>Upon observation, we propose a simple yet effective filter pruning method by evaluating the importance of each filter based on the BN parameters of pre-trained CNNs. The experimental results on CIFAR-10 and ImageNet demonstrate that the proposed method can achieve outstanding performance with and without fine-tuning in terms of the trade-off between the accuracy drop and the reduction in computational complexity and number of parameters of pruned networks.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c14' %}
+      <!-- CADyQ Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Since the resurgence of deep neural networks (DNNs), image super-resolution (SR) has recently seen a huge progress in improving the quality of low resolution images, however at the great cost of computations and resources. Recently, there has been several efforts to make DNNs more efficient via quantization. However, SR demands pixel-level accuracy in the system, it is more difficult to perform quantization without significantly sacrificing SR performance.</p>
+
+          <p>To this end, we introduce a new ultra-low precision yet effective quantization approach specifically designed for SR. In particular, we observe that in recent SR networks, each channel has different distribution characteristics. Thus we propose a channel-wise distribution-aware quantization scheme. Experimental results demonstrate that our proposed quantization, dubbed Distribution-Aware Quantization (DAQ), manages to greatly reduce the computational and resource costs without the significant sacrifice in SR performance, compared to other quantization methods.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c13' %}
+      <!-- Attentive Fine-Grained Structured Sparsity Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Video frame interpolation aims to synthesize accurate intermediate frames given a low-frame-rate video. While the quality of the generated frames is increasingly getting better, state-of-the-art models have become more and more computationally expensive. However, local regions with small or no motion can be easily interpolated with simple models and do not require such heavy compute, whereas some regions may not be correct even after inference through a large model.</p>
+
+          <p>Thus, we propose an effective framework that assigns varying amounts of computation for different regions. Our dynamic architecture first calculates the approximate motion magnitude to use as a proxy for the difficulty levels for each region, and decides the depth of the model and the scale of the input. Experimental results show that static regions pass through a smaller number of layers, while the regions with larger motion are downscaled for better motion reasoning. In doing so, we demonstrate that the proposed framework can significantly reduce the computation cost (FLOPs) while maintaining the performance, often up to 50% when interpolating a 2K resolution video.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c12' %}
+      <!-- DAQ Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Since the resurgence of deep neural networks (DNNs), image super-resolution (SR) has recently seen a huge progress in improving the quality of low resolution images, however at the great cost of computations and resources. Recently, there has been several efforts to make DNNs more efficient via quantization. However, SR demands pixel-level accuracy in the system, it is more difficult to perform quantization without significantly sacrificing SR performance.</p>
+
+          <p>To this end, we introduce a new ultra-low precision yet effective quantization approach specifically designed for SR. In particular, we observe that in recent SR networks, each channel has different distribution characteristics. Thus we propose a channel-wise distribution-aware quantization scheme. Experimental results demonstrate that our proposed quantization, dubbed Distribution-Aware Quantization (DAQ), manages to greatly reduce the computational and resource costs without the significant sacrifice in SR performance, compared to other quantization methods.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c11' %}
+      <!-- Batch Normalization Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>The goal of filter pruning is to search for unimportant filters to remove in order to make convolutional neural networks (CNNs) efficient without sacrificing the performance in the process. The challenge lies in finding information that can help determine how important or relevant each filter is with respect to the final output of neural networks. In this work, we share our observation that the batch normalization (BN) parameters of pre-trained CNNs can be used to estimate the feature distribution of activation outputs, without processing of training data.</p>
+
+          <p>Upon observation, we propose a simple yet effective filter pruning method by evaluating the importance of each filter based on the BN parameters of pre-trained CNNs. The experimental results on CIFAR-10 and ImageNet demonstrate that the proposed method can achieve outstanding performance with and without fine-tuning in terms of the trade-off between the accuracy drop and the reduction in computational complexity and number of parameters of pruned networks.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c10' %}
+      <!-- Meta-Learning with Task-Adaptive Loss Function Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>In few-shot learning scenarios, the challenge is to generalize and perform well on new unseen examples when only very few labeled examples are available for each task. Model-agnostic meta-learning (MAML) has gained the popularity as one of the representative few-shot learning methods for its flexibility and applicability to diverse problems. However, MAML and its variants often resort to a simple loss function without any auxiliary loss function or regularization terms that can help achieve better generalization. The problem lies in that each application and task may require different auxiliary loss function, especially when tasks are diverse and distinct.</p>
+
+          <p>Instead of attempting to hand-design an auxiliary loss function for each application and task, we introduce a new meta-learning framework with a loss function that adapts to each task. Our proposed framework, named Meta-Learning with Task-Adaptive Loss Function (MeTAL), demonstrates the effectiveness and the flexibility across various domains, such as few-shot classification and few-shot regression.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c9' %}
+      <!-- Motion-Aware Dynamic Architecture Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Video frame interpolation aims to synthesize accurate intermediate frames given a low-frame-rate video. While the quality of the generated frames is increasingly getting better, state-of-the-art models have become more and more computationally expensive. However, local regions with small or no motion can be easily interpolated with simple models and do not require such heavy compute, whereas some regions may not be correct even after inference through a large model.</p>
+
+          <p>Thus, we propose an effective framework that assigns varying amounts of computation for different regions. Our dynamic architecture first calculates the approximate motion magnitude to use as a proxy for the difficulty levels for each region, and decides the depth of the model and the scale of the input. Experimental results show that static regions pass through a smaller number of layers, while the regions with larger motion are downscaled for better motion reasoning. In doing so, we demonstrate that the proposed framework can significantly reduce the computation cost (FLOPs) while maintaining the performance, often up to 50% when interpolating a 2K resolution video.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c8' %}
+      <!-- Searching for Controllable Image Restoration Networks Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>We present a novel framework for controllable image restoration that can effectively restore multiple types and levels of degradation of a corrupted image. The proposed model, named TASNet, is automatically determined by our neural architecture search algorithm, which optimizes the efficiency-accuracy trade-off of the candidate model architectures. Specifically, we allow TASNet to share the early layers across different restoration tasks and adaptively adjust the remaining layers with respect to each task.</p>
+
+          <p>The shared task-agnostic layers greatly improve the efficiency while the task-specific layers are optimized for restoration quality, and our search algorithm seeks for the best balance between the two. We also propose a new data sampling strategy to further improve the overall restoration performance. As a result, TASNet achieves significantly faster GPU latency and lower FLOPs compared to the existing state-of-the-art models, while also showing visually more pleasing outputs.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c7' %}
+      <!-- Real-Time Video Super-Resolution Mobile AI 2021 Challenge Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Video super-resolution has recently become one of the most important mobile-related problems due to the rise of video communication and streaming services. While many solutions have been proposed for this task, the majority of them are too computationally expensive to run on portable devices with limited hardware resources. To address this problem, we introduce the first Mobile AI challenge, where the target is to develop an end-to-end deep learning-based video super-resolution solutions that can achieve a real-time performance on mobile GPUs.</p>
+
+          <p>The participants were provided with the REDS dataset and trained their models to do an efficient 4X video upscaling. The runtime of all models was evaluated on the OPPO Find X2 smartphone with the Snapdragon 865 SoC capable of accelerating floating-point networks on its Adreno GPU. The proposed solutions are fully compatible with any mobile GPU and can upscale videos to HD resolution at up to 80 FPS while demonstrating high fidelity results. A detailed description of all models developed in the challenge is provided in this paper.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c5' %}
+      <!-- Channel Attention Is All You Need Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Prevailing video frame interpolation techniques rely heavily on optical flow estimation and require additional model complexity and computational cost; it is also susceptible to error propagation in challenging scenarios with large motion and heavy occlusion. To alleviate the limitation, we propose a simple but effective deep neural network for video frame interpolation, which is end-to-end trainable and is free from a motion estimation network component.</p>
+
+          <p>Our algorithm employs a special feature reshaping operation, referred to as PixelShuffle, with a channel attention, which replaces the optical flow computation module. The main idea behind the design is to distribute the information in a feature map into multiple channels and extract motion information by attending the channels for pixel-level frame synthesis. The model given by this principle turns out to be effective in the presence of challenging motion and occlusion. We construct a comprehensive evaluation benchmark and demonstrate that the proposed approach achieves outstanding performance compared to the existing models with a component for optical flow computation.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c3' %}
+      <!-- Task-Aware Image Downscaling Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Image downscaling is one of the most classical problems in computer vision that aims to preserve the visual appearance of the original image when it is resized to a smaller scale. Upscaling a small image back to its original size is a difficult and ill-posed problem due to information loss that arises in the downscaling process. In this paper, we present a novel technique called task-aware image downscaling to support an upscaling task.</p>
+
+          <p>We propose an auto-encoder-based framework that enables joint learning of the downscaling network and the upscaling network to maximize the restoration performance. Our framework is efficient, and it can be generalized to handle an arbitrary image resizing operation. Experimental results show that our task-aware downscaled images greatly improve the performance of the existing state-of-the-art super-resolution methods. In addition, realistic images can be recovered by recursively applying our scaling model up to an extreme scaling factor of x128. We also validate our model's generalization capability by applying it to the task of image colorization.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c2' %}
+      <!-- NTIRE 2017 Challenge Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>This paper reviews the first challenge on single image super-resolution (restoration of rich details in an low resolution image) with focus on proposed solutions and results. A new DIVerse 2K resolution image dataset (DIV2K) was employed. The challenge had 6 competitions divided into 2 tracks with 3 magnification factors each. Track 1 employed the standard bicubic downscaling setup, while Track 2 had unknown downscaling operators (blur kernel and decimation) but learnable through low and high res train images. Each competition had ∼ 100 registered participants and 20 teams competed in the final testing phase. They gauge the state-of-the-art in single image super-resolution.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c1' %}
+      <!-- Enhanced Deep Residual Networks Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Recent research on super-resolution has progressed with the development of deep convolutional neural networks (DCNN). In particular, residual learning techniques exhibit improved performance. In this paper, we develop an enhanced deep super-resolution network (EDSR) with performance exceeding those of current state-of-the-art SR methods. The significant performance improvement of our model is due to optimization by removing unnecessary modules in conventional residual networks.</p>
+
+          <p>The performance is further improved by expanding the model size while we stabilize the training procedure. We also propose a new multi-scale deep super-resolution system (MDSR) and training method, which can reconstruct high-resolution images of different upscaling factors in a single model. The proposed methods show superior performance over the state-of-the-art methods on benchmark datasets and prove its excellence by winning the NTIRE2017 Super-Resolution Challenge.</p>
+        </div>
+      </div>
+      {% endif %}
+
       <div class="citation-box">
         <p>{{ pub.citation }}</p>
       </div>

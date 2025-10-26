@@ -89,6 +89,304 @@ publications:
     image: "assets/img/publications/deepgam/architecture.png"
     notes: "* Equal contribution<br>† Undergraduate student"
 
+  - id: c20j9
+    title: "Predictors of the treatment effects of transcranial direct current stimulation on knee osteoarthritis pain"
+    authors: "Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, et al."
+    venue: "International Brain Stimulation Conference & Brain Stimulation"
+    venue_short: "Brain Stimulation"
+    year: 2025
+    type: conference
+    status: published
+    citation: "[C20&J9] Chiyoung Lee, Heewon Kim, Yeri Kim†, Seoyoung Kim†, Kent Kwoh, Juyoung Park, Hyochol Ahn, \"Predictors of the treatment effects of transcranial direct current stimulation on knee osteoarthritis pain: a machine-learning approach,\" International Brain Stimulation Conference, 2025 & Brain Stimulation, vol. 18, Issue 1, pp. 456 - 457, Feb. 2025."
+    links:
+      pdf: "https://www.brainstimjrnl.com/article/S1935-861X(25)00009-6/fulltext"
+
+  - id: w1
+    title: "1st Place Winner at CVPR 2025 Embodied AI Workshop"
+    authors: "Reality Lab Team"
+    venue: "CVPR 2025 Embodied AI Workshop"
+    venue_short: "AGNO.5 Challenge"
+    year: 2025
+    type: workshop
+    status: award
+    citation: "1st Place Winner at CVPR 2025 Embodied AI Workshop"
+    badge_style: challenge-badge
+
+  # 2024 Publications
+  - id: c17j8
+    title: "Trajectories of chronic pain among older Veterans: Identifying groups using machine learning"
+    authors: "Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim"
+    venue: "Gerontological Society of America (GSA) Annual Scientific Meeting & Innovation in Aging"
+    venue_short: "GSA"
+    year: 2024
+    type: conference
+    status: published
+    citation: "[C17&J8] Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim, \"Trajectories of chronic pain among older Veterans: Identifying groups using machine learning,\" Gerontological Society of America (GSA) Annual Scientific Meeting, 2024 & Innovation in Aging, vol. 8, issue supple. 1, pp. 1221, Dec. 2024."
+    links:
+      pdf: "https://academic.oup.com/innovateage/article/8/Supplement_1/1221/7917421"
+
+  - id: j7
+    title: "Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs"
+    authors: "Ji Hoon Bang†, Eun Hee Kim, Hyung Jun Kim, Jong-Won Chung, Woo-Keun Seo, Gyeong-Moon Kim, Dong-Ho Lee, Heewon Kim*, Oh Young Bang*"
+    venue: "International Journal of Molecular Sciences (IJMS)"
+    venue_short: "IJMS"
+    year: 2024
+    type: journal
+    status: published
+    citation: "[J7] Ji Hoon Bang†, Eun Hee Kim, Hyung Jun Kim, Jong-Won Chung, Woo-Keun Seo, Gyeong-Moon Kim, Dong-Ho Lee, Heewon Kim*, and Oh Young Bang*, \"Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs,\" International Journal of Molecular Sciences (IJMS), vol. 25, no. 12, pp. 1-14, Jun. 2024."
+    notes: "* Equal contribution<br>† First author"
+    links:
+      pdf: "https://www.mdpi.com/1422-0067/25/12/6396"
+
+  - id: c16
+    title: "Language-Guided Robotic Manipulation"
+    authors: "Sangmin Lee†, Sungyong Park†, Heewon Kim"
+    venue: "AAAI Conference on Artificial Intelligence"
+    venue_short: "AAAI24"
+    year: 2024
+    type: conference
+    status: published
+    citation: "Sangmin Lee†, Sungyong Park†, Heewon Kim, \"Language-Guided Robotic Manipulation,\" AAAI, 2024"
+
+  - id: c15
+    title: "Baseball Player Pose Estimation"
+    authors: "Seunghyun Oh†, Heewon Kim"
+    venue: "ICT Express"
+    venue_short: "ICT Express"
+    year: 2024
+    type: journal
+    status: published
+    citation: "Seunghyun Oh†, Heewon Kim, \"Baseball Player Pose Estimation,\" ICT Express, 2024"
+
+  # 2023 Publications
+  - id: c15_2023
+    title: "NERDS: A General Framework to Train Camera Denoisers from Raw-RGB Noisy Image Pairs"
+    authors: "Yunseok Yang†, Heewon Kim"
+    venue: "International Conference on Learning Representations (ICLR)"
+    venue_short: "ICLR"
+    year: 2023
+    type: conference
+    status: published
+    citation: "[C15] Heewon Kim and Kyoung Mu Lee, \"NERDS: A General Framework to Train Camera Denoisers from Raw-RGB Noisy Image Pairs,\" International Conference on Learning Representations (ICLR), 2023."
+    links:
+      pdf: "https://openreview.net/pdf?id=SHvF5xaueVv"
+
+  - id: j4
+    title: "Learning Controllable ISP for Image Enhancement"
+    authors: "Heewon Kim, Kyoung Mu Lee"
+    venue: "IEEE Transactions on Image Processing (TIP)"
+    venue_short: "TIP"
+    year: 2023
+    type: journal
+    status: published
+    citation: "[J4] Heewon Kim and Kyoung Mu Lee, \"Learning Controllable ISP for Image Enhancement,\" IEEE Trans. Image Processing (TIP), vol. 33, no. 1, pp. 867-880, Aug. 2023."
+    links:
+      pdf: "https://ieeexplore.ieee.org/document/10246427"
+
+  - id: j3
+    title: "Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning"
+    authors: "Sungyong Baik, Myungsub Choi, Janghoon Choi, Heewon Kim, Kyoung Mu Lee"
+    venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)"
+    venue_short: "TPAMI"
+    year: 2023
+    type: journal
+    status: published
+    citation: "[J3] Sungyong Baik, Myungsub Choi, Janghoon Choi, Heewon Kim, and Kyoung Mu Lee, \"Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning,\" IEEE Trans. Pattern Analysis and Machine Intelligence (TPAMI), vol. 46, no. 3, pp. 1441-1454, Mar. 2023."
+    links:
+      pdf: "https://ieeexplore.ieee.org/document/10004963"
+
+  - id: c14
+    title: "DAQ: Channel-Wise Distribution-Aware Quantization"
+    authors: "Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim"
+    venue: "British Machine Vision Conference (BMVC)"
+    venue_short: "BMVC"
+    year: 2023
+    type: conference
+    status: published
+    citation: "Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim, \"DAQ: Channel-Wise Distribution-Aware Quantization,\" Proc. British Machine Vision Conference (BMVC), 2023"
+    notes: "* Equal contribution"
+
+  - id: c11
+    title: "Batch Normalization Tells You Which Filter is Important"
+    authors: "Sangmin Lee†, Sungyong Park†, Heewon Kim"
+    venue: "Winter Conference on Applications of Computer Vision (WACV)"
+    venue_short: "WACV"
+    year: 2023
+    type: conference
+    status: published
+    citation: "[C11] Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, Jonghyun Choi, and Kyoung Mu Lee, \"Batch Normalization Tells You Which Filter is Important,\" Winter Conference on Applications of Computer Vision (WACV), 2022."
+    links:
+      pdf: "https://openaccess.thecvf.com/content/WACV2022/papers/Oh_Batch_Normalization_Tells_You_Which_Filter_Is_Important_WACV_2022_paper.pdf"
+
+  - id: j1
+    title: "Machine learning-based predictive modeling of depression in hypertensive populations"
+    authors: "Heewon Kim, et al."
+    venue: "PLOS ONE"
+    venue_short: "PLOS ONE"
+    year: 2023
+    type: journal
+    status: published
+    citation: "[J1] Chiyoung Lee and Heewon Kim, \"Machine learning-based predictive modeling of depression in hypertensive populations,\" PLOS ONE, vol. 17, no. 7, pp. 1-12, Jul. 2022."
+    links:
+      pdf: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0270559"
+
+  # 2022 Publications
+  - id: j2
+    title: "Fine-Grained Neural Architecture Search for Image Super-Resolution"
+    authors: "Heewon Kim, Seokil Hong, Bohyung Han, Heesoo Myeong, Kyoung Mu Lee"
+    venue: "Journal of Visual Communication and Image Representation (JVCI)"
+    venue_short: "JVCI"
+    year: 2022
+    type: journal
+    status: published
+    citation: "[J2] Heewon Kim, Seokil Hong, Bohyung Han, Heesoo Myeong, and Kyoung Mu Lee, \"Fine-Grained Neural Architecture Search for Image Super-Resolution,\" Journal of Visual Communication and Image Representation (JVCI), vol. 89, no. 1, pp. 1-9, Nov. 2022."
+    links:
+      pdf: "https://www.sciencedirect.com/science/article/pii/S1047320322001973"
+
+  - id: c14_2022
+    title: "CADyQ: Content-Aware Dynamic Quantization for Image Super-Resolution"
+    authors: "Cheeun Hong*, Sungyong Baik, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee"
+    venue: "European Conference on Computer Vision (ECCV)"
+    venue_short: "ECCV"
+    year: 2022
+    type: conference
+    status: published
+    citation: "[C14] Cheeun Hong, Sungyong Baik, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee, \"CADyQ: Content-Aware Dynamic Quantization for Image Super-Resolution,\" Proc. European Conference on Computer Vision (ECCV), 2022."
+    notes: "* Equal contribution"
+    links:
+      pdf: "https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780328.pdf"
+      arxiv: "https://arxiv.org/abs/2207.10345"
+
+  - id: c12
+    title: "DAQ: Channel-Wise Distribution-Aware Quantization for Deep Image Super-Resolution Networks"
+    authors: "Cheeun Hong*, Heewon Kim*, Sungyong Baik, Junghun Oh, and Kyoung Mu Lee"
+    venue: "Winter Conference on Applications of Computer Vision (WACV)"
+    venue_short: "WACV"
+    year: 2022
+    type: conference
+    status: published
+    citation: "[C12] Cheeun Hong*, Heewon Kim*, Sungyong Baik, Junghun Oh, and Kyoung Mu Lee, \"DAQ: Channel-Wise Distribution-Aware Quantization for Deep Image Super-Resolution Networks,\" Winter Conference on Applications of Computer Vision (WACV), 2022."
+    notes: "* Equal contribution"
+    links:
+      pdf: "https://openaccess.thecvf.com/content/WACV2022/papers/Hong_DAQ_Channel-Wise_Distribution-Aware_Quantization_for_Deep_Image_Super-Resolution_Networks_WACV_2022_paper.pdf"
+
+  - id: c13
+    title: "Attentive Fine-Grained Structured Sparsity for Image Restoration"
+    authors: "Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, Jonghyun Choi, and Kyoung Mu Lee"
+    venue: "Proc. Computer Vision and Pattern Recognition (CVPR)"
+    venue_short: "CVPR"
+    year: 2022
+    type: conference
+    status: published
+    citation: "[C13] Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, and Kyoung Mu Lee, \"Attentive Fine-Grained Structured Sparsity for Image Restoration,\" Proc. Computer Vision and Pattern Recognition (CVPR), 2022."
+    links:
+      pdf: "https://openaccess.thecvf.com/content/CVPR2022/papers/Oh_Attentive_Fine-Grained_Structured_Sparsity_for_Image_Restoration_CVPR_2022_paper.pdf"
+
+  # 2021 & Earlier
+  - id: c10
+    title: "Meta-Learning with Task-Adaptive Loss Function for Few-Shot Learning"
+    authors: "Sungyong Baik, Janghoon Choi, Heewon Kim, Dohee Cho, Jaesik Min, and Kyoung Mu Lee"
+    venue: "Proc. International Conference on Computer Vision (ICCV)"
+    venue_short: "ICCV"
+    year: 2021
+    type: conference
+    status: published
+    citation: "[C10] Sungyong Baik, Janghoon Choi, Heewon Kim, Dohee Cho, Jaesik Min, and Kyoung Mu Lee, \"Meta-Learning with Task-Adaptive Loss Function for Few-Shot Learning,\" Proc. International Conference on Computer Vision (ICCV), 2021. (ORAL presentation)"
+    notes: "ORAL presentation"
+    links:
+      pdf: "https://openaccess.thecvf.com/content/ICCV2021/papers/Baik_Meta-Learning_With_Task-Adaptive_Loss_Function_for_Few-Shot_Learning_ICCV_2021_paper.pdf"
+      arxiv: "https://arxiv.org/abs/2110.03909"
+      code: "https://github.com/baiksung/MeTAL"
+
+  - id: c8
+    title: "Searching for Controllable Image Restoration Networks"
+    authors: "Heewon Kim, Sungyong Baik, Myungsub Choi, Janghoon Choi, and Kyoung Mu Lee"
+    venue: "Proc. International Conference on Computer Vision (ICCV)"
+    venue_short: "ICCV"
+    year: 2021
+    type: conference
+    status: published
+    citation: "[C8] Heewon Kim, Sungyong Baik, Myungsub Choi, Janghoon Choi, and Kyoung Mu Lee, \"Searching for Controllable Image Restoration Networks,\" Proc. International Conference on Computer Vision (ICCV), 2021."
+    links:
+      pdf: "https://openaccess.thecvf.com/content/ICCV2021/papers/Kim_Searching_for_Controllable_Image_Restoration_Networks_ICCV_2021_paper.pdf"
+      arxiv: "https://arxiv.org/abs/2012.11225"
+
+  - id: c7
+    title: "Real-time video super-resolution on smartphones with deep learning, mobile ai 2021 challenge: Report"
+    authors: "Andrey Ignatov, Andres Romero, Heewon Kim, and Radu Timofte"
+    venue: "Proc. Computer Vision and Pattern Recognition Workshops (CVPRW)"
+    venue_short: "CVPRW"
+    year: 2021
+    type: conference
+    status: published
+    citation: "[C7] Andrey Ignatov, Andres Romero, Heewon Kim, and Radu Timofte, \"Real-time video super-resolution on smartphones with deep learning, mobile ai 2021 challenge: Report,\" Proc. Computer Vision and Pattern Recognition Workshops (CVPRW), 2021."
+    links:
+      pdf: "https://openaccess.thecvf.com/content/CVPR2021W/MAI/papers/Ignatov_Real-Time_Video_Super-Resolution_on_Smartphones_With_Deep_Learning_Mobile_AI_CVPRW_2021_paper.pdf"
+
+  - id: c9
+    title: "Motion-Aware Dynamic Architecture for Efficient Frame Interpolation"
+    authors: "Myungsub Choi, Suyoung Lee, Heewon Kim, and Kyoung Mu Lee"
+    venue: "Proc. International Conference on Multimedia and Expo (ICME)"
+    venue_short: "AAAI"
+    year: 2020
+    type: conference
+    status: published
+    citation: "[C9] Myungsub Choi, Suyoung Lee, Heewon Kim, and Kyoung Mu Lee, \"Motion-Aware Dynamic Architecture for Efficient Frame Interpolation,\" Proc. AAAI Conference on Artificial Intelligence, 2020."
+    links:
+      pdf: "https://ojs.aaai.org/index.php/AAAI/article/view/6692/6546"
+
+  - id: c5
+    title: "Channel Attention Is All You Need for Video Frame Interpolation"
+    authors: "Myungsub Choi, Heewon Kim, Bohyung Han, Ning Xu, and Kyoung Mu Lee"
+    venue: "AAAI Conference on Artificial Intelligence"
+    venue_short: "AAAI"
+    year: 2020
+    type: conference
+    status: published
+    citation: "[C5] Myungsub Choi, Heewon Kim, Bohyung Han, Ning Xu, and Kyoung Mu Lee, \"Channel Attention Is All You Need for Video Frame Interpolation,\" AAAI Conference on Artificial Intelligence, 2020."
+    links:
+      pdf: "https://ojs.aaai.org/index.php/AAAI/article/view/6693/6547"
+
+  - id: c4
+    title: "AIM 2019 challenge on video temporal super-resolution: Methods and results"
+    authors: "Seungjun Nah, Sanghyun Son, Radu Timofte, Kyoung Mu Lee, Li Siyao, Ziwei Pan, Xiangyu Xu, Wenxiu Sun, Myungsub Choi, Heewon Kim, Bohyung Han, Ning Xu, Renjie Liao, Alex Schwing, Yuhua Chen, Chen Chen, Kai Zhang, Wangmeng Zuo, Tong Lu, Ran Duan, Tong Lu, Lihe Zhang, Woonsook Park, Manhcuot Tran, George Pisha, Eyal Naor, Lilie Zhang, Kai Zhang, Wangmeng Zuo, Zhimin Tang, Linkai Luo, Shaochui Li, Min Fu, Lei Cai, Wen Heng, Giang Bui, Truc Le, Ye Deng, Sifei Liu, Hyun Young Jung, Tianlong Guo, Hongchang Gao, Jiejun Xu, Ruofan Fang, Yunsong Li, Anmur Mehta, Vishal Monga"
+    venue: "International Conference on Computer Vision Workshop (ICCVW)"
+    venue_short: "ICCVW"
+    year: 2019
+    type: conference
+    status: published
+    citation: "[C4] Seungjun Nah, Sanghyun Son, Radu Timofte, Kyoung Mu Lee, Li Siyao, Ziwei Pan, Xiangyu Xu, Wenxiu Sun, Myungsub Choi, Heewon Kim, Bohyung Han, Ning Xu, Renjie Liao, Alex Schwing, Yuhua Chen, Chen Chen, Kai Zhang, Wangmeng Zuo, Tong Lu, Ran Duan, Tong Lu, Lihe Zhang, Woonsook Park, Manhcuot Tran, George Pisha, Eyal Naor, Lilie Zhang, Kai Zhang, Wangmeng Zuo, Zhimin Tang, Linkai Luo, Shaochui Li, Min Fu, Lei Cai, Wen Heng, Giang Bui, Truc Le, Ye Deng, Sifei Liu, Hyun Young Jung, Tianlong Guo, Hongchang Gao, Jiejun Xu, Ruofan Fang, Yunsong Li, Anmur Mehta, Vishal Monga, \"AIM 2019 challenge on video temporal super-resolution: Methods and results,\" International Conference on Computer Vision Workshop (ICCVW), 2019."
+    links:
+      pdf: "https://openaccess.thecvf.com/content_ICCVW_2019/papers/AIM/Nah_AIM_2019_Challenge_on_Video_Temporal_Super-Resolution_Methods_and_Results_ICCVW_2019_paper.pdf"
+
+  - id: c3
+    title: "Task-Aware Image Downscaling"
+    authors: "Heewon Kim, Myungsub Choi, Bee Lim, and Kyoung Mu Lee"
+    venue: "Proc. European Conference on Computer Vision (ECCV)"
+    venue_short: "ECCV"
+    year: 2018
+    type: conference
+    status: published
+    citation: "[C3] Heewon Kim, Myungsub Choi, Bee Lim, and Kyoung Mu Lee, \"Task-Aware Image Downscaling,\" Proc. European Conference on Computer Vision (ECCV), 2018."
+    links:
+      pdf: "https://openaccess.thecvf.com/content_ECCV_2018/papers/Heewon_Kim_Task-Aware_Image_Downscaling_ECCV_2018_paper.pdf"
+      project: "https://cv.snu.ac.kr/research/ECCV2018_TAID/"
+
+  - id: c1
+    title: "Enhanced Deep Residual Networks for Single Image Super-Resolution"
+    authors: "Bee Lim*, Sanghyun Son*, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee"
+    venue: "2nd NTIRE: New Trends in Image Restoration and Enhancement workshop and challenge on image super-resolution in conjunction with CVPR 2017"
+    venue_short: "CVPRW17"
+    year: 2017
+    type: conference
+    status: published
+    citation: "[C1] Bee Lim, Sanghyun Son, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee, \"Enhanced Deep Residual Networks for Single Image Super-Resolution,\" 2nd NTIRE: New Trends in Image Restoration and Enhancement workshop and challenge on image super-resolution in conjunction with CVPR 2017. (Challenge Winners, Best Paper Award of Workshop)"
+    notes: "* Equal contribution<br>Challenge Winners, Best Paper Award of Workshop"
+    links:
+      paper: "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf"
+      pdf: "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf"
+      code: "https://github.com/LimBee/NTIRE2017"
+
   - id: j10
     title: "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance"
     authors: "Seunghyun Oh†, Heewon Kim"

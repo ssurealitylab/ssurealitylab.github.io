@@ -7,12 +7,19 @@ title: Faculty
 
 <div class="faculty-container">
   {% for member in site.data.members.faculty %}
-  <div class="faculty-card faculty-card-clickable" onclick="window.open('{{ member.bio }}', '_blank')">
-    {% if member.scholar and member.scholar != "" %}
-      <a href="{{ member.scholar }}" target="_blank" class="external-scholar-icon" onclick="event.stopPropagation()" title="Google Scholar Profile">
-        <i class="fas fa-graduation-cap"></i>
-      </a>
-    {% endif %}
+  <div class="faculty-card">
+    <div class="external-icons-container">
+      {% if member.bio and member.bio != "" %}
+        <a href="{{ member.bio }}" target="_blank" class="external-icon-link bio-icon" title="Bio">
+          <i class="fas fa-user"></i>
+        </a>
+      {% endif %}
+      {% if member.scholar and member.scholar != "" %}
+        <a href="{{ member.scholar }}" target="_blank" class="external-icon-link scholar-icon" title="Google Scholar Profile">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+      {% endif %}
+    </div>
 
     <div class="member-photo">
       <img src="{{ member.photo }}" alt="{{ member.name }}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZjNmNGY2Ii8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSIzMCIgZmlsbD0iIzllYTNhOCIvPgo8cGF0aCBkPSJNNjAgMTYwYzAtMjIuMDkgMTcuOTEtNDAgNDAtNDBzNDAgMTcuOTEgNDAgNDB2MjBINjB2LTIweiIgZmlsbD0iIzllYTNhOCIvPgo8L3N2Zz4K'">
@@ -39,18 +46,18 @@ title: Faculty
       {% if member.email %}
       <p class="member-email">
         <i class="fas fa-envelope"></i>
-        <span onclick="event.stopPropagation()">{{ member.email }}</span>
+        <span>{{ member.email }}</span>
       </p>
       {% endif %}
 
       <div class="member-social">
         {% if member.github and member.github != "" %}
-        <a href="{{ member.github }}" target="_blank" title="GitHub" onclick="event.stopPropagation()">
+        <a href="{{ member.github }}" target="_blank" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
         {% endif %}
         {% if member.linkedin and member.linkedin != "" %}
-        <a href="{{ member.linkedin }}" target="_blank" title="LinkedIn" onclick="event.stopPropagation()">
+        <a href="{{ member.linkedin }}" target="_blank" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
         {% endif %}
@@ -85,22 +92,18 @@ title: Faculty
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.faculty-card-clickable {
-  cursor: pointer;
-}
-
-.faculty-card-clickable:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.external-scholar-icon {
+.external-icons-container {
   position: absolute;
   top: 15px;
   right: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.external-icon-link {
   width: 45px;
   height: 45px;
-  background-color: #4285f4;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -108,11 +111,24 @@ title: Faculty
   color: white;
   text-decoration: none;
   transition: all 0.3s ease;
-  z-index: 10;
   font-size: 1.2rem;
 }
 
-.external-scholar-icon:hover {
+.external-icon-link.bio-icon {
+  background-color: #28a745;
+}
+
+.external-icon-link.bio-icon:hover {
+  background-color: #218838;
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.external-icon-link.scholar-icon {
+  background-color: #4285f4;
+}
+
+.external-icon-link.scholar-icon:hover {
   background-color: #357ae8;
   transform: scale(1.15);
   box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);

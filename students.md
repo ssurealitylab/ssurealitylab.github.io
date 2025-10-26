@@ -15,6 +15,15 @@ title: Students
     </div>
     <div class="member-info">
       <h3 class="member-name">{{ student.name }}</h3>
+      {% if student.name_ko %}
+      <p class="member-name-ko">{{ student.name_ko }}</p>
+      {% endif %}
+      {% if student.email %}
+      <p class="member-email">{{ student.email }}</p>
+      {% endif %}
+      {% if student.university %}
+      <p class="member-university">{{ student.university }}</p>
+      {% endif %}
       {% if student.research %}
       <p class="member-research">{{ student.research }}</p>
       {% endif %}
@@ -29,6 +38,15 @@ title: Students
       </div>
       {% endif %}
       <div class="member-social">
+        {% if student.email and student.email != "" %}
+          <a href="#" onclick="event.preventDefault(); event.stopPropagation(); copyEmail('{{ student.email }}', event)" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        {% else %}
+          <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        {% endif %}
         <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
@@ -85,10 +103,28 @@ title: Students
     </div>
     <div class="member-info">
       <h3 class="member-name">{{ intern.name }}</h3>
+      {% if intern.name_ko %}
+      <p class="member-name-ko">{{ intern.name_ko }}</p>
+      {% endif %}
+      {% if intern.email %}
+      <p class="member-email">{{ intern.email }}</p>
+      {% endif %}
+      {% if intern.university %}
+      <p class="member-university">{{ intern.university }}</p>
+      {% endif %}
       {% if intern.research %}
       <p class="member-research">{{ intern.research }}</p>
       {% endif %}
       <div class="member-social">
+        {% if intern.email and intern.email != "" %}
+          <a href="#" onclick="event.preventDefault(); event.stopPropagation(); copyEmail('{{ intern.email }}', event)" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        {% else %}
+          <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        {% endif %}
         <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
@@ -204,10 +240,27 @@ title: Students
   margin-bottom: 3px;
 }
 
+.member-email {
+  font-size: 0.85rem;
+  color: #495057;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.member-university {
+  font-size: 0.85rem;
+  color: #495057;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
 .member-social {
   display: flex;
   justify-content: center;
   gap: 10px;
+  position: relative;
 }
 
 .member-social a {
@@ -227,6 +280,45 @@ title: Students
   background: #3498db;
   color: white;
   transform: translateY(-2px);
+}
+
+.email-copied-tooltip {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  z-index: 1000;
+  animation: tooltipFadeIn 0.2s ease-out;
+  pointer-events: none;
+}
+
+.email-copied-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #667eea;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .clickable-card {
@@ -444,4 +536,51 @@ document.addEventListener('keydown', function(event) {
     document.documentElement.style.overflow = 'auto';
   }
 });
+
+function copyEmail(email, event) {
+  // Create a temporary textarea element
+  const textarea = document.createElement('textarea');
+  textarea.value = email;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  try {
+    // Copy to clipboard
+    document.execCommand('copy');
+
+    // Show tooltip below the clicked icon
+    showEmailTooltip(event.currentTarget);
+  } catch (err) {
+    console.error('Failed to copy email:', err);
+  }
+
+  document.body.removeChild(textarea);
+}
+
+function showEmailTooltip(element) {
+  // Remove any existing tooltip
+  const existingTooltip = document.querySelector('.email-copied-tooltip');
+  if (existingTooltip) {
+    existingTooltip.remove();
+  }
+
+  // Find the parent member-social container
+  const socialLinks = element.closest('.member-social');
+  if (!socialLinks) return;
+
+  // Create new tooltip
+  const tooltip = document.createElement('div');
+  tooltip.className = 'email-copied-tooltip';
+  tooltip.textContent = '이메일이 복사되었습니다';
+
+  // Append to social-links container
+  socialLinks.appendChild(tooltip);
+
+  // Remove tooltip after 2 seconds
+  setTimeout(() => {
+    tooltip.remove();
+  }, 2000);
+}
 </script>

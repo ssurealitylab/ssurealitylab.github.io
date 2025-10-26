@@ -10,16 +10,6 @@ faculty:
 
 students:
   ms_students:
-    - name: "Sungyong Park"
-      name_ko: "박성용"
-      email: "squid010@gmail.com"
-      university: "EE. Soongsil University, B.S."
-      research: "Image Restoration, AI for Astronomy"
-      photo: "assets/img/members/sungyong_park.jpg"
-      github: "https://github.com/sungyong-park"
-      linkedin: "https://linkedin.com/in/sungyong-park"
-      achievements: []
-
     - name: "Byungkwan Chae"
       name_ko: "채병관"
       email: "silencecha875@gmail.com"
@@ -39,16 +29,6 @@ students:
       github: ""
       linkedin: ""
       achievements: []
-
-    - name: "Sangmin Lee"
-      name_ko: "이상민"
-      email: "ssn3289@gmail.com"
-      university: "Media, Soongsil University, B.S.<br>CSE, Soongsil University, B.S."
-      research: "Computer Vision, Embodied AI"
-      photo: "assets/img/members/sangmin_lee.jpg"
-      github: "https://github.com/sangmin-lee"
-      linkedin: "https://linkedin.com/in/sangmin-lee"
-      achievements: ["Qualcomm Internship", "CVPR 2025 paper acceptance"]
 
     - name: "Minjoo Koh"
       name_ko: "고민주"
@@ -154,15 +134,6 @@ students:
       photo: "assets/img/members/sebin_lee.jpg"
       github: ""
       linkedin: ""
-
-    - name: "Dowon Kim"
-      name_ko: "김도원"
-      email: "a01066304767@gmail.com"
-      university: "Media, Soongsil University, B.S."
-      research: "Computer Vision, Machine Learning"
-      photo: "assets/img/members/dowon_kim.jpg"
-      github: "https://github.com/dowon-kim"
-      linkedin: "https://linkedin.com/in/dowon-kim"
 
     - name: "Yeonji Kim"
       name_ko: "김연지"
@@ -328,3 +299,27 @@ alumni:
       research: "Model Pruning, Model Optimization"
       period: "24.9~25.7"
       photo: "assets/img/members/chaewoo_lim.jpg"
+
+    - name: "Dowon Kim"
+      name_ko: "김도원"
+      email: "a01066304767@gmail.com"
+      university: "Media, Soongsil University, B.S."
+      research: "Computer Vision, Machine Learning"
+      period: "24.~25.10"
+      photo: "assets/img/members/dowon_kim.jpg"
+
+    - name: "Sangmin Lee"
+      name_ko: "이상민"
+      email: "ssn3289@gmail.com"
+      university: "Media, Soongsil University, B.S.<br>CSE, Soongsil University, B.S."
+      research: "Computer Vision, Embodied AI"
+      period: "23.~25.10"
+      photo: "assets/img/members/sangmin_lee.jpg"
+
+    - name: "Sungyong Park"
+      name_ko: "박성용"
+      email: "squid010@gmail.com"
+      university: "EE. Soongsil University, B.S."
+      research: "Image Restoration, AI for Astronomy"
+      period: "23.~25.10"
+      photo: "assets/img/members/sungyong_park.jpg"

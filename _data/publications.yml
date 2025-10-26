@@ -16,7 +16,6 @@ publications:
     notes: "* Equal contribution"
     links:
       pdf: "https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DynScene_Scalable_Generation_of_Dynamic_Robotic_Manipulation_Scenes_for_Embodied_CVPR_2025_paper.pdf"
-      website: "https://dynscene.github.io/"
       github: "https://github.com/dynscene/dynscene"
 
   - id: sidl

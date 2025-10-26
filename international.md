@@ -108,9 +108,6 @@ title: International Publications
               <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DynScene_Scalable_Generation_of_Dynamic_Robotic_Manipulation_Scenes_for_Embodied_CVPR_2025_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
-              <a href="https://dynscene.github.io/" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
-                <i class="fas fa-globe"></i>
-              </a>
               <a href="https://github.com/dynscene/dynscene" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
                 <i class="fab fa-github"></i>
               </a>

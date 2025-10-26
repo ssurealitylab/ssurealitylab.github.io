@@ -153,7 +153,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('arnold')" style="cursor: pointer;">
             <div class="publication-badge challenge-badge">ARNOLD Challenge</div>
             <h5 class="list-title">1st Place Winner at CVPR 2025 Embodied AI Workshop</h5>
-            <p class="list-authors">Reality Lab Team</p>
+            <p class="list-authors">Chaewoo Lim, Dowon Kim, Sangmin Lee, Sungyong Park, Heewon Kim</p>
           </div>
         </div>
       </div>

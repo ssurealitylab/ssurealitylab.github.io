@@ -32,7 +32,7 @@ title: Domestic Publications
           <div class="publication-list-item">
             <div class="publication-badge domestic-badge">방송공학회논문지</div>
             <h5 class="list-title">로봇 조작 정책 학습에서 다중 시점 구성 변화의 정량적 영향분석</h5>
-            <p class="list-authors">Reality Lab Team</p>
+            <p class="list-authors">Dowon Kim, Sangmin Lee, Sungyong Park, Heewon Kim</p>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ title: Domestic Publications
           <div class="publication-list-item">
             <div class="publication-badge domestic-badge">방송공학회논문지</div>
             <h5 class="list-title">GraspLDM 기반 파지 생성에서 객체 스케일의 영향 분석</h5>
-            <p class="list-authors">Reality Lab Team</p>
+            <p class="list-authors">Yeonji Kim, Sangmin Lee, Heewon Kim</p>
           </div>
         </div>
 
@@ -50,7 +50,7 @@ title: Domestic Publications
           <div class="publication-list-item">
             <div class="publication-badge domestic-badge">한국데이터정보과학회지</div>
             <h5 class="list-title">심층 신경망을 사용한 누운 얼굴 감지 기법</h5>
-            <p class="list-authors">Reality Lab Team</p>
+            <p class="list-authors">Seongho Park†, Heewon Kim</p>
           </div>
         </div>
 
@@ -59,7 +59,7 @@ title: Domestic Publications
           <div class="publication-list-item">
             <div class="publication-badge domestic-badge">대한전자공학회 논문지</div>
             <h5 class="list-title">재귀적 대화 요약을 통한 장기 기억 트렌스포머</h5>
-            <p class="list-authors">Reality Lab Team</p>
+            <p class="list-authors">Jinho Oh*†, ByungKwan Chae*†, Heewon Kim</p>
           </div>
         </div>
 
@@ -68,7 +68,7 @@ title: Domestic Publications
           <div class="publication-list-item">
             <div class="publication-badge domestic-badge">제37회 영상처리 및 이해에 관한 워크샵</div>
             <h5 class="list-title">3차원 안개 제거를 위한 대기 산란 기반 최적화 연구</h5>
-            <p class="list-authors">Reality Lab Team</p>
+            <p class="list-authors">Hyunjun Koh, Hyunsuh Koh, Heewon Kim</p>
           </div>
         </div>
 
@@ -77,7 +77,7 @@ title: Domestic Publications
           <div class="publication-list-item">
             <div class="publication-badge domestic-badge">제37회 영상처리 및 이해에 관한 워크샵</div>
             <h5 class="list-title">비디오 기반 저해상도 동적 3D 고해상도 재구성 방법 연구</h5>
-            <p class="list-authors">Reality Lab Team</p>
+            <p class="list-authors">Minju Koh, Heewon Kim</p>
           </div>
         </div>
 
@@ -86,7 +86,7 @@ title: Domestic Publications
           <div class="publication-list-item">
             <div class="publication-badge domestic-badge">ASK 학술발표대회 논문집</div>
             <h5 class="list-title">스윙 모션 사전 지식을 활용한 정확한 야구 선수 포즈 보정</h5>
-            <p class="list-authors">Reality Lab Team</p>
+            <p class="list-authors">Seunghyun Oh†, Heewon Kim</p>
           </div>
         </div>
       </div>

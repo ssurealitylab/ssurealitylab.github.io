@@ -58,32 +58,50 @@ title: Students
         {% endif %}
 
         {% comment %} Auto-generate achievements from news and publications {% endcomment %}
-        {% assign student_achievements = "" | split: "" %}
+        {% assign news_achievements = "" | split: "" %}
+        {% assign pub_achievements = "" | split: "" %}
 
-        {% comment %} Collect news achievements {% endcomment %}
+        {% comment %} Collect news achievements (exclude paper acceptances - handled in publications) {% endcomment %}
         {% for news_item in site.data.news.news %}
           {% if news_item.participants contains student.name %}
-            {% assign achievement_text = news_item.title | append: " (" | append: news_item.category | append: ", " | append: news_item.date | slice: 0, 4 | append: ")" %}
-            {% assign student_achievements = student_achievements | push: achievement_text %}
+            {% unless news_item.title contains "Paper Acceptance" %}
+              {% assign news_text = news_item.title | append: " (" | append: news_item.date | slice: 0, 4 | append: ")" %}
+              {% assign news_achievements = news_achievements | push: news_text %}
+            {% endunless %}
           {% endif %}
         {% endfor %}
 
         {% comment %} Collect publication achievements {% endcomment %}
         {% for pub in site.data.publications.publications %}
           {% if pub.authors contains student.name %}
-            {% assign pub_text = pub.title | append: " - " | append: pub.venue_short | append: " " | append: pub.year %}
-            {% assign student_achievements = student_achievements | push: pub_text %}
+            {% comment %} Remove year suffix from venue_short (e.g., CVPR25 -> CVPR) {% endcomment %}
+            {% assign venue_clean = pub.venue_short | replace: "25", "" | replace: "24", "" | replace: "23", "" | replace: "22", "" | replace: "21", "" | replace: "20", "" %}
+            {% assign pub_text = pub.title | append: " - " | append: venue_clean | append: " " | append: pub.year %}
+            {% assign pub_achievements = pub_achievements | push: pub_text %}
           {% endif %}
         {% endfor %}
 
-        {% if student_achievements.size > 0 %}
+        {% if news_achievements.size > 0 or pub_achievements.size > 0 %}
         <div class="modal-achievements">
           <strong>Achievements:</strong>
-          <ul>
-          {% for achievement in student_achievements %}
+
+          {% if news_achievements.size > 0 %}
+          <p style="margin: 10px 0 5px 0; font-weight: 600; color: #6c757d; font-size: 0.9rem;">Awards & Activities</p>
+          <ul style="margin-top: 5px;">
+          {% for achievement in news_achievements %}
             <li>{{ achievement }}</li>
           {% endfor %}
           </ul>
+          {% endif %}
+
+          {% if pub_achievements.size > 0 %}
+          <p style="margin: 10px 0 5px 0; font-weight: 600; color: #6c757d; font-size: 0.9rem;">Publications</p>
+          <ul style="margin-top: 5px;">
+          {% for achievement in pub_achievements %}
+            <li>{{ achievement }}</li>
+          {% endfor %}
+          </ul>
+          {% endif %}
         </div>
         {% endif %}
 
@@ -154,32 +172,50 @@ title: Students
         {% endif %}
 
         {% comment %} Auto-generate achievements from news and publications {% endcomment %}
-        {% assign intern_achievements = "" | split: "" %}
+        {% assign intern_news_achievements = "" | split: "" %}
+        {% assign intern_pub_achievements = "" | split: "" %}
 
-        {% comment %} Collect news achievements {% endcomment %}
+        {% comment %} Collect news achievements (exclude paper acceptances - handled in publications) {% endcomment %}
         {% for news_item in site.data.news.news %}
           {% if news_item.participants contains intern.name %}
-            {% assign achievement_text = news_item.title | append: " (" | append: news_item.category | append: ", " | append: news_item.date | slice: 0, 4 | append: ")" %}
-            {% assign intern_achievements = intern_achievements | push: achievement_text %}
+            {% unless news_item.title contains "Paper Acceptance" %}
+              {% assign news_text = news_item.title | append: " (" | append: news_item.date | slice: 0, 4 | append: ")" %}
+              {% assign intern_news_achievements = intern_news_achievements | push: news_text %}
+            {% endunless %}
           {% endif %}
         {% endfor %}
 
         {% comment %} Collect publication achievements {% endcomment %}
         {% for pub in site.data.publications.publications %}
           {% if pub.authors contains intern.name %}
-            {% assign pub_text = pub.title | append: " - " | append: pub.venue_short | append: " " | append: pub.year %}
-            {% assign intern_achievements = intern_achievements | push: pub_text %}
+            {% comment %} Remove year suffix from venue_short (e.g., CVPR25 -> CVPR) {% endcomment %}
+            {% assign venue_clean = pub.venue_short | replace: "25", "" | replace: "24", "" | replace: "23", "" | replace: "22", "" | replace: "21", "" | replace: "20", "" %}
+            {% assign pub_text = pub.title | append: " - " | append: venue_clean | append: " " | append: pub.year %}
+            {% assign intern_pub_achievements = intern_pub_achievements | push: pub_text %}
           {% endif %}
         {% endfor %}
 
-        {% if intern_achievements.size > 0 %}
+        {% if intern_news_achievements.size > 0 or intern_pub_achievements.size > 0 %}
         <div class="modal-achievements">
           <strong>Achievements:</strong>
-          <ul>
-          {% for achievement in intern_achievements %}
+
+          {% if intern_news_achievements.size > 0 %}
+          <p style="margin: 10px 0 5px 0; font-weight: 600; color: #6c757d; font-size: 0.9rem;">Awards & Activities</p>
+          <ul style="margin-top: 5px;">
+          {% for achievement in intern_news_achievements %}
             <li>{{ achievement }}</li>
           {% endfor %}
           </ul>
+          {% endif %}
+
+          {% if intern_pub_achievements.size > 0 %}
+          <p style="margin: 10px 0 5px 0; font-weight: 600; color: #6c757d; font-size: 0.9rem;">Publications</p>
+          <ul style="margin-top: 5px;">
+          {% for achievement in intern_pub_achievements %}
+            <li>{{ achievement }}</li>
+          {% endfor %}
+          </ul>
+          {% endif %}
         </div>
         {% endif %}
 

@@ -125,6 +125,16 @@ publications:
     links:
       pdf: "https://academic.oup.com/innovateage/article/8/Supplement_1/1221/7917421"
 
+  - id: predicting_tdcs
+    title: "Predicting tDCS Treatment Effects in Depression Using Deep Learning"
+    authors: "Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al."
+    venue: "PLOS ONE"
+    venue_short: "PLOS ONE"
+    year: 2024
+    type: journal
+    status: published
+    citation: "Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al., \"Predicting tDCS Treatment Effects in Depression Using Deep Learning,\" PLOS ONE, 2024"
+
   - id: j7
     title: "Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs"
     authors: "Ji Hoon Bang†, Eun Hee Kim, Hyung Jun Kim, Jong-Won Chung, Woo-Keun Seo, Gyeong-Moon Kim, Dong-Ho Lee, Heewon Kim*, Oh Young Bang*"

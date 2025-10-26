@@ -192,6 +192,82 @@ class RealityLabCrawler:
         if not soup:
             return
 
+        # Count students by section
+        ms_students = []
+        interns = []
+
+        # Find Master's Students section
+        sections = soup.find_all('h2')
+        current_section = None
+
+        for section in sections:
+            section_title = self.clean_text(section.get_text())
+            if "Master" in section_title or "석사" in section_title:
+                current_section = "ms"
+                # Find student cards after this section
+                next_elem = section.find_next('div', class_='members-grid')
+                if next_elem:
+                    cards = next_elem.find_all('div', class_='member-card')
+                    for card in cards:
+                        name_elem = card.find('h3', class_='member-name')
+                        if name_elem:
+                            ms_students.append(self.clean_text(name_elem.get_text()))
+            elif "Intern" in section_title or "인턴" in section_title:
+                current_section = "intern"
+                next_elem = section.find_next('div', class_='members-grid')
+                if next_elem:
+                    cards = next_elem.find_all('div', class_='member-card')
+                    for card in cards:
+                        name_elem = card.find('h3', class_='member-name')
+                        if name_elem:
+                            interns.append(self.clean_text(name_elem.get_text()))
+
+        # Add summary document (Q&A style for better RAG matching)
+        total_students = len(ms_students) + len(interns)
+        summary_ko = f"""Reality Lab의 연구원은 총 {total_students}명입니다.
+
+현재 연구실 구성원:
+- 석사과정 학생: {len(ms_students)}명
+- 연구 인턴: {len(interns)}명
+
+석사과정 학생 수는 {len(ms_students)}명이고, 연구 인턴 수는 {len(interns)}명입니다.
+학생 수를 포함하여 전체 연구원은 {total_students}명입니다.
+
+석사과정 학생 명단: {', '.join(ms_students)}
+연구 인턴 명단: {', '.join(interns)}"""
+
+        self.add_document(summary_ko, {
+            "type": "members_summary",
+            "source": "students",
+            "total": total_students,
+            "ms_count": len(ms_students),
+            "intern_count": len(interns),
+            "language": "ko"
+        })
+
+        # Also add English version
+        summary_en = f"""Reality Lab has a total of {total_students} researchers.
+
+Current lab members:
+- Master's Students: {len(ms_students)} members
+- Research Interns: {len(interns)} members
+
+The number of Master's students is {len(ms_students)}, and the number of research interns is {len(interns)}.
+Including all students, the total number of researchers is {total_students}.
+
+Master's Students: {', '.join(ms_students)}
+Research Interns: {', '.join(interns)}"""
+
+        self.add_document(summary_en, {
+            "type": "members_summary",
+            "source": "students",
+            "total": total_students,
+            "ms_count": len(ms_students),
+            "intern_count": len(interns),
+            "language": "en"
+        })
+
+        # Now add individual student cards
         student_cards = soup.find_all('div', class_='member-card')
         for card in student_cards:
             name_elem = card.find('h3', class_='member-name')
@@ -223,7 +299,44 @@ class RealityLabCrawler:
         if not soup:
             return
 
+        # Count alumni
+        alumni_names = []
         alumni_cards = soup.find_all('div', class_='member-card')
+
+        for card in alumni_cards:
+            name_elem = card.find('h3', class_='member-name')
+            if name_elem:
+                alumni_names.append(self.clean_text(name_elem.get_text()))
+
+        # Add summary document (Q&A style for better RAG matching)
+        if alumni_names:
+            summary_ko = f"""Reality Lab의 졸업생(Alumni)은 총 {len(alumni_names)}명입니다.
+
+연구실을 졸업한 학생 수는 {len(alumni_names)}명이며, 이들은 다양한 분야에서 활동하고 있습니다.
+
+졸업생 명단: {', '.join(alumni_names)}"""
+
+            self.add_document(summary_ko, {
+                "type": "alumni_summary",
+                "source": "alumni",
+                "total": len(alumni_names),
+                "language": "ko"
+            })
+
+            summary_en = f"""Reality Lab has a total of {len(alumni_names)} alumni.
+
+The number of graduated students is {len(alumni_names)}, and they are active in various fields.
+
+Alumni: {', '.join(alumni_names)}"""
+
+            self.add_document(summary_en, {
+                "type": "alumni_summary",
+                "source": "alumni",
+                "total": len(alumni_names),
+                "language": "en"
+            })
+
+        # Add individual alumni details
         for card in alumni_cards:
             name_elem = card.find('h3', class_='member-name')
             university_elem = card.find('p', class_='member-university')

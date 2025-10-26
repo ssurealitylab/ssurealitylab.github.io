@@ -102,7 +102,7 @@ title: International Publications
 
         <!-- CVPR 2025 -->
         <div class="col-12 mb-3">
-          <div class="publication-list-item" onclick="openPublicationModal('c22')" style="cursor: pointer;">
+          <div class="publication-list-item" onclick="openPublicationModal('c25')" style="cursor: pointer;">
             <div class="publication-badge">CVPR</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DynScene_Scalable_Generation_of_Dynamic_Robotic_Manipulation_Scenes_for_Embodied_CVPR_2025_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
@@ -110,6 +110,9 @@ title: International Publications
               </a>
               <a href="https://dynscene.github.io/" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
                 <i class="fas fa-globe"></i>
+              </a>
+              <a href="https://github.com/dynscene/dynscene" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
+                <i class="fab fa-github"></i>
               </a>
             </div>
             <h5 class="list-title">DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI</h5>

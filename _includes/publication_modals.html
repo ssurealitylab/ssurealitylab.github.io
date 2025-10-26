@@ -142,6 +142,112 @@
           <p class="text-center mt-2 text-muted"><small>Drag the slider to compare input (contaminated) and output (restored) images</small></p>
         </div>
       </div>
+
+      <!-- SIDL Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Smartphone cameras are ubiquitous in daily life, yet their performance can be severely impacted by dirty lenses, leading to degraded image quality. This issue is often overlooked in image restoration research, which assumes ideal or controlled lens conditions. To address this gap, we introduced SIDL (Smartphone Images with Dirty Lenses), a novel dataset designed to restore images captured through contaminated smartphone lenses. SIDL contains diverse real-world images taken under various lighting conditions and environments. These images feature a wide range of lens contaminants, including water drops, fingerprints, and dust. Each contaminated image is paired with a clean reference image, enabling supervised learning approaches for restoration tasks.</p>
+
+          <p>To evaluate the challenge posed by SIDL, various state-of-the-art restoration models were trained and compared on this dataset. Their performances achieved some level of restoration but did not adequately address the diverse and realistic nature of the lens contaminants in SIDL. This challenge highlights the need for more robust and adaptable image restoration techniques for restoring images with dirty lenses.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c25' %}
+      <!-- DynScene Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Robotic manipulation in embodied AI critically depends on large-scale, high-quality datasets that reflect realistic object interactions and physical dynamics. However, existing data collection pipelines are often slow, expensive, and heavily reliant on manual efforts. We present DynScene, a diffusion-based framework for generating dynamic robotic manipulation scenes directly from textual instructions. Unlike prior methods that focus solely on static environments or isolated robot actions, DynScene decomposes the generation into two phases static scene synthesis and action trajectory generation allowing fine-grained control and diversity. Our model enhances realism and physical feasibility through scene refinement (layout sampling, quaternion quantization) and leverages residual action representation to enable action augmentation, generating multiple diverse trajectories from a single static configuration.</p>
+
+          <p>Experiments show DynScene achieves 26.8× faster generation, 1.84× higher accuracy, and 28% greater action diversity than human-crafted data. Furthermore, agents trained with DynScene exhibit up to 19.4% higher success rates across complex manipulation tasks. Our approach paves the way for scalable, automated dataset generation in robot learning.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'j12' %}
+      <!-- DeepGAM Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Deep neural networks have achieved significant performance breakthroughs across a range of tasks. For diagnosing depression, there has been increasing attention on estimating depression status from personal medical data. However, the neural networks often act as black boxes, making it difficult to discern the individual effects of each input component. To alleviate this problem, we proposed a deep-learning-based generalized additive model called DeepGAM to improve the interpretability of depression diagnosis. We utilized the baseline cross-sectional data from the Heart and Soul Study to achieve our study's aim. DeepGAM incorporates additive functions based on a neural network that learns to discern the positive and negative impacts of the values of individual components. The network architecture and the objective function are designed to constrain and regularize the output values for interpretability.</p>
+
+          <p>Moreover, we used a direct-through estimator (STE) to select important features using gradient descent. The STE enables machine learning models to maintain their performance using a few features and interpretable function visualizations. DeepGAM achieved the highest AUC (0.600) and F1-score (0.387), outperforming neural networks and IGANN. The five features selected via STE performed comparably to 99 features and surpassed traditional methods such as Lasso and Boruta. Additionally, analyses highlighted DeepGAM's interpretability and performance on public datasets. In conclusion, DeepGAM with STE demonstrated accurate and interpretable performance in predicting depression compared to existing machine learning methods.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'j11' %}
+      <!-- Dog Cough Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>We propose a diagnostic system for identifying bronchial diseases by analyzing dog cough sounds. We collected a dataset consisting of 124 healthy dog cough sounds obtained from open sources and 94 dog cough sounds with bronchial diseases obtained from YouTube, and performed a total of 218 recordings. These cough sounds were segmented into 423 separate cough datasets to improve the details and accuracy of their analysis. Additionally, data augmentation techniques such as noise addition, pitch shifting, time stretching, and volume scaling were applied, increasing the dataset size by 7 times. This resulted in 1,526 training and testing samples for multiple coughs and 2,961 samples for single coughs.</p>
+
+          <p>The disease prediction system leverages three different neural network models, multilayer perceptron (MLP), convolutional neural network (CNN), and recurrent neural network (RNN), to evaluate their effectiveness in detecting bronchial diseases. In our experiments, we found that the single cough dataset outperformed the multiple cough dataset, with the CNN achieving the highest accuracy, precision, AUC, and F1 scores compared to the RNN and MLP. The study highlights the potential of machine learning in improving diagnostic accuracy for veterinary medicine, suggesting that integrating different models could enhance diagnostic tools, thereby contributing to better health outcomes for dogs.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'j10' %}
+      <!-- Baseball Player Pose Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Human pose estimation (HPE) is challenging due to the need to accurately capture rapid and occluded body movements, often resulting in uncertain predictions. In the context of fast sports actions like baseball swings, existing HPE methods insufficiently leverage domain-specific prior knowledge about these movements. To address this gap, we propose the Baseball Player Pose Corrector (BPPC), an optimization framework that utilizes high-quality 3D standard motion data to refine 2D keypoints in baseball swing videos. BPPC operates in two stages: first, it aligns the 3D standard motion to test swing videos through action recognition, offset learning, and 3D-to-2D projection. Next, it applies movement-aware optimization to refine the keypoints, ensuring robustness to variations in swing patterns.</p>
+
+          <p>Notably, BPPC does not rely on additional datasets; it only requires manually annotated 3D standard motion data for baseball swings. Experimental results demonstrate that BPPC improves keypoint estimation accuracy by up to 2.4% on a baseball swing dataset, particularly enhancing keypoints with confidence scores below 0.5. Qualitative analysis further highlights BPPC's ability to correct rapidly moving joints, such as elbows and wrists.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c20j9' %}
+      <!-- tDCS KOA Pain Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Transcranial direct current stimulation (tDCS) has been recognized as a safe and effective intervention for treating knee osteoarthritis (KOA) pain; however, research has suggested the heterogeneity of treatment effects across participants. This study aimed to identify the sociodemographic and clinical predictors of such heterogeneity in older adults with symptomatic KOA undergoing tDCS, thereby enhancing personalized treatment strategies. Specifically, we analyzed active and sham tDCS groups separately to account for placebo or sham effects. This study entailed secondary data analysis of a double-blind, randomized, sham-controlled, phase II, parallel-group pilot clinical trial involving 120 participants with KOA pain. These participants were assigned to 15 daily telehealth-delivered sessions of either active 2-mA tDCS (n=60) for 20 min or sham stimulation (n=60) over 3 weeks. The primary outcome was the change in Western Ontario and McMaster Universities Osteoarthritis Index (WOMAC) pain subscale scores, measured from baseline to after the 15 tDCS sessions in both the active and sham groups.</p>
+
+          <p>Predictive modeling using random forest (RF) and artificial neural network (ANN) algorithms was utilized, with model performance assessed based on R-squared values. The impact of predictive features on treatment outcomes was examined using several feature selection methods, including Lasso, BorutaSHAP, Chi2, F-regression, and R-regression. The RF and ANN models both effectively predicted treatment effects, indicating the potential of machine learning to enhance patient-specific treatment strategies. In the active group, the predominant features included age, average heat pain tolerance at the knee at baseline, baseline WOMAC functional score, and the duration of KOA. In the sham group, the major features comprised the duration of KOA, Kellgren–Lawrence scale score of the affected knee, baseline pain catastrophizing score, average heat pain tolerance at the knee at baseline, and baseline WOMAC functional score. Characterizing these predictive factors can inform personalized tDCS protocols, potentially improving treatment effects.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c17j8' %}
+      <!-- Chronic Pain Trajectories Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Chronic pain is a major public health problem affecting approximately 100 million Americans and United States military Veterans, who constitute a particularly vulnerable group. While pain research in Veterans is actively underway, information on the longitudinal course of pain in this population is limited. This study aimed to 1) identify the various longitudinal pain status trajectories among older Veterans over a 10-year period and 2) detect factors predicting membership in the worsening trajectory of chronic pain. We analyzed data from 619 Veterans (mean age: 58.5 years) participating in the Mind Your Heart Study, an ongoing prospective cohort study examining diverse health outcomes among Veterans. Initially, we employed a generalized mixture model to identify pain trajectory classes using Brief Pain Inventory (BPI) pain intensity subscale score collected at 2-, 5-, and 10-year intervals. Two distinct trajectories were identified—low and high—both of which remained relatively stable.</p>
+
+          <p>Subsequently, several feature selection methods extracted the predominant features from participants' baseline characteristics that predicted membership in the high vs. low pain trajectory. These included: prior arthritis diagnosis; prior post-traumatic stress disorder (PTSD) diagnosis; depression symptoms; PTSD symptoms of avoidance, hyperarousal, and negative mood alterations; physical functioning; sleep quality; and overall health. The scikit-learn RandomForestClassifier, utilizing the refined feature set, achieved a classification accuracy of 0.79, yielding results nearly identical to those obtained using all 261 features. These findings are clinically informative and pertinent, highlighting potential intervention targets warranting intensive pain care plans based on probable long-term prognosis and discussing early treatment strategies among older Veterans.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'j4' %}
+      <!-- Learning Controllable ISP Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Editing flat-looking images into stunning photographs requires skill and time. Automated image enhancement algorithms have attracted increased interest by generating high-quality images without user interaction. However, the quality assessment of a photograph is subjective. Even in tone and color adjustments, a single photograph of auto-enhancement is challenging to fit user preferences which are subtle and even changeable. To address this problem, we present a semi-automatic image enhancement algorithm that can generate high-quality images with multiple styles by controlling a few parameters.</p>
+
+          <p>We first disentangle photo retouching skills from high-quality images and build an efficient enhancement system for each skill. Specifically, an encoder-decoder framework encodes the retouching skills into latent codes and decodes them into the parameters of image signal processing (ISP) functions. The ISP functions are computationally efficient and consist of only 19 parameters. Despite our approach requiring multiple inferences to obtain the desired result, experimental results present that the proposed method achieves state-of-the-art performances on the benchmark dataset for image quality and model efficiency.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c15_2023' %}
+      <!-- NERDS Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>We aim to train accurate denoising networks for smartphone/digital cameras from single noisy images. Downscaling is commonly used as a practical denoiser for low-resolution images. Based on this processing, we found that the pixel variance of the natural images is more robust to downscaling than the pixel variance of the camera noises. Intuitively, downscaling easily removes high-frequency noises than natural textures. To utilize this property, we can adopt noisy/clean image synthesis at low-resolution to train camera denoisers. On this basis, we propose a new solution pipeline -- NERDS that estimates camera noises and synthesizes noisy-clean image pairs from only noisy images. In particular, it first models the noise in raw-sensor images as a Poisson-Gaussian distribution, then estimates the noise parameters using the difference of pixel variances by downscaling. We formulate the noise estimation as a gradient-descent-based optimization problem through a reparametrization trick.</p>
+
+          <p>We further introduce a new Image Signal Processor (ISP) estimation method that enables denoiser training in a human-readable RGB space by transforming the synthetic raw images to the style of a given RGB noisy image. The noise and ISP estimations utilize rich augmentation to synthesize image pairs for denoiser training. Experiments show that our NERDS can accurately train CNN-based denoisers (e.g., DnCNN, ResNet-style network) outperforming previous noise-synthesis-based and self-supervision-based denoisers in real datasets.</p>
+        </div>
+      </div>
       {% endif %}
 
       <div class="citation-box">

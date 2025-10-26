@@ -14,7 +14,9 @@ import requests
 import json
 import re
 from threading import Thread
-from rag_retriever import RAGRetriever
+from datetime import datetime
+import pytz
+from hierarchical_retriever import HierarchicalRetriever
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -32,6 +34,24 @@ shutdown_timeout = 120  # 2 minutes in seconds
 shutdown_timer_thread = None
 model_choice_global = 'qwen3-4b'  # Store model choice for reloading
 is_loading_model = False  # Track if model is currently being loaded
+
+def is_rest_time():
+    """
+    Check if current time is during rest hours (4 AM - 8 AM KST)
+    Returns: (bool, str) - (is_rest_time, message)
+    """
+    kst = pytz.timezone('Asia/Seoul')
+    now_kst = datetime.now(kst)
+    current_hour = now_kst.hour
+
+    # Rest time: 4 AM - 8 AM KST
+    if 4 <= current_hour < 8:
+        resume_time = now_kst.replace(hour=8, minute=0, second=0, microsecond=0)
+        message_ko = f"현재 AI 챗봇 휴식시간입니다 (한국 시간 오전 4시~8시).\n오전 8시부터 다시 이용 가능합니다."
+        message_en = f"AI Chatbot is currently resting (4 AM - 8 AM KST).\nService will resume at 8 AM KST."
+        return True, (message_ko, message_en)
+
+    return False, ("", "")
 
 def load_model(model_choice='qwen3-4b'):
     """Load Qwen model with 4-bit quantization
@@ -222,7 +242,7 @@ def generate_response(prompt, language='ko', max_length=700):
         rag_context = ""
         if rag_retriever is not None:
             try:
-                search_results = rag_retriever.search(prompt, k=2, min_score=0.35)
+                search_results = rag_retriever.search(prompt, k=3, min_score=0.35)
                 if search_results:
                     rag_context = rag_retriever.format_context(search_results, language=language)
                     rag_context += "\n\n"
@@ -410,6 +430,24 @@ def server_status():
 def chat():
     """Chat endpoint"""
     try:
+        # Check if it's rest time
+        rest_time, messages = is_rest_time()
+        if rest_time:
+            message_ko, message_en = messages
+            # Detect language from request if available
+            data = request.get_json(force=True) if request.data else {}
+            question = data.get('question', '') if data else ''
+            # Simple language detection
+            is_korean = any(ord(c) >= 0xAC00 and ord(c) <= 0xD7A3 for c in question)
+            response_message = message_ko if is_korean else message_en
+
+            return jsonify({
+                'response': response_message,
+                'tokens': len(response_message.split()),
+                'response_time': 0.1,
+                'rest_time': True
+            })
+
         update_activity()  # Update activity on each chat request
 
         data = request.get_json(force=True)
@@ -857,7 +895,7 @@ if __name__ == '__main__':
         # Load RAG system
         try:
             logger.info("Loading RAG system...")
-            rag_retriever = RAGRetriever("/home/i0179/Realitylab-site/ai_server/vector_db")
+            rag_retriever = HierarchicalRetriever("/home/i0179/Realitylab-site/ai_server/hierarchical_rag")
             rag_retriever.load()
             logger.info("✅ RAG system loaded successfully!")
         except Exception as e:

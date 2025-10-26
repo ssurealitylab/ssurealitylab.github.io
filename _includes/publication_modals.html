@@ -416,6 +416,42 @@
       </div>
       {% endif %}
 
+      {% if pub.id == 'j1' %}
+      <!-- Machine learning-based predictive modeling of depression Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>We aimed to develop prediction models for depression among U.S. adults with hypertension using various machine learning (ML) approaches. Moreover, we analyzed the mechanisms of the developed models. This cross-sectional study included 8,628 adults with hypertension (11.3% with depression) from the National Health and Nutrition Examination Survey (2011–2020). We selected several significant features using feature selection methods to build the models. Data imbalance was managed with random down-sampling. Six different ML classification methods implemented in the R package caret—artificial neural network, random forest, AdaBoost, stochastic gradient boosting, XGBoost, and support vector machine—were employed with 10-fold cross-validation for predictions. Model performance was assessed by examining the area under the receiver operating characteristic curve (AUC), accuracy, precision, sensitivity, specificity, and F1-score. For an interpretable algorithm, we used the variable importance evaluation function in caret.</p>
+
+          <p>Of all classification models, artificial neural network trained with selected features (n = 30) achieved the highest AUC (0.813) and specificity (0.780) in predicting depression. Support vector machine predicted depression with the highest accuracy (0.771), precision (0.969), sensitivity (0.774), and F1-score (0.860). The most frequent and important features contributing to the models included the ratio of family income to poverty, triglyceride level, white blood cell count, age, sleep disorder status, the presence of arthritis, hemoglobin level, marital status, and education level. In conclusion, ML algorithms performed comparably in predicting depression among hypertensive populations. Furthermore, the developed models shed light on variables' relative importance, paving the way for further clinical research.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c6' %}
+      <!-- Meta-Learning with Adaptive Hyperparameters Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>The ability to quickly learn and generalize from only few examples is an essential goal of few-shot learning. Gradient-based meta-learning algorithms effectively tackle the problem by learning how to learn novel tasks. In particular, model-agnostic meta-learning (MAML) encodes the prior knowledge into a trainable initialization, which allowed for fast adaptation to few examples. Despite its popularity, several recent works question the effectiveness of MAML initialization especially when test tasks are different from training tasks, thus suggesting various methodologies to improve the initialization.</p>
+
+          <p>Instead of searching for a better initialization, we focus on a complementary factor in MAML framework, the inner-loop optimization (or fast adaptation). Consequently, we propose a new weight update rule that greatly enhances the fast adaptation process. Specifically, we introduce a small meta-network that can adaptively generate per-step hyperparameters: learning rate and weight decay coefficients. The experimental results validate that the Adaptive Learning of hyperparameters for Fast Adaptation (ALFA) is the equally important ingredient that was often neglected in the recent few-shot learning approaches. Surprisingly, fast adaptation from random initialization with ALFA can already outperform MAML.</p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pub.id == 'c4' %}
+      <!-- AIM 2019 Challenge Abstract Section -->
+      <div class="method-image-section mb-4">
+        <h5 class="method-image-title">Abstract</h5>
+        <div class="abstract-content">
+          <p>Videos contain various types and strengths of motions that may look unnaturally discontinuous in time when the recorded frame rate is low. This paper reviews the first AIM challenge on video temporal super-resolution (frame interpolation) with a focus on the proposed solutions and results. From low-frame-rate (15 fps) video sequences, the challenge participants are asked to submit higher-frame-rate (60 fps) video sequences by estimating temporally intermediate frames. We employ the REDS VTSR dataset derived from diverse videos captured in a hand-held camera for training and evaluation purposes.</p>
+
+          <p>The competition had 62 registered participants, and a total of 8 teams competed in the final testing phase. The challenge winning methods achieve the state-of-the-art in video temporal super-resolution.</p>
+        </div>
+      </div>
+      {% endif %}
+
       <div class="citation-box">
         <p>{{ pub.citation }}</p>
       </div>

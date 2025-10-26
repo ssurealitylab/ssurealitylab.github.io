@@ -307,7 +307,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('j1')" style="cursor: pointer;">
             <div class="publication-badge">PLOS ONE</div>
             <div class="external-links">
-              <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0270559" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0272330" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
@@ -436,7 +436,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('c6')" style="cursor: pointer;">
             <div class="publication-badge">NeurIPS</div>
             <div class="external-links">
-              <a href="https://proceedings.neurips.cc/paper/2020/file/9d8420bbf6d0d1a6f97d3c2e5f3b6b0a-Paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://arxiv.org/pdf/2011.00209" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
               <a href="https://github.com/baiksung/ALFA" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
@@ -467,7 +467,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('c4')" style="cursor: pointer;">
             <div class="publication-badge">ICCVW</div>
             <div class="external-links">
-              <a href="https://openaccess.thecvf.com/content_ICCVW_2019/papers/AIM/Nah_AIM_2019_Challenge_on_Video_Temporal_Super-Resolution_Methods_and_Results_ICCVW_2019_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://arxiv.org/pdf/2005.01233" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>

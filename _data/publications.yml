@@ -199,7 +199,7 @@ publications:
     status: published
     citation: "[J1] Chiyoung Lee and Heewon Kim, \"Machine learning-based predictive modeling of depression in hypertensive populations,\" PLOS ONE, vol. 17, no. 7, pp. 1-17, Jul. 2022."
     links:
-      pdf: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0270559"
+      pdf: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0272330"
 
   # 2022 Publications
   - id: j2
@@ -225,8 +225,7 @@ publications:
     status: published
     citation: "[C6] Sungyong Baik, Myungsub Choi, Janghoon Choi, Heewon Kim, and Kyoung Mu Lee, \"Meta-Learning with Adaptive Hyperparameters,\" Advances in Neural Information Processing Systems (NeurIPS), 2020."
     links:
-      pdf: "https://proceedings.neurips.cc/paper/2020/file/9d8420bbf6d0d1a6f97d3c2e5f3b6b0a-Paper.pdf"
-      arxiv: "https://arxiv.org/abs/2011.00209"
+      pdf: "https://arxiv.org/pdf/2011.00209"
       code: "https://github.com/baiksung/ALFA"
 
   # 2022 Publications
@@ -343,7 +342,7 @@ publications:
     status: published
     citation: "[C4] Seungjun Nah, Sanghyun Son, Radu Timofte, Kyoung Mu Lee, Li Siyao, Ziwei Pan, Xiangyu Xu, Wenxiu Sun, Myungsub Choi, Heewon Kim, Bohyung Han, Ning Xu, Renjie Liao, Alex Schwing, Yuhua Chen, Chen Chen, Kai Zhang, Wangmeng Zuo, Tong Lu, Ran Duan, Tong Lu, Lihe Zhang, Woonsook Park, Manhcuot Tran, George Pisha, Eyal Naor, Lilie Zhang, Kai Zhang, Wangmeng Zuo, Zhimin Tang, Linkai Luo, Shaochui Li, Min Fu, Lei Cai, Wen Heng, Giang Bui, Truc Le, Ye Deng, Sifei Liu, Hyun Young Jung, Tianlong Guo, Hongchang Gao, Jiejun Xu, Ruofan Fang, Yunsong Li, Anmur Mehta, Vishal Monga, \"AIM 2019 challenge on video temporal super-resolution: Methods and results,\" International Conference on Computer Vision Workshop (ICCVW), 2019."
     links:
-      pdf: "https://openaccess.thecvf.com/content_ICCVW_2019/papers/AIM/Nah_AIM_2019_Challenge_on_Video_Temporal_Super-Resolution_Methods_and_Results_ICCVW_2019_paper.pdf"
+      pdf: "https://arxiv.org/pdf/2005.01233"
 
   - id: c3
     title: "Task-Aware Image Downscaling"

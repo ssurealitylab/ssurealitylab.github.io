@@ -219,29 +219,44 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Initialize when modal opens
-  const modal = document.getElementById('repo1');
-  if (modal) {
-    modal.addEventListener('shown.bs.modal', function() {
+  // Initialize when SIDL modal opens
+  const sidlModal = document.getElementById('sidl');
+  if (sidlModal) {
+    // Listen for modal open events
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.attributeName === 'class') {
+          if (sidlModal.classList.contains('active')) {
+            // Modal opened
+            setTimeout(function() {
+              updateImages();
+              startAutoRotation();
+              updateSliderPosition(50);
+              setupContaminationTypeButtons();
+            }, 100);
+          } else {
+            // Modal closed
+            clearInterval(autoRotateTimer);
+            handleEnd();
+          }
+        }
+      });
+    });
+
+    observer.observe(sidlModal, { attributes: true });
+  }
+
+  // Also initialize when elements become available
+  const checkAndInitialize = function() {
+    if (inputImage && targetImage) {
       updateImages();
       startAutoRotation();
-      updateSliderPosition(50); // Start with 50/50 split
-      setupContaminationTypeButtons(); // Setup button event handlers
-    });
+      updateSliderPosition(50);
+      setupContaminationTypeButtons();
+    }
+  };
 
-    // Clean up when modal closes
-    modal.addEventListener('hidden.bs.modal', function() {
-      clearInterval(autoRotateTimer);
-      handleEnd(); // Stop any dragging
-    });
-  }
-
-  // Initialize immediately if elements exist
-  if (inputImage && targetImage) {
-    updateImages();
-    startAutoRotation();
-    updateSliderPosition(50); // Start with 50/50 split
-    setupContaminationTypeButtons(); // Setup button event handlers
-  }
+  // Try to initialize after a delay
+  setTimeout(checkAndInitialize, 500);
 });
 </script>

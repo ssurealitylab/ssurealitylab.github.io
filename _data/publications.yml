@@ -35,13 +35,13 @@ publications:
 
   - id: c24
     title: "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields"
-    authors: "Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim"
+    authors: "Hyunsuh Kho*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim"
     venue: "International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)"
     venue_short: "APP3DV25"
     year: 2025
     type: conference
     status: accepted
-    citation: "[C24] Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, \"Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields,\" Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop), 2025 (accepted)"
+    citation: "[C24] Hyunsuh Kho*, Seunghyun Oh*, Jungyun Jang*, and Heewon Kim, \"Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields,\" Proc. International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop), 2025 (accepted)"
     image: "assets/img/publications/iprf/pipeline.png"
     notes: "* Equal contribution"
     links:
@@ -52,13 +52,13 @@ publications:
 
   - id: c23
     title: "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models"
-    authors: "Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim"
+    authors: "Youngjae Choi*, Hyunsuh Kho*, Hojae Jeong*, Byungkwan Chae*, Sungyong Park, Heewon Kim"
     venue: "British Machine Vision Conference (BMVC)"
     venue_short: "BMVC25"
     year: 2025
     type: conference
     status: accepted
-    citation: "[C23] Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, \"UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models,\" Proc. British Machine Vision Conference (BMVC), 2025 (accepted)"
+    citation: "[C23] Youngjae Choi*, Hyunsuh Kho*, Hojae Jeong*, Byungkwan Chae*, Sungyong Park, and Heewon Kim, \"UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models,\" Proc. British Machine Vision Conference (BMVC), 2025 (accepted)"
     notes: "* Equal contribution"
 
   - id: j12

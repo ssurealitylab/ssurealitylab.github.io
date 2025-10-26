@@ -15,6 +15,12 @@ title: Alumni
     </div>
     <div class="member-info">
       <h3 class="member-name">{{ alumnus.name }}</h3>
+      {% if alumnus.name_ko %}
+      <p class="member-name-ko">{{ alumnus.name_ko }}</p>
+      {% endif %}
+      {% if alumnus.email %}
+      <p class="member-email">{{ alumnus.email }}</p>
+      {% endif %}
       {% if alumnus.university %}
       <p class="member-university">{{ alumnus.university }}</p>
       {% endif %}
@@ -25,6 +31,15 @@ title: Alumni
       <p class="member-period">{{ alumnus.period }}</p>
       {% endif %}
       <div class="member-social">
+        {% if alumnus.email and alumnus.email != "" %}
+          <a href="#" onclick="event.preventDefault(); event.stopPropagation(); copyEmail('{{ alumnus.email }}')" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        {% else %}
+          <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        {% endif %}
         <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
@@ -116,6 +131,14 @@ title: Alumni
   font-style: italic;
 }
 
+.member-email {
+  font-size: 0.85rem;
+  color: #495057;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
 .member-university {
   font-size: 0.85rem;
   color: #495057;
@@ -166,6 +189,44 @@ title: Alumni
   background: #3498db;
   color: white;
   transform: translateY(-2px);
+}
+
+.email-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 99999;
+  animation: slideInUp 0.3s ease-out, fadeOut 0.3s ease-in 2.7s;
+  opacity: 0;
+}
+
+.email-toast.show {
+  opacity: 1;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 h2 {
@@ -305,6 +366,47 @@ h2:first-of-type {
 </style>
 
 <script>
+function copyEmail(email) {
+  // Create a temporary textarea element
+  const textarea = document.createElement('textarea');
+  textarea.value = email;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  try {
+    // Copy to clipboard
+    document.execCommand('copy');
+
+    // Show success toast
+    showEmailToast();
+  } catch (err) {
+    console.error('Failed to copy email:', err);
+  }
+
+  document.body.removeChild(textarea);
+}
+
+function showEmailToast() {
+  // Remove any existing toast
+  const existingToast = document.querySelector('.email-toast');
+  if (existingToast) {
+    existingToast.remove();
+  }
+
+  // Create new toast
+  const toast = document.createElement('div');
+  toast.className = 'email-toast show';
+  toast.textContent = '이메일이 복사되었습니다';
+  document.body.appendChild(toast);
+
+  // Remove toast after 3 seconds
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
+
 function openMemberModal(memberId) {
   const modal = document.getElementById('modal-' + memberId);
   if (modal) {

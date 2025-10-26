@@ -15,9 +15,6 @@ title: Students
     </div>
     <div class="member-info">
       <h3 class="member-name">{{ student.name }}</h3>
-      {% if student.name_ko %}
-      <p class="member-name-ko">{{ student.name_ko }}</p>
-      {% endif %}
       {% if student.email %}
       <p class="member-email">{{ student.email }}</p>
       {% endif %}
@@ -103,9 +100,6 @@ title: Students
     </div>
     <div class="member-info">
       <h3 class="member-name">{{ intern.name }}</h3>
-      {% if intern.name_ko %}
-      <p class="member-name-ko">{{ intern.name_ko }}</p>
-      {% endif %}
       {% if intern.email %}
       <p class="member-email">{{ intern.email }}</p>
       {% endif %}
@@ -201,13 +195,6 @@ title: Students
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 5px;
-}
-
-.member-name-ko {
-  font-size: 1rem;
-  color: #7f8c8d;
-  margin-bottom: 10px;
-  font-style: italic;
 }
 
 .member-research {

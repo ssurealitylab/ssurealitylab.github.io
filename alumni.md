@@ -15,9 +15,6 @@ title: Alumni
     </div>
     <div class="member-info">
       <h3 class="member-name">{{ alumnus.name }}</h3>
-      {% if alumnus.name_ko %}
-      <p class="member-name-ko">{{ alumnus.name_ko }}</p>
-      {% endif %}
       {% if alumnus.email %}
       <p class="member-email">{{ alumnus.email }}</p>
       {% endif %}
@@ -122,13 +119,6 @@ title: Alumni
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 5px;
-}
-
-.member-name-ko {
-  font-size: 1rem;
-  color: #7f8c8d;
-  margin-bottom: 10px;
-  font-style: italic;
 }
 
 .member-email {

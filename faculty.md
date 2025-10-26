@@ -7,7 +7,13 @@ title: Faculty
 
 <div class="faculty-container">
   {% for member in site.data.members.faculty %}
-  <div class="faculty-card">
+  <div class="faculty-card faculty-card-clickable" onclick="window.open('{{ member.bio }}', '_blank')">
+    {% if member.scholar and member.scholar != "" %}
+      <a href="{{ member.scholar }}" target="_blank" class="external-scholar-icon" onclick="event.stopPropagation()" title="Google Scholar Profile">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    {% endif %}
+
     <div class="member-photo">
       <img src="{{ member.photo }}" alt="{{ member.name }}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZjNmNGY2Ii8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSIzMCIgZmlsbD0iIzllYTNhOCIvPgo8cGF0aCBkPSJNNjAgMTYwYzAtMjIuMDkgMTcuOTEtNDAgNDAtNDBzNDAgMTcuOTEgNDAgNDB2MjBINjB2LTIweiIgZmlsbD0iIzllYTNhOCIvPgo8L3N2Zz4K'">
     </div>
@@ -18,21 +24,33 @@ title: Faculty
       {% endif %}
       <p class="member-position">{{ member.position }}</p>
       <p class="member-affiliation">{{ member.affiliation }}</p>
-      {% if member.email %}
-      <p class="member-email">
-        <i class="fas fa-envelope"></i> 
-        <a href="mailto:{{ member.email }}">{{ member.email }}</a>
+      {% if member.affiliation_detail %}
+      <div class="member-affiliation-detail">
+        {% for detail in member.affiliation_detail %}
+          {{ detail }}<br>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if member.phone %}
+      <p class="member-contact">
+        <i class="fas fa-phone"></i> {{ member.phone }}
       </p>
       {% endif %}
-      
+      {% if member.email %}
+      <p class="member-email">
+        <i class="fas fa-envelope"></i>
+        <span onclick="event.stopPropagation()">{{ member.email }}</span>
+      </p>
+      {% endif %}
+
       <div class="member-social">
         {% if member.github and member.github != "" %}
-        <a href="{{ member.github }}" target="_blank" title="GitHub">
+        <a href="{{ member.github }}" target="_blank" title="GitHub" onclick="event.stopPropagation()">
           <i class="fab fa-github"></i>
         </a>
         {% endif %}
         {% if member.linkedin and member.linkedin != "" %}
-        <a href="{{ member.linkedin }}" target="_blank" title="LinkedIn">
+        <a href="{{ member.linkedin }}" target="_blank" title="LinkedIn" onclick="event.stopPropagation()">
           <i class="fab fa-linkedin"></i>
         </a>
         {% endif %}
@@ -59,11 +77,45 @@ title: Faculty
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .faculty-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.faculty-card-clickable {
+  cursor: pointer;
+}
+
+.faculty-card-clickable:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.external-scholar-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  background-color: #4285f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+  font-size: 1.2rem;
+}
+
+.external-scholar-icon:hover {
+  background-color: #357ae8;
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);
 }
 
 .member-photo {
@@ -107,8 +159,27 @@ title: Faculty
 .member-affiliation {
   font-size: 1rem;
   color: #6c757d;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   line-height: 1.5;
+  font-weight: 600;
+}
+
+.member-affiliation-detail {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.member-contact {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.member-contact i {
+  color: #3498db;
+  margin-right: 8px;
 }
 
 .member-email {
@@ -121,14 +192,8 @@ title: Faculty
   margin-right: 8px;
 }
 
-.member-email a {
+.member-email span {
   color: #2c3e50;
-  text-decoration: none;
-}
-
-.member-email a:hover {
-  color: #3498db;
-  text-decoration: underline;
 }
 
 .member-social {

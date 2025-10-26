@@ -1150,14 +1150,6 @@ title: International Publications
   object-fit: contain;
 }
 
-.iprf-style-image {
-  width: 60%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: 8px;
-  background: white;
-}
-
 /* Fix transparent background issue */
 img, video, .method-image, .publication-thumbnail img {
   background: white !important;

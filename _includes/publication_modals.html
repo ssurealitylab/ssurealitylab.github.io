@@ -436,7 +436,7 @@ document.addEventListener("keydown", function(event) {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
-  align-items: start;
+  align-items: center;
   background: white;
   padding: 15px;
   border-radius: 10px;
@@ -447,6 +447,7 @@ document.addEventListener("keydown", function(event) {
 .iprf-video-col {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .style-label,
@@ -456,19 +457,21 @@ document.addEventListener("keydown", function(event) {
   color: #2c3e50;
   margin-bottom: 10px;
   text-align: center;
+  width: 100%;
 }
 
 .iprf-style-image {
-  width: 100%;
+  max-width: 100%;
+  max-height: 350px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   background: white;
-  object-fit: cover;
-  aspect-ratio: 4/3;
+  object-fit: contain;
 }
 
 .iprf-result-video {
   width: 100%;
+  max-height: 350px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   background: white;

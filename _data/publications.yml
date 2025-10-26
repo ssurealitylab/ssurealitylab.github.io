@@ -7,11 +7,11 @@ publications:
     title: "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI"
     authors: "Sangmin Lee*, Sungyong Park*, Heewon Kim"
     venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
-    venue_short: "CVPR25"
+    venue_short: "CVPR"
     year: 2025
     type: conference
     status: accepted
-    citation: "[C25] Sangmin Lee*, Sungyong Park*, and Heewon Kim, \"DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI,\" Proc. IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025 (accepted)"
+    citation: "[C22] Sangmin Lee*, Sungyong Park*, and Heewon Kim, \"DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI,\" Proc. Computer Vision and Pattern Recognition (CVPR), 2025."
     image: "assets/img/publications/cvpr2025.png"
     notes: "* Equal contribution"
     links:
@@ -23,11 +23,11 @@ publications:
     title: "SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses"
     authors: "Sooyoung Choi*†, Sungyong Park*, Heewon Kim"
     venue: "AAAI Conference on Artificial Intelligence"
-    venue_short: "AAAI25"
+    venue_short: "AAAI"
     year: 2025
     type: conference
     status: accepted
-    citation: "[C24-2] Sooyoung Choi*†, Sungyong Park*, and Heewon Kim, \"SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses,\" Proc. AAAI Conference on Artificial Intelligence (AAAI), 2025 (accepted)"
+    citation: "[C21] Sooyoung Choi*†, Sungyong Park*, and Heewon Kim, \"SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses,\" AAAI Conference on Artificial Intelligence (AAAI), 2025."
     image: "assets/img/publications/sidl/overview.png"
     notes: "* Equal contribution<br>† Undergraduate student"
     links:
@@ -38,7 +38,7 @@ publications:
     title: "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields"
     authors: "Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim"
     venue: "International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)"
-    venue_short: "APP3DV25"
+    venue_short: "APP3DV"
     year: 2025
     type: conference
     status: accepted
@@ -55,11 +55,11 @@ publications:
     title: "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models"
     authors: "Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim"
     venue: "British Machine Vision Conference (BMVC)"
-    venue_short: "BMVC25"
+    venue_short: "BMVC"
     year: 2025
     type: conference
     status: accepted
-    citation: "[C23] Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, \"Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models,\" Proc. British Machine Vision Conference (BMVC), 2025 (accepted)"
+    citation: "[C23] Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, and Heewon Kim, \"UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models,\" Proc. British Machine Vision Conference (BMVC), 2025 (accepted)"
     image: "assets/img/publications/sidl/overview.png"
     notes: "* Equal contribution"
 
@@ -142,7 +142,7 @@ publications:
     title: "Language-Guided Robotic Manipulation"
     authors: "Sangmin Lee†, Sungyong Park†, Heewon Kim"
     venue: "AAAI Conference on Artificial Intelligence"
-    venue_short: "AAAI24"
+    venue_short: "AAAI"
     year: 2024
     type: conference
     status: published

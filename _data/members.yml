@@ -20,7 +20,7 @@ students:
   ms_students:
     - name: "Sungyong Park"
       name_ko: "박성용"
-      email: "squid010@gmail.com"
+      email: "ejqdl010@gmail.com"
       university: "EE. Soongsil University, B.S."
       research: "Image Restoration, AI for Astronomy"
       photo: "assets/img/members/sungyong_park.jpg"
@@ -29,7 +29,7 @@ students:
 
     - name: "Byungkwan Chae"
       name_ko: "채병관"
-      email: "silencecha875@gmail.com"
+      email: "silencechae75@gmail.com"
       university: "Media, Soongsil University, B.S."
       research: "Mobile AI, Augmented Reality"
       photo: "assets/img/members/byungkwan_chae.jpg"
@@ -38,7 +38,7 @@ students:
 
     - name: "Youngjae Choi"
       name_ko: "최영재"
-      email: "yecumarby@naver.com"
+      email: "yscompany18@naver.com"
       university: "Statistics, Soongsil University, B.S."
       research: "Computer Vision, Deep Learning"
       photo: "assets/img/members/youngjae_choi.jpg"
@@ -47,7 +47,7 @@ students:
 
     - name: "Sangmin Lee"
       name_ko: "이상민"
-      email: "ssn3289@gmail.com"
+      email: "sm32289@gmail.com"
       university: "Media, Soongsil University, B.S.<br>CSE, Soongsil University, B.S."
       research: "Computer Vision, Embodied AI"
       photo: "assets/img/members/sangmin_lee.jpg"
@@ -65,7 +65,7 @@ students:
 
     - name: "Hyunjun Kho"
       name_ko: "고현준"
-      email: "soonjae.j.24@gmail.com"
+      email: "soongsil.ai.24@gmail.com"
       university: "CSW, Suwon University, B.S."
       research: "Computer Vision, Deep Learning"
       photo: "assets/img/members/hyunjun_kho.jpg"
@@ -74,7 +74,7 @@ students:
 
     - name: "Hyunsuh Kho"
       name_ko: "고현서"
-      email: "psr1329@naver.com"
+      email: "por1329@naver.com"
       research: "Multimodal Learning, Representation Learning"
       photo: "assets/img/members/hyunsuh_kho.jpg"
       github: ""
@@ -82,7 +82,7 @@ students:
 
     - name: "Juhyoung Lee"
       name_ko: "이주형"
-      email: "j0179@naver.com"
+      email: "i0179@naver.com"
       university: "EE. Korea National University of Transportation, B.S."
       research: "Computer Vision, Deep Learning"
       photo: "assets/img/members/juhyoung_lee.jpg"
@@ -91,7 +91,7 @@ students:
 
     - name: "Jiwoo Seo"
       name_ko: "서지우"
-      email: "jiwondusxys@gmail.com"
+      email: "jiwooindaeyo@gmail.com"
       university: "Media, Soongsil University, B.S."
       research: "Computer Vision, Deep Learning"
       photo: "assets/img/members/jiwoo_seo.jpg"
@@ -100,7 +100,7 @@ students:
 
     - name: "Hojae Jeong"
       name_ko: "정호재"
-      email: "98sadeehwxs@gmail.com"
+      email: "98eddiechung@gmail.com"
       university: "SWE, Soongsil University, B.S."
       research: "Computer Vision, Generative AI"
       photo: "assets/img/members/hojae_jeong.jpg"
@@ -110,7 +110,7 @@ students:
   interns:
     - name: "Seoyoung Kim"
       name_ko: "김서영"
-      email: "codetstore@naver.com"
+      email: "codestore@naver.com"
       university: "Media, Soongsil University, B.S."
       research: "Deep Learning, Medical AI"
       photo: "assets/img/members/seoyoung_kim.jpg"
@@ -191,7 +191,7 @@ students:
 
     - name: "Jungha Lim"
       name_ko: "임정하"
-      email: "sonio0823@naver.com"
+      email: "sonic0823@naver.com"
       university: "Media, Soongsil University, B.S."
       research: "Computer Vision, Deep Learning"
       photo: "assets/img/members/jungha_lim.jpg"

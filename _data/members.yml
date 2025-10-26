@@ -73,7 +73,6 @@ students:
     - name: "Hyunsuh Kho"
       name_ko: "고현서"
       email: "psr1329@naver.com"
-      university: "Soongsil University, B.S."
       research: "Multimodal Learning, Representation Learning"
       photo: "assets/img/members/hyunsuh_kho.jpg"
       github: ""

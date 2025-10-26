@@ -37,13 +37,15 @@
       </div>
     </div>
     <div class="publication-modal-body">
-      <!-- Method Image Section -->
+      <!-- Method Image Section (Only show if image exists) -->
+      {% if pub.image %}
       <div class="method-image-section mb-4">
         <h5 class="method-image-title">Architecture</h5>
         <div class="method-image-container">
           <img src="{{ site.baseurl }}/{{ pub.image }}" alt="{{ pub.venue_short }} {{ pub.year }} Method" class="method-image">
         </div>
       </div>
+      {% endif %}
 
       {% if pub.id == 'c24' %}
       <!-- IPRF Video Section -->

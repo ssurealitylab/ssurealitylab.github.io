@@ -12,11 +12,13 @@ title: Faculty
       {% if member.bio and member.bio != "" %}
         <a href="{{ member.bio }}" target="_blank" class="external-icon-link bio-icon" title="Bio">
           <i class="fas fa-user"></i>
+          <span class="icon-label">BIO</span>
         </a>
       {% endif %}
       {% if member.scholar and member.scholar != "" %}
         <a href="{{ member.scholar }}" target="_blank" class="external-icon-link scholar-icon" title="Google Scholar Profile">
           <i class="fas fa-graduation-cap"></i>
+          <span class="icon-label">SCHOLAR</span>
         </a>
       {% endif %}
     </div>
@@ -102,16 +104,27 @@ title: Faculty
 }
 
 .external-icon-link {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   color: white;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 1.2rem;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.external-icon-link i {
+  font-size: 1.5rem;
+}
+
+.external-icon-link .icon-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .external-icon-link.bio-icon {
@@ -120,7 +133,7 @@ title: Faculty
 
 .external-icon-link.bio-icon:hover {
   background-color: #218838;
-  transform: scale(1.15);
+  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
 }
 
@@ -130,7 +143,7 @@ title: Faculty
 
 .external-icon-link.scholar-icon:hover {
   background-color: #357ae8;
-  transform: scale(1.15);
+  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);
 }
 

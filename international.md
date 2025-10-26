@@ -484,7 +484,7 @@ title: International Publications
               <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Heewon_Kim_Task-Aware_Image_Downscaling_ECCV_2018_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
-              <a href="https://cv.snu.ac.kr/research/ECCV2018_TAID/" target="_blank" class="external-icon-link website-link" title="Project Page" onclick="event.stopPropagation()">
+              <a href="https://cv.snu.ac.kr/research/taid/" target="_blank" class="external-icon-link website-link" title="Project Page" onclick="event.stopPropagation()">
                 <i class="fas fa-globe"></i>
               </a>
             </div>

@@ -226,7 +226,7 @@ publications:
     citation: "[C6] Sungyong Baik, Myungsub Choi, Janghoon Choi, Heewon Kim, and Kyoung Mu Lee, \"Meta-Learning with Adaptive Hyperparameters,\" Advances in Neural Information Processing Systems (NeurIPS), 2020."
     links:
       pdf: "https://arxiv.org/pdf/2011.00209"
-      code: "https://github.com/baiksung/ALFA"
+      github: "https://github.com/baiksung/ALFA"
 
   # 2022 Publications
   - id: c14
@@ -240,7 +240,7 @@ publications:
     citation: "[C14] Cheeun Hong, Sungyong Baik, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee, \"CADyQ: Content-Aware Dynamic Quantization for Image Super Resolution,\" Proc. European Conference on Computer Vision (ECCV), 2022."
     links:
       pdf: "https://arxiv.org/pdf/2207.10345"
-      code: "https://github.com/Cheeun/CADyQ"
+      github: "https://github.com/Cheeun/CADyQ"
 
   - id: c12
     title: "DAQ: Channel-Wise Distribution-Aware Quantization for Deep Image Super-Resolution Networks"
@@ -281,7 +281,7 @@ publications:
     links:
       pdf: "https://openaccess.thecvf.com/content/ICCV2021/papers/Baik_Meta-Learning_With_Task-Adaptive_Loss_Function_for_Few-Shot_Learning_ICCV_2021_paper.pdf"
       arxiv: "https://arxiv.org/abs/2110.03909"
-      code: "https://github.com/baiksung/MeTAL"
+      github: "https://github.com/baiksung/MeTAL"
 
   - id: c8
     title: "Searching for Controllable Image Restoration Networks"
@@ -355,7 +355,7 @@ publications:
     citation: "[C3] Heewon Kim, Myungsub Choi, Bee Lim, and Kyoung Mu Lee, \"Task-Aware Image Downscaling,\" Proc. European Conference on Computer Vision (ECCV), 2018."
     links:
       pdf: "https://openaccess.thecvf.com/content_ECCV_2018/papers/Heewon_Kim_Task-Aware_Image_Downscaling_ECCV_2018_paper.pdf"
-      project: "https://cv.snu.ac.kr/research/ECCV2018_TAID/"
+      website: "https://cv.snu.ac.kr/research/taid/"
 
   - id: c2
     title: "NTIRE 2017 Challenge on Single Image Super-Resolution: Methods and Results"
@@ -382,7 +382,7 @@ publications:
     links:
       paper: "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf"
       pdf: "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf"
-      code: "https://github.com/LimBee/NTIRE2017"
+      github: "https://github.com/LimBee/NTIRE2017"
 
   - id: j10
     title: "Accurate Baseball Player Pose Refinement Using Motion Prior Guidance"

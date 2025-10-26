@@ -509,6 +509,17 @@ document.addEventListener("keydown", function(event) {
     }
   }
 });
+
+// Open modal from URL hash (e.g., #sidl-open)
+document.addEventListener("DOMContentLoaded", function() {
+  const hash = window.location.hash;
+  if (hash && hash.endsWith("-open")) {
+    const modalId = hash.substring(1, hash.length - 5); // Remove # and -open
+    setTimeout(function() {
+      openPublicationModal(modalId);
+    }, 100);
+  }
+});
 </script>
 
 <style>

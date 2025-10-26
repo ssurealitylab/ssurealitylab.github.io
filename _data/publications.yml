@@ -118,10 +118,10 @@ publications:
   - id: c17j8
     title: "Trajectories of chronic pain among older Veterans: Identifying pain-worsening predictors via machine learning"
     authors: "Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim"
-    venue: "Gerontological Society of America (GSA) Annual Scientific Meeting & Innovation in Aging"
+    venue: "Gerontological Society of America (GSA) Annual Scientific Meeting"
     venue_short: "GSA"
     year: 2024
-    type: journal
+    type: conference
     status: published
     citation: "[C17&J8] Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim, \"Trajectories of chronic pain among older Veterans: Identifying pain-worsening predictors via machine learning,\" Gerontological Society of America (GSA) Annual Scientific Meeting, 2024 & Innovation in Aging, vol. 8, issue suppl. 1, pp. 1221, Dec. 2024."
     links:

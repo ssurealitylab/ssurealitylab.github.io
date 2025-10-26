@@ -30,19 +30,37 @@ sleep 2
 echo "" >> "$LOG_FILE"
 echo "========================================" >> "$LOG_FILE"
 echo "[$(date)] Starting new cloudflared tunnel..." >> "$LOG_FILE"
-nohup ./ai_server/cloudflared tunnel --url http://localhost:4005 >> "$LOG_FILE" 2>&1 &
+
+# Use temporary file to capture only the new tunnel output
+TEMP_LOG="$WORK_DIR/ai_server/tunnel_temp.log"
+rm -f "$TEMP_LOG"
+
+nohup ./ai_server/cloudflared tunnel --url http://localhost:4005 > "$TEMP_LOG" 2>&1 &
 NEW_PID=$!
 echo $NEW_PID > "$PID_FILE"
 
-# Wait for tunnel to initialize
+# Wait for tunnel to initialize and URL to appear
 echo "[$(date)] Waiting for tunnel to initialize..." >> "$LOG_FILE"
-sleep 5
+MAX_WAIT=30
+WAIT_COUNT=0
+NEW_URL=""
 
-# Extract new URL from log (get the LAST/newest one)
-NEW_URL=$(grep -oP 'https://[a-z-]+\.trycloudflare\.com' "$LOG_FILE" | tail -1)
+while [ $WAIT_COUNT -lt $MAX_WAIT ]; do
+    if [ -f "$TEMP_LOG" ]; then
+        NEW_URL=$(grep -oP 'https://[a-z-]+\.trycloudflare\.com' "$TEMP_LOG" | head -1)
+        if [ -n "$NEW_URL" ]; then
+            break
+        fi
+    fi
+    sleep 1
+    WAIT_COUNT=$((WAIT_COUNT + 1))
+done
+
+# Append temp log to main log
+cat "$TEMP_LOG" >> "$LOG_FILE" 2>/dev/null
 
 if [ -z "$NEW_URL" ]; then
-    echo "[$(date)] ERROR: Failed to get new tunnel URL!" >> "$LOG_FILE"
+    echo "[$(date)] ERROR: Failed to get new tunnel URL after ${MAX_WAIT}s!" >> "$LOG_FILE"
     exit 1
 fi
 

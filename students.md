@@ -71,13 +71,16 @@ title: Students
           {% endif %}
         {% endfor %}
 
-        {% comment %} Collect publication achievements {% endcomment %}
+        {% comment %} Collect publication achievements (exclude awards/challenges - already in news) {% endcomment %}
         {% for pub in site.data.publications.publications %}
           {% if pub.authors contains student.name %}
-            {% comment %} Remove year suffix from venue_short (e.g., CVPR25 -> CVPR) {% endcomment %}
-            {% assign venue_clean = pub.venue_short | replace: "25", "" | replace: "24", "" | replace: "23", "" | replace: "22", "" | replace: "21", "" | replace: "20", "" %}
-            {% assign pub_text = pub.title | append: " - " | append: venue_clean | append: " " | append: pub.year %}
-            {% assign pub_achievements = pub_achievements | push: pub_text %}
+            {% comment %} Skip workshop-type awards (they're in news section) {% endcomment %}
+            {% unless pub.type == "workshop" and pub.status == "award" %}
+              {% comment %} Remove year suffix from venue_short (e.g., CVPR25 -> CVPR) {% endcomment %}
+              {% assign venue_clean = pub.venue_short | replace: "25", "" | replace: "24", "" | replace: "23", "" | replace: "22", "" | replace: "21", "" | replace: "20", "" %}
+              {% assign pub_text = pub.title | append: " - " | append: venue_clean | append: " " | append: pub.year %}
+              {% assign pub_achievements = pub_achievements | push: pub_text %}
+            {% endunless %}
           {% endif %}
         {% endfor %}
 
@@ -185,13 +188,16 @@ title: Students
           {% endif %}
         {% endfor %}
 
-        {% comment %} Collect publication achievements {% endcomment %}
+        {% comment %} Collect publication achievements (exclude awards/challenges - already in news) {% endcomment %}
         {% for pub in site.data.publications.publications %}
           {% if pub.authors contains intern.name %}
-            {% comment %} Remove year suffix from venue_short (e.g., CVPR25 -> CVPR) {% endcomment %}
-            {% assign venue_clean = pub.venue_short | replace: "25", "" | replace: "24", "" | replace: "23", "" | replace: "22", "" | replace: "21", "" | replace: "20", "" %}
-            {% assign pub_text = pub.title | append: " - " | append: venue_clean | append: " " | append: pub.year %}
-            {% assign intern_pub_achievements = intern_pub_achievements | push: pub_text %}
+            {% comment %} Skip workshop-type awards (they're in news section) {% endcomment %}
+            {% unless pub.type == "workshop" and pub.status == "award" %}
+              {% comment %} Remove year suffix from venue_short (e.g., CVPR25 -> CVPR) {% endcomment %}
+              {% assign venue_clean = pub.venue_short | replace: "25", "" | replace: "24", "" | replace: "23", "" | replace: "22", "" | replace: "21", "" | replace: "20", "" %}
+              {% assign pub_text = pub.title | append: " - " | append: venue_clean | append: " " | append: pub.year %}
+              {% assign intern_pub_achievements = intern_pub_achievements | push: pub_text %}
+            {% endunless %}
           {% endif %}
         {% endfor %}
 
@@ -484,9 +490,11 @@ title: Students
   width: 100%;
   max-height: 300px;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 15px;
   background: #f8f9fa;
   border-radius: 10px;
+  word-wrap: break-word;
 }
 
 .modal-achievements strong {
@@ -507,7 +515,10 @@ title: Students
   font-size: 0.85rem;
   margin-bottom: 8px;
   line-height: 1.5;
-  word-break: break-word;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .modal-social {

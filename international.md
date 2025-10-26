@@ -293,9 +293,6 @@ title: International Publications
               <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780328.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
-              <a href="https://arxiv.org/abs/2207.10345" target="_blank" class="external-icon-link pdf-link" title="arXiv" onclick="event.stopPropagation()">
-                <i class="fas fa-file-alt"></i>
-              </a>
               <a href="https://github.com/Cheeun/CADyQ" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
                 <i class="fab fa-github"></i>
               </a>
@@ -383,9 +380,6 @@ title: International Publications
               <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Baik_Meta-Learning_With_Task-Adaptive_Loss_Function_for_Few-Shot_Learning_ICCV_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
-              <a href="https://arxiv.org/abs/2110.03909" target="_blank" class="external-icon-link pdf-link" title="arXiv" onclick="event.stopPropagation()">
-                <i class="fas fa-file-alt"></i>
-              </a>
               <a href="https://github.com/baiksung/MeTAL" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
                 <i class="fab fa-github"></i>
               </a>
@@ -417,9 +411,6 @@ title: International Publications
               <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Kim_Searching_for_Controllable_Image_Restoration_Networks_ICCV_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
-              <a href="https://arxiv.org/abs/2012.11225" target="_blank" class="external-icon-link pdf-link" title="arXiv" onclick="event.stopPropagation()">
-                <i class="fas fa-file-alt"></i>
-              </a>
             </div>
             <h5 class="list-title">Searching for Controllable Image Restoration Networks</h5>
             <p class="list-authors">Heewon Kim, Sungyong Baik, Myungsub Choi, Janghoon Choi, Kyoung Mu Lee</p>
@@ -447,9 +438,6 @@ title: International Publications
             <div class="external-links">
               <a href="https://proceedings.neurips.cc/paper/2020/file/9d8420bbf6d0d1a6f97d3c2e5f3b6b0a-Paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
-              </a>
-              <a href="https://arxiv.org/abs/2011.00209" target="_blank" class="external-icon-link pdf-link" title="arXiv" onclick="event.stopPropagation()">
-                <i class="fas fa-file-alt"></i>
               </a>
               <a href="https://github.com/baiksung/ALFA" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
                 <i class="fab fa-github"></i>

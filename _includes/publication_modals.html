@@ -136,32 +136,6 @@
       {% if pub.notes %}
       <p class="mt-3"><small>{{ pub.notes }}</small></p>
       {% endif %}
-
-      <!-- Modal Body Links -->
-      {% if pub.links %}
-      <div class="modal-body-links">
-        {% if pub.links.pdf %}
-        <a href="{{ pub.links.pdf }}" target="_blank" class="modal-body-link pdf-link" onclick="event.stopPropagation()">
-          <i class="fas fa-file-pdf"></i> PDF
-        </a>
-        {% endif %}
-        {% if pub.links.website %}
-        <a href="{{ pub.links.website }}" target="_blank" class="modal-body-link website-link" onclick="event.stopPropagation()">
-          <i class="fas fa-globe"></i> Website
-        </a>
-        {% endif %}
-        {% if pub.links.github %}
-        <a href="{{ pub.links.github }}" target="_blank" class="modal-body-link github-link" onclick="event.stopPropagation()">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        {% endif %}
-        {% if pub.links.video %}
-        <a href="{{ pub.links.video }}" target="_blank" class="modal-body-link video-link" onclick="event.stopPropagation()">
-          <i class="fas fa-video"></i> Video
-        </a>
-        {% endif %}
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>
@@ -387,73 +361,6 @@ document.addEventListener("keydown", function(event) {
 
 .citation-box strong {
   color: #667eea;
-}
-
-/* Modal Body Links */
-.modal-body-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px solid #e9ecef;
-}
-
-.modal-body-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.modal-body-link.pdf-link {
-  background: linear-gradient(135deg, #e74c3c, #c0392b);
-  color: white;
-}
-
-.modal-body-link.pdf-link:hover {
-  background: linear-gradient(135deg, #c0392b, #a93226);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
-}
-
-.modal-body-link.website-link {
-  background: linear-gradient(135deg, #3498db, #2980b9);
-  color: white;
-}
-
-.modal-body-link.website-link:hover {
-  background: linear-gradient(135deg, #2980b9, #21618c);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
-}
-
-.modal-body-link.github-link {
-  background: linear-gradient(135deg, #34495e, #2c3e50);
-  color: white;
-}
-
-.modal-body-link.github-link:hover {
-  background: linear-gradient(135deg, #2c3e50, #1a252f);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(52, 73, 94, 0.3);
-}
-
-.modal-body-link.video-link {
-  background: linear-gradient(135deg, #e67e22, #d35400);
-  color: white;
-}
-
-.modal-body-link.video-link:hover {
-  background: linear-gradient(135deg, #d35400, #ba4a00);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(230, 126, 34, 0.3);
 }
 
 /* Method Image Section Styling */

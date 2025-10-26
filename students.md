@@ -69,8 +69,7 @@ title: Students
         {% endfor %}
 
         {% comment %} Collect publication achievements {% endcomment %}
-        {% for pub_item in site.data.publications %}
-          {% assign pub = pub_item[1] %}
+        {% for pub in site.data.publications.publications %}
           {% if pub.authors contains student.name %}
             {% assign pub_text = pub.title | append: " - " | append: pub.venue_short | append: " " | append: pub.year %}
             {% assign student_achievements = student_achievements | push: pub_text %}
@@ -166,8 +165,7 @@ title: Students
         {% endfor %}
 
         {% comment %} Collect publication achievements {% endcomment %}
-        {% for pub_item in site.data.publications %}
-          {% assign pub = pub_item[1] %}
+        {% for pub in site.data.publications.publications %}
           {% if pub.authors contains intern.name %}
             {% assign pub_text = pub.title | append: " - " | append: pub.venue_short | append: " " | append: pub.year %}
             {% assign intern_achievements = intern_achievements | push: pub_text %}

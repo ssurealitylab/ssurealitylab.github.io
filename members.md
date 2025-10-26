@@ -110,10 +110,65 @@ title: Members
   transform: scale(1.1);
 }
 
+.social-link.email {
+  background-color: #d44638;
+  cursor: pointer;
+}
+
+.social-link.email:hover {
+  background-color: #b23121;
+  transform: scale(1.1);
+}
+
 .social-link.disabled {
   background-color: #dee2e6;
   color: #6c757d;
   cursor: not-allowed;
+}
+
+.member-university {
+  color: #6c757d;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.email-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+  animation: slideInUp 0.3s ease-out, fadeOut 0.3s ease-in 2.7s;
+  opacity: 0;
+}
+
+.email-toast.show {
+  opacity: 1;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .section-header {
@@ -234,8 +289,14 @@ title: Members
       
       <div class="member-name">{{ member.name }}</div>
       <div class="member-name-ko">{{ member.name_ko }}</div>
+      {% if member.email %}
+      <div class="member-research" style="margin-bottom: 5px;">{{ member.email }}</div>
+      {% endif %}
+      {% if member.university %}
+      <div class="member-university">{{ member.university }}</div>
+      {% endif %}
       <div class="member-research">{{ member.research }}</div>
-      
+
       {% if member.achievements and member.achievements.size > 0 %}
       <div class="member-achievements">
         {% for achievement in member.achievements %}
@@ -243,8 +304,18 @@ title: Members
         {% endfor %}
       </div>
       {% endif %}
-      
+
       <div class="social-links">
+        {% if member.email and member.email != "" %}
+          <span class="social-link email" onclick="copyEmail('{{ member.email }}')">
+            <i class="fas fa-envelope"></i>
+          </span>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fas fa-envelope"></i>
+          </span>
+        {% endif %}
+
         {% if member.github and member.github != "" %}
           <a href="{{ member.github }}" target="_blank" class="social-link github">
             <i class="fab fa-github"></i>
@@ -254,7 +325,7 @@ title: Members
             <i class="fab fa-github"></i>
           </span>
         {% endif %}
-        
+
         {% if member.linkedin and member.linkedin != "" %}
           <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
             <i class="fab fa-linkedin-in"></i>
@@ -286,9 +357,25 @@ title: Members
       
       <div class="member-name">{{ member.name }}</div>
       <div class="member-name-ko">{{ member.name_ko }}</div>
+      {% if member.email %}
+      <div class="member-research" style="margin-bottom: 5px;">{{ member.email }}</div>
+      {% endif %}
+      {% if member.university %}
+      <div class="member-university">{{ member.university }}</div>
+      {% endif %}
       <div class="member-research">{{ member.research }}</div>
-      
+
       <div class="social-links">
+        {% if member.email and member.email != "" %}
+          <span class="social-link email" onclick="copyEmail('{{ member.email }}')">
+            <i class="fas fa-envelope"></i>
+          </span>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fas fa-envelope"></i>
+          </span>
+        {% endif %}
+
         {% if member.github and member.github != "" %}
           <a href="{{ member.github }}" target="_blank" class="social-link github">
             <i class="fab fa-github"></i>
@@ -298,7 +385,7 @@ title: Members
             <i class="fab fa-github"></i>
           </span>
         {% endif %}
-        
+
         {% if member.linkedin and member.linkedin != "" %}
           <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
             <i class="fab fa-linkedin-in"></i>
@@ -313,6 +400,49 @@ title: Members
   </div>
   {% endfor %}
 </div>
+
+<script>
+function copyEmail(email) {
+  // Create a temporary textarea element
+  const textarea = document.createElement('textarea');
+  textarea.value = email;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  try {
+    // Copy to clipboard
+    document.execCommand('copy');
+
+    // Show success toast
+    showEmailToast();
+  } catch (err) {
+    console.error('Failed to copy email:', err);
+  }
+
+  document.body.removeChild(textarea);
+}
+
+function showEmailToast() {
+  // Remove any existing toast
+  const existingToast = document.querySelector('.email-toast');
+  if (existingToast) {
+    existingToast.remove();
+  }
+
+  // Create new toast
+  const toast = document.createElement('div');
+  toast.className = 'email-toast show';
+  toast.textContent = '이메일이 복사되었습니다';
+  document.body.appendChild(toast);
+
+  // Remove toast after 3 seconds
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
+</script>
 
 ## Alumni {#alumni}
 

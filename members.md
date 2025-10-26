@@ -13,6 +13,7 @@ title: Members
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: white;
   height: 100%;
+  position: relative;
 }
 
 .member-card:hover {
@@ -248,6 +249,38 @@ title: Members
   color: #007bff;
   font-size: 0.9em;
 }
+
+.faculty-card-clickable {
+  cursor: pointer;
+}
+
+.faculty-card-clickable:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.external-scholar-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background-color: #4285f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.external-scholar-icon:hover {
+  background-color: #357ae8;
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);
+}
 </style>
 
 # Lab Members
@@ -262,7 +295,13 @@ title: Members
 <div class="row">
   {% for member in site.data.members.faculty %}
   <div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="member-card">
+    <div class="member-card faculty-card-clickable" onclick="window.open('{{ member.bio }}', '_blank')">
+      {% if member.scholar and member.scholar != "" %}
+        <a href="{{ member.scholar }}" target="_blank" class="external-scholar-icon" onclick="event.stopPropagation()" title="Google Scholar Profile">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+      {% endif %}
+
       <img src="{{ site.baseurl }}/{{ member.photo }}"
            alt="{{ member.name }}"
            class="member-photo"
@@ -288,37 +327,17 @@ title: Members
 
       <div class="social-links">
         {% if member.email and member.email != "" %}
-          <span class="social-link email" onclick="copyEmail('{{ member.email }}', event)">
+          <span class="social-link email" onclick="event.stopPropagation(); copyEmail('{{ member.email }}', event)">
             <i class="fas fa-envelope"></i>
           </span>
         {% else %}
           <span class="social-link disabled">
             <i class="fas fa-envelope"></i>
-          </span>
-        {% endif %}
-
-        {% if member.bio and member.bio != "" %}
-          <a href="{{ member.bio }}" target="_blank" class="social-link bio" title="Bio">
-            <i class="fas fa-user"></i>
-          </a>
-        {% else %}
-          <span class="social-link disabled">
-            <i class="fas fa-user"></i>
-          </span>
-        {% endif %}
-
-        {% if member.scholar and member.scholar != "" %}
-          <a href="{{ member.scholar }}" target="_blank" class="social-link scholar" title="Google Scholar">
-            <i class="fas fa-graduation-cap"></i>
-          </a>
-        {% else %}
-          <span class="social-link disabled">
-            <i class="fas fa-graduation-cap"></i>
           </span>
         {% endif %}
 
         {% if member.github and member.github != "" %}
-          <a href="{{ member.github }}" target="_blank" class="social-link github">
+          <a href="{{ member.github }}" target="_blank" class="social-link github" onclick="event.stopPropagation()">
             <i class="fab fa-github"></i>
           </a>
         {% else %}
@@ -328,7 +347,7 @@ title: Members
         {% endif %}
 
         {% if member.linkedin and member.linkedin != "" %}
-          <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
+          <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin" onclick="event.stopPropagation()">
             <i class="fab fa-linkedin-in"></i>
           </a>
         {% else %}

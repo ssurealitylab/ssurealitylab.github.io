@@ -173,7 +173,7 @@ publications:
     title: "NERDS: A General Framework to Train Camera Denoisers from Raw-RGB Noisy Image Pairs"
     authors: "Yunseok Yang†, Heewon Kim"
     venue: "International Conference on Learning Representations (ICLR)"
-    venue_short: "ICLR23"
+    venue_short: "ICLR"
     year: 2023
     type: conference
     status: published
@@ -209,7 +209,7 @@ publications:
     title: "DAQ: Channel-Wise Distribution-Aware Quantization"
     authors: "Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim"
     venue: "British Machine Vision Conference (BMVC)"
-    venue_short: "BMVC23"
+    venue_short: "BMVC"
     year: 2023
     type: conference
     status: published
@@ -218,10 +218,10 @@ publications:
 
   - id: c11
     title: "Batch Normalization Tells You Which Filter is Important"
-    authors: "Sangmin Lee†, Sungyong Park†, Heewon Kim"
+    authors: "Junghun Oh, Heewon Kim, Sungyong Baik, Cheeun Hong, Kyoung Mu Lee"
     venue: "Winter Conference on Applications of Computer Vision (WACV)"
-    venue_short: "WACV23"
-    year: 2023
+    venue_short: "WACV"
+    year: 2022
     type: conference
     status: published
     citation: "[C11] Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, Jonghyun Choi, and Kyoung Mu Lee, \"Batch Normalization Tells You Which Filter is Important,\" Winter Conference on Applications of Computer Vision (WACV), 2022."
@@ -253,6 +253,21 @@ publications:
     links:
       pdf: "https://www.sciencedirect.com/science/article/pii/S1047320322001973"
 
+  - id: c6
+    title: "Meta-Learning with Adaptive Hyperparameters"
+    authors: "Sungyong Baik, Myungsub Choi, Janghoon Choi, Heewon Kim, Kyoung Mu Lee"
+    venue: "Advances in Neural Information Processing Systems (NeurIPS)"
+    venue_short: "NeurIPS"
+    year: 2020
+    type: conference
+    status: published
+    citation: "[C6] Sungyong Baik, Myungsub Choi, Janghoon Choi, Heewon Kim, and Kyoung Mu Lee, \"Meta-Learning with Adaptive Hyperparameters,\" Advances in Neural Information Processing Systems (NeurIPS), 2020."
+    links:
+      pdf: "https://proceedings.neurips.cc/paper/2020/file/9d8420bbf6d0d1a6f97d3c2e5f3b6b0a-Paper.pdf"
+      arxiv: "https://arxiv.org/abs/2011.00209"
+      code: "https://github.com/baiksung/ALFA"
+
+  # 2022 Publications
   - id: c14_2022
     title: "CADyQ: Content-Aware Dynamic Quantization for Image Super-Resolution"
     authors: "Cheeun Hong*, Sungyong Baik, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee"
@@ -269,7 +284,7 @@ publications:
 
   - id: c12
     title: "DAQ: Channel-Wise Distribution-Aware Quantization for Deep Image Super-Resolution Networks"
-    authors: "Cheeun Hong*, Heewon Kim*, Sungyong Baik, Junghun Oh, and Kyoung Mu Lee"
+    authors: "Cheeun Hong*, Heewon Kim*, Sungyong Baik, Junghun Oh, Kyoung Mu Lee"
     venue: "Winter Conference on Applications of Computer Vision (WACV)"
     venue_short: "WACV"
     year: 2022
@@ -282,13 +297,13 @@ publications:
 
   - id: c13
     title: "Attentive Fine-Grained Structured Sparsity for Image Restoration"
-    authors: "Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, Jonghyun Choi, and Kyoung Mu Lee"
+    authors: "Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, Jonghyun Choi, Kyoung Mu Lee"
     venue: "Proc. Computer Vision and Pattern Recognition (CVPR)"
     venue_short: "CVPR"
     year: 2022
     type: conference
     status: published
-    citation: "[C13] Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, and Kyoung Mu Lee, \"Attentive Fine-Grained Structured Sparsity for Image Restoration,\" Proc. Computer Vision and Pattern Recognition (CVPR), 2022."
+    citation: "[C13] Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, Jonghyun Choi, and Kyoung Mu Lee, \"Attentive Fine-Grained Structured Sparsity for Image Restoration,\" Proc. Computer Vision and Pattern Recognition (CVPR), 2022."
     links:
       pdf: "https://openaccess.thecvf.com/content/CVPR2022/papers/Oh_Attentive_Fine-Grained_Structured_Sparsity_for_Image_Restoration_CVPR_2022_paper.pdf"
 

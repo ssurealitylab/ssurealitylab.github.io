@@ -22,17 +22,25 @@ if [ $? -ne 0 ]; then
 fi
 echo "[$(date)] ✅ Website crawled successfully" >> "$LOG_FILE"
 
-# Step 2: Build vector database
-echo "[$(date)] Step 2/4: Building vector database..." >> "$LOG_FILE"
+# Step 2: Build vector databases
+echo "[$(date)] Step 2/5: Building flat vector database..." >> "$LOG_FILE"
 python3 ai_server/build_vector_db.py >> "$LOG_FILE" 2>&1
 if [ $? -ne 0 ]; then
-    echo "[$(date)] ERROR: Vector DB build failed!" >> "$LOG_FILE"
+    echo "[$(date)] ERROR: Flat vector DB build failed!" >> "$LOG_FILE"
     exit 1
 fi
-echo "[$(date)] ✅ Vector database built successfully" >> "$LOG_FILE"
+echo "[$(date)] ✅ Flat vector database built successfully" >> "$LOG_FILE"
 
-# Step 3: Restart AI server to load new vector DB
-echo "[$(date)] Step 3/4: Restarting AI server..." >> "$LOG_FILE"
+echo "[$(date)] Step 3/5: Building hierarchical vector database..." >> "$LOG_FILE"
+python3 ai_server/build_hierarchical_rag.py >> "$LOG_FILE" 2>&1
+if [ $? -ne 0 ]; then
+    echo "[$(date)] ERROR: Hierarchical RAG build failed!" >> "$LOG_FILE"
+    exit 1
+fi
+echo "[$(date)] ✅ Hierarchical vector database built successfully" >> "$LOG_FILE"
+
+# Step 4: Restart AI server to load new vector DB
+echo "[$(date)] Step 4/5: Restarting AI server..." >> "$LOG_FILE"
 
 # Kill old AI server
 pkill -f "qwen3_4b_lowmem.py"
@@ -46,8 +54,8 @@ else
     echo "[$(date)] ✅ AI server restarted successfully" >> "$LOG_FILE"
 fi
 
-# Step 4: Log completion
-echo "[$(date)] Step 4/4: RAG update complete!" >> "$LOG_FILE"
+# Step 5: Log completion
+echo "[$(date)] Step 5/5: RAG update complete!" >> "$LOG_FILE"
 
 # Summary
 DOCS_COUNT=$(python3 -c "import json; f=open('ai_server/knowledge_base.json'); data=json.load(f); print(len(data)); f.close()")

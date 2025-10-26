@@ -108,43 +108,55 @@ title: Faculty
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  color: white;
+  gap: 4px;
   text-decoration: none;
   transition: all 0.3s ease;
-  padding: 8px 12px;
-  border-radius: 10px;
+  padding: 6px 8px;
 }
 
 .external-icon-link i {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
 }
 
 .external-icon-link .icon-label {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-.external-icon-link.bio-icon {
-  background-color: #28a745;
+.external-icon-link.bio-icon i {
+  color: #28a745;
 }
 
-.external-icon-link.bio-icon:hover {
-  background-color: #218838;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+.external-icon-link.bio-icon .icon-label {
+  color: #28a745;
 }
 
-.external-icon-link.scholar-icon {
-  background-color: #4285f4;
+.external-icon-link.bio-icon:hover i {
+  transform: scale(1.1);
 }
 
-.external-icon-link.scholar-icon:hover {
-  background-color: #357ae8;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);
+.external-icon-link.bio-icon:hover .icon-label {
+  opacity: 1;
+}
+
+.external-icon-link.scholar-icon i {
+  color: #4285f4;
+}
+
+.external-icon-link.scholar-icon .icon-label {
+  color: #4285f4;
+}
+
+.external-icon-link.scholar-icon:hover i {
+  transform: scale(1.1);
+}
+
+.external-icon-link.scholar-icon:hover .icon-label {
+  opacity: 1;
 }
 
 .member-photo {

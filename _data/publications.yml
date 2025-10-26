@@ -64,14 +64,14 @@ publications:
     notes: "* Equal contribution"
 
   - id: j12
-    title: "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis"
+    title: "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis: Data From The Heart and Soul Study"
     authors: "Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, Heewon Kim"
     venue: "PLOS ONE"
     venue_short: "PLOS ONE"
     year: 2025
     type: journal
     status: accepted
-    citation: "[J12] Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, \"DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis,\" PLOS ONE, 2025 (accepted)"
+    citation: "[J12] Chiyoung Lee*, Yeri Kim*†, Seoyoung Kim*†, Mary Whooley, and Heewon Kim, \"DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis: Data From The Heart and Soul Study,\" PLOS ONE, 2025 (accepted)"
     image: "assets/img/publications/deepgam/architecture.png"
     notes: "* Equal contribution<br>† Undergraduate student"
     links:
@@ -114,14 +114,14 @@ publications:
 
   # 2024 Publications
   - id: c17j8
-    title: "Trajectories of chronic pain among older Veterans: Identifying groups using machine learning"
+    title: "Trajectories of chronic pain among older Veterans: Identifying pain-worsening predictors via machine learning"
     authors: "Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim"
     venue: "Gerontological Society of America (GSA) Annual Scientific Meeting & Innovation in Aging"
     venue_short: "Innovation in Aging"
     year: 2024
     type: journal
     status: published
-    citation: "[C17&J8] Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim, \"Trajectories of chronic pain among older Veterans: Identifying groups using machine learning,\" Gerontological Society of America (GSA) Annual Scientific Meeting, 2024 & Innovation in Aging, vol. 8, issue supple. 1, pp. 1221, Dec. 2024."
+    citation: "[C17&J8] Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim, \"Trajectories of chronic pain among older Veterans: Identifying pain-worsening predictors via machine learning,\" Gerontological Society of America (GSA) Annual Scientific Meeting, 2024 & Innovation in Aging, vol. 8, issue suppl. 1, pp. 1221, Dec. 2024."
     links:
       pdf: "https://academic.oup.com/innovateage/article/8/Supplement_1/1221/7917421"
 

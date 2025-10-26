@@ -498,6 +498,19 @@ document.addEventListener("keydown", function(event) {
   object-fit: contain;
 }
 
+/* Individual size adjustments for each style image */
+.iprf-results-container .iprf-result-row:nth-child(1) .iprf-style-image {
+  max-height: 280px; /* Starry Night - 20% smaller */
+}
+
+.iprf-results-container .iprf-result-row:nth-child(2) .iprf-style-image {
+  max-height: 245px; /* Tiger - 30% smaller */
+}
+
+.iprf-results-container .iprf-result-row:nth-child(3) .iprf-style-image {
+  max-height: 315px; /* Totoro - 10% smaller */
+}
+
 .iprf-result-video {
   width: 100%;
   max-height: 350px;

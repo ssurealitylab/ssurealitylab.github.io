@@ -53,6 +53,14 @@ title: Members
   margin-bottom: 10px;
 }
 
+.member-email {
+  color: #495057;
+  font-size: 0.85em;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
 .member-research {
   color: #6c757d;
   font-size: 0.9em;
@@ -290,7 +298,7 @@ title: Members
       <div class="member-name">{{ member.name }}</div>
       <div class="member-name-ko">{{ member.name_ko }}</div>
       {% if member.email %}
-      <div class="member-research" style="margin-bottom: 5px;">{{ member.email }}</div>
+      <div class="member-email">{{ member.email }}</div>
       {% endif %}
       {% if member.university %}
       <div class="member-university">{{ member.university }}</div>
@@ -358,7 +366,7 @@ title: Members
       <div class="member-name">{{ member.name }}</div>
       <div class="member-name-ko">{{ member.name_ko }}</div>
       {% if member.email %}
-      <div class="member-research" style="margin-bottom: 5px;">{{ member.email }}</div>
+      <div class="member-email">{{ member.email }}</div>
       {% endif %}
       {% if member.university %}
       <div class="member-university">{{ member.university }}</div>

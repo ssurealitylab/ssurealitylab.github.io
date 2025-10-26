@@ -18,7 +18,7 @@ title: Faculty
       {% if member.scholar and member.scholar != "" %}
         <a href="{{ member.scholar }}" target="_blank" class="external-icon-link scholar-icon" title="Google Scholar Profile">
           <i class="fas fa-graduation-cap"></i>
-          <span class="icon-label">SCHOLAR</span>
+          <span class="icon-label">GOOGLE SCHOLAR</span>
         </a>
       {% endif %}
     </div>

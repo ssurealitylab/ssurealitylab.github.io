@@ -23,7 +23,13 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="publication-card-home" onclick="openPublicationModal('{{ pub.id }}')" style="cursor: pointer;">
           <div class="publication-image-container">
-            <img src="{{ site.baseurl }}/{{ pub.image }}" alt="{{ pub.venue_short }} {{ pub.year }}" class="publication-img-home">
+            {% if pub.image and pub.image != "" %}
+              <img src="{{ site.baseurl }}/{{ pub.image }}" alt="{{ pub.venue_short }} {{ pub.year }}" class="publication-img-home">
+            {% else %}
+              <div class="publication-placeholder-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+            {% endif %}
             <div class="publication-badge-overlay">{{ pub.venue_short }}</div>
           </div>
           <div class="publication-card-body">
@@ -100,6 +106,23 @@
   object-fit: cover;
   object-position: center;
   transition: transform 0.3s ease;
+}
+
+.publication-placeholder-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  color: #bdc3c7;
+  font-size: 4rem;
+  transition: all 0.3s ease;
+}
+
+.publication-card-home:hover .publication-placeholder-icon {
+  color: #95a5a6;
+  transform: scale(1.1);
 }
 
 .publication-card-home:hover .publication-img-home {

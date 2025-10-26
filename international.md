@@ -166,26 +166,40 @@ title: International Publications
       </div>
 
       <div class="row">
-        <!-- Brain Stimulation 2024 -->
+        <!-- GSA 2024 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c17j8')" style="cursor: pointer;">
+            <div class="publication-badge">Innovation in Aging</div>
+            <div class="external-links">
+              <a href="https://academic.oup.com/innovateage/article/8/Supplement_1/1221/7917421" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </div>
+            <h5 class="list-title">Trajectories of chronic pain among older Veterans: Identifying groups using machine learning</h5>
+            <p class="list-authors">Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim</p>
+          </div>
+        </div>
+
+        <!-- PLOS ONE 2024 -->
+        <div class="col-12 mb-3">
+          <div class="publication-list-item" onclick="openPublicationModal('predicting_tdcs')" style="cursor: pointer;">
             <div class="publication-badge">PLOS ONE</div>
             <h5 class="list-title">Predicting tDCS Treatment Effects in Depression Using Deep Learning</h5>
             <p class="list-authors">Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al.</p>
           </div>
         </div>
 
-        <!-- JEET 2024 -->
+        <!-- IJMS 2024 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j7')" style="cursor: pointer;">
-            <div class="publication-badge">JEET</div>
+            <div class="publication-badge">IJMS</div>
             <div class="external-links">
-              <a href="https://www.mdpi.com/1422-0067/25/12/6761" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://www.mdpi.com/1422-0067/25/12/6396" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
             <h5 class="list-title">Machine Learning-Based Etiologic Subtyping of Ischemic Stroke Using Circulating Exosomal microRNAs</h5>
-            <p class="list-authors">Jeongmoon Kim†, Sooyoung Choi†, Heewon Kim</p>
+            <p class="list-authors">Ji Hoon Bang†, Eun Hee Kim, Hyung Jun Kim, Jong-Won Chung, Woo-Keun Seo, Gyeong-Moon Kim, Dong-Ho Lee, Heewon Kim*, Oh Young Bang*</p>
           </div>
         </div>
 
@@ -221,7 +235,35 @@ title: International Publications
       </div>
 
       <div class="row">
-        <!-- ICASSP 2023 -->
+        <!-- TIP 2023 -->
+        <div class="col-12 mb-3">
+          <div class="publication-list-item" onclick="openPublicationModal('j4')" style="cursor: pointer;">
+            <div class="publication-badge">TIP</div>
+            <div class="external-links">
+              <a href="https://ieeexplore.ieee.org/document/10246427" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </div>
+            <h5 class="list-title">Learning Controllable ISP for Image Enhancement</h5>
+            <p class="list-authors">Heewon Kim, Kyoung Mu Lee</p>
+          </div>
+        </div>
+
+        <!-- TPAMI 2023 -->
+        <div class="col-12 mb-3">
+          <div class="publication-list-item" onclick="openPublicationModal('j3')" style="cursor: pointer;">
+            <div class="publication-badge">TPAMI</div>
+            <div class="external-links">
+              <a href="https://ieeexplore.ieee.org/document/10004963" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </div>
+            <h5 class="list-title">Learning to Learn Task-Adaptive Hyperparameters for Few-Shot Learning</h5>
+            <p class="list-authors">Sungyong Baik, Myungsub Choi, Janghoon Choi, Heewon Kim, Kyoung Mu Lee</p>
+          </div>
+        </div>
+
+        <!-- ICLR 2023 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c15')" style="cursor: pointer;">
             <div class="publication-badge">ICLR23</div>

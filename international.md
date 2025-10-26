@@ -76,6 +76,11 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('j11')" style="cursor: pointer;">
             <div class="publication-badge">JEET</div>
+            <div class="external-links">
+              <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003233651" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </div>
             <h5 class="list-title">Dog Cough Sound Classification Using Neural Networks for Diagnosing Bronchial Diseases</h5>
             <p class="list-authors">Do-Ye Kwon*†, Yeon-Ju Oh*†, Heewon Kim</p>
           </div>
@@ -86,7 +91,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('j10')" style="cursor: pointer;">
             <div class="publication-badge">ICT Express</div>
             <div class="external-links">
-              <a href="https://pdf.sciencedirectassets.com/313521/1-s2.0-S2405959525X00047/1-s2.0-S2405959525000360/main.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://www.sciencedirect.com/science/article/pii/S2405959525000360" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
@@ -100,10 +105,10 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('c22')" style="cursor: pointer;">
             <div class="publication-badge">CVPR25</div>
             <div class="external-links">
-              <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Motion-Aware_Dynamic_Architecture_for_Efficient_Frame_Interpolation_ICCV_2021_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DynScene_Scalable_Generation_of_Dynamic_Robotic_Manipulation_Scenes_for_Embodied_CVPR_2025_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
-              <a href="https://cvpr.thecvf.com/virtual/2025/poster/33953" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
+              <a href="https://dynscene.github.io/" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
                 <i class="fas fa-globe"></i>
               </a>
             </div>
@@ -169,13 +174,13 @@ title: International Publications
         <!-- GSA 2024 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c17j8')" style="cursor: pointer;">
-            <div class="publication-badge">Innovation in Aging</div>
+            <div class="publication-badge">GSA</div>
             <div class="external-links">
               <a href="https://academic.oup.com/innovateage/article/8/Supplement_1/1221/7917421" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>
-            <h5 class="list-title">Trajectories of chronic pain among older Veterans: Identifying groups using machine learning</h5>
+            <h5 class="list-title">Trajectories of chronic pain among older Veterans: Identifying pain-worsening predictors via machine learning</h5>
             <p class="list-authors">Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim</p>
           </div>
         </div>

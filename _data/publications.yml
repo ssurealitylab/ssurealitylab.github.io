@@ -7,7 +7,7 @@ publications:
     title: "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI"
     authors: "Sangmin Lee*, Sungyong Park*, Heewon Kim"
     venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
-    venue_short: "CVPR"
+    venue_short: "CVPR25"
     year: 2025
     type: conference
     status: accepted
@@ -23,7 +23,7 @@ publications:
     title: "SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses"
     authors: "Sooyoung Choi*†, Sungyong Park*, Heewon Kim"
     venue: "AAAI Conference on Artificial Intelligence"
-    venue_short: "AAAI"
+    venue_short: "AAAI25"
     year: 2025
     type: conference
     status: accepted
@@ -38,7 +38,7 @@ publications:
     title: "Intrinsic-Guided Photorealistic Style Transfer for Radiance Fields"
     authors: "Hyunsuh Koh*, Seunghyun Oh*, Jungyun Jang*, Heewon Kim"
     venue: "International Workshop on Application-driven Point Cloud Processing and 3D Vision (APP3DV, ACM MM Workshop)"
-    venue_short: "APP3DV"
+    venue_short: "APP3DV25"
     year: 2025
     type: conference
     status: accepted
@@ -55,7 +55,7 @@ publications:
     title: "Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models"
     authors: "Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim"
     venue: "British Machine Vision Conference (BMVC)"
-    venue_short: "BMVC"
+    venue_short: "BMVC25"
     year: 2025
     type: conference
     status: accepted
@@ -117,9 +117,9 @@ publications:
     title: "Trajectories of chronic pain among older Veterans: Identifying groups using machine learning"
     authors: "Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim"
     venue: "Gerontological Society of America (GSA) Annual Scientific Meeting & Innovation in Aging"
-    venue_short: "GSA"
+    venue_short: "Innovation in Aging"
     year: 2024
-    type: conference
+    type: journal
     status: published
     citation: "[C17&J8] Chiyoung Lee, Yeri Kim†, Seoyoung Kim†, Beth Cohen, Kent Kwoh, Hyochol Ahn, Juyoung Park, Heewon Kim, \"Trajectories of chronic pain among older Veterans: Identifying groups using machine learning,\" Gerontological Society of America (GSA) Annual Scientific Meeting, 2024 & Innovation in Aging, vol. 8, issue supple. 1, pp. 1221, Dec. 2024."
     links:
@@ -142,7 +142,7 @@ publications:
     title: "Language-Guided Robotic Manipulation"
     authors: "Sangmin Lee†, Sungyong Park†, Heewon Kim"
     venue: "AAAI Conference on Artificial Intelligence"
-    venue_short: "AAAI"
+    venue_short: "AAAI24"
     year: 2024
     type: conference
     status: published
@@ -163,7 +163,7 @@ publications:
     title: "NERDS: A General Framework to Train Camera Denoisers from Raw-RGB Noisy Image Pairs"
     authors: "Yunseok Yang†, Heewon Kim"
     venue: "International Conference on Learning Representations (ICLR)"
-    venue_short: "ICLR"
+    venue_short: "ICLR23"
     year: 2023
     type: conference
     status: published
@@ -199,7 +199,7 @@ publications:
     title: "DAQ: Channel-Wise Distribution-Aware Quantization"
     authors: "Sungyong Park*, Sangmin Lee*, Hyunsuh Koh*, Heewon Kim"
     venue: "British Machine Vision Conference (BMVC)"
-    venue_short: "BMVC"
+    venue_short: "BMVC23"
     year: 2023
     type: conference
     status: published
@@ -210,7 +210,7 @@ publications:
     title: "Batch Normalization Tells You Which Filter is Important"
     authors: "Sangmin Lee†, Sungyong Park†, Heewon Kim"
     venue: "Winter Conference on Applications of Computer Vision (WACV)"
-    venue_short: "WACV"
+    venue_short: "WACV23"
     year: 2023
     type: conference
     status: published

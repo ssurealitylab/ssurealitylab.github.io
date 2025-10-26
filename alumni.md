@@ -32,7 +32,7 @@ title: Alumni
       {% endif %}
       <div class="member-social">
         {% if alumnus.email and alumnus.email != "" %}
-          <a href="#" onclick="event.preventDefault(); event.stopPropagation(); copyEmail('{{ alumnus.email }}')" title="Email">
+          <a href="#" onclick="event.preventDefault(); event.stopPropagation(); copyEmail('{{ alumnus.email }}', event)" title="Email">
             <i class="fas fa-envelope"></i>
           </a>
         {% else %}
@@ -170,6 +170,7 @@ title: Alumni
   justify-content: center;
   gap: 10px;
   margin-top: 15px;
+  position: relative;
 }
 
 .member-social a {
@@ -191,41 +192,42 @@ title: Alumni
   transform: translateY(-2px);
 }
 
-.email-toast {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #28a745;
+.email-copied-tooltip {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 15px 25px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  z-index: 99999;
-  animation: slideInUp 0.3s ease-out, fadeOut 0.3s ease-in 2.7s;
-  opacity: 0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  z-index: 1000;
+  animation: tooltipFadeIn 0.2s ease-out;
+  pointer-events: none;
 }
 
-.email-toast.show {
-  opacity: 1;
+.email-copied-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #667eea;
 }
 
-@keyframes slideInUp {
+@keyframes tooltipFadeIn {
   from {
-    transform: translateY(100px);
     opacity: 0;
+    transform: translateX(-50%) translateY(5px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
+    transform: translateX(-50%) translateY(0);
   }
 }
 
@@ -366,7 +368,7 @@ h2:first-of-type {
 </style>
 
 <script>
-function copyEmail(email) {
+function copyEmail(email, event) {
   // Create a temporary textarea element
   const textarea = document.createElement('textarea');
   textarea.value = email;
@@ -379,8 +381,8 @@ function copyEmail(email) {
     // Copy to clipboard
     document.execCommand('copy');
 
-    // Show success toast
-    showEmailToast();
+    // Show tooltip below the clicked icon
+    showEmailTooltip(event.currentTarget);
   } catch (err) {
     console.error('Failed to copy email:', err);
   }
@@ -388,23 +390,29 @@ function copyEmail(email) {
   document.body.removeChild(textarea);
 }
 
-function showEmailToast() {
-  // Remove any existing toast
-  const existingToast = document.querySelector('.email-toast');
-  if (existingToast) {
-    existingToast.remove();
+function showEmailTooltip(element) {
+  // Remove any existing tooltip
+  const existingTooltip = document.querySelector('.email-copied-tooltip');
+  if (existingTooltip) {
+    existingTooltip.remove();
   }
 
-  // Create new toast
-  const toast = document.createElement('div');
-  toast.className = 'email-toast show';
-  toast.textContent = '이메일이 복사되었습니다';
-  document.body.appendChild(toast);
+  // Find the parent member-social container
+  const socialLinks = element.closest('.member-social');
+  if (!socialLinks) return;
 
-  // Remove toast after 3 seconds
+  // Create new tooltip
+  const tooltip = document.createElement('div');
+  tooltip.className = 'email-copied-tooltip';
+  tooltip.textContent = '이메일이 복사되었습니다';
+
+  // Append to social-links container
+  socialLinks.appendChild(tooltip);
+
+  // Remove tooltip after 2 seconds
   setTimeout(() => {
-    toast.remove();
-  }, 3000);
+    tooltip.remove();
+  }, 2000);
 }
 
 function openMemberModal(memberId) {

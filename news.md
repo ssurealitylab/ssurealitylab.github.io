@@ -227,13 +227,11 @@ title: News
         <!-- New Master Students March -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-users fa-2x text-muted"></i>
-            </div>
+            <img src="{{ site.baseurl }}/img/news/ai-students.png?v=5" alt="New Students" class="news-img">
             <div class="card-body">
               <h5 class="card-title">New Master Students</h5>
               <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">Six master students joined the lab. Welcome to Reality Lab!</p>
+              <p class="card-text">Six master students joined our lab! Welcome!</p>
               <div class="card-date-category">
                 <small class="text-muted">Mar 1, 2024 | Members</small>
               </div>
@@ -243,9 +241,7 @@ title: News
         <!-- TIP Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-alt fa-2x text-muted"></i>
-            </div>
+            <img src="{{ site.baseurl }}/img/news/tip.png?v=5" alt="TIP" class="news-img">
             <div class="card-body">
               <h5 class="card-title">TIP Paper Acceptance</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -260,9 +256,7 @@ title: News
         <!-- Summer Interns -->
         <div class="col-lg-4 mb-4">
           <div class="news-card research-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-users fa-2x text-muted"></i>
-            </div>
+            <img src="{{ site.baseurl }}/img/news/summer-internship.png?v=5" alt="Summer Internship" class="news-img">
             <div class="card-body">
               <h5 class="card-title">Summer Internship Program</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -277,9 +271,7 @@ title: News
         <!-- TPAMI Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-alt fa-2x text-muted"></i>
-            </div>
+            <img src="{{ site.baseurl }}/img/news/tpami.png?v=5" alt="TPAMI" class="news-img">
             <div class="card-body">
               <h5 class="card-title">TPAMI Paper Acceptance</h5>
               <p class="card-subtitle">Reality Lab</p>
@@ -294,9 +286,7 @@ title: News
         <!-- ICLR Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">
-            <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-alt fa-2x text-muted"></i>
-            </div>
+            <img src="{{ site.baseurl }}/img/news/iclr.png?v=5" alt="ICLR 2023" class="news-img">
             <div class="card-body">
               <h5 class="card-title">ICLR 2023 Paper Acceptance</h5>
               <p class="card-subtitle">Reality Lab</p>

@@ -135,7 +135,7 @@ title: Domestic Publications
 <style>
 /* Publications Content Styles */
 .publications-header {
-  background: linear-gradient(90deg, rgba(39, 174, 96, 0.1) 0%, rgba(34, 153, 84, 0.1) 100%);
+  background: transparent;
 }
 
 /* Category Section */

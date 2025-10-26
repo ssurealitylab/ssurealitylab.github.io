@@ -169,7 +169,7 @@ title: International Publications
         <!-- Brain Stimulation 2024 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c17j8')" style="cursor: pointer;">
-            <div class="publication-badge">@</div>
+            <div class="publication-badge">PLOS ONE</div>
             <h5 class="list-title">Predicting tDCS Treatment Effects in Depression Using Deep Learning</h5>
             <p class="list-authors">Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, et al.</p>
           </div>
@@ -224,7 +224,7 @@ title: International Publications
         <!-- ICASSP 2023 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c15')" style="cursor: pointer;">
-            <div class="publication-badge">@</div>
+            <div class="publication-badge">ICLR23</div>
             <div class="external-links">
               <a href="https://openreview.net/forum?id=NO0ThzteQdI" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -238,7 +238,7 @@ title: International Publications
         <!-- WACV 2023 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c14')" style="cursor: pointer;">
-            <div class="publication-badge">@</div>
+            <div class="publication-badge">BMVC23</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Hong_DAQ_Channel-Wise_Distribution-Aware_Quantization_for_Deep_Image_Super-Resolution_Networks_WACV_2022_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -252,7 +252,7 @@ title: International Publications
         <!-- ICRA 2023 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c13')" style="cursor: pointer;">
-            <div class="publication-badge">@</div>
+            <div class="publication-badge">WACV22</div>
             <div class="external-links">
               <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Oh_Batch_Normalization_Tells_You_Which_Filter_Is_Important_WACV_2022_paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
@@ -384,7 +384,7 @@ title: International Publications
         <!-- NeurIPS 2019 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c9')" style="cursor: pointer;">
-            <div class="publication-badge">@</div>
+            <div class="publication-badge">NeurIPS20</div>
             <div class="external-links">
               <a href="https://papers.nips.cc/paper/2020/file/ee89223a2b625b5152132ed77abbcc79-Paper.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>

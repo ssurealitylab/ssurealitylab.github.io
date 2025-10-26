@@ -1,10 +1,18 @@
 faculty:
   - name: "Prof. Heewon Kim"
     name_ko: "김희원 교수"
-    position: "Principal Investigator"
-    affiliation: "Global School of Media, College of IT, Soongsil University"
-    email: "heewon@ssu.ac.kr"
+    position: "Assistant Professor, Ph. D."
+    affiliation: "Global School of Media"
+    affiliation_detail:
+      - "Graduate School of Metaverse"
+      - "Graduate School of Security"
+      - "College of IT, Soongsil University"
+      - "Seoul, Korea"
+    phone: "+82-2-820-0679"
+    email: "hwkim@ssu.ac.kr"
     photo: "assets/img/members/heewon_kim.jpg"
+    bio: "https://sites.google.com/view/kimheewon/"
+    scholar: "https://scholar.google.com/citations?user=B1Yuz3gAAAAJ&hl=ko"
     github: ""
     linkedin: ""
 

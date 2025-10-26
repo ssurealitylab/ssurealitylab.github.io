@@ -129,6 +129,24 @@ title: Members
   transform: scale(1.1);
 }
 
+.social-link.bio {
+  background-color: #28a745;
+}
+
+.social-link.bio:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+.social-link.scholar {
+  background-color: #4285f4;
+}
+
+.social-link.scholar:hover {
+  background-color: #357ae8;
+  transform: scale(1.1);
+}
+
 .social-link.disabled {
   background-color: #dee2e6;
   color: #6c757d;
@@ -245,17 +263,60 @@ title: Members
   {% for member in site.data.members.faculty %}
   <div class="col-lg-4 col-md-6 col-sm-12">
     <div class="member-card">
-      <img src="{{ site.baseurl }}/{{ member.photo }}" 
-           alt="{{ member.name }}" 
+      <img src="{{ site.baseurl }}/{{ member.photo }}"
+           alt="{{ member.name }}"
            class="member-photo"
            onerror="this.src='{{ site.baseurl }}/assets/img/members/placeholder.svg'">
-      
+
       <div class="member-name">{{ member.name }}</div>
       <div class="member-name-ko">{{ member.name_ko }}</div>
       <div class="member-position">{{ member.position }}</div>
       <div class="member-research">{{ member.affiliation }}</div>
-      
+      {% if member.affiliation_detail %}
+      <div class="member-university">
+        {% for detail in member.affiliation_detail %}
+          {{ detail }}<br>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if member.phone %}
+      <div class="member-email">Phone: {{ member.phone }}</div>
+      {% endif %}
+      {% if member.email %}
+      <div class="member-email">E-mail: {{ member.email }}</div>
+      {% endif %}
+
       <div class="social-links">
+        {% if member.email and member.email != "" %}
+          <span class="social-link email" onclick="copyEmail('{{ member.email }}', event)">
+            <i class="fas fa-envelope"></i>
+          </span>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fas fa-envelope"></i>
+          </span>
+        {% endif %}
+
+        {% if member.bio and member.bio != "" %}
+          <a href="{{ member.bio }}" target="_blank" class="social-link bio" title="Bio">
+            <i class="fas fa-user"></i>
+          </a>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fas fa-user"></i>
+          </span>
+        {% endif %}
+
+        {% if member.scholar and member.scholar != "" %}
+          <a href="{{ member.scholar }}" target="_blank" class="social-link scholar" title="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+        {% else %}
+          <span class="social-link disabled">
+            <i class="fas fa-graduation-cap"></i>
+          </span>
+        {% endif %}
+
         {% if member.github and member.github != "" %}
           <a href="{{ member.github }}" target="_blank" class="social-link github">
             <i class="fab fa-github"></i>
@@ -265,7 +326,7 @@ title: Members
             <i class="fab fa-github"></i>
           </span>
         {% endif %}
-        
+
         {% if member.linkedin and member.linkedin != "" %}
           <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
             <i class="fab fa-linkedin-in"></i>

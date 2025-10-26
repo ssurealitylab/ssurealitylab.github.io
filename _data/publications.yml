@@ -240,8 +240,7 @@ publications:
     status: published
     citation: "[C14] Cheeun Hong, Sungyong Baik, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee, \"CADyQ: Content-Aware Dynamic Quantization for Image Super Resolution,\" Proc. European Conference on Computer Vision (ECCV), 2022."
     links:
-      pdf: "https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780328.pdf"
-      arxiv: "https://arxiv.org/abs/2207.10345"
+      pdf: "https://arxiv.org/pdf/2207.10345"
       code: "https://github.com/Cheeun/CADyQ"
 
   - id: c12

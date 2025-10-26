@@ -190,7 +190,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('j7')" style="cursor: pointer;">
             <div class="publication-badge">IJMS</div>
             <div class="external-links">
-              <a href="https://www.mdpi.com/1422-0067/25/12/6396" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://www.researchgate.net/publication/381597774_Machine_Learning-Based_Etiologic_Subtyping_of_Ischemic_Stroke_Using_Circulating_Exosomal_microRNAs/link/68046351df0e3f544f42deae/download" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>

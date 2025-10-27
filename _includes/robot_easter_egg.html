@@ -282,11 +282,14 @@ setTimeout(function() {
             const verticalSpacing = lineHeight * 0.45;
             
             // Create the additional R letters positioned absolutely relative to the original
+            // Align to the left edge of the R letter
+            const leftPosition = rect.left;
+
             const r2 = document.createElement('span');
             r2.textContent = 'R';
             r2.style.position = 'fixed';
-            r2.style.left = rect.left + 'px';
-            r2.style.top = (rect.top + verticalSpacing - 10) + 'px'; // Move up by 10px
+            r2.style.left = leftPosition + 'px';
+            r2.style.top = (rect.bottom + verticalSpacing) + 'px';
             r2.style.color = '#ff6b6b';
             r2.style.opacity = '0';
             r2.style.transform = 'translateY(-20px)';
@@ -298,12 +301,12 @@ setTimeout(function() {
             r2.style.lineHeight = computedStyle.lineHeight;
             r2.style.zIndex = '9998';
             r2.style.pointerEvents = 'none';
-            
+
             const r3 = document.createElement('span');
             r3.textContent = 'R';
             r3.style.position = 'fixed';
-            r3.style.left = rect.left + 'px';
-            r3.style.top = (rect.top + verticalSpacing * 2 - 10) + 'px'; // Move up by 10px
+            r3.style.left = leftPosition + 'px';
+            r3.style.top = (rect.bottom + verticalSpacing * 2) + 'px';
             r3.style.color = '#4ecdc4';
             r3.style.opacity = '0';
             r3.style.transform = 'translateY(-40px)';

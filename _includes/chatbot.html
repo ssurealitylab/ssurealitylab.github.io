@@ -1693,7 +1693,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Suggestion chips
   suggestionChips.forEach(chip => {
     chip.addEventListener('click', () => {
-      const question = chip.dataset.question;
+      const question = isEnglish ? chip.dataset.questionEn : chip.dataset.question;
       chatbotInput.value = question;
       handleSend();
     });

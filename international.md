@@ -245,7 +245,7 @@ title: International Publications
 
         <!-- ICLR 2023 -->
         <div class="col-12 mb-3">
-          <div class="publication-list-item" onclick="openPublicationModal('c15')" style="cursor: pointer;">
+          <div class="publication-list-item" onclick="openPublicationModal('c15_2023')" style="cursor: pointer;">
             <div class="publication-badge">ICLR</div>
             <div class="external-links">
               <a href="https://openreview.net/pdf?id=SHvF5xaueVv" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">

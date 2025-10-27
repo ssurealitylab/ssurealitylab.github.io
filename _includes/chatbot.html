@@ -794,6 +794,29 @@
 .envelope-emoji:hover {
   transform: scale(1.1);
 }
+
+/* Typing cursor - Blue circle with pulse animation */
+.typing-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #3B82F6;
+  border-radius: 50%;
+  margin-left: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+  vertical-align: middle;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
 </style>
 
 <script>
@@ -1358,7 +1381,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (lastMessage && lastMessage.classList.contains('bot-message')) {
       const contentDiv = lastMessage.querySelector('div:first-child');
       if (contentDiv) {
-        contentDiv.innerHTML = text.replace(/\n/g, '<br>') + '<span class="cursor">█</span>';
+        contentDiv.innerHTML = text.replace(/\n/g, '<br>') + '<span class="typing-cursor"></span>';
       }
     }
   }
@@ -1580,7 +1603,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // Remove cursor from streaming
           const contentDiv = lastMessage.querySelector('div:first-child');
           if (contentDiv) {
-            const cursorSpan = contentDiv.querySelector('.cursor');
+            const cursorSpan = contentDiv.querySelector('.typing-cursor');
             if (cursorSpan) {
               cursorSpan.remove();
             }

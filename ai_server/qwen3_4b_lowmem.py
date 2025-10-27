@@ -13,6 +13,7 @@ import time
 import requests
 import json
 import re
+import threading
 from threading import Thread
 from datetime import datetime
 import pytz
@@ -34,6 +35,8 @@ shutdown_timeout = 120  # 2 minutes in seconds
 shutdown_timer_thread = None
 model_choice_global = 'qwen3-4b'  # Store model choice for reloading
 is_loading_model = False  # Track if model is currently being loaded
+request_lock = threading.Lock()  # Lock for sequential request processing
+is_processing_request = False  # Track if a request is currently being processed
 
 def is_rest_time():
     """
@@ -429,6 +432,8 @@ def server_status():
 @app.route('/chat', methods=['POST'])
 def chat():
     """Chat endpoint"""
+    global is_processing_request
+
     try:
         # Check if it's rest time
         rest_time, messages = is_rest_time()
@@ -462,6 +467,15 @@ def chat():
         language = data.get('language', 'ko')
         max_length = data.get('max_length', 700)  # Balanced default
 
+        # Check if another request is currently being processed
+        if is_processing_request:
+            return jsonify({
+                'response': '다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.' if language == 'ko' else 'Currently talking with another user. Please wait, this may take a bit longer.',
+                'tokens': 0,
+                'response_time': 0,
+                'status': 'waiting'
+            })
+
         # Check if model is loaded, reload if necessary
         if is_loading_model:
             return jsonify({
@@ -474,21 +488,27 @@ def chat():
         if not ensure_model_loaded():
             return jsonify({'error': 'Failed to load AI model'}), 500
 
-        start_time = time.time()
+        # Acquire lock and process request
+        with request_lock:
+            is_processing_request = True
+            try:
+                start_time = time.time()
 
-        # Generate AI response
-        ai_response, token_count = generate_response(user_question, language=language, max_length=max_length)
+                # Generate AI response
+                ai_response, token_count = generate_response(user_question, language=language, max_length=max_length)
 
-        end_time = time.time()
-        response_time = round(end_time - start_time, 2)
+                end_time = time.time()
+                response_time = round(end_time - start_time, 2)
 
-        return jsonify({
-            'response': ai_response,
-            'language': language,
-            'model': 'Qwen3-4B-4bit',
-            'response_time': response_time,
-            'tokens': token_count
-        })
+                return jsonify({
+                    'response': ai_response,
+                    'language': language,
+                    'model': 'Qwen3-4B-4bit',
+                    'response_time': response_time,
+                    'tokens': token_count
+                })
+            finally:
+                is_processing_request = False
 
     except Exception as e:
         import traceback

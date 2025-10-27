@@ -845,6 +845,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Language button elements
   const langButtons = document.querySelectorAll('.lang-btn');
   const suggestionChipsElements = document.querySelectorAll('.suggestion-chip');
+  const chatbotSchedule = document.querySelector('.chatbot-schedule');
   
   // Current modes - Start in AI mode as requested
   let isAIMode = true;
@@ -1524,6 +1525,15 @@ document.addEventListener('DOMContentLoaded', function() {
         chip.textContent = koreanLabels[index];
       }
     });
+
+    // Update operating hours text based on language
+    if (chatbotSchedule) {
+      if (isEnglish) {
+        chatbotSchedule.textContent = 'Hours: 08:00-04:00 next day (KST)';
+      } else {
+        chatbotSchedule.textContent = '운영시간: 08:00-익일 04:00 (한국시간)';
+      }
+    }
 
     // Update mode labels and content based on current language
     if (isAIMode) {

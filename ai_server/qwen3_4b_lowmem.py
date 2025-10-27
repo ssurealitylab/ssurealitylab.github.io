@@ -465,7 +465,7 @@ def chat():
         # Check if model is loaded, reload if necessary
         if is_loading_model:
             return jsonify({
-                'response': 'AI 모델을 로딩 중입니다. 잠시만 기다려주세요...' if language == 'ko' else 'Loading AI model. Please wait...',
+                'response': 'AI 모델을 로딩 중입니다. 잠시만 기다려주세요... (5~10초 정도 소요됩니다)' if language == 'ko' else 'Loading AI model. Please wait... (Takes about 5~10 seconds)',
                 'tokens': 0,
                 'response_time': 0,
                 'status': 'loading'
@@ -515,7 +515,7 @@ def chat_stream():
 
             # Check if model is being loaded
             if is_loading_model:
-                loading_msg = 'AI 모델을 로딩 중입니다. 잠시만 기다려주세요...' if language == 'ko' else 'Loading AI model. Please wait...'
+                loading_msg = 'AI 모델을 로딩 중입니다. 잠시만 기다려주세요... (5~10초 정도 소요됩니다)' if language == 'ko' else 'Loading AI model. Please wait... (Takes about 5~10 seconds)'
                 yield f"data: {json.dumps({'text': loading_msg, 'status': 'loading'})}\n\n"
                 yield "data: [DONE]\n\n"
                 return

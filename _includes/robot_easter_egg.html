@@ -275,24 +275,22 @@ setTimeout(function() {
             // Calculate letter spacing for consistent spacing
             const fontSize = parseInt(computedStyle.fontSize);
             const lineHeight = parseFloat(computedStyle.lineHeight) || fontSize * 1.2;
-            const letterSpacing = computedStyle.letterSpacing !== 'normal' ? 
+            const letterSpacing = computedStyle.letterSpacing !== 'normal' ?
                                 parseFloat(computedStyle.letterSpacing) : 0;
-            
-            // Use spacing - 45% of line height (30% + 50% more)
-            const verticalSpacing = lineHeight * 0.45;
-            
-            // Create the additional R letters positioned absolutely relative to the original
-            // Align to the left edge of the R letter
-            const leftPosition = rect.left;
 
+            // Calculate horizontal spacing - approximate width of R character
+            const horizontalSpacing = rect.width + letterSpacing;
+
+            // Create the additional R letters positioned absolutely relative to the original
+            // Position them to the left of the original R in a horizontal line
             const r2 = document.createElement('span');
             r2.textContent = 'R';
             r2.style.position = 'fixed';
-            r2.style.left = leftPosition + 'px';
-            r2.style.top = (rect.bottom + verticalSpacing) + 'px';
+            r2.style.left = (rect.left - horizontalSpacing * 2) + 'px';
+            r2.style.top = rect.top + 'px';
             r2.style.color = '#ff6b6b';
             r2.style.opacity = '0';
-            r2.style.transform = 'translateY(-20px)';
+            r2.style.transform = 'translateX(-20px)';
             r2.style.transition = 'all 0.5s ease';
             r2.style.fontWeight = computedStyle.fontWeight;
             r2.style.fontSize = computedStyle.fontSize;
@@ -305,11 +303,11 @@ setTimeout(function() {
             const r3 = document.createElement('span');
             r3.textContent = 'R';
             r3.style.position = 'fixed';
-            r3.style.left = leftPosition + 'px';
-            r3.style.top = (rect.bottom + verticalSpacing * 2) + 'px';
+            r3.style.left = (rect.left - horizontalSpacing) + 'px';
+            r3.style.top = rect.top + 'px';
             r3.style.color = '#4ecdc4';
             r3.style.opacity = '0';
-            r3.style.transform = 'translateY(-40px)';
+            r3.style.transform = 'translateX(-40px)';
             r3.style.transition = 'all 0.7s ease';
             r3.style.fontWeight = computedStyle.fontWeight;
             r3.style.fontSize = computedStyle.fontSize;

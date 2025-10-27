@@ -248,7 +248,7 @@ title: International Publications
           <div class="publication-list-item" onclick="openPublicationModal('c15')" style="cursor: pointer;">
             <div class="publication-badge">ICLR</div>
             <div class="external-links">
-              <a href="https://openreview.net/forum?id=NO0ThzteQdI" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+              <a href="https://openreview.net/pdf?id=SHvF5xaueVv" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </div>

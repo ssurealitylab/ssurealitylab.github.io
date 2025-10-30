@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # AI Server Auto-Start Script with Qwen3-4B
-# Uses ONLY GPU 3 (requires GPU 3 utilization < 80%)
+# Automatically selects available GPU (prefers GPU 2)
 
 WORK_DIR="/home/i0179/Realitylab-site"
 LOG_FILE="$WORK_DIR/ai_server.log"
@@ -9,6 +9,7 @@ PID_FILE="$WORK_DIR/ai_server/ai_server.pid"
 PORT=4005
 GPU_THRESHOLD=80
 MODEL="qwen3-4b"
+PREFERRED_GPU=2  # Prefer GPU 2 first
 
 cd "$WORK_DIR"
 
@@ -36,30 +37,34 @@ if [ -z "$AVAILABLE_GPUS" ]; then
     exit 1
 fi
 
-# Convert to comma-separated list, prioritizing GPU 3
+# Select single GPU: prefer GPU 2, then any available GPU
 GPU_LIST=""
-HAS_GPU3=false
-FALLBACK_GPU=""
+HAS_PREFERRED_GPU=false
+FIRST_AVAILABLE_GPU=""
 
+# Check if preferred GPU is available
 for gpu in $AVAILABLE_GPUS; do
-    if [ "$gpu" = "3" ]; then
-        HAS_GPU3=true
-    elif [ -z "$FALLBACK_GPU" ]; then
-        FALLBACK_GPU="$gpu"
+    if [ "$gpu" = "$PREFERRED_GPU" ]; then
+        HAS_PREFERRED_GPU=true
+        break
+    fi
+    # Store first available GPU as fallback
+    if [ -z "$FIRST_AVAILABLE_GPU" ]; then
+        FIRST_AVAILABLE_GPU="$gpu"
     fi
 done
 
-# Prefer GPU 3, but use any available GPU if GPU 3 is busy
-if [ "$HAS_GPU3" = true ]; then
-    GPU_LIST="3"
-    echo "[$(date)] Using preferred GPU 3"
-elif [ -n "$FALLBACK_GPU" ]; then
-    GPU_LIST="$FALLBACK_GPU"
-    echo "[$(date)] GPU 3 busy, using fallback GPU $FALLBACK_GPU"
+# Select GPU (only ONE GPU at a time)
+if [ "$HAS_PREFERRED_GPU" = true ]; then
+    GPU_LIST="$PREFERRED_GPU"
+    echo "[$(date)] ✅ Using preferred GPU $PREFERRED_GPU (utilization < ${GPU_THRESHOLD}%)"
+elif [ -n "$FIRST_AVAILABLE_GPU" ]; then
+    GPU_LIST="$FIRST_AVAILABLE_GPU"
+    echo "[$(date)] ✅ Preferred GPU $PREFERRED_GPU busy, using GPU $FIRST_AVAILABLE_GPU instead"
 else
     # No GPU available at all
-    echo "[$(date)] ERROR: No GPU available (all have utilization >= ${GPU_THRESHOLD}%)"
-    echo "[$(date)] Will retry in next schedule"
+    echo "[$(date)] ❌ ERROR: All GPUs are busy (utilization >= ${GPU_THRESHOLD}%)"
+    echo "[$(date)] Will retry at next scheduled time"
     exit 1
 fi
 

@@ -35,12 +35,16 @@ title: Students
             <i class="fas fa-envelope"></i>
           </a>
         {% endif %}
-        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
+        {% if student.github and student.github != "" %}
+          <a href="{{ student.github }}" target="_blank" onclick="event.stopPropagation()" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        {% endif %}
+        {% if student.linkedin and student.linkedin != "" %}
+          <a href="{{ student.linkedin }}" target="_blank" onclick="event.stopPropagation()" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -111,12 +115,16 @@ title: Students
         {% endif %}
 
         <div class="modal-social">
-          <a href="#" onclick="event.preventDefault()" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="#" onclick="event.preventDefault()" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
+          {% if student.github and student.github != "" %}
+            <a href="{{ student.github }}" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          {% endif %}
+          {% if student.linkedin and student.linkedin != "" %}
+            <a href="{{ student.linkedin }}" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -154,12 +162,16 @@ title: Students
             <i class="fas fa-envelope"></i>
           </a>
         {% endif %}
-        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
+        {% if intern.github and intern.github != "" %}
+          <a href="{{ intern.github }}" target="_blank" onclick="event.stopPropagation()" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        {% endif %}
+        {% if intern.linkedin and intern.linkedin != "" %}
+          <a href="{{ intern.linkedin }}" target="_blank" onclick="event.stopPropagation()" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -230,12 +242,16 @@ title: Students
         {% endif %}
 
         <div class="modal-social">
-          <a href="#" onclick="event.preventDefault()" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="#" onclick="event.preventDefault()" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
+          {% if intern.github and intern.github != "" %}
+            <a href="{{ intern.github }}" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          {% endif %}
+          {% if intern.linkedin and intern.linkedin != "" %}
+            <a href="{{ intern.linkedin }}" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          {% endif %}
         </div>
       </div>
     </div>

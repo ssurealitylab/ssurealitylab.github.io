@@ -54,6 +54,14 @@ title: International Publications
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c23')" style="cursor: pointer;">
             <div class="publication-badge">BMVC</div>
+            <div class="external-links">
+              <a href="https://ssu-reality-lab.github.io/UDT/static/pdfs/UDT_BMVC_2025.pdf" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+              <a href="https://ssu-reality-lab.github.io/UDT/" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
+                <i class="fas fa-globe"></i>
+              </a>
+            </div>
             <h5 class="list-title">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</h5>
             <p class="list-authors">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
           </div>

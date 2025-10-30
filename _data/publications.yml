@@ -59,7 +59,11 @@ publications:
     type: conference
     status: accepted
     citation: "[C23] Youngjae Choi*, Hyunsuh Kho*, Hojae Jeong*, Byungkwan Chae*, Sungyong Park, and Heewon Kim, \"UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models,\" Proc. British Machine Vision Conference (BMVC), 2025 (accepted)"
+    image: "assets/img/publications/udt/architecture.png"
     notes: "* Equal contribution"
+    links:
+      pdf: "https://ssu-reality-lab.github.io/UDT/static/pdfs/UDT_BMVC_2025.pdf"
+      website: "https://ssu-reality-lab.github.io/UDT/"
 
   - id: j12
     title: "DeepGAM: An Interpretable Deep Neural Network Using Generalized Additive Model for Depression Diagnosis: Data From The Heart and Soul Study"

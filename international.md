@@ -540,10 +540,9 @@ title: International Publications
           <div class="col-md-6">
             <h5>Global Conferences</h5>
             <ul class="list-unstyled text-left">
-              <li><i class="fas fa-trophy text-warning"></i> CVPR, BMVC, AAAI</li>
-              <li><i class="fas fa-robot text-primary"></i> ICRA, IROS, RSS</li>
-              <li><i class="fas fa-brain text-success"></i> NeurIPS, ICML, ICLR</li>
-              <li><i class="fas fa-eye text-info"></i> ICCV, ECCV, WACV</li>
+              <li><i class="fas fa-eye text-info"></i> CVPR, ICCV, ECCV</li>
+              <li><i class="fas fa-brain text-success"></i> NeurIPS, ICLR</li>
+              <li><i class="fas fa-trophy text-warning"></i> AAAI, BMVC, WACV</li>
             </ul>
           </div>
           <div class="col-md-6">
@@ -557,9 +556,12 @@ title: International Publications
           </div>
         </div>
         <hr class="my-4">
-        <p class="text-muted">
-          <strong>Reality Lab</strong> | Global School of Media, College of IT, Soongsil University<br>
-          <strong>Principal Investigator:</strong> Prof. Heewon Kim
+        <p class="text-muted" style="font-size: 0.9rem; line-height: 1.6;">
+          <strong>In computer vision</strong>, the top three conferences (CVPR, ICCV, ECCV) are considered more important and have a greater impact than most SCI journals. Oral presentations have a highly competitive acceptance rate of about 4% and poster presentations about 20%. According to the recent survey of CiteScholar, their impact factors are CVPR 5.97, ECCV 5.91, and ICCV 5.05, which correspond to the top 4% - 7% of all computer science journals and conferences. Note that CVPR is the only conference proceedings listed in the top 100 publications in Google Scholar and is ranked No.1 in Computer Science and Electrical Engineering.<br><br>
+          <strong>IEEE TPAMI and IJCV</strong> have among the highest ISI impact factors across all computer science categories. PAMI is one of the top-ranked publications in IEEE and in all computer science journals.<br><br>
+          <strong>컴퓨터비전 분야에서는</strong> CVPR, ICCV, ECCV의 3대 주요학술대회 논문 발표가 대다수의 SCI 저널 논문 발표보다 중요하게 평가됨. 이러한 3대 주요학회의 통상 논문 채택률은 23-28% 정도로 매우 경쟁이 심하고, 영향력(Impact Factor) 지수도 CVPR 5.97, ECCV 5.91, ICCV 5.05 로서 컴퓨터 분야의 모든 저널과 학술대회의 상위 4-7%에 해당됨.<br>
+          특히 CVPR의 경우 Google Scholar의 영향력지수 상위 100대 출판물 중 유일한 학술대회 논문집 (83위)이며 Computer Science 및 Electrical Engineering 분야에서 가장 높은 영향력지수를 보이고 있음.<br>
+          컴퓨터비전 분야 저널의 경우, IEEE TPAMI 와 IJCV 가 top 저널들이며, PAMI는 모든 IEEE 출판물, 그리고 Electrical Engineering 및 Artificial Intelligence 분야 출판물 중 가장 높은 영향력지수를 가지고 있는 저널 중 하나임.
         </p>
       </div>
     </div>

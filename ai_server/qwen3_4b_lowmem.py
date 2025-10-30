@@ -233,6 +233,109 @@ def ensure_sentence_completion(text, language='ko'):
 
     return text
 
+def extract_relevant_sections(question, knowledge_base_path, max_sections=5, max_chars=2000):
+    """Extract relevant sections from knowledge base based on keywords in question"""
+    try:
+        with open(knowledge_base_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # Split into smaller chunks by individual entries (using "이름:" as delimiter for member entries)
+        chunks = []
+        current_chunk = []
+        lines = content.split('\n')
+        current_header = ""
+
+        for line in lines:
+            # Track section headers
+            if line.startswith('===') or line.startswith('##'):
+                current_header = line
+                if current_chunk:
+                    chunks.append('\n'.join(current_chunk))
+                current_chunk = [line]
+            # Split by individual member entries (이름:)
+            elif line.strip().startswith('이름:'):
+                if current_chunk and len(current_chunk) > 1:  # Don't split if just header
+                    chunks.append('\n'.join(current_chunk))
+                current_chunk = [current_header, line] if current_header else [line]
+            else:
+                current_chunk.append(line)
+
+        if current_chunk:
+            chunks.append('\n'.join(current_chunk))
+
+        # Extract keywords from question (including original casing for name matching)
+        # Remove common Korean particles to get clean keywords
+        particles = ['이', '가', '을', '를', '은', '는', '에', '의', '와', '과', '도', '만', '라는', '이라는', '부터', '까지', '에서', '으로', '로', '에게', '한테']
+
+        keywords = set()
+        keywords_original = set()
+        for word in question.split():
+            if len(word) > 1:
+                # Remove particles from word
+                clean_word = word
+                for particle in particles:
+                    if clean_word.endswith(particle) and len(clean_word) > len(particle):
+                        clean_word = clean_word[:-len(particle)]
+
+                if len(clean_word) > 1:
+                    keywords.add(clean_word.lower())
+                    keywords_original.add(clean_word)
+                # Also add original word
+                keywords.add(word.lower())
+                keywords_original.add(word)
+
+        # Score each chunk
+        chunk_scores = []
+        for i, chunk in enumerate(chunks):
+            chunk_lower = chunk.lower()
+            score = 0
+
+            # Check keywords (case-insensitive)
+            for keyword in keywords:
+                if keyword in chunk_lower:
+                    # Higher score for exact matches
+                    score += chunk_lower.count(keyword) * 3
+
+            # Check keywords with original casing (for names)
+            for keyword in keywords_original:
+                if keyword in chunk:
+                    score += chunk.count(keyword) * 5
+
+            # Boost score for section headers that match
+            first_line = chunk.split('\n')[0] if chunk else ''
+            for keyword in keywords:
+                if keyword in first_line.lower():
+                    score += 15
+
+            chunk_scores.append((score, i, chunk))
+
+        # Sort by score and select top chunks
+        chunk_scores.sort(reverse=True, key=lambda x: x[0])
+
+        # Get top chunks but limit total characters
+        selected_chunks = []
+        total_chars = 0
+
+        for score, idx, chunk in chunk_scores[:max_sections * 2]:  # Check more chunks
+            if score > 0:  # Only include chunks with matches
+                if total_chars + len(chunk) <= max_chars:
+                    selected_chunks.append(chunk)
+                    total_chars += len(chunk)
+                    if len(selected_chunks) >= max_sections:
+                        break
+                elif total_chars < max_chars // 2:  # If we haven't used much space yet
+                    # Add truncated chunk
+                    remaining = max_chars - total_chars
+                    if remaining > 300:
+                        selected_chunks.append(chunk[:remaining] + "...")
+                        break
+
+        return '\n\n'.join(selected_chunks) if selected_chunks else ""
+
+    except Exception as e:
+        logger.error(f"Error extracting relevant sections: {e}")
+        return ""
+
 def generate_response(prompt, language='ko', max_length=700):
     """Generate AI response"""
     global model, tokenizer, rag_retriever
@@ -241,20 +344,23 @@ def generate_response(prompt, language='ko', max_length=700):
         return "AI model not loaded"
 
     try:
-        # Search for relevant context using RAG
-        rag_context = ""
-        if rag_retriever is not None:
-            try:
-                search_results = rag_retriever.search(prompt, k=3, min_score=0.35)
-                if search_results:
-                    rag_context = rag_retriever.format_context(search_results, language=language)
-                    rag_context += "\n\n"
-            except Exception as e:
-                logger.warning(f"RAG search failed: {e}")
+        # Load relevant sections from knowledge base based on question keywords
+        knowledge_context = ""
+        knowledge_base_path = os.path.join(os.path.dirname(__file__), "crawled_data", "knowledge_base.txt")
+        try:
+            if os.path.exists(knowledge_base_path):
+                # Extract only relevant sections to avoid token overflow
+                knowledge_context = extract_relevant_sections(prompt, knowledge_base_path)
+                if knowledge_context:
+                    knowledge_context += "\n\n"
+            else:
+                logger.warning(f"Knowledge base not found: {knowledge_base_path}")
+        except Exception as e:
+            logger.warning(f"Failed to load knowledge base: {e}")
 
         # Create language-specific system prompt (concise yet friendly with key info)
         if language == 'en':
-            system_content = f"""{rag_context}You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
+            system_content = f"""{knowledge_context}You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
 
 Use the reference materials above to answer the question. If the references don't contain the answer, use your general knowledge about Reality Lab.
 
@@ -270,7 +376,7 @@ Guidelines:
 - Use natural, complete sentences
 - No <think> tags or internal reasoning"""
         else:
-            system_content = f"""{rag_context}당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 간결하면서도 친절하게, 핵심 정보는 모두 포함하여 답변하세요.
+            system_content = f"""{knowledge_context}당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 간결하면서도 친절하게, 핵심 정보는 모두 포함하여 답변하세요.
 
 위의 참고자료를 바탕으로 질문에 답변하세요. 참고자료에 답변이 없으면, Reality Lab에 대한 일반적인 지식을 활용하세요.
 

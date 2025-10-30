@@ -1,0 +1,148 @@
+
+
+=================================================================================== 교수진 (Faculty) ===
+
+
+이름: Prof. Heewon Kim (김희원 교수)
+직책: Assistant Professor, Ph. D.
+이메일: hwkim@ssu.ac.kr
+전화: +82-2-820-0679
+소속: Global School of Media
+
+
+=== 학생 연구원 (Students) ===
+
+
+## 석사과정 (Master's Students) ##
+
+이름: Sungyong Park (박성용)
+이메일: ejqdl010@gmail.com
+학력: EE. Soongsil University, B.S.
+연구 분야: Image Restoration, AI for Astronomy
+
+
+이름: Byungkwan Chae (채병관)
+이메일: silencechae75@gmail.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Mobile AI, Augmented Reality
+
+
+이름: Youngjae Choi (최영재)
+이메일: yscompany18@naver.com
+학력: Statistics, Soongsil University, B.S.
+연구 분야: Computer Vision, Deep Learning
+
+
+이름: Sangmin Lee (이상민)
+이메일: sm32289@gmail.com
+학력: Media, Soongsil University, B.S.<br>CSE, Soongsil University, B.S.
+연구 분야: Computer Vision, Embodied AI
+
+
+이름: Minjoo Koh (고민주)
+이메일: minjoo0350@gmail.com
+학력: Data Science, Sejong University, B.S.
+연구 분야: 3D Vision, AI for Sports
+
+
+이름: Hyunjun Kho (고현준)
+이메일: soongsil.ai.24@gmail.com
+학력: CSW, Suwon University, B.S.
+연구 분야: Computer Vision, Deep Learning
+
+
+이름: Hyunsuh Kho (고현서)
+이메일: por1329@naver.com
+연구 분야: Multimodal Learning, Representation Learning
+
+
+이름: Juhyoung Lee (이주형)
+이메일: i0179@naver.com
+학력: EE. Korea National University of Transportation, B.S.
+연구 분야: Computer Vision, Deep Learning
+
+
+이름: Jiwoo Seo (서지우)
+이메일: jiwooindaeyo@gmail.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Computer Vision, Deep Learning
+
+
+이름: Hojae Jeong (정호재)
+이메일: 98eddiechung@gmail.com
+학력: SWE, Soongsil University, B.S.
+연구 분야: Computer Vision, Generative AI
+
+
+## 연구 인턴 (Research Interns) ##
+
+이름: Seoyoung Kim (김서영)
+이메일: codestore@naver.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Deep Learning, Medical AI
+
+
+이름: Sooyoung Choi (최수영)
+이메일: csy010921@gmail.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Computer Vision, Deep Learning
+
+
+이름: Jiwon Hwang (황지원)
+이메일: 91.hwng@gmail.com
+학력: Media, Soongsil University, B.S.<br>CSE, Soongsil University, B.S.
+연구 분야: Computer Vision, Deep Learning
+
+
+이름: Eunwoo Song (송은우)
+이메일: song200348@gmail.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Language Model, Deep Learning
+
+
+이름: Sebin Lee (이세빈)
+이메일: jnf0219@naver.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Computer Vision, Generative Model
+
+
+이름: Dowon Kim (김도원)
+이메일: a01066304767@gmail.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Computer Vision, Machine Learning
+
+
+이름: Yeonji Kim (김연지)
+이메일: yeonpond02@naver.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Computer Vision, Embodied AI
+
+
+이름: Jaehyeon Lee (이재현)
+이메일: gogozzi1102@gmail.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Computer Vision, Deep Learning
+
+
+이름: Yebin Lee (이예빈)
+이메일: yeebinyeebin@naver.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Computer Vision, Generative Model
+
+
+이름: Jungha Lim (임정하)
+이메일: sonic0823@naver.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Computer Vision, Deep Learning
+
+
+이름: Yeri Kim (김예리)
+이메일: molang0223@gmail.com
+학력: Media, Soongsil University, B.S.
+연구 분야: Deep Learning, Medical AI
+
+
+=== 논문 (Publications) ===
+
+
+=== 뉴스 (News) ===

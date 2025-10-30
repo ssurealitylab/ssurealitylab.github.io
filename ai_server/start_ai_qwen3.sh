@@ -74,7 +74,7 @@ sleep 2
 
 # Start new server with selected GPUs and Qwen3-4B model
 echo "[$(date)] Starting AI server with Qwen3-4B on GPUs: $GPU_LIST"
-CUDA_VISIBLE_DEVICES=$GPU_LIST nohup python3 ai_server/qwen3_4b_lowmem.py --port $PORT --model $MODEL > "$LOG_FILE" 2>&1 &
+CUDA_VISIBLE_DEVICES=$GPU_LIST nohup /home/i0179/bin/python3 ai_server/qwen3_4b_lowmem.py --port $PORT --model $MODEL > "$LOG_FILE" 2>&1 &
 NEW_PID=$!
 echo $NEW_PID > "$PID_FILE"
 

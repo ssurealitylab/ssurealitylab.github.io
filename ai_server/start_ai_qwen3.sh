@@ -39,20 +39,27 @@ fi
 # Convert to comma-separated list, prioritizing GPU 3
 GPU_LIST=""
 HAS_GPU3=false
+FALLBACK_GPU=""
 
 for gpu in $AVAILABLE_GPUS; do
     if [ "$gpu" = "3" ]; then
         HAS_GPU3=true
+    elif [ -z "$FALLBACK_GPU" ]; then
+        FALLBACK_GPU="$gpu"
     fi
 done
 
-# Use ONLY GPU 3 if available
+# Prefer GPU 3, but use any available GPU if GPU 3 is busy
 if [ "$HAS_GPU3" = true ]; then
     GPU_LIST="3"
+    echo "[$(date)] Using preferred GPU 3"
+elif [ -n "$FALLBACK_GPU" ]; then
+    GPU_LIST="$FALLBACK_GPU"
+    echo "[$(date)] GPU 3 busy, using fallback GPU $FALLBACK_GPU"
 else
-    # GPU 3 not available, fail
-    echo "[$(date)] ERROR: GPU 3 is not available (utilization >= ${GPU_THRESHOLD}%)"
-    echo "[$(date)] This server requires GPU 3 to be available"
+    # No GPU available at all
+    echo "[$(date)] ERROR: No GPU available (all have utilization >= ${GPU_THRESHOLD}%)"
+    echo "[$(date)] Will retry in next schedule"
     exit 1
 fi
 

@@ -104,8 +104,8 @@ students:
       university: "SWE, Soongsil University, B.S."
       research: "Computer Vision, Generative AI"
       photo: "assets/img/members/hojae_jeong.jpg"
-      github: ""
-      linkedin: ""
+      github: "https://github.com/JEONG-HO-JAE"
+      linkedin: "https://www.linkedin.com/in/98hojae-jeong"
 
   interns:
     - name: "Seoyoung Kim"
@@ -150,8 +150,8 @@ students:
       university: "Media, Soongsil University, B.S."
       research: "Computer Vision, Generative Model"
       photo: "assets/img/members/sebin_lee.jpg"
-      github: ""
-      linkedin: ""
+      github: "https://github.com/sebinyday"
+      linkedin: "https://www.linkedin.com/in/sebin-lee-75968732b/"
 
     - name: "Dowon Kim"
       name_ko: "김도원"
@@ -159,8 +159,8 @@ students:
       university: "Media, Soongsil University, B.S."
       research: "Computer Vision, Machine Learning"
       photo: "assets/img/members/dowon_kim.jpg"
-      github: "https://github.com/dowon-kim"
-      linkedin: "https://linkedin.com/in/dowon-kim"
+      github: "https://github.com/dowonology"
+      linkedin: "https://www.linkedin.com/in/dowon-kim-korea/"
 
     - name: "Yeonji Kim"
       name_ko: "김연지"

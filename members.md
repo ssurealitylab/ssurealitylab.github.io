@@ -340,20 +340,12 @@ title: Members
           <a href="{{ member.github }}" target="_blank" class="social-link github" onclick="event.stopPropagation()">
             <i class="fab fa-github"></i>
           </a>
-        {% else %}
-          <span class="social-link disabled">
-            <i class="fab fa-github"></i>
-          </span>
         {% endif %}
 
         {% if member.linkedin and member.linkedin != "" %}
           <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin" onclick="event.stopPropagation()">
             <i class="fab fa-linkedin-in"></i>
           </a>
-        {% else %}
-          <span class="social-link disabled">
-            <i class="fab fa-linkedin-in"></i>
-          </span>
         {% endif %}
       </div>
     </div>
@@ -410,20 +402,12 @@ title: Members
           <a href="{{ member.github }}" target="_blank" class="social-link github">
             <i class="fab fa-github"></i>
           </a>
-        {% else %}
-          <span class="social-link disabled">
-            <i class="fab fa-github"></i>
-          </span>
         {% endif %}
 
         {% if member.linkedin and member.linkedin != "" %}
           <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
             <i class="fab fa-linkedin-in"></i>
           </a>
-        {% else %}
-          <span class="social-link disabled">
-            <i class="fab fa-linkedin-in"></i>
-          </span>
         {% endif %}
       </div>
     </div>
@@ -470,20 +454,12 @@ title: Members
           <a href="{{ member.github }}" target="_blank" class="social-link github">
             <i class="fab fa-github"></i>
           </a>
-        {% else %}
-          <span class="social-link disabled">
-            <i class="fab fa-github"></i>
-          </span>
         {% endif %}
 
         {% if member.linkedin and member.linkedin != "" %}
           <a href="{{ member.linkedin }}" target="_blank" class="social-link linkedin">
             <i class="fab fa-linkedin-in"></i>
           </a>
-        {% else %}
-          <span class="social-link disabled">
-            <i class="fab fa-linkedin-in"></i>
-          </span>
         {% endif %}
       </div>
     </div>

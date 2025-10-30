@@ -305,6 +305,7 @@ alumni:
       research: "Human Pose Estimation, AI for Sports"
       period: "24.~25.3"
       photo: "assets/img/members/seunghyun_oh.jpg"
+      github: "https://github.com/oshmos"
 
     - name: "Junghoon Koh"
       name_ko: "고정훈"

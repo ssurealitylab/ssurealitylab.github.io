@@ -38,12 +38,11 @@ title: Alumni
             <i class="fas fa-envelope"></i>
           </a>
         {% endif %}
-        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="GitHub">
+        {% if alumnus.github and alumnus.github != "" %}
+        <a href="{{ alumnus.github }}" target="_blank" onclick="event.stopPropagation()" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="#" onclick="event.preventDefault(); event.stopPropagation()" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -67,12 +66,11 @@ title: Alumni
         <p class="modal-period"><strong>Period:</strong> {{ alumnus.period }}</p>
         {% endif %}
         <div class="modal-social">
-          <a href="#" onclick="event.preventDefault()" title="GitHub">
+          {% if alumnus.github and alumnus.github != "" %}
+          <a href="{{ alumnus.github }}" target="_blank" title="GitHub">
             <i class="fab fa-github"></i>
           </a>
-          <a href="#" onclick="event.preventDefault()" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
+          {% endif %}
         </div>
       </div>
     </div>

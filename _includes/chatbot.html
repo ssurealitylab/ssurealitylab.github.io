@@ -1208,8 +1208,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!session) {
           return {
             response: isEnglish ?
-              "🚫 GPU connection not available. Please reload the page." :
-              "🚫 GPU 연결이 없습니다. 페이지를 새로고침 해주세요.",
+              "💤 AI is currently taking a break. Please try during operating hours (08:00-04:00 KST)!" :
+              "💤 AI가 지금 쉬는 시간이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!",
             response_time: null
           };
         }
@@ -1218,9 +1218,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const endpoints = getCurrentEndpoints();
       if (!endpoints) {
         return {
-          response: isEnglish ? 
-            "❌ GPU connection error. Please reload the page." :
-            "❌ GPU 연결 오류입니다. 페이지를 새로고침 해주세요.",
+          response: isEnglish ?
+            "💤 AI is currently resting. Please visit during operating hours (08:00-04:00 KST)!" :
+            "💤 AI가 지금 휴식중이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!",
           response_time: null
         };
       }
@@ -1272,8 +1272,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       return {
         response: isEnglish ?
-          "❌ AI server error. Please try again." :
-          "❌ AI 서버 오류입니다. 다시 시도해주세요.",
+          "💤 AI is currently taking a break (04:00-08:00 KST). Please come back during operating hours!" :
+          "💤 AI가 지금 쉬는 시간이에요 (04:00-08:00 한국시간). 운영시간에 다시 찾아주세요!",
         response_time: null,
         tokens: null
       };
@@ -1666,7 +1666,7 @@ document.addEventListener('DOMContentLoaded', function() {
           lastMessage.remove();
         }
         addMessage(
-          isEnglish ? 'Sorry, I encountered an error. Please try again.' : '죄송합니다. 오류가 발생했습니다. 다시 시도해주세요.',
+          isEnglish ? '💤 AI is taking a break right now. Please try during operating hours (08:00-04:00 KST)!' : '💤 AI가 지금 쉬는 시간이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!',
           'bot'
         );
       }

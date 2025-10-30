@@ -60,6 +60,7 @@ publications:
     status: accepted
     citation: "[C23] Youngjae Choi*, Hyunsuh Kho*, Hojae Jeong*, Byungkwan Chae*, Sungyong Park, and Heewon Kim, \"UDT: Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models,\" Proc. British Machine Vision Conference (BMVC), 2025 (accepted)"
     image: "assets/img/publications/udt/architecture.png"
+    abstract: "This paper addresses the challenge of discovering transformations between fine-grained object classes in an unsupervised manner, focusing on exploiting the generative capabilities of diffusion models. Our method, Unsupervised Discovery of Transformations (UDT), systematically identifies and applies subtle modifications to transform one fine-grained class into another without requiring paired data. Central to UDT is a hierarchical feature divergence metric that effectively captures the nuances distinguishing closely related classes. Additionally, we introduce a hierarchy-aware contrastive loss that enhances the model's ability to discern and learn fine-grained transformations. Extensive experiments validate UDT's effectiveness on both natural and medical imaging datasets, demonstrating its capability to perform precise transformations and offering valuable insights for semi-supervised and unsupervised learning applications."
     notes: "* Equal contribution"
     links:
       pdf: "https://ssu-reality-lab.github.io/UDT/static/pdfs/UDT_BMVC_2025.pdf"

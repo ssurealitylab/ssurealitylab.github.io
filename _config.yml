@@ -39,19 +39,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Exclude from processing and sitemap
-exclude:
-  - README.md
-  - CONTRIBUTORS.md
-  - VERSION_UPDATE.md
-  - WORKFLOW_SETUP.md
-  - "참고 이미지/"
-  - test_*.html
-  - search_icons_demo.html
-  - ai_server/
-  - reality_lab_qwen_lora/
-  - user_questions/
-
 # Uncomment following line to use Formspree form ID based URL instead of email based URL
 # Details: https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam
 # formspree_form_path: "f/a_form_id"

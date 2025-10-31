@@ -17,7 +17,7 @@ title: Courses
   </thead>
   <tbody>
     <tr>
-      <td class="year-cell">3학년 1학기</td>
+      <td class="year-cell">-</td>
       <td class="course-name">
         <strong>데이터사이언스</strong><br>
         <span class="course-name-en">Data Science</span>
@@ -29,7 +29,7 @@ title: Courses
       </td>
     </tr>
     <tr>
-      <td class="year-cell">3학년 1학기</td>
+      <td class="year-cell">-</td>
       <td class="course-name">
         <strong>영상처리및실습</strong><br>
         <span class="course-name-en">Image Processing and Practice</span>
@@ -41,7 +41,7 @@ title: Courses
       </td>
     </tr>
     <tr>
-      <td class="year-cell">3학년 1학기</td>
+      <td class="year-cell">-</td>
       <td class="course-name">
         <strong>미디어GAN</strong><br>
         <span class="course-name-en">Media GAN</span>
@@ -53,7 +53,7 @@ title: Courses
       </td>
     </tr>
     <tr>
-      <td class="year-cell">3학년 1학기</td>
+      <td class="year-cell">-</td>
       <td class="course-name">
         <strong>컴퓨터비전</strong><br>
         <span class="course-name-en">Computer Vision</span>
@@ -65,7 +65,7 @@ title: Courses
       </td>
     </tr>
     <tr>
-      <td class="year-cell">3학년 1학기</td>
+      <td class="year-cell">-</td>
       <td class="course-name">
         <strong>기계학습</strong><br>
         <span class="course-name-en">Machine Learning</span>

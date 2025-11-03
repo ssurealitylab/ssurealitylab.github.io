@@ -483,14 +483,20 @@ header.masthead {
       max-width: 95vw; // Better responsive width
       overflow-x: auto; // Enable horizontal scrolling on mobile
       justify-content: flex-start; // Left align tabs on mobile
-      
+
+      // Force visibility - prevent fade on slider transitions
+      opacity: 1 !important;
+      visibility: visible !important;
+      transition: none !important;
+      animation: none !important;
+
       // Hide scrollbar on mobile too
       scrollbar-width: none; // Firefox
       -ms-overflow-style: none; // IE/Edge
       &::-webkit-scrollbar {
         display: none; // Chrome/Safari
       }
-      
+
       .research-tab {
         width: 172px; // 143px * 1.2 = 172px (additional 20% increase)
         height: 55px; // Fixed height for mobile uniformity
@@ -500,18 +506,28 @@ header.masthead {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+
+        // Force visibility
+        opacity: 0.6 !important;
+        visibility: visible !important;
+        transition: opacity 0.5s ease !important; // Only allow opacity transition
+
         &.active {
           transform: scaleX(1.12); // Horizontal stretch for mobile
           width: 196px; // 163px * 1.2 = 196px (additional 20% increase)
+          opacity: 1 !important;
         }
         
         .tab-title {
           font-size: 0.8rem;
+          opacity: 1 !important;
+          visibility: visible !important;
         }
-        
+
         .tab-description {
           font-size: 0.7rem;
+          opacity: 1 !important;
+          visibility: visible !important;
         }
       }
     }
@@ -524,6 +540,12 @@ header.masthead {
     .research-tabs-container {
       padding: 0px 10px 20px; // Reduced bottom padding to minimize gap with news section (was 60px)
       margin-top: 25px; // Increased margin for better separation from slider
+
+      // Force visibility - prevent fade on slider transitions
+      opacity: 1 !important;
+      visibility: visible !important;
+      transition: none !important;
+      animation: none !important;
     }
 
     .image-slider {

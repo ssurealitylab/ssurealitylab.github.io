@@ -16,6 +16,11 @@ header.masthead {
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  // Force clear visibility on page load - prevent blur/opacity issues
+  opacity: 1 !important;
+  filter: none !important;
+  visibility: visible !important;
   
   
   // Parallax container
@@ -217,6 +222,11 @@ header.masthead {
     overflow-y: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+
+    // Force clear visibility
+    opacity: 1 !important;
+    filter: none !important;
+    visibility: visible !important;
     
     // Large container capsule background - Apple Glass style with scrolling
     background: rgba(255, 255, 255, 0.15);
@@ -309,6 +319,11 @@ header.masthead {
     justify-content: center;
     padding: 0px 20px 0px; // Removed bottom padding to move slider up more
     margin-top: -80px; // Move slider up by 80px (increased from 50px)
+
+    // Force clear visibility
+    opacity: 1 !important;
+    filter: none !important;
+    visibility: visible !important;
   }
 
   // Research Tabs Container (now below slider)
@@ -317,6 +332,11 @@ header.masthead {
     justify-content: center;
     padding: 0px 20px 90px; // Removed top padding to bring tabs closer
     margin-top: 30px; // Positive margin to move tabs down away from slider
+
+    // Force clear visibility
+    opacity: 1 !important;
+    filter: none !important;
+    visibility: visible !important;
   }
 
   // Image Slider Styles with Liquid Glass effect - Perfect border wrapping
@@ -326,6 +346,11 @@ header.masthead {
     max-width: 90vw;
     height: calc(1122px * 9 / 15); // 15:9 aspect ratio (5:3 ratio)
     overflow: visible; // Allow border to extend outside
+
+    // Force clear visibility
+    opacity: 1 !important;
+    filter: none !important;
+    visibility: visible !important;
     
     // Main container - matches image shape exactly
     .slider-content-wrapper {

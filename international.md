@@ -725,7 +725,7 @@ title: International Publications
   font-weight: bold;
   font-size: 0.7rem;
   box-shadow: 0 2px 8px rgba(79, 172, 254, 0.3);
-  border: none !important;
+  border: 1.5px solid #4facfe !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
 }
@@ -734,7 +734,7 @@ title: International Publications
 .publication-badge.challenge-badge {
   background: rgba(255, 167, 38, 0.15) !important;
   color: #ffa726 !important;
-  border: none !important;
+  border: 1.5px solid #ffa726 !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
 }

@@ -117,7 +117,8 @@
           position: absolute;
           top: 100%;
           left: 0;
-          background: white;
+          background: rgba(255, 255, 255, 1) !important;
+          background-color: #ffffff !important;
           border: none;
           box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
           border-radius: 12px;
@@ -128,11 +129,12 @@
           opacity: 0;
           transform: translateY(-10px);
           transition: all 0.3s ease;
-          
+
           &.show {
             display: block;
-            opacity: 1;
+            opacity: 1 !important;
             transform: translateY(0);
+            background: rgba(255, 255, 255, 1) !important;
           }
           
           .dropdown-item {
@@ -229,10 +231,11 @@
             border: 1px solid rgba(0, 0, 0, 0.05);
             margin-top: 0.5rem;
             margin-left: 1rem;
-            background: rgba(255, 255, 255, 0.95);
-            opacity: 1;
+            background: rgba(255, 255, 255, 1) !important;
+            background-color: #ffffff !important;
+            opacity: 1 !important;
             transform: none;
-            
+
             &.show {
               display: block;
             }

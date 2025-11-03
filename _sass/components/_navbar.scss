@@ -4,6 +4,7 @@
   backdrop-filter: none;
   border: none;
   transition: all 0.3s ease;
+  z-index: 9999 !important;
   
   .navbar-toggler {
     font-size: 12px;
@@ -123,7 +124,7 @@
           padding: 1rem;
           min-width: 280px;
           margin-top: 0.5rem;
-          z-index: 1000;
+          z-index: 10000 !important;
           opacity: 0;
           transform: translateY(-10px);
           transition: all 0.3s ease;

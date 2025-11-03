@@ -718,8 +718,8 @@ title: International Publications
   position: absolute;
   top: 8px;
   right: 8px;
-  background: rgba(79, 172, 254, 0.75) !important;
-  color: white !important;
+  background: rgba(79, 172, 254, 0.15) !important;
+  color: #4facfe !important;
   padding: 4px 10px;
   border-radius: 15px;
   font-weight: bold;
@@ -732,8 +732,8 @@ title: International Publications
 
 /* Challenge Badge - Orange-Yellow */
 .publication-badge.challenge-badge {
-  background: rgba(255, 167, 38, 0.75) !important;
-  color: white !important;
+  background: rgba(255, 167, 38, 0.15) !important;
+  color: #ffa726 !important;
   border: none !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;

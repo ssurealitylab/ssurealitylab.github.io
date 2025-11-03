@@ -204,19 +204,6 @@
       box-shadow: none;
     }
 
-    // Mobile menu collapse - add solid background when expanded
-    .navbar-collapse {
-      &.show,
-      &.collapsing {
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 12px;
-        margin-top: 12px;
-        padding: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      }
-    }
 
     .navbar-nav {
       .nav-item {

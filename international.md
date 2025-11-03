@@ -718,21 +718,19 @@ title: International Publications
   position: absolute;
   top: 8px;
   right: 8px;
-  background: transparent;
-  color: #4facfe;
-  border: 2px solid #4facfe;
+  background: rgba(79, 172, 254, 0.95);
+  color: white;
   padding: 4px 10px;
   border-radius: 15px;
   font-weight: bold;
   font-size: 0.7rem;
-  box-shadow: 0 2px 8px rgba(79, 172, 254, 0.2);
+  box-shadow: 0 2px 8px rgba(79, 172, 254, 0.3);
 }
 
 /* Challenge Badge - Orange-Yellow */
 .publication-badge.challenge-badge {
-  background: transparent;
-  color: #ffa726;
-  border: 2px solid #ffa726;
+  background: rgba(255, 167, 38, 0.95);
+  color: white;
 }
 
 /* Placeholder Card */

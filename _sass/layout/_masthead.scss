@@ -442,6 +442,9 @@ header.masthead {
       visibility: visible !important;
       display: block !important;
       color: #1a1a1a !important; // Force dark text color
+      position: relative;
+      z-index: 100 !important; // Keep above slider and all other elements
+      pointer-events: auto; // Ensure clickable
 
       .intro-lead-in {
         font-size: 18px; // Optimized for mobile readability
@@ -449,6 +452,8 @@ header.masthead {
         opacity: 1 !important;
         visibility: visible !important;
         color: #6b7280 !important; // Force visible text color
+        transition: none !important; // Disable all transitions
+        animation: none !important; // Disable all animations
       }
 
       .intro-heading {
@@ -459,6 +464,9 @@ header.masthead {
         visibility: visible !important;
         display: block !important;
         color: #1a1a1a !important; // Force dark text color
+        transition: none !important; // Disable all transitions
+        animation: none !important; // Disable all animations
+        transform: none !important; // Disable transforms
       }
     }
 

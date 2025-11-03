@@ -330,7 +330,7 @@ header.masthead {
   .research-tabs-container {
     display: flex;
     justify-content: center;
-    padding: 0px 20px 90px; // Removed top padding to bring tabs closer
+    padding: 0px 20px 30px; // Reduced bottom padding to minimize gap with news section (was 90px)
     margin-top: 30px; // Positive margin to move tabs down away from slider
 
     // Force clear visibility
@@ -433,15 +433,25 @@ header.masthead {
       padding-top: 140px; // Increased for better visibility on mobile (was 90px)
       padding-bottom: 30px; // Increased spacing
 
+      // Force visibility on mobile
+      opacity: 1 !important;
+      visibility: visible !important;
+      display: block !important;
+
       .intro-lead-in {
         font-size: 18px; // Optimized for mobile readability
         margin-bottom: 20px;
+        opacity: 1 !important;
+        visibility: visible !important;
       }
 
       .intro-heading {
         font-size: 48px; // Optimized for mobile screens (was 56px)
         line-height: 1.2;
         margin-bottom: 25px;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
       }
     }
 
@@ -491,7 +501,7 @@ header.masthead {
     }
 
     .research-tabs-container {
-      padding: 0px 10px 60px; // Adjusted bottom padding
+      padding: 0px 10px 20px; // Reduced bottom padding to minimize gap with news section (was 60px)
       margin-top: 25px; // Increased margin for better separation from slider
     }
 

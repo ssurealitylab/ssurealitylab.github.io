@@ -111,10 +111,36 @@
       color-scheme: light only !important;
     }
 
+    html {
+      color-scheme: light only !important;
+      background-color: #ffffff !important;
+    }
+
+    body {
+      background-color: #ffffff !important;
+      color: #1a1a1a !important;
+    }
+
     @media (prefers-color-scheme: dark) {
+      * {
+        color-scheme: light only !important;
+      }
+
       html, body {
         background-color: #ffffff !important;
         color: #1a1a1a !important;
+        filter: none !important;
+      }
+
+      header, main, section, div, nav, footer {
+        background-color: transparent !important;
+        color: inherit !important;
+      }
+
+      input, textarea, select, button {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+        border-color: #e5e7eb !important;
       }
     }
   </style>

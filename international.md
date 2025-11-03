@@ -925,7 +925,7 @@ title: International Publications
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.92) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
   z-index: 9999;
   justify-content: center;
   align-items: center;
@@ -936,7 +936,8 @@ title: International Publications
 }
 
 .publication-modal-content {
-  background: white;
+  background: white !important;
+  opacity: 1 !important;
   border-radius: 15px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
   max-height: 90vh;

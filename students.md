@@ -430,13 +430,14 @@ title: Students
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9) !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
   justify-content: center;
   align-items: center;
 }
 
 .modal-content {
-  background: white;
+  background: white !important;
+  opacity: 1 !important;
   width: 500px;
   max-height: 80vh;
   border-radius: 20px;

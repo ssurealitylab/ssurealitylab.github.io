@@ -434,45 +434,47 @@ header.masthead {
     background-attachment: scroll !important;
 
     .intro-text {
-      padding-top: 140px; // Increased for better visibility on mobile (was 90px)
-      padding-bottom: 30px; // Increased spacing
+      padding-top: 100px; // Optimized for mobile
+      padding-bottom: 25px;
 
       // Force visibility on mobile
       opacity: 1 !important;
       visibility: visible !important;
       display: block !important;
-      color: #1a1a1a !important; // Force dark text color
+      color: #1a1a1a !important;
       position: relative;
-      z-index: 100 !important; // Keep above slider and all other elements
-      pointer-events: auto; // Ensure clickable
+      z-index: 100 !important;
+      pointer-events: auto;
 
       .intro-lead-in {
-        font-size: 18px; // Optimized for mobile readability
-        font-style: normal; // Same as PC
-        font-weight: 400; // Same as PC
-        line-height: 1.6; // Same as PC
-        margin-bottom: 20px;
+        font-size: 16px; // Mobile-friendly size
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 15px;
         opacity: 1 !important;
         visibility: visible !important;
-        color: #6b7280 !important; // Force visible text color
-        transition: none !important; // Disable all transitions
-        animation: none !important; // Disable all animations
-        @include body-font; // Same font as PC
+        color: #6b7280 !important;
+        transition: none !important;
+        animation: none !important;
+        @include body-font;
+        padding: 0 20px; // Add horizontal padding
       }
 
       .intro-heading {
-        font-size: 48px; // Optimized for mobile screens (was 56px)
-        font-weight: 500; // Same as PC
-        line-height: 1.2;
-        margin-bottom: 25px;
+        font-size: 32px; // Larger, touch-friendly
+        font-weight: 600; // Bolder for mobile
+        line-height: 1.3;
+        margin-bottom: 20px;
         opacity: 1 !important;
         visibility: visible !important;
         display: block !important;
-        color: #1a1a1a !important; // Force dark text color
-        transition: none !important; // Disable all transitions
-        animation: none !important; // Disable all animations
-        transform: none !important; // Disable transforms
-        @include heading-font; // Same font as PC
+        color: #1a1a1a !important;
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+        @include heading-font;
+        padding: 0 20px; // Add horizontal padding
       }
     }
 
@@ -498,48 +500,59 @@ header.masthead {
       }
 
       .research-tab {
-        width: 172px; // 143px * 1.2 = 172px (additional 20% increase)
-        height: 55px; // Fixed height for mobile uniformity
-        padding: 6px 12px; // Fixed padding for mobile
-        margin: 2px; // Smaller margin for mobile
+        min-width: 140px; // Touch-friendly minimum width
+        height: 60px; // Taller for better touch
+        padding: 10px 15px; // More padding for readability
+        margin: 4px; // Spacing between tabs
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex-shrink: 0; // Prevent shrinking
 
         // Force visibility
-        opacity: 0.6 !important;
+        opacity: 0.7 !important;
         visibility: visible !important;
-        transition: opacity 0.5s ease !important; // Only allow opacity transition
+        transition: opacity 0.3s ease, transform 0.3s ease !important;
 
         &.active {
-          transform: scaleX(1.12); // Horizontal stretch for mobile
-          width: 196px; // 163px * 1.2 = 196px (additional 20% increase)
+          transform: scale(1.05); // Subtle scale effect
           opacity: 1 !important;
         }
-        
+
+        // Touch feedback
+        &:active {
+          transform: scale(0.98);
+        }
+
         .tab-title {
-          font-size: 0.8rem;
+          font-size: 0.85rem; // Slightly larger
+          font-weight: 600; // Bolder for readability
           opacity: 1 !important;
           visibility: visible !important;
+          white-space: nowrap; // Prevent wrapping
         }
 
         .tab-description {
           font-size: 0.7rem;
           opacity: 1 !important;
           visibility: visible !important;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
         }
       }
     }
     
     .image-slider-container {
-      padding: 0px 10px 15px; // Added bottom padding for spacing
-      margin-top: -20px; // Reduced upward movement for better visibility on mobile (was -50px)
+      padding: 0px 15px 20px; // Mobile-friendly padding
+      margin-top: 0px; // Start from natural position
     }
 
     .research-tabs-container {
-      padding: 0px 10px 20px; // Reduced bottom padding to minimize gap with news section (was 60px)
-      margin-top: 25px; // Increased margin for better separation from slider
+      padding: 0px 15px 30px; // More bottom space before news
+      margin-top: 20px;
 
       // Force visibility - prevent fade on slider transitions
       opacity: 1 !important;
@@ -550,8 +563,8 @@ header.masthead {
 
     .image-slider {
       width: 100%;
-      height: 320px; // Adjusted height for better aspect ratio with contain (was 380px)
-      overflow: visible; // Allow border to extend outside
+      height: 280px; // Optimized for mobile viewing
+      overflow: visible;
       
       // Mobile liquid glass - perfect wrapping
       .slider-content-wrapper {

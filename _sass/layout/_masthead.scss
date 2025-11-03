@@ -429,6 +429,10 @@ header.masthead {
 // Mobile styles
 @media (max-width: 767px) {
   header.masthead {
+    // Fix background for mobile (fixed attachment doesn't work on mobile)
+    background-attachment: scroll !important;
+    background-color: #f8fafc; // Fallback background color
+
     .intro-text {
       padding-top: 140px; // Increased for better visibility on mobile (was 90px)
       padding-bottom: 30px; // Increased spacing
@@ -437,12 +441,14 @@ header.masthead {
       opacity: 1 !important;
       visibility: visible !important;
       display: block !important;
+      color: #1a1a1a !important; // Force dark text color
 
       .intro-lead-in {
         font-size: 18px; // Optimized for mobile readability
         margin-bottom: 20px;
         opacity: 1 !important;
         visibility: visible !important;
+        color: #6b7280 !important; // Force visible text color
       }
 
       .intro-heading {
@@ -452,6 +458,7 @@ header.masthead {
         opacity: 1 !important;
         visibility: visible !important;
         display: block !important;
+        color: #1a1a1a !important; // Force dark text color
       }
     }
 

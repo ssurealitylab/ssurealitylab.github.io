@@ -183,9 +183,10 @@ setTimeout(function() {
         // easterEggTrigger.style.position = 'relative';
         // easterEggTrigger.style.zIndex = '2';
         
-        easterEggTrigger.addEventListener('click', function(e) {
+        function handleEasterEggClick(e) {
             e.preventDefault(); // Always prevent default for the R letter
-            console.log('R letter clicked! Count:', clickCount + 1);
+            e.stopPropagation(); // Stop event bubbling
+            console.log('R letter clicked/tapped! Count:', clickCount + 1);
             
             // Reset timer if more than 3 seconds passed
             if (clickTimer) {
@@ -225,7 +226,11 @@ setTimeout(function() {
                 triggerRobotEasterEgg();
                 clickCount = 0;
             }
-        });
+        }
+
+        // Add both click and touch event listeners for mobile support
+        easterEggTrigger.addEventListener('click', handleEasterEggClick);
+        easterEggTrigger.addEventListener('touchstart', handleEasterEggClick, { passive: false });
         
         function createConfetti() {
             const container = document.getElementById('confetti-container');

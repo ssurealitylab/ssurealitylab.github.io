@@ -21,6 +21,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author }}">
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -101,6 +103,18 @@
     @media (min-width: 576px) and (max-width: 767px) {
       .container {
         max-width: 660px !important;
+      }
+    }
+
+    /* Force disable dark mode - always use light mode */
+    :root {
+      color-scheme: light only !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html, body {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
       }
     }
   </style>

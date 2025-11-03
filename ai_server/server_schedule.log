@@ -1,0 +1,162 @@
+[2025. 10. 28. (화) 04:00:01 KST] 🌙 Stopping AI server for rest time...
+[2025. 10. 28. (화) 04:00:01 KST] ✅ AI server stopped successfully
+[2025. 10. 28. (화) 04:00:01 KST] ✅ Cloudflare tunnel stopped
+[2025. 10. 28. (화) 04:00:01 KST] 💤 Rest time started (4 AM - 8 AM KST)
+
+
+========================================
+[2025. 10. 28. (화) 08:00:01 KST] ☀️  Starting AI server + tunnel...
+========================================
+[2025. 10. 28. (화) 08:00:01 KST] Step 1/2: Starting AI server...
+[2025. 10. 28. (화) 08:00:01 KST] Starting AI server with Qwen3-4B and smart GPU selection...
+[2025. 10. 28. (화) 08:00:02 KST] ERROR: No GPU with utilization < 80% available!
+[2025. 10. 28. (화) 08:00:02 KST] ⚠️  AI server start had issues (check log)
+[2025. 10. 28. (화) 08:00:12 KST] Step 2/2: Starting Cloudflare tunnel...
+[2025. 10. 28. (화) 08:00:20 KST] ✅ Cloudflare tunnel started successfully
+[2025. 10. 28. (화) 08:00:20 KST] 🚀 Server + Tunnel ready!
+========================================
+
+[2025. 10. 29. (수) 04:00:01 KST] 🌙 Stopping AI server for rest time...
+[2025. 10. 29. (수) 04:00:01 KST] ✅ AI server stopped successfully
+[2025. 10. 29. (수) 04:00:01 KST] ✅ Cloudflare tunnel stopped
+[2025. 10. 29. (수) 04:00:01 KST] 💤 Rest time started (4 AM - 8 AM KST)
+
+
+========================================
+[2025. 10. 29. (수) 08:00:01 KST] ☀️  Starting AI server + tunnel...
+========================================
+[2025. 10. 29. (수) 08:00:01 KST] Step 1/2: Starting AI server...
+[2025. 10. 29. (수) 08:00:01 KST] Starting AI server with Qwen3-4B and smart GPU selection...
+[2025. 10. 29. (수) 08:00:02 KST] Available GPUs (utilization < 80%): 3
+[2025. 10. 29. (수) 08:00:04 KST] Starting AI server with Qwen3-4B on GPUs: 3
+[2025. 10. 29. (수) 08:00:04 KST] AI server started with PID: 2190113
+[2025. 10. 29. (수) 08:00:04 KST] Model: Qwen3-4B
+[2025. 10. 29. (수) 08:00:04 KST] Using GPUs: 3
+[2025. 10. 29. (수) 08:00:04 KST] Log file: /home/i0179/Realitylab-site/ai_server.log
+[2025. 10. 29. (수) 08:00:09 KST] ❌ AI server failed to start. Check log: /home/i0179/Realitylab-site/ai_server.log
+[2025. 10. 29. (수) 08:00:09 KST] ⚠️  AI server start had issues (check log)
+[2025. 10. 29. (수) 08:00:19 KST] Step 2/2: Starting Cloudflare tunnel...
+[2025. 10. 29. (수) 08:00:29 KST] ✅ Cloudflare tunnel started successfully
+[2025. 10. 29. (수) 08:00:29 KST] 🚀 Server + Tunnel ready!
+========================================
+
+[2025. 10. 30. (목) 04:00:01 KST] 🌙 Stopping AI server for rest time...
+[2025. 10. 30. (목) 04:00:01 KST] ✅ AI server stopped successfully
+[2025. 10. 30. (목) 04:00:01 KST] ✅ Cloudflare tunnel stopped
+[2025. 10. 30. (목) 04:00:01 KST] 💤 Rest time started (4 AM - 8 AM KST)
+
+
+========================================
+[2025. 10. 30. (목) 08:00:01 KST] ☀️  Starting AI server + tunnel...
+========================================
+[2025. 10. 30. (목) 08:00:01 KST] Step 1/2: Starting AI server...
+[2025. 10. 30. (목) 08:00:01 KST] Starting AI server with Qwen3-4B and smart GPU selection...
+[2025. 10. 30. (목) 08:00:02 KST] ERROR: GPU 3 is not available (utilization >= 80%)
+[2025. 10. 30. (목) 08:00:02 KST] This server requires GPU 3 to be available
+[2025. 10. 30. (목) 08:00:02 KST] ⚠️  AI server start had issues (check log)
+[2025. 10. 30. (목) 08:00:12 KST] Step 2/2: Starting Cloudflare tunnel...
+[2025. 10. 30. (목) 08:00:20 KST] ✅ Cloudflare tunnel started successfully
+[2025. 10. 30. (목) 08:00:20 KST] 🚀 Server + Tunnel ready!
+========================================
+
+[2025. 10. 31. (금) 04:00:01 KST] 🌙 Stopping AI server for rest time...
+[2025. 10. 31. (금) 04:00:01 KST] ✅ AI server stopped successfully
+[2025. 10. 31. (금) 04:00:01 KST] ✅ Cloudflare tunnel stopped
+[2025. 10. 31. (금) 04:00:01 KST] 💤 Rest time started (4 AM - 8 AM KST)
+
+
+========================================
+[2025. 10. 31. (금) 08:00:01 KST] ☀️  Starting AI server + tunnel...
+========================================
+[2025. 10. 31. (금) 08:00:01 KST] Step 1/2: Starting AI server...
+[2025. 10. 31. (금) 08:00:01 KST] Starting AI server with Qwen3-4B and smart GPU selection...
+[2025. 10. 31. (금) 08:00:02 KST] ✅ Using preferred GPU 2 (utilization < 80%)
+[2025. 10. 31. (금) 08:00:02 KST] Available GPUs (utilization < 80%): 2
+[2025. 10. 31. (금) 08:00:04 KST] Starting AI server with Qwen3-4B on GPUs: 2
+[2025. 10. 31. (금) 08:00:04 KST] AI server started with PID: 4187540
+[2025. 10. 31. (금) 08:00:04 KST] Model: Qwen3-4B
+[2025. 10. 31. (금) 08:00:04 KST] Using GPUs: 2
+[2025. 10. 31. (금) 08:00:04 KST] Log file: /home/i0179/Realitylab-site/ai_server.log
+[2025. 10. 31. (금) 08:00:09 KST] ✅ AI server (Qwen3-4B) is running successfully!
+[2025. 10. 31. (금) 08:00:09 KST] ✅ AI server started successfully
+[2025. 10. 31. (금) 08:00:19 KST] Step 2/2: Starting Cloudflare tunnel...
+[2025. 10. 31. (금) 08:00:27 KST] ✅ Cloudflare tunnel started successfully
+[2025. 10. 31. (금) 08:00:27 KST] 🚀 Server + Tunnel ready!
+========================================
+
+[2025. 11. 01. (토) 04:00:01 KST] 🌙 Stopping AI server for rest time...
+[2025. 11. 01. (토) 04:00:01 KST] ✅ AI server stopped successfully
+[2025. 11. 01. (토) 04:00:01 KST] ✅ Cloudflare tunnel stopped
+[2025. 11. 01. (토) 04:00:01 KST] 💤 Rest time started (4 AM - 8 AM KST)
+
+
+========================================
+[2025. 11. 01. (토) 08:00:01 KST] ☀️  Starting AI server + tunnel...
+========================================
+[2025. 11. 01. (토) 08:00:01 KST] Step 1/2: Starting AI server...
+[2025. 11. 01. (토) 08:00:01 KST] Starting AI server with Qwen3-4B and smart GPU selection...
+[2025. 11. 01. (토) 08:00:02 KST] ✅ Using preferred GPU 2 (utilization < 80%)
+[2025. 11. 01. (토) 08:00:02 KST] Available GPUs (utilization < 80%): 2
+[2025. 11. 01. (토) 08:00:04 KST] Starting AI server with Qwen3-4B on GPUs: 2
+[2025. 11. 01. (토) 08:00:04 KST] AI server started with PID: 1923901
+[2025. 11. 01. (토) 08:00:04 KST] Model: Qwen3-4B
+[2025. 11. 01. (토) 08:00:04 KST] Using GPUs: 2
+[2025. 11. 01. (토) 08:00:04 KST] Log file: /home/i0179/Realitylab-site/ai_server.log
+[2025. 11. 01. (토) 08:00:09 KST] ✅ AI server (Qwen3-4B) is running successfully!
+[2025. 11. 01. (토) 08:00:09 KST] ✅ AI server started successfully
+[2025. 11. 01. (토) 08:00:19 KST] Step 2/2: Starting Cloudflare tunnel...
+[2025. 11. 01. (토) 08:00:27 KST] ✅ Cloudflare tunnel started successfully
+[2025. 11. 01. (토) 08:00:27 KST] 🚀 Server + Tunnel ready!
+========================================
+
+[2025. 11. 02. (일) 04:00:01 KST] 🌙 Stopping AI server for rest time...
+[2025. 11. 02. (일) 04:00:01 KST] ✅ AI server stopped successfully
+[2025. 11. 02. (일) 04:00:01 KST] ✅ Cloudflare tunnel stopped
+[2025. 11. 02. (일) 04:00:01 KST] 💤 Rest time started (4 AM - 8 AM KST)
+
+
+========================================
+[2025. 11. 02. (일) 08:00:01 KST] ☀️  Starting AI server + tunnel...
+========================================
+[2025. 11. 02. (일) 08:00:01 KST] Step 1/2: Starting AI server...
+[2025. 11. 02. (일) 08:00:01 KST] Starting AI server with Qwen3-4B and smart GPU selection...
+[2025. 11. 02. (일) 08:00:03 KST] ✅ Using preferred GPU 2 (utilization < 80%)
+[2025. 11. 02. (일) 08:00:03 KST] Available GPUs (utilization < 80%): 2
+[2025. 11. 02. (일) 08:00:03 KST] Stopping old server (PID: 721066)...
+[2025. 11. 02. (일) 08:00:08 KST] Starting AI server with Qwen3-4B on GPUs: 2
+[2025. 11. 02. (일) 08:00:08 KST] AI server started with PID: 3826438
+[2025. 11. 02. (일) 08:00:08 KST] Model: Qwen3-4B
+[2025. 11. 02. (일) 08:00:08 KST] Using GPUs: 2
+[2025. 11. 02. (일) 08:00:08 KST] Log file: /home/i0179/Realitylab-site/ai_server.log
+[2025. 11. 02. (일) 08:00:13 KST] ✅ AI server (Qwen3-4B) is running successfully!
+[2025. 11. 02. (일) 08:00:13 KST] ✅ AI server started successfully
+[2025. 11. 02. (일) 08:00:23 KST] Step 2/2: Starting Cloudflare tunnel...
+[2025. 11. 02. (일) 08:00:34 KST] ✅ Cloudflare tunnel started successfully
+[2025. 11. 02. (일) 08:00:34 KST] 🚀 Server + Tunnel ready!
+========================================
+
+[2025. 11. 03. (월) 04:00:01 KST] 🌙 Stopping AI server for rest time...
+[2025. 11. 03. (월) 04:00:01 KST] ✅ AI server stopped successfully
+[2025. 11. 03. (월) 04:00:01 KST] ✅ Cloudflare tunnel stopped
+[2025. 11. 03. (월) 04:00:01 KST] 💤 Rest time started (4 AM - 8 AM KST)
+
+
+========================================
+[2025. 11. 03. (월) 08:00:01 KST] ☀️  Starting AI server + tunnel...
+========================================
+[2025. 11. 03. (월) 08:00:01 KST] Step 1/2: Starting AI server...
+[2025. 11. 03. (월) 08:00:01 KST] Starting AI server with Qwen3-4B and smart GPU selection...
+[2025. 11. 03. (월) 08:00:03 KST] ✅ Using preferred GPU 2 (utilization < 80%)
+[2025. 11. 03. (월) 08:00:03 KST] Available GPUs (utilization < 80%): 2
+[2025. 11. 03. (월) 08:00:05 KST] Starting AI server with Qwen3-4B on GPUs: 2
+[2025. 11. 03. (월) 08:00:05 KST] AI server started with PID: 1430535
+[2025. 11. 03. (월) 08:00:05 KST] Model: Qwen3-4B
+[2025. 11. 03. (월) 08:00:05 KST] Using GPUs: 2
+[2025. 11. 03. (월) 08:00:05 KST] Log file: /home/i0179/Realitylab-site/ai_server.log
+[2025. 11. 03. (월) 08:00:10 KST] ✅ AI server (Qwen3-4B) is running successfully!
+[2025. 11. 03. (월) 08:00:10 KST] ✅ AI server started successfully
+[2025. 11. 03. (월) 08:00:20 KST] Step 2/2: Starting Cloudflare tunnel...
+[2025. 11. 03. (월) 08:00:29 KST] ✅ Cloudflare tunnel started successfully
+[2025. 11. 03. (월) 08:00:29 KST] 🚀 Server + Tunnel ready!
+========================================
+

@@ -1,5 +1,5 @@
 {
   "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
-  "num_documents": 67,
+  "num_documents": 99,
   "embedding_dim": 384
 }

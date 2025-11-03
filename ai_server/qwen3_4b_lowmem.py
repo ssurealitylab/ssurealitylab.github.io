@@ -233,6 +233,25 @@ def ensure_sentence_completion(text, language='ko'):
 
     return text
 
+def clean_korean_query(query):
+    """Remove Korean particles from query for better keyword matching"""
+    # Sort by length (longest first) to match compound particles like "이라는" before "이"
+    particles = ['이라는', '까지', '에서', '으로', '에게', '한테', '부터', '라는', '이', '가', '을', '를', '은', '는', '에', '의', '와', '과', '도', '만', '로']
+
+    cleaned_words = []
+    for word in query.split():
+        if len(word) > 1:
+            clean_word = word
+            for particle in particles:
+                if clean_word.endswith(particle) and len(clean_word) > len(particle):
+                    clean_word = clean_word[:-len(particle)]
+                    break  # Stop after first match
+            cleaned_words.append(clean_word if len(clean_word) > 1 else word)
+        else:
+            cleaned_words.append(word)
+
+    return ' '.join(cleaned_words)
+
 def extract_relevant_sections(question, knowledge_base_path, max_sections=5, max_chars=2000):
     """Extract relevant sections from knowledge base based on keywords in question"""
     try:
@@ -265,17 +284,19 @@ def extract_relevant_sections(question, knowledge_base_path, max_sections=5, max
 
         # Extract keywords from question (including original casing for name matching)
         # Remove common Korean particles to get clean keywords
-        particles = ['이', '가', '을', '를', '은', '는', '에', '의', '와', '과', '도', '만', '라는', '이라는', '부터', '까지', '에서', '으로', '로', '에게', '한테']
+        # Sort by length (longest first) to match compound particles like "이라는" before "이"
+        particles = ['이라는', '까지', '에서', '으로', '에게', '한테', '부터', '라는', '이', '가', '을', '를', '은', '는', '에', '의', '와', '과', '도', '만', '로']
 
         keywords = set()
         keywords_original = set()
         for word in question.split():
             if len(word) > 1:
-                # Remove particles from word
+                # Remove particles from word (try longest first)
                 clean_word = word
                 for particle in particles:
                     if clean_word.endswith(particle) and len(clean_word) > len(particle):
                         clean_word = clean_word[:-len(particle)]
+                        break  # Stop after first match
 
                 if len(clean_word) > 1:
                     keywords.add(clean_word.lower())
@@ -344,23 +365,29 @@ def generate_response(prompt, language='ko', max_length=700):
         return "AI model not loaded"
 
     try:
-        # Load relevant sections from knowledge base based on question keywords
-        knowledge_context = ""
-        knowledge_base_path = os.path.join(os.path.dirname(__file__), "crawled_data", "knowledge_base.txt")
-        try:
-            if os.path.exists(knowledge_base_path):
-                # Extract only relevant sections to avoid token overflow
-                knowledge_context = extract_relevant_sections(prompt, knowledge_base_path)
-                if knowledge_context:
-                    knowledge_context += "\n\n"
-            else:
-                logger.warning(f"Knowledge base not found: {knowledge_base_path}")
-        except Exception as e:
-            logger.warning(f"Failed to load knowledge base: {e}")
+        # Use RAG (Retrieval-Augmented Generation) with cleaned query
+        rag_context = ""
+        if rag_retriever is not None:
+            try:
+                # Clean query by removing Korean particles
+                cleaned_prompt = clean_korean_query(prompt)
+                logger.info(f"Original query: {prompt}")
+                logger.info(f"Cleaned query: {cleaned_prompt}")
+
+                # Search with lower threshold for more results
+                search_results = rag_retriever.search(cleaned_prompt, k=5, min_score=0.25)
+                if search_results:
+                    rag_context = rag_retriever.format_context(search_results, language=language)
+                    rag_context += "\n\n"
+                    logger.info(f"RAG found {len(search_results)} documents")
+                else:
+                    logger.warning("RAG found no matching documents")
+            except Exception as e:
+                logger.warning(f"RAG search failed: {e}")
 
         # Create language-specific system prompt (concise yet friendly with key info)
         if language == 'en':
-            system_content = f"""{knowledge_context}You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
+            system_content = f"""{rag_context}You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
 
 Use the reference materials above to answer the question. If the references don't contain the answer, use your general knowledge about Reality Lab.
 
@@ -376,22 +403,25 @@ Guidelines:
 - Use natural, complete sentences
 - No <think> tags or internal reasoning"""
         else:
-            system_content = f"""{knowledge_context}당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 간결하면서도 친절하게, 핵심 정보는 모두 포함하여 답변하세요.
+            # Ultra-simple prompt for weak model
+            system_content = f"""Reality Lab Q&A 봇입니다. 주어진 정보에서 답을 찾아 한국어로 간단히 답변하세요.
 
-위의 참고자료를 바탕으로 질문에 답변하세요. 참고자료에 답변이 없으면, Reality Lab에 대한 일반적인 지식을 활용하세요.
-
-Reality Lab 기본 정보:
+기본 정보:
 - 설립: 2023년, 김희원 교수님
-- 연구 분야: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI
+- 연구: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI
 - 위치: 서울특별시 동작구 사당로 105, 숭실대학교
-- 연락처: +82-2-820-0679
+- 전화: +82-2-820-0679
 
-답변 가이드라인:
-- **반드시 한국어로만 답변하세요** (중국어, 영어 등 다른 언어 사용 금지)
-- **즉시 답변을 시작하세요** - 내부 추론, 생각 과정, <think> 태그 등은 절대 사용하지 마세요
-- 간결하면서도 친절하게 답변하세요 (2-3문장 정도로 충분)
-- 필요한 핵심 정보는 빠짐없이 포함하세요
-- 자연스럽고 완전한 문장을 사용하세요"""
+{rag_context}
+
+답변 형식:
+- 한국어로만 답변
+- 1-2문장으로 답변
+- 정보가 없으면 "죄송합니다. 해당 정보를 찾을 수 없습니다. 김희원 교수님(heewon@ssu.ac.kr)께 문의해주세요."
+
+예시:
+Q: 박성용 학생 연구 분야는?
+A: 박성용 학생은 Image Restoration과 AI for Astronomy를 연구하고 있습니다."""
 
         # Create chat template
         messages = [
@@ -455,6 +485,26 @@ Reality Lab 기본 정보:
         generated_text = re.sub(r'<think>.*?</think>', '', generated_text, flags=re.DOTALL).strip()
         # Also remove any remaining <think> or </think> tags
         generated_text = generated_text.replace('<think>', '').replace('</think>', '').strip()
+
+        # Remove any database info header that leaked through
+        generated_text = re.sub(r'===\s*데이터베이스 정보\s*===', '', generated_text).strip()
+        generated_text = re.sub(r'===\s*Database Information\s*===', '', generated_text).strip()
+
+        # Remove reference markers (legacy)
+        generated_text = re.sub(r'\[참고자료\s*\d+[^\]]*\]', '', generated_text).strip()
+        generated_text = re.sub(r'\[참조자료\s*\d+[^\]]*\]', '', generated_text).strip()
+
+        # Remove internal reasoning markers
+        generated_text = re.sub(r'\*\*정답\*\*:?', '', generated_text).strip()
+        generated_text = re.sub(r'정답\s*:', '', generated_text).strip()
+        generated_text = re.sub(r'질문\s*:', '', generated_text).strip()
+        generated_text = re.sub(r'Q:', '', generated_text).strip()
+        generated_text = re.sub(r'A:', '', generated_text).strip()
+
+        # Remove separator lines
+        lines = generated_text.split('\n')
+        cleaned_lines = [line for line in lines if line.strip() != '---']
+        generated_text = '\n'.join(cleaned_lines).strip()
 
         # Check for Chinese characters (for Korean language mode)
         if language == 'ko' and contains_chinese(generated_text):

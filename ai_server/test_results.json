@@ -1,0 +1,890 @@
+{
+  "timestamp": "2025-10-30T18:54:40.187559",
+  "summary": {
+    "PASS": 4,
+    "WARN": 12,
+    "FAIL": 34,
+    "ERROR": 0
+  },
+  "verdict": "FAIL",
+  "results": [
+    {
+      "question": "이주형이라는 사람이 있어?",
+      "category": "member",
+      "expected_keywords": [
+        "이주형",
+        "석사",
+        "학생"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "팀 구성원은 누구인가요?",
+      "category": "member",
+      "expected_keywords": [
+        "교수",
+        "학생",
+        "인턴"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "석사과정 학생은 몇 명인가요?",
+      "category": "member",
+      "expected_keywords": [
+        "석사",
+        "10",
+        "명"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "박성용 학생 이메일 알려주세요",
+      "category": "member",
+      "expected_keywords": [
+        "ejqdl010",
+        "gmail"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "김희원 교수님 이메일은?",
+      "category": "member",
+      "expected_keywords": [
+        "hwkim",
+        "ssu.ac.kr"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "정호재님 깃허브 주소는?",
+      "category": "member",
+      "expected_keywords": [
+        "github",
+        "JEONG-HO-JAE"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "이세빈 학생에 대해 알려주세요",
+      "category": "member",
+      "expected_keywords": [
+        "이세빈",
+        "컴퓨터",
+        "비전"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "김도원 학생 연락처는?",
+      "category": "member",
+      "expected_keywords": [
+        "a01066304767"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "연구 인턴은 몇 명이에요?",
+      "category": "member",
+      "expected_keywords": [
+        "인턴",
+        "11",
+        "명"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "최영재 학생 전공이 뭐예요?",
+      "category": "member",
+      "expected_keywords": [
+        "통계",
+        "Statistics"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "연구실 이름이 뭐예요?",
+      "category": "lab_info",
+      "expected_keywords": [
+        "Reality Lab"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "Reality Lab은 어디에 있나요?",
+      "category": "lab_info",
+      "expected_keywords": [
+        "서울",
+        "동작구",
+        "숭실"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "연구실 전화번호 알려주세요",
+      "category": "lab_info",
+      "expected_keywords": [
+        "820-0679"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "김희원 교수님 전공은?",
+      "category": "lab_info",
+      "expected_keywords": [
+        "컴퓨터",
+        "비전",
+        "vision"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "연구실은 언제 설립되었나요?",
+      "category": "lab_info",
+      "expected_keywords": [
+        "2023"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "Reality Lab 주소가 어떻게 되나요?",
+      "category": "lab_info",
+      "expected_keywords": [
+        "사당로",
+        "105"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "어떤 연구를 하나요?",
+      "category": "lab_info",
+      "expected_keywords": [
+        "컴퓨터",
+        "비전",
+        "AI"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "교수님 소속은?",
+      "category": "lab_info",
+      "expected_keywords": [
+        "Global School of Media",
+        "미디어"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "연구실 위치 알려주세요",
+      "category": "lab_info",
+      "expected_keywords": [
+        "서울",
+        "숭실"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "지도 교수님은 누구세요?",
+      "category": "lab_info",
+      "expected_keywords": [
+        "김희원"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "어떤 분야를 연구하나요?",
+      "category": "research",
+      "expected_keywords": [
+        "컴퓨터",
+        "비전",
+        "딥러닝",
+        "AI"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "로보틱스 연구도 하나요?",
+      "category": "research",
+      "expected_keywords": [
+        "로보틱스",
+        "Robotics"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "박성용 학생 연구 주제는?",
+      "category": "research",
+      "expected_keywords": [
+        "Image Restoration",
+        "Astronomy"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "이상민 학생은 무슨 연구해요?",
+      "category": "research",
+      "expected_keywords": [
+        "Embodied AI",
+        "Computer Vision"
+      ],
+      "response": "다른 사용자와 대화 중입니다. 잠시만 기다려주세요. 조금 더 오래 걸릴 수 있습니다.",
+      "response_time": 0,
+      "tokens": 0,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "의료 AI 연구도 하나요?",
+      "category": "research",
+      "expected_keywords": [
+        "의료",
+        "Medical",
+        "AI"
+      ],
+      "response": "스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI\"와 같이 간단하고 명확한 목록형식으로 답변해야 합니다.\n- **질문에 따라 달라지는 답변 방식**: 예를 들어, \"Address of the lab\"는 \"서울특별시 동작구 사당로 105, 숭실대학교\"와 같이 단순하고 구체적인 형식으로 답변해야 합니다.\n- **질문에 따라 달라지는 답변 방식**: 예를 개선할 수 있는 예시: \"What is the name of the director of the lab?\" → \"The director of the lab is Professor Kim Hui-won.\"\n\n---\n\n질문: 숭실대학교 Reality Lab의 연구 분야는 무엇인가요?\n\n\n숭실대학교 Reality Lab의 연구 분야는 로보틱스, 컴퓨터비전, 기계학습, 멀티모dal AI, 헬스케어 AI입니다",
+      "response_time": 21.27,
+      "tokens": 314,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "3D 비전 연구하는 학생 있어요?",
+      "category": "research",
+      "expected_keywords": [
+        "고민주",
+        "Minjoo"
+      ],
+      "response": "*: 예를 들어, \"Researcher A는 어떤 분야에서 연구하고 있나요?\"와 같은 질문에는 이름과 연구 분야만 말해야 합니다. \"Researcher A는 어디서 연구하고 있나요?\"와 같은 질문에는 이름과 연구소(예: Reality Lab)만 말해야 합니다.\n- **반복되지 않도록 각 질문에 대해 고유하게 대답하세요**\n- **질문에 없는 정보는 반드시 생략하세요**\n\n질문: 이상민 학생은 어떤 분야에서 연구하고 있나요?\n\n답변:\n이상민 학생은 컴퓨터 비전 및 체험형 인공지능(Embodied AI) 분야에서 연구하고 있습니다.\n\n\n이상민 학생은 컴퓨터 비전 및 체험형 인공지능(Embodied AI) 분야에서 연구하고 있습니다",
+      "response_time": 19.08,
+      "tokens": 278,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "생성 모델 연구는 누가 해요?",
+      "category": "research",
+      "expected_keywords": [
+        "Generative",
+        "생성"
+      ],
+      "response": "죄송합니다. 응답을 생성할 수 없습니다.",
+      "response_time": 10.07,
+      "tokens": 146,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "오류 응답",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "스포츠 AI 연구 있나요?",
+      "category": "research",
+      "expected_keywords": [
+        "Sports",
+        "스포츠"
+      ],
+      "response": "Reality Lab의 주요 연구 분야는 로보틱스, 컴퓨터 비전, 기계학습, 멀티모달 AI, 헬스케어 AI입니다. 자세한 내용은 김희원 교수님(heewon@ssu.ac.kr)께 문의하시면 됩니다",
+      "response_time": 47.68,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "멀티모달 연구 하시나요?",
+      "category": "research",
+      "expected_keywords": [
+        "Multimodal",
+        "멀티모달"
+      ],
+      "response": "입니다. 이메일은 **por1329@naver.com**이며, 연구실 구성원 중 하나로, 석사과정 학생입니다.  \n(참조: 참고자료 1)\n\nAnswer: \n고현서는 **고현서 (Hyunsuh Kho)** 학생입니다. 연구 분야는 **Multimodal Learning, Representation Learning**입니다. 이메일은 **por1329@naver.com**이며, 연구실 구성원 중 하나로, 석사과정 학생입니다.  \n(참조: 참고자료 1)\nAnswer: \n고현서는 **고현서 (Hyunsuh Kho)** 학생입니다. 연구 분야는 **Multimodal Learning, Representation Learning**입니다. 이메일은 **por1329@naver.com**이며, 연구실 구성원 중 하나로, 석사과정 학생입니다.  \n(참조: 참고자료 1)\nAnswer: \n고현서는 **고현서 (Hyunsuh Kho)** 학생입니다. 연구 분야는 **Multimodal Learning, Representation Learning**입니다. 이메일은 **por1329@naver.com**이며, 연구실 구성원 중 하나로, 석사과정 학생입니다.  \n(참조: 참고자료 1)\nAnswer: \n고현서는 **고현서 (Hyunsuh Kho)** 학생입니다. 연구 분야는 **Multimodal Learning, Representation Learning**입니다. 이메일은 **por1329@naver.com**이며, 연구실 구성원 중 하나로, 석사과정 학생입니다.  \n(참조: 참고자료 1)\nAnswer: \n고현서는 **고현서 (Hyunsuh Kho)** 학생입니다. 연구 분야는 **Multimodal Learning, Representation Learning**입니다. 이메일은 **por1329@naver.com**이며, 연구실 구성원 중 하나로, 석사과정 학생입니다.  \n(참조: 참고자료 1)\nAnswer: \n고현서는 **고현서 (Hyunsuh Kho)** 학생입니다. 연구 분야는 **Multimodal Learning, Representation Learning**입니다",
+      "response_time": 47.83,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "딥러닝 연구하는 학생은?",
+      "category": "research",
+      "expected_keywords": [
+        "Deep Learning",
+        "딥러닝"
+      ],
+      "response": "합니다**\n- **단순히 '정보가 없습니다'라고 말하지 마세요**\n\n예시:\nQ: Reality Lab의 연락처는?\nA: 서울특별시 동작구 사당로 105, 숭실대학교 / +82-2-820-0679\n\nQ: Reality Lab의 연구 분야는 무엇인가요?\nA: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI\n\nQ: Reality Lab의 위치는 어디인가요?\nA: 서울특별시 동작구 사당로 105, 숭실대학교\n\nQ: Reality Lab의 설립 연도는 언제인가요?\nA: 2023년\n\nQ: Reality Lab의 대표 교수는 누구인가요?\nA: 김희원 교수님\n\nQ: Reality Lab의 학생 중 컴퓨터 비전과 딥러닝을 연구하는 학생은誰인가요?\nA: 이주형, 이재현, 임정하, 고현준, 김서영\n\nQ: 이재현 학생의 이메일은 무엇인가요?\nA: gogozzi1102@gmail.com\n\nQ: 김서영 학생의 연구 분야는 무엇인가요?\nA: 딥러닝, 의료 AI\n\nQ: 이주형 학생의 이메일은 무엇인가요?\nA: i0179@naver.com\n\nQ: 이주형 학생의 연구 분야는 무엇인가요?\nA: 컴퓨터 비전, 딥러닝\n\nQ: 이재현 학생의 연구 분야는 무엇인가요?\nA: 컴퓨터 비전, 딥러닝\n\nQ: 임정하 학 student의 이메일은 무엇인가요?\nA: sonic0823@naver.com\n\nQ: 고현준 학생의 이메일은 무엇인가요?\nA: soongsil.ai.24@gmail.com\n\nQ: 김서영 학생의 이메일은 무엇인가요?\nA: codestore@naver.com\n\nQ: 이주형, 이재현, 임정하, 고현준, 김서영 학생들의 연구 분야는 무엇인가요?\nA: 모두 컴퓨터 비전, 딥러닝, 의료 AI를 연구하고 있습니다.\n\nQ: 이주형, 이재현, 임정하, 고현준, 김서영 학생들은 어디에서 활동하고 있나요?\nA: 숭실대학교 Reality Lab에서 활동하고 있습니다",
+      "response_time": 47.76,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "PASS",
+        "reason": "키워드 매칭 50%",
+        "matched_keywords": [
+          "딥러닝"
+        ]
+      }
+    },
+    {
+      "question": "CVPR 2025에 논문이 있나요?",
+      "category": "publication",
+      "expected_keywords": [
+        "CVPR",
+        "2025",
+        "DynScene"
+      ],
+      "response": "Yes, 숭실대학교 Reality Lab의 연구팀은 CVPR 2025에서 '1st Place Winner at CVPR 2025 Embodied AI Workshop'이라는 논문을 발표했습니다. 저자는 첨단 인공지능 및 로보틱스 분야에서 활발히 연구하고 있는 김희원 교수와 함께 하우온 김 연구원이 참여했으며, 이는 멀티모달 AI와 embodied AI를 주제로 한 성과입니다",
+      "response_time": 31.79,
+      "tokens": 468,
+      "error": null,
+      "analysis": {
+        "status": "PASS",
+        "reason": "키워드 매칭 67%",
+        "matched_keywords": [
+          "CVPR",
+          "2025"
+        ]
+      }
+    },
+    {
+      "question": "최근 발표한 논문은?",
+      "category": "publication",
+      "expected_keywords": [
+        "2025",
+        "CVPR",
+        "AAAI"
+      ],
+      "response": "죄송합니다. 응답을 생성할 수 없습니다.",
+      "response_time": 10.87,
+      "tokens": 158,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "오류 응답",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "AAAI에 논문 냈어요?",
+      "category": "publication",
+      "expected_keywords": [
+        "AAAI",
+        "SIDL"
+      ],
+      "response": "학습, 멀티모달 AI, 헬스케어 AI 등을 연구 주제로 삼고 있습니다.\n\n\n\n\nHeewon Kim 교수님의 연구 주제는 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI 등을涵盖하고 있습니다",
+      "response_time": 14.0,
+      "tokens": 205,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "Embodied AI 관련 논문 있어요?",
+      "category": "publication",
+      "expected_keywords": [
+        "DynScene",
+        "Embodied"
+      ],
+      "response": "Lab은 어떤 분야를 연구 주제로 하고 있나요?\n\n**답변:**  \n숭실대학교 Reality Lab은 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI 등 다양한 분야를 연구 주제로 하고 있습니다. 이들은 특히 Embodied AI, Dynamic Scene Generation, 그리고 대화 기반 장기 기억 모델 등을 연구하며, 실제 세계와 인공지능의 상호작용을 강화하는 데 중점을 두고 있습니다.\n\n---\n\n**질문:** 숭실대학교 Reality Lab은 언제 설립되었나요?\n\n**답변:**  \n숭실대학교 Reality Lab은 2023년에 설립되었습니다. 이 연구소는 김희원 교수님이 창립했으며, 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI 등의 분야에서 혁신적인 연구를 수행하고 있습니다.\n\n---\n\n**질문:** 숭실대학교 Reality Lab의 연락처는 무엇인가요?\n\n**답변:**  \n숭실대학교 Reality Lab의 연락처는 +82-2-820-0679입니다. 이 연구소는 서울특별시 동작구 사당로 105에 위치해 있으며, 다양한 연구 프로젝트와 협력 과제를 진행하고 있습니다.\n\n---\n\n**질문:** 숭실대학교 Reality Lab의 위치는 어디인가요?\n\n**답변:**  \n숭실대학교 Reality Lab은 서울특별시 동작구 사당로 105에 위치하고 있습니다. 이곳에서는 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI 등 다양한 분야에서 혁신적인 연구를 수행하고 있습니다.\n\n---\n\n**질문:** 숭실대학교 Reality Lab의 연구 주제 중 하나는 'Embodied AI'인가요?\n\n**답변:**  \n예, 숭실대학교 Reality Lab의 연구 주제 중 하나는 'Embodied AI'입니다. 이 연구소는 Embodied AI 워크숍에서 1등을 차지한 논문 '1st Place Winner at CVPR 2025 Embodied AI Workshop'을 발표하며, 실제 환경에서 인공지능이 물리적 세계와 상호작용할 수 있는 기술 개발에 중점을 두고 있습니다",
+      "response_time": 48.04,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "1등 수상한 적 있나요?",
+      "category": "publication",
+      "expected_keywords": [
+        "1st",
+        "ARNOLD",
+        "Challenge"
+      ],
+      "response": "죄송합니다. 질문에 대한 정확한 답변을 준비하지 못했습니다. 자세한 내용은 김희원 교수님(heewon@ssu.ac.kr, +82-2-820-0679)께 문의하시면 됩니다",
+      "response_time": 47.86,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "오류 응답",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "국제 학회 논문이 몇 개예요?",
+      "category": "publication",
+      "expected_keywords": [
+        "CVPR",
+        "ICCV",
+        "AAAI"
+      ],
+      "response": "다. 이 연구소에서는 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI 등을 주요 연구 분야로 진행하고 있으며, 김희원 교수님이 소속입니다. 연락처는 +82-2-820-0679입니다",
+      "response_time": 7.93,
+      "tokens": 116,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "TPAMI 저널 논문 있나요?",
+      "category": "publication",
+      "expected_keywords": [
+        "TPAMI"
+      ],
+      "response": "*\n\n예시:\nQ: Reality Lab은 어디에 위치하고 있나요?\nA: 서울특별시 동작구 사당로 105, 숭실대학교에 위치하고 있습니다. (참고자료 0)\n\nQ: Reality Lab의 연구 주제 중 하나는 무엇인가요?\nA: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI 등이 포함됩니다. (참고자료 0)\n\nQ: Reality Lab의 창립자는 누구인가요?\nA: 김희원 교수님이 창립자입니다. (참고자료 0)\n\nQ: Reality Lab의 연락처는 무엇인가요?\nA: +82-2-820-0679입니다. (참고자료 0)\n\nQ: Reality Lab에서 어떤 논문을 발표했나요?\nA: \"재귀적 대화 요약을 통한 장기 기억 트랜스포머\", \"스윙 모션 사전 지식을 활용한 정확한 야구 선수 포즈 보정\", \"심층 신경망을 사용한 누운 얼굴 감지 기법\", \"Task-Aware Image Downscaling\", \"비디오 기반 저해상도 동적 3D 고해상도 재구성 방법 연구\" 등의 논문을 발표했습니다. (참고자료 1~5)\n\nQ: Reality Lab은 언제 설립되었나요?\nA: 2023년에 설립되었습니다. (참고자료 0)\n\nQ: Reality Lab의 연구 분야에는 어떤 것이 포함되나요?\nA: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI 등이 포함됩니다. (참고자료 0)\n\nQ: Reality Lab의 위치는 어디인가요?\nA: 서울특별시 동작구 사당로 105, 숭실대학교에 위치하고 있습니다. (참고자료 0)\n\nQ: Reality Lab의 연락처는 무엇인가요?\nA: +82-2-820-0679입니다. (참고자료 0)\n\nQ: Reality Lab의 창립자는 누구인가요?\nA: 김희원 교수님이 창립자입니다. (참고자료 0)\n\nQ: Reality Lab의 연구 분야 중 하나는 무엇인가요",
+      "response_time": 47.9,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "2025년 논문은?",
+      "category": "publication",
+      "expected_keywords": [
+        "2025",
+        "CVPR",
+        "AAAI"
+      ],
+      "response": "분야에는 **로보틱스**, **컴퓨터 비주능**, **기계학습**, **멀티모달 AI**, **헬스케어 AI**가 포함되어 있습니다.  \n(핵심 정보: 연구 분야는 위와 같습니다.)  \n(추가 설명: 이 연구 분야들은 인공지능과 현실 세계의 상호작용을 위한 다양한 기술 개발을 목표로 합니다.)\nAnswer: Reality Lab의 연구 분야에는 **로보틱스**, **컴퓨터 비주능**, **기계학습**, **멀티모달 AI**, **헬스케어 AI**가 포함되어 있습니다.  \n(핵심 정보: 연구 분야는 위와 같습니다.)  \n(추가 설명: 이 연구 분야들은 인공지능과 현실 세계의 상호작용을 위한 다양한 기술 개발을 목표로 합니다.)  \n(단, 질문에 대한 직접적인 답변만으로, 추가 설명은 생략합니다.)  \n\nAnswer: Reality Lab의 연구 분야에는 **로보틱스**, **컴퓨터 비주능**, **기계학습**, **멀티모달 AI**, **헬스케어 AI**가 포함되어 있습니다.  \n(핵심 정보: 연구 분야는 위와 같습니다.)  \n(추가 설명: 이 연구 분야들은 인공지능과 현실 세계의 상호작입을 위한 다양한 기술 개발을 목표로 합니다.)  \n(단, 질문에 대한 직접적인 답변만으로, 추가 설명은 생략합니다.)  \n\nAnswer: Reality Lab의 연구 분야에는 **로보틱스**, **컴퓨터 비주능**, **기계학리**, **멀티모달 AI**, **헬스케어 AI**가 포함되어 있습니다.  \n(핵심 정보: 연구 분야는 위와 같습니다.)  \n(추가 설명: 이 연구 분야들은 인공지능과 현실 세계의 상호작용을 위한 다양한 기술 개발을 목표로 합니다.)  \n(단, 질문에 대한 직접적인 답변만으로, 추가 설명은 생략합니다.)  \n\nAnswer: Reality Lab의 연구 분야에는 **로보틱스**, **컴퓨터 비주능**, **기계학습**, **멀티모달 AI**, **헬스케어 AI**가 포함되어 있습니다.  \n(핵심 정보: 연구 분야는 위와 같습니다.)  \n(추가 설명: 이 연구 분야들은 인공지능과 현실 세계의 상호작용을 위한 다양한 기술 개발을 목표로 합니다.)  \n(단, 질문에 대한 직접적인 답변만으로, 추가 설명은 생략합니다.)  \n\nAnswer: Reality Lab의 연구 분야에는 **로보틱스**, **컴퓨터 비주능**, **기계학습**, **멀티모달 AI**, **헬스케어",
+      "response_time": 47.65,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "Image Restoration 논문 있어요?",
+      "category": "publication",
+      "expected_keywords": [
+        "Image Restoration",
+        "SIDL"
+      ],
+      "response": "asking about the research areas of Reality Lab. I need to check the provided references to find relevant information.\n\nLooking at the basic info section, it says that Reality Lab focuses on Robotics, Computer Vision, Machine Learning, Multimodal AI, and Health Care AI. Those are the key areas. \n\nNow, checking the references to see if there's any specific mention. Reference 1 talks about image restoration with structured sparsity, which relates to computer vision. Reference 2 is about controllable image restoration networks, also computer vision. Reference 3 is a dataset for smartphone image restoration, which is computer vision. Reference 4 is video-based low-resolution dynamic 3D high-resolution reconstruction, which is computer vision and possibly robotics or 3D modeling. Reference 5 is about learning controllable ISP for image enhancement, which is computer vision and machine learning. \n\nSo the references do support the fields mentioned in the basic info. Therefore, I should list those fields and mention the references where applicable. But since the question is general, the answer is already covered in the basic info. However, the user might want specific examples from the references. But according to the guidelines, if the answer is in the basic info, I can use that. But the user's question is general, so the answer is the fields listed in the basic info. Since the references are part of the lab's work, but the question is about the overall research areas, not specific projects. Therefore, the answer is the ones from the basic info, and maybe reference numbers if needed. Wait, the user wants the answer based on the basic info, but the references are part of the lab's activities. However, the question is about the research fields, not specific projects. So the answer is the ones listed in the basic info. But the user might be expecting the answer to include the fields from the basic info, and perhaps mention that the references are examples of their work in these areas. But according to the instructions, if the answer is in the basic info, then just state that. However, the user's question is general, so the answer is the fields listed in the basic info. Therefore, the answer is the five fields: Robotics, Computer Vision, Machine Learning, Multimodal AI, Health Care AI. And since the references are related to these areas, but the question is about the overall fields, the answer is as per the basic info.\n---\nReality Lab은 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI 등을 연구하고 있습니다.  \n(참고자료 1~5와 관련된 연구 주제는 이 분야 내에서 진행되고 있으며, 구체적인 프로젝트 예시로는 이미지 복원, 비디오 기반 3D 재구성, 컨트롤 가능한 ISP 학습",
+      "response_time": 47.86,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "최근 연구 성과는?",
+      "category": "publication",
+      "expected_keywords": [
+        "CVPR",
+        "AAAI",
+        "2025"
+      ],
+      "response": "uter Vision, NLP\n\n[참고자료 12 - students]\n최영재 (Youngjae Choi) 학생\n최영재의 이메일: ychoi@stanford.edu\n연구분야: Computer Vision, NLP\n\n[참고자료 13 - students]\n이승우 (Hyunsuh Kho) 학생\n이승우의 이메일: hksu@stanford.edu\n연구분야: Multimodal Learning, Representation Learning\n\n[참고자료 14 - students]\n이민주 (Hyunjun Kho) 학생\n이민주의 이메일: hjkho@stanford.edu\n연구분야: Computer Vision, NLP\n\n[참고자료 15 - students]\n이기우 (Jiwoo Seo) 학생\n이기우의 이메일: jseo@stanford.edu\n연구분야: Computer Vision, NLP\n\n[참고자료 16 - students]\n이수영 (Sooyoung Choi) 학생\n이수영의 이메일: sco@stanford.edu\n연구분야: Computer Vision, NLP\n\n[참고자료 17 - students]\n한지우 (Jiwon Hwang) 학생\n한지우의 이메일: jhwang@stanford",
+      "response_time": 47.6,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "연구실에 지원하려면 어떻게 해야 하나요?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "지원",
+        "문의",
+        "연락"
+      ],
+      "response": "연구실에 지원하려면 먼저 해당 연구실의 입사 절차를 확인해야 합니다. 현재 제공된 정보에는 구체적인 지원 방법이 없으므로, 직접 연락하여 지원 서류와 절차를 문의하시기 바랍니다. 연락처는 +82-2-820-0679로 가능합니다",
+      "response_time": 15.59,
+      "tokens": 227,
+      "error": null,
+      "analysis": {
+        "status": "PASS",
+        "reason": "키워드 매칭 100%",
+        "matched_keywords": [
+          "지원",
+          "문의",
+          "연락"
+        ]
+      }
+    },
+    {
+      "question": "석사 과정 지원 방법은?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "석사",
+        "지원",
+        "문의"
+      ],
+      "response": "역하거나, 참고자료에서 없는 정보는 일반 지식으로 대체하지 마세요**\n- **반드시 질문에 정확히 일치하는 정보를 제공하세요**\n\n예시:\nQ: A 학생의 이메일은?\nA: por1329@naver.com\n\nQ: Reality Lab은 어디에 위치해 있나요?\nA: 서울특별시 동작구 사당로 105, 숭실대학교\n\nQ: Reality Lab은 어떤 분야를 연구하고 있나요?\nA: 로보틱스, 컴퓨터비전, 기계학습, 멀티모dal AI, 헬스케어 AI\n\nQ: Reality Lab은 언제 설립되었나요?\nA: 2023년\n\nQ: 이재현 학생의 연구 분야는 무엇인가요?\nA: 컴퓨터비전, 딥러닝\n\nQ: 김서영 학생의 이메일은?\nA: codestore@naver.com\n\nQ: Reality Lab의 연락처는?\nA: +82-2-820-0679\n\nQ: Reality Lab의 연구 분야 중 하나는 무엇인가요?\nA: 로보틱스\n\nQ: 이주형 학생의 이메일은?\nA: i0179@naver.com\n\nQ: 이주형 학생의 연구 분야는 무엇인가요?\nA: 컴퓨터비전, 딥러닝\n\nQ: 임정하 학생의 연구 분야는 무엇인가요?\nA: 컴퓨터비전, 딥러닝\n\nQ: 고현서 학생의 연구 분야는 무엇인가요?\nA: 다중모달 학습, 표현 학습\n\nQ: 고현서 학생의 이메일은?\nA: por1329@nav�.com\n\nQ: 김서영 학생의 연구 분야는 무엇인가요?\nA: 딥러닝, 의료AI\n\nQ: Reality Lab의 설립 연도는?\nA: 2023년\n\nQ: Reality Lab의 위치는?\nA: 서울특별시 동작구 사당로 105, 숭실대학교\n\nQ: Reality Lab의 연락처는?\nA: +82-2-820-0679\n\nQ: Reality Lab의 연구 분야 중 하나는?\nA: 로보틱스\n\nQ: Reality Lab의 연구 분야 중 하나는?\nA: 컴퓨터비전\n\nQ: Reality Lab의 연구 분야 중 하나는?\nA: 기계학습\n\nQ: Reality Lab의 연구 분야 중 하나는?\nA: 멀티모달 AI\n\nQ: Reality Lab의 연구 분야 중 하나는",
+      "response_time": 47.5,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "인턴 모집하나요?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "인턴",
+        "모집"
+      ],
+      "response": "ent at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 10 - students]\nMinjoo Koh, a master's student at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 11 - students]\nYoungjae Choi, a master's student at the Reality Lab, is currently working on computer vision and processing of natural language.\n\n[참고자료 12 - students]\nSungyong Park, a master's student at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 13 - students]\nHyunjun Kho, a master's student at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 14 - students]\nSeoyoung Kim, a research intern at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 15 - students]\nSooyoung Choi, a research intern at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 16 - students]\nJiwon Hwang, a research intern at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 17 - students]\nEunwoo Song, a research intern at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 18 - students]\nSebin Lee, a research intern at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 19 - students]\nDowon Kim, a research intern at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 20 - students]\nYeonji Kim, a research intern at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 21 - students]\nJaehyeon Lee, a research intern at the Reality Lab, is currently working on computer vision and natural language processing.\n\n[참고자료 22 - students]\nYebin Lee, a research intern at the Reality Lab, is currently working on computer vision and natural language processing",
+      "response_time": 47.48,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "학부생도 참여할 수 있나요?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "학부",
+        "인턴"
+      ],
+      "response": "Kho (고현서)\nEmail: por1329@naver.com\nResearch field: Multimodal Learning, Representation Learning\n\n[참고자료 11 - students]\nHyunjun Kho (고현서)\nEmail: hkhoe@mit.edu\nResearch field: Computer Vision, NLP, Reinforcement Learning\n\n[참고자료 1㎠ - students]\nHojae Jeong (정호재 정)\nEmail: hjeong@mit.edu\nResearch field: Computer Vision, NLP, Reinforcement Learning\n\n[참고자료 12 - students]\nSungyong Park (박성용)\nEmail: s.park@mit.edu\nResearch field: Computer Vision, NLP, Reinforcement Learning\n\n[참고자료 13 - students]\nByungkwan Chae (채병관)\nEmail: b.chae@mit.edu\nResearch field: Computer Vision, NLP, Reinforcement Learning\n\n[참고자료 14 - students]\nSeoyoung Kim (김소연)\nEmail: soyoung@mit.edu\nResearch field: Computer Vision, NLP, Reinforcement Learning\n\n[참고자료 15 - students]\nSooyoung Choi (최수영)\nEmail: sooyoung@mit.edu\nResearch field: Computer Vision, NLP, Reinforcement Learning\n\n[참고자료 16 - students]\nJiwon Hwang (황지윤)\nEmail: jhwon@mit.edu\nResearch field: Computer Vision, NLP, Reinforcement Learning\n\n[참고자료 17 - students]\nEunwoo Song (송유운)\nEmail: e.song@mit.edu\nResearch field: Computer Vision, NLP, Reinforcement Learning\n\n[참고자료 18 - students]\nSebin Lee (이서빈)\nEmail: sebin@mit.edu\nResearch field: Computer Vision, NLP, Reinforcement Learning\n\n[참고자료 19 - students]\nDowon Kim (김도원)\nEmail: d",
+      "response_time": 47.56,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "어떤 학생을 선호하나요?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "컴퓨터",
+        "비전",
+        "딥러닝"
+      ],
+      "response": ": Computer Vision, Generative AI\n\n[참고자료 12 - students]\n최유진 (Yujin Cho) 학생\n최유진의 이메일: yucho@stanford.edu\n연구분야: Computer Vision, Generative AI\n\n[참고자료 13 - students]\n최유진 (Yujin Cho) 학생\n최유진의 이메일: yucho@stanford.edu\n연구분야: Computer Vision, Generative AI\n\n[참고자료 14 - students]\n최유진 (Yujin Cho) 학생\n최유진의 이메일: yucho@stanford.edu\n연구분야: Computer Vision, Generative AI\n\n[참고자료 15 - students]\n최유진 (Yujin Cho) 학생\n최유진의 이메일: yucho@stanford.edu\n연구분야: Computer Vision, Generative AI\n\n[참고자료 16 - students]\n최유진 (Yujin Cho) 학생\n최유진의 이메일: yucho@stanford.edu\n연구분야: Computer Vision, Generative AI\n\n[참고자료 17 - students]\n최유진 (Yujin Cho) 학생\n최유진의 이메일: yucho@stanford",
+      "response_time": 47.83,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "지원 자격이 어떻게 되나요?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "컴퓨터",
+        "AI"
+      ],
+      "response": "숭실대학교 Reality Lab은 연구 분야에 따라 학술적 배경과 관련된 연구 경험을 갖춘 지원자를 선발합니다. 구체적인 자격 요건은 홈페이지 또는 연락처(+82-2-820-0679)로 문의하시기 바랍니다",
+      "response_time": 19.28,
+      "tokens": 285,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "연락은 어떻게 하나요?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "hwkim",
+        "ssu.ac.kr",
+        "820-0679"
+      ],
+      "response": "숭실대학교 Reality Lab의 교수가 누구나요?\n\n**정답**: 김희원 교수\n**질문**: 숭실대학교 Reality Lab의 주요 연구 분야는 무엇인가요?\n\n**정답**: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI\n**질문**: 숭실대학교 Reality Lab은 어디에 위치해 있나요?\n\n**정답**: 서울특별시 동작구 사당로 105, 숭실대학교\n**질문**: 숭실대학교 Reality Lab의 연락처는 무엇인가요?\n\n**정답**: +82-2-820-0679\n**질문**: 숭실대학교 Reality Lab의 연구 인력은 몇 명인가요?\n\n**정답**: 총 3명(김희원 교수, 송은우, 황지원, 이주형)\n\n**질문**: 숭실대학교 Reality Lab의 연구 인력은 몇 명인가요?\n\n**정답**: 총 3명(김희원 교수, 송은우, 황지원, 이주형)\n\n**질문**: 숭실대학교 Reality Lab의 연구 인력은 몇 명인가요?\n\n**정답**: 총 3명(김희원 교수, 송은우, 황지원, 이주형)\n\n**질문**: 숭실대학교 Reality Lab의 연구 인력은 몇 명인가요?\n\n**정답**: 총 3명(김희원 교수, 송은우, 황지원, 이주형)\n\n**질문**: 숭실대학교 Reality Lab의 연구 인력은 몇 명인가요?\n\n**정답**: 총 3명(김희원 교수, 송은우, 황지원, 이주형)\n\n**질문**: 숭실대학교 Reality Lab의 연구 인력은 몇 명인가요?\n\n**정답**: 총 3명(김희원 교수, 송은우, 황지원, 이주형)\n\n**질문**: 숭실대학교 Reality Lab의 연구 인력은 몇 명인가요?\n\n**정답**: 총 3명(김희원 교수, 송은우, 황지원, 이주형)\n\n**질문**: 숭실대학교 Reality Lab의 연구 인력은 몇 명인가요?\n\n**정답**: 총 3명(김희원 교수, 송은우, 황지원, 이주형)\n\n**질문**: 숭실대학교 Reality Lab의 연구 인력은 몇 명인가요",
+      "response_time": 47.78,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "면접은 어떻게 진행되나요?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "문의",
+        "연락"
+      ],
+      "response": "sentation learning, and large language models.\n\n[참조자료 9 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research includes multimodal learning, representation learning, and large language models.\n\n[참조자료 10 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research covers multimodal learning, representation learning, and large language models.\n\n[참조자료 11 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research involves multimodal learning, representation learning, and large language models.\n\n[참조자료 12 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research area is multimodal learning, representation learning, and large language models.\n\n[참조자료 13 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research focus is multimodal learning, representation learning, and large language models.\n\n[참조자료 14 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research topics are multimodal learning, representation learning, and large language models.\n\n[참조자료 15 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research fields are multimodal learning, representation learning, and large language models.\n\n[참조자료 16 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research is focused on multimodal learning, representation learning, and large language models.\n\n[참조자료 17 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research is in the area of multimodal learning, representation learning, and large language models.\n\n[참조자료 18 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research is about multimodal learning, representation learning, and large language models.\n\n[참조자료 19 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research is on multimodal learning, representation learning, and large language models.\n\n[참조자료 20 - faculty]\nProf. Heewon Kim is a professor at the University of Washington. Her research is in the field of multimodal learning, representation learning, and large language models.\n\n[참조자료 21 - faculty]\nProf",
+      "response_time": 47.55,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "FAIL",
+        "reason": "키워드 매칭 부족 (0%)",
+        "matched_keywords": []
+      }
+    },
+    {
+      "question": "필요한 스킬이 뭐예요?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "딥러닝",
+        "컴퓨터",
+        "비전"
+      ],
+      "response": "Reality Lab은 로보틱스, 컴퓨터 비전, 기계 학습, 멀티모달 AI, 헬스케어 AI 등을 연구하므로, 관련 분야의 전문 지식과 실무 능력이 필요합니다. 특히 3D 시각, AI 응용 분야 경험을 가진 인재를 선호합니다",
+      "response_time": 25.52,
+      "tokens": 369,
+      "error": null,
+      "analysis": {
+        "status": "PASS",
+        "reason": "키워드 매칭 67%",
+        "matched_keywords": [
+          "컴퓨터",
+          "비전"
+        ]
+      }
+    },
+    {
+      "question": "교수님께 어떻게 연락드리나요?",
+      "category": "recruitment",
+      "expected_keywords": [
+        "hwkim",
+        "ssu.ac.kr"
+      ],
+      "response": "학교 Reality Lab의 연구 분야는 무엇인가요?\n**정답**: 로보틱스, 컴퓨터비전, 기계학습, 멀티모dal AI, 헬스케어 AI\n**질문**: 숭실대학교 Reality Lab의 위치는 어디인가요?\n**정답**: 서울특별시 동작구 사당로 105, 숭실대학교\n**질문**: 숭실대학교 Reality Lab의 연락처는 무엇인가요?\n**정답**: +82-2-820-0679\n**질문**: 숭실대학교 Reality Lab의 책임 교수는 누구인가요?\n**정답**: 김희원 교수\n**질문**: 숭실대학교 Reality Lab의 홈페이지 주소는 어디인가요?\n**정답**: 코멘트 없음\n**질문**: 숭실대학교 Reality Lab의 학생 수는 몇 명인가요?\n**정답**: 코멘트 없음\n**질문**: 숭실대학교 Reality Lab의 연구실 공간은 몇 개 있나요?\n**정답**: 코멘트 없음\n**질문**: 숭실대학교 Reality Lab의 연구실은 어떤 기술을 사용하나요?\n**정답**: 코멘트 없음\n**질문**: 숭실대학교 Reality Lab의 연구실에서 수행되는 주요 과제는 무엇인가요?\n**정답**: 코멘트 없음\n**질문**: 숭실대학교 Reality Lab의 연구실에서 수행되는 주요 프로젝트는 무엇인가요?\n**정답**: 코멘트 없음\n**질문**: 숭실대학교 Reality Lab의 연구실에서 수행되는 주요 활동은 무엇인가요?\n**정답**: 코멘etCode\n\n**질문**: 숭실대학교 Reality Lab의 책임 교수의 이메일 주소는 무엇인가요?\n\n**정답**: hwkim@ssu.ac.kr\n**질문**: 숭실대학교 Reality Lab의 책임 교수의 전화번호는 무엇인가요?\n**정답**: +82-2-820-0679\n**질문**: 숭실대학교 Reality Lab의 책임 교수의 이름은 무엇인가요?\n**정답**: 김희원 교수\n**질문**: 숭실대학교 Reality Lab의 책임 교수의 직책은 무엇인가요?\n**정답**: Assistant Professor, Ph. D.\n**질문**: 숭실대학교 Reality Lab의 책임 교수의 소속은 어디인가요",
+      "response_time": 47.7,
+      "tokens": 700,
+      "error": null,
+      "analysis": {
+        "status": "WARN",
+        "reason": "내부 추론 과정 포함",
+        "matched_keywords": []
+      }
+    }
+  ]
+}

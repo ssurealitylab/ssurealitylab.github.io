@@ -99,12 +99,12 @@ class RAGRetriever:
             return ""
 
         if language == 'ko':
-            context = "다음은 Reality Lab의 관련 정보입니다:\n\n"
+            context = "=== 데이터베이스 정보 ===\n\n"
         else:
-            context = "Here is relevant information about Reality Lab:\n\n"
+            context = "=== Database Information ===\n\n"
 
         for i, result in enumerate(search_results, 1):
-            context += f"[참고자료 {i}]\n{result['content']}\n\n"
+            context += f"{result['content']}\n---\n"
 
         return context.strip()
 

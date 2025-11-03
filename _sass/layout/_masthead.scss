@@ -430,8 +430,8 @@ header.masthead {
 @media (max-width: 767px) {
   header.masthead {
     // Fix background for mobile (fixed attachment doesn't work on mobile)
+    background: #f8fafc !important; // Simple solid light background - no gradients
     background-attachment: scroll !important;
-    background-color: #f8fafc; // Fallback background color
 
     .intro-text {
       padding-top: 140px; // Increased for better visibility on mobile (was 90px)

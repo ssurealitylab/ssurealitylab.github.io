@@ -103,10 +103,13 @@ def load_model(model_choice='qwen3-4b'):
             model_path,
             quantization_config=quantization_config,
             device_map="auto",
-            low_cpu_mem_usage=True
+            low_cpu_mem_usage=True,
+            trust_remote_code=True
         )
 
         logger.info(f"✅ {model_name} model loaded successfully with 4-bit quantization")
+        logger.info(f"Model vocab size: {model.config.vocab_size}, Tokenizer vocab size: {len(tokenizer)}")
+        logger.info(f"PAD token ID: {tokenizer.pad_token_id}, EOS token ID: {tokenizer.eos_token_id}")
         return True
 
     except Exception as e:
@@ -455,11 +458,10 @@ A: 박성용 학생은 Image Restoration과 AI for Astronomy를 연구하고 있
                 min_new_tokens=50,  # Ensure substantial response
                 do_sample=False,  # Greedy decoding (fastest)
                 num_beams=1,  # No beam search (fastest)
-                pad_token_id=tokenizer.eos_token_id,
-                eos_token_id=tokenizer.eos_token_id,
+                pad_token_id=tokenizer.pad_token_id if tokenizer.pad_token_id is not None else tokenizer.eos_token_id,
+                eos_token_id=[tokenizer.eos_token_id] if tokenizer.eos_token_id is not None else None,
                 attention_mask=inputs.attention_mask,
                 use_cache=True,  # Use KV cache for speed
-                early_stopping=True,
                 repetition_penalty=1.1  # Prevent repetition, faster termination
             )
 
@@ -767,11 +769,10 @@ Reality Lab 정보:
                     "min_new_tokens": 50,
                     "do_sample": False,
                     "num_beams": 1,
-                    "pad_token_id": tokenizer.eos_token_id,
-                    "eos_token_id": tokenizer.eos_token_id,
+                    "pad_token_id": tokenizer.pad_token_id if tokenizer.pad_token_id is not None else tokenizer.eos_token_id,
+                    "eos_token_id": [tokenizer.eos_token_id] if tokenizer.eos_token_id is not None else None,
                     "attention_mask": inputs.attention_mask,
                     "use_cache": True,
-                    "early_stopping": True,
                     "repetition_penalty": 1.1,
                     "streamer": streamer
                 }

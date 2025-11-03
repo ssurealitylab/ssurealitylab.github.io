@@ -153,14 +153,12 @@
   min-height: 400px;
   max-width: 800px;
   max-height: 800px;
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   display: none;
   flex-direction: column;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   resize: both;
   overflow: hidden;
 }
@@ -174,7 +172,6 @@
   cursor: move;
   user-select: none;
   background: linear-gradient(135deg, rgba(51, 102, 204, 0.1) 0%, rgba(41, 84, 179, 0.15) 100%);
-  backdrop-filter: blur(10px);
   border-radius: 16px 16px 0 0;
 }
 
@@ -410,9 +407,7 @@
 }
 
 .lang-btn {
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px) saturate(1.8);
-  -webkit-backdrop-filter: blur(10px) saturate(1.8);
+  background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 4px 8px;
@@ -497,7 +492,6 @@
   z-index: 1000;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   pointer-events: none;
-  backdrop-filter: blur(10px);
 }
 
 .ai-info-tooltip::after {
@@ -651,14 +645,12 @@
 
 .modal-content {
   position: relative;
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff !important;
   border-radius: 16px;
   width: 90%;
   max-width: 500px;
   max-height: 80vh;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
   z-index: 10;

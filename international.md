@@ -718,7 +718,7 @@ title: International Publications
   position: absolute;
   top: 8px;
   right: 8px;
-  background: rgba(79, 172, 254, 0.95) !important;
+  background: rgba(79, 172, 254, 0.75) !important;
   color: white !important;
   padding: 4px 10px;
   border-radius: 15px;
@@ -726,13 +726,17 @@ title: International Publications
   font-size: 0.7rem;
   box-shadow: 0 2px 8px rgba(79, 172, 254, 0.3);
   border: none !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 
 /* Challenge Badge - Orange-Yellow */
 .publication-badge.challenge-badge {
-  background: rgba(255, 167, 38, 0.95) !important;
+  background: rgba(255, 167, 38, 0.75) !important;
   color: white !important;
   border: none !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 
 /* Placeholder Card */

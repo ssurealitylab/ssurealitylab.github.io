@@ -294,8 +294,7 @@ setTimeout(function() {
             r2.style.left = (rect.left - horizontalSpacing * 2) + 'px';
             r2.style.top = rect.top + 'px';
             r2.style.opacity = '0';
-            r2.style.transform = 'translateX(-20px)';
-            r2.style.transition = 'all 0.5s ease';
+            r2.style.transition = 'opacity 0.5s ease';
             r2.style.fontWeight = computedStyle.fontWeight;
             r2.style.fontSize = computedStyle.fontSize;
             r2.style.fontFamily = computedStyle.fontFamily;
@@ -314,8 +313,7 @@ setTimeout(function() {
             r3.style.left = (rect.left - horizontalSpacing) + 'px';
             r3.style.top = rect.top + 'px';
             r3.style.opacity = '0';
-            r3.style.transform = 'translateX(-40px)';
-            r3.style.transition = 'all 0.7s ease';
+            r3.style.transition = 'opacity 0.7s ease';
             r3.style.fontWeight = computedStyle.fontWeight;
             r3.style.fontSize = computedStyle.fontSize;
             r3.style.fontFamily = computedStyle.fontFamily;
@@ -327,29 +325,25 @@ setTimeout(function() {
             r3.style.color = '#4ecdc4'; // Set custom color for easter egg effect
             r3.style.zIndex = '9998';
             r3.style.pointerEvents = 'none';
-            
+
             // Add them to the body instead of container
             document.body.appendChild(r2);
             document.body.appendChild(r3);
-            
-            // Animate them in sequence
+
+            // Animate them in sequence - fade in only
             setTimeout(function() {
                 r2.style.opacity = '1';
-                r2.style.transform = 'translateY(0)';
             }, 100);
-            
+
             setTimeout(function() {
                 r3.style.opacity = '1';
-                r3.style.transform = 'translateY(0)';
             }, 300);
-            
-            // Remove them after the animation
+
+            // Remove them after the animation - fade out only
             setTimeout(function() {
                 r2.style.opacity = '0';
-                r2.style.transform = 'translateY(20px)';
                 r3.style.opacity = '0';
-                r3.style.transform = 'translateY(40px)';
-                
+
                 setTimeout(function() {
                     if (r2.parentNode) r2.parentNode.removeChild(r2);
                     if (r3.parentNode) r3.parentNode.removeChild(r3);

@@ -448,16 +448,21 @@ header.masthead {
 
       .intro-lead-in {
         font-size: 18px; // Optimized for mobile readability
+        font-style: normal; // Same as PC
+        font-weight: 400; // Same as PC
+        line-height: 1.6; // Same as PC
         margin-bottom: 20px;
         opacity: 1 !important;
         visibility: visible !important;
         color: #6b7280 !important; // Force visible text color
         transition: none !important; // Disable all transitions
         animation: none !important; // Disable all animations
+        @include body-font; // Same font as PC
       }
 
       .intro-heading {
         font-size: 48px; // Optimized for mobile screens (was 56px)
+        font-weight: 500; // Same as PC
         line-height: 1.2;
         margin-bottom: 25px;
         opacity: 1 !important;
@@ -467,6 +472,7 @@ header.masthead {
         transition: none !important; // Disable all transitions
         animation: none !important; // Disable all animations
         transform: none !important; // Disable transforms
+        @include heading-font; // Same font as PC
       }
     }
 

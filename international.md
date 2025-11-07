@@ -38,10 +38,10 @@ title: International Publications
               <a href="https://drive.google.com/file/d/10vp2SWByAJGr-Ccrw68c2hTepsMr5di9/view" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i>
               </a>
-              <a href="https://oshmos.github.io/IPRF/" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
+              <a href="https://deepvelop99.github.io/iprf.github.io/" target="_blank" class="external-icon-link website-link" title="Website" onclick="event.stopPropagation()">
                 <i class="fas fa-globe"></i>
               </a>
-              <a href="https://github.com/OSHMOS/IPRF" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
+              <a href="https://github.com/deepvelop99/IPRF" target="_blank" class="external-icon-link github-link" title="GitHub" onclick="event.stopPropagation()">
                 <i class="fab fa-github"></i>
               </a>
             </div>

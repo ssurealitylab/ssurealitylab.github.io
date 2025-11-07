@@ -1082,23 +1082,30 @@ title: International Publications
 
 .publication-modal-close {
   position: absolute;
-  top: 0px;
-  right: 5px;
-  width: 40px;
-  height: 40px;
+  top: 5px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  background: none;
+  background: rgba(255, 255, 255, 0.95);
   border: none;
-  font-size: 30px;
+  border-radius: 50%;
+  font-size: 24px;
   color: #999;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 11;
+  transition: all 0.3s ease;
+  transform-origin: center center;
+  line-height: 1;
+  padding: 0;
 }
 
 .publication-modal-close:hover {
   color: #333;
+  background: rgba(255, 255, 255, 1);
+  transform: rotate(90deg);
 }
 
 /* Citation Box Styling */

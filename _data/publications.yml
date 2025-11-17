@@ -12,7 +12,6 @@ publications:
     type: conference
     status: accepted
     citation: "[C26] Sebin Lee† and Heewon Kim, \"HiGlassRM: Learning to Remove High-prescription Glasses via Synthetic Dataset Generation,\" Proc. Winter Conference on Applications of Computer Vision (WACV), 2026 (accepted)"
-    image: "assets/img/publications/higlassrm/teaser.png"
     notes: "† Graduate student"
 
   - id: wacv26_mbti

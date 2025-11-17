@@ -23,13 +23,31 @@ title: International Publications
       <div class="row">
         <div class="col-12">
           <div class="category-header d-flex align-items-center mb-4">
-            <div class="category-badge international-badge">2025</div>
+            <div class="category-badge international-badge">2026 & 2025</div>
             <div class="category-line flex-grow-1"></div>
           </div>
         </div>
       </div>
 
       <div class="row">
+        <!-- WACV 2026 - HiGlassRM -->
+        <div class="col-12 mb-3">
+          <div class="publication-list-item" onclick="openPublicationModal('c26')" style="cursor: pointer;">
+            <div class="publication-badge">WACV</div>
+            <h5 class="list-title">HiGlassRM: Learning to Remove High-prescription Glasses via Synthetic Dataset Generation</h5>
+            <p class="list-authors">Sebin Lee†, Heewon Kim</p>
+          </div>
+        </div>
+
+        <!-- WACV 2026 - MBTI -->
+        <div class="col-12 mb-3">
+          <div class="publication-list-item" onclick="openPublicationModal('c25')" style="cursor: pointer;">
+            <div class="publication-badge">WACV</div>
+            <h5 class="list-title">MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation</h5>
+            <p class="list-authors">ByungKwan Chae*, Youngjae Choi*, Heewon Kim</p>
+          </div>
+        </div>
+
         <!-- APP3DV 2025 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c24')" style="cursor: pointer;">
@@ -557,9 +575,9 @@ title: International Publications
             <h5>Recent Achievements</h5>
             <ul class="list-unstyled text-left">
               <li><i class="fas fa-trophy text-warning"></i> ARNOLD Challenge 1st Place</li>
+              <li><i class="fas fa-file-alt text-info"></i> WACV 2026 Paper Acceptance (2 papers)</li>
               <li><i class="fas fa-file-alt text-info"></i> AAAI 2025 Paper Acceptance</li>
               <li><i class="fas fa-file-alt text-info"></i> CVPR 2025 Paper Acceptance</li>
-              <li><i class="fas fa-file-alt text-info"></i> BMVC 2025 Paper Acceptance</li>
             </ul>
           </div>
         </div>

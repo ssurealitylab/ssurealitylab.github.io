@@ -15,6 +15,17 @@ publications:
     image: "assets/img/publications/higlassrm/teaser.png"
     notes: "† Graduate student"
 
+  - id: wacv26_mbti
+    title: "MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation"
+    authors: "ByungKwan Chae*, Youngjae Choi*, Heewon Kim"
+    venue: "Winter Conference on Applications of Computer Vision (WACV)"
+    venue_short: "WACV26"
+    year: 2026
+    type: conference
+    status: accepted
+    citation: "[C25] ByungKwan Chae*, Youngjae Choi*, and Heewon Kim, \"MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation,\" Proc. Winter Conference on Applications of Computer Vision (WACV), 2026 (accepted)"
+    notes: "* Equal contribution"
+
   # 2025 Publications
   - id: c25
     title: "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI"
@@ -415,15 +426,3 @@ publications:
     notes: "† Undergraduate student"
     links:
       pdf: "https://www.sciencedirect.com/science/article/pii/S2405959525000360"
-
-  # WACV 2026 - MBTI (without image, excluded from latest publications)
-  - id: wacv26_mbti
-    title: "MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation"
-    authors: "ByungKwan Chae*, Youngjae Choi*, Heewon Kim"
-    venue: "Winter Conference on Applications of Computer Vision (WACV)"
-    venue_short: "WACV26"
-    year: 2026
-    type: conference
-    status: accepted
-    citation: "[C25] ByungKwan Chae*, Youngjae Choi*, and Heewon Kim, \"MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation,\" Proc. Winter Conference on Applications of Computer Vision (WACV), 2026 (accepted)"
-    notes: "* Equal contribution"

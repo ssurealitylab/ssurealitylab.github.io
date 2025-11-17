@@ -2,7 +2,7 @@
 layout: page
 title: News & Updates - Reality Lab
 description: Latest news, achievements, and milestones from Reality Lab at Soongsil University. CVPR, AAAI paper acceptances, ARNOLD Challenge wins, grants, and new members.
-keywords: Reality Lab news, CVPR 2025, AAAI 2025, BMVC 2025, ARNOLD Challenge, AI research news, Soongsil University achievements, NRF grant, research awards, 연구실 소식
+keywords: Reality Lab news, WACV 2026, CVPR 2025, AAAI 2025, BMVC 2025, ARNOLD Challenge, AI research news, Soongsil University achievements, NRF grant, research awards, 연구실 소식
 image: /assets/img/header.png
 ---
 
@@ -18,6 +18,21 @@ image: /assets/img/header.png
 <section class="news-content py-5">
   <div class="container">
     <div class="row">
+        <!-- WACV 2026 Papers -->
+        <div class="col-lg-4 mb-4">
+          <div class="news-card paper-card">
+            <img src="{{ site.baseurl }}/img/news/wacv2026.png?v=5" alt="WACV 2026" class="news-img">
+            <div class="card-body">
+              <h5 class="card-title">WACV 2026 Paper Acceptances</h5>
+              <p class="card-subtitle">Sebin Lee, ByungKwan Chae, Youngjae Choi</p>
+              <p class="card-text">Sebin Lee, ByungKwan Chae, and Youngjae Choi - 2 papers have been accepted to WACV 2026! Congrats!</p>
+              <div class="card-date-category">
+                <small class="text-muted">Nov 17, 2025 | Publication</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- BMVC 2025 Paper -->
         <div class="col-lg-4 mb-4">
           <div class="news-card paper-card">

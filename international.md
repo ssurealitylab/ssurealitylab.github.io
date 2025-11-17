@@ -41,7 +41,7 @@ title: International Publications
 
         <!-- WACV 2026 - MBTI -->
         <div class="col-12 mb-3">
-          <div class="publication-list-item" onclick="openPublicationModal('c25')" style="cursor: pointer;">
+          <div class="publication-list-item" onclick="openPublicationModal('wacv26_mbti')" style="cursor: pointer;">
             <div class="publication-badge">WACV</div>
             <h5 class="list-title">MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation</h5>
             <p class="list-authors">ByungKwan Chae*, Youngjae Choi*, Heewon Kim</p>

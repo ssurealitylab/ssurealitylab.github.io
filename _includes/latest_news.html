@@ -18,61 +18,24 @@
     </div>
 
     <div class="row">
-      <!-- BMVC 2025 Paper -->
+      {% for item in site.data.news.news limit:4 %}
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="news-card-home">
-          <img src="{{ site.baseurl }}/img/news/bmvc2025.png?v=6" alt="BMVC 2025" class="news-img-home">
+          {% if item.image %}
+          <img src="{{ site.baseurl }}/img/news/{{ item.image }}?v=7" alt="{{ item.title }}" class="news-img-home">
+          {% else %}
+          <img src="{{ site.baseurl }}/img/news/default.png?v=7" alt="{{ item.title }}" class="news-img-home">
+          {% endif %}
           <div class="card-body-home">
-            <h5 class="card-title-home">BMVC 2025 Paper Acceptance</h5>
-            <p class="card-subtitle-home">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
+            <h5 class="card-title-home">{{ item.title }}</h5>
+            <p class="card-subtitle-home">{{ item.participants | join: ", " }}</p>
             <div class="card-date-home">
-              <small class="text-muted">Jul 26, 2025</small>
+              <small class="text-muted">{{ item.date | date: "%b %-d, %Y" }}</small>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- ARNOLD Challenge 1st Place -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="news-card-home">
-          <img src="{{ site.baseurl }}/img/news/embodied-ai-workshop.png?v=6" alt="ARNOLD Challenge" class="news-img-home">
-          <div class="card-body-home">
-            <h5 class="card-title-home">ARNOLD Challenge 1st Place</h5>
-            <p class="card-subtitle-home">Dowon Kim, Chaewoo Lim, Sungyong Park, Sangmin Lee</p>
-            <div class="card-date-home">
-              <small class="text-muted">Jun 4, 2025</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PLOS One Paper -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="news-card-home">
-          <img src="{{ site.baseurl }}/img/news/plos-one.png?v=6" alt="PLOS One" class="news-img-home">
-          <div class="card-body-home">
-            <h5 class="card-title-home">PLOS One Paper Acceptance</h5>
-            <p class="card-subtitle-home">Yeri Kim, Seoyoung Kim</p>
-            <div class="card-date-home">
-              <small class="text-muted">May 1, 2025</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Qualcomm Internship -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="news-card-home">
-          <img src="{{ site.baseurl }}/img/news/qualcomm.png?v=6" alt="Qualcomm" class="news-img-home">
-          <div class="card-body-home">
-            <h5 class="card-title-home">Qualcomm Internship</h5>
-            <p class="card-subtitle-home">Sangmin Lee</p>
-            <div class="card-date-home">
-              <small class="text-muted">Mar 24, 2025</small>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -127,7 +90,8 @@
 }
 
 .news-card-home:hover {
-  /* Hover effect removed */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .news-card-home img,

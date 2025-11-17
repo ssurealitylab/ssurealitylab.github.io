@@ -1,54 +1,70 @@
 news:
+  - title: "WACV 2026 Paper Acceptances"
+    date: "2025-11-17"
+    category: "Publication"
+    participants: ["Sebin Lee", "ByungKwan Chae", "Youngjae Choi"]
+    description: "Sebin Lee, ByungKwan Chae, and Youngjae Choi - 2 papers have been accepted to WACV 2026! Congrats!"
+    image: "wacv2026.png"
+
   - title: "BMVC 2025 Paper Acceptance"
     date: "2025-07-26"
     category: "Publication"
     participants: ["Youngjae Choi", "Hyunsuh Kho", "Hojae Jeong", "Byungkwan Chae"]
     description: "Paper accepted to BMVC 2025"
+    image: "bmvc2025.png"
 
   - title: "ARNOLD Challenge 1st Place"
     date: "2025-06-04"
     category: "Awards"
     participants: ["Dowon Kim", "Chaewoo Lim", "Sungyong Park", "Sangmin Lee"]
     description: "1st place in ARNOLD Challenge at CVPR 2025 Embodied AI Workshop"
+    image: "embodied-ai-workshop.png"
 
   - title: "PLOS One Paper Acceptance"
     date: "2025-05-01"
     category: "Publication"
     participants: ["Yeri Kim", "Seoyoung Kim"]
     description: "Paper accepted to PLOS One"
+    image: "plos-one.png"
 
   - title: "Qualcomm Internship"
     date: "2025-03-24"
     category: "Internship"
     participants: ["Sangmin Lee"]
     description: "Started software internship for Automated Driving at Qualcomm"
+    image: "qualcomm.png"
 
   - title: "ICT Express Paper Acceptance"
     date: "2025-03-18"
     category: "Publication"
     participants: ["Seunghyun Oh"]
     description: "Paper accepted to ICT Express"
+    image: "ict-express.png"
 
   - title: "CVPR 2025 Paper Acceptance"
     date: "2025-02-26"
     category: "Publication"
     participants: ["Sangmin Lee", "Sungyong Park"]
     description: "Paper accepted to CVPR 2025"
+    image: "cvpr2025.png"
 
   - title: "AAAI 2025 Paper Acceptance"
     date: "2024-12-10"
     category: "Publication"
     participants: ["Sooyoung Choi", "Sungyong Park"]
     description: "Paper accepted to AAAI 2025"
+    image: "aaai2025.png"
 
   - title: "Outstanding Reviewer Award"
     date: "2024-11-04"
     category: "Awards"
     participants: ["Prof. Heewon Kim"]
     description: "Nominated as outstanding reviewer for BMVC 2024"
+    image: "bmvc2024.png"
 
   - title: "ARNOLD Challenge 3rd Place"
     date: "2024-06-18"
     category: "Awards"
     participants: ["Sangmin Lee", "Sungyong Park"]
     description: "3rd place in ARNOLD Challenge at CVPR 2024"
+    image: "embodied-ai-2024.png"

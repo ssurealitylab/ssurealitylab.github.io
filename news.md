@@ -18,528 +18,136 @@ image: /assets/img/header.png
 <section class="news-content py-5">
   <div class="container">
     <div class="row">
-        <!-- WACV 2026 Papers -->
+      {% for item in site.data.news.news %}
         <div class="col-lg-4 mb-4">
-          <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/wacv2026.png?v=5" alt="WACV 2026" class="news-img">
+          <div class="news-card {% if item.category == 'Publication' %}paper-card{% elsif item.category == 'Awards' %}challenge-card{% else %}research-card{% endif %}">
+            {% if item.image %}
+            <img src="{{ site.baseurl }}/img/news/{{ item.image }}?v=7" alt="{{ item.title }}" class="news-img">
+            {% else %}
+            <img src="{{ site.baseurl }}/img/news/default.png?v=7" alt="{{ item.title }}" class="news-img">
+            {% endif %}
             <div class="card-body">
-              <h5 class="card-title">WACV 2026 Paper Acceptances</h5>
-              <p class="card-subtitle">Sebin Lee, ByungKwan Chae, Youngjae Choi</p>
-              <p class="card-text">Sebin Lee, ByungKwan Chae, and Youngjae Choi - 2 papers have been accepted to WACV 2026! Congrats!</p>
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-subtitle">{{ item.participants | join: ", " }}</p>
+              <p class="card-text">{{ item.description }}</p>
               <div class="card-date-category">
-                <small class="text-muted">Nov 17, 2025 | Publication</small>
+                <small class="text-muted">{{ item.date | date: "%b %-d, %Y" }} | {{ item.category }}</small>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- BMVC 2025 Paper -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/bmvc2025.png?v=5" alt="BMVC 2025" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">BMVC 2025 Paper Acceptance</h5>
-              <p class="card-subtitle">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, ByungKwan Chae</p>
-              <p class="card-text">Youngjae Choi, Hyunsuh Koh, Hojae Jeong, and ByungKwan Chae's paper has been accepted to BMVC 2025. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Jul 26, 2025 | Publication</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ARNOLD Challenge 1st Place -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card challenge-card">
-            <img src="{{ site.baseurl }}/img/news/embodied-ai-workshop.png?v=5" alt="ARNOLD Challenge" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">ARNOLD Challenge 1st Place</h5>
-              <p class="card-subtitle">Dowon Kim, Chaewoo Lim, Sungyong Park, Sangmin Lee</p>
-              <p class="card-text">Team achieved 1st place in ARNOLD Challenge at CVPR 2025 Embodied AI Workshop. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Jun 4, 2025 | Awards</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PLOS One Paper -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/plos-one.png?v=5" alt="PLOS One" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">PLOS One Paper Acceptance</h5>
-              <p class="card-subtitle">Yeri Kim, Seoyoung Kim</p>
-              <p class="card-text">Yeri Kim and Seoyoung Kim's paper has been accepted to PLOS One. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">May 1, 2025 | Publication</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Qualcomm Internship -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/qualcomm.png?v=5" alt="Qualcomm" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">Qualcomm Internship</h5>
-              <p class="card-subtitle">Sangmin Lee</p>
-              <p class="card-text">Sangmin Lee started software internship for Automated Driving at Qualcomm. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Mar 24, 2025 | Internship</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ICT Express Paper -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/ict-express.png?v=5" alt="ICT Express" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">ICT Express Paper Acceptance</h5>
-              <p class="card-subtitle">Seunghyun Oh</p>
-              <p class="card-text">Seunghyun Oh's paper has been accepted to ICT Express. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Mar 18, 2025 | Publication</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CVPR 2025 Paper -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/cvpr2025.png?v=5" alt="CVPR 2025" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">CVPR 2025 Paper Acceptance</h5>
-              <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
-              <p class="card-text">Sangmin Lee and Sungyong Park's paper has been accepted to CVPR 2025. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Feb 26, 2025 | Publication</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AAAI 2025 Paper -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/aaai2025.png?v=5" alt="AAAI 2025" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">AAAI 2025 Paper Acceptance</h5>
-              <p class="card-subtitle">Sooyoung Choi, Sungyong Park</p>
-              <p class="card-text">Sooyoung Choi and Sungyong Park's paper has been accepted to AAAI 2025. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Dec 10, 2024 | Publication</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Outstanding Reviewer BMVC -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/bmvc2024.png?v=5" alt="BMVC 2024" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">Outstanding Reviewer Award</h5>
-              <p class="card-subtitle">Prof. Heewon Kim</p>
-              <p class="card-text">Prof. Heewon Kim was nominated as outstanding reviewer for BMVC 2024. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Nov 4, 2024 | Awards</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- New Master Students -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/ai-students.png?v=5" alt="New Students" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">New Master Students</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">Three master students joined the lab. Welcome to Reality Lab!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Sep 1, 2024 | Members</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- NRF Grant -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/nrf.png?v=5" alt="NRF Grant" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">NRF Grant Award</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">Team won an NRF grant. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Aug 28, 2024 | Grants</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ARNOLD Challenge 3rd Place -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card challenge-card">
-            <img src="{{ site.baseurl }}/img/news/embodied-ai-2024.png?v=5" alt="ARNOLD Challenge 2024" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">ARNOLD Challenge 3rd Place</h5>
-              <p class="card-subtitle">Sangmin Lee, Sungyong Park</p>
-              <p class="card-text">Sangmin Lee and Sungyong Park achieved 3rd place in ARNOLD Challenge at CVPR 2024. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Jun 18, 2024 | Awards</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Metaverse Program Support -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/itp-metaverse.png?v=5" alt="Metaverse Program" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">Metaverse Program Support</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">Lab supported by the Graduate School of Metaverse program. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Jun 4, 2024 | Grants</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Security Program Support -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/itp-security.png?v=5" alt="Security Program" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">Security Program Support</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">Lab supported by the Graduate School of Security program. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Jun 3, 2024 | Grants</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SW Excellence Program -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/itp-software.png?v=5" alt="SW Excellence Program" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">SW Excellence Program</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">Lab supported by the National Program of Excellence in Software. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">May 28, 2024 | Grants</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- New Master Students March -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/ai-students.png?v=5" alt="New Students" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">New Master Students</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">Six master students joined our lab! Welcome!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Mar 1, 2024 | Members</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- TIP Paper -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/tip.png?v=5" alt="TIP" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">TIP Paper Acceptance</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">One paper accepted to TIP (Impact Factor: 11.041). Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Aug 6, 2023 | Publication</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Summer Interns -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card research-card">
-            <img src="{{ site.baseurl }}/img/news/summer-internship.png?v=5" alt="Summer Internship" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">Summer Internship Program</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">17 students started summer internships at the lab. Welcome!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Jun 26, 2023 | Members</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- TPAMI Paper -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/tpami.png?v=5" alt="TPAMI" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">TPAMI Paper Acceptance</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">One paper accepted to TPAMI (Impact Factor: 24.314). Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Mar 15, 2023 | Publication</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ICLR Paper -->
-        <div class="col-lg-4 mb-4">
-          <div class="news-card paper-card">
-            <img src="{{ site.baseurl }}/img/news/iclr.png?v=5" alt="ICLR 2023" class="news-img">
-            <div class="card-body">
-              <h5 class="card-title">ICLR 2023 Paper Acceptance</h5>
-              <p class="card-subtitle">Reality Lab</p>
-              <p class="card-text">One paper accepted to ICLR 2023. Congratulations!</p>
-              <div class="card-date-category">
-                <small class="text-muted">Jan 21, 2023 | Publication</small>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</section>
-
-<!-- Mission Statement -->
-<section class="py-5 bg-light">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <h3 class="text-uppercase">Our Mission</h3>
-        <p class="lead text-muted">Developing intelligent systems that learn from real-world perception and interaction—just like humans.</p>
-        <p class="text-muted">
-          <i class="fas fa-map-marker-alt"></i> 
-          Global School of Media, College of IT, Soongsil University, Seoul, Republic of Korea
-        </p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
 <style>
-/* News Content Styles */
+/* News Timeline Header */
 .news-timeline-header {
-  background: linear-gradient(90deg, rgba(52, 152, 219, 0.1) 0%, rgba(155, 89, 182, 0.1) 100%);
-}
-
-/* Year Section */
-.year-section {
-  margin-bottom: 4rem;
-}
-
-.year-header {
-  margin-bottom: 2rem;
-}
-
-.year-badge {
-  background: linear-gradient(135deg, #3498db, #2980b9);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 12px 24px;
-  border-radius: 50px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-  margin-right: 20px;
-  min-width: 100px;
-  text-align: center;
+  padding: 80px 0;
 }
 
-.year-line {
-  height: 3px;
-  background: linear-gradient(90deg, #3498db, rgba(52, 152, 219, 0.1));
-  border-radius: 2px;
+.news-timeline-header h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.news-timeline-header h3 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* News Content */
+.news-content {
+  background-color: #f8f9fa;
 }
 
 /* News Cards */
 .news-card {
-  border: none;
-  border-radius: 15px;
+  background: white;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   height: 100%;
-  background: white;
-  border: 3px solid transparent;
   display: flex;
   flex-direction: column;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 .news-card:hover {
-  /* Hover effect removed */
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Category-based Border Colors */
-.challenge-card {
-  border-color: #ffd700 !important; /* Yellow for challenges */
+.news-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
 }
 
-.challenge-card:hover {
-  border-color: #ffed4a !important;
-  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
+.news-card .card-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.paper-card {
-  border-color: #3498db !important; /* Blue for papers */
-}
-
-.paper-card:hover {
-  border-color: #5dade2 !important;
-  box-shadow: 0 8px 30px rgba(52, 152, 219, 0.3);
-}
-
-.research-card {
-  border-color: #9b59b6 !important; /* Purple for research projects */
-}
-
-.research-card:hover {
-  border-color: #bb8fce !important;
-  box-shadow: 0 8px 30px rgba(155, 89, 182, 0.3);
-}
-
-/* Card Layout - All Uniform */
 .news-card .card-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #2c3e50;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .news-card .card-subtitle {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #7f8c8d;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: 500;
 }
 
 .news-card .card-text {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #5a6c7d;
-  line-height: 1.4;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 16px;
 }
 
-/* Placeholder Card */
-.placeholder-card {
-  border: 2px dashed #bdc3c7 !important;
-  background: #f8f9fa;
-}
-
-.placeholder-img {
-  height: 150px;
-  background: #ecf0f1;
-  border-radius: 8px;
-  margin: 15px;
-}
-
-/* News Image */
-.news-img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  margin: 0;
-  padding: 15px;
-  border-radius: 15px;
-  background-color: white;
-}
-
-/* Research Areas Badges */
-.research-areas {
-  margin-top: 10px;
-}
-
-.research-areas .badge {
-  margin: 2px 4px 2px 0;
-  padding: 6px 12px;
-  font-size: 0.75rem;
-  border-radius: 20px;
-}
-
-.research-areas .badge i {
-  margin-right: 5px;
-}
-
-/* Card Body Styling */
-.card-body {
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.card-subtitle {
-  font-weight: 500;
-  color: #6c757d;
-  margin-bottom: 0.5rem;
-}
-
-/* Date and Category Styling */
 .card-date-category {
   margin-top: auto;
-  padding-top: 10px;
-  border-top: 1px solid #eee;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
 }
 
-.card-date-category small {
-  font-weight: 600;
-  color: #495057;
-  font-size: 0.8rem;
+/* Card Type Specific Styles */
+.paper-card {
+  border-top: 4px solid #3b82f6;
+}
+
+.challenge-card {
+  border-top: 4px solid #10b981;
+}
+
+.research-card {
+  border-top: 4px solid #8b5cf6;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .year-badge {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    min-width: 80px;
+  .news-timeline-header {
+    padding: 60px 0;
   }
-  
-  .placeholder-img {
-    height: 120px;
-    margin: 10px;
-  }
-  
-  .card-body {
-    padding: 1rem;
-  }
-}
 
-@media (max-width: 576px) {
-  .year-header {
-    flex-direction: column;
-    align-items: flex-start;
+  .news-img {
+    height: 180px;
   }
-  
-  .year-badge {
-    margin-bottom: 15px;
-    margin-right: 0;
-  }
-  
-  .year-line {
-    height: 2px;
+
+  .news-card .card-title {
+    font-size: 1.1rem;
   }
 }
 </style>

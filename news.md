@@ -1,6 +1,9 @@
 ---
 layout: page
-title: News
+title: News & Updates - Reality Lab
+description: Latest news, achievements, and milestones from Reality Lab at Soongsil University. CVPR, AAAI paper acceptances, ARNOLD Challenge wins, grants, and new members.
+keywords: Reality Lab news, CVPR 2025, AAAI 2025, BMVC 2025, ARNOLD Challenge, AI research news, Soongsil University achievements, NRF grant, research awards, 연구실 소식
+image: /assets/img/header.png
 ---
 
 <!-- Timeline Header -->

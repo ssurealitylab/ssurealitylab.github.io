@@ -1,0 +1,98 @@
+<!-- Schema.org structured data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#organization",
+      "name": "{{ site.organization.name }}",
+      "legalName": "{{ site.organization.legal_name }}",
+      "url": "{{ site.url }}{{ site.baseurl }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.organization.logo }}"
+      },
+      "description": "{{ site.organization.description }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.organization.address.street }}",
+        "addressLocality": "{{ site.organization.address.city }}",
+        "postalCode": "{{ site.organization.address.postal_code }}",
+        "addressCountry": "{{ site.organization.address.country }}"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "{{ site.organization.contact.email }}",
+        "contactType": "{{ site.organization.contact.type }}"
+      },
+      "sameAs": {{ site.social.links | jsonify }}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+      "url": "{{ site.url }}{{ site.baseurl }}",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "publisher": {
+        "@id": "{{ site.url }}{{ site.baseurl }}/#organization"
+      },
+      "inLanguage": "{{ site.lang }}"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}#webpage",
+      "url": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
+      "name": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+      "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
+      "isPartOf": {
+        "@id": "{{ site.url }}{{ site.baseurl }}/#website"
+      },
+      "inLanguage": "{{ page.lang | default: site.lang }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.url }}{{ site.baseurl }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    {% if page.layout == 'page' and page.title contains 'Members' %},
+    {
+      "@type": "ResearchOrganization",
+      "name": "{{ site.title }}",
+      "description": "{{ site.organization.description }}",
+      "url": "{{ site.url }}{{ site.baseurl }}",
+      "member": [
+        {% for member in site.data.members.faculty %}
+        {
+          "@type": "Person",
+          "name": "{{ member.name }}",
+          "jobTitle": "{{ member.position }}",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "{{ member.affiliation }}"
+          },
+          "email": "{{ member.email }}",
+          "image": "{{ site.url }}{{ site.baseurl }}/{{ member.photo }}"
+          {% if member.scholar and member.scholar != "" %}
+          ,
+          "sameAs": "{{ member.scholar }}"
+          {% endif %}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endif %}
+    {% if page.layout == 'page' and page.title contains 'Publications' %},
+    {
+      "@type": "CollectionPage",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description }}",
+      "about": {
+        "@type": "ScholarlyArticle",
+        "keywords": "{{ page.keywords }}"
+      }
+    }
+    {% endif %}
+  ]
+}
+</script>

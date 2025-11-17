@@ -26,6 +26,46 @@ author     : Prof. Heewon Kim
 
 locale: "en" # See available languages in _data/sitetext.yml
 
+# Enhanced SEO Settings
+tagline: "AI Research Laboratory at Soongsil University"
+keywords: "Reality Lab, Soongsil University, AI Research, Computer Vision, Deep Learning, Embodied AI, Machine Learning, CVPR, AAAI, SSU"
+
+# Social Media & Open Graph
+twitter:
+  username: RealityLabSSU
+  card: summary_large_image
+
+social:
+  name: Reality Lab
+  links:
+    - https://github.com/ssurealitylab
+    - https://ssurealitylab.github.io/Realitylab-site
+
+# Organization Schema
+organization:
+  name: Reality Lab
+  legal_name: Reality Lab, Soongsil University
+  url: https://ssurealitylab.github.io/Realitylab-site
+  logo: https://ssurealitylab.github.io/Realitylab-site/assets/img/ssu-logo.png
+  description: AI Research Laboratory specializing in Computer Vision, Deep Learning, and Embodied AI
+  address:
+    street: 369 Sangdo-ro, Dongjak-gu
+    city: Seoul
+    postal_code: 06978
+    country: Republic of Korea
+  contact:
+    email: heewon@ssu.ac.kr
+    type: Laboratory
+
+# Default image for social media sharing
+og_image: /assets/img/header.png
+
+# Language alternates
+lang: en
+lang_alternates:
+  - lang: ko
+    url: https://ssurealitylab.github.io/Realitylab-site
+
 analytics:
   google: #Google Analytics tracking code here
 

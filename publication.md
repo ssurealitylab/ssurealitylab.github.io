@@ -1,6 +1,9 @@
 ---
 layout: page
-title: Publications
+title: Publications & Research - Reality Lab
+description: Research publications from Reality Lab at Soongsil University. CVPR, AAAI, BMVC papers on Computer Vision, Embodied AI, and Deep Learning. ARNOLD Challenge 1st place winners.
+keywords: CVPR 2025, AAAI 2025, BMVC 2025, Computer Vision papers, AI publications, Embodied AI research, ARNOLD Challenge, SIDL dataset, Deep Learning research, 논문, 연구 성과
+image: /assets/img/sidl-teaser.png
 ---
 
 <!-- Publications Header -->

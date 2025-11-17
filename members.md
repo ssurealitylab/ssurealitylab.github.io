@@ -1,6 +1,9 @@
 ---
 layout: page
-title: Members
+title: Lab Members - Reality Lab SSU
+description: Meet our research team at Reality Lab, Soongsil University. Faculty, graduate students, and interns working on AI, Computer Vision, and Embodied AI research.
+keywords: Reality Lab members, AI researchers, Computer Vision researchers, Soongsil University faculty, Prof. Heewon Kim, AI graduate students, Machine Learning team, 연구실 구성원
+image: /assets/img/header.png
 ---
 
 <style>

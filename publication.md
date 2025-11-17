@@ -2,7 +2,7 @@
 layout: page
 title: Publications & Research - Reality Lab
 description: Research publications from Reality Lab at Soongsil University. CVPR, AAAI, BMVC papers on Computer Vision, Embodied AI, and Deep Learning. ARNOLD Challenge 1st place winners.
-keywords: CVPR 2025, AAAI 2025, BMVC 2025, Computer Vision papers, AI publications, Embodied AI research, ARNOLD Challenge, SIDL dataset, Deep Learning research, 논문, 연구 성과
+keywords: WACV 2026, CVPR 2025, AAAI 2025, BMVC 2025, Computer Vision papers, AI publications, Embodied AI research, ARNOLD Challenge, SIDL dataset, Deep Learning research, Image Generation, 논문, 연구 성과
 image: /assets/img/sidl-teaser.png
 ---
 
@@ -88,30 +88,32 @@ image: /assets/img/sidl-teaser.png
           </div>
         </div>
         
-        <!-- Placeholder 1 -->
+        <!-- WACV 2026 - HiGlassRM -->
         <div class="col-lg-4 mb-4">
-          <div class="publication-card placeholder-card">
+          <div class="publication-card paper-card">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
+              <i class="fas fa-glasses fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">More International Publications</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Additional international publications will be updated.</p>
+              <h5 class="card-title">HiGlassRM: Learning to Remove High-prescription Glasses via Synthetic Dataset Generation</h5>
+              <p class="card-subtitle">WACV 2026 (Accepted)</p>
+              <p class="card-text">Sebin Lee, Heewon Kim</p>
+              <div class="publication-badge">🎉 WACV26 Accept!</div>
             </div>
           </div>
         </div>
-        
-        <!-- Placeholder 2 -->
+
+        <!-- WACV 2026 - MBTI -->
         <div class="col-lg-4 mb-4">
-          <div class="publication-card placeholder-card">
+          <div class="publication-card paper-card">
             <div class="placeholder-img d-flex align-items-center justify-content-center">
-              <i class="fas fa-plus fa-2x text-muted"></i>
+              <i class="fas fa-images fa-2x text-muted"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">More International Publications</h5>
-              <p class="card-subtitle">Coming Soon</p>
-              <p class="card-text">Additional international publications will be updated.</p>
+              <h5 class="card-title">MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation</h5>
+              <p class="card-subtitle">WACV 2026 (Accepted)</p>
+              <p class="card-text">ByungKwan Chae*, Youngjae Choi*, Heewon Kim</p>
+              <div class="publication-badge">🎉 WACV26 Accept!</div>
             </div>
           </div>
         </div>
@@ -197,9 +199,9 @@ image: /assets/img/sidl-teaser.png
             <h5>Recent Achievements</h5>
             <ul class="list-unstyled text-left">
               <li><i class="fas fa-trophy text-warning"></i> ARNOLD Challenge 1st Place</li>
+              <li><i class="fas fa-file-alt text-info"></i> WACV 2026 Paper Acceptance (2 papers)</li>
               <li><i class="fas fa-file-alt text-info"></i> AAAI 2025 Paper Acceptance</li>
               <li><i class="fas fa-file-alt text-info"></i> CVPR 2025 Paper Acceptance</li>
-              <li><i class="fas fa-building text-success"></i> Qualcomm Internship</li>
             </ul>
           </div>
         </div>

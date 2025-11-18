@@ -472,3 +472,28 @@ ai_server/restart_tunnel.sh: line 40: echo: write error: No space left on device
 [2025. 11. 17. (월) 08:00:28 KST] 🚀 Server + Tunnel ready!
 ========================================
 
+[2025. 11. 18. (화) 04:00:01 KST] 🌙 Stopping AI server for rest time...
+[2025. 11. 18. (화) 04:00:01 KST] ✅ AI server stopped successfully
+[2025. 11. 18. (화) 04:00:01 KST] ✅ Cloudflare tunnel stopped
+[2025. 11. 18. (화) 04:00:01 KST] 💤 Rest time started (4 AM - 8 AM KST)
+
+
+========================================
+[2025. 11. 18. (화) 08:00:01 KST] ☀️  Starting AI server + tunnel...
+========================================
+[2025. 11. 18. (화) 08:00:01 KST] Step 1/2: Starting AI server...
+[2025. 11. 18. (화) 08:00:01 KST] Starting AI server with Qwen3-4B and smart GPU selection...
+[2025. 11. 18. (화) 08:00:01 KST] ✅ Using preferred GPU 2 (utilization < 80%)
+[2025. 11. 18. (화) 08:00:01 KST] Available GPUs (utilization < 80%): 2
+[2025. 11. 18. (화) 08:00:03 KST] Starting AI server with Qwen3-4B on GPUs: 2
+[2025. 11. 18. (화) 08:00:03 KST] AI server started with PID: 2003745
+[2025. 11. 18. (화) 08:00:03 KST] Model: Qwen3-4B
+[2025. 11. 18. (화) 08:00:03 KST] Using GPUs: 2
+[2025. 11. 18. (화) 08:00:03 KST] Log file: /home/i0179/Realitylab-site/ai_server.log
+[2025. 11. 18. (화) 08:00:08 KST] ✅ AI server (Qwen3-4B) is running successfully!
+[2025. 11. 18. (화) 08:00:08 KST] ✅ AI server started successfully
+[2025. 11. 18. (화) 08:00:18 KST] Step 2/2: Starting Cloudflare tunnel...
+[2025. 11. 18. (화) 08:00:26 KST] ✅ Cloudflare tunnel started successfully
+[2025. 11. 18. (화) 08:00:26 KST] 🚀 Server + Tunnel ready!
+========================================
+

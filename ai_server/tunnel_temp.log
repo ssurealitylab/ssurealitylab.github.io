@@ -1,33 +1,22 @@
-2025-11-17T09:00:05Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2025-11-17T09:00:05Z INF Requesting new quick Tunnel on trycloudflare.com...
-2025-11-17T09:00:13Z INF +--------------------------------------------------------------------------------------------+
-2025-11-17T09:00:13Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2025-11-17T09:00:13Z INF |  https://metres-intimate-max-sally.trycloudflare.com                                       |
-2025-11-17T09:00:13Z INF +--------------------------------------------------------------------------------------------+
-2025-11-17T09:00:13Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2025-11-17T09:00:13Z INF Version 2025.10.0 (Checksum d334c30ab628d4698455acadae5bdb3e33705a5f8dade510ce5ac7fc75d327fe)
-2025-11-17T09:00:13Z INF GOOS: linux, GOVersion: go1.24.4, GoArch: amd64
-2025-11-17T09:00:13Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:4005]
-2025-11-17T09:00:13Z INF Autoupdate frequency is set autoupdateFreq=86400000
-2025-11-17T09:00:13Z INF Generated Connector ID: 95c800d2-b602-4ed0-91ef-fadc0b3ed4f5
-2025-11-17T09:00:13Z INF Initial protocol quic
-2025-11-17T09:00:13Z INF ICMP proxy will use 203.253.25.165 as source for IPv4
-2025-11-17T09:00:13Z INF ICMP proxy will use fe80::3ae1:3c0d:ec12:c6ee in zone enp4s0 as source for IPv6
-2025-11-17T09:00:13Z ERR Cannot determine default origin certificate path. No file cert.pem in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]. You need to specify the origin certificate path by specifying the origincert option in the configuration file, or set TUNNEL_ORIGIN_CERT environment variable originCertPath=
-2025-11-17T09:00:13Z INF ICMP proxy will use 203.253.25.165 as source for IPv4
-2025-11-17T09:00:13Z INF ICMP proxy will use fe80::3ae1:3c0d:ec12:c6ee in zone enp4s0 as source for IPv6
-2025-11-17T09:00:13Z INF Starting metrics server on 127.0.0.1:20241/metrics
-2025-11-17T09:00:13Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
-2025/11/17 18:00:13 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
-2025-11-17T09:00:13Z INF Registered tunnel connection connIndex=0 connection=8ce32cc5-a451-4841-9d6e-b69e6fbe48ad event=0 ip=198.41.192.77 location=icn06 protocol=quic
-2025-11-17T16:13:27Z ERR failed to accept incoming stream requests error="failed to accept QUIC stream: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
-2025-11-17T16:13:27Z ERR failed to run the datagram handler error="timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.77
-2025-11-17T16:13:27Z WRN failed to serve tunnel connection error="accept stream listener encountered a failure while serving" connIndex=0 event=0 ip=198.41.192.77
-2025-11-17T16:13:27Z ERR Serve tunnel error error="accept stream listener encountered a failure while serving" connIndex=0 event=0 ip=198.41.192.77
-2025-11-17T16:13:27Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.192.77
-2025-11-17T16:13:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.77
-2025-11-17T16:13:28Z INF Registered tunnel connection connIndex=0 connection=c4e604af-dfa3-48fb-a4d5-d51014daca59 event=0 ip=198.41.192.77 location=nrt05 protocol=quic
-2025-11-17T17:00:03Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:4005: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:4005
-2025-11-17T17:00:03Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:4005: connect: connection refused" connIndex=0 dest=https://metres-intimate-max-sally.trycloudflare.com/heartbeat event=0 ip=198.41.192.77 type=http
-2025-11-17T18:34:08Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:4005
-2025-11-17T18:34:08Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://metres-intimate-max-sally.trycloudflare.com/health event=0 ip=198.41.192.77 type=http
+2025-11-17T23:00:20Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2025-11-17T23:00:20Z INF Requesting new quick Tunnel on trycloudflare.com...
+2025-11-17T23:00:23Z INF +--------------------------------------------------------------------------------------------+
+2025-11-17T23:00:23Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2025-11-17T23:00:23Z INF |  https://daughters-necessarily-protective-breaks.trycloudflare.com                         |
+2025-11-17T23:00:23Z INF +--------------------------------------------------------------------------------------------+
+2025-11-17T23:00:23Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2025-11-17T23:00:23Z INF Version 2025.10.0 (Checksum d334c30ab628d4698455acadae5bdb3e33705a5f8dade510ce5ac7fc75d327fe)
+2025-11-17T23:00:23Z INF GOOS: linux, GOVersion: go1.24.4, GoArch: amd64
+2025-11-17T23:00:23Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:4005]
+2025-11-17T23:00:23Z INF Autoupdate frequency is set autoupdateFreq=86400000
+2025-11-17T23:00:23Z INF Generated Connector ID: 524c98a4-fd36-4d8a-ad9d-18fd09d801cf
+2025-11-17T23:00:23Z INF Initial protocol quic
+2025-11-17T23:00:23Z INF ICMP proxy will use 203.253.25.165 as source for IPv4
+2025-11-17T23:00:23Z INF ICMP proxy will use fe80::3ae1:3c0d:ec12:c6ee in zone enp4s0 as source for IPv6
+2025-11-17T23:00:23Z ERR Cannot determine default origin certificate path. No file cert.pem in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]. You need to specify the origin certificate path by specifying the origincert option in the configuration file, or set TUNNEL_ORIGIN_CERT environment variable originCertPath=
+2025-11-17T23:00:23Z INF ICMP proxy will use 203.253.25.165 as source for IPv4
+2025-11-17T23:00:23Z INF ICMP proxy will use fe80::3ae1:3c0d:ec12:c6ee in zone enp4s0 as source for IPv6
+2025-11-17T23:00:23Z INF Starting metrics server on 127.0.0.1:20241/metrics
+2025-11-17T23:00:23Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.37
+2025/11/18 08:00:23 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
+2025-11-17T23:00:25Z INF Registered tunnel connection connIndex=0 connection=b894d774-9a0a-48d0-8ab4-995109972b96 event=0 ip=198.41.192.37 location=icn06 protocol=quic

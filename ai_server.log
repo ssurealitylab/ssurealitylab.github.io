@@ -4,7 +4,7 @@ INFO:__main__:Starting Reality Lab Qwen3-4B Server (4-bit) on port 4005...
 INFO:__main__:Loading Qwen3-4B tokenizer from local path
 INFO:__main__:Loading Qwen3-4B model with 4-bit quantization
 INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:03<00:06,  3.14s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:06<00:03,  3.39s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.26s/it]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.98s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:06<00:03,  3.30s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.20s/it]
 INFO:__main__:✅ Qwen3-4B model loaded successfully with 4-bit quantization
 INFO:__main__:Model vocab size: 151936, Tokenizer vocab size: 151669
 INFO:__main__:PAD token ID: 151643, EOS token ID: 151645
@@ -31,163 +31,134 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://127.0.0.1:4005
  * Running on http://203.253.25.165:4005
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:00:33] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:00:33] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:01:03] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:01:03] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:01:33] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:01:33] "POST /heartbeat HTTP/1.1" 200 -
-INFO:__main__:Original query: 안녕하세요
-INFO:__main__:Cleaned query: 안녕하세요
-[Query Classification] Searching categories: ['faculty', 'students']
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.05s/it]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.05s/it]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 76.11it/s]
-INFO:__main__:RAG found 5 documents
-The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:02:03] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:02:03] "POST /heartbeat HTTP/1.1" 200 -
-WARNING:__main__:Chinese detected in Korean response, using fallback
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:02:28] "POST /chat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:02:33] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:02:34] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:03:03] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:03:03] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:03:34] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:03:34] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:04:03] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:04:03] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:04:34] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:04:34] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:05:03] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 02:05:03] "POST /heartbeat HTTP/1.1" 200 -
-INFO:__main__:⏱️  Server idle for 126.3s (threshold: 120s)
+INFO:__main__:⏱️  Server idle for 120.1s (threshold: 120s)
 INFO:__main__:🔌 Unloading model from GPU...
 INFO:__main__:✅ GPU memory freed. Server remains active for auto-reload.
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:25:41] "[33mGET / HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:29:45] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:29:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:29:46] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 08:30:42] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 09:26:35] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:01:09] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:01:09] "GET /health HTTP/1.1" 200 -
 INFO:__main__:📥 Heartbeat received with unloaded model - triggering auto-reload
 INFO:__main__:🔄 Model not loaded. Reloading...
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:29:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:01:09] "POST /heartbeat HTTP/1.1" 200 -
 INFO:__main__:Loading Qwen3-4B tokenizer from local path
 INFO:__main__:Loading Qwen3-4B model with 4-bit quantization
 INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.86s/it]INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:29:50] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:29:50] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:29:50] "POST /heartbeat HTTP/1.1" 200 -
-Loading checkpoint shards:  67%|██████▋   | 2/3 [00:06<00:03,  3.25s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.16s/it]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.95s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:06<00:03,  3.27s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.18s/it]
 INFO:__main__:✅ Qwen3-4B model loaded successfully with 4-bit quantization
 INFO:__main__:Model vocab size: 151936, Tokenizer vocab size: 151669
 INFO:__main__:PAD token ID: 151643, EOS token ID: 151645
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:30:20] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:30:20] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:30:34] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:30:34] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:30:35] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:31:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:31:04] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:31:34] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:31:34] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:32:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:32:05] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:01] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:01] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:02] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:02] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:02] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:03] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:03] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:08] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:08] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:09] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:21] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:21] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:34:21] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:35:30] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:35:30] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:35:31] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:35:31] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:35:31] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:01] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:01] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:31] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:31] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:32] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:32] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:32] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:44] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:44] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:44] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:46] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:46] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:50] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:50] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:50] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:54] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:36:54] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:02] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:02] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:03] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:16] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:21] "OPTIONS /chat/stream HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:39] "POST /chat/stream HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:47] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:48] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:56] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:37:56] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:38:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:38:16] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:38:32] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:38:32] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:38:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:38:46] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:39:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:39:16] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:39:47] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:39:47] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:40:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:40:16] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:40:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:40:46] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:41:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:41:16] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:41:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:41:46] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:42:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:42:16] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:42:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:42:46] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:43:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:43:16] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:43:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:43:46] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:44:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:44:16] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:44:44] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:44:45] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:44:45] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:44:45] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:44:58] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:44:58] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:44:59] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:45:28] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:45:29] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:45:59] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:46:00] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:46:28] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:46:29] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:46:59] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:46:59] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:47:28] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:47:29] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:47:59] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:48:00] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:48:28] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:48:29] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:48:59] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:48:59] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:49:28] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 03:49:29] "POST /heartbeat HTTP/1.1" 200 -
+INFO:__main__:⏱️  Server idle for 120.6s (threshold: 120s)
+INFO:__main__:🔌 Unloading model from GPU...
+INFO:__main__:✅ GPU memory freed. Server remains active for auto-reload.
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:03:34] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:__main__:📥 Heartbeat received with unloaded model - triggering auto-reload
+INFO:__main__:🔄 Model not loaded. Reloading...
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:03:34] "POST /heartbeat HTTP/1.1" 200 -
+INFO:__main__:Loading Qwen3-4B tokenizer from local path
+INFO:__main__:Loading Qwen3-4B model with 4-bit quantization
+INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.73s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:06<00:03,  3.16s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.09s/it]
+INFO:__main__:✅ Qwen3-4B model loaded successfully with 4-bit quantization
+INFO:__main__:Model vocab size: 151936, Tokenizer vocab size: 151669
+INFO:__main__:PAD token ID: 151643, EOS token ID: 151645
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:03:45] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:03:45] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:04:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:04:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:04:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:04:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:05:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:05:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:05:48] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:05:48] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:06:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:06:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:06:45] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:06:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:07:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:07:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:07:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:07:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:08:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:08:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:08:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:08:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:09:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:09:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:09:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:09:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:10:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:10:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:10:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:10:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:11:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:11:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:11:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:11:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:12:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:12:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:12:47] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:12:48] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:13:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:13:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:13:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:13:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:14:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:14:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:14:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:14:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:15:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:15:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:15:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:15:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:16:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:16:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:16:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:16:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:17:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:17:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:17:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:17:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:18:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:18:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:18:45] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:18:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:19:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:19:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:19:40] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:19:40] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:19:51] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:19:51] "POST /heartbeat HTTP/1.1" 200 -
+INFO:__main__:⏱️  Server idle for 129.6s (threshold: 120s)
+INFO:__main__:🔌 Unloading model from GPU...
+INFO:__main__:✅ GPU memory freed. Server remains active for auto-reload.
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:30:08] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:30:08] "GET /health HTTP/1.1" 200 -
+INFO:__main__:📥 Heartbeat received with unloaded model - triggering auto-reload
+INFO:__main__:🔄 Model not loaded. Reloading...
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:30:08] "POST /heartbeat HTTP/1.1" 200 -
+INFO:__main__:Loading Qwen3-4B tokenizer from local path
+INFO:__main__:Loading Qwen3-4B model with 4-bit quantization
+INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:05,  2.72s/it]INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:30:14] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:30:14] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:30:14] "POST /heartbeat HTTP/1.1" 200 -
+Loading checkpoint shards:  67%|██████▋   | 2/3 [00:06<00:03,  3.20s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  1.79s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.13s/it]
+INFO:__main__:✅ Qwen3-4B model loaded successfully with 4-bit quantization
+INFO:__main__:Model vocab size: 151936, Tokenizer vocab size: 151669
+INFO:__main__:PAD token ID: 151643, EOS token ID: 151645
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:30:44] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:30:44] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:31:15] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:31:15] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:31:38] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:31:38] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:31:38] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:32:10] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:32:10] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:32:38] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:32:38] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:34:03] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:34:03] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Nov/2025 14:34:03] "GET /health HTTP/1.1" 200 -

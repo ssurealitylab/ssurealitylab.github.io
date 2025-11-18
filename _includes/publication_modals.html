@@ -9,7 +9,7 @@
       <button class="publication-modal-close" onclick="closePublicationModal('{{ pub.id }}')">&times;</button>
       <h2 class="text-uppercase">{{ pub.title }}</h2>
       <div>
-        <p class="item-intro text-muted">{{ pub.venue }}</p>
+        <p class="item-intro">{{ pub.venue }}</p>
         {% if pub.links %}
         <div class="modal-header-links">
           {% if pub.links.pdf %}

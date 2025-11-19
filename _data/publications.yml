@@ -24,6 +24,9 @@ publications:
     type: conference
     status: accepted
     citation: "[C25] ByungKwan Chae*, Youngjae Choi*, and Heewon Kim, \"MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation,\" Proc. Winter Conference on Applications of Computer Vision (WACV), 2026 (accepted)"
+    image: "assets/img/publications/mbti-wacv26.png"
+    abstract: "Personalizing text-to-image diffusion models from only a few images per class remains challenging, especially for fine-grained categories where class-defining cues are subtle. We introduce Metric-Based Textual Inversion (MBTI), a plug-and-play objective that augments textual inversion by explicitly enlarging inter-class margins in the text-embedding space while preserving denoising fidelity. MBTI (i) selects the most confusable previously learned classes as support embeddings via cosine similarity (SES), (ii) contrasts predicted noises under the same diffusion state (timestep and noise) between the supports and the current token (DMM), and (iii) stabilizes training with a time-weighted regularizer aligned to the diffusion objective. Across Flowers102, NABirds, FGVC-Aircraft, Stanford Cars, COCO, and PASCAL VOC, MBTI produces more representative samples and improves few-shot classification under augmentation-for-classification. MBTI requires no model fine-tuning and integrates seamlessly with existing personalization pipelines."
+    keywords: "Few-shot Learning, Fine-grained Image Classification, Data Augmentation, Diffusion Models, Textual Inversion, Metric Learning"
     notes: "* Equal contribution"
 
   # 2025 Publications

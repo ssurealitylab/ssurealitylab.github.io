@@ -43,18 +43,22 @@ def is_rest_time():
     Check if current time is during rest hours (4 AM - 8 AM KST)
     Returns: (bool, str) - (is_rest_time, message)
     """
-    kst = pytz.timezone('Asia/Seoul')
-    now_kst = datetime.now(kst)
-    current_hour = now_kst.hour
-
-    # Rest time: 4 AM - 8 AM KST
-    if 4 <= current_hour < 8:
-        resume_time = now_kst.replace(hour=8, minute=0, second=0, microsecond=0)
-        message_ko = f"현재 AI 챗봇 휴식시간입니다 (한국 시간 오전 4시~8시).\n오전 8시부터 다시 이용 가능합니다."
-        message_en = f"AI Chatbot is currently resting (4 AM - 8 AM KST).\nService will resume at 8 AM KST."
-        return True, (message_ko, message_en)
-
+    # TEMPORARY: Rest time disabled for testing
     return False, ("", "")
+
+    # Original code (commented out for testing):
+    # kst = pytz.timezone('Asia/Seoul')
+    # now_kst = datetime.now(kst)
+    # current_hour = now_kst.hour
+    #
+    # # Rest time: 4 AM - 8 AM KST
+    # if 4 <= current_hour < 8:
+    #     resume_time = now_kst.replace(hour=8, minute=0, second=0, microsecond=0)
+    #     message_ko = f"현재 AI 챗봇 휴식시간입니다 (한국 시간 오전 4시~8시).\n오전 8시부터 다시 이용 가능합니다."
+    #     message_en = f"AI Chatbot is currently resting (4 AM - 8 AM KST).\nService will resume at 8 AM KST."
+    #     return True, (message_ko, message_en)
+    #
+    # return False, ("", "")
 
 def load_model(model_choice='qwen3-4b'):
     """Load Qwen model with 4-bit quantization

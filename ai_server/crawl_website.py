@@ -413,29 +413,40 @@ Alumni: {', '.join(alumni_names)}"""
                 })
 
     def crawl_publications(self, page_name: str, pub_type: str):
-        """Crawl publications page (international or domestic)"""
-        print(f"\n=== Crawling {pub_type.upper()} Publications ===")
-        soup = self.fetch_page(page_name)
-        if not soup:
-            return
+        """Crawl publications from _data/publications.yml"""
+        print(f"\n=== Loading {pub_type.upper()} Publications from YAML ===")
 
-        # Try publication list items
-        pub_items = soup.find_all('div', class_='publication-list-item')
-        for item in pub_items:
-            title_elem = item.find('h5', class_='list-title')
-            authors_elem = item.find('p', class_='list-authors')
-            venue_elem = item.find('div', class_='publication-badge')
+        try:
+            yml_path = "/home/i0179/Realitylab-site/_data/publications.yml"
+            with open(yml_path, 'r', encoding='utf-8') as f:
+                pubs_data = yaml.safe_load(f)
 
-            if title_elem:
-                title = self.clean_text(title_elem.get_text())
-                authors = self.clean_text(authors_elem.get_text()) if authors_elem else ""
-                venue = self.clean_text(venue_elem.get_text()) if venue_elem else ""
+            if 'publications' not in pubs_data:
+                print(f"No publications found in {yml_path}")
+                return
+
+            for pub in pubs_data['publications']:
+                # Skip if not matching pub_type (international/domestic)
+                if pub_type == 'international' and pub.get('type') != 'conference':
+                    continue
+                if pub_type == 'domestic' and pub.get('type') == 'conference':
+                    continue
+
+                title = pub.get('title', '')
+                authors = pub.get('authors', '')
+                venue_short = pub.get('venue_short', '')
+                abstract = pub.get('abstract', '')
+
+                if not title:
+                    continue
 
                 content = f"논문: {title}\n"
                 if authors:
                     content += f"저자: {authors}\n"
-                if venue:
-                    content += f"학회: {venue}"
+                if venue_short:
+                    content += f"학회: {venue_short}\n"
+                if abstract:
+                    content += f"초록: {abstract}"
 
                 self.add_document(content, {
                     "type": "publication",
@@ -443,6 +454,39 @@ Alumni: {', '.join(alumni_names)}"""
                     "title": title,
                     "language": "ko"
                 })
+
+        except Exception as e:
+            print(f"Error loading publications from YAML: {e}")
+            # Fallback to web crawling
+            print(f"Falling back to web crawling for {page_name}")
+            soup = self.fetch_page(page_name)
+            if not soup:
+                return
+
+            # Try publication list items
+            pub_items = soup.find_all('div', class_='publication-list-item')
+            for item in pub_items:
+                title_elem = item.find('h5', class_='list-title')
+                authors_elem = item.find('p', class_='list-authors')
+                venue_elem = item.find('div', class_='publication-badge')
+
+                if title_elem:
+                    title = self.clean_text(title_elem.get_text())
+                    authors = self.clean_text(authors_elem.get_text()) if authors_elem else ""
+                    venue = self.clean_text(venue_elem.get_text()) if venue_elem else ""
+
+                    content = f"논문: {title}\n"
+                    if authors:
+                        content += f"저자: {authors}\n"
+                    if venue:
+                        content += f"학회: {venue}"
+
+                    self.add_document(content, {
+                        "type": "publication",
+                        "source": pub_type,
+                        "title": title,
+                        "language": "ko"
+                    })
 
     def crawl_courses(self):
         """Crawl courses page"""

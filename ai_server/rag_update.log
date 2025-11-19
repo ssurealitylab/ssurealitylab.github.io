@@ -536,3 +536,224 @@ Traceback (most recent call last):
     from bs4 import BeautifulSoup
 ModuleNotFoundError: No module named 'bs4'
 [2025. 11. 16. (일) 02:00:01 KST] ERROR: Website crawling failed!
+
+========================================
+[2025. 11. 20. (목) 05:00:01 KST] Starting RAG Update...
+========================================
+[2025. 11. 20. (목) 05:00:01 KST] Step 1/4: Crawling website...
+Traceback (most recent call last):
+  File "/home/i0179/Realitylab-site/ai_server/crawl_website.py", line 8, in <module>
+    from bs4 import BeautifulSoup
+ModuleNotFoundError: No module named 'bs4'
+[2025. 11. 20. (목) 05:00:02 KST] ERROR: Website crawling failed!
+
+========================================
+[2025. 11. 20. (목) 05:03:25 KST] Starting RAG Update...
+========================================
+[2025. 11. 20. (목) 05:03:25 KST] Step 1/4: Crawling website...
+/home/i0179/lib/python3.10/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+✅ Loaded 22 Korean name mappings from members.yml
+
+============================================================
+Starting Reality Lab Website Crawl
+Base URL: https://ssurealitylab.github.io/Realitylab-site
+============================================================
+
+=== Crawling Home Page ===
+Fetching: https://ssurealitylab.github.io/Realitylab-site/
+
+=== Crawling News Page ===
+Fetching: https://ssurealitylab.github.io/Realitylab-site/news.html
+
+=== Crawling Faculty Page ===
+Fetching: https://ssurealitylab.github.io/Realitylab-site/faculty.html
+
+=== Crawling Students Page ===
+Fetching: https://ssurealitylab.github.io/Realitylab-site/students.html
+
+=== Crawling Alumni Page ===
+Fetching: https://ssurealitylab.github.io/Realitylab-site/alumni.html
+
+=== Crawling INTERNATIONAL Publications ===
+Fetching: https://ssurealitylab.github.io/Realitylab-site/international.html
+
+=== Crawling DOMESTIC Publications ===
+Fetching: https://ssurealitylab.github.io/Realitylab-site/domestic.html
+
+=== Crawling Courses Page ===
+Fetching: https://ssurealitylab.github.io/Realitylab-site/courses.html
+
+============================================================
+Crawl Complete! Total documents: 100
+============================================================
+
+Saved 100 documents to: /home/i0179/Realitylab-site/ai_server/knowledge_base.json
+
+✅ Knowledge base updated successfully!
+   File: /home/i0179/Realitylab-site/ai_server/knowledge_base.json
+   Documents: 100
+[2025. 11. 20. (목) 05:03:36 KST] ✅ Website crawled successfully
+[2025. 11. 20. (목) 05:03:36 KST] Step 2/5: Building flat vector database...
+/home/i0179/lib/python3.10/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+Loading knowledge base from: /home/i0179/Realitylab-site/ai_server/knowledge_base.json
+  Loaded 100 documents
+
+Loading embedding model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  Model loaded successfully
+  Embedding dimension: 384
+
+Creating embeddings for documents...
+Batches:   0%|          | 0/4 [00:00<?, ?it/s]Batches:  25%|██▌       | 1/4 [00:04<00:12,  4.32s/it]Batches:  50%|█████     | 2/4 [00:04<00:03,  1.84s/it]Batches: 100%|██████████| 4/4 [00:05<00:00,  1.15it/s]Batches: 100%|██████████| 4/4 [00:05<00:00,  1.25s/it]
+  Created embeddings: shape (100, 384)
+
+Building FAISS index...
+  Index built with 100 vectors
+
+FAISS index saved to: /home/i0179/Realitylab-site/ai_server/vector_db/faiss_index.bin
+Documents metadata saved to: /home/i0179/Realitylab-site/ai_server/vector_db/documents.pkl
+Config saved to: /home/i0179/Realitylab-site/ai_server/vector_db/config.json
+
+==================================================
+
+=== Testing Search ===
+Query: 연구실 위치가 어디인가요?
+
+Top 3 results:
+
+1. [Score: 0.4583] [members_summary]
+   Reality Lab의 연구원은 총 21명입니다.
+
+현재 연구실 구성원:
+- 석사과정 학생: 10명
+- 연구 인턴: 11명
+
+석사과정 학생 수는 10명이고, 연구 인턴 수는 11명입니다.
+학생 수를 포함하여 전체 연구원은 21명입니다.
+
+석사과정 학생 명단: Sungy...
+
+2. [Score: 0.4477] [members_summary]
+   Reality Lab has a total of 21 researchers.
+
+Current lab members:
+- Master's Students: 10 members
+- Research Interns: 11 members
+
+The number of Master'...
+
+3. [Score: 0.4157] [lab_info]
+   Welcome to the SSU Reality Lab!...
+
+=== Testing Search ===
+Query: 김희원 교수님 이메일
+
+Top 2 results:
+
+1. [Score: 0.5575] [faculty]
+   교수: 김희원 교수 (Prof. Heewon Kim)
+직책: Assistant Professor, Ph. D.
+소속: Global School of Media
+이메일: hwkim@ssu.ac.kr
+전화: +82-2-820-0679...
+
+2. [Score: 0.5559] [publication]
+   논문: 재귀적 대화 요약을 통한 장기 기억 트렌스포머
+저자: Jinho Oh, ByungKwan Chae, Heewon Kim
+학회: 대한전자공학회 논문지...
+
+=== Testing Search ===
+Query: CVPR 2025 paper
+
+Top 2 results:
+
+1. [Score: 0.7999] [news]
+   뉴스: CVPR 2025 Paper Acceptance
+참여자: Sangmin Lee, Sungyong Park
+내용: Paper accepted to CVPR 2025
+날짜: Feb 26, 2025  Publication...
+
+2. [Score: 0.5644] [news]
+   뉴스: AAAI 2025 Paper Acceptance
+참여자: Sooyoung Choi, Sungyong Park
+내용: Paper accepted to AAAI 2025
+날짜: Dec 10, 2024  Publication...
+
+==================================================
+Vector database build complete!
+[2025. 11. 20. (목) 05:04:06 KST] ✅ Flat vector database built successfully
+[2025. 11. 20. (목) 05:04:06 KST] Step 3/5: Building hierarchical vector database...
+/home/i0179/lib/python3.10/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+Loading knowledge base from: /home/i0179/Realitylab-site/ai_server/knowledge_base.json
+  Loaded 100 documents
+
+Loading embedding model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  Model loaded successfully
+
+============================================================
+Building Hierarchical RAG System
+============================================================
+
+=== Building faculty Index ===
+  Documents: 2
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.51it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.50it/s]
+  ✅ Saved to: /home/i0179/Realitylab-site/ai_server/hierarchical_rag/faculty
+     Index: 2 vectors
+
+=== Building students Index ===
+  Documents: 23
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 40.99it/s]
+  ✅ Saved to: /home/i0179/Realitylab-site/ai_server/hierarchical_rag/students
+     Index: 23 vectors
+
+=== Building alumni Index ===
+  Documents: 17
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  3.48it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  3.47it/s]
+  ✅ Saved to: /home/i0179/Realitylab-site/ai_server/hierarchical_rag/alumni
+     Index: 17 vectors
+
+=== Building news Index ===
+  Documents: 18
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 45.02it/s]
+  ✅ Saved to: /home/i0179/Realitylab-site/ai_server/hierarchical_rag/news
+     Index: 18 vectors
+
+=== Building publications Index ===
+  Documents: 39
+Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches: 100%|██████████| 2/2 [00:00<00:00, 43.06it/s]
+  ✅ Saved to: /home/i0179/Realitylab-site/ai_server/hierarchical_rag/publications
+     Index: 39 vectors
+
+=== Building lab_info Index ===
+  Documents: 1
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 70.43it/s]
+  ✅ Saved to: /home/i0179/Realitylab-site/ai_server/hierarchical_rag/lab_info
+     Index: 1 vectors
+
+============================================================
+✅ Hierarchical RAG Build Complete!
+Output directory: /home/i0179/Realitylab-site/ai_server/hierarchical_rag
+============================================================
+[2025. 11. 20. (목) 05:04:19 KST] ✅ Hierarchical vector database built successfully
+[2025. 11. 20. (목) 05:04:19 KST] Step 4/5: Restarting AI server...
+[2025. 11. 20. (목) 05:04:22 KST] Starting AI server with Qwen3-4B and smart GPU selection...
+[2025. 11. 20. (목) 05:04:22 KST] ✅ Using preferred GPU 2 (utilization < 80%)
+[2025. 11. 20. (목) 05:04:22 KST] Available GPUs (utilization < 80%): 2
+[2025. 11. 20. (목) 05:04:24 KST] Starting AI server with Qwen3-4B on GPUs: 2
+[2025. 11. 20. (목) 05:04:24 KST] AI server started with PID: 1077541
+[2025. 11. 20. (목) 05:04:24 KST] Model: Qwen3-4B
+[2025. 11. 20. (목) 05:04:24 KST] Using GPUs: 2
+[2025. 11. 20. (목) 05:04:24 KST] Log file: /home/i0179/Realitylab-site/ai_server.log
+[2025. 11. 20. (목) 05:04:29 KST] ✅ AI server (Qwen3-4B) is running successfully!
+[2025. 11. 20. (목) 05:04:29 KST] ✅ AI server restarted successfully
+[2025. 11. 20. (목) 05:04:29 KST] Step 5/5: RAG update complete!
+
+Summary:
+  Knowledge base documents: 100
+  Vector database size: 100 vectors
+
+========================================
+[2025. 11. 20. (목) 05:04:29 KST] ✅ RAG Update Completed Successfully!
+========================================

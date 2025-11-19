@@ -17,15 +17,17 @@ image: /assets/img/header.png
 <!-- News Content -->
 <section class="news-content py-5">
   <div class="container">
-    <div class="row">
+    <div class="row news-row">
       {% for item in site.data.news.news %}
         <div class="col-lg-4 mb-4">
           <div class="news-card {% if item.category == 'Publication' %}paper-card{% elsif item.category == 'Awards' %}challenge-card{% else %}research-card{% endif %}">
-            {% if item.image %}
-            <img src="{{ site.baseurl }}/img/news/{{ item.image }}?v=7" alt="{{ item.title }}" class="news-img">
-            {% else %}
-            <img src="{{ site.baseurl }}/img/news/default.png?v=7" alt="{{ item.title }}" class="news-img">
-            {% endif %}
+            <div class="news-img-wrapper">
+              {% if item.image %}
+              <img src="{{ site.baseurl }}/img/news/{{ item.image }}?v=7" alt="{{ item.title }}" class="news-img">
+              {% else %}
+              <img src="{{ site.baseurl }}/img/news/default.png?v=7" alt="{{ item.title }}" class="news-img">
+              {% endif %}
+            </div>
             <div class="card-body">
               <h5 class="card-title">{{ item.title }}</h5>
               <p class="card-subtitle">{{ item.participants | join: ", " }}</p>
@@ -63,6 +65,17 @@ image: /assets/img/header.png
   background-color: #f8f9fa;
 }
 
+/* News Row - Align card heights in same row */
+.news-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.news-row > [class*="col-"] {
+  display: flex;
+}
+
 /* News Cards */
 .news-card {
   background: white;
@@ -70,7 +83,7 @@ image: /assets/img/header.png
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -80,11 +93,23 @@ image: /assets/img/header.png
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* Image wrapper to maintain aspect ratio */
+.news-img-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
 .news-img {
   width: 100%;
-  height: 112px;
-  object-fit: cover;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
   object-position: center;
+  display: block;
 }
 
 .news-card .card-body {
@@ -143,7 +168,7 @@ image: /assets/img/header.png
   }
 
   .news-img {
-    height: 101px;
+    max-height: 200px;
   }
 
   .news-card .card-title {

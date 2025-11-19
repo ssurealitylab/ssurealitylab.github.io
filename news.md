@@ -106,9 +106,9 @@ image: /assets/img/header.png
 .news-img {
   width: 100%;
   height: auto;
-  max-width: 3500px;
+  max-width: 2800px;
   max-height: 300px;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   display: block;
 }

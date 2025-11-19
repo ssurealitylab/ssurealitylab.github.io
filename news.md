@@ -82,7 +82,7 @@ image: /assets/img/header.png
 
 .news-img {
   width: 100%;
-  height: 140px;
+  height: 112px;
   object-fit: cover;
   object-position: center;
 }
@@ -143,7 +143,7 @@ image: /assets/img/header.png
   }
 
   .news-img {
-    height: 126px;
+    height: 101px;
   }
 
   .news-card .card-title {

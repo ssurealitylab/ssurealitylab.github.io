@@ -44,18 +44,18 @@ image: /assets/img/header.png
 <style>
 /* News Timeline Header */
 .news-timeline-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: white;
+  color: #2c3e50;
   padding: 80px 0;
 }
 
 .news-timeline-header h1 {
-  color: white;
+  color: #2c3e50;
   margin-bottom: 20px;
 }
 
 .news-timeline-header h3 {
-  color: rgba(255, 255, 255, 0.9);
+  color: #7f8c8d;
 }
 
 /* News Content */
@@ -82,7 +82,7 @@ image: /assets/img/header.png
 
 .news-img {
   width: 100%;
-  height: 200px;
+  height: 140px;
   object-fit: cover;
   object-position: center;
 }
@@ -143,7 +143,7 @@ image: /assets/img/header.png
   }
 
   .news-img {
-    height: 180px;
+    height: 126px;
   }
 
   .news-card .card-title {

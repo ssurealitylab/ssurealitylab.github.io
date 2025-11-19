@@ -6,6 +6,20 @@ news:
     description: "Sebin Lee, ByungKwan Chae, and Youngjae Choi - 2 papers have been accepted to WACV 2026! Congrats!"
     image: "wacv2026.png"
 
+  - title: "Gyeonggi Youth Gap Year - Governor's Award"
+    date: "2025-10-23"
+    category: "Awards"
+    participants: ["Dowon Kim", "Sebin Lee", "Yeonji Kim"]
+    description: "Governor's Award for Outstanding Participation in Toddlerbot Project at 2025 Gyeonggi Youth Gap Year Program"
+    image: "gyeonggi-gapyear2025.png"
+
+  - title: "UNITHON Hackathon - Grand Prize"
+    date: "2025-08-13"
+    category: "Awards"
+    participants: ["Sooyoung Choi"]
+    description: "Grand Prize at Spartan SW Winning Startup Camp - Soongsil University Alliance Hackathon (UNITHON)"
+    image: "unithon2024.jpg"
+
   - title: "BMVC 2025 Paper Acceptance"
     date: "2025-07-26"
     category: "Publication"
@@ -61,20 +75,6 @@ news:
     participants: ["Prof. Heewon Kim"]
     description: "Nominated as outstanding reviewer for BMVC 2024"
     image: "bmvc2024.png"
-
-  - title: "Gyeonggi Youth Gap Year - Governor's Award"
-    date: "2025-10-23"
-    category: "Awards"
-    participants: ["Dowon Kim", "Sebin Lee", "Yeonji Kim"]
-    description: "Governor's Award for Outstanding Participation in Toddlerbot Project at 2025 Gyeonggi Youth Gap Year Program"
-    image: "gyeonggi-gapyear2025.png"
-
-  - title: "UNITHON Hackathon - Grand Prize"
-    date: "2025-08-13"
-    category: "Awards"
-    participants: ["Sooyoung Choi"]
-    description: "Grand Prize at Spartan SW Winning Startup Camp - Soongsil University Alliance Hackathon (UNITHON)"
-    image: "unithon2024.jpg"
 
   - title: "ARNOLD Challenge 3rd Place"
     date: "2024-06-18"

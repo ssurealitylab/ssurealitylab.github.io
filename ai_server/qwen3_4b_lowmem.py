@@ -687,6 +687,7 @@ def chat_stream():
         user_question = data['question']
         language = data.get('language', 'ko')
         max_length = data.get('max_length', 700)
+        think_mode = data.get('think_mode', False)  # Default: fast mode (no think tags)
 
         def generate_stream():
             global model, tokenizer, is_loading_model
@@ -708,9 +709,21 @@ def chat_stream():
             try:
                 start_time = time.time()
 
-                # Create system prompt
+                # Create system prompt based on think_mode
                 if language == 'en':
-                    system_content = """You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
+                    if think_mode:
+                        system_content = """You are a helpful assistant for Reality Lab at Soongsil University.
+
+Reality Lab (Soongsil University):
+- Established 2023, Led by Prof. Heewon Kim
+- Research: Robotics, Computer Vision, Machine Learning, Multimodal AI, Healthcare AI
+- Location: 105 Sadan-ro, Dongjak-gu, Seoul
+- Contact: +82-2-820-0679
+- Recent Publications: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
+
+You can use <think> tags to show your reasoning process before providing the final answer."""
+                    else:
+                        system_content = """You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
 
 Reality Lab (Soongsil University):
 - Established 2023, Led by Prof. Heewon Kim
@@ -725,7 +738,19 @@ Guidelines:
 - Use natural, complete sentences
 - No <think> tags or internal reasoning"""
                 else:
-                    system_content = """당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 간결하면서도 친절하게, 핵심 정보는 모두 포함하여 답변하세요.
+                    if think_mode:
+                        system_content = """당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다.
+
+Reality Lab 정보:
+- 설립: 2023년, 김희원 교수님
+- 연구 분야: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI
+- 위치: 서울특별시 동작구 사당로 105, 숭실대학교
+- 연락처: +82-2-820-0679
+- 최근 논문: CVPR 2025 (DynScene), BMVC 2025, AAAI 2025, PLOS ONE, ICT Express
+
+답변하기 전에 <think> 태그를 사용하여 추론 과정을 보여줄 수 있습니다."""
+                    else:
+                        system_content = """당신은 숭실대학교 Reality Lab의 친절한 어시스턴트입니다. 간결하면서도 친절하게, 핵심 정보는 모두 포함하여 답변하세요.
 
 Reality Lab 정보:
 - 설립: 2023년, 김희원 교수님
@@ -787,20 +812,27 @@ Reality Lab 정보:
                 in_think_block = False
 
                 for text in streamer:
-                    # Track <think> blocks for streaming (tags can be split across tokens)
-                    if '<think>' in text:
-                        in_think_block = True
-                        text = text.replace('<think>', '')
-
-                    if '</think>' in text:
-                        in_think_block = False
-                        text = text.replace('</think>', '')
-
-                    # Skip content inside <think> blocks
-                    if not in_think_block and text.strip():
+                    if think_mode:
+                        # Deep mode: Include <think> tags in output
                         full_response += text
                         token_count += 1
                         yield f"data: {json.dumps({'text': text, 'done': False})}\n\n"
+                    else:
+                        # Fast mode: Remove <think> tags
+                        # Track <think> blocks for streaming (tags can be split across tokens)
+                        if '<think>' in text:
+                            in_think_block = True
+                            text = text.replace('<think>', '')
+
+                        if '</think>' in text:
+                            in_think_block = False
+                            text = text.replace('</think>', '')
+
+                        # Skip content inside <think> blocks
+                        if not in_think_block and text.strip():
+                            full_response += text
+                            token_count += 1
+                            yield f"data: {json.dumps({'text': text, 'done': False})}\n\n"
 
                 thread.join()
 

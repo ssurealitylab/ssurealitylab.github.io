@@ -27,12 +27,13 @@ app = Flask(__name__)
 CORS(app)
 
 # Global variables
-models = {}  # Store multiple models
-tokenizers = {}  # Store multiple tokenizers
+model = None
+tokenizer = None
 rag_retriever = None
 last_activity_time = None
-shutdown_timeout = 120  # 2 minutes in seconds
+shutdown_timeout = None  # Disabled - keep model loaded
 shutdown_timer_thread = None
+model_choice_global = 'qwen3-4b'  # Store model choice for reloading
 is_loading_model = False  # Track if model is currently being loaded
 request_lock = threading.Lock()  # Lock for sequential request processing
 is_processing_request = False  # Track if a request is currently being processed
@@ -55,35 +56,28 @@ def is_rest_time():
 
     return False, ("", "")
 
-def load_model(model_choice='qwen25-7b'):
-    """Load a single Qwen model with 4-bit quantization
+def load_model(model_choice='qwen3-4b'):
+    """Load Qwen model with 4-bit quantization
 
     Args:
-        model_choice: 'qwen3-4b', 'qwen25-3b', or 'qwen25-7b' (default)
+        model_choice: 'qwen3-4b' or 'qwen25-3b'
     """
-    global models, tokenizers
+    global model, tokenizer
 
     try:
         # Select model path based on choice
         model_paths = {
             'qwen3-4b': "/home/i0179/.cache/huggingface/hub/qwen3-4b-git",
-            'qwen25-3b': "/home/i0179/.cache/huggingface/hub/qwen25-3b-git",
-            'qwen25-7b': "/home/i0179/.cache/huggingface/hub/qwen25-7b"
+            'qwen25-3b': "/home/i0179/.cache/huggingface/hub/qwen25-3b-git"
         }
 
         model_names = {
             'qwen3-4b': "Qwen3-4B",
-            'qwen25-3b': "Qwen2.5-3B",
-            'qwen25-7b': "Qwen2.5-7B"
+            'qwen25-3b': "Qwen2.5-3B"
         }
 
         if model_choice not in model_paths:
             raise ValueError(f"Invalid model choice: {model_choice}. Choose from {list(model_paths.keys())}")
-
-        # Skip if already loaded
-        if model_choice in models:
-            logger.info(f"✅ {model_names[model_choice]} already loaded")
-            return True
 
         model_path = model_paths[model_choice]
         model_name = model_names[model_choice]
@@ -113,40 +107,13 @@ def load_model(model_choice='qwen25-7b'):
             trust_remote_code=True
         )
 
-        # Store in dictionaries
-        models[model_choice] = model
-        tokenizers[model_choice] = tokenizer
-
         logger.info(f"✅ {model_name} model loaded successfully with 4-bit quantization")
         logger.info(f"Model vocab size: {model.config.vocab_size}, Tokenizer vocab size: {len(tokenizer)}")
         logger.info(f"PAD token ID: {tokenizer.pad_token_id}, EOS token ID: {tokenizer.eos_token_id}")
         return True
 
     except Exception as e:
-        logger.error(f"Failed to load model {model_choice}: {e}")
-        return False
-
-def load_all_models():
-    """Load both Qwen3-4B and Qwen2.5-7B models"""
-    logger.info("🚀 Loading all models...")
-
-    # Load Qwen2.5-7B first (default model)
-    success_25 = load_model('qwen25-7b')
-
-    # Load Qwen3-4B second
-    success_3 = load_model('qwen3-4b')
-
-    if success_25 and success_3:
-        logger.info("✅ All models loaded successfully!")
-        return True
-    elif success_25:
-        logger.warning("⚠️ Only Qwen2.5-7B loaded, Qwen3-4B failed")
-        return True
-    elif success_3:
-        logger.warning("⚠️ Only Qwen3-4B loaded, Qwen2.5-7B failed")
-        return True
-    else:
-        logger.error("❌ Failed to load any models")
+        logger.error(f"Failed to load model: {e}")
         return False
 
 def update_activity():
@@ -155,24 +122,21 @@ def update_activity():
     last_activity_time = time.time()
 
 def unload_model():
-    """Unload all models from GPU to free memory"""
-    global models, tokenizers
+    """Unload model from GPU to free memory"""
+    global model, tokenizer
 
-    if not models and not tokenizers:
+    if model is None and tokenizer is None:
         return  # Already unloaded
 
-    logger.info("🔌 Unloading all models from GPU...")
+    logger.info("🔌 Unloading model from GPU...")
 
-    # Clear all models and tokenizers
-    for model_name in list(models.keys()):
-        if models[model_name] is not None:
-            del models[model_name]
-    models.clear()
-
-    for tokenizer_name in list(tokenizers.keys()):
-        if tokenizers[tokenizer_name] is not None:
-            del tokenizers[tokenizer_name]
-    tokenizers.clear()
+    # Clear model and tokenizer
+    if model is not None:
+        del model
+        model = None
+    if tokenizer is not None:
+        del tokenizer
+        tokenizer = None
 
     # Force garbage collection and clear CUDA cache
     import gc
@@ -182,25 +146,25 @@ def unload_model():
 
     logger.info("✅ GPU memory freed. Server remains active for auto-reload.")
 
-def ensure_model_loaded(model_choice='qwen25-7b'):
-    """Ensure specific model is loaded, reload if necessary"""
-    global models, tokenizers, is_loading_model
+def ensure_model_loaded():
+    """Ensure model is loaded, reload if necessary"""
+    global model, tokenizer, is_loading_model, model_choice_global
 
-    if model_choice in models and model_choice in tokenizers:
+    if model is not None and tokenizer is not None:
         return True  # Already loaded
 
     if is_loading_model:
         return False  # Currently loading, caller should wait
 
-    # Load model if not present
+    # Reload model
     is_loading_model = True
     try:
-        logger.info(f"🔄 Model {model_choice} not loaded. Loading...")
-        success = load_model(model_choice)
+        logger.info("🔄 Model not loaded. Reloading...")
+        success = load_model(model_choice_global)
         is_loading_model = False
         return success
     except Exception as e:
-        logger.error(f"Failed to load model {model_choice}: {e}")
+        logger.error(f"Failed to reload model: {e}")
         is_loading_model = False
         return False
 
@@ -216,7 +180,7 @@ def check_idle_timeout():
 
         idle_time = time.time() - last_activity_time
 
-        if idle_time >= shutdown_timeout and (models or tokenizers):
+        if shutdown_timeout is not None and idle_time >= shutdown_timeout and (model is not None or tokenizer is not None):
             # Double-check activity time before unloading (prevent race condition with heartbeat)
             final_idle_time = time.time() - last_activity_time
             if final_idle_time >= shutdown_timeout:
@@ -571,14 +535,10 @@ A: 박성용 학생은 Image Restoration과 AI for Astronomy를 연구하고 있
 @app.route('/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
-    rest, rest_messages = is_rest_time()
     return jsonify({
-        'status': 'resting' if rest else 'healthy',
-        'is_rest_time': rest,
-        'rest_message_ko': rest_messages[0] if rest else None,
-        'rest_message_en': rest_messages[1] if rest else None,
-        'models_loaded': list(models.keys()),
-        'server_name': 'Qwen Dual-Model Server'
+        'status': 'healthy',
+        'model_loaded': model is not None,
+        'model_name': 'Qwen3-4B-4bit'
     })
 
 @app.route('/heartbeat', methods=['POST'])
@@ -728,10 +688,9 @@ def chat_stream():
         language = data.get('language', 'ko')
         max_length = data.get('max_length', 700)
         think_mode = data.get('think_mode', False)  # Default: fast mode (no think tags)
-        model_choice = data.get('model_choice', 'qwen25-7b')  # Default: Qwen2.5-7B
 
         def generate_stream():
-            global models, tokenizers, is_loading_model
+            global model, tokenizer, is_loading_model
 
             # Check if model is being loaded
             if is_loading_model:
@@ -741,15 +700,11 @@ def chat_stream():
                 return
 
             # Ensure model is loaded
-            if model_choice not in models or model_choice not in tokenizers:
-                if not ensure_model_loaded(model_choice):
-                    yield f"data: {json.dumps({'error': f'Failed to load AI model: {model_choice}'})}\n\n"
+            if model is None or tokenizer is None:
+                if not ensure_model_loaded():
+                    yield f"data: {json.dumps({'error': 'Failed to load AI model'})}\n\n"
                     yield "data: [DONE]\n\n"
                     return
-
-            # Get the selected model and tokenizer
-            model = models[model_choice]
-            tokenizer = tokenizers[model_choice]
 
             try:
                 start_time = time.time()
@@ -1126,15 +1081,26 @@ def submit_bug_report():
 if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(description='Reality Lab Qwen Dual-Model Server')
+    parser = argparse.ArgumentParser(description='Reality Lab Qwen Low Memory Server')
     parser.add_argument('--port', type=int, default=4005, help='Port to run the server on')
+    parser.add_argument('--model', type=str, default='qwen3-4b',
+                       choices=['qwen3-4b', 'qwen25-3b'],
+                       help='Model to use: qwen3-4b (default) or qwen25-3b')
     args = parser.parse_args()
 
     port = args.port
+    model_choice = args.model
+    # Store model choice globally for auto-reload
+    model_choice_global = model_choice
 
-    logger.info(f"Starting Reality Lab Dual-Model Server (Qwen2.5-7B + Qwen3-4B) on port {port}...")
+    model_display_names = {
+        'qwen3-4b': 'Qwen3-4B',
+        'qwen25-3b': 'Qwen2.5-3B'
+    }
 
-    if load_all_models():
+    logger.info(f"Starting Reality Lab {model_display_names[model_choice]} Server (4-bit) on port {port}...")
+
+    if load_model(model_choice):
         # Load RAG system
         try:
             logger.info("Loading RAG system...")
@@ -1152,7 +1118,7 @@ if __name__ == '__main__':
         shutdown_timer_thread.start()
         logger.info(f"⏱️  Idle timeout enabled: server will shutdown after {shutdown_timeout}s of inactivity")
 
-        logger.info(f"🚀 Dual-Model server ready on port {port}!")
+        logger.info(f"🚀 {model_display_names[model_choice]} server ready on port {port}!")
         logger.info("✅ Running with HTTP (no SSL)")
         app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
     else:

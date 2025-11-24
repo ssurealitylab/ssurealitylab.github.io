@@ -6,7 +6,7 @@
       <div class="chatbot-header-info">
         <div class="chatbot-title">Reality Lab Assistant</div>
         <div class="chatbot-subtitle">AI가 연구실에 대해 답변해드립니다!</div>
-        <div class="chatbot-schedule" style="font-size: 11px; color: #888; margin-top: 2px;">휴식시간: 04:00-08:00 (한국시간)</div>
+        <div class="chatbot-schedule" style="font-size: 11px; color: #888; margin-top: 2px;">운영시간: 08:00-익일 04:00 (한국시간)</div>
       </div>
       <div class="chatbot-controls">
         <div class="mode-toggle">
@@ -41,22 +41,18 @@
       <input type="text" id="chatbot-input" class="chatbot-input" placeholder="궁금한 것을 물어보세요..." maxlength="200">
       <div class="think-mode-dropdown">
         <button id="think-mode-btn" class="think-mode-btn">
-          <span class="think-mode-label">2.5 모드</span>
+          <span class="think-mode-label">빠른모드</span>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
         <div id="think-mode-menu" class="think-mode-menu">
-          <div class="think-mode-option" data-mode="qwen25" data-model="qwen25-7b" data-think="false">
-            <span class="mode-title">2.5 모드</span>
-            <span class="mode-desc">균형잡힌 성능 (기본)</span>
+          <div class="think-mode-option" data-mode="fast">
+            <span class="mode-title">빠른모드</span>
+            <span class="mode-desc">즉시 답변</span>
           </div>
-          <div class="think-mode-option" data-mode="fast" data-model="qwen3-4b" data-think="false">
-            <span class="mode-title">빠른모드 (3.0)</span>
-            <span class="mode-desc">빠른 응답</span>
-          </div>
-          <div class="think-mode-option" data-mode="deep" data-model="qwen3-4b" data-think="true">
-            <span class="mode-title">심층모드 (3.0)</span>
+          <div class="think-mode-option" data-mode="deep">
+            <span class="mode-title">심층모드</span>
             <span class="mode-desc">깊은 추론</span>
           </div>
         </div>
@@ -104,7 +100,7 @@
               <p><strong>모델:</strong> Qwen3-4B Fine-tuned 모델 (Think 태그 제거)</p>
               <p><strong>하드웨어:</strong> NVIDIA RTX 4090 GPU</p>
               <p><strong>연결:</strong> Cloudflare Tunnel (공개 접속 지원)</p>
-              <p><strong>휴식시간:</strong> 오전 4시 ~ 오전 8시 (한국시간 KST)</p>
+              <p><strong>운영시간:</strong> 오전 8시 ~ 익일 오전 4시 (한국시간 KST)</p>
               <p><strong>휴식시간:</strong> 매일 오전 4시 ~ 8시 (시스템 유지보수)</p>
               <p><strong>자동 재시작:</strong> 매일 오전 8시, 오후 6시 (터널 갱신)</p>
               <p><strong>업데이트:</strong> 매주 일요일 오전 2시 자동 업데이트</p>
@@ -967,41 +963,25 @@ document.addEventListener('DOMContentLoaded', function() {
   // Current modes - Start in AI mode as requested
   let isAIMode = true;
   let isEnglish = false;
-  let selectedModel = 'qwen25-7b'; // Default to Qwen2.5-7B
-  let thinkMode = false; // Default to fast mode
+  let selectedModel = 'qwen3-4b';
 
-  // Initialize from localStorage if available
-  const savedMode = localStorage.getItem('aiMode');
-  if (savedMode) {
-    const modeData = JSON.parse(savedMode);
-    selectedModel = modeData.model || 'qwen25-7b';
-    thinkMode = modeData.think || false;
-  }
-
+  // Think mode - Initialize from localStorage (default: false = fast mode)
+  let thinkMode = localStorage.getItem('thinkMode') === 'true';
   const thinkModeLabel = document.querySelector('.think-mode-label');
 
   // Set initial UI state
   function updateThinkModeUI() {
-    let modeText = '2.5 모드';
-    let modeKey = 'qwen25';
-
-    if (selectedModel === 'qwen25-7b') {
-      modeText = '2.5 모드';
-      modeKey = 'qwen25';
-    } else if (selectedModel === 'qwen3-4b') {
-      if (thinkMode) {
-        modeText = '심층모드 (3.0)';
-        modeKey = 'deep';
-      } else {
-        modeText = '빠른모드 (3.0)';
-        modeKey = 'fast';
-      }
+    if (thinkMode) {
+      thinkModeLabel.textContent = '심층모드';
+      thinkModeOptions.forEach(opt => {
+        opt.classList.toggle('selected', opt.dataset.mode === 'deep');
+      });
+    } else {
+      thinkModeLabel.textContent = '빠른모드';
+      thinkModeOptions.forEach(opt => {
+        opt.classList.toggle('selected', opt.dataset.mode === 'fast');
+      });
     }
-
-    thinkModeLabel.textContent = modeText;
-    thinkModeOptions.forEach(opt => {
-      opt.classList.toggle('selected', opt.dataset.mode === modeKey);
-    });
   }
 
   updateThinkModeUI();
@@ -1046,13 +1026,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (response.ok) {
         const data = await response.json();
-        if (data.status === 'resting' || data.is_rest_time) {
-          isAIServerReady = false;
-          console.log('💤 AI server is in rest time (04:00-08:00 KST)');
-        } else if (data.status === 'healthy') {
+        if (data.status === 'healthy') {
           isAIServerReady = true;
-          const modelCount = data.models_loaded ? data.models_loaded.length : 0;
-          console.log(`✅ AI server ready: ${data.server_name} (${modelCount} models loaded)`);
+          if (data.model_loaded) {
+            console.log('✅ AI server ready:', data.model_name);
+          } else {
+            console.log('✅ AI server healthy (model will auto-load on first request)');
+          }
         } else {
           console.warn('⚠️ AI server responded but not healthy');
         }
@@ -1366,29 +1346,26 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!session) {
           return {
             response: isEnglish ?
-              "⚙️ GPU server is under maintenance. Please try again later." :
-              "⚙️ GPU 서버가 점검중입니다. 잠시 후 다시 시도해주세요.",
+              "💤 AI is currently taking a break. Please try during operating hours (08:00-04:00 KST)!" :
+              "💤 AI가 지금 쉬는 시간이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!",
             response_time: null
           };
         }
       }
-
+      
       const endpoints = getCurrentEndpoints();
       if (!endpoints) {
         return {
           response: isEnglish ?
-            "⚙️ GPU server is under maintenance. Please try again later." :
-            "⚙️ GPU 서버가 점검중입니다. 잠시 후 다시 시도해주세요.",
+            "💤 AI is currently resting. Please visit during operating hours (08:00-04:00 KST)!" :
+            "💤 AI가 지금 휴식중이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!",
           response_time: null
         };
       }
       
       // Update user activity since they're using AI chat
       updateLastActivity();
-
-      // Log current mode for debugging
-      console.log('🤖 Sending request with:', { model: selectedModel, think: thinkMode });
-
+      
       // Call chat endpoint with auto-save functionality (no timeout)
       const controller = new AbortController();
       currentAIRequest = controller; // Store for cancellation
@@ -1403,8 +1380,7 @@ document.addEventListener('DOMContentLoaded', function() {
           question: question,
           language: isEnglish ? 'en' : 'ko',
           max_length: 700,
-          think_mode: thinkMode,
-          model_choice: selectedModel
+          think_mode: localStorage.getItem('thinkMode') === 'true'
         }),
         signal: controller.signal
       });
@@ -1433,23 +1409,10 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Error calling AI server:', error);
       currentAIRequest = null;
 
-      // Check if it's actually rest time by checking server response
-      const errorMessage = error.message || '';
-      if (errorMessage.includes('rest') || errorMessage.includes('휴식')) {
-        return {
-          response: isEnglish ?
-            "💤 AI is currently resting (04:00-08:00 KST). Please come back later!" :
-            "💤 AI가 지금 휴식시간입니다 (04:00-08:00 한국시간). 나중에 다시 찾아주세요!",
-          response_time: null,
-          tokens: null
-        };
-      }
-
-      // Otherwise, it's a server/GPU issue
       return {
         response: isEnglish ?
-          "⚙️ GPU server is under maintenance. Please try again later." :
-          "⚙️ GPU 서버가 점검중입니다. 잠시 후 다시 시도해주세요.",
+          "💤 AI is currently taking a break (04:00-08:00 KST). Please come back during operating hours!" :
+          "💤 AI가 지금 쉬는 시간이에요 (04:00-08:00 한국시간). 운영시간에 다시 찾아주세요!",
         response_time: null,
         tokens: null
       };
@@ -1472,9 +1435,6 @@ document.addEventListener('DOMContentLoaded', function() {
       let responseTime = null;
       let tokens = null;
 
-      // Log current mode for debugging
-      console.log('🤖 Sending request with:', { model: selectedModel, think: thinkMode });
-
       // Create EventSource manually using fetch for POST
       fetch(url, {
         method: 'POST',
@@ -1484,9 +1444,7 @@ document.addEventListener('DOMContentLoaded', function() {
         body: JSON.stringify({
           question: question,
           language: isEnglish ? 'en' : 'ko',
-          max_length: 700,
-          think_mode: thinkMode,
-          model_choice: selectedModel
+          max_length: 700
         }),
       }).then(response => {
         const reader = response.body.getReader();
@@ -1708,7 +1666,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isEnglish) {
         chatbotSchedule.textContent = 'Hours: 08:00-04:00 next day (KST)';
       } else {
-        chatbotSchedule.textContent = '휴식시간: 04:00-08:00 (한국시간)';
+        chatbotSchedule.textContent = '운영시간: 08:00-익일 04:00 (한국시간)';
       }
     }
 
@@ -1846,8 +1804,10 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           lastMessage.remove();
         }
-        // Use the error message from callAIServer (already handles rest time vs server maintenance)
-        addMessage(data.response, 'bot');
+        addMessage(
+          isEnglish ? '💤 AI is taking a break right now. Please try during operating hours (08:00-04:00 KST)!' : '💤 AI가 지금 쉬는 시간이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!',
+          'bot'
+        );
       }
     } else {
       // Search mode - use existing knowledge base
@@ -1870,14 +1830,8 @@ document.addEventListener('DOMContentLoaded', function() {
     option.addEventListener('click', (e) => {
       e.stopPropagation();
       const mode = option.dataset.mode;
-      selectedModel = option.dataset.model;
-      thinkMode = option.dataset.think === 'true';
-
-      // Save to localStorage
-      localStorage.setItem('aiMode', JSON.stringify({
-        model: selectedModel,
-        think: thinkMode
-      }));
+      thinkMode = mode === 'deep';
+      localStorage.setItem('thinkMode', thinkMode);
 
       updateThinkModeUI();
 
@@ -1885,7 +1839,7 @@ document.addEventListener('DOMContentLoaded', function() {
       thinkModeMenu.classList.remove('show');
       thinkModeBtn.classList.remove('active');
 
-      console.log('AI Mode:', mode, '| Model:', selectedModel, '| Think:', thinkMode);
+      console.log('Think mode:', thinkMode ? 'Deep (심층)' : 'Fast (빠름)');
     });
   });
 

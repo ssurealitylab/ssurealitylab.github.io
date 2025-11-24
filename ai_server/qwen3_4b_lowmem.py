@@ -56,11 +56,11 @@ def is_rest_time():
 
     return False, ("", "")
 
-def load_model(model_choice='qwen3-4b'):
+def load_model(model_choice='qwen25-7b'):
     """Load Qwen model with 4-bit quantization
 
     Args:
-        model_choice: 'qwen3-4b' or 'qwen25-3b'
+        model_choice: 'qwen3-4b', 'qwen25-3b', or 'qwen25-7b' (default)
     """
     global model, tokenizer
 
@@ -68,12 +68,14 @@ def load_model(model_choice='qwen3-4b'):
         # Select model path based on choice
         model_paths = {
             'qwen3-4b': "/home/i0179/.cache/huggingface/hub/qwen3-4b-git",
-            'qwen25-3b': "/home/i0179/.cache/huggingface/hub/qwen25-3b-git"
+            'qwen25-3b': "/home/i0179/.cache/huggingface/hub/qwen25-3b-git",
+            'qwen25-7b': "/home/i0179/.cache/huggingface/hub/qwen25-7b"
         }
 
         model_names = {
             'qwen3-4b': "Qwen3-4B",
-            'qwen25-3b': "Qwen2.5-3B"
+            'qwen25-3b': "Qwen2.5-3B",
+            'qwen25-7b': "Qwen2.5-7B"
         }
 
         if model_choice not in model_paths:

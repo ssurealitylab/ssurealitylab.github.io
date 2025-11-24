@@ -41,18 +41,22 @@
       <input type="text" id="chatbot-input" class="chatbot-input" placeholder="궁금한 것을 물어보세요..." maxlength="200">
       <div class="think-mode-dropdown">
         <button id="think-mode-btn" class="think-mode-btn">
-          <span class="think-mode-label">빠른모드</span>
+          <span class="think-mode-label">2.5 모드</span>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
         <div id="think-mode-menu" class="think-mode-menu">
-          <div class="think-mode-option" data-mode="fast">
-            <span class="mode-title">빠른모드</span>
-            <span class="mode-desc">즉시 답변</span>
+          <div class="think-mode-option" data-mode="qwen25" data-model="qwen25-7b" data-think="false">
+            <span class="mode-title">2.5 모드</span>
+            <span class="mode-desc">균형잡힌 성능 (기본)</span>
           </div>
-          <div class="think-mode-option" data-mode="deep">
-            <span class="mode-title">심층모드</span>
+          <div class="think-mode-option" data-mode="fast" data-model="qwen3-4b" data-think="false">
+            <span class="mode-title">빠른모드 (3.0)</span>
+            <span class="mode-desc">빠른 응답</span>
+          </div>
+          <div class="think-mode-option" data-mode="deep" data-model="qwen3-4b" data-think="true">
+            <span class="mode-title">심층모드 (3.0)</span>
             <span class="mode-desc">깊은 추론</span>
           </div>
         </div>
@@ -963,25 +967,41 @@ document.addEventListener('DOMContentLoaded', function() {
   // Current modes - Start in AI mode as requested
   let isAIMode = true;
   let isEnglish = false;
-  let selectedModel = 'qwen3-4b';
+  let selectedModel = 'qwen25-7b'; // Default to Qwen2.5-7B
+  let thinkMode = false; // Default to fast mode
 
-  // Think mode - Initialize from localStorage (default: false = fast mode)
-  let thinkMode = localStorage.getItem('thinkMode') === 'true';
+  // Initialize from localStorage if available
+  const savedMode = localStorage.getItem('aiMode');
+  if (savedMode) {
+    const modeData = JSON.parse(savedMode);
+    selectedModel = modeData.model || 'qwen25-7b';
+    thinkMode = modeData.think || false;
+  }
+
   const thinkModeLabel = document.querySelector('.think-mode-label');
 
   // Set initial UI state
   function updateThinkModeUI() {
-    if (thinkMode) {
-      thinkModeLabel.textContent = '심층모드';
-      thinkModeOptions.forEach(opt => {
-        opt.classList.toggle('selected', opt.dataset.mode === 'deep');
-      });
-    } else {
-      thinkModeLabel.textContent = '빠른모드';
-      thinkModeOptions.forEach(opt => {
-        opt.classList.toggle('selected', opt.dataset.mode === 'fast');
-      });
+    let modeText = '2.5 모드';
+    let modeKey = 'qwen25';
+
+    if (selectedModel === 'qwen25-7b') {
+      modeText = '2.5 모드';
+      modeKey = 'qwen25';
+    } else if (selectedModel === 'qwen3-4b') {
+      if (thinkMode) {
+        modeText = '심층모드 (3.0)';
+        modeKey = 'deep';
+      } else {
+        modeText = '빠른모드 (3.0)';
+        modeKey = 'fast';
+      }
     }
+
+    thinkModeLabel.textContent = modeText;
+    thinkModeOptions.forEach(opt => {
+      opt.classList.toggle('selected', opt.dataset.mode === modeKey);
+    });
   }
 
   updateThinkModeUI();
@@ -1380,7 +1400,8 @@ document.addEventListener('DOMContentLoaded', function() {
           question: question,
           language: isEnglish ? 'en' : 'ko',
           max_length: 700,
-          think_mode: localStorage.getItem('thinkMode') === 'true'
+          think_mode: thinkMode,
+          model_choice: selectedModel
         }),
         signal: controller.signal
       });
@@ -1830,8 +1851,14 @@ document.addEventListener('DOMContentLoaded', function() {
     option.addEventListener('click', (e) => {
       e.stopPropagation();
       const mode = option.dataset.mode;
-      thinkMode = mode === 'deep';
-      localStorage.setItem('thinkMode', thinkMode);
+      selectedModel = option.dataset.model;
+      thinkMode = option.dataset.think === 'true';
+
+      // Save to localStorage
+      localStorage.setItem('aiMode', JSON.stringify({
+        model: selectedModel,
+        think: thinkMode
+      }));
 
       updateThinkModeUI();
 
@@ -1839,7 +1866,7 @@ document.addEventListener('DOMContentLoaded', function() {
       thinkModeMenu.classList.remove('show');
       thinkModeBtn.classList.remove('active');
 
-      console.log('Think mode:', thinkMode ? 'Deep (심층)' : 'Fast (빠름)');
+      console.log('AI Mode:', mode, '| Model:', selectedModel, '| Think:', thinkMode);
     });
   });
 

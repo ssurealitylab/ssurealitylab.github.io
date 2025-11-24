@@ -27,13 +27,12 @@ app = Flask(__name__)
 CORS(app)
 
 # Global variables
-model = None
-tokenizer = None
+models = {}  # Store multiple models
+tokenizers = {}  # Store multiple tokenizers
 rag_retriever = None
 last_activity_time = None
 shutdown_timeout = 120  # 2 minutes in seconds
 shutdown_timer_thread = None
-model_choice_global = 'qwen3-4b'  # Store model choice for reloading
 is_loading_model = False  # Track if model is currently being loaded
 request_lock = threading.Lock()  # Lock for sequential request processing
 is_processing_request = False  # Track if a request is currently being processed
@@ -57,12 +56,12 @@ def is_rest_time():
     return False, ("", "")
 
 def load_model(model_choice='qwen25-7b'):
-    """Load Qwen model with 4-bit quantization
+    """Load a single Qwen model with 4-bit quantization
 
     Args:
         model_choice: 'qwen3-4b', 'qwen25-3b', or 'qwen25-7b' (default)
     """
-    global model, tokenizer
+    global models, tokenizers
 
     try:
         # Select model path based on choice
@@ -80,6 +79,11 @@ def load_model(model_choice='qwen25-7b'):
 
         if model_choice not in model_paths:
             raise ValueError(f"Invalid model choice: {model_choice}. Choose from {list(model_paths.keys())}")
+
+        # Skip if already loaded
+        if model_choice in models:
+            logger.info(f"✅ {model_names[model_choice]} already loaded")
+            return True
 
         model_path = model_paths[model_choice]
         model_name = model_names[model_choice]
@@ -109,13 +113,40 @@ def load_model(model_choice='qwen25-7b'):
             trust_remote_code=True
         )
 
+        # Store in dictionaries
+        models[model_choice] = model
+        tokenizers[model_choice] = tokenizer
+
         logger.info(f"✅ {model_name} model loaded successfully with 4-bit quantization")
         logger.info(f"Model vocab size: {model.config.vocab_size}, Tokenizer vocab size: {len(tokenizer)}")
         logger.info(f"PAD token ID: {tokenizer.pad_token_id}, EOS token ID: {tokenizer.eos_token_id}")
         return True
 
     except Exception as e:
-        logger.error(f"Failed to load model: {e}")
+        logger.error(f"Failed to load model {model_choice}: {e}")
+        return False
+
+def load_all_models():
+    """Load both Qwen3-4B and Qwen2.5-7B models"""
+    logger.info("🚀 Loading all models...")
+
+    # Load Qwen2.5-7B first (default model)
+    success_25 = load_model('qwen25-7b')
+
+    # Load Qwen3-4B second
+    success_3 = load_model('qwen3-4b')
+
+    if success_25 and success_3:
+        logger.info("✅ All models loaded successfully!")
+        return True
+    elif success_25:
+        logger.warning("⚠️ Only Qwen2.5-7B loaded, Qwen3-4B failed")
+        return True
+    elif success_3:
+        logger.warning("⚠️ Only Qwen3-4B loaded, Qwen2.5-7B failed")
+        return True
+    else:
+        logger.error("❌ Failed to load any models")
         return False
 
 def update_activity():
@@ -124,21 +155,24 @@ def update_activity():
     last_activity_time = time.time()
 
 def unload_model():
-    """Unload model from GPU to free memory"""
-    global model, tokenizer
+    """Unload all models from GPU to free memory"""
+    global models, tokenizers
 
-    if model is None and tokenizer is None:
+    if not models and not tokenizers:
         return  # Already unloaded
 
-    logger.info("🔌 Unloading model from GPU...")
+    logger.info("🔌 Unloading all models from GPU...")
 
-    # Clear model and tokenizer
-    if model is not None:
-        del model
-        model = None
-    if tokenizer is not None:
-        del tokenizer
-        tokenizer = None
+    # Clear all models and tokenizers
+    for model_name in list(models.keys()):
+        if models[model_name] is not None:
+            del models[model_name]
+    models.clear()
+
+    for tokenizer_name in list(tokenizers.keys()):
+        if tokenizers[tokenizer_name] is not None:
+            del tokenizers[tokenizer_name]
+    tokenizers.clear()
 
     # Force garbage collection and clear CUDA cache
     import gc
@@ -148,25 +182,25 @@ def unload_model():
 
     logger.info("✅ GPU memory freed. Server remains active for auto-reload.")
 
-def ensure_model_loaded():
-    """Ensure model is loaded, reload if necessary"""
-    global model, tokenizer, is_loading_model, model_choice_global
+def ensure_model_loaded(model_choice='qwen25-7b'):
+    """Ensure specific model is loaded, reload if necessary"""
+    global models, tokenizers, is_loading_model
 
-    if model is not None and tokenizer is not None:
+    if model_choice in models and model_choice in tokenizers:
         return True  # Already loaded
 
     if is_loading_model:
         return False  # Currently loading, caller should wait
 
-    # Reload model
+    # Load model if not present
     is_loading_model = True
     try:
-        logger.info("🔄 Model not loaded. Reloading...")
-        success = load_model(model_choice_global)
+        logger.info(f"🔄 Model {model_choice} not loaded. Loading...")
+        success = load_model(model_choice)
         is_loading_model = False
         return success
     except Exception as e:
-        logger.error(f"Failed to reload model: {e}")
+        logger.error(f"Failed to load model {model_choice}: {e}")
         is_loading_model = False
         return False
 
@@ -182,7 +216,7 @@ def check_idle_timeout():
 
         idle_time = time.time() - last_activity_time
 
-        if idle_time >= shutdown_timeout and (model is not None or tokenizer is not None):
+        if idle_time >= shutdown_timeout and (models or tokenizers):
             # Double-check activity time before unloading (prevent race condition with heartbeat)
             final_idle_time = time.time() - last_activity_time
             if final_idle_time >= shutdown_timeout:
@@ -690,9 +724,10 @@ def chat_stream():
         language = data.get('language', 'ko')
         max_length = data.get('max_length', 700)
         think_mode = data.get('think_mode', False)  # Default: fast mode (no think tags)
+        model_choice = data.get('model_choice', 'qwen25-7b')  # Default: Qwen2.5-7B
 
         def generate_stream():
-            global model, tokenizer, is_loading_model
+            global models, tokenizers, is_loading_model
 
             # Check if model is being loaded
             if is_loading_model:
@@ -702,11 +737,15 @@ def chat_stream():
                 return
 
             # Ensure model is loaded
-            if model is None or tokenizer is None:
-                if not ensure_model_loaded():
-                    yield f"data: {json.dumps({'error': 'Failed to load AI model'})}\n\n"
+            if model_choice not in models or model_choice not in tokenizers:
+                if not ensure_model_loaded(model_choice):
+                    yield f"data: {json.dumps({'error': f'Failed to load AI model: {model_choice}'})}\n\n"
                     yield "data: [DONE]\n\n"
                     return
+
+            # Get the selected model and tokenizer
+            model = models[model_choice]
+            tokenizer = tokenizers[model_choice]
 
             try:
                 start_time = time.time()
@@ -1083,26 +1122,15 @@ def submit_bug_report():
 if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(description='Reality Lab Qwen Low Memory Server')
+    parser = argparse.ArgumentParser(description='Reality Lab Qwen Dual-Model Server')
     parser.add_argument('--port', type=int, default=4005, help='Port to run the server on')
-    parser.add_argument('--model', type=str, default='qwen3-4b',
-                       choices=['qwen3-4b', 'qwen25-3b'],
-                       help='Model to use: qwen3-4b (default) or qwen25-3b')
     args = parser.parse_args()
 
     port = args.port
-    model_choice = args.model
-    # Store model choice globally for auto-reload
-    model_choice_global = model_choice
 
-    model_display_names = {
-        'qwen3-4b': 'Qwen3-4B',
-        'qwen25-3b': 'Qwen2.5-3B'
-    }
+    logger.info(f"Starting Reality Lab Dual-Model Server (Qwen2.5-7B + Qwen3-4B) on port {port}...")
 
-    logger.info(f"Starting Reality Lab {model_display_names[model_choice]} Server (4-bit) on port {port}...")
-
-    if load_model(model_choice):
+    if load_all_models():
         # Load RAG system
         try:
             logger.info("Loading RAG system...")

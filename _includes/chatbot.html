@@ -1385,7 +1385,10 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Update user activity since they're using AI chat
       updateLastActivity();
-      
+
+      // Log current mode for debugging
+      console.log('🤖 Sending request with:', { model: selectedModel, think: thinkMode });
+
       // Call chat endpoint with auto-save functionality (no timeout)
       const controller = new AbortController();
       currentAIRequest = controller; // Store for cancellation
@@ -1469,6 +1472,9 @@ document.addEventListener('DOMContentLoaded', function() {
       let responseTime = null;
       let tokens = null;
 
+      // Log current mode for debugging
+      console.log('🤖 Sending request with:', { model: selectedModel, think: thinkMode });
+
       // Create EventSource manually using fetch for POST
       fetch(url, {
         method: 'POST',
@@ -1478,7 +1484,9 @@ document.addEventListener('DOMContentLoaded', function() {
         body: JSON.stringify({
           question: question,
           language: isEnglish ? 'en' : 'ko',
-          max_length: 700
+          max_length: 700,
+          think_mode: thinkMode,
+          model_choice: selectedModel
         }),
       }).then(response => {
         const reader = response.body.getReader();

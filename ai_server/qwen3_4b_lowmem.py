@@ -571,10 +571,14 @@ A: 박성용 학생은 Image Restoration과 AI for Astronomy를 연구하고 있
 @app.route('/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
+    rest, rest_messages = is_rest_time()
     return jsonify({
-        'status': 'healthy',
-        'model_loaded': model is not None,
-        'model_name': 'Qwen3-4B-4bit'
+        'status': 'resting' if rest else 'healthy',
+        'is_rest_time': rest,
+        'rest_message_ko': rest_messages[0] if rest else None,
+        'rest_message_en': rest_messages[1] if rest else None,
+        'models_loaded': list(models.keys()),
+        'server_name': 'Qwen Dual-Model Server'
     })
 
 @app.route('/heartbeat', methods=['POST'])
@@ -1148,7 +1152,7 @@ if __name__ == '__main__':
         shutdown_timer_thread.start()
         logger.info(f"⏱️  Idle timeout enabled: server will shutdown after {shutdown_timeout}s of inactivity")
 
-        logger.info(f"🚀 {model_display_names[model_choice]} server ready on port {port}!")
+        logger.info(f"🚀 Dual-Model server ready on port {port}!")
         logger.info("✅ Running with HTTP (no SSL)")
         app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
     else:

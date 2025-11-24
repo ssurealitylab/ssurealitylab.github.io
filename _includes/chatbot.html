@@ -6,7 +6,7 @@
       <div class="chatbot-header-info">
         <div class="chatbot-title">Reality Lab Assistant</div>
         <div class="chatbot-subtitle">AI가 연구실에 대해 답변해드립니다!</div>
-        <div class="chatbot-schedule" style="font-size: 11px; color: #888; margin-top: 2px;">운영시간: 08:00-익일 04:00 (한국시간)</div>
+        <div class="chatbot-schedule" style="font-size: 11px; color: #888; margin-top: 2px;">휴식시간: 04:00-08:00 (한국시간)</div>
       </div>
       <div class="chatbot-controls">
         <div class="mode-toggle">
@@ -104,7 +104,7 @@
               <p><strong>모델:</strong> Qwen3-4B Fine-tuned 모델 (Think 태그 제거)</p>
               <p><strong>하드웨어:</strong> NVIDIA RTX 4090 GPU</p>
               <p><strong>연결:</strong> Cloudflare Tunnel (공개 접속 지원)</p>
-              <p><strong>운영시간:</strong> 오전 8시 ~ 익일 오전 4시 (한국시간 KST)</p>
+              <p><strong>휴식시간:</strong> 오전 4시 ~ 오전 8시 (한국시간 KST)</p>
               <p><strong>휴식시간:</strong> 매일 오전 4시 ~ 8시 (시스템 유지보수)</p>
               <p><strong>자동 재시작:</strong> 매일 오전 8시, 오후 6시 (터널 갱신)</p>
               <p><strong>업데이트:</strong> 매주 일요일 오전 2시 자동 업데이트</p>
@@ -1046,13 +1046,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (response.ok) {
         const data = await response.json();
-        if (data.status === 'healthy') {
+        if (data.status === 'resting' || data.is_rest_time) {
+          isAIServerReady = false;
+          console.log('💤 AI server is in rest time (04:00-08:00 KST)');
+        } else if (data.status === 'healthy') {
           isAIServerReady = true;
-          if (data.model_loaded) {
-            console.log('✅ AI server ready:', data.model_name);
-          } else {
-            console.log('✅ AI server healthy (model will auto-load on first request)');
-          }
+          const modelCount = data.models_loaded ? data.models_loaded.length : 0;
+          console.log(`✅ AI server ready: ${data.server_name} (${modelCount} models loaded)`);
         } else {
           console.warn('⚠️ AI server responded but not healthy');
         }
@@ -1366,19 +1366,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!session) {
           return {
             response: isEnglish ?
-              "💤 AI is currently taking a break. Please try during operating hours (08:00-04:00 KST)!" :
-              "💤 AI가 지금 쉬는 시간이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!",
+              "⚙️ GPU server is under maintenance. Please try again later." :
+              "⚙️ GPU 서버가 점검중입니다. 잠시 후 다시 시도해주세요.",
             response_time: null
           };
         }
       }
-      
+
       const endpoints = getCurrentEndpoints();
       if (!endpoints) {
         return {
           response: isEnglish ?
-            "💤 AI is currently resting. Please visit during operating hours (08:00-04:00 KST)!" :
-            "💤 AI가 지금 휴식중이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!",
+            "⚙️ GPU server is under maintenance. Please try again later." :
+            "⚙️ GPU 서버가 점검중입니다. 잠시 후 다시 시도해주세요.",
           response_time: null
         };
       }
@@ -1430,10 +1430,23 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Error calling AI server:', error);
       currentAIRequest = null;
 
+      // Check if it's actually rest time by checking server response
+      const errorMessage = error.message || '';
+      if (errorMessage.includes('rest') || errorMessage.includes('휴식')) {
+        return {
+          response: isEnglish ?
+            "💤 AI is currently resting (04:00-08:00 KST). Please come back later!" :
+            "💤 AI가 지금 휴식시간입니다 (04:00-08:00 한국시간). 나중에 다시 찾아주세요!",
+          response_time: null,
+          tokens: null
+        };
+      }
+
+      // Otherwise, it's a server/GPU issue
       return {
         response: isEnglish ?
-          "💤 AI is currently taking a break (04:00-08:00 KST). Please come back during operating hours!" :
-          "💤 AI가 지금 쉬는 시간이에요 (04:00-08:00 한국시간). 운영시간에 다시 찾아주세요!",
+          "⚙️ GPU server is under maintenance. Please try again later." :
+          "⚙️ GPU 서버가 점검중입니다. 잠시 후 다시 시도해주세요.",
         response_time: null,
         tokens: null
       };
@@ -1687,7 +1700,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isEnglish) {
         chatbotSchedule.textContent = 'Hours: 08:00-04:00 next day (KST)';
       } else {
-        chatbotSchedule.textContent = '운영시간: 08:00-익일 04:00 (한국시간)';
+        chatbotSchedule.textContent = '휴식시간: 04:00-08:00 (한국시간)';
       }
     }
 
@@ -1825,10 +1838,8 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           lastMessage.remove();
         }
-        addMessage(
-          isEnglish ? '💤 AI is taking a break right now. Please try during operating hours (08:00-04:00 KST)!' : '💤 AI가 지금 쉬는 시간이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!',
-          'bot'
-        );
+        // Use the error message from callAIServer (already handles rest time vs server maintenance)
+        addMessage(data.response, 'bot');
       }
     } else {
       // Search mode - use existing knowledge base

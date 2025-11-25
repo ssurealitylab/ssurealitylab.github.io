@@ -390,17 +390,45 @@ def generate_response(prompt, language='ko', max_length=700):
             except Exception as e:
                 logger.warning(f"RAG search failed: {e}")
 
+        # Core lab info that must always be included
+        core_info_en = """
+Reality Lab (Soongsil University - 숭실대학교):
+- Established 2023, Led by Prof. Heewon Kim (김희원 교수)
+- Location: 105 Sadan-ro, Dongjak-gu, Seoul (서울특별시 동작구 사당로 105)
+- Contact: heewon@ssu.ac.kr, +82-2-820-0679
+- Research: Robotics, Computer Vision, Machine Learning, Multimodal AI, Healthcare AI
+
+Master's Students (석사과정 10명):
+1. Sungyong Park (박성용) - Image Restoration, AI for Astronomy
+2. Byungkwan Chae (채병관) - Mobile AI, Augmented Reality
+3. Youngjae Choi (최영재) - Computer Vision, Deep Learning
+4. Sangmin Lee (이상민) - 3D Vision, Depth Estimation
+5. Minjoo Koh (고민주) - Medical AI, Image Segmentation
+6. Hyunjun Kho (고현준) - Video Understanding, Action Recognition
+7. Hyunsuh Kho (고현서) - Generative Models, Image Synthesis
+8. Juhyoung Lee (이주형) - Object Detection, Autonomous Driving
+9. Jiwoo Seo (서지우) - Natural Language Processing, Multimodal AI
+10. Hojae Jeong (정호재) - Reinforcement Learning, Robotics
+
+Recent Publications (2025):
+- CVPR 2025: DynScene (Scene Graph Generation)
+- WACV 2026: HiGlassRM (High-prescription Glasses Removal) - Sebin Lee, Heewon Kim
+- WACV 2026: MBTI (Metric-Based Textual Inversion) - ByungKwan Chae, Youngjae Choi, Heewon Kim
+- BMVC 2025, AAAI 2025, PLOS ONE, ICT Express"""
+
+        core_info_ko = """
+숭실대학교 Reality Lab (2023년 설립, 김희원 교수)
+연락처: heewon@ssu.ac.kr, 02-820-0679
+
+석사과정(10명): 박성용, 채병관, 최영재, 이상민, 고민주, 고현준, 고현서, 이주형, 서지우, 정호재
+
+최신 논문: CVPR 2025 DynScene, WACV 2026 HiGlassRM(이세빈,김희원), WACV 2026 MBTI(채병관,최영재,김희원)"""
+
         # Create language-specific system prompt (concise yet friendly with key info)
         if language == 'en':
             system_content = f"""{rag_context}You are a helpful assistant for Reality Lab at Soongsil University. Be concise yet friendly, and include all essential information.
 
-Use the reference materials above to answer the question. If the references don't contain the answer, use your general knowledge about Reality Lab.
-
-Reality Lab (Soongsil University):
-- Established 2023, Led by Prof. Heewon Kim
-- Research: Robotics, Computer Vision, Machine Learning, Multimodal AI, Healthcare AI
-- Location: 105 Sadan-ro, Dongjak-gu, Seoul
-- Contact: +82-2-820-0679
+{core_info_en}
 
 Guidelines:
 - Be concise yet polite and friendly
@@ -409,24 +437,11 @@ Guidelines:
 - No <think> tags or internal reasoning"""
         else:
             # Ultra-simple prompt for weak model
-            system_content = f"""Reality Lab Q&A 봇입니다. 주어진 정보에서 답을 찾아 한국어로 간단히 답변하세요.
+            system_content = f"""숭실대학교 Reality Lab Q&A 봇. 한국어로 간단히 답변.
 
-기본 정보:
-- 설립: 2023년, 김희원 교수님
-- 연구: 로보틱스, 컴퓨터비전, 기계학습, 멀티모달 AI, 헬스케어 AI
-- 위치: 서울특별시 동작구 사당로 105, 숭실대학교
-- 전화: +82-2-820-0679
+{core_info_ko}
 
-{rag_context}
-
-답변 형식:
-- 한국어로만 답변
-- 1-2문장으로 답변
-- 정보가 없으면 "죄송합니다. 해당 정보를 찾을 수 없습니다. 김희원 교수님(heewon@ssu.ac.kr)께 문의해주세요."
-
-예시:
-Q: 박성용 학생 연구 분야는?
-A: 박성용 학생은 Image Restoration과 AI for Astronomy를 연구하고 있습니다."""
+{rag_context}"""
 
         # Create chat template
         messages = [

@@ -3118,3 +3118,8 @@
 [2025. 11. 25. (화) 13:00:02 KST] Current GPU: 3
 [2025. 11. 25. (화) 13:00:02 KST] Current GPU 3 utilization: 0%
 [2025. 11. 25. (화) 13:00:02 KST] ✅ Current GPU is healthy (0% < 30%), no action needed
+
+========================================
+[2025. 11. 25. (화) 14:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 11. 25. (화) 14:00:01 KST] ⚠️  AI server not running (PID 665112 not found)

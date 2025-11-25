@@ -114,8 +114,8 @@ students:
       university: "Media, Soongsil University, B.S."
       research: "Deep Learning, Medical AI"
       photo: "assets/img/members/seoyoung_kim.jpg"
-      github: "https://github.com/seoyoung-kim"
-      linkedin: "https://linkedin.com/in/seoyoung-kim"
+      github: ""
+      linkedin: ""
 
     - name: "Sooyoung Choi"
       name_ko: "최수영"

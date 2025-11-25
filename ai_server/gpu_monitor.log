@@ -3074,3 +3074,47 @@
 [2025. 11. 20. (목) 05:00:01 KST] Current GPU: 0
 [2025. 11. 20. (목) 05:00:01 KST] Current GPU 0 utilization: 0%
 [2025. 11. 20. (목) 05:00:01 KST] ✅ Current GPU is healthy (0% < 30%), no action needed
+
+========================================
+[2025. 11. 25. (화) 09:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 11. 25. (화) 09:00:01 KST] Current GPU: 0
+[2025. 11. 25. (화) 09:00:01 KST] Current GPU 0 utilization: 0%
+[2025. 11. 25. (화) 09:00:01 KST] ✅ Current GPU is healthy (0% < 30%), no action needed
+
+========================================
+[2025. 11. 25. (화) 10:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 11. 25. (화) 10:00:01 KST] Current GPU: 0
+[2025. 11. 25. (화) 10:00:01 KST] Current GPU 0 utilization: 0%
+[2025. 11. 25. (화) 10:00:01 KST] ✅ Current GPU is healthy (0% < 30%), no action needed
+
+========================================
+[2025. 11. 25. (화) 11:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 11. 25. (화) 11:00:01 KST] Current GPU: 0
+[2025. 11. 25. (화) 11:00:01 KST] Current GPU 0 utilization: 100%
+[2025. 11. 25. (화) 11:00:01 KST] ⚠️  Current GPU overloaded (100% >= 30%), searching for available GPU...
+[2025. 11. 25. (화) 11:00:01 KST] ✅ Found available GPU: 3
+[2025. 11. 25. (화) 11:00:01 KST] 🔄 Switching AI server from GPU 0 to GPU 3...
+[2025. 11. 25. (화) 11:00:01 KST] Stopping current AI server (PID: 436181)...
+[2025. 11. 25. (화) 11:00:06 KST] Starting AI server on GPU 3...
+[2025. 11. 25. (화) 11:00:06 KST] AI server started with PID: 665112 on GPU 3
+[2025. 11. 25. (화) 11:00:06 KST] Waiting 90 seconds for model to load...
+[2025. 11. 25. (화) 11:01:37 KST] Testing server connection...
+[2025. 11. 25. (화) 11:01:41 KST] ⚠️  Server started but verification failed
+========================================
+
+========================================
+[2025. 11. 25. (화) 12:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 11. 25. (화) 12:00:01 KST] Current GPU: 3
+[2025. 11. 25. (화) 12:00:01 KST] Current GPU 3 utilization: 0%
+[2025. 11. 25. (화) 12:00:01 KST] ✅ Current GPU is healthy (0% < 30%), no action needed
+
+========================================
+[2025. 11. 25. (화) 13:00:02 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 11. 25. (화) 13:00:02 KST] Current GPU: 3
+[2025. 11. 25. (화) 13:00:02 KST] Current GPU 3 utilization: 0%
+[2025. 11. 25. (화) 13:00:02 KST] ✅ Current GPU is healthy (0% < 30%), no action needed

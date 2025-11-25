@@ -55,6 +55,10 @@
             <span class="mode-title">심층모드</span>
             <span class="mode-desc">깊은 추론</span>
           </div>
+          <div class="think-mode-option" data-mode="test">
+            <span class="mode-title">🧪 테스트</span>
+            <span class="mode-desc">8B 개발전용</span>
+          </div>
         </div>
       </div>
       <button id="chatbot-send" class="chatbot-send">
@@ -965,23 +969,22 @@ document.addEventListener('DOMContentLoaded', function() {
   let isEnglish = false;
   let selectedModel = 'qwen3-4b';
 
-  // Think mode - Initialize from localStorage (default: false = fast mode)
-  let thinkMode = localStorage.getItem('thinkMode') === 'true';
+  // Chat mode - Initialize from localStorage (default: 'fast')
+  // Modes: 'fast' (빠른모드), 'deep' (심층모드), 'test' (테스트모드 - 8B)
+  let chatMode = localStorage.getItem('chatMode') || 'fast';
   const thinkModeLabel = document.querySelector('.think-mode-label');
 
   // Set initial UI state
   function updateThinkModeUI() {
-    if (thinkMode) {
-      thinkModeLabel.textContent = '심층모드';
-      thinkModeOptions.forEach(opt => {
-        opt.classList.toggle('selected', opt.dataset.mode === 'deep');
-      });
-    } else {
-      thinkModeLabel.textContent = '빠른모드';
-      thinkModeOptions.forEach(opt => {
-        opt.classList.toggle('selected', opt.dataset.mode === 'fast');
-      });
-    }
+    const modeLabels = {
+      'fast': '빠른모드',
+      'deep': '심층모드',
+      'test': '🧪 테스트'
+    };
+    thinkModeLabel.textContent = modeLabels[chatMode] || '빠른모드';
+    thinkModeOptions.forEach(opt => {
+      opt.classList.toggle('selected', opt.dataset.mode === chatMode);
+    });
   }
 
   updateThinkModeUI();
@@ -1370,18 +1373,23 @@ document.addEventListener('DOMContentLoaded', function() {
       const controller = new AbortController();
       currentAIRequest = controller; // Store for cancellation
 
+      // Determine request parameters based on chat mode
+      const currentChatMode = localStorage.getItem('chatMode') || 'fast';
+      const requestBody = {
+        question: question,
+        language: isEnglish ? 'en' : 'ko',
+        max_length: 700,
+        think_mode: currentChatMode === 'deep',
+        model_choice: currentChatMode === 'test' ? 'qwen3-8b' : 'qwen3-4b'
+      };
+
       const response = await fetch(endpoints.chat, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'X-Session-ID': currentSession ? currentSession.session_id : '',
         },
-        body: JSON.stringify({
-          question: question,
-          language: isEnglish ? 'en' : 'ko',
-          max_length: 700,
-          think_mode: localStorage.getItem('thinkMode') === 'true'
-        }),
+        body: JSON.stringify(requestBody),
         signal: controller.signal
       });
 
@@ -1825,13 +1833,12 @@ document.addEventListener('DOMContentLoaded', function() {
     thinkModeBtn.classList.toggle('active');
   });
 
-  // Think mode option selection
+  // Chat mode option selection
   thinkModeOptions.forEach(option => {
     option.addEventListener('click', (e) => {
       e.stopPropagation();
-      const mode = option.dataset.mode;
-      thinkMode = mode === 'deep';
-      localStorage.setItem('thinkMode', thinkMode);
+      chatMode = option.dataset.mode;
+      localStorage.setItem('chatMode', chatMode);
 
       updateThinkModeUI();
 
@@ -1839,7 +1846,8 @@ document.addEventListener('DOMContentLoaded', function() {
       thinkModeMenu.classList.remove('show');
       thinkModeBtn.classList.remove('active');
 
-      console.log('Think mode:', thinkMode ? 'Deep (심층)' : 'Fast (빠름)');
+      const modeNames = { 'fast': 'Fast (빠름)', 'deep': 'Deep (심층)', 'test': 'Test (8B 개발전용)' };
+      console.log('Chat mode:', modeNames[chatMode]);
     });
   });
 

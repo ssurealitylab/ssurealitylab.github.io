@@ -3,8 +3,7 @@
 INFO:__main__:Starting Reality Lab Qwen3-4B Server (4-bit) on port 4005...
 INFO:__main__:Loading Qwen3-4B tokenizer from local path
 INFO:__main__:Loading Qwen3-4B model with 4-bit quantization
-INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:08,  4.39s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:09<00:04,  4.73s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:09<00:00,  2.62s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:09<00:00,  3.16s/it]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:05<00:10,  5.01s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:10<00:05,  5.30s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:10<00:00,  2.93s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:10<00:00,  3.54s/it]
 INFO:__main__:✅ Qwen3-4B model loaded successfully with 4-bit quantization
 INFO:__main__:Model vocab size: 151936, Tokenizer vocab size: 151669
 INFO:__main__:PAD token ID: 151643, EOS token ID: 151645
@@ -12,7 +11,7 @@ INFO:__main__:Loading RAG system...
 INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cuda:0
 INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
 INFO:__main__:✅ RAG system loaded successfully!
-INFO:__main__:⏱️  Idle timeout enabled: server will shutdown after 120s of inactivity
+INFO:__main__:⏱️  Idle timeout enabled: server will shutdown after Nones of inactivity
 INFO:__main__:🚀 Qwen3-4B server ready on port 4005!
 INFO:__main__:✅ Running with HTTP (no SSL)
 Loading Hierarchical RAG from: /home/i0179/Realitylab-site/ai_server/hierarchical_rag
@@ -31,3 +30,50 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://127.0.0.1:4005
  * Running on http://203.253.25.165:4005
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:43:30] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:43:30] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:43:38] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:43:38] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:43:38] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:49:11] "GET /health HTTP/1.1" 200 -
+INFO:__main__:🔄 Model switch requested: qwen3-4b -> qwen3-8b
+INFO:__main__:🔌 Unloading model from GPU...
+INFO:__main__:✅ GPU memory freed. Server remains active for auto-reload.
+INFO:__main__:Loading Qwen3-8B (Test) tokenizer from local path
+INFO:__main__:Loading Qwen3-8B (Test) model with 4-bit quantization
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:10<00:41, 10.28s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:20<00:31, 10.38s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:30<00:20, 10.29s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:39<00:09,  9.42s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:41<00:00,  7.02s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:41<00:00,  8.35s/it]
+INFO:__main__:✅ Qwen3-8B (Test) model loaded successfully with 4-bit quantization
+INFO:__main__:Model vocab size: 151936, Tokenizer vocab size: 151669
+INFO:__main__:PAD token ID: 151643, EOS token ID: 151645
+INFO:__main__:Original query: 안녕
+INFO:__main__:Cleaned query: 안녕
+[Query Classification] Searching categories: ['faculty', 'students']
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 42.70it/s]
+INFO:__main__:RAG found 5 documents
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:51:19] "POST /chat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:54:26] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:54:26] "POST /heartbeat HTTP/1.1" 200 -
+INFO:__main__:Original query: 연구실 소개해줘
+INFO:__main__:Cleaned query: 연구실 소개해줘
+[Query Classification] Searching categories: ['lab_info']
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 11.96it/s]
+INFO:__main__:RAG found 1 documents
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:57:12] "POST /chat HTTP/1.1" 200 -
+INFO:__main__:🔄 Model switch requested: qwen3-8b -> qwen3-4b
+INFO:__main__:🔌 Unloading model from GPU...
+INFO:__main__:✅ GPU memory freed. Server remains active for auto-reload.
+INFO:__main__:Loading Qwen3-4B tokenizer from local path
+INFO:__main__:Loading Qwen3-4B model with 4-bit quantization
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:18<00:37, 18.80s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:25<00:11, 11.80s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:25<00:00,  6.47s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:25<00:00,  8.61s/it]
+INFO:__main__:✅ Qwen3-4B model loaded successfully with 4-bit quantization
+INFO:__main__:Model vocab size: 151936, Tokenizer vocab size: 151669
+INFO:__main__:PAD token ID: 151643, EOS token ID: 151645
+INFO:__main__:Original query: 테스트
+INFO:__main__:Cleaned query: 테스트
+[Query Classification] Searching categories: ['faculty', 'students']
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 42.19it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 53.07it/s]
+INFO:__main__:RAG found 5 documents
+INFO:werkzeug:127.0.0.1 - - [25/Nov/2025 13:58:01] "POST /chat HTTP/1.1" 200 -

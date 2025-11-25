@@ -60,7 +60,7 @@ def load_model(model_choice='qwen3-4b'):
     """Load Qwen model with 4-bit quantization
 
     Args:
-        model_choice: 'qwen3-4b' or 'qwen25-3b'
+        model_choice: 'qwen3-4b', 'qwen25-3b', or 'qwen3-8b'
     """
     global model, tokenizer
 
@@ -68,12 +68,14 @@ def load_model(model_choice='qwen3-4b'):
         # Select model path based on choice
         model_paths = {
             'qwen3-4b': "/home/i0179/.cache/huggingface/hub/qwen3-4b-git",
-            'qwen25-3b': "/home/i0179/.cache/huggingface/hub/qwen25-3b-git"
+            'qwen25-3b': "/home/i0179/.cache/huggingface/hub/qwen25-3b-git",
+            'qwen3-8b': "/data/models/qwen3-8b"
         }
 
         model_names = {
             'qwen3-4b': "Qwen3-4B",
-            'qwen25-3b': "Qwen2.5-3B"
+            'qwen25-3b': "Qwen2.5-3B",
+            'qwen3-8b': "Qwen3-8B (Test)"
         }
 
         if model_choice not in model_paths:
@@ -535,10 +537,15 @@ A: 박성용 학생은 Image Restoration과 AI for Astronomy를 연구하고 있
 @app.route('/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
+    model_display_names = {
+        'qwen3-4b': 'Qwen3-4B-4bit',
+        'qwen25-3b': 'Qwen2.5-3B-4bit',
+        'qwen3-8b': 'Qwen3-8B-4bit (Test)'
+    }
     return jsonify({
         'status': 'healthy',
         'model_loaded': model is not None,
-        'model_name': 'Qwen3-4B-4bit'
+        'model_name': model_display_names.get(model_choice_global, 'Qwen3-4B-4bit')
     })
 
 @app.route('/heartbeat', methods=['POST'])
@@ -624,6 +631,7 @@ def chat():
         user_question = data['question']
         language = data.get('language', 'ko')
         max_length = data.get('max_length', 700)  # Balanced default
+        requested_model = data.get('model_choice', 'qwen3-4b')  # New: model selection
 
         # Check if another request is currently being processed
         if is_processing_request:
@@ -643,7 +651,27 @@ def chat():
                 'status': 'loading'
             })
 
-        if not ensure_model_loaded():
+        # Check if different model is requested - switch models if needed
+        global model_choice_global
+        if requested_model != model_choice_global and requested_model in ['qwen3-4b', 'qwen25-3b', 'qwen3-8b']:
+            logger.info(f"🔄 Model switch requested: {model_choice_global} -> {requested_model}")
+            unload_model()
+            model_choice_global = requested_model
+            if not load_model(requested_model):
+                # Fallback to 4B model if requested model fails
+                logger.warning(f"Failed to load {requested_model}, falling back to qwen3-4b")
+                model_choice_global = 'qwen3-4b'
+                if not load_model('qwen3-4b'):
+                    return jsonify({'error': 'Failed to load AI model'}), 500
+                # Return friendly message about model unavailability
+                return jsonify({
+                    'response': f'⚠️ {requested_model} 모델을 로드할 수 없어 기본 모델(4B)로 응답합니다. 8B 테스트 모드는 개발 중입니다.' if language == 'ko' else f'⚠️ {requested_model} model unavailable, using default (4B). 8B test mode is under development.',
+                    'tokens': 0,
+                    'response_time': 0,
+                    'model': 'Qwen3-4B-4bit (fallback)',
+                    'status': 'fallback'
+                })
+        elif not ensure_model_loaded():
             return jsonify({'error': 'Failed to load AI model'}), 500
 
         # Acquire lock and process request
@@ -658,10 +686,16 @@ def chat():
                 end_time = time.time()
                 response_time = round(end_time - start_time, 2)
 
+                # Return model name based on which model is loaded
+                model_display_names = {
+                    'qwen3-4b': 'Qwen3-4B-4bit',
+                    'qwen25-3b': 'Qwen2.5-3B-4bit',
+                    'qwen3-8b': 'Qwen3-8B-4bit (Test)'
+                }
                 return jsonify({
                     'response': ai_response,
                     'language': language,
-                    'model': 'Qwen3-4B-4bit',
+                    'model': model_display_names.get(model_choice_global, 'Qwen3-4B-4bit'),
                     'response_time': response_time,
                     'tokens': token_count
                 })

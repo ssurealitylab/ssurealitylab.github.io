@@ -22,10 +22,10 @@ students:
       name_ko: "박성용"
       email: "ejqdl010@gmail.com"
       university: "EE. Soongsil University, B.S."
-      research: "Image Restoration, AI for Astronomy"
+      research: "Computer Vision, Deep Learning"
       photo: "assets/img/members/sungyong_park.jpg"
-      github: "https://github.com/sungyong-park"
-      linkedin: "https://linkedin.com/in/sungyong-park"
+      github: "https://ejqdl02.github.io/"
+      linkedin: "https://www.linkedin.com/in/sungyong-park-662a19294/"
 
     - name: "Byungkwan Chae"
       name_ko: "채병관"

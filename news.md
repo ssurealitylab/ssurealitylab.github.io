@@ -1,8 +1,8 @@
 ---
 layout: page
-title: News & Updates - Reality Lab
-description: Latest news, achievements, and milestones from Reality Lab at Soongsil University. CVPR, AAAI paper acceptances, ARNOLD Challenge wins, grants, and new members.
-keywords: Reality Lab news, WACV 2026, CVPR 2025, AAAI 2025, BMVC 2025, ARNOLD Challenge, AI research news, Soongsil University achievements, NRF grant, research awards, 연구실 소식
+title: News & Updates - Reality Lab | 소식 - 리얼리티랩
+description: Latest news, achievements, and milestones from Reality Lab at Soongsil University. CVPR, AAAI paper acceptances, ARNOLD Challenge wins, grants, and new members. 숭실대학교 김희원 교수 연구실 소식.
+keywords: Reality Lab news, 리얼리티랩 소식, WACV 2026, CVPR 2025, AAAI 2025, BMVC 2025, ECCV, ICCV, ARNOLD Challenge, AI research news, Soongsil University achievements, 숭실대학교, 숭실대, SSU, NRF grant, research awards, 연구실 소식, 김희원, Heewon Kim, 논문 Accept, 학회 수상, 1st Place, Best Paper, 글로벌미디어학부, 인공지능 연구, Computer Vision, Deep Learning
 image: /assets/img/header.png
 ---
 

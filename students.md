@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Students
+title: Students - Reality Lab | 학생 - 리얼리티랩
+description: Graduate students and interns at Reality Lab, Soongsil University. Master's students and research interns working on AI and Computer Vision. 숭실대학교 김희원 교수 연구실 학생.
+keywords: Reality Lab students, 리얼리티랩 학생, Soongsil University, 숭실대학교, 숭실대, SSU, Master's students, 석사과정, research interns, 연구 인턴, 김희원, Heewon Kim, 글로벌미디어학부, Computer Vision, Deep Learning, AI researchers, 대학원생
 ---
 
 # Students

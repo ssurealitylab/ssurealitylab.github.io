@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Courses - Reality Lab SSU
-description: Courses taught by Prof. Heewon Kim at Soongsil University. Computer Vision, Machine Learning, Deep Learning, Image Processing, Data Science courses.
-keywords: Computer Vision course, Machine Learning course, Deep Learning, Image Processing, Data Science, Soongsil University courses, AI education, 컴퓨터비전, 기계학습, 영상처리
+title: Courses - Reality Lab SSU | 강의 - 리얼리티랩 숭실대
+description: Courses taught by Prof. Heewon Kim at Soongsil University. Computer Vision, Machine Learning, Deep Learning, Image Processing, Data Science courses. 숭실대학교 김희원 교수 강의.
+keywords: Computer Vision course, Machine Learning course, Deep Learning, Image Processing, Data Science, Soongsil University courses, 숭실대학교, 숭실대, SSU, AI education, 컴퓨터비전, 기계학습, 영상처리, 딥러닝, 인공지능 강의, 김희원, Heewon Kim, Prof. Heewon Kim, 글로벌미디어학부, Global School of Media, IT대학, Reality Lab, 리얼리티랩, 학부 수업, 대학원 수업
 image: /assets/img/header.png
 ---
 

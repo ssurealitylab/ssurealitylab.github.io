@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Alumni
+title: Alumni - Reality Lab | 졸업생 - 리얼리티랩
+description: Former members of Reality Lab at Soongsil University. Alumni and former research interns who contributed to AI research. 숭실대학교 김희원 교수 연구실 졸업생.
+keywords: Reality Lab alumni, 리얼리티랩 졸업생, Soongsil University, 숭실대학교, 숭실대, SSU, former interns, 전 연구원, 김희원, Heewon Kim, 글로벌미디어학부, Computer Vision, Deep Learning, AI researchers
 ---
 
 # Alumni

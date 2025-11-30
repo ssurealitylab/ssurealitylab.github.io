@@ -436,12 +436,14 @@ Guidelines:
 - Use natural, complete sentences
 - No <think> tags or internal reasoning"""
         else:
-            # Ultra-simple prompt for weak model
-            system_content = f"""숭실대학교 Reality Lab Q&A 봇. 한국어로 간단히 답변.
+            # Ultra-simple prompt for weak model with /nothink to prevent reasoning
+            system_content = f"""숭실대학교 Reality Lab Q&A 봇. 한국어로 바로 답변하세요. 내부 추론 없이 답만 출력.
 
 {core_info_ko}
 
-{rag_context}"""
+{rag_context}
+
+답변 형식: 한국어로 1-2문장으로 바로 답변. "Okay", "Let me", "Wait" 등의 사고 과정 없이 답만 출력. /nothink"""
 
         # Create chat template
         messages = [
@@ -519,6 +521,18 @@ Guidelines:
         generated_text = re.sub(r'질문\s*:', '', generated_text).strip()
         generated_text = re.sub(r'Q:', '', generated_text).strip()
         generated_text = re.sub(r'A:', '', generated_text).strip()
+
+        # Remove model's internal reasoning patterns (Qwen3 specific)
+        generated_text = re.sub(r'^(Okay|Let me|Wait|First|So|Hmm|I need|The user|From the).*?\n', '', generated_text, flags=re.MULTILINE).strip()
+        # Remove reasoning that starts with common patterns
+        if generated_text.startswith(('Okay', 'Let me', 'Wait', 'First', 'The user')):
+            # Find the actual answer after reasoning
+            lines = generated_text.split('\n')
+            for i, line in enumerate(lines):
+                # Look for Korean text or actual answer
+                if any(ord(c) >= 0xAC00 and ord(c) <= 0xD7A3 for c in line) and not line.startswith(('Okay', 'Let', 'Wait', 'First', 'The user', 'So', 'From')):
+                    generated_text = '\n'.join(lines[i:]).strip()
+                    break
 
         # Remove separator lines
         lines = generated_text.split('\n')

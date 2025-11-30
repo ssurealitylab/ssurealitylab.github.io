@@ -1,0 +1,335 @@
+/home/i0179/lib/python3.10/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+INFO:__main__:Starting Reality Lab Qwen3-4B Server (4-bit) on port 4005...
+INFO:__main__:Loading Qwen3-4B tokenizer from local path
+INFO:__main__:Loading Qwen3-4B model with 4-bit quantization
+INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:19<00:38, 19.03s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:38<00:19, 19.48s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:39<00:00, 10.79s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:39<00:00, 13.09s/it]
+INFO:__main__:✅ Qwen3-4B model loaded successfully with 4-bit quantization
+INFO:__main__:Model vocab size: 151936, Tokenizer vocab size: 151669
+INFO:__main__:PAD token ID: 151643, EOS token ID: 151645
+INFO:__main__:Loading RAG system...
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cuda:0
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+INFO:__main__:✅ RAG system loaded successfully!
+INFO:__main__:⏱️  Idle timeout enabled: server will shutdown after Nones of inactivity
+INFO:__main__:🚀 Qwen3-4B server ready on port 4005!
+INFO:__main__:✅ Running with HTTP (no SSL)
+Loading Hierarchical RAG from: /home/i0179/Realitylab-site/ai_server/hierarchical_rag
+  Loading embedding model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  ✅ faculty: 2 docs
+  ✅ students: 23 docs
+  ✅ alumni: 17 docs
+  ✅ news: 18 docs
+  ✅ publications: 32 docs
+  ✅ lab_info: 1 docs
+✅ Hierarchical RAG ready!
+ * Serving Flask app 'qwen3_4b_lowmem'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4005
+ * Running on http://203.253.25.165:4005
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 08:30:43] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 11:46:09] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 16:20:51] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 17:46:46] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 17:46:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 17:46:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 17:46:51] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 17:46:51] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 17:46:51] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 18:05:18] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 18:12:34] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 18:12:34] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 18:12:34] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 18:30:34] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:13:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:13:16] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:13:16] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:13:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:13:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:14:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:14:16] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:14:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:14:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:15:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:15:16] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:15:46] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:15:46] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:16:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:16:16] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:17:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:17:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:18:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:18:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:19:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:19:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:20:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:20:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:21:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:21:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:22:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:22:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:23:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:23:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:24:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:24:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:25:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:25:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:26:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:26:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:27:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:27:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:28:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:28:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:29:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:29:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:30:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:30:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:31:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:31:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:32:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:32:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:33:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:33:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:34:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:34:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:35:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:35:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:36:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:36:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:37:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:37:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:38:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:38:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:39:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:39:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:40:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:40:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:41:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:41:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:42:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:42:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:43:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:43:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:44:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:44:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:45:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:45:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:46:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:46:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:47:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:47:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:48:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:48:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:49:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:49:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:50:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:50:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:51:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:51:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:52:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:52:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:53:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:53:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:54:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:54:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:55:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:55:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:56:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:56:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:57:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:57:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:58:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:58:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:59:06] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 19:59:06] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:00:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:00:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:01:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:01:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:02:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:02:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:03:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:03:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:04:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:04:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:05:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:05:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:06:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:06:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:07:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:07:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:08:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:08:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:09:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:09:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:10:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:10:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:11:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:11:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:12:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:12:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:13:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:13:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:14:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:14:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:15:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:15:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:16:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:16:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:17:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:17:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:18:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:18:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:19:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:19:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:20:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:20:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:21:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:21:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:22:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:22:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:23:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:23:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:24:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:24:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:25:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:25:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:26:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:26:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:27:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:27:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:28:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:28:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:29:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:29:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:30:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:30:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:31:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:31:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:32:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:32:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:33:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:33:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:34:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:34:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:35:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:35:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:36:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:36:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:37:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:37:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:38:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:38:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:39:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:39:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:40:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:40:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:41:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:41:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:42:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:42:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:43:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:43:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:44:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:44:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:45:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:45:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:46:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:46:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:47:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:47:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:48:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:48:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:49:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:49:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:50:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:50:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:51:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:51:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:52:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:52:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:53:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:53:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:54:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:54:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:55:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:55:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:56:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:56:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:57:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:57:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:58:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:58:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:59:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 20:59:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:00:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:00:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:01:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:01:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:02:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:02:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:03:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:03:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:04:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:04:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:05:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:05:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:06:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:06:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:07:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:07:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:08:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:08:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:09:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:09:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:10:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:10:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:11:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:11:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:12:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:12:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:13:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:13:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:14:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:14:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:15:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:15:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:16:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:16:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:17:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:17:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:18:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:18:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:19:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:19:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:20:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:20:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:21:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:21:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:22:04] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:22:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:22:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:22:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:22:05] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:23:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:23:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:24:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:24:05] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:25:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:25:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:26:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:26:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:27:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:27:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:28:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:28:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:29:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:29:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:30:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:30:04] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:31:04] "OPTIONS /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2025 21:31:04] "POST /heartbeat HTTP/1.1" 200 -

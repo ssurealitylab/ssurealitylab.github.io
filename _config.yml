@@ -16,9 +16,10 @@
 url    : "https://ssurealitylab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/Realitylab-site" # the subpath of your site, e.g. /blog
 
-title      : "Reality Lab - 숭실대학교 AI 연구실 | 김희원 교수"
+title      : "Reality Lab"
 email      : heewon@ssu.ac.kr #this is also the email contact forms will go to
 description: "숭실대학교 김희원 교수 AI 연구실. Computer Vision, Deep Learning, Embodied AI, 3D Vision 연구. CVPR, AAAI 게재."
+seo_title  : "Reality Lab - 숭실대학교 AI 연구실 | 김희원 교수"
 author     : Prof. Heewon Kim
 # logo:     #optional, defaults to site title
   # path: assets\img\clients\creative-market.jpg

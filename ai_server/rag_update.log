@@ -807,3 +807,13 @@ Traceback (most recent call last):
     from bs4 import BeautifulSoup
 ModuleNotFoundError: No module named 'bs4'
 [2025. 11. 30. (일) 05:00:01 KST] ERROR: Website crawling failed!
+
+========================================
+[2025. 12. 01. (월) 05:00:01 KST] Starting RAG Update...
+========================================
+[2025. 12. 01. (월) 05:00:01 KST] Step 1/4: Crawling website...
+Traceback (most recent call last):
+  File "/home/i0179/Realitylab-site/ai_server/crawl_website.py", line 8, in <module>
+    from bs4 import BeautifulSoup
+ModuleNotFoundError: No module named 'bs4'
+[2025. 12. 01. (월) 05:00:01 KST] ERROR: Website crawling failed!

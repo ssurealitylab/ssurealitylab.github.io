@@ -3961,3 +3961,114 @@
 [2025. 11. 30. (일) 21:00:01 KST] Current GPU: 0
 [2025. 11. 30. (일) 21:00:01 KST] Current GPU 0 utilization: 11%
 [2025. 11. 30. (일) 21:00:01 KST] ✅ Current GPU is healthy (11% < 30%), no action needed
+
+========================================
+[2025. 11. 30. (일) 22:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 11. 30. (일) 22:00:01 KST] Current GPU: 0
+[2025. 11. 30. (일) 22:00:01 KST] Current GPU 0 utilization: 10%
+[2025. 11. 30. (일) 22:00:01 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 11. 30. (일) 23:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 11. 30. (일) 23:00:01 KST] Current GPU: 0
+[2025. 11. 30. (일) 23:00:01 KST] Current GPU 0 utilization: 10%
+[2025. 11. 30. (일) 23:00:01 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 00:00:02 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 00:00:02 KST] Current GPU: 0
+[2025. 12. 01. (월) 00:00:02 KST] Current GPU 0 utilization: 10%
+[2025. 12. 01. (월) 00:00:02 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 01:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 01:00:01 KST] Current GPU: 0
+[2025. 12. 01. (월) 01:00:01 KST] Current GPU 0 utilization: 10%
+[2025. 12. 01. (월) 01:00:01 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 02:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 02:00:01 KST] Current GPU: 0
+[2025. 12. 01. (월) 02:00:01 KST] Current GPU 0 utilization: 10%
+[2025. 12. 01. (월) 02:00:01 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 03:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 03:00:01 KST] Current GPU: 0
+[2025. 12. 01. (월) 03:00:01 KST] Current GPU 0 utilization: 10%
+[2025. 12. 01. (월) 03:00:01 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 04:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 04:00:01 KST] Current GPU: 0
+[2025. 12. 01. (월) 04:00:01 KST] Current GPU 0 utilization: 10%
+[2025. 12. 01. (월) 04:00:01 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 05:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 05:00:01 KST] ⚠️  AI server not running (PID 2903960 not found)
+
+========================================
+[2025. 12. 01. (월) 06:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 06:00:01 KST] ⚠️  AI server not running (PID 2903960 not found)
+
+========================================
+[2025. 12. 01. (월) 07:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 07:00:02 KST] ⚠️  AI server not running (PID 2903960 not found)
+
+========================================
+[2025. 12. 01. (월) 08:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 08:00:01 KST] ⚠️  AI server not running (PID 2903960 not found)
+
+========================================
+[2025. 12. 01. (월) 09:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 09:00:01 KST] Current GPU: 0
+[2025. 12. 01. (월) 09:00:01 KST] Current GPU 0 utilization: 10%
+[2025. 12. 01. (월) 09:00:01 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 10:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 10:00:01 KST] Current GPU: 0
+[2025. 12. 01. (월) 10:00:01 KST] Current GPU 0 utilization: 10%
+[2025. 12. 01. (월) 10:00:01 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 11:00:02 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 11:00:02 KST] Current GPU: 0
+[2025. 12. 01. (월) 11:00:02 KST] Current GPU 0 utilization: 10%
+[2025. 12. 01. (월) 11:00:02 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 12:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 12:00:01 KST] Current GPU: 0
+[2025. 12. 01. (월) 12:00:01 KST] Current GPU 0 utilization: 10%
+[2025. 12. 01. (월) 12:00:01 KST] ✅ Current GPU is healthy (10% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 13:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 13:00:01 KST] Current GPU: 0
+[2025. 12. 01. (월) 13:00:01 KST] Current GPU 0 utilization: 0%
+[2025. 12. 01. (월) 13:00:01 KST] ✅ Current GPU is healthy (0% < 30%), no action needed
+
+========================================
+[2025. 12. 01. (월) 14:00:01 KST] 🔍 GPU Monitoring Check
+========================================
+[2025. 12. 01. (월) 14:00:01 KST] Current GPU: 0
+[2025. 12. 01. (월) 14:00:01 KST] Current GPU 0 utilization: 0%
+[2025. 12. 01. (월) 14:00:01 KST] ✅ Current GPU is healthy (0% < 30%), no action needed

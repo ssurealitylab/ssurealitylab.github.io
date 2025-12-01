@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://ssurealitylab.github.io/Realitylab-site/sitemap.xml
+Sitemap: https://ssurealitylab.github.io/sitemap.xml

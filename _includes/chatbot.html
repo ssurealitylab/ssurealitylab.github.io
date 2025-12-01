@@ -1349,19 +1349,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!session) {
           return {
             response: isEnglish ?
-              "💤 AI is currently taking a break. Please try during operating hours (08:00-04:00 KST)!" :
-              "💤 AI가 지금 쉬는 시간이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!",
+              "🔌 Cannot connect to GPU server. The server may be under maintenance." :
+              "🔌 GPU 서버에 연결할 수 없습니다. 서버 점검 중일 수 있습니다.",
             response_time: null
           };
         }
       }
-      
+
       const endpoints = getCurrentEndpoints();
       if (!endpoints) {
         return {
           response: isEnglish ?
-            "💤 AI is currently resting. Please visit during operating hours (08:00-04:00 KST)!" :
-            "💤 AI가 지금 휴식중이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!",
+            "⚙️ AI server endpoint not configured. Please contact the administrator." :
+            "⚙️ AI 서버 엔드포인트가 설정되지 않았습니다. 관리자에게 문의해주세요.",
           response_time: null
         };
       }
@@ -1417,10 +1417,37 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Error calling AI server:', error);
       currentAIRequest = null;
 
+      // Determine error type and provide appropriate message
+      let errorMessage;
+      if (error.name === 'AbortError') {
+        errorMessage = isEnglish ?
+          "⏹️ Request was cancelled." :
+          "⏹️ 요청이 취소되었습니다.";
+      } else if (error.message && error.message.includes('Failed to fetch')) {
+        errorMessage = isEnglish ?
+          "🌐 Cannot connect to AI server. Please check your network or try again later." :
+          "🌐 AI 서버에 연결할 수 없습니다. 네트워크를 확인하거나 잠시 후 다시 시도해주세요.";
+      } else if (error.message && error.message.includes('timeout')) {
+        errorMessage = isEnglish ?
+          "⏱️ Request timed out. The server may be busy. Please try again." :
+          "⏱️ 요청 시간이 초과되었습니다. 서버가 바쁠 수 있으니 다시 시도해주세요.";
+      } else {
+        // Check if it's during rest hours (04:00-08:00 KST)
+        const now = new Date();
+        const kstHour = (now.getUTCHours() + 9) % 24;
+        if (kstHour >= 4 && kstHour < 8) {
+          errorMessage = isEnglish ?
+            "💤 AI is resting (04:00-08:00 KST)." :
+            "💤 AI 쉬는시간 (04:00-08:00 한국시간).";
+        } else {
+          errorMessage = isEnglish ?
+            "❌ An error occurred while connecting to the AI server. Please try again later." :
+            "❌ AI 서버 연결 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.";
+        }
+      }
+
       return {
-        response: isEnglish ?
-          "💤 AI is currently taking a break (04:00-08:00 KST). Please come back during operating hours!" :
-          "💤 AI가 지금 쉬는 시간이에요 (04:00-08:00 한국시간). 운영시간에 다시 찾아주세요!",
+        response: errorMessage,
         response_time: null,
         tokens: null
       };
@@ -1812,10 +1839,16 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           lastMessage.remove();
         }
-        addMessage(
-          isEnglish ? '💤 AI is taking a break right now. Please try during operating hours (08:00-04:00 KST)!' : '💤 AI가 지금 쉬는 시간이에요. 운영시간(08:00-익일 04:00)에 다시 찾아주세요!',
-          'bot'
-        );
+        // Check if it's during rest hours (04:00-08:00 KST)
+        const now = new Date();
+        const kstHour = (now.getUTCHours() + 9) % 24;
+        let errorMsg;
+        if (kstHour >= 4 && kstHour < 8) {
+          errorMsg = isEnglish ? '💤 AI is resting (04:00-08:00 KST).' : '💤 AI 쉬는시간 (04:00-08:00 한국시간).';
+        } else {
+          errorMsg = isEnglish ? '❌ Connection error. Please try again.' : '❌ 연결 오류입니다. 다시 시도해주세요.';
+        }
+        addMessage(errorMsg, 'bot');
       }
     } else {
       // Search mode - use existing knowledge base

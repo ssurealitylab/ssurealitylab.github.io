@@ -4,7 +4,7 @@ INFO:__main__:Starting Reality Lab Qwen3-4B Server (4-bit) on port 4005...
 INFO:__main__:Loading Qwen3-4B tokenizer from local path
 INFO:__main__:Loading Qwen3-4B model with 4-bit quantization
 INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:11<00:23, 11.95s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:19<00:09,  9.60s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:20<00:00,  5.29s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:20<00:00,  6.69s/it]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:22<00:44, 22.16s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:44<00:22, 22.24s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:44<00:00, 12.19s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:44<00:00, 14.89s/it]
 INFO:__main__:✅ Qwen3-4B model loaded successfully with 4-bit quantization
 INFO:__main__:Model vocab size: 151936, Tokenizer vocab size: 151669
 INFO:__main__:PAD token ID: 151643, EOS token ID: 151645
@@ -31,73 +31,14 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://127.0.0.1:4005
  * Running on http://203.253.25.165:4005
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 08:30:35] "[33mGET / HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 09:11:45] "[33mGET / HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:07:10] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:07:10] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:07:10] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:08:59] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:08:59] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:08:59] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:03] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:05] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:05] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:12] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:12] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:12] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:14] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:14] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:37] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:37] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:09:37] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:13:05] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:13:05] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:13:05] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:13:20] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:13:20] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:13:20] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:19:14] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:19:15] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:30:42] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:30:43] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:30:47] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:30:47] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:30:53] "OPTIONS /chat/stream HTTP/1.1" 200 -
+INFO:__main__:Original query: 안녕하세요
+INFO:__main__:Cleaned query: 안녕하세요
+[Query Classification] Searching categories: ['faculty', 'students']
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.57it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 135.15it/s]
+INFO:__main__:RAG found 5 documents
 The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:30:57] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:30:57] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:02] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:02] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:09] "POST /chat/stream HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:10] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:10] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:15] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:16] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:23] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:23] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:24] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:24] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:25] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:26] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:27] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:30] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:30] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:31] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:34] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:31:34] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:34:13] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:34:14] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:34:14] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:34:14] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:34:14] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:34:15] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:35:24] "[33mGET / HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:35:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:35:40] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:35:40] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:36:09] "POST /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:42:16] "OPTIONS /heartbeat HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:42:16] "GET /health HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 14:42:16] "POST /heartbeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 18:02:24] "POST /chat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 18:19:07] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 18:20:53] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2025 18:31:54] "[33mGET / HTTP/1.1[0m" 404 -

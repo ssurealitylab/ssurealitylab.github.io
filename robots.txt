@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /members.html
 
 # Sitemap location
 Sitemap: https://ssurealitylab.github.io/sitemap.xml

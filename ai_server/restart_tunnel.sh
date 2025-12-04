@@ -102,14 +102,23 @@ Co-Authored-By: Claude <noreply@anthropic.com>" >> "$LOG_FILE" 2>&1
 git add _data/version.yml
 git commit -m "Update version (tunnel restart)" >> "$LOG_FILE" 2>&1
 
-# Push to GitHub
+# Push to GitHub with retry logic
 echo "[$(date)] Pushing to GitHub..." >> "$LOG_FILE"
-git push origin main >> "$LOG_FILE" 2>&1
+PUSH_SUCCESS=0
+for i in 1 2 3; do
+    git push origin main >> "$LOG_FILE" 2>&1
+    if [ $? -eq 0 ]; then
+        echo "[$(date)] Successfully pushed to GitHub!" >> "$LOG_FILE"
+        PUSH_SUCCESS=1
+        break
+    else
+        echo "[$(date)] Push attempt $i failed, retrying in 5 seconds..." >> "$LOG_FILE"
+        sleep 5
+    fi
+done
 
-if [ $? -eq 0 ]; then
-    echo "[$(date)] Successfully pushed to GitHub!" >> "$LOG_FILE"
-else
-    echo "[$(date)] WARNING: Failed to push to GitHub" >> "$LOG_FILE"
+if [ $PUSH_SUCCESS -eq 0 ]; then
+    echo "[$(date)] ERROR: Failed to push to GitHub after 3 attempts!" >> "$LOG_FILE"
 fi
 
 echo "[$(date)] Tunnel restart completed successfully!" >> "$LOG_FILE"

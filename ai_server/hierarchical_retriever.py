@@ -130,6 +130,7 @@ class HierarchicalRetriever:
         2-stage hierarchical search:
         1. Classify query to find relevant categories
         2. Search within those categories
+        3. Add keyword-based results for recency queries
         """
         # Stage 1: Classify
         relevant_categories = self.classify_query(query)[:max_categories]
@@ -141,6 +142,34 @@ class HierarchicalRetriever:
         for category in relevant_categories:
             category_results = self.search_category(category, query, k=k, min_score=min_score)
             all_results.extend(category_results)
+
+        # Stage 3: Keyword boost for recency queries
+        query_lower = query.lower()
+        recency_keywords = ['최신', 'latest', 'recent', '최근', '새로운', 'new', '2026', '2025']
+        if any(kw in query_lower for kw in recency_keywords):
+            # Search for recent publications by keyword matching
+            if 'publications' in self.category_docs:
+                for doc in self.category_docs['publications']:
+                    content = doc['content'].lower()
+                    # Boost documents with 2026 or 2025
+                    if '2026' in content or 'wacv26' in content.lower():
+                        existing = [r for r in all_results if r['content'] == doc['content']]
+                        if not existing:
+                            all_results.append({
+                                'content': doc['content'],
+                                'metadata': doc.get('metadata', {}),
+                                'score': 0.9,  # High score for recent papers
+                                'category': 'publications'
+                            })
+                    elif '2025' in content or 'cvpr25' in content.lower():
+                        existing = [r for r in all_results if r['content'] == doc['content']]
+                        if not existing:
+                            all_results.append({
+                                'content': doc['content'],
+                                'metadata': doc.get('metadata', {}),
+                                'score': 0.8,
+                                'category': 'publications'
+                            })
 
         # Sort by score
         all_results.sort(key=lambda x: x['score'], reverse=True)

@@ -749,7 +749,7 @@ def chat():
                     # Get RAG context
                     rag_context = ""
                     if rag_retriever:
-                        docs = rag_retriever.search(user_question, k=5)
+                        docs = rag_retriever.search(user_question, k=5, min_score=0.15)
                         if docs:
                             rag_context = rag_retriever.format_context(docs, language)
 

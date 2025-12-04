@@ -38,6 +38,52 @@ is_loading_model = False  # Track if model is currently being loaded
 request_lock = threading.Lock()  # Lock for sequential request processing
 is_processing_request = False  # Track if a request is currently being processed
 
+# Ollama configuration for Llama 3.3 70B
+OLLAMA_BASE_URL = "http://localhost:11434"
+OLLAMA_MODEL = "llama3.3:70b"
+OLLAMA_MODELS_PATH = "/data/models/ollama"
+
+def call_ollama_llama(prompt, max_tokens=700):
+    """Call Llama 3.3 70B via Ollama API"""
+    try:
+        response = requests.post(
+            f"{OLLAMA_BASE_URL}/api/generate",
+            json={
+                "model": OLLAMA_MODEL,
+                "prompt": prompt,
+                "stream": False,
+                "options": {
+                    "num_predict": max_tokens,
+                    "temperature": 0.7,
+                    "top_p": 0.9
+                }
+            },
+            timeout=120  # 2 minute timeout for 70B model
+        )
+        if response.status_code == 200:
+            result = response.json()
+            return result.get('response', ''), True
+        else:
+            logger.error(f"Ollama API error: {response.status_code} - {response.text}")
+            return None, False
+    except requests.exceptions.Timeout:
+        logger.error("Ollama API timeout")
+        return None, False
+    except Exception as e:
+        logger.error(f"Ollama API error: {e}")
+        return None, False
+
+def is_ollama_available():
+    """Check if Ollama is running and model is available"""
+    try:
+        response = requests.get(f"{OLLAMA_BASE_URL}/api/tags", timeout=5)
+        if response.status_code == 200:
+            models = response.json().get('models', [])
+            return any(m.get('name', '').startswith('llama3.3') for m in models)
+        return False
+    except:
+        return False
+
 def is_rest_time():
     """
     Check if current time is during rest hours (4 AM - 8 AM KST)
@@ -680,6 +726,73 @@ def chat():
                 'status': 'loading'
             })
 
+        # Check if Llama 3.3 70B is requested (test mode)
+        if requested_model == 'llama3.3-70b':
+            logger.info("🦙 Llama 3.3 70B requested via Ollama")
+
+            # Check if Ollama is available
+            if not is_ollama_available():
+                return jsonify({
+                    'response': '⚠️ Llama 3.3 70B 모델이 현재 사용 불가능합니다. 기본 모델로 응답합니다.' if language == 'ko' else '⚠️ Llama 3.3 70B is currently unavailable. Using default model.',
+                    'tokens': 0,
+                    'response_time': 0,
+                    'model': 'Llama3.3-70B (unavailable)',
+                    'status': 'unavailable'
+                })
+
+            # Process with Llama via Ollama
+            with request_lock:
+                is_processing_request = True
+                try:
+                    start_time = time.time()
+
+                    # Get RAG context
+                    rag_context = ""
+                    if rag_retriever:
+                        docs = rag_retriever.search(user_question, k=5)
+                        if docs:
+                            rag_context = rag_retriever.format_context(docs, language)
+
+                    # Build prompt for Llama
+                    system_prompt = """당신은 숭실대학교 Reality Lab 연구실의 AI 어시스턴트입니다.
+연구실 정보를 바탕으로 친절하고 정확하게 답변해주세요.
+답변은 한국어로 해주세요. 간결하고 핵심적인 정보만 제공하세요."""
+
+                    if language == 'en':
+                        system_prompt = """You are an AI assistant for Reality Lab at Soongsil University.
+Please answer friendly and accurately based on the lab information.
+Provide concise and essential information only."""
+
+                    if rag_context:
+                        full_prompt = f"{system_prompt}\n\n참고 정보:\n{rag_context}\n\n질문: {user_question}\n\n답변:"
+                    else:
+                        full_prompt = f"{system_prompt}\n\n질문: {user_question}\n\n답변:"
+
+                    # Call Ollama
+                    llama_response, success = call_ollama_llama(full_prompt, max_tokens=max_length)
+
+                    end_time = time.time()
+                    response_time = round(end_time - start_time, 2)
+
+                    if success and llama_response:
+                        return jsonify({
+                            'response': llama_response.strip(),
+                            'language': language,
+                            'model': 'Llama3.3-70B (Test)',
+                            'response_time': response_time,
+                            'tokens': len(llama_response.split())
+                        })
+                    else:
+                        return jsonify({
+                            'response': '⚠️ Llama 모델 응답 생성에 실패했습니다. 다시 시도해주세요.' if language == 'ko' else '⚠️ Failed to generate response from Llama. Please try again.',
+                            'tokens': 0,
+                            'response_time': response_time,
+                            'model': 'Llama3.3-70B (error)',
+                            'status': 'error'
+                        })
+                finally:
+                    is_processing_request = False
+
         # Check if different model is requested - switch models if needed
         global model_choice_global
         if requested_model != model_choice_global and requested_model in ['qwen3-4b', 'qwen25-3b', 'qwen3-8b']:
@@ -694,7 +807,7 @@ def chat():
                     return jsonify({'error': 'Failed to load AI model'}), 500
                 # Return friendly message about model unavailability
                 return jsonify({
-                    'response': f'⚠️ {requested_model} 모델을 로드할 수 없어 기본 모델(4B)로 응답합니다. 8B 테스트 모드는 개발 중입니다.' if language == 'ko' else f'⚠️ {requested_model} model unavailable, using default (4B). 8B test mode is under development.',
+                    'response': f'⚠️ {requested_model} 모델을 로드할 수 없어 기본 모델(4B)로 응답합니다.' if language == 'ko' else f'⚠️ {requested_model} model unavailable, using default (4B).',
                     'tokens': 0,
                     'response_time': 0,
                     'model': 'Qwen3-4B-4bit (fallback)',

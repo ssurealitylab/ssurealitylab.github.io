@@ -1380,7 +1380,7 @@ document.addEventListener('DOMContentLoaded', function() {
         language: isEnglish ? 'en' : 'ko',
         max_length: 700,
         think_mode: currentChatMode === 'deep',
-        model_choice: currentChatMode === 'test' ? 'qwen3-8b' : 'qwen3-4b'
+        model_choice: currentChatMode === 'test' ? 'llama3.3-70b' : 'qwen3-4b'
       };
 
       const response = await fetch(endpoints.chat, {

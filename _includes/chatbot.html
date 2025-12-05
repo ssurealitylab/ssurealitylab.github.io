@@ -101,7 +101,7 @@
           <div class="tooltip-content">
             <div class="tooltip-ko">
               <h4>🤖 Reality Lab AI Assistant</h4>
-              <p><strong>모델:</strong> Qwen3-4B Fine-tuned 모델 (Think 태그 제거)</p>
+              <p><strong>모델:</strong> Qwen3-4B (빠른모드) / Llama 3.3 70B (심층/테스트모드)</p>
               <p><strong>하드웨어:</strong> NVIDIA RTX 4090 GPU</p>
               <p><strong>연결:</strong> Cloudflare Tunnel (공개 접속 지원)</p>
               <p><strong>운영시간:</strong> 오전 8시 ~ 익일 오전 4시 (한국시간 KST)</p>
@@ -111,11 +111,12 @@
               <br>
               <p><strong>동작 방식:</strong></p>
               <p>• <em>검색 모드:</em> 사전 구축된 Knowledge Base에서 정보 검색</p>
-              <p>• <em>AI 서버 모드:</em> Fine-tuned Qwen3-4B가 자연어로 실시간 답변 생성</p>
+              <p>• <em>빠른모드:</em> Qwen3-4B로 빠른 응답</p>
+              <p>• <em>심층/테스트모드:</em> Llama 3.3 70B로 정확한 답변</p>
             </div>
             <div class="tooltip-en" style="display: none;">
               <h4>🤖 Reality Lab AI Assistant</h4>
-              <p><strong>Model:</strong> Fine-tuned Qwen3-4B (Think tags removed)</p>
+              <p><strong>Model:</strong> Qwen3-4B (Fast) / Llama 3.3 70B (Deep/Test mode)</p>
               <p><strong>Hardware:</strong> NVIDIA RTX 4090 GPU</p>
               <p><strong>Connection:</strong> Cloudflare Tunnel (Public access enabled)</p>
               <p><strong>Operating Hours:</strong> 8 AM ~ 4 AM next day (KST - Korea Standard Time)</p>
@@ -125,7 +126,8 @@
               <br>
               <p><strong>How it works:</strong></p>
               <p>• <em>Search Mode:</em> Searches pre-built Knowledge Base</p>
-              <p>• <em>AI Server Mode:</em> Fine-tuned Qwen3-4B generates real-time natural language responses</p>
+              <p>• <em>Fast Mode:</em> Qwen3-4B for quick responses</p>
+              <p>• <em>Deep/Test Mode:</em> Llama 3.3 70B for accurate answers</p>
             </div>
           </div>
         </div>
@@ -1380,7 +1382,7 @@ document.addEventListener('DOMContentLoaded', function() {
         language: isEnglish ? 'en' : 'ko',
         max_length: 700,
         think_mode: currentChatMode === 'deep',
-        model_choice: currentChatMode === 'test' ? 'llama3.3-70b' : 'qwen3-4b'
+        model_choice: ['deep', 'test'].includes(currentChatMode) ? 'llama3.3-70b' : 'qwen3-4b'
       };
 
       const response = await fetch(endpoints.chat, {
@@ -1481,7 +1483,7 @@ document.addEventListener('DOMContentLoaded', function() {
           language: isEnglish ? 'en' : 'ko',
           max_length: 700,
           think_mode: (localStorage.getItem('chatMode') || 'fast') === 'deep',
-          model_choice: (localStorage.getItem('chatMode') || 'fast') === 'test' ? 'llama3.3-70b' : 'qwen3-4b'
+          model_choice: ['deep', 'test'].includes(localStorage.getItem('chatMode') || 'fast') ? 'llama3.3-70b' : 'qwen3-4b'
         }),
       }).then(response => {
         const reader = response.body.getReader();

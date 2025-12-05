@@ -27,7 +27,7 @@ class HierarchicalRetriever:
             "students": ["학생", "student", "연구원", "researcher", "석사", "master", "인턴", "intern", "멤버", "member", "연구생", "수", "몇 명", "명단", "구성원"],
             "alumni": ["졸업생", "alumni", "졸업", "graduate", "former"],
             "news": ["뉴스", "news", "소식", "발표", "announcement", "accept", "award", "수상"],
-            "publications": ["논문", "paper", "publication", "학회", "conference", "journal", "cvpr", "iccv", "wacv", "bmvc", "aaai", "eccv", "nips", "neurips", "icml", "2023", "2024", "2025", "2026", "최신", "recent", "latest", "higlassrm", "mbti", "dynscene"],
+            "publications": ["논문", "paper", "publication", "학회", "conference", "journal", "cvpr", "iccv", "wacv", "bmvc", "aaai", "eccv", "nips", "neurips", "icml", "2023", "2024", "2025", "2026", "최신", "recent", "latest", "higlassrm", "mbti", "dynscene", "연구", "research"],
             "lab_info": ["연구실", "lab", "위치", "location", "주소", "address", "contact", "연락처"]
         }
 

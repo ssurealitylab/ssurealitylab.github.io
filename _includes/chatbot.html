@@ -1479,7 +1479,9 @@ document.addEventListener('DOMContentLoaded', function() {
         body: JSON.stringify({
           question: question,
           language: isEnglish ? 'en' : 'ko',
-          max_length: 700
+          max_length: 700,
+          think_mode: (localStorage.getItem('chatMode') || 'fast') === 'deep',
+          model_choice: (localStorage.getItem('chatMode') || 'fast') === 'test' ? 'llama3.3-70b' : 'qwen3-4b'
         }),
       }).then(response => {
         const reader = response.body.getReader();

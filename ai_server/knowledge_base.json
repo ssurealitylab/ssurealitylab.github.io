@@ -1,15 +1,6 @@
 [
   {
-    "content": "Welcome to the SSU Reality Lab!",
-    "metadata": {
-      "type": "lab_info",
-      "source": "home",
-      "category": "mission",
-      "language": "ko"
-    }
-  },
-  {
-    "content": "뉴스: WACV 2026 - 2 Papers Have Been Accepted!\n참여자: Sebin Lee, ByungKwan Chae, Youngjae Choi\n내용: Two papers accepted to WACV 2026: (1) 'HiGlassRM: Learning to Remove High-prescription Glasses via Synthetic Dataset Generation' by Sebin Lee and Heewon Kim, and (2) 'MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation' by ByungKwan Chae, Youngjae Choi, and Heewon Kim. Congratulations!\n날짜: Nov 17, 2025  Publication",
+    "content": "뉴스: WACV 2026 - 2 Papers Have Been Accepted!\n참여자: Sebin Lee, ByungKwan Chae, Youngjae Choi\n내용: Two papers accepted to WACV 2026: (1) HiGlassRM: Learning to Remove High-prescription Glasses via Synthetic Dataset Generation by Sebin Lee and Heewon Kim, and (2) MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation by ByungKwan Chae, Youngjae Choi, and Heewon Kim. Congratulations!\n날짜: Nov 17, 2025  Publication",
     "metadata": {
       "type": "news",
       "source": "news",
@@ -538,7 +529,7 @@
     }
   },
   {
-    "content": "졸업생: Seunghyun Oh\n소속: Media, Soongsil University, B.S.\n기간: 24.25.3",
+    "content": "졸업생: Seunghyun Oh\n소속: Media, Soongsil University, B.S.\n기간: 23.625.4",
     "metadata": {
       "type": "alumni",
       "source": "alumni",
@@ -574,7 +565,7 @@
     }
   },
   {
-    "content": "논문: HiGlassRM: Learning to Remove High-prescription Glasses via Synthetic Dataset Generation\n저자: Sebin Lee, Heewon Kim\n학회: WACV 2026년 최신 논문 (WACV26)\n초록: Existing eyeglass removal methods can handle frames and shadows but fail to correct lens-induced geometric distortions, as public datasets lack the necessary supervision. To address this, we introduce the HiGlass Dataset, the first large-scale synthetic dataset providing explicit flow-based supervision for refractive warping. We also propose HiGlassRM, a novel pipeline whose core is a network that explicitly estimates a displacement flowmap to de-warp distorted facial geometry. Experiments on both synthetic and real images show that this flowmap-centric approach, trained on our data, significantly improves identity preservation and perceptual quality over existing methods. Our work demonstrates that explicitly modeling and correcting geometric distortion via flowmap estimation, enabled by targeted supervision, is key to faithful eyeglass removal.",
+    "content": "논문: HiGlassRM: Learning to Remove High-prescription Glasses via Synthetic Dataset Generation\n저자: Sebin Lee, Heewon Kim\n학회: WACV26\n초록: Existing eyeglass removal methods can handle frames and shadows but fail to correct lens-induced geometric distortions, as public datasets lack the necessary supervision. To address this, we introduce the HiGlass Dataset, the first large-scale synthetic dataset providing explicit flow-based supervision for refractive warping. We also propose HiGlassRM, a novel pipeline whose core is a network that explicitly estimates a displacement flowmap to de-warp distorted facial geometry. Experiments on both synthetic and real images show that this flowmap-centric approach, trained on our data, significantly improves identity preservation and perceptual quality over existing methods. Our work demonstrates that explicitly modeling and correcting geometric distortion via flowmap estimation, enabled by targeted supervision, is key to faithful eyeglass removal.",
     "metadata": {
       "type": "publication",
       "source": "international",
@@ -583,7 +574,7 @@
     }
   },
   {
-    "content": "논문: MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation\n저자: ByungKwan Chae*, Youngjae Choi*, Heewon Kim\n학회: WACV 2026년 최신 논문 (WACV26)\n초록: Personalizing text-to-image diffusion models from only a few images per class remains challenging, especially for fine-grained categories where class-defining cues are subtle. We introduce Metric-Based Textual Inversion (MBTI), a plug-and-play objective that augments textual inversion by explicitly enlarging inter-class margins in the text-embedding space while preserving denoising fidelity. MBTI (i) selects the most confusable previously learned classes as support embeddings via cosine similarity (SES), (ii) contrasts predicted noises under the same diffusion state (timestep and noise) between the supports and the current token (DMM), and (iii) stabilizes training with a time-weighted regularizer aligned to the diffusion objective. Across Flowers102, NABirds, FGVC-Aircraft, Stanford Cars, COCO, and PASCAL VOC, MBTI produces more representative samples and improves few-shot classification under augmentation-for-classification. MBTI requires no model fine-tuning and integrates seamlessly with existing personalization pipelines.",
+    "content": "논문: MBTI: Metric-Based Textual Inversion for Fine-Grained Image Generation\n저자: ByungKwan Chae*, Youngjae Choi*, Heewon Kim\n학회: WACV26\n초록: Personalizing text-to-image diffusion models from only a few images per class remains challenging, especially for fine-grained categories where class-defining cues are subtle. We introduce Metric-Based Textual Inversion (MBTI), a plug-and-play objective that augments textual inversion by explicitly enlarging inter-class margins in the text-embedding space while preserving denoising fidelity. MBTI (i) selects the most confusable previously learned classes as support embeddings via cosine similarity (SES), (ii) contrasts predicted noises under the same diffusion state (timestep and noise) between the supports and the current token (DMM), and (iii) stabilizes training with a time-weighted regularizer aligned to the diffusion objective. Across Flowers102, NABirds, FGVC-Aircraft, Stanford Cars, COCO, and PASCAL VOC, MBTI produces more representative samples and improves few-shot classification under augmentation-for-classification. MBTI requires no model fine-tuning and integrates seamlessly with existing personalization pipelines.",
     "metadata": {
       "type": "publication",
       "source": "international",
@@ -799,7 +790,7 @@
     }
   },
   {
-    "content": "논문: 1st Place Winner at CVPR 2025 Embodied AI Workshop\n저자: Chaewoo Lim, Dowon Kim, Sangmin Lee, Sungyong Park, Heewon Kim\n학회: AGNO.5 Challenge",
+    "content": "논문: 1st Place Winner at CVPR 2025 Embodied AI Workshop\n저자: Chaewoo Lim, Dowon Kim, Sangmin Lee, Sungyong Park, Heewon Kim\n학회: Arnold Challenge",
     "metadata": {
       "type": "publication",
       "source": "domestic",

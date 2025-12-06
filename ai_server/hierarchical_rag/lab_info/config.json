@@ -1,9 +1,0 @@
-{
-  "category": "lab_info",
-  "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
-  "num_documents": 1,
-  "embedding_dim": 384,
-  "doc_types": [
-    "lab_info"
-  ]
-}

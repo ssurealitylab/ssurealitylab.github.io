@@ -965,46 +965,6 @@
   }
 }
 
-/* Blue glow border animation for AI processing state */
-.bot-message.processing {
-  position: relative;
-  animation: glowPulse 2s ease-in-out infinite;
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5), 0 0 16px rgba(59, 130, 246, 0.3);
-}
-
-@keyframes glowPulse {
-  0%, 100% {
-    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4), 0 0 16px rgba(59, 130, 246, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.5), 0 0 45px rgba(59, 130, 246, 0.3);
-  }
-}
-
-/* Blue rotating border animation */
-.bot-message.processing::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(90deg, #3B82F6, #60A5FA, #93C5FD, #60A5FA, #3B82F6);
-  background-size: 300% 100%;
-  border-radius: inherit;
-  z-index: -1;
-  animation: borderGlow 2s linear infinite;
-}
-
-@keyframes borderGlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
-}
-
 /* Typing animation cursor during generation */
 .typing-cursor-active {
   display: inline-block;
@@ -2102,10 +2062,7 @@ document.addEventListener('DOMContentLoaded', function() {
     chatbotMessages.appendChild(messageDiv);
 
     // Start real-time timer for thinking messages after DOM insertion
-    // Also add blue glow processing animation
     if (type === 'bot' && (content.includes('생각 중') || content.includes('Thinking') || content.includes('심층 분석') || content.includes('Deep thinking') || content.includes('처리 중') || content.includes('Processing') || content.includes('연결중') || content.includes('Connecting'))) {
-      // Add processing animation class for blue glow effect
-      messageDiv.classList.add('processing');
 
       const timeDiv = document.createElement('div');
       timeDiv.className = 'thinking-timer';

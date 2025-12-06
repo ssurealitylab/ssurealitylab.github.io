@@ -1760,8 +1760,15 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         } else {
           // Direct connection mode - always show thinking if preconnected
+          const currentMode = localStorage.getItem('chatMode') || 'fast';
           if (isAIServerReady) {
-            addMessage(isEnglish ? 'Thinking...' : '생각 중...', 'bot');
+            if (currentMode === 'deep') {
+              addMessage(isEnglish ? 'Deep thinking with Llama 70B... (may take 20-90 sec)' : '심층 분석 중... (Llama 70B, 20-90초 소요)', 'bot');
+            } else if (currentMode === 'test') {
+              addMessage(isEnglish ? 'Processing with GPT-OSS 120B... (may take 15-30 sec)' : '테스트 모드 처리 중... (GPT-OSS 120B, 15-30초 소요)', 'bot');
+            } else {
+              addMessage(isEnglish ? 'Thinking...' : '생각 중...', 'bot');
+            }
           } else {
             addMessage(isEnglish ? 'Connecting to AI server...' : 'AI서버에 연결중입니다...', 'bot');
           }
@@ -1939,7 +1946,7 @@ document.addEventListener('DOMContentLoaded', function() {
     chatbotMessages.appendChild(messageDiv);
     
     // Start real-time timer for thinking messages after DOM insertion
-    if (type === 'bot' && (content.includes('생각 중') || content.includes('Thinking'))) {
+    if (type === 'bot' && (content.includes('생각 중') || content.includes('Thinking') || content.includes('심층 분석') || content.includes('Deep thinking') || content.includes('테스트 모드') || content.includes('Processing with'))) {
       const timeDiv = document.createElement('div');
       timeDiv.className = 'thinking-timer';
       timeDiv.innerHTML = `<small style="color: #888; font-size: 11px;">응답 시간: 0초</small>`;

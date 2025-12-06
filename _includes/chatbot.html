@@ -933,6 +933,100 @@
     transform: scale(0.8);
   }
 }
+
+/* Wave dots animation for waiting indicator */
+.wave-dots {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  gap: 3px;
+}
+
+.wave-dots .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #3B82F6;
+  border-radius: 50%;
+  animation: wave 1.4s ease-in-out infinite;
+}
+
+.wave-dots .dot:nth-child(1) { animation-delay: 0s; }
+.wave-dots .dot:nth-child(2) { animation-delay: 0.2s; }
+.wave-dots .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+/* Blue glow border animation for AI processing state */
+.bot-message.processing {
+  position: relative;
+  animation: glowPulse 2s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5), 0 0 16px rgba(59, 130, 246, 0.3);
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4), 0 0 16px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.5), 0 0 45px rgba(59, 130, 246, 0.3);
+  }
+}
+
+/* Blue rotating border animation */
+.bot-message.processing::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #3B82F6, #60A5FA, #93C5FD, #60A5FA, #3B82F6);
+  background-size: 300% 100%;
+  border-radius: inherit;
+  z-index: -1;
+  animation: borderGlow 2s linear infinite;
+}
+
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+/* Typing animation cursor during generation */
+.typing-cursor-active {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #3B82F6;
+  border-radius: 50%;
+  margin-left: 4px;
+  animation: typingBlink 0.8s ease-in-out infinite;
+  vertical-align: middle;
+}
+
+@keyframes typingBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+}
 </style>
 
 <script>
@@ -1548,17 +1642,67 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Update streaming message in real-time
+  // Update streaming message in real-time with typing effect
+  let typingQueue = [];
+  let isTyping = false;
+  let currentDisplayedText = '';
+
   function updateStreamingMessage(text) {
     const messages = chatbotMessages.querySelectorAll('.message');
     const lastMessage = messages[messages.length - 1];
 
     if (lastMessage && lastMessage.classList.contains('bot-message')) {
+      // Remove processing animation when response starts
+      lastMessage.classList.remove('processing');
+
       const contentDiv = lastMessage.querySelector('div:first-child');
       if (contentDiv) {
-        contentDiv.innerHTML = text.replace(/\n/g, '<br>') + '<span class="typing-cursor"></span>';
+        // Add new characters to typing queue
+        const newChars = text.substring(currentDisplayedText.length);
+        if (newChars.length > 0) {
+          for (const char of newChars) {
+            typingQueue.push(char);
+          }
+          currentDisplayedText = text;
+        }
+
+        // Start typing animation if not already running
+        if (!isTyping) {
+          isTyping = true;
+          typeNextChar(contentDiv);
+        }
       }
     }
+  }
+
+  function typeNextChar(contentDiv) {
+    if (typingQueue.length > 0) {
+      // Type multiple chars per frame for faster display (3 chars at a time)
+      const charsToType = Math.min(3, typingQueue.length);
+      let chars = '';
+      for (let i = 0; i < charsToType; i++) {
+        chars += typingQueue.shift();
+      }
+
+      const currentText = contentDiv.textContent || '';
+      const newText = currentText + chars;
+      contentDiv.innerHTML = newText.replace(/\n/g, '<br>') + '<span class="typing-cursor-active"></span>';
+
+      // Scroll to bottom
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+      // Schedule next character (15ms for smooth but fast typing)
+      setTimeout(() => typeNextChar(contentDiv), 15);
+    } else {
+      // Keep cursor blinking while waiting for more content
+      isTyping = false;
+    }
+  }
+
+  function resetTypingState() {
+    typingQueue = [];
+    isTyping = false;
+    currentDisplayedText = '';
   }
 
   // Toggle chatbot (global function)
@@ -1749,6 +1893,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Generate and add bot response
     if (isAIMode) {
       // AI mode - use dynamic GPU allocation
+      // Reset typing state for new query
+      resetTypingState();
       try {
         // Show thinking message directly if server is preconnected, otherwise show connection message
         if (GPU_MANAGER_URL) {
@@ -1761,42 +1907,51 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           // Direct connection mode - always show thinking if preconnected
           const currentMode = localStorage.getItem('chatMode') || 'fast';
+          const waveDots = '<span class="wave-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>';
           if (isAIServerReady) {
             if (currentMode === 'deep') {
-              addMessage(isEnglish ? 'Deep thinking...' : '심층 분석 중...', 'bot');
+              addMessage((isEnglish ? 'Deep thinking' : '심층 분석 중') + waveDots, 'bot', null, null, true);
             } else if (currentMode === 'test') {
-              addMessage(isEnglish ? 'Processing...' : '처리 중...', 'bot');
+              addMessage((isEnglish ? 'Processing' : '처리 중') + waveDots, 'bot', null, null, true);
             } else {
-              addMessage(isEnglish ? 'Thinking...' : '생각 중...', 'bot');
+              addMessage((isEnglish ? 'Thinking' : '생각 중') + waveDots, 'bot', null, null, true);
             }
           } else {
-            addMessage(isEnglish ? 'Connecting to AI server...' : 'AI서버에 연결중입니다...', 'bot');
+            addMessage((isEnglish ? 'Connecting to AI server' : 'AI서버에 연결중입니다') + waveDots, 'bot', null, null, true);
           }
         }
         
         // Use streaming for real-time response
         const aiResult = await callAIServerStream(question, isEnglish);
 
-        // Clear thinking timer
+        // Clear thinking timer and typing state
         clearThinkingTimer();
+        resetTypingState();
 
         // Get the last message (which was updated during streaming)
         const messages = chatbotMessages.querySelectorAll('.message');
         const lastMessage = messages[messages.length - 1];
 
         if (lastMessage && lastMessage.classList.contains('bot-message')) {
+          // Remove processing animation
+          lastMessage.classList.remove('processing');
+
           // Remove thinking timer if it exists
           const thinkingTimer = lastMessage.querySelector('.thinking-timer');
           if (thinkingTimer) {
             thinkingTimer.remove();
           }
 
-          // Remove cursor from streaming
+          // Remove cursor from streaming (both old and new cursor classes)
           const contentDiv = lastMessage.querySelector('div:first-child');
           if (contentDiv) {
             const cursorSpan = contentDiv.querySelector('.typing-cursor');
             if (cursorSpan) {
               cursorSpan.remove();
+            }
+            const activeCursor = contentDiv.querySelector('.typing-cursor-active');
+            if (activeCursor) {
+              activeCursor.remove();
             }
           }
         }
@@ -1838,8 +1993,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       } catch (error) {
         console.error('Error in AI response:', error);
-        // Clear thinking timer on error
+        // Clear thinking timer and typing state on error
         clearThinkingTimer();
+        resetTypingState();
         // Remove the loading message on error
         const messages = chatbotMessages.querySelectorAll('.message');
         const lastMessage = messages[messages.length - 1];
@@ -1924,16 +2080,16 @@ document.addEventListener('DOMContentLoaded', function() {
   let thinkingStartTime = null;
 
   // Add message to chat
-  function addMessage(content, type, responseTime = null, tokens = null) {
+  function addMessage(content, type, responseTime = null, tokens = null, isHtml = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${type}-message`;
-    
+
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content';
-    contentDiv.innerHTML = content.replace(/\n/g, '<br>');
-    
+    contentDiv.innerHTML = isHtml ? content : content.replace(/\n/g, '<br>');
+
     messageDiv.appendChild(contentDiv);
-    
+
     // Add response time for bot messages - only if it's a valid number
     if (type === 'bot' && responseTime !== null && typeof responseTime === 'number' && responseTime > 0) {
       const timeDiv = document.createElement('div');
@@ -1942,16 +2098,20 @@ document.addEventListener('DOMContentLoaded', function() {
       timeDiv.innerHTML = `<small style="color: #888; font-size: 11px;">응답 시간: ${responseTime}초${tokenInfo}</small>`;
       messageDiv.appendChild(timeDiv);
     }
-    
+
     chatbotMessages.appendChild(messageDiv);
-    
+
     // Start real-time timer for thinking messages after DOM insertion
-    if (type === 'bot' && (content.includes('생각 중') || content.includes('Thinking') || content.includes('심층 분석') || content.includes('Deep thinking') || content.includes('테스트 모드') || content.includes('Processing with'))) {
+    // Also add blue glow processing animation
+    if (type === 'bot' && (content.includes('생각 중') || content.includes('Thinking') || content.includes('심층 분석') || content.includes('Deep thinking') || content.includes('처리 중') || content.includes('Processing') || content.includes('연결중') || content.includes('Connecting'))) {
+      // Add processing animation class for blue glow effect
+      messageDiv.classList.add('processing');
+
       const timeDiv = document.createElement('div');
       timeDiv.className = 'thinking-timer';
       timeDiv.innerHTML = `<small style="color: #888; font-size: 11px;">응답 시간: 0초</small>`;
       messageDiv.appendChild(timeDiv);
-      
+
       // Start timer
       thinkingStartTime = Date.now();
       thinkingTimer = setInterval(() => {
@@ -1964,7 +2124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }, 1000);
     }
-    
+
     // Scroll to bottom
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
   }

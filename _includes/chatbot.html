@@ -101,7 +101,7 @@
           <div class="tooltip-content">
             <div class="tooltip-ko">
               <h4>🤖 Reality Lab AI Assistant</h4>
-              <p><strong>모델:</strong> Qwen3-4B (빠른모드) / Llama 3.3 70B (심층/테스트모드)</p>
+              <p><strong>모델:</strong> Qwen3-4B (빠른) / Llama 3.3 70B (심층) / GPT-OSS 120B (테스트)</p>
               <p><strong>하드웨어:</strong> NVIDIA RTX 4090 GPU</p>
               <p><strong>연결:</strong> Cloudflare Tunnel (공개 접속 지원)</p>
               <p><strong>운영시간:</strong> 오전 8시 ~ 익일 오전 4시 (한국시간 KST)</p>
@@ -116,7 +116,7 @@
             </div>
             <div class="tooltip-en" style="display: none;">
               <h4>🤖 Reality Lab AI Assistant</h4>
-              <p><strong>Model:</strong> Qwen3-4B (Fast) / Llama 3.3 70B (Deep/Test mode)</p>
+              <p><strong>Model:</strong> Qwen3-4B (Fast) / Llama 3.3 70B (Deep) / GPT-OSS 120B (Test)</p>
               <p><strong>Hardware:</strong> NVIDIA RTX 4090 GPU</p>
               <p><strong>Connection:</strong> Cloudflare Tunnel (Public access enabled)</p>
               <p><strong>Operating Hours:</strong> 8 AM ~ 4 AM next day (KST - Korea Standard Time)</p>
@@ -1382,7 +1382,7 @@ document.addEventListener('DOMContentLoaded', function() {
         language: isEnglish ? 'en' : 'ko',
         max_length: 700,
         think_mode: currentChatMode === 'deep',
-        model_choice: ['deep', 'test'].includes(currentChatMode) ? 'llama3.3-70b' : 'qwen3-4b'
+        model_choice: currentChatMode === 'test' ? 'gpt-oss-120b' : (currentChatMode === 'deep' ? 'llama3.3-70b' : 'qwen3-4b')
       };
 
       const response = await fetch(endpoints.chat, {
@@ -1483,7 +1483,7 @@ document.addEventListener('DOMContentLoaded', function() {
           language: isEnglish ? 'en' : 'ko',
           max_length: 700,
           think_mode: (localStorage.getItem('chatMode') || 'fast') === 'deep',
-          model_choice: ['deep', 'test'].includes(localStorage.getItem('chatMode') || 'fast') ? 'llama3.3-70b' : 'qwen3-4b'
+          model_choice: (localStorage.getItem('chatMode') || 'fast') === 'test' ? 'gpt-oss-120b' : ((localStorage.getItem('chatMode') || 'fast') === 'deep' ? 'llama3.3-70b' : 'qwen3-4b')
         }),
       }).then(response => {
         const reader = response.body.getReader();

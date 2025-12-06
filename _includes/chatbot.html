@@ -101,7 +101,7 @@
           <div class="tooltip-content">
             <div class="tooltip-ko">
               <h4>🤖 Reality Lab AI Assistant</h4>
-              <p><strong>모델:</strong> Qwen3-4B (빠른) / Llama 3.3 70B (심층) / GPT-OSS 120B (테스트)</p>
+              <p><strong>모델:</strong> Qwen3-4B (빠른) / GPT-OSS 120B (심층/테스트)</p>
               <p><strong>하드웨어:</strong> NVIDIA RTX 4090 GPU</p>
               <p><strong>연결:</strong> Cloudflare Tunnel (공개 접속 지원)</p>
               <p><strong>운영시간:</strong> 오전 8시 ~ 익일 오전 4시 (한국시간 KST)</p>
@@ -112,11 +112,11 @@
               <p><strong>동작 방식:</strong></p>
               <p>• <em>검색 모드:</em> 사전 구축된 Knowledge Base에서 정보 검색</p>
               <p>• <em>빠른모드:</em> Qwen3-4B로 빠른 응답</p>
-              <p>• <em>심층/테스트모드:</em> Llama 3.3 70B로 정확한 답변</p>
+              <p>• <em>심층/테스트모드:</em> GPT-OSS 120B로 정확한 답변</p>
             </div>
             <div class="tooltip-en" style="display: none;">
               <h4>🤖 Reality Lab AI Assistant</h4>
-              <p><strong>Model:</strong> Qwen3-4B (Fast) / Llama 3.3 70B (Deep) / GPT-OSS 120B (Test)</p>
+              <p><strong>Model:</strong> Qwen3-4B (Fast) / GPT-OSS 120B (Deep/Test)</p>
               <p><strong>Hardware:</strong> NVIDIA RTX 4090 GPU</p>
               <p><strong>Connection:</strong> Cloudflare Tunnel (Public access enabled)</p>
               <p><strong>Operating Hours:</strong> 8 AM ~ 4 AM next day (KST - Korea Standard Time)</p>
@@ -127,7 +127,7 @@
               <p><strong>How it works:</strong></p>
               <p>• <em>Search Mode:</em> Searches pre-built Knowledge Base</p>
               <p>• <em>Fast Mode:</em> Qwen3-4B for quick responses</p>
-              <p>• <em>Deep/Test Mode:</em> Llama 3.3 70B for accurate answers</p>
+              <p>• <em>Deep/Test Mode:</em> GPT-OSS 120B for accurate answers</p>
             </div>
           </div>
         </div>
@@ -1763,9 +1763,9 @@ document.addEventListener('DOMContentLoaded', function() {
           const currentMode = localStorage.getItem('chatMode') || 'fast';
           if (isAIServerReady) {
             if (currentMode === 'deep') {
-              addMessage(isEnglish ? 'Deep thinking with Llama 70B... (may take 20-90 sec)' : '심층 분석 중... (Llama 70B, 20-90초 소요)', 'bot');
+              addMessage(isEnglish ? 'Deep thinking...' : '심층 분석 중...', 'bot');
             } else if (currentMode === 'test') {
-              addMessage(isEnglish ? 'Processing with GPT-OSS 120B... (may take 15-30 sec)' : '테스트 모드 처리 중... (GPT-OSS 120B, 15-30초 소요)', 'bot');
+              addMessage(isEnglish ? 'Processing...' : '처리 중...', 'bot');
             } else {
               addMessage(isEnglish ? 'Thinking...' : '생각 중...', 'bot');
             }

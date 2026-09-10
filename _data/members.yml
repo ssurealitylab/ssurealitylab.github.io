@@ -55,23 +55,6 @@ students:
     github: ""
     linkedin: ""
 
-  - name: "Hyunjun Koh"
-    name_ko: "고현준"
-    email: "soongsil.ai.24@gmail.com"
-    university: "CSW, Suwon University, B.S."
-    research: "Computer Vision, Deep Learning"
-    photo: "assets/img/members/hyunjun_kho.jpg"
-    github: ""
-    linkedin: ""
-
-  - name: "Hyunsuh Koh"
-    name_ko: "고현서"
-    email: "por1329@naver.com"
-    research: "Multimodal Learning, Representation Learning"
-    photo: "assets/img/members/hyunsuh_kho.jpg"
-    github: ""
-    linkedin: ""
-
   - name: "Jiwoo Seo"
     name_ko: "서지우"
     email: "jiwooindaeyo@gmail.com"
@@ -265,6 +248,23 @@ alumni:
     photo: "assets/img/members/sangmin_lee.jpg"
     github: "https://github.com/sangmin-lee"
     linkedin: "https://www.linkedin.com/in/sangminlee99/"
+
+  - name: "Hyunsuh Koh"
+    name_ko: "고현서"
+    email: "por1329@naver.com"
+    research: "Multimodal Learning, Representation Learning"
+    photo: "assets/img/members/hyunsuh_kho.jpg"
+    github: ""
+    linkedin: ""
+
+  - name: "Hyunjun Koh"
+    name_ko: "고현준"
+    email: "soongsil.ai.24@gmail.com"
+    university: "CSW, Suwon University, B.S."
+    research: "Computer Vision, Deep Learning"
+    photo: "assets/img/members/hyunjun_kho.jpg"
+    github: ""
+    linkedin: ""
 
   former_interns:
   - name: "Jungyun Jang"

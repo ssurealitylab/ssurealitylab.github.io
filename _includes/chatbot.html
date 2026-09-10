@@ -1028,6 +1028,40 @@
 // Chatbot Knowledge Base (injected from Jekyll data)
 const knowledgeBase = {{ site.data.chatbot_knowledge | jsonify }};
 
+// The roster is rebuilt from _data/members.yml at build time. The copy inside
+// chatbot_knowledge.yml is a frozen snapshot that went on listing people who had
+// already moved to alumni, so it is overridden here rather than hand-maintained.
+knowledgeBase.team_members = {
+  ko: [
+{%- for m in site.data.members.faculty %}
+    { "name": {{ m.name_ko | default: m.name | jsonify }}, "role": "책임교수 (PI)" },
+{%- endfor %}
+{%- for m in site.data.members.students.phd_students %}
+    { "name": {{ m.name_ko | default: m.name | jsonify }}, "role": "박사과정" },
+{%- endfor %}
+{%- for m in site.data.members.students.ms_students %}
+    { "name": {{ m.name_ko | default: m.name | jsonify }}, "role": "석사과정" },
+{%- endfor %}
+{%- for m in site.data.members.students.interns %}
+    { "name": {{ m.name_ko | default: m.name | jsonify }}, "role": "인턴" },
+{%- endfor %}
+  ],
+  en: [
+{%- for m in site.data.members.faculty %}
+    { "name": {{ m.name | jsonify }}, "role": "Principal Investigator" },
+{%- endfor %}
+{%- for m in site.data.members.students.phd_students %}
+    { "name": {{ m.name | jsonify }}, "role": "PhD Student" },
+{%- endfor %}
+{%- for m in site.data.members.students.ms_students %}
+    { "name": {{ m.name | jsonify }}, "role": "Master's Student" },
+{%- endfor %}
+{%- for m in site.data.members.students.interns %}
+    { "name": {{ m.name | jsonify }}, "role": "Intern" },
+{%- endfor %}
+  ],
+};
+
 // Chatbot functionality
 document.addEventListener('DOMContentLoaded', function() {
   const chatbotToggle = document.getElementById('chatbot-toggle');
@@ -2185,7 +2219,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Check custom Q&A after language-specific responses
-    const customQAs = isEnglish ? knowledgeBase.custom_qa.en : knowledgeBase.custom_qa.ko;
+    const customQAs = (isEnglish ? knowledgeBase.custom_qa.en : knowledgeBase.custom_qa.ko) || [];
     for (const qa of customQAs) {
       // Check question match
       if (q.includes(qa.question.toLowerCase()) || 

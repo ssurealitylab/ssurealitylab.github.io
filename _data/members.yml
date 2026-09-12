@@ -20,6 +20,7 @@ students:
   phd_students:
   - name: "Sungyong Park"
     name_ko: "박성용"
+    joined: "25.10"
     email: "ejqdl010@gmail.com"
     university: "EE. Soongsil University, B.S."
     research: "Computer Vision, Deep Learning"
@@ -29,6 +30,7 @@ students:
 
   - name: "Hojae Jeong"
     name_ko: "정호재"
+    joined: "25.10"
     email: "98eddiechung@gmail.com"
     university: "SWE, Soongsil University, B.S."
     research: "Computer Vision, Generative AI"
@@ -38,6 +40,7 @@ students:
 
   - name: Juhyoung Lee
     name_ko: 이주형
+    joined: "25.10"
     email: i0179@naver.com
     university: EE. Korea National University of Transportation, B.S.
     research: Robotics, Physical AI
@@ -48,6 +51,7 @@ students:
   ms_students:
   - name: "Minjoo Koh"
     name_ko: "고민주"
+    joined: "25.10"
     email: "minjoo0350@gmail.com"
     university: "Data Science, Sejong University, B.S."
     research: "3D Vision, AI for Sports"
@@ -57,6 +61,7 @@ students:
 
   - name: "Jiwoo Seo"
     name_ko: "서지우"
+    joined: "25.10"
     email: "jiwooindaeyo@gmail.com"
     university: "Media, Soongsil University, B.S."
     research: "Computer Vision, Deep Learning"
@@ -66,6 +71,7 @@ students:
 
   - name: "Sooyoung Choi"
     name_ko: "최수영"
+    joined: "25.10"
     email: "csy010921@gmail.com"
     university: "Media, Soongsil University, B.S."
     research: "Computer Vision, Deep Learning"
@@ -75,6 +81,7 @@ students:
 
   - name: "Jiwon Hwang"
     name_ko: "황지원"
+    joined: "25.10"
     email: "91.hwng@gmail.com"
     university: "Media, Soongsil University, B.S.<br>CSE, Soongsil University, B.S."
     research: "Computer Vision, Deep Learning"
@@ -85,6 +92,7 @@ students:
   interns:
   - name: "Eunwoo Song"
     name_ko: "송은우"
+    joined: "25.10"
     email: "song200348@gmail.com"
     university: "Media, Soongsil University, B.S."
     research: "Language Model, Deep Learning"
@@ -94,6 +102,7 @@ students:
 
   - name: "Jaehyeon Lee"
     name_ko: "이재현"
+    joined: "25.10"
     email: "gogozzi1102@gmail.com"
     university: "Media, Soongsil University, B.S."
     research: "Computer Vision, Deep Learning"
@@ -103,6 +112,7 @@ students:
 
   - name: "Jungha Lim"
     name_ko: "임정하"
+    joined: "25.10"
     email: "sonic0823@naver.com"
     university: "Media, Soongsil University, B.S."
     research: "Computer Vision, Deep Learning"
@@ -112,6 +122,7 @@ students:
 
   - name: "Yeunsuh Kim"
     name_ko: "김연서"
+    joined: "26.1"
     email: "yeunsuh.kim@gmail.com"
     university: "Globalmedia, Soongsil University, B.S."
     research: "Physical AI"
@@ -121,6 +132,7 @@ students:
 
   - name: Hyunsoo Park
     name_ko: 박현수
+    joined: "26.4"
     email: hyunsoopark41@gmail.com
     university: AI Software Engineering, Soongsil University, B.S.
     research: Physical AI
@@ -132,12 +144,14 @@ students:
     linkedin: ''
     name: Sunghyun Ku
     name_ko: 구성현
+    joined: "26.7"
     photo: assets/img/members/sunghyun_ku.jpg
     research: Deep Learning, Computer Vision
     university: CSE, Tech University of Korea, B.S.
 
   - name: "Seungmi Lee"
     name_ko: "이승미"
+    joined: "26.8"
     email: "leeseoungmi1110@gmail.com"
     university: "Media, Soongsil University, B.S.<br>CSE, Soongsil University, B.S."
     research: "Physical AI"
@@ -147,6 +161,7 @@ students:
 
   - name: "Cheolhyeon Kim"
     name_ko: "김철현"
+    joined: "26.8"
     email: "huyni0000@naver.com"
     university: "AI Software Engineering, Soongsil University, B.S."
     research: "Physical AI"
@@ -156,12 +171,33 @@ students:
 
   - name: "Subin Kang"
     name_ko: "강수빈"
+    joined: "26.8"
     email: "kangbin61@gmail.com"
     university: "AI Software Engineering, Soongsil University, B.S."
     research: "Computer Vision, Robotics"
     photo: "assets/img/members/subin_kang.jpg"
     github: ""
     linkedin: ""
+  - name: "Dongje Lee"
+    name_ko: "이동제"
+    joined: "26.9"
+    email: "dongje.musk.lee@gmail.com"
+    university: "Physics, Soongsil University, B.S.<br>Next-Generation Semiconductor, Soongsil University, B.S."
+    research: "Physical AI"
+    photo: "assets/img/members/dongje_lee.jpg"
+    github: "https://github.com/dingdongdengdong"
+    linkedin: "https://www.linkedin.com/in/dongje-lee-24919a256/"
+
+  - name: "Wookhee Cho"
+    name_ko: "조욱희"
+    joined: "26.9"
+    email: "landss@naver.com"
+    university: "AI Software Engineering, Soongsil University, B.S."
+    research: "Physical AI"
+    photo: "assets/img/members/wookhee_cho.jpg"
+    github: "https://github.com/UKi1127"
+    linkedin: ""
+
 robots:
   description: "Research Robots"
   members:

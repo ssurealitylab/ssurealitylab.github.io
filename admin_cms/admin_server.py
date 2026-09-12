@@ -279,6 +279,33 @@ def api_deploy_update(filename, data_path):
         return jsonify({"status": "error", "message": str(e)})
 
 
+STUDENT_GROUPS = ('phd_students', 'ms_students', 'interns')
+
+
+def stamp_joined(filename, data_path, value):
+    """Record the join date when a person is added.
+
+    Alumni carry a `period` whose start is the day they joined, and nothing used
+    to record that for current members -- so a retirement had no start date to
+    work from. Stamping it on arrival means scripts/members_joined.py can fill
+    `period` in by itself later.
+
+    Robots already carry their own `joined`, and alumni rows carry `period`, so
+    only current students are touched.
+    """
+    if filename != 'members' or not isinstance(value, dict):
+        return value
+    # must be exactly students/<group>: alumni/former_interns also ends in
+    # "interns", and retiring members already carry `period` instead
+    if data_path.strip('/') not in tuple('students/%s' % g for g in STUDENT_GROUPS):
+        return value
+    if 'joined' in value or 'period' in value:
+        return value
+    today = datetime.date.today()
+    value['joined'] = '%s.%d' % (today.strftime('%y'), today.month)
+    return value
+
+
 @app.route('/api/deploy/<filename>/<path:data_path>', methods=['POST'])
 @login_required
 def api_deploy_add(filename, data_path):
@@ -289,6 +316,7 @@ def api_deploy_add(filename, data_path):
         errors = validate_data(filename, new_value, path=data_path)
         if errors:
             return jsonify({"status": "error", "errors": errors})
+        new_value = stamp_joined(filename, data_path, new_value)
         data = read_yaml(filename)
         if (filename == 'news' and data_path == 'news') or \
            (filename == 'publications' and data_path == 'publications') or \

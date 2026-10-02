@@ -83,6 +83,8 @@ plugins:
 exclude:
   - finetune_env
   - worker
+  # internal handover notes: they live in git for developers, not as a site page
+  - CLAUDE.md
   - ai_server
   - admin_cms
   - .claude

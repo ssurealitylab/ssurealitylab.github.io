@@ -1,5 +1,10 @@
 # Reality Lab — 개발자 가이드
 
+> **현재 기준 안내 (2026-08~)** — 챗봇은 이 PC 의 Flask 서버(`ai_server/`)가 아니라
+> **Cloudflare Worker**(`worker/`)가 서비스한다. 아래 문서 중 챗봇·터널·RAG 관련 내용은
+> 그 이전 기준이다. 현재 구조는 [`../CLAUDE.md`](../CLAUDE.md) 와
+> [`../worker/README.md`](../worker/README.md) 를 볼 것.
+
 로컬에서 사이트 + 챗봇 + Admin CMS 를 돌리고, 수정하고, 검증하는 전체 흐름.
 
 ---

@@ -11,18 +11,19 @@ at Soongsil University (숭실대학교 리얼리티 연구실).
 
 ## What lives in this repo
 
-The repo bundles four things that used to live on separate machines:
+**New here? Read [`CLAUDE.md`](CLAUDE.md) first** — it is the one-pass handover.
 
 | Piece | Where | What it does |
 |---|---|---|
 | **Static site** | `_data/`, `_includes/`, `_layouts/`, `_sass/`, `assets/`, `*.md`, `*.html` | Jekyll source. Built by GitHub Pages, served at reality.ssu.ac.kr |
-| **AI Chatbot backend** | [`ai_server/`](ai_server/) | Flask + hierarchical RAG + OpenAI Chat Completions |
+| **Chatbot backend** (live) | [`worker/`](worker/) | Cloudflare Worker. Fixed URL, free tier, no machine of ours to keep awake |
 | **Admin CMS** | [`admin_cms/`](admin_cms/) | Password-protected UI to edit `_data/*.yml` (publications, members, news) with backups, audit log, and git commit |
-| **Ops scripts** | [`scripts/migrate/`](scripts/migrate/), `ai_server/*.sh` | Server bootstrap, cron, tunnel management, history cleanup |
+| **Ops scripts** | [`scripts/`](scripts/), [`scripts/migrate/`](scripts/migrate/) | Join-date stamping, Windows tasks, server bootstrap, tunnel management |
+| **Old chatbot backend** | [`ai_server/`](ai_server/) | Flask + local RAG. Retired in 2026-08; kept for reference, **not live** |
 
-Only the static site is public. The chatbot and admin are reached through
-Cloudflare Tunnels whose URLs are auto-committed back into the repo so the
-site can link to them.
+The site and the chatbot run without any machine of ours being on. **Only the
+admin CMS still needs this PC**, and it is reached through a Cloudflare tunnel
+whose URL is auto-committed back into the repo so `/admin.html` can redirect to it.
 
 ---
 
@@ -95,7 +96,9 @@ Two ways to edit them:
 ├── _sass/                     Sass sources
 ├── _portfolio/                Portfolio grid entries
 ├── assets/img/                Site images (publications, members, logos)
-├── ai_server/                 Chatbot backend — see ai_server/README.md
+├── worker/                    Chatbot backend (LIVE) — see worker/README.md
+├── ai_server/                 Old chatbot backend, retired — see ai_server/README.md
+├── scripts/members_joined.py  Stamps join dates; --retire moves a member to alumni
 ├── admin_cms/                 Admin CMS — see admin_cms/README.md
 ├── scripts/migrate/           Server bootstrap + hand-off — see its README
 ├── index.md, faculty.md, ...  Top-level Jekyll pages
@@ -112,8 +115,12 @@ Directories intentionally **not** committed (see `.gitignore`):
 
 ## Deployment / hand-off to a new server
 
-Everything needed to move the chatbot + admin + tunnels to a fresh box is
-in [`scripts/migrate/`](scripts/migrate/). The new person only needs:
+The chatbot no longer lives on a server of ours -- it is a Cloudflare Worker,
+so there is nothing to move; see [`worker/README.md`](worker/README.md).
+
+What follows covers the **admin CMS**, which does still need a machine.
+Everything needed to move it to a fresh box is in
+[`scripts/migrate/`](scripts/migrate/). The new person only needs:
 1. This repo's URL
 2. An OpenAI API key
 3. A password of their choice for the admin UI
@@ -134,7 +141,11 @@ template, and rollback procedure.
 ## Related docs
 
 - **[`scripts/migrate/README.md`](scripts/migrate/README.md)** — server hand-off playbook
-- **[`ai_server/README.md`](ai_server/README.md)** — chatbot internals
+- **[`CLAUDE.md`](CLAUDE.md)** — one-pass handover: what runs where, content workflows, traps
+- **[`worker/README.md`](worker/README.md)** — chatbot backend (live)
+- **[`dev/DEVELOPMENT.md`](dev/DEVELOPMENT.md)** — dev environment and per-task workflows
+- **[`dev/cheatsheet.md`](dev/cheatsheet.md)** — commands and traps
+- **[`ai_server/README.md`](ai_server/README.md)** — old chatbot internals (retired)
 - **[`admin_cms/README.md`](admin_cms/README.md)** — admin CMS
 - **[`_data/README_PUBLICATIONS.md`](_data/README_PUBLICATIONS.md)** — publications YAML schema
 - **[`VERSION_UPDATE.md`](VERSION_UPDATE.md)** — footer version-bump mechanism

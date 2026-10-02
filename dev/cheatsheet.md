@@ -1,5 +1,10 @@
 # Cheatsheet — 자주 쓰는 명령 & 함정 모음
 
+> **현재 기준 안내 (2026-08~)** — 챗봇은 이 PC 의 Flask 서버(`ai_server/`)가 아니라
+> **Cloudflare Worker**(`worker/`)가 서비스한다. 아래 문서 중 챗봇·터널·RAG 관련 내용은
+> 그 이전 기준이다. 현재 구조는 [`../CLAUDE.md`](../CLAUDE.md) 와
+> [`../worker/README.md`](../worker/README.md) 를 볼 것.
+
 포트는 Linux 기본값(4000/4005/4010) 기준입니다. Windows 는 4001/4205/4210.
 
 ## 자주 쓰는 명령

@@ -1,5 +1,9 @@
 # `ai_server/` — Reality Lab AI Chatbot
 
+> **RETIRED (2026-08).** The live chatbot is now a Cloudflare Worker --
+> see [`../worker/README.md`](../worker/README.md). This Flask + RAG server is
+> kept for reference and is no longer what the site calls.
+
 Flask backend that powers the chatbot widget on
 [reality.ssu.ac.kr](https://reality.ssu.ac.kr). Answers questions about
 the lab (members, publications, research, news) using a hierarchical RAG

@@ -154,7 +154,13 @@ def stamp(check_only=False):
         after_g = after["students"].get(g) or []
         assert len(before_g) == len(after_g), "%s 인원 수가 바뀜" % g
         for b, a in zip(before_g, after_g):
-            assert {k: v for k, v in a.items() if k != "joined"} == b, "%s 항목이 변형됨" % b["name"]
+            if "joined" in b:
+                # already stamped: must come through completely untouched
+                assert a == b, "%s 항목이 변형됨" % b["name"]
+            else:
+                # the only permitted change is the `joined` we just added
+                assert {k: v for k, v in a.items() if k != "joined"} == b, \
+                    "%s 항목이 변형됨" % b["name"]
     save(new_text)
     print("\n%d명 기록 완료" % len(added))
     return 0

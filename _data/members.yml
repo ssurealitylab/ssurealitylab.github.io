@@ -198,6 +198,26 @@ students:
     github: "https://github.com/UKi1127"
     linkedin: ""
 
+  - name: "Insung Moon"
+    name_ko: "문인성"
+    joined: "26.10"
+    email: "insungmoon02@naver.com"
+    university: "AI Software Engineering, Soongsil University, B.S."
+    research: "Physical AI"
+    photo: "assets/img/members/insung_moon.jpg"
+    github: ""
+    linkedin: ""
+
+  - name: "Minhyeong Lee"
+    name_ko: "이민형"
+    joined: "26.10"
+    email: "lmhstrar070@naver.com"
+    university: "CSE, Soongsil University, B.S."
+    research: "Physical AI"
+    photo: "assets/img/members/minhyeong_lee.jpg"
+    github: "https://github.com/LeeMin-hyeong"
+    linkedin: ""
+
 robots:
   description: "Research Robots"
   members:

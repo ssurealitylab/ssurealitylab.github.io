@@ -218,6 +218,16 @@ students:
     github: "https://github.com/LeeMin-hyeong"
     linkedin: ""
 
+  - name: "Ahin Jung"
+    name_ko: "정아인"
+    joined: "26.10"
+    email: "ahinjung6@gmail.com"
+    university: "AI Software Engineering, Soongsil University, B.S.<br>Globalmedia, Soongsil University, B.S."
+    research: "Computer Vision"
+    photo: "assets/img/members/ahin_jung.jpg"
+    github: ""
+    linkedin: "https://www.linkedin.com/in/ahinjung/"
+
 robots:
   description: "Research Robots"
   members:

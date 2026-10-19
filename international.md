@@ -18,12 +18,12 @@ title: International Publications
 <section class="publications-content py-5">
   <div class="container">
     
-    <!-- International Section -->
-    <div class="category-section mb-5 year-2025">
+    <!-- 2026 Year Section -->
+    <div class="category-section mb-5 year-2026">
       <div class="row">
         <div class="col-12">
           <div class="category-header d-flex align-items-center mb-4">
-            <div class="category-badge international-badge">2026 & 2025</div>
+            <div class="category-badge international-badge">2026</div>
             <div class="category-line flex-grow-1"></div>
           </div>
         </div>
@@ -182,6 +182,39 @@ title: International Publications
           </div>
         </div>
 
+        <!-- Clinical Journal of Pain 2026 -->
+        <div class="col-12 mb-3">
+          <div class="publication-list-item" onclick="openPublicationModal('j13')" style="cursor: pointer;">
+            <div class="publication-badge">Clin J Pain</div>
+            <div class="external-links">
+              <a href="https://journals.lww.com/clinicalpain/abstract/2026/04000/predicting_heterogeneity_of_treatment_effects_to.2.aspx" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+              <a href="https://doi.org/10.1097/AJP.0000000000001364" target="_blank" class="external-icon-link website-link" title="DOI" onclick="event.stopPropagation()">
+                <i class="fas fa-globe"></i>
+              </a>
+            </div>
+            <h5 class="list-title">Predicting Heterogeneity of Treatment Effects to Transcranial Direct Current Stimulation for Knee Osteoarthritis Pain and Symptoms: A Machine Learning Approach</h5>
+            <p class="list-authors">Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, Xiaoxiao Sun, Chen X. Chen, Juyoung Park, Christine Pellegrini, David O. Garcia, Nan-kuei Chen, C. Kent Kwoh, Hyochol Ahn</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2025 Year Section -->
+    <div class="category-section mb-5 year-2025">
+      <div class="row">
+        <div class="col-12">
+          <div class="category-header d-flex align-items-center mb-4">
+            <div class="category-badge international-badge">2025</div>
+            <div class="category-line flex-grow-1"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
         <!-- APP3DV 2025 -->
         <div class="col-12 mb-3">
           <div class="publication-list-item" onclick="openPublicationModal('c24')" style="cursor: pointer;">
@@ -216,23 +249,6 @@ title: International Publications
             </div>
             <h5 class="list-title">Unsupervised Discovery of Transformations between Fine-Grained Classes in Diffusion Models</h5>
             <p class="list-authors">Youngjae Choi*, Hyunsuh Koh*, Hojae Jeong*, ByungKwan Chae*, Sungyong Park, Heewon Kim</p>
-          </div>
-        </div>
-
-        <!-- Clinical Journal of Pain 2026 -->
-        <div class="col-12 mb-3">
-          <div class="publication-list-item" onclick="openPublicationModal('j13')" style="cursor: pointer;">
-            <div class="publication-badge">Clin J Pain</div>
-            <div class="external-links">
-              <a href="https://journals.lww.com/clinicalpain/abstract/2026/04000/predicting_heterogeneity_of_treatment_effects_to.2.aspx" target="_blank" class="external-icon-link pdf-link" title="PDF" onclick="event.stopPropagation()">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-              <a href="https://doi.org/10.1097/AJP.0000000000001364" target="_blank" class="external-icon-link website-link" title="DOI" onclick="event.stopPropagation()">
-                <i class="fas fa-globe"></i>
-              </a>
-            </div>
-            <h5 class="list-title">Predicting Heterogeneity of Treatment Effects to Transcranial Direct Current Stimulation for Knee Osteoarthritis Pain and Symptoms: A Machine Learning Approach</h5>
-            <p class="list-authors">Chiyoung Lee, Heewon Kim, Seoyoung Kim†, Yeri Kim†, Xiaoxiao Sun, Chen X. Chen, Juyoung Park, Christine Pellegrini, David O. Garcia, Nan-kuei Chen, C. Kent Kwoh, Hyochol Ahn</p>
           </div>
         </div>
 
@@ -806,6 +822,15 @@ title: International Publications
 }
 
 /* Year-specific badge and line colors */
+.year-2026 .category-badge {
+  background: linear-gradient(135deg, #4f6bd8, #6f7ae0);
+  box-shadow: 0 4px 15px rgba(79, 107, 216, 0.28);
+}
+
+.year-2026 .category-line {
+  background: linear-gradient(90deg, #4f6bd8, rgba(79, 107, 216, 0.1));
+}
+
 .year-2025 .category-badge {
   background: linear-gradient(135deg, #7a8dd6, #8769a8);
   box-shadow: 0 4px 15px rgba(122, 141, 214, 0.28);

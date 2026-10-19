@@ -118,7 +118,7 @@ en: &DEFAULT_EN
     title: "About Reality Lab"
     subtitle: "숭실대학교 리얼리티랩 | 김희원 교수 연구실"
     text: "who we are"
-    body: "Reality Lab(리얼리티랩)은 2023년 숭실대학교 글로벌미디어학부 김희원 교수님의 지도 아래 설립되었습니다. 저희 연구실은 인공지능과 물리적 세계의 접점을 탐구합니다. 인간처럼 실세계 인식과 상호작용을 통해 학습하는 지능형 시스템을 개발하며, Computer Vision, Deep Learning, Robotics, Embodied AI, Multimodal Learning 분야를 연구합니다. CVPR, AAAI, ECCV 등 세계 최고 학회에 논문을 게재하고 있습니다."
+    body: "Reality Lab(리얼리티랩)은 2023년 숭실대학교 김희원 교수님의 지도 아래 설립되었습니다. 저희 연구실은 인공지능과 물리적 세계의 접점을 탐구합니다. 인간처럼 실세계 인식과 상호작용을 통해 학습하는 지능형 시스템을 개발하며, Computer Vision, Deep Learning, Robotics, Embodied AI, Multimodal Learning 분야를 연구합니다. CVPR, AAAI, ECCV 등 세계 최고 학회에 논문을 게재하고 있습니다."
     section: about
 
   clients:

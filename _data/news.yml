@@ -1,4 +1,11 @@
 news:
+- title: "Prof. Heewon Kim Named CVPR 2026 Outstanding Reviewer"
+  date: "2026-10-20"
+  category: "Awards"
+  participants: ["Heewon Kim"]
+  description: "Prof. Heewon Kim has been named an Outstanding Reviewer for CVPR 2026, a recognition given for the quality of his reviews. The list is published on the CVPR 2026 Program Committee page: https://cvpr.thecvf.com/Conferences/2026/ProgramCommittee"
+  image: "cvpr2026_outstanding_reviewer.png"
+
 - title: "BMVC 2026 Paper Acceptance"
   date: "2026-08-08"
   category: "Publication"

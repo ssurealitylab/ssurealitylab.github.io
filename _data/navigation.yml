@@ -13,6 +13,8 @@ nav:
     url: https://ssurealitylab.github.io/
   - title: "News"
     url: https://ssurealitylab.github.io/news.html
+  - title: "Gallery"
+    url: https://ssurealitylab.github.io/gallery.html
   - title: "Members"
     url: https://ssurealitylab.github.io/members.html
     dropdown:
@@ -50,6 +52,8 @@ en: &DEFAULT_EN
       url: https://ssurealitylab.github.io/
     - title: "News"
       url: https://ssurealitylab.github.io/news.html
+    - title: "Gallery"
+      url: https://ssurealitylab.github.io/gallery.html
     - title: "Members"
       url: https://ssurealitylab.github.io/members.html
       dropdown:

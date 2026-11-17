@@ -285,9 +285,10 @@ image: /assets/img/header.png
 .gallery-viewer.open { display: flex; }
 .gallery-viewer-backdrop {
   position: absolute; inset: 0;
-  background: rgba(15, 23, 42, 0.78);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  /* the page behind was showing through far too much at 0.78 */
+  background: rgba(10, 16, 32, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .gallery-viewer-dialog {
   position: relative;

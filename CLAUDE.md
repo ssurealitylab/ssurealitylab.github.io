@@ -141,8 +141,12 @@ grep -c '확인할내용' _site/students.html
   (실제로 이것 때문에 members.yml 이 깨진 적 있다.)
 - **CMS 가 쓴 YAML 항목은 키 순서가 다르다**(알파벳순). `- name:` 이 첫 줄이라고 가정하는 코드는
   그런 항목을 놓친다.
-- **`.env` 는 BOM 없이 저장.** PowerShell `Set-Content -Encoding utf8` 은 BOM 을 붙이고,
-  python-dotenv 가 첫 줄 키를 못 읽는다.
+- **PowerShell 로 파일을 쓰면 BOM 이 붙는다.** PS 5.1 의 `Set-Content`/`Out-File -Encoding utf8`
+  은 항상 BOM 을 앞에 붙인다. `.env` 가 이것 때문에 깨졌고(python-dotenv 가 첫 줄 키를 못 읽음),
+  `git commit -F` 로 넘긴 커밋 메시지 제목 앞에도 보이지 않는 BOM 이 들어간 적이 있다.
+  BOM 없이 쓰려면:
+  `[IO.File]::WriteAllText($p, $s, (New-Object Text.UTF8Encoding($false)))`
+  확인은 PowerShell 말고 **원시 바이트**로 — PS 로 읽으면 멀쩡한 것까지 BOM 있다고 나온다.
 - 그 밖의 함정은 **[`dev/cheatsheet.md`](dev/cheatsheet.md)** 에 모아뒀다
   (한글 파일명, 로컬 Jekyll 이 프로덕션 챗봇에 붙는 문제, 포트 충돌 등).
   단, 그 문서의 챗봇 관련 항목은 **Worker 이전 이전(以前) 기준**이라 지금과 다를 수 있다.

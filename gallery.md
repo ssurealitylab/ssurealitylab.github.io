@@ -78,6 +78,10 @@ image: /assets/img/header.png
   var capEl   = document.getElementById('galleryCaption');
   var thumbs  = document.getElementById('galleryThumbs');
 
+  // The viewer covers the viewport, so it must not sit inside a container that
+  // could become the containing block for its fixed positioning.
+  if (viewer.parentNode !== document.body) document.body.appendChild(viewer);
+
   var episode = null;   // the episode being viewed
   var index   = 0;      // which of its photos is on the stage
 
@@ -88,8 +92,9 @@ image: /assets/img/header.png
     index = (i + episode.photos.length) % episode.photos.length;
     var photo = episode.photos[index];
     stage.src = src(photo);
-    stage.alt = photo.caption || episode.title;
-    capEl.textContent = photo.caption || '';
+    stage.alt = episode.title;
+    // one caption for the whole episode, the same on every photo
+    capEl.textContent = episode.caption || '';
     // a single-photo episode has nothing to page through
     var many = episode.photos.length > 1;
     metaEl.textContent = [episode.date, episode.description].filter(Boolean).join(' · ')
@@ -111,7 +116,7 @@ image: /assets/img/header.png
       episode.photos.forEach(function (photo, n) {
         var img = document.createElement('img');
         img.src = src(photo);
-        img.alt = photo.caption || (episode.title + ' ' + (n + 1));
+        img.alt = episode.title + ' ' + (n + 1);
         img.loading = 'lazy';
         img.addEventListener('click', function () { show(n); });
         thumbs.appendChild(img);
@@ -203,7 +208,7 @@ image: /assets/img/header.png
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   outline: none;
 }
-.gallery-card-img { position: relative; background: #eef1f5; }
+.gallery-card-img { position: relative; background: #eef1f5 !important; }
 .gallery-card-img img {
   width: 100%;
   height: 190px;
@@ -275,24 +280,27 @@ image: /assets/img/header.png
 }
 
 /* ─── Episode viewer ─── */
+/* head.html forces `div { background-color: transparent !important }` to keep
+   browsers from dark-mode-ing the site. Every box below is a div, so their
+   backgrounds need !important of their own or the panel renders see-through. */
 .gallery-viewer {
   display: none;
   position: fixed; inset: 0;
   z-index: 9999;
   align-items: center;
   justify-content: center;
+  /* The scrim lives on this element, not on the child below. On the child it
+     carried backdrop-filter, and between the filter and the child's own
+     stacking the page kept showing through — which is why the panel looked
+     see-through. A flat opaque colour here cannot fail that way. */
+  background: #0b1020 !important;
 }
 .gallery-viewer.open { display: flex; }
-.gallery-viewer-backdrop {
-  position: absolute; inset: 0;
-  /* the page behind was showing through far too much at 0.78 */
-  background: rgba(10, 16, 32, 0.94);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
+/* click target for closing; deliberately paints nothing */
+.gallery-viewer-backdrop { position: absolute; inset: 0; }
 .gallery-viewer-dialog {
   position: relative;
-  background: #fff;
+  background: #fff !important;
   border-radius: 16px;
   width: 92vw;
   max-width: 1100px;
@@ -341,7 +349,7 @@ image: /assets/img/header.png
   justify-content: center;
   /* light, not navy: the dark stage was the same colour as the scrim behind the
      dialog, so the letterbox bars read as a see-through hole in the panel */
-  background: #eef1f5;
+  background: #eef1f5 !important;
   border-radius: 10px;
   overflow: hidden;
 }

@@ -6,30 +6,25 @@
 #
 #   - title:        shown on the card and in the viewer      (required)
 #     date:         free text, shown under the title          (optional)
-#     description:  one line, shown under the date            (optional)
-#     photos:                                                 (required)
-#       - image:    path from the repo root
-#         caption:  shown under that photo in the viewer      (optional)
+#     description:  one line, shown on the card               (optional)
+#     caption:      one line, shown under the photos in the
+#                   viewer — one per episode, not per photo   (optional)
+#     photos:       just the image paths, from the repo root  (required)
 #
-# To add photos to an existing episode, just add more entries under `photos`.
+# To add photos to an existing episode, add another `- image:` line under it.
 
 episodes:
   - title: "2026 International Robot Contest"
     date: "November 13–14, 2026"
-    description: "EXCO Daegu — hosted the Mart Environment Challenge"
+    description: "EXCO Daegu"
+    caption: "Reality Lab hosted the Mart Environment Challenge at the 21st International Robot Contest, where entries were validated in simulation and in the real environment to narrow the sim-to-real gap."
     photos:
       - image: "img/gallery/robot_contest_2026_01.jpg"
-        caption: "Reality Lab hosted the Mart Environment Challenge at the 21st International Robot Contest, where entries were validated in simulation and in the real environment to narrow the sim-to-real gap."
       - image: "img/gallery/robot_contest_2026_05.jpg"
-        caption: "The mart environment built for the challenge"
       - image: "img/gallery/robot_contest_2026_04.jpg"
-        caption: "A robot picking an item off the shelf"
       - image: "img/gallery/robot_contest_2026_03.jpg"
-        caption: "A robot handling items at the checkout"
       - image: "img/gallery/robot_contest_2026_02.jpg"
-        caption: "An entry working through the checkout task"
       - image: "img/gallery/robot_contest_2026_06.jpg"
-        caption: "The lab team during the contest"
       - image: "img/gallery/robot_contest_2026_07.jpg"
 
   - title: "CVPR 2026"
@@ -40,9 +35,9 @@ episodes:
 
   - title: "Teacher's Day 2026"
     description: "Lab celebration and appreciation"
+    caption: "With deepest respect."
     photos:
       - image: "참고 이미지/homepage_slider_images/img_2934.jpg"
-        caption: "With deepest respect."
 
   - title: "Year-End Party"
     date: "2025"
@@ -57,27 +52,24 @@ episodes:
       - image: "참고 이미지/homepage_slider_images/slider_arnold_award.jpg"
 
   - title: "CVPR 2025"
-    date: "June 2025"
+    date: "June 11, 2025"
     description: "Nashville, Tennessee"
+    caption: "Poster session"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_14.jpg"
-        caption: "Poster session"
       - image: "참고 이미지/homepage_slider_images/slider_01.jpg"
-        caption: "June 11, 2025"
 
   - title: "AAAI 2025"
-    date: "February 2025"
+    date: "February 26, 2025"
     description: "Association for the Advancement of Artificial Intelligence"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_09.jpg"
       - image: "참고 이미지/homepage_slider_images/slider_16.jpg"
-        caption: "February 26, 2025"
 
   - title: "HCI Korea 2025"
-    date: "February 2025"
+    date: "February 11, 2025"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_02.jpg"
-        caption: "February 11, 2025"
 
   - title: "Media Seminar"
     description: "Kanggeon Kim, KIST"
@@ -106,61 +98,51 @@ episodes:
       - image: "참고 이미지/homepage_slider_images/slider_unithon2024.jpg"
 
   - title: "Teacher's Day 2024"
-    date: "May 2024"
+    date: "May 14, 2024"
     description: "Lab celebration and appreciation"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_12.jpg"
-        caption: "May 14, 2024"
 
   - title: "ASK 2024"
-    date: "May 2024"
+    date: "May 24, 2024"
     description: "Annual Symposium of KIPS"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_03.jpg"
-        caption: "May 24, 2024"
 
   - title: "PIU 2024"
-    date: "February 2024"
+    date: "February 2, 2024"
     description: "The 36th Workshop on Image Processing and Image Understanding"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_04.jpg"
-        caption: "February 2, 2024"
 
   - title: "KCCV 2023"
-    date: "August 2023"
+    date: "August 8, 2023"
     description: "Korean Conference on Computer Vision"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_11.jpg"
-        caption: "August 8, 2023"
 
   - title: "Vision Seminar at SNU"
-    date: "July 2023"
+    date: "July 14, 2023"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_13.jpg"
-        caption: "July 14, 2023"
 
   - title: "Team Building"
-    date: "August 2023"
+    date: "August 29, 2023"
     description: "Climbing"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_08.jpg"
-        caption: "August 29, 2023"
 
   - title: "Qualcomm Visit"
-    date: "March 2024"
+    date: "March 28, 2024"
     description: "Industry collaboration"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_10.jpg"
-        caption: "March 28, 2024"
 
   - title: "Research Figures"
     description: "Figures from our published work"
+    caption: "DynScene (CVPR 2025), SIDL (AAAI 2025), NERDS (ICLR 2023) and CRISP (TIP 2023)"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_06.jpg"
-        caption: "DynScene: Scalable Generation of Dynamic Robotic Manipulation Scenes for Embodied AI — CVPR 2025"
       - image: "참고 이미지/homepage_slider_images/slider_07.jpg"
-        caption: "SIDL: A Real-World Dataset for Restoring Smartphone Images with Dirty Lenses — AAAI 2025"
       - image: "참고 이미지/homepage_slider_images/slider_05.jpg"
-        caption: "NERDS: A General Framework to Train Camera Denoisers from Raw-RGB Noisy Image Pairs — ICLR 2023"
       - image: "참고 이미지/homepage_slider_images/slider_15.jpg"
-        caption: "CRISP: Learning Controllable ISP for Image Enhancement — TIP 2023"

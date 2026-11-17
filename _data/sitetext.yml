@@ -16,7 +16,7 @@ en: &DEFAULT_EN
     button: Learn About Our Research
     buttonlink: "#services"
     slider:
-    - description: EXCO Daegu - hosted the Mart Environment Challenge
+    - description: EXCO Daegu
       image: img/gallery/robot_contest_2026_01.jpg
       title: 2026 International Robot Contest
     - description: Cololado, Denver

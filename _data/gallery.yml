@@ -65,6 +65,14 @@ episodes:
       - image: "참고 이미지/homepage_slider_images/slider_01.jpg"
         caption: "June 11, 2025"
 
+  - title: "Teacher's Day 2025"
+    date: "May 2025"
+    description: "Lab celebration and appreciation"
+    photos:
+      # the overlay burned into this photo reads "May 14, 2024"; the year here is
+      # the one the lab gave, so no date is repeated in the caption
+      - image: "참고 이미지/homepage_slider_images/slider_12.jpg"
+
   - title: "AAAI 2025"
     date: "February 2025"
     description: "Association for the Advancement of Artificial Intelligence"
@@ -104,13 +112,6 @@ episodes:
     description: "Grand Prize — Spartan"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_unithon2024.jpg"
-
-  - title: "Teacher's Day 2024"
-    date: "May 2024"
-    description: "Lab celebration and appreciation"
-    photos:
-      - image: "참고 이미지/homepage_slider_images/slider_12.jpg"
-        caption: "May 14, 2024"
 
   - title: "ASK 2024"
     date: "May 2024"

@@ -339,7 +339,9 @@ image: /assets/img/header.png
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0f172a;
+  /* light, not navy: the dark stage was the same colour as the scrim behind the
+     dialog, so the letterbox bars read as a see-through hole in the panel */
+  background: #eef1f5;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -353,8 +355,8 @@ image: /assets/img/header.png
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.86);
-  border: none;
+  background: #ffffff;        /* opaque: nothing inside the panel is see-through */
+  border: 1px solid #dbe1ea;
   color: #0f172a;
   font-size: 20px;
   line-height: 1;
@@ -392,12 +394,13 @@ image: /assets/img/header.png
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
-  opacity: 0.55;
+  opacity: 0.82;             /* the blue border marks the active one, so these
+                                need only be slightly held back, not faded out */
   border: 2px solid transparent;
   transition: opacity .15s, border-color .15s;
   flex-shrink: 0;
 }
-.gallery-thumbs img:hover { opacity: 0.85; }
+.gallery-thumbs img:hover { opacity: 0.95; }
 .gallery-thumbs img.active { opacity: 1; border-color: #4f6bd8; }
 
 @media (max-width: 640px) {

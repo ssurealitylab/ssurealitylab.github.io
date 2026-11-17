@@ -38,12 +38,11 @@ episodes:
     photos:
       - image: "참고 이미지/homepage_slider_images/img_6185.jpg"
 
-  - title: "Teacher's Day"
+  - title: "Teacher's Day 2026"
     description: "Lab celebration and appreciation"
     photos:
       - image: "참고 이미지/homepage_slider_images/img_2934.jpg"
         caption: "With deepest respect."
-      - image: "참고 이미지/homepage_slider_images/slider_12.jpg"
 
   - title: "Year-End Party"
     date: "2025"
@@ -105,6 +104,13 @@ episodes:
     description: "Grand Prize — Spartan"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_unithon2024.jpg"
+
+  - title: "Teacher's Day 2024"
+    date: "May 2024"
+    description: "Lab celebration and appreciation"
+    photos:
+      - image: "참고 이미지/homepage_slider_images/slider_12.jpg"
+        caption: "May 14, 2024"
 
   - title: "ASK 2024"
     date: "May 2024"

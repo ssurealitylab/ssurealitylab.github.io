@@ -31,7 +31,9 @@ image: /assets/img/header.png
         <div class="gallery-card-img">
           <img src="{{ site.baseurl }}/{{ ep.photos[0].image }}" alt="{{ ep.title | escape }}" loading="lazy">
           {% if ep.photos.size > 1 %}
-          <span class="gallery-badge">{{ ep.photos.size }} photos</span>
+          <span class="gallery-badge" title="{{ ep.photos.size }} photos" aria-hidden="true">
+            <span class="gallery-badge-n">{{ ep.photos.size }}</span><span class="gallery-badge-label">photos</span>
+          </span>
           {% endif %}
         </div>
         <figcaption>
@@ -208,18 +210,48 @@ image: /assets/img/header.png
   object-fit: cover;
   display: block;
 }
+/* Photo count, bottom-right of the cover. A bare number is ambiguous, so the
+   badge grows into "3 photos" while the card is hovered or focused; episodes of
+   one photo have no badge at all. */
 .gallery-badge {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(15, 23, 42, 0.78);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 10px;
+  bottom: 12px;
+  right: 12px;
+  height: 34px;
+  min-width: 34px;          /* with the padding below this keeps it a circle */
+  box-sizing: border-box;
+  padding: 0 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
+  background: rgba(15, 23, 42, 0.82);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.92),
+              0 2px 8px rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+}
+.gallery-badge-label {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 600;
+  transition: max-width .22s ease, opacity .22s ease, margin-left .22s ease;
+}
+.gallery-card:hover .gallery-badge-label,
+.gallery-card:focus-visible .gallery-badge-label {
+  max-width: 54px;
+  opacity: 1;
+  margin-left: 5px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-badge-label { transition: none; }
 }
 .gallery-card figcaption {
   padding: 16px 18px 18px;

@@ -14,22 +14,22 @@
 # To add photos to an existing episode, just add more entries under `photos`.
 
 episodes:
-  - title: "2026 국제 로봇 콘테스트 개최"
+  - title: "2026 International Robot Contest"
     date: "November 13–14, 2026"
-    description: "대구 EXCO · 제21회 국제로봇콘테스트 마트환경 챌린지 주최"
+    description: "EXCO Daegu — hosted the Mart Environment Challenge"
     photos:
       - image: "img/gallery/robot_contest_2026_01.jpg"
-        caption: "제21회 국제로봇콘테스트 마트환경 챌린지를 주최했다. 시뮬레이션과 실환경에서 함께 검증해 sim-to-real 갭을 줄이는 것을 목표로 한 대회였다."
+        caption: "Reality Lab hosted the Mart Environment Challenge at the 21st International Robot Contest, where entries were validated in simulation and in the real environment to narrow the sim-to-real gap."
       - image: "img/gallery/robot_contest_2026_05.jpg"
-        caption: "대회용으로 꾸민 마트 환경"
+        caption: "The mart environment built for the challenge"
       - image: "img/gallery/robot_contest_2026_04.jpg"
-        caption: "진열대에서 상품을 집는 로봇"
+        caption: "A robot picking an item off the shelf"
       - image: "img/gallery/robot_contest_2026_03.jpg"
-        caption: "계산대에서 상품을 처리하는 로봇"
+        caption: "A robot handling items at the checkout"
       - image: "img/gallery/robot_contest_2026_02.jpg"
-        caption: "계산대 과제를 수행하는 참가 로봇"
+        caption: "An entry working through the checkout task"
       - image: "img/gallery/robot_contest_2026_06.jpg"
-        caption: "대회 기간 중 연구실 팀"
+        caption: "The lab team during the contest"
       - image: "img/gallery/robot_contest_2026_07.jpg"
 
   - title: "CVPR 2026"
@@ -115,7 +115,7 @@ episodes:
 
   - title: "PIU 2024"
     date: "February 2024"
-    description: "제36회 영상처리 및 이해에 관한 워크샵"
+    description: "The 36th Workshop on Image Processing and Image Understanding"
     photos:
       - image: "참고 이미지/homepage_slider_images/slider_04.jpg"
         caption: "February 2, 2024"

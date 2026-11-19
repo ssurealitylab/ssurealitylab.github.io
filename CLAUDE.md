@@ -56,6 +56,7 @@ curl -sI "https://reality.ssu.ac.kr/students.html" | grep -i last-modified
 | `members.yml` | students.html, alumni.html, 챗봇 | 아래 3-1 |
 | `publications.yml` | 논문 **모달**, 홈 최신논문 | ★ 3-2 함정 |
 | `news.yml` | news.html, 홈 | 파일 순서대로 출력(정렬 안 함). 홈은 위 4개 |
+| `gallery.yml` | gallery.html | 아래 3-3 |
 | `chatbot_knowledge.yml` | 챗봇 지식(연구실 소개/위치/Q&A) | 멤버 명단은 여기 두지 말 것(3-1) |
 
 ### 3-1. 멤버 — 등록일은 자동으로 기록된다
@@ -81,6 +82,27 @@ python scripts/members_joined.py --retire "Subin Kang"   # 알룸나이로 이�
 `publications.yml` 에 넣으면 **모달만** 생긴다. **International 페이지의 목록 카드는
 `international.md` 에 손으로 추가해야 한다.** 안 하면 "분명히 추가했는데 목록에 안 보인다"가 된다.
 국내는 `domestic.md`. 인용(citation)은 비워두면 자동 생성된다(`_includes/publication_modals.html`).
+
+### 3-3. 갤러리 — 에피소드 하나에 사진 여러 장
+
+`gallery.html`(네비 News 와 Members 사이). 홈 첫 화면의 **📷 More Images** 버튼도 여기로 온다.
+한 에피소드 = 한 행사이고 사진은 몇 장이든 들어간다. 카드는 첫 사진을 표지로 쓰고,
+2장 이상이면 오른쪽 아래에 **장수 원형 배지**가 붙는다(1장이면 배지 없음).
+
+```yaml
+  - title: "..."
+    date: "..."            # 선택, 카드·뷰어에 표시
+    description: "..."     # 선택, 카드에 한 줄
+    caption: "..."         # 선택, 뷰어에서 사진 아래 — 에피소드당 1개(사진별 아님)
+    photos:
+      - image: "img/gallery/....jpg"   # 경로만. 추가하려면 이 줄만 늘리면 된다
+```
+
+- 사진은 `img/gallery/` 에 둔다(`img/news/` 와 같은 방식). 휴대폰 원본은 4–5K 라
+  **긴 변 1920px·JPEG 85** 로 줄여서 넣는다(13 MB → 3 MB 였다).
+- 파일 순서대로 출력되므로 **새 에피소드는 맨 위**에 넣는다.
+- 홈 슬라이더에도 넣고 싶으면 `sitetext.yml` 의 `header.slider` 에 따로 추가한다.
+  **설명이 길면 `...` 으로 잘리니 짧게**(예: `EXCO Daegu`).
 
 ---
 
@@ -131,6 +153,31 @@ grep -c '확인할내용' _site/students.html
 ---
 
 ## 7. 알아두면 시간 아끼는 함정
+
+- **★ `div` 에 준 배경색은 무시된다.** `_includes/head.html` 에 브라우저 다크모드를 막으려고
+  넣은 전역 규칙이 있다:
+
+  ```css
+  header, main, section, div, nav, footer { background-color: transparent !important; }
+  ```
+
+  그래서 **div 에 `background` 를 주면 조용히 지워진다.** `<button>`·`<figure>`·`<span>` 은
+  이 목록에 없어서 멀쩡하다 — 그래서 "일부만 투명"한 기묘한 증상으로 보인다.
+  새 패널·모달·카드에 배경이 필요하면 **그쪽 규칙에 `!important` 를 붙여야 한다**
+  (셀렉터 특이도상 클래스가 `div` 를 이기므로 그것으로 충분하다. 전역 규칙은 건드리지 말 것).
+  갤러리 뷰어가 이것 때문에 투명하게 보였다.
+
+- **보이는 대로 추측하지 말고 계산된 스타일을 뽑을 것.** 위 증상을 색 문제로 오해해 두 번 헛손질했다.
+  결정적이었던 건 실제 브라우저의 `getComputedStyle` 이었다
+  (`background-color: rgba(0,0,0,0)` 인데 `position`·`z-index` 는 정상 적용). 찍어보는 방법:
+
+  ```bash
+  python -m http.server 4321 --directory _site        # 빌드 결과를 띄우고
+  "C:/Program Files/Google/Chrome/Application/chrome.exe" --headless=new \
+    --window-size=1400,950 --screenshot=out.png "http://127.0.0.1:4321/gallery.html"
+  ```
+
+  갤러리는 `?episode=N` 으로 뷰어를 연 채 찍을 수 있다.
 
 - **"캐시겠지"로 넘기지 말 것.** 반영이 안 보이면 실제로 받아서 확인한다(2절). 과거에 캐시로
   오진했다가 실제 원인(CSS)이 따로 있던 적이 있다.

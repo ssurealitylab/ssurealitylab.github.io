@@ -277,7 +277,7 @@ robots:
     name_ko: 가로
     category: humanoid
     model: RedRabbitRobotics RX-1(heavily modified)
-    joined: Dec 2025
+    joined: December 2025
     photo: assets/img/members/garo.jpg
     bio: A custom humanoid built on the Red Rabbit Robotics platform, featuring tuned gearboxes, in-house interface and hardware upgrades, and a chassis redesigned for Vision-Language-Action (VLA) integration — extended with a custom-developed wheeled mobile base and lift body for full-body mobility.
     specs:

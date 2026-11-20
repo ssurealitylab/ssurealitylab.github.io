@@ -290,6 +290,7 @@ robots:
   - name: Pal-A
     category: arm
     model: Franka Research 3 (FR3)
+    joined: September 2026
     photo: assets/img/members/pal_a.jpg
     bio: "A 7-axis research arm with a torque sensor in every joint, so it can work under force control and stay compliant on contact. Reality Lab uses it as a fixed-base platform for Vision-Language-Action manipulation."
     specs:
@@ -300,6 +301,7 @@ robots:
   - name: Pal-B
     category: arm
     model: Doosan Robotics M0609
+    joined: September 2026
     photo: assets/img/members/pal_b.jpg
     bio: "A 6-axis collaborative arm that puts a second, higher-payload manipulator next to Pal-A, so the same policy can be compared across two different kinematics and reach envelopes."
     specs:

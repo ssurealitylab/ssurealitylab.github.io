@@ -386,8 +386,14 @@ keywords: Reality Lab students, 리얼리티랩 학생, Soongsil University, 숭
 ## Research Robots
 <p style="color: #6c757d; font-size: 0.9rem; margin-top: -10px; margin-bottom: 20px;">Click on a card to view detailed specifications</p>
 
+{% assign robot_cats = "humanoid|Humanoids,arm|Robot Arms" | split: "," %}
+{% for cat in robot_cats %}
+{% assign parts = cat | split: "|" %}
+{% assign group = site.data.members.robots.members | where: "category", parts[0] %}
+{% if group.size > 0 %}
+<h3 class="robot-group-title">{{ parts[1] }}</h3>
 <div class="members-grid robots-grid">
-  {% for robot in site.data.members.robots.members %}
+  {% for robot in group %}
   <div class="member-card clickable-card" onclick="openMemberModal('robot-{{ robot.name | slugify }}')">
     <img class="robot-perch" src="{{ site.baseurl }}/assets/img/members/robot_perch.webp" alt="" aria-hidden="true">
     <div class="member-photo">
@@ -396,7 +402,7 @@ keywords: Reality Lab students, 리얼리티랩 학생, Soongsil University, 숭
     <div class="member-info">
       <h3 class="member-name">{{ robot.name }}</h3>
       <p class="member-email"><i class="fas fa-robot"></i> {{ robot.model }}</p>
-      <p class="member-university"><i class="fas fa-calendar-alt"></i> Joined: {{ robot.joined }}</p>
+      {% if robot.joined %}<p class="member-university"><i class="fas fa-calendar-alt"></i> Joined: {{ robot.joined }}</p>{% endif %}
       <div class="member-social">
         <a href="#" onclick="event.preventDefault(); event.stopPropagation(); openMemberModal('robot-{{ robot.name | slugify }}')" title="View Specs">
           <i class="fas fa-info-circle"></i>
@@ -415,7 +421,7 @@ keywords: Reality Lab students, 리얼리티랩 학생, Soongsil University, 숭
       <div class="modal-info">
         <h2 class="modal-name">{{ robot.name }}</h2>
         <p class="modal-research"><strong>Model:</strong> {{ robot.model }}</p>
-        <p class="modal-research"><strong>Joined:</strong> {{ robot.joined }}</p>
+        {% if robot.joined %}<p class="modal-research"><strong>Joined:</strong> {{ robot.joined }}</p>{% endif %}
 
         <div class="modal-scroll">
         {% if robot.bio %}
@@ -432,6 +438,8 @@ keywords: Reality Lab students, 리얼리티랩 학생, Soongsil University, 숭
             {% if robot.specs.speed %}<li><span class="spec-label">Speed:</span> {{ robot.specs.speed }}</li>{% endif %}
             {% if robot.specs.battery %}<li><span class="spec-label">Battery:</span> {{ robot.specs.battery }}</li>{% endif %}
             {% if robot.specs.payload %}<li><span class="spec-label">Payload:</span> {{ robot.specs.payload }}</li>{% endif %}
+            {% if robot.specs.reach %}<li><span class="spec-label">Reach:</span> {{ robot.specs.reach }}</li>{% endif %}
+            {% if robot.specs.repeatability %}<li><span class="spec-label">Repeatability:</span> {{ robot.specs.repeatability }}</li>{% endif %}
           </ul>
         </div>
         {% endif %}
@@ -442,8 +450,19 @@ keywords: Reality Lab students, 리얼리티랩 학생, Soongsil University, 숭
   </div>
   {% endfor %}
 </div>
+{% endif %}
+{% endfor %}
 
 <style>
+.robot-group-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 28px 0 14px;
+  letter-spacing: .01em;
+}
+.robot-group-title:first-of-type { margin-top: 4px; }
+
 .members-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

@@ -233,6 +233,7 @@ robots:
   members:
   - name: MARO
     name_ko: 마로
+    category: humanoid
     model: ROBOTIS AI Worker FFW-SG2 (mobile)
     joined: August 2026
     photo: assets/img/members/maro.jpg
@@ -246,6 +247,7 @@ robots:
       payload: 3 kg (per arm, 5 kg peak)
   - name: DARO
     name_ko: 다로
+    category: humanoid
     model: Unitree G1 EDU
     joined: January 2026
     photo: assets/img/members/unitree_g1.jpg
@@ -259,6 +261,7 @@ robots:
       payload: 0.5 kg (per arm)
   - name: NARO
     name_ko: 나로
+    category: humanoid
     model: ToddlerBot (Stanford open-source humanoid)
     joined: December 2025
     photo: assets/img/members/naro.jpg
@@ -272,6 +275,7 @@ robots:
       payload: 1.5 kg (40% of body weight)
   - name: GARO
     name_ko: 가로
+    category: humanoid
     model: RedRabbitRobotics RX-1(heavily modified)
     joined: Dec 2025
     photo: assets/img/members/garo.jpg
@@ -283,7 +287,27 @@ robots:
       speed: 3m/s
       battery: ~7 hours runtime
       payload: 0.4 kg (per arm)
-
+  - name: Pal-A
+    category: arm
+    model: Franka Research 3 (FR3)
+    photo: assets/img/members/pal_a.jpg
+    bio: "A 7-axis research arm with a torque sensor in every joint, so it can work under force control and stay compliant on contact. Reality Lab uses it as a fixed-base platform for Vision-Language-Action manipulation."
+    specs:
+      dof: 7 Axes
+      payload: 3 kg
+      reach: 855 mm
+      repeatability: "< ±0.1 mm"
+  - name: Pal-B
+    category: arm
+    model: Doosan Robotics M0609
+    photo: assets/img/members/pal_b.jpg
+    bio: "A 6-axis collaborative arm that puts a second, higher-payload manipulator next to Pal-A, so the same policy can be compared across two different kinematics and reach envelopes."
+    specs:
+      dof: 6 Axes
+      payload: 6 kg
+      reach: 900 mm
+      weight: 27 kg
+      repeatability: "±0.03 mm"
 alumni:
   description: "Former Lab Members"
   former_ms_students:

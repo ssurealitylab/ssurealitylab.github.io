@@ -1,4 +1,11 @@
 news:
+- title: "Hosted the Humanoid Robot Challenge at the 2026 International Robot Contest"
+  date: "2026-11-13"
+  category: "Event"
+  participants: ["Reality Lab", "KIRIA", "Kairoba"]
+  description: "Reality Lab hosted the Humanoid Robot Challenge in a Supermarket Environment at the 21st International Robot Contest, held at EXCO Daegu on November 13-14, 2026, together with the Korea Institute for Robot Industry Advancement (KIRIA) and Kairoba. Entries were validated both in simulation and in a real mart setup, a format built to narrow the sim-to-real gap."
+  image: "robot_contest_2026.jpg"
+
 - title: "Prof. Heewon Kim Named CVPR 2026 Outstanding Reviewer"
   date: "2026-10-20"
   category: "Awards"
